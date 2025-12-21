@@ -7,15 +7,11 @@ import { Link } from "wouter";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 export default function Dashboard() {
-  const { user, isAuthenticated } = useAuth();
+  const { user } = useAuth();
   
-  const { data: stats } = trpc.assessments.stats.useQuery(undefined, {
-    enabled: isAuthenticated,
-  });
+  const { data: stats } = trpc.assessments.stats.useQuery();
 
-  if (!isAuthenticated) {
-    return <div className="min-h-screen flex items-center justify-center"><p>Silakan login</p></div>;
-  }
+  // Prototype mode: no login required
 
   const classificationData = [
     { name: "Sangat Layak", value: stats?.sangatLayak || 0, color: "#10b981" },
@@ -40,7 +36,7 @@ export default function Dashboard() {
               <h1 className="text-xl font-bold text-primary">SSCI</h1>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name}</span>
+          <span className="text-sm text-gray-600">{user?.name || 'Demo Mode'}</span>
         </div>
       </nav>
 

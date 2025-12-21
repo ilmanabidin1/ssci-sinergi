@@ -9,13 +9,13 @@ import { toast } from "sonner";
 
 export default function ApplicationDetail() {
   const { id } = useParams<{ id: string }>();
-  const { user, isAuthenticated } = useAuth();
+  const { user } = useAuth();
   
   const applicationId = parseInt(id || "0");
   
   const { data, isLoading } = trpc.assessments.getWithApplication.useQuery(
     { applicationId },
-    { enabled: !!applicationId && isAuthenticated }
+    { enabled: !!applicationId }
   );
 
   const assessMutation = trpc.applications.assess.useMutation({
@@ -50,9 +50,7 @@ export default function ApplicationDetail() {
     }
   };
 
-  if (!isAuthenticated) {
-    return <div className="min-h-screen flex items-center justify-center"><p>Silakan login</p></div>;
-  }
+  // Prototype mode: no login required
 
   if (isLoading) {
     return (
@@ -94,7 +92,7 @@ export default function ApplicationDetail() {
               <h1 className="text-xl font-bold text-primary">SSCI</h1>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name}</span>
+          <span className="text-sm text-gray-600">{user?.name || 'Demo Mode'}</span>
         </div>
       </nav>
 

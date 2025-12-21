@@ -6,19 +6,19 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Loader2, Shield } from "lucide-react";
+import { ArrowLeft, Loader2, Shield, Info } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 
 export default function NewApplication() {
-  const { user, isAuthenticated } = useAuth();
+  const { user } = useAuth();
   const [, setLocation] = useLocation();
   const [legalDocs, setLegalDocs] = useState([
     { type: "KTP", status: "pending", notes: "" },
     { type: "NPWP", status: "pending", notes: "" },
-    { type: "SIUP", status: "pending", notes: "" },
-    { type: "TDP", status: "pending", notes: "" },
+    { type: "NIB", status: "pending", notes: "" },
   ]);
 
   const createMutation = trpc.applications.create.useMutation({
@@ -31,13 +31,7 @@ export default function NewApplication() {
     },
   });
 
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p>Silakan login terlebih dahulu</p>
-      </div>
-    );
-  }
+  // Prototype mode: no login required
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -83,7 +77,7 @@ export default function NewApplication() {
               <h1 className="text-xl font-bold text-primary">SSCI</h1>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name}</span>
+          <span className="text-sm text-gray-600">{user?.name || 'Demo Mode'}</span>
         </div>
       </nav>
 
@@ -116,8 +110,8 @@ export default function NewApplication() {
                   <Input id="phone" name="phone" type="tel" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" />
+                  <Label htmlFor="email">Email (Opsional)</Label>
+                  <Input id="email" name="email" type="email" placeholder="email@example.com" />
                 </div>
               </div>
               <div className="space-y-2">
@@ -239,7 +233,19 @@ export default function NewApplication() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Kepatuhan Syariah</CardTitle>
+              <div className="flex items-center gap-2">
+                <CardTitle>Kepatuhan Syariah</CardTitle>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Info className="h-4 w-4 text-gray-400 cursor-help" />
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs">
+                      <p className="text-sm">Penilaian kepatuhan usaha terhadap prinsip-prinsip syariah, termasuk: tidak mengandung riba, gharar (ketidakpastian berlebihan), maysir (perjudian), dan tidak memproduksi/menjual barang haram. Usaha harus sesuai dengan fatwa DSN-MUI.</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
               <CardDescription>Evaluasi kepatuhan syariah</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -257,24 +263,37 @@ export default function NewApplication() {
                 </Select>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="shariaComplianceNotes">Catatan</Label>
-                <Textarea id="shariaComplianceNotes" name="shariaComplianceNotes" rows={3} />
+                <Label htmlFor="shariaComplianceNotes">Catatan (Opsional)</Label>
+                <Textarea id="shariaComplianceNotes" name="shariaComplianceNotes" rows={3} placeholder="Jelaskan aspek kepatuhan syariah secara detail..." />
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Keberlanjutan (ESG)</CardTitle>
+              <div className="flex items-center gap-2">
+                <CardTitle>Keberlanjutan (ESG)</CardTitle>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Info className="h-4 w-4 text-gray-400 cursor-help" />
+                    </TooltipTrigger>
+                    <TooltipContent className="max-w-xs">
+                      <p className="text-sm">Environmental, Social, and Governance (ESG) - Penilaian aspek keberlanjutan usaha: (E) praktik ramah lingkungan, (S) dampak sosial positif bagi masyarakat, (G) kualitas tata kelola dan transparansi manajemen.</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+              <CardDescription>Aspek lingkungan, sosial, dan tata kelola</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="environmentalPractices">Praktik Lingkungan</Label>
-                <Textarea id="environmentalPractices" name="environmentalPractices" rows={2} />
+                <Label htmlFor="environmentalPractices">Praktik Lingkungan (Opsional)</Label>
+                <Textarea id="environmentalPractices" name="environmentalPractices" rows={2} placeholder="Contoh: penggunaan energi terbarukan, pengelolaan limbah, dll." />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="socialImpact">Dampak Sosial</Label>
-                <Textarea id="socialImpact" name="socialImpact" rows={2} />
+                <Label htmlFor="socialImpact">Dampak Sosial (Opsional)</Label>
+                <Textarea id="socialImpact" name="socialImpact" rows={2} placeholder="Contoh: pemberdayaan masyarakat, penyerapan tenaga kerja lokal, dll." />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="governanceQuality">Tata Kelola *</Label>

@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { BarChart3, FileCheck, Shield, TrendingUp } from "lucide-react";
 
 export default function Home() {
-  const { user, loading, isAuthenticated } = useAuth();
+  const { user, loading } = useAuth();
 
   if (loading) {
     return (
@@ -16,7 +16,8 @@ export default function Home() {
     );
   }
 
-  if (!isAuthenticated) {
+  // Prototype mode: show landing page for everyone
+  if (false) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
         <nav className="border-b bg-white/80 backdrop-blur-sm">
@@ -117,7 +118,7 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-primary">SSCI</h1>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600">Halo, {user?.name}</span>
+            <span className="text-sm text-gray-600">Halo, {user?.name || 'Demo Mode'}</span>
             <Button variant="outline" size="sm" asChild>
               <Link href="/dashboard">Dashboard</Link>
             </Button>

@@ -9,17 +9,14 @@ import { Link } from "wouter";
 import { useState } from "react";
 
 export default function AssessmentHistory() {
-  const { user, isAuthenticated } = useAuth();
+  const { user } = useAuth();
   const [search, setSearch] = useState("");
   
   const { data: applications, isLoading } = trpc.applications.list.useQuery(
-    { search },
-    { enabled: isAuthenticated }
+    { search }
   );
 
-  if (!isAuthenticated) {
-    return <div className="min-h-screen flex items-center justify-center"><p>Silakan login</p></div>;
-  }
+  // Prototype mode: no login required
 
   const getStatusBadge = (status: string) => {
     const badges = {
@@ -47,7 +44,7 @@ export default function AssessmentHistory() {
               <h1 className="text-xl font-bold text-primary">SSCI</h1>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name}</span>
+          <span className="text-sm text-gray-600">{user?.name || 'Demo Mode'}</span>
         </div>
       </nav>
 
