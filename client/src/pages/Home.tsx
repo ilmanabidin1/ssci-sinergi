@@ -1,30 +1,197 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getLoginUrl } from "@/const";
-import { Streamdown } from 'streamdown';
+import { Link } from "wouter";
+import { BarChart3, FileCheck, Shield, TrendingUp } from "lucide-react";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Workflow, Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
+  const { user, loading, isAuthenticated } = useAuth();
 
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+        <nav className="border-b bg-white/80 backdrop-blur-sm">
+          <div className="container py-4 flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <Shield className="h-8 w-8 text-primary" />
+              <h1 className="text-2xl font-bold text-primary">SSCI</h1>
+            </div>
+            <Button asChild>
+              <a href={getLoginUrl()}>Login</a>
+            </Button>
+          </div>
+        </nav>
+
+        <main className="container py-16">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">
+                Sustainable Sharia Creditworthiness Index
+              </h1>
+              <p className="text-xl text-gray-600">
+                Sistem Penilaian Kelayakan Pembiayaan Syariah Berbasis AI untuk BPRS
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <Card>
+                <CardHeader>
+                  <TrendingUp className="h-10 w-10 text-primary mb-2" />
+                  <CardTitle>Analisis Komprehensif</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Evaluasi mendalam berdasarkan 3 pilar: Keuangan Berkelanjutan (55%), Kepatuhan Syariah (25%), dan Legalitas (20%)
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <Shield className="h-10 w-10 text-accent mb-2" />
+                  <CardTitle>Kepatuhan Syariah</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Memastikan setiap pembiayaan sesuai dengan prinsip syariah dan regulasi OJK
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <BarChart3 className="h-10 w-10 text-blue-600 mb-2" />
+                  <CardTitle>AI-Powered Scoring</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Model machine learning untuk prediksi kelayakan dengan akurasi tinggi dan rekomendasi otomatis
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 p-8 bg-white rounded-lg shadow-lg">
+              <h2 className="text-2xl font-bold mb-4">Untuk Analis Pembiayaan BPRS</h2>
+              <p className="text-gray-600 mb-6">
+                Login untuk mengakses sistem penilaian kelayakan pembiayaan, dashboard analitik, dan riwayat assessment
+              </p>
+              <Button size="lg" asChild>
+                <a href={getLoginUrl()}>Mulai Sekarang</a>
+              </Button>
+            </div>
+          </div>
+        </main>
+
+        <footer className="border-t mt-16 py-8 bg-white">
+          <div className="container text-center text-gray-600">
+            <p>© 2024 SSCI - Sustainable Sharia Creditworthiness Index</p>
+            <p className="text-sm mt-2">Powered by AI for BPRS HIK Parahyangan</p>
+          </div>
+        </footer>
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+    <div className="min-h-screen bg-gray-50">
+      <nav className="border-b bg-white">
+        <div className="container py-4 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <Shield className="h-8 w-8 text-primary" />
+            <h1 className="text-2xl font-bold text-primary">SSCI</h1>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-gray-600">Halo, {user?.name}</span>
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/dashboard">Dashboard</Link>
+            </Button>
+          </div>
+        </div>
+      </nav>
+
+      <main className="container py-12">
+        <div className="max-w-5xl mx-auto space-y-8">
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl font-bold text-gray-900">Selamat Datang di SSCI</h1>
+            <p className="text-lg text-gray-600">
+              Sistem Penilaian Kelayakan Pembiayaan Syariah untuk BPRS HIK Parahyangan
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <FileCheck className="h-12 w-12 text-primary mb-4" />
+                <CardTitle>Penilaian Baru</CardTitle>
+                <CardDescription>
+                  Buat penilaian kelayakan pembiayaan untuk aplikasi nasabah baru
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button asChild className="w-full">
+                  <Link href="/applications/new">Mulai Penilaian</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <BarChart3 className="h-12 w-12 text-blue-600 mb-4" />
+                <CardTitle>Dashboard Analitik</CardTitle>
+                <CardDescription>
+                  Lihat statistik dan visualisasi hasil penilaian
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button asChild className="w-full" variant="outline">
+                  <Link href="/dashboard">Lihat Dashboard</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <TrendingUp className="h-12 w-12 text-accent mb-4" />
+                <CardTitle>Riwayat Penilaian</CardTitle>
+                <CardDescription>
+                  Akses riwayat assessment dengan filter dan pencarian
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button asChild className="w-full" variant="outline">
+                  <Link href="/assessments">Lihat Riwayat</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Shield className="h-12 w-12 text-green-600 mb-4" />
+                <CardTitle>Tentang SSCI</CardTitle>
+                <CardDescription>
+                  Pelajari metodologi dan algoritma scoring SSCI
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p>• Keuangan Berkelanjutan: 55%</p>
+                  <p>• Kepatuhan Syariah: 25%</p>
+                  <p>• Legalitas Usaha: 20%</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </main>
     </div>
   );
