@@ -38,7 +38,13 @@ export default function Home() {
                 Sustainable Sharia Creditworthiness Index
               </h1>
               <p className="text-xl text-gray-600">
-                Sistem Penilaian Kelayakan Pembiayaan Syariah Berbasis AI untuk BPRS
+                Sistem Penilaian Kelayakan Pembiayaan Syariah Berbasis AI untuk Bank Perekonomian Rakyat Syariah (BPRS)
+              </p>
+              <div className="flex justify-center items-center gap-4 mt-6">
+                <img src="/unisba-logo.png" alt="Universitas Islam Bandung" className="h-16" />
+              </div>
+              <p className="text-sm text-gray-500 mt-4">
+                Prototype untuk Proposal Program Hilirisasi Riset SINERGI 2026
               </p>
             </div>
 
@@ -95,7 +101,7 @@ export default function Home() {
         <footer className="border-t mt-16 py-8 bg-white">
           <div className="container text-center text-gray-600">
             <p>© 2024 SSCI - Sustainable Sharia Creditworthiness Index</p>
-            <p className="text-sm mt-2">Powered by AI for BPRS HIK Parahyangan</p>
+            <p className="text-sm mt-2">Universitas Islam Bandung - Prototype untuk Proposal SINERGI 2026</p>
           </div>
         </footer>
       </div>
@@ -122,10 +128,18 @@ export default function Home() {
       <main className="container py-12">
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center space-y-4">
+            <div className="flex justify-center mb-4">
+              <img src="/unisba-logo.png" alt="Universitas Islam Bandung" className="h-20" />
+            </div>
             <h1 className="text-4xl font-bold text-gray-900">Selamat Datang di SSCI</h1>
             <p className="text-lg text-gray-600">
-              Sistem Penilaian Kelayakan Pembiayaan Syariah untuk BPRS HIK Parahyangan
+              Sistem Penilaian Kelayakan Pembiayaan Syariah untuk Bank Perekonomian Rakyat Syariah
             </p>
+            <div className="inline-block px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-blue-800 font-medium">
+                🔬 Prototype untuk Proposal Program Hilirisasi Riset SINERGI 2026
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">

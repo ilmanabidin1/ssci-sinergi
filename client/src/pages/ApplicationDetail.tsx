@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle } from "lucide-react";
+import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { toast } from "sonner";
 
@@ -26,6 +26,29 @@ export default function ApplicationDetail() {
       toast.error(`Gagal melakukan penilaian: ${error.message}`);
     },
   });
+
+  const utils = trpc.useUtils();
+
+  const handleExportPDF = async () => {
+    try {
+      const result = await utils.client.assessments.exportPDF.query({ applicationId });
+      
+      // Create a Blob from HTML and trigger download
+      const blob = new Blob([result.html], { type: 'text/html' });
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = result.filename.replace('.pdf', '.html');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+      toast.success("File HTML berhasil diunduh. Anda dapat membukanya di browser dan print to PDF.");
+    } catch (error) {
+      toast.error("Gagal mengekspor PDF");
+    }
+  };
 
   if (!isAuthenticated) {
     return <div className="min-h-screen flex items-center justify-center"><p>Silakan login</p></div>;
@@ -81,15 +104,23 @@ export default function ApplicationDetail() {
             <h1 className="text-3xl font-bold text-gray-900">{application.customerName}</h1>
             <p className="text-gray-600 mt-1">{application.businessName}</p>
           </div>
-          {!assessment && (
-            <Button
-              onClick={() => assessMutation.mutate({ applicationId })}
-              disabled={assessMutation.isPending}
+          <div className="flex gap-2">
+            {assessment && (
+              <Button variant="outline" onClick={handleExportPDF}>
+                <Download className="mr-2 h-4 w-4" />
+                Export PDF
+              </Button>
+            )}
+            {!assessment && (
+              <Button
+                onClick={() => assessMutation.mutate({ applicationId })}
+                disabled={assessMutation.isPending}
             >
               {assessMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Lakukan Penilaian SSCI
             </Button>
-          )}
+            )}
+          </div>
         </div>
 
         {assessment && (

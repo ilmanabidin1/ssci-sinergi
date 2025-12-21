@@ -23,3 +23,10 @@
 - [x] Implement data visualization dengan recharts
 - [ ] Add PDF generation functionality
 - [x] Write vitest tests untuk core logic
+
+## New Features (User Request)
+
+- [x] Implementasi export PDF untuk assessment report
+- [x] Hapus referensi spesifik "BPRS HIK Parahyangan" dari dashboard
+- [x] Tambahkan disclaimer prototype untuk proposal SINERGI
+- [x] Tambahkan logo Universitas Islam Bandung di halaman awal

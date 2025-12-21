@@ -6,6 +6,7 @@ import { z } from "zod";
 import * as db from "./db";
 import { calculateSSCI } from "./scoring";
 import { TRPCError } from "@trpc/server";
+import { generateAssessmentPDF } from "./pdfGenerator";
 
 export const appRouter = router({
   system: systemRouter,
@@ -148,6 +149,30 @@ export const appRouter = router({
         return {
           application,
           assessment,
+        };
+      }),
+    
+    exportPDF: protectedProcedure
+      .input(z.object({
+        applicationId: z.number(),
+      }))
+      .query(async ({ input }) => {
+        const application = await db.getApplicationById(input.applicationId);
+        const assessment = await db.getAssessmentByApplicationId(input.applicationId);
+        
+        if (!application) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+        }
+        
+        if (!assessment) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Assessment not found" });
+        }
+
+        const htmlContent = generateAssessmentPDF({ application, assessment });
+        
+        return {
+          html: htmlContent,
+          filename: `SSCI_Assessment_${application.customerName}_${Date.now()}.pdf`,
         };
       }),
   }),
