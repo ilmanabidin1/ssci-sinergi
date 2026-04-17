@@ -134,7 +134,7 @@ export default function Home() {
             </div>
             <h1 className="text-4xl font-bold text-gray-900">Selamat Datang di SSCI</h1>
             <p className="text-lg text-gray-600">
-              Sistem Penilaian Kelayakan Pembiayaan Syariah untuk Bank Perekonomian Rakyat Syariah
+              Sustainable Sharia Creditworthiness Index: Sistem Penilaian Kelayakan Pembiayaan Syariah untuk Bank Perekonomian Rakyat Syariah
             </p>
             <div className="inline-block px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg">
               <p className="text-sm text-blue-800 font-medium">
