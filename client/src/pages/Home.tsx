@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getLoginUrl } from "@/const";
 import { Link } from "wouter";
-import { BarChart3, FileCheck, Shield, TrendingUp } from "lucide-react";
+import { BarChart3, BookOpen, FileCheck, Shield, TrendingUp } from "lucide-react";
 
 export default function Home() {
   const { user, loading } = useAuth();
@@ -191,18 +191,16 @@ export default function Home() {
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <Shield className="h-12 w-12 text-green-600 mb-4" />
+                <BookOpen className="h-12 w-12 text-green-600 mb-4" />
                 <CardTitle>Tentang SSCI</CardTitle>
                 <CardDescription>
-                  Pelajari metodologi dan algoritma scoring SSCI
+                  Pelajari metodologi 3 pilar, bobot penilaian, dan dasar hukum syariah
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>• Keuangan Berkelanjutan: 55%</p>
-                  <p>• Kepatuhan Syariah: 25%</p>
-                  <p>• Legalitas Usaha: 20%</p>
-                </div>
+                <Button asChild className="w-full" variant="outline">
+                  <Link href="/tentang-ssci">Lihat Metodologi</Link>
+                </Button>
               </CardContent>
             </Card>
           </div>

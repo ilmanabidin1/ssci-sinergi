@@ -37,3 +37,12 @@
 - [x] Tambahkan tooltip informasi (ikon i) untuk kepatuhan syariah dan keberlanjutan
 - [x] Tandai dengan jelas field wajib (*) dan opsional
 - [x] Hilangkan requirement login untuk menggunakan prototype
+
+## Halaman Tentang SSCI (User Request)
+
+- [x] Buat halaman /tentang-ssci dengan metodologi 3 pilar lengkap
+- [x] Tampilkan bobot penilaian dan indikator per pilar secara visual
+- [x] Tampilkan dasar hukum syariah (fatwa DSN-MUI, regulasi OJK)
+- [x] Tampilkan klasifikasi skor dan artinya
+- [x] Daftarkan route /tentang-ssci di App.tsx
+- [x] Tambahkan link ke halaman Home dan navigasi

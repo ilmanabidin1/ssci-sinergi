@@ -9,6 +9,7 @@ import NewApplication from "./pages/NewApplication";
 import ApplicationDetail from "./pages/ApplicationDetail";
 import AssessmentHistory from "./pages/AssessmentHistory";
 import Dashboard from "./pages/Dashboard";
+import AboutSSCI from "./pages/AboutSSCI";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/applications/new"} component={NewApplication} />
       <Route path={"/applications/:id"} component={ApplicationDetail} />
       <Route path={"/assessments"} component={AssessmentHistory} />
+      <Route path={"/tentang-ssci"} component={AboutSSCI} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
