@@ -160,6 +160,75 @@ export async function getAllApplications(filters: {
   return query.orderBy(desc(applications.createdAt));
 }
 
+export async function getApplicationQueue(filters: {
+  organizationId: number;
+  status?: "pending" | "assessed" | "approved" | "rejected";
+  limit: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const conditions = [eq(applications.organizationId, filters.organizationId)];
+  if (filters.status) conditions.push(eq(applications.status, filters.status));
+
+  const rows = await db.select().from(applications)
+    .where(and(...conditions))
+    .orderBy(desc(applications.createdAt))
+    .limit(filters.limit);
+  if (rows.length === 0) return [];
+
+  const applicationIds = rows.map(application => application.id);
+  const assessmentRows = await db.select().from(assessments)
+    .where(and(
+      eq(assessments.organizationId, filters.organizationId),
+      sql`${assessments.applicationId} IN (${sql.join(applicationIds.map(id => sql`${id}`), sql`, `)})`,
+    ))
+    .orderBy(desc(assessments.assessedAt));
+  const latestAssessments = new Map<number, typeof assessmentRows[number]>();
+  for (const assessment of assessmentRows) {
+    if (!latestAssessments.has(assessment.applicationId)) {
+      latestAssessments.set(assessment.applicationId, assessment);
+    }
+  }
+
+  return rows.map(application => ({
+    ...application,
+    assessment: latestAssessments.get(application.id) ?? null,
+    latestAssessmentScore: latestAssessments.get(application.id)
+      ? Number(latestAssessments.get(application.id)!.totalScore)
+      : null,
+    latestAssessmentClassification: latestAssessments.get(application.id)?.classification ?? null,
+  }));
+}
+
+export async function getOperationalStats(organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const applicationRows = await db.select().from(applications)
+    .where(eq(applications.organizationId, organizationId));
+  const assessmentRows = await db.select().from(assessments)
+    .where(eq(assessments.organizationId, organizationId));
+
+  const counts = { pending: 0, assessed: 0, approved: 0, rejected: 0 };
+  for (const application of applicationRows) counts[application.status]++;
+  const totalRequestedAmount = applicationRows.reduce((sum, application) => sum + Number(application.requestedAmount), 0);
+  const approvedAmount = applicationRows
+    .filter(application => application.status === "approved")
+    .reduce((sum, application) => sum + Number(application.requestedAmount), 0);
+  const averageAssessedScore = assessmentRows.length === 0
+    ? 0
+    : assessmentRows.reduce((sum, assessment) => sum + Number(assessment.totalScore), 0) / assessmentRows.length;
+
+  return {
+    counts,
+    totalRequestedAmount,
+    approvedAmount,
+    averageAssessedScore,
+    pendingDecision: counts.assessed,
+  };
+}
+
 export async function updateApplicationStatus(id: number, status: string) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");

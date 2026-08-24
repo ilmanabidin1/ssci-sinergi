@@ -1,142 +1,56 @@
 import { useAuth } from "@/_core/hooks/useAuth";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Shield, TrendingUp, FileCheck, AlertCircle, CheckCircle } from "lucide-react";
+import { AlertCircle, CheckCircle2, Clock3, FileText, Loader2, RefreshCw, Shield, XCircle } from "lucide-react";
+import { useState } from "react";
 import { Link } from "wouter";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+
+type Status = "all" | "pending" | "assessed" | "approved" | "rejected";
+
+const statusLabels: Record<Exclude<Status, "all">, string> = {
+  pending: "Menunggu penilaian",
+  assessed: "Menunggu keputusan",
+  approved: "Disetujui",
+  rejected: "Ditolak",
+};
+
+const formatMoney = (value: number) => `Rp ${value.toLocaleString("id-ID")}`;
 
 export default function Dashboard() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
-  
-  const { data: stats } = trpc.assessments.stats.useQuery();
+  const [status, setStatus] = useState<Status>("all");
+  const queueQuery = trpc.applications.queue.useQuery(status === "all" ? undefined : { status });
+  const statsQuery = trpc.applications.operationalStats.useQuery();
+  const isLoading = queueQuery.isLoading || statsQuery.isLoading;
+  const isError = queueQuery.isError || statsQuery.isError;
+  const applications = queueQuery.data ?? [];
+  const stats = statsQuery.data;
+  const refresh = () => { void queueQuery.refetch(); void statsQuery.refetch(); };
+  const totalRequested = stats?.totalRequestedAmount ?? 0;
+  const totalApproved = stats?.approvedAmount ?? 0;
+  const averageScore = stats?.averageAssessedScore ?? 0;
 
-  // Prototype mode: no login required
+  const cards = [
+    ["Pending assessment", stats?.counts.pending ?? 0, Clock3, "text-amber-600"],
+    ["Waiting checker decision", stats?.pendingDecision ?? 0, FileText, "text-blue-600"],
+    ["Approved", stats?.counts.approved ?? 0, CheckCircle2, "text-emerald-600"],
+    ["Rejected", stats?.counts.rejected ?? 0, XCircle, "text-red-600"],
+    ["Total requested", formatMoney(totalRequested), FileText, "text-slate-600"],
+    ["Total approved", formatMoney(totalApproved), CheckCircle2, "text-emerald-600"],
+    ["Average score", averageScore.toFixed(1), Shield, "text-violet-600"],
+  ] as const;
 
-  const classificationData = [
-    { name: "Sangat Layak", value: stats?.sangatLayak || 0, color: "#10b981" },
-    { name: "Layak", value: stats?.layak || 0, color: "#3b82f6" },
-    { name: "Perlu Pengawasan", value: stats?.perluPengawasan || 0, color: "#f59e0b" },
-    { name: "Tidak Layak", value: stats?.tidakLayak || 0, color: "#ef4444" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="border-b bg-white">
-        <div className="container py-4 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Kembali
-              </Link>
-            </Button>
-            <div className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" />
-              <h1 className="text-xl font-bold text-primary">SSCI</h1>
-            </div>
-          </div>
-          <span className="text-sm text-gray-600">{user?.name || "Belum masuk"}</span>
-        </div>
-      </nav>
-
-      <main className="container py-8 max-w-7xl">
-        <div className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard Analitik</h1>
-          <p className="text-gray-600 mt-2">Statistik dan visualisasi hasil penilaian SSCI</p>
-        </div>
-
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Total Penilaian</CardTitle>
-              <FileCheck className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{stats?.total || 0}</div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Rata-rata Skor</CardTitle>
-              <TrendingUp className="h-4 w-4 text-muted-foreground" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{stats?.averageScore.toFixed(1) || "0.0"}</div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Sangat Layak</CardTitle>
-              <CheckCircle className="h-4 w-4 text-green-600" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-green-600">{stats?.sangatLayak || 0}</div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-sm font-medium">Perlu Pengawasan</CardTitle>
-              <AlertCircle className="h-4 w-4 text-orange-600" />
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold text-orange-600">{stats?.perluPengawasan || 0}</div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Distribusi Klasifikasi</CardTitle>
-              <CardDescription>Breakdown penilaian berdasarkan kategori</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={classificationData}
-                    cx="50%"
-                    cy="50%"
-                    labelLine={false}
-                    label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value"
-                  >
-                    {classificationData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip />
-                </PieChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Statistik Klasifikasi</CardTitle>
-              <CardDescription>Jumlah penilaian per kategori</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={classificationData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Legend />
-                  <Bar dataKey="value" fill="#3b82f6" name="Jumlah" />
-                </BarChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-    </div>
-  );
+  return <div className="min-h-screen bg-slate-50">
+    <nav className="border-b bg-white"><div className="container flex items-center justify-between py-4"><Link href="/" className="flex items-center gap-2 text-primary"><Shield className="h-6 w-6" /><span className="text-xl font-bold">SSCI BPRS</span></Link><span className="text-sm text-slate-600">{user?.name || "Belum masuk"}</span></div></nav>
+    <main className="container max-w-7xl py-6 sm:py-8">
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><div><p className="text-sm font-semibold uppercase tracking-wider text-primary">Operational center</p><h1 className="mt-1 text-3xl font-bold text-slate-900">Dashboard operasional</h1><p className="mt-2 text-slate-600">Pantau alur pengajuan pembiayaan BPRS secara real time.</p></div><Button variant="outline" onClick={refresh} disabled={isLoading}><RefreshCw className={`mr-2 h-4 w-4 ${isLoading ? "animate-spin" : ""}`} />Refresh</Button></div>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">{cards.map(([label, value, Icon, color]) => <Card key={label} className="border-0 shadow-sm"><CardContent className="p-4"><div className="flex items-center justify-between"><p className="text-xs font-medium text-slate-500">{label}</p><Icon className={`h-4 w-4 ${color}`} /></div><p className="mt-2 text-xl font-bold text-slate-900">{value}</p></CardContent></Card>)}</div>
+       <Card className="mt-6 border-0 shadow-sm"><CardHeader className="flex flex-col gap-3 border-b sm:flex-row sm:items-center sm:justify-between"><div><CardTitle>Queue pengajuan</CardTitle><p className="mt-1 text-sm text-slate-500">Prioritas pekerjaan assessment dan keputusan checker.</p></div><Select value={status} onValueChange={value => setStatus(value as Status)}><SelectTrigger className="w-full sm:w-56" aria-label="Filter status"><SelectValue /></SelectTrigger><SelectContent><SelectItem value="all">Semua status</SelectItem>{Object.entries(statusLabels).map(([key, label]) => <SelectItem key={key} value={key}>{label}</SelectItem>)}</SelectContent></Select></CardHeader><CardContent className="p-0">
+         {isLoading ? <div className="flex items-center justify-center gap-2 py-16 text-slate-500"><Loader2 className="h-5 w-5 animate-spin" />Memuat queue...</div> : isError ? <div className="flex flex-col items-center gap-3 py-16 text-center text-red-600"><AlertCircle className="h-8 w-8" /><p>Data queue tidak dapat dimuat.</p><Button variant="outline" onClick={refresh}>Coba lagi</Button></div> : applications.length === 0 ? <div className="py-16 text-center text-slate-500">Tidak ada pengajuan pada filter ini.</div> : <div className="overflow-x-auto"><table className="w-full min-w-[760px] text-left text-sm"><thead className="bg-slate-50 text-xs uppercase text-slate-500"><tr>{["Customer", "Business", "Amount", "Status", "Score / classification", "Date", ""].map(label => <th key={label} className="px-4 py-3 font-semibold">{label}</th>)}</tr></thead><tbody className="divide-y">{applications.map(item => <tr key={item.id} className="hover:bg-slate-50"><td className="px-4 py-4 font-semibold text-slate-900">{item.customerName}</td><td className="px-4 py-4 text-slate-600">{item.businessName}<span className="block text-xs text-slate-400">{item.businessType}</span></td><td className="px-4 py-4 whitespace-nowrap">{formatMoney(Number(item.requestedAmount))}</td><td className="px-4 py-4"><Badge variant={item.status === "rejected" ? "destructive" : item.status === "approved" ? "default" : "secondary"}>{statusLabels[item.status]}</Badge></td><td className="px-4 py-4">{item.latestAssessmentScore !== null ? <><span className="font-semibold">{item.latestAssessmentScore.toFixed(1)}</span><span className="block text-xs text-slate-500">{item.latestAssessmentClassification}</span></> : <span className="text-slate-400">Belum dinilai</span>}</td><td className="px-4 py-4 whitespace-nowrap text-slate-500">{new Date(item.createdAt).toLocaleDateString("id-ID")}</td><td className="px-4 py-4"><Button asChild size="sm" variant="outline"><Link href={`/applications/${item.id}`}>Detail</Link></Button></td></tr>)}</tbody></table></div>}
+      </CardContent></Card>
+    </main>
+  </div>;
 }

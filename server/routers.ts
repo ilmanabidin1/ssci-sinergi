@@ -147,8 +147,22 @@ export const appRouter = router({
         search: z.string().optional(),
       }).optional())
       .query(async ({ input, ctx }) => {
-        return db.getAllApplications({ ...input, organizationId: ctx.user.organizationId });
-      }),
+       return db.getAllApplications({ ...input, organizationId: ctx.user.organizationId });
+       }),
+
+    queue: protectedProcedure
+      .input(z.object({
+        status: z.enum(["pending", "assessed", "approved", "rejected"]).optional(),
+        limit: z.number().int().positive().max(100).default(50),
+      }).optional())
+      .query(({ input, ctx }) => db.getApplicationQueue({
+        ...input,
+        organizationId: ctx.user.organizationId,
+        limit: input?.limit ?? 50,
+      })),
+
+    operationalStats: protectedProcedure
+      .query(({ ctx }) => db.getOperationalStats(ctx.user.organizationId)),
 
     assess: makerProcedure
       .input(z.object({
