@@ -338,6 +338,12 @@ export async function getAllAssessments(organizationId: number) {
     .orderBy(desc(assessments.assessedAt));
 }
 
+export async function updateUserRole(email: string, role: "maker" | "checker" | "admin") {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(users).set({ role }).where(eq(users.email, email));
+}
+
 export async function getAssessmentStats(organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
