@@ -13,7 +13,7 @@ export default function Login() {
   const login = trpc.auth.login.useMutation({
     onSuccess: async () => {
       await utils.auth.me.invalidate();
-      setLocation("/");
+      setLocation("/dashboard");
     },
     onError: error => toast.error(error.message),
   });

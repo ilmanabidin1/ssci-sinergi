@@ -16,6 +16,8 @@ import {
   Users,
 } from "lucide-react";
 import { Link } from "wouter";
+import { useEffect } from "react";
+import { useLocation } from "wouter";
 
 const pillars = [
   { weight: "55%", title: "Keuangan berkelanjutan", copy: "Daya tahan usaha, arus kas, dan kemampuan memenuhi kewajiban.", color: "bg-[#2458d6]" },
@@ -26,10 +28,17 @@ const pillars = [
 export default function Home() {
   const { user, loading } = useAuth();
   const authenticated = Boolean(user);
+  const [, setLocation] = useLocation();
+
+  useEffect(() => {
+    if (!loading && authenticated) setLocation("/dashboard");
+  }, [authenticated, loading, setLocation]);
 
   if (loading) {
     return <div className="flex min-h-screen items-center justify-center bg-[#f7f8fb]"><div className="h-8 w-8 animate-spin rounded-full border-2 border-[#2458d6] border-t-transparent" /></div>;
   }
+
+  if (authenticated) return null;
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#f7f8fb] text-[#14213d]">
