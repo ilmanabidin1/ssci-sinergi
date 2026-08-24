@@ -162,7 +162,7 @@ export async function getAllApplications(filters: {
 
 export async function getApplicationQueue(filters: {
   organizationId: number;
-  status?: "pending" | "assessed" | "approved" | "rejected";
+  status?: "pending" | "assessed" | "approved" | "rejected" | "cancelled";
   limit: number;
 }) {
   const db = await getDb();
@@ -210,7 +210,7 @@ export async function getOperationalStats(organizationId: number) {
   const assessmentRows = await db.select().from(assessments)
     .where(eq(assessments.organizationId, organizationId));
 
-  const counts = { pending: 0, assessed: 0, approved: 0, rejected: 0 };
+  const counts = { pending: 0, assessed: 0, approved: 0, rejected: 0, cancelled: 0 };
   for (const application of applicationRows) counts[application.status]++;
   const totalRequestedAmount = applicationRows.reduce((sum, application) => sum + Number(application.requestedAmount), 0);
   const approvedAmount = applicationRows
@@ -227,6 +227,41 @@ export async function getOperationalStats(organizationId: number) {
     averageAssessedScore,
     pendingDecision: counts.assessed,
   };
+}
+
+export async function cancelApplication(input: {
+  applicationId: number;
+  organizationId: number;
+  actorUserId: number;
+  reason?: string | null;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  await db.transaction(async tx => {
+    const updateResult = await tx
+      .update(applications)
+      .set({
+        status: "cancelled",
+        decisionNotes: input.reason ?? "Dibatalkan oleh pemohon",
+        updatedAt: new Date(),
+      })
+      .where(and(
+        eq(applications.id, input.applicationId),
+        eq(applications.organizationId, input.organizationId),
+        eq(applications.status, "pending")
+      ));
+    if (updateResult[0].affectedRows !== 1) {
+      throw new Error("Hanya pengajuan berstatus menunggu penilaian yang dapat dibatalkan");
+    }
+    await tx.insert(auditLogs).values({
+      organizationId: input.organizationId,
+      actorUserId: input.actorUserId,
+      action: "APPLICATION_CANCELLED",
+      entityType: "application",
+      entityId: input.applicationId,
+    });
+  });
 }
 
 export async function updateApplicationStatus(id: number, status: string) {

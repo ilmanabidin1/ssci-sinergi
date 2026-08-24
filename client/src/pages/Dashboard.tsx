@@ -8,13 +8,14 @@ import { AlertCircle, CheckCircle2, Clock3, FileText, Loader2, LogOut, RefreshCw
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 
-type Status = "all" | "pending" | "assessed" | "approved" | "rejected";
+type Status = "all" | "pending" | "assessed" | "approved" | "rejected" | "cancelled";
 
 const statusLabels: Record<Exclude<Status, "all">, string> = {
   pending: "Menunggu penilaian",
   assessed: "Menunggu keputusan",
   approved: "Disetujui",
   rejected: "Ditolak",
+  cancelled: "Dibatalkan",
 };
 
 const formatMoney = (value: number) => `Rp ${value.toLocaleString("id-ID")}`;

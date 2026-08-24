@@ -83,7 +83,7 @@ export const applications = mysqlTable("applications", {
   governanceQuality: mysqlEnum("governanceQuality", ["excellent", "good", "fair", "poor"]).notNull(),
   
   // Application metadata
-  status: mysqlEnum("status", ["pending", "assessed", "approved", "rejected"]).default("pending").notNull(),
+  status: mysqlEnum("status", ["pending", "assessed", "approved", "rejected", "cancelled"]).default("pending").notNull(),
   submittedBy: int("submittedBy").notNull(),
   checkedBy: int("checkedBy"),
   checkedAt: timestamp("checkedAt"),

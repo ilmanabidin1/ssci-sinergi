@@ -96,6 +96,21 @@ export default function ApplicationDetail() {
     decideMutation.mutate({ applicationId, decision, notes: notes.trim() });
   };
 
+  const cancelMutation = trpc.applications.cancel.useMutation({
+    onSuccess: async () => {
+      await utils.assessments.getWithApplication.invalidate({ applicationId });
+      toast.success("Pengajuan berhasil dibatalkan");
+    },
+    onError: error => toast.error(`Gagal membatalkan: ${error.message}`),
+  });
+
+  const handleCancel = () => {
+    const reason = window.prompt("Alasan pembatalan (opsional):")?.trim();
+    if (window.confirm("Yakin ingin membatalkan pengajuan ini? Aksi tidak dapat dibatalkan.")) {
+      cancelMutation.mutate({ applicationId, reason });
+    }
+  };
+
   const handleExportPDF = async () => {
     try {
       const result = await utils.client.assessments.exportReport.mutate({ applicationId });
@@ -203,6 +218,11 @@ export default function ApplicationDetail() {
               {assessMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Lakukan Penilaian SSCI
             </Button>
+            )}
+            {application.status === "pending" && (user?.role === "maker" || user?.role === "admin") && (
+              <Button variant="destructive" onClick={handleCancel} disabled={cancelMutation.isPending}>
+                Batalkan pengajuan
+              </Button>
             )}
           </div>
         </div>

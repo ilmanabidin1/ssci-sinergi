@@ -187,7 +187,7 @@ export const appRouter = router({
 
     list: protectedProcedure
       .input(z.object({
-        status: z.enum(["pending", "assessed", "approved", "rejected"]).optional(),
+        status: z.enum(["pending", "assessed", "approved", "rejected", "cancelled"]).optional(),
         fromDate: z.date().optional(),
         toDate: z.date().optional(),
         search: z.string().optional(),
@@ -198,7 +198,7 @@ export const appRouter = router({
 
     queue: protectedProcedure
       .input(z.object({
-        status: z.enum(["pending", "assessed", "approved", "rejected"]).optional(),
+        status: z.enum(["pending", "assessed", "approved", "rejected", "cancelled"]).optional(),
         limit: z.number().int().positive().max(100).default(50),
       }).optional())
       .query(({ input, ctx }) => db.getApplicationQueue({
@@ -277,6 +277,21 @@ export const appRouter = router({
       .input(z.object({ query: z.string().trim().max(200) }))
       .query(async ({ input, ctx }) => {
         return db.searchCustomerHistory(ctx.user.organizationId, input.query);
+      }),
+
+    cancel: makerProcedure
+      .input(z.object({
+        applicationId: z.number().int().positive(),
+        reason: z.string().trim().max(500).optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        await db.cancelApplication({
+          applicationId: input.applicationId,
+          organizationId: ctx.user.organizationId,
+          actorUserId: ctx.user.id,
+          reason: input.reason,
+        });
+        return { success: true };
       }),
 
     decide: checkerProcedure

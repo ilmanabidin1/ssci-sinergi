@@ -12,7 +12,7 @@ import { useState } from "react";
 export default function AssessmentHistory() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
   const [search, setSearch] = useState("");
-  const [status, setStatus] = useState<"all" | "pending" | "assessed" | "approved" | "rejected">("all");
+  const [status, setStatus] = useState<"all" | "pending" | "assessed" | "approved" | "rejected" | "cancelled">("all");
   
   const { data: applications, isLoading } = trpc.applications.list.useQuery(
     { search, ...(status === "all" ? {} : { status }) }
@@ -24,6 +24,7 @@ export default function AssessmentHistory() {
       assessed: <Badge className="bg-blue-100 text-blue-800">Menunggu keputusan</Badge>,
       approved: <Badge className="bg-green-100 text-green-800">Disetujui</Badge>,
       rejected: <Badge className="bg-red-100 text-red-800">Ditolak</Badge>,
+      cancelled: <Badge variant="outline">Dibatalkan</Badge>,
     };
     return badges[status as keyof typeof badges] || <Badge>{status}</Badge>;
   };
