@@ -202,6 +202,31 @@ export async function createAssessment(data: InsertAssessment & { organizationId
   });
 }
 
+export async function getUserByEmail(email: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select().from(users).where(eq(users.email, email)).limit(1);
+  return result[0];
+}
+
+export async function createPilotAdmin(input: {
+  email: string;
+  name: string;
+  passwordHash: string;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(users).values({
+    openId: `local:${input.email}`,
+    email: input.email,
+    name: input.name,
+    passwordHash: input.passwordHash,
+    loginMethod: "password",
+    role: "admin",
+    organizationId: 1,
+  });
+}
+
 export async function assertDatabaseConnectivity() {
   const db = await getDb();
   if (!db) throw new Error("DATABASE_URL is not configured");

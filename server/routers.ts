@@ -13,6 +13,9 @@ import {
   SSCI_REQUIRED_LEGAL_DOCUMENTS,
 } from "@shared/ssciMethodology";
 import { generateNarrativeRecommendation } from "./openRouterRecommendations";
+import { verifyPassword } from "./passwordAuth";
+import { sdk } from "./_core/sdk";
+import { ENV } from "./_core/env";
 
 const nonNegativeMoney = z
   .string()
@@ -37,7 +40,29 @@ const legalDocumentsSchema = z
 export const appRouter = router({
   system: systemRouter,
   auth: router({
-    me: publicProcedure.query(opts => opts.ctx.user),
+    me: publicProcedure.query(({ ctx }) => {
+      if (!ctx.user) return null;
+      const { passwordHash: _passwordHash, ...safeUser } = ctx.user;
+      return safeUser;
+    }),
+    login: publicProcedure
+      .input(z.object({
+        email: z.string().trim().email().max(320),
+        password: z.string().min(8).max(200),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const user = await db.getUserByEmail(input.email.toLowerCase());
+        if (!user?.passwordHash || !(await verifyPassword(input.password, user.passwordHash))) {
+          throw new TRPCError({ code: "UNAUTHORIZED", message: "Email atau password salah" });
+        }
+        const token = await sdk.signSession({
+          openId: user.openId,
+          appId: ENV.appId,
+          name: user.name || user.email || "Pengguna SSCI",
+        });
+        ctx.res.cookie(COOKIE_NAME, token, getSessionCookieOptions(ctx.req));
+        return { success: true };
+      }),
     logout: publicProcedure.mutation(({ ctx }) => {
       const cookieOptions = getSessionCookieOptions(ctx.req);
       ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });

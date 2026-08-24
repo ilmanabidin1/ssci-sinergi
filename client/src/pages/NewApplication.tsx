@@ -13,7 +13,7 @@ import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 
 export default function NewApplication() {
-  const { user } = useAuth();
+  const { user } = useAuth({ redirectOnUnauthenticated: true });
   const [, setLocation] = useLocation();
   const [legalDocs, setLegalDocs] = useState<{
     type: "KTP" | "NPWP" | "NIB";

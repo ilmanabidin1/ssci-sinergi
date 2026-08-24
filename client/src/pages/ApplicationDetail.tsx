@@ -9,7 +9,7 @@ import { toast } from "sonner";
 
 export default function ApplicationDetail() {
   const { id } = useParams<{ id: string }>();
-  const { user } = useAuth();
+  const { user } = useAuth({ redirectOnUnauthenticated: true });
   const utils = trpc.useUtils();
   
   const applicationId = parseInt(id || "0");

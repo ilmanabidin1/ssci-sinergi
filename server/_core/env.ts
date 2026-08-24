@@ -1,5 +1,5 @@
 export const ENV = {
-  appId: process.env.VITE_APP_ID ?? "",
+  appId: process.env.VITE_APP_ID ?? "ssci-pilot",
   cookieSecret: process.env.JWT_SECRET ?? "",
   databaseUrl: process.env.DATABASE_URL ?? "",
   oAuthServerUrl: process.env.OAUTH_SERVER_URL ?? "",
@@ -10,6 +10,8 @@ export const ENV = {
   openRouterApiKey: process.env.OPENROUTER_API_KEY ?? "",
   openRouterBaseUrl:
     process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1",
+  pilotAdminEmail: process.env.PILOT_ADMIN_EMAIL ?? "",
+  pilotAdminPassword: process.env.PILOT_ADMIN_PASSWORD ?? "",
 };
 
 export function validateRuntimeEnvironment() {
@@ -18,8 +20,8 @@ export function validateRuntimeEnvironment() {
   const missing = [
     ["DATABASE_URL", ENV.databaseUrl],
     ["JWT_SECRET", ENV.cookieSecret],
-    ["VITE_APP_ID", ENV.appId],
-    ["OAUTH_SERVER_URL", ENV.oAuthServerUrl],
+    ["PILOT_ADMIN_EMAIL", ENV.pilotAdminEmail],
+    ["PILOT_ADMIN_PASSWORD", ENV.pilotAdminPassword],
   ].filter(([, value]) => !value).map(([name]) => name);
 
   if (missing.length > 0) {
@@ -29,6 +31,6 @@ export function validateRuntimeEnvironment() {
     throw new Error("JWT_SECRET must contain at least 32 characters");
   }
   new URL(ENV.databaseUrl);
-  new URL(ENV.oAuthServerUrl);
+  if (ENV.oAuthServerUrl) new URL(ENV.oAuthServerUrl);
   new URL(ENV.openRouterBaseUrl);
 }

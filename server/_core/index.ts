@@ -9,6 +9,7 @@ import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 import { validateRuntimeEnvironment } from "./env";
 import { assertDatabaseConnectivity } from "../db";
+import { ensurePilotAdmin } from "../passwordAuth";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -33,6 +34,7 @@ async function startServer() {
   validateRuntimeEnvironment();
   if (process.env.NODE_ENV === "production") {
     await assertDatabaseConnectivity();
+    await ensurePilotAdmin();
   }
   const app = express();
   const server = createServer(app);

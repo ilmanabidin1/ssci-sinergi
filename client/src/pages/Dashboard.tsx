@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 export default function Dashboard() {
-  const { user } = useAuth();
+  const { user } = useAuth({ redirectOnUnauthenticated: true });
   
   const { data: stats } = trpc.assessments.stats.useQuery();
 

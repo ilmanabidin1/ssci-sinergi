@@ -9,7 +9,7 @@ import { Link } from "wouter";
 import { useState } from "react";
 
 export default function AssessmentHistory() {
-  const { user } = useAuth();
+  const { user } = useAuth({ redirectOnUnauthenticated: true });
   const [search, setSearch] = useState("");
   
   const { data: applications, isLoading } = trpc.applications.list.useQuery(
