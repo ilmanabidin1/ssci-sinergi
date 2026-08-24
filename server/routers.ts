@@ -17,6 +17,7 @@ import { hashPassword, verifyPassword } from "./passwordAuth";
 import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
+import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 
 const nonNegativeMoney = z
   .string()
@@ -120,6 +121,22 @@ export const appRouter = router({
   }),
 
   applications: router({
+    extractKtp: makerProcedure
+      .input(ktpOcrInputSchema)
+      .mutation(async ({ input }) => {
+        try {
+          return await extractKtpOcr(input);
+        } catch (error) {
+          if (error instanceof KtpOcrInputError) {
+            throw new TRPCError({ code: "BAD_REQUEST", message: error.message });
+          }
+          if (error instanceof KtpOcrProviderError) {
+            throw new TRPCError({ code: "BAD_GATEWAY", message: "KTP OCR service unavailable" });
+          }
+          throw new TRPCError({ code: "BAD_GATEWAY", message: "KTP OCR service unavailable" });
+        }
+      }),
+
     create: makerProcedure
       .input(z.object({
         customerName: z.string().trim().min(1).max(255),
