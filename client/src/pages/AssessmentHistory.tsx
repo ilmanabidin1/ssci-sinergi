@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
 import { ArrowLeft, Shield, Search, Loader2 } from "lucide-react";
 import { Link } from "wouter";
@@ -11,19 +12,20 @@ import { useState } from "react";
 export default function AssessmentHistory() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
   const [search, setSearch] = useState("");
+  const [status, setStatus] = useState<"all" | "pending" | "assessed" | "approved" | "rejected">("all");
   
   const { data: applications, isLoading } = trpc.applications.list.useQuery(
-    { search }
+    { search, ...(status === "all" ? {} : { status }) }
   );
 
   // Prototype mode: no login required
 
   const getStatusBadge = (status: string) => {
     const badges = {
-      pending: <Badge variant="outline">Pending</Badge>,
-      assessed: <Badge className="bg-blue-100 text-blue-800">Assessed</Badge>,
-      approved: <Badge className="bg-green-100 text-green-800">Approved</Badge>,
-      rejected: <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
+      pending: <Badge variant="outline">Menunggu penilaian</Badge>,
+      assessed: <Badge className="bg-blue-100 text-blue-800">Menunggu keputusan</Badge>,
+      approved: <Badge className="bg-green-100 text-green-800">Disetujui</Badge>,
+      rejected: <Badge className="bg-red-100 text-red-800">Ditolak</Badge>,
     };
     return badges[status as keyof typeof badges] || <Badge>{status}</Badge>;
   };
@@ -59,6 +61,7 @@ export default function AssessmentHistory() {
             <CardTitle>Pencarian</CardTitle>
           </CardHeader>
           <CardContent>
+            <div className="grid gap-3 md:grid-cols-[1fr_220px]">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               <Input
@@ -67,6 +70,17 @@ export default function AssessmentHistory() {
                 onChange={(e) => setSearch(e.target.value)}
                 className="pl-10"
               />
+            </div>
+            <Select value={status} onValueChange={value => setStatus(value as typeof status)}>
+              <SelectTrigger aria-label="Filter status"><SelectValue placeholder="Semua status" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">Semua status</SelectItem>
+                <SelectItem value="pending">Menunggu penilaian</SelectItem>
+                <SelectItem value="assessed">Menunggu keputusan</SelectItem>
+                <SelectItem value="approved">Disetujui</SelectItem>
+                <SelectItem value="rejected">Ditolak</SelectItem>
+              </SelectContent>
+            </Select>
             </div>
           </CardContent>
         </Card>
