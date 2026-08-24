@@ -50,7 +50,7 @@ export default function Login() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" name="password" type="password" autoComplete="current-password" minLength={8} required />
+           <Input id="password" name="password" type="password" autoComplete="current-password" minLength={4} required />
             </div>
             <Button className="w-full" type="submit" disabled={login.isPending}>
               {login.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

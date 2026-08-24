@@ -56,12 +56,39 @@ export const appRouter = router({
         if (!user?.passwordHash || !(await verifyPassword(input.password, user.passwordHash))) {
           throw new TRPCError({ code: "UNAUTHORIZED", message: "Email atau password salah" });
         }
+        const organization = await db.getOrganizationById(user.organizationId);
+        if (organization?.registrationStatus === "pending") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Pendaftaran BPRS masih menunggu verifikasi" });
+        }
         const token = await sdk.signSession({
           openId: user.openId,
           appId: ENV.appId,
           name: user.name || user.email || "Pengguna SSCI",
         });
         ctx.res.cookie(COOKIE_NAME, token, getSessionCookieOptions(ctx.req));
+        return { success: true };
+      }),
+    registerBprs: publicProcedure
+      .input(z.object({
+        organizationName: z.string().trim().min(2).max(255),
+        organizationSlug: z.string().trim().min(3).max(100).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Slug hanya boleh berisi huruf kecil, angka, dan tanda hubung"),
+        adminName: z.string().trim().min(2).max(255),
+        email: z.string().trim().email().max(320),
+        password: z.string().min(8).max(200),
+      }))
+      .mutation(async ({ input }) => {
+        const email = input.email.toLowerCase();
+        if (await db.getUserByEmail(email)) {
+          throw new TRPCError({ code: "CONFLICT", message: "Email sudah terdaftar" });
+        }
+        try {
+          await db.registerBprs({ ...input, organizationName: input.organizationName.trim(), organizationSlug: input.organizationSlug.trim(), adminName: input.adminName.trim(), email, passwordHash: await hashPassword(input.password) });
+        } catch (error) {
+          if (error instanceof Error && /duplicate|unique/i.test(error.message)) {
+            throw new TRPCError({ code: "CONFLICT", message: "Email atau slug sudah terdaftar" });
+          }
+          throw error;
+        }
         return { success: true };
       }),
     logout: publicProcedure.mutation(({ ctx }) => {

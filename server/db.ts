@@ -1,6 +1,6 @@
 import { eq, desc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, applications, assessments, auditLogs, documentFiles, InsertApplication, InsertAssessment, InsertDocumentFile } from "../drizzle/schema";
+import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, InsertApplication, InsertAssessment, InsertDocumentFile } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -276,6 +276,43 @@ export async function getUserByEmail(email: string) {
   if (!db) throw new Error("Database not available");
   const result = await db.select().from(users).where(eq(users.email, email)).limit(1);
   return result[0];
+}
+
+export async function getOrganizationById(id: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select().from(organizations).where(eq(organizations.id, id)).limit(1);
+  return result[0];
+}
+
+export async function registerBprs(input: {
+  organizationName: string;
+  organizationSlug: string;
+  adminName: string;
+  email: string;
+  passwordHash: string;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.transaction(async tx => {
+    const organizationResult = await tx.insert(organizations).values({
+      name: input.organizationName,
+      legalName: input.organizationName,
+      slug: input.organizationSlug,
+      registrationStatus: "pending",
+    });
+    const organizationId = Number(organizationResult[0].insertId);
+    await tx.insert(users).values({
+      openId: `local:${input.email}`,
+      email: input.email,
+      name: input.adminName,
+      passwordHash: input.passwordHash,
+      loginMethod: "password",
+      role: "admin",
+      organizationId,
+    });
+    return { organizationId };
+  });
 }
 
 export async function createPilotAdmin(input: {

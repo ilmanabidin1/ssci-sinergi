@@ -11,6 +11,7 @@ import AssessmentHistory from "./pages/AssessmentHistory";
 import Dashboard from "./pages/Dashboard";
 import AboutSSCI from "./pages/AboutSSCI";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path={"/assessments"} component={AssessmentHistory} />
       <Route path={"/tentang-ssci"} component={AboutSSCI} />
       <Route path={"/login"} component={Login} />
+      <Route path={"/register"} component={Register} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

@@ -3,7 +3,9 @@ import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, decimal, json } f
 export const organizations = mysqlTable("organizations", {
   id: int("id").autoincrement().primaryKey(),
   name: varchar("name", { length: 255 }).notNull(),
+  legalName: varchar("legalName", { length: 255 }).notNull(),
   slug: varchar("slug", { length: 100 }).notNull().unique(),
+  registrationStatus: mysqlEnum("registrationStatus", ["pending", "active"]).default("active").notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
@@ -15,7 +17,7 @@ export const users = mysqlTable("users", {
   id: int("id").autoincrement().primaryKey(),
   openId: varchar("openId", { length: 64 }).notNull().unique(),
   name: text("name"),
-  email: varchar("email", { length: 320 }),
+  email: varchar("email", { length: 320 }).unique(),
   passwordHash: varchar("passwordHash", { length: 255 }),
   loginMethod: varchar("loginMethod", { length: 64 }),
   role: mysqlEnum("role", ["maker", "checker", "admin"]).default("maker").notNull(),
