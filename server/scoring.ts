@@ -313,6 +313,63 @@ function generateRecommendations(result: Omit<SSCIResult, 'recommendations' | 'r
   };
 }
 
+export interface RecommendedPlafon {
+  recommendedAmount: number;
+  maxMonthlyInstallment: number;
+  dscrRatio: number;
+  ltvRatio: number;
+  assumptions: {
+    tenor: number;
+    marginRate: number;
+  };
+}
+
+export function calculateRecommendedPlafon(application: Application): RecommendedPlafon {
+  const monthlyRevenue = Number(application.monthlyRevenue);
+  const monthlyExpenses = Number(application.monthlyExpenses);
+  const existingDebt = Number(application.existingDebt);
+  const collateralValue = Number(application.collateralValue);
+  const tenor = application.financingTenor;
+  const marginRate = Number(application.marginRate);
+
+  const netIncome = monthlyRevenue - monthlyExpenses;
+
+  const dscrTarget = 1.25;
+  const maxMonthlyInstallment = Math.max(
+    0,
+    (netIncome - dscrTarget * existingDebt) / dscrTarget
+  );
+
+  const amountFromDscr = maxMonthlyInstallment * tenor / (1 + marginRate / 100);
+
+  const ltvTarget = 80;
+  const amountFromLtv = collateralValue * (ltvTarget / 100);
+
+  const recommendedAmount = Math.round(Math.min(amountFromDscr, amountFromLtv) * 100) / 100;
+
+  const recommendedMonthlyInstallment =
+    recommendedAmount * (1 + marginRate / 100) / tenor;
+  const dscrRatio =
+    netIncome > 0
+      ? Math.round((netIncome / (existingDebt + recommendedMonthlyInstallment)) * 100) / 100
+      : 0;
+  const ltvRatio =
+    collateralValue > 0
+      ? Math.round((recommendedAmount / collateralValue) * 10000) / 100
+      : 0;
+
+  return {
+    recommendedAmount,
+    maxMonthlyInstallment: Math.round(maxMonthlyInstallment * 100) / 100,
+    dscrRatio,
+    ltvRatio,
+    assumptions: {
+      tenor,
+      marginRate: Math.round(marginRate * 100) / 100,
+    },
+  };
+}
+
 /**
  * Main SSCI calculation function
  */

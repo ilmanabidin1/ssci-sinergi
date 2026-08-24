@@ -67,6 +67,16 @@ export const applications = mysqlTable("applications", {
   businessShariaCompliant: mysqlEnum("businessShariaCompliant", ["yes", "no", "partial"]).notNull(),
   shariaComplianceNotes: text("shariaComplianceNotes"),
   
+  // Murabahah Akad Checklist (DSN-MUI Fatwa compliance)
+  murabahahSupplierName: mysqlEnum("murabahahSupplierName", ["yes", "no", "tidak_relevan"]),
+  murabahahObject: mysqlEnum("murabahahObject", ["yes", "no", "tidak_relevan"]),
+  murabahahPriceKnown: mysqlEnum("murabahahPriceKnown", ["yes", "no", "tidak_relevan"]),
+  murabahahMarginDisclosed: mysqlEnum("murabahahMarginDisclosed", ["yes", "no", "tidak_relevan"]),
+  murabahahDownPayment: mysqlEnum("murabahahDownPayment", ["yes", "no", "tidak_relevan"]),
+  murabahahWakalah: mysqlEnum("murabahahWakalah", ["yes", "no", "tidak_relevan"]),
+  murabahahDpsReviewed: mysqlEnum("murabahahDpsReviewed", ["yes", "no", "tidak_relevan"]),
+  murabahahNotes: text("murabahahNotes"),
+  
   // Sustainability Indicators
   environmentalPractices: text("environmentalPractices"),
   socialImpact: text("socialImpact"),
@@ -141,6 +151,11 @@ export const assessments = mysqlTable("assessments", {
   recommendationModel: varchar("recommendationModel", { length: 100 }),
   recommendationPromptVersion: varchar("recommendationPromptVersion", { length: 50 }),
   
+  // Recommended Plafon
+  recommendedPlafon: decimal("recommendedPlafon", { precision: 15, scale: 2 }),
+  dscrRatio: decimal("dscrRatio", { precision: 5, scale: 2 }),
+  ltvRatio: decimal("lvrRatio", { precision: 5, scale: 2 }),
+
   // Assessment metadata
   assessedBy: int("assessedBy").notNull(),
   assessedAt: timestamp("assessedAt").defaultNow().notNull(),

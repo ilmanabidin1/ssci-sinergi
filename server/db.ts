@@ -486,6 +486,55 @@ export async function getDocumentFiles(applicationId: number, organizationId: nu
   return db.select().from(documentFiles).where(and(eq(documentFiles.applicationId, applicationId), eq(documentFiles.organizationId, organizationId))).orderBy(desc(documentFiles.createdAt));
 }
 
+export async function searchCustomerHistory(organizationId: number, query: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const trimmed = query.trim();
+  if (trimmed.length === 0) return [];
+
+  const rows = await db.select().from(applications)
+    .where(and(
+      eq(applications.organizationId, organizationId),
+      or(
+        like(applications.customerName, `%${trimmed}%`),
+        like(applications.customerId, `%${trimmed}%`)
+      )!
+    ))
+    .orderBy(desc(applications.createdAt))
+    .limit(10);
+
+  if (rows.length === 0) return [];
+
+  const applicationIds = rows.map(app => app.id);
+  const assessmentRows = await db.select().from(assessments)
+    .where(and(
+      eq(assessments.organizationId, organizationId),
+      sql`${assessments.applicationId} IN (${sql.join(applicationIds.map(id => sql`${id}`), sql`, `)})`,
+    ))
+    .orderBy(desc(assessments.assessedAt));
+
+  const latestAssessments = new Map<number, typeof assessmentRows[number]>();
+  for (const assessment of assessmentRows) {
+    if (!latestAssessments.has(assessment.applicationId)) {
+      latestAssessments.set(assessment.applicationId, assessment);
+    }
+  }
+
+  return rows.map(app => {
+    const assessment = latestAssessments.get(app.id);
+    return {
+      customerName: app.customerName,
+      customerId: app.customerId,
+      businessName: app.businessName,
+      status: app.status,
+      latestAssessmentScore: assessment ? Number(assessment.totalScore) : null,
+      latestAssessmentClassification: assessment?.classification ?? null,
+      date: app.createdAt,
+    };
+  });
+}
+
 export async function updateDocumentVerification(input: { id: number; organizationId: number; status: "verified" | "rejected"; verifiedBy: number; rejectionReason?: string | null }) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");

@@ -4,7 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { checkerProcedure, makerProcedure, publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
-import { calculateSSCI } from "./scoring";
+import { calculateRecommendedPlafon, calculateSSCI } from "./scoring";
 import { TRPCError } from "@trpc/server";
 import { generateAssessmentPDF } from "./pdfGenerator";
 import {
@@ -152,6 +152,14 @@ export const appRouter = router({
         legalDocuments: legalDocumentsSchema,
         businessShariaCompliant: z.enum(["yes", "no", "partial"]),
         shariaComplianceNotes: z.string().trim().max(2000).optional(),
+        murabahahSupplierName: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahObject: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahPriceKnown: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahMarginDisclosed: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahDownPayment: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahWakalah: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahDpsReviewed: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahNotes: z.string().trim().max(2000).optional(),
         environmentalPractices: z.string().trim().max(2000).optional(),
         socialImpact: z.string().trim().max(2000).optional(),
         governanceQuality: z.enum(["excellent", "good", "fair", "poor"]),
@@ -216,6 +224,7 @@ export const appRouter = router({
 
         // Calculate SSCI score
         const result = calculateSSCI(application);
+        const plafon = calculateRecommendedPlafon(application);
         const narrative = await generateNarrativeRecommendation({
           classification: result.classification,
           totalScore: result.totalScore,
@@ -246,6 +255,9 @@ export const appRouter = router({
           recommendationStatus: narrative.status,
           recommendationModel: narrative.model,
           recommendationPromptVersion: narrative.promptVersion,
+          recommendedPlafon: plafon.recommendedAmount.toString(),
+          dscrRatio: plafon.dscrRatio.toString(),
+          ltvRatio: plafon.ltvRatio.toString(),
           assessedBy: ctx.user.id,
           notes: input.notes,
         });
@@ -256,8 +268,15 @@ export const appRouter = router({
             ...result,
             recommendations: narrative.recommendation,
             recommendationStatus: narrative.status,
+            plafon,
           },
         };
+      }),
+
+    searchCustomerHistory: protectedProcedure
+      .input(z.object({ query: z.string().trim().max(200) }))
+      .query(async ({ input, ctx }) => {
+        return db.searchCustomerHistory(ctx.user.organizationId, input.query);
       }),
 
     decide: checkerProcedure

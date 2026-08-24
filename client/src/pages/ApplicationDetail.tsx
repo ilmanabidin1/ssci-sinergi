@@ -272,6 +272,40 @@ export default function ApplicationDetail() {
                    </div>
                  </div>
                </div>
+
+               {assessment.recommendedPlafon && (
+                 <div className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
+                   <div className="flex items-start gap-2 mb-3">
+                     <TrendingUp className="h-5 w-5 text-amber-600 mt-0.5" />
+                     <div>
+                       <div className="font-semibold text-amber-900">Rekomendasi Plafon Otomatis</div>
+                       <p className="text-xs text-amber-700 mt-0.5">Plafon ini adalah rekomendasi otomatis dan bersifat indikatif. Keputusan final plafon tetap pada komite BPRS.</p>
+                     </div>
+                   </div>
+                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                     <div className="bg-white rounded p-2">
+                       <div className="text-xl font-bold text-amber-800">Rp {(Number(assessment.recommendedPlafon) / 1_000_000).toFixed(0)}<span className="text-sm"> jt</span></div>
+                       <div className="text-xs text-gray-500">Plafon Rekomendasi</div>
+                     </div>
+                     <div className="bg-white rounded p-2">
+                       <div className="text-lg font-semibold text-gray-800">Rp {(Number(assessment.recommendedPlafon) * (1 + Number(data.application.marginRate) / 100) / Number(data.application.financingTenor) / 1_000_000).toFixed(1)}<span className="text-xs"> jt/bln</span></div>
+                       <div className="text-xs text-gray-500">Cicilan Estimasi</div>
+                     </div>
+                     <div className="bg-white rounded p-2">
+                       <div className="text-lg font-semibold text-gray-800">{Number(assessment.dscrRatio).toFixed(2)}x</div>
+                       <div className="text-xs text-gray-500">DSCR (target 1.25)</div>
+                     </div>
+                     <div className="bg-white rounded p-2">
+                       <div className="text-lg font-semibold text-gray-800">{Number(assessment.ltvRatio).toFixed(1)}%</div>
+                       <div className="text-xs text-gray-500">LTV (maks 80%)</div>
+                     </div>
+                   </div>
+                   <div className="mt-2 text-xs text-amber-600">
+                     Asumsi: tenor {data.application.financingTenor} bulan, margin {Number(data.application.marginRate).toFixed(2)}%
+                   </div>
+                 </div>
+               )}
+
               <div className="mt-4 border-t pt-4 text-xs text-gray-500 flex flex-wrap gap-x-6 gap-y-1">
                 <span>Versi aturan: {assessment.modelVersion}</span>
                 <span>
