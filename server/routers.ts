@@ -18,6 +18,7 @@ import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
+import { FinancialImportError, parseFinancialCsv } from "./financialImport";
 
 const nonNegativeMoney = z
   .string()
@@ -121,6 +122,18 @@ export const appRouter = router({
   }),
 
   applications: router({
+    importFinancialCsv: makerProcedure
+      .input(z.object({ data: z.string().min(1).max(1_400_000) }))
+      .mutation(({ input }) => {
+        try {
+          return parseFinancialCsv(input.data);
+        } catch (error) {
+          if (error instanceof FinancialImportError) {
+            throw new TRPCError({ code: "BAD_REQUEST", message: error.message });
+          }
+          throw new TRPCError({ code: "BAD_REQUEST", message: "CSV tidak dapat diproses" });
+        }
+      }),
     extractKtp: makerProcedure
       .input(ktpOcrInputSchema)
       .mutation(async ({ input }) => {
