@@ -26,6 +26,73 @@ type ExtractKtpMutation = {
 };
 const initial: Values = { customerName: "", customerId: "", businessName: "", businessType: "", businessAge: "", address: "", phone: "", email: "", monthlyRevenue: "", monthlyExpenses: "", existingDebt: "", collateralValue: "", requestedAmount: "", financingTenor: "", marginRate: "", loanPurpose: "", businessShariaCompliant: "", shariaComplianceNotes: "", environmentalPractices: "", socialImpact: "", governanceQuality: "", legalDocuments: [{ type: "KTP", status: "pending", notes: "" }, { type: "NPWP", status: "pending", notes: "" }, { type: "NIB", status: "pending", notes: "" }] };
 
+const demoFirstNames = ["Andi", "Budi", "Citra", "Dewi", "Eko", "Fitri", "Gunawan", "Hendra", "Indah", "Joko", "Kartika", "Lestari", "Mulyadi", "Nurhayati", "Rahmat", "Siti", "Teguh", "Wulan", "Yudi", "Zainal"];
+const demoLastNames = ["Pratama", "Wijaya", "Santoso", "Kurniawan", "Hidayat", "Nugroho", "Saputra", "Maulana", "Rahmawati", "Suryani", "Firmansyah", "Wibowo", "Hakim", "Ramadhani", "Setiawan", "Anggraini", "Prasetyo", "Utami", "Susanti", "Lestari"];
+const demoStreets = ["Jl. Merdeka", "Jl. Sudirman", "Jl. Ahmad Yani", "Jl. Gatot Subroto", "Jl. Diponegoro", "Jl. Soekarno-Hatta", "Jl. Pahlawan", "Jl. Veteran", "Jl. Kebon Kawung", "Jl. Asia Afrika"];
+const demoKecamatan = ["Cibeunying", "Coblong", "Astanaanyar", "Tegallega", "Lengkong", "Cicendo", "Bojongloa", "Kiaracondong", "Batununggal", "Regol"];
+const demoCities = ["Bandung", "Bekasi", "Depok", "Bogor", "Semarang", "Surabaya", "Medan", "Makassar", "Yogyakarta", "Palembang", "Tangerang", "Malang"];
+const demoProvinces = ["Jawa Barat", "Banten", "Jawa Tengah", "Jawa Timur", "DI Yogyakarta", "Sumatera Utara", "Sulawesi Selatan", "Sumatera Selatan"];
+const demoBusinessNames = ["Toko Sembako", "Bengkel Motor", "Warung Makan", "Laundry", "Konveksi", "Toko Elektronik", "Jasa Pengiriman", "Katering", "Toko Pakaian", "Perbengkelan", "Toko Pertanian", "Fotokopi", "Butik", "Toko Bangunan", "Usaha Ayam Potong", "Toko Kelontong"];
+const demoBusinessTypes = ["Perdagangan", "Jasa", "Manufaktur", "Kuliner", "Retail", "Transportasi", "Pertanian"];
+const demoLoanPurposes = ["Modal kerja untuk pengembangan usaha", "Pembelian stok barang dagangan", "Penambahan peralatan usaha", "Perluasan tempat usaha", "Penambahan armada pengiriman", "Pembelian bahan baku produksi", "Renovasi tempat usaha", "Penambahan mesin produksi"];
+const demoShariaNotes = ["Usaha tidak mengandung unsur riba, gharar, atau maysir dan sesuai fatwa DSN-MUI.", "Seluruh transaksi dicatat secara syariah tanpa bunga dan telah dikaji oleh pihak internal."];
+const demoEnvironmental = ["Menggunakan kemasan ramah lingkungan dan mengurangi limbah kemasan.", "Menerapkan pengelolaan limbah dan hemat energi pada operasional harian."];
+const demoSocial = ["Mempekerjakan tenaga kerja dari sekitar lingkungan usaha.", "Memberdayakan masyarakat lokal melalui kemitraan usaha dan pemasok lokal."];
+
+const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
+const randInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+const nik = () => {
+  const prefix = pick(["3273", "3171", "3271", "3507", "3674", "1271", "1371", "7371", "3402", "3301"]);
+  const date = `${String(randInt(1, 28)).padStart(2, "0")}${String(randInt(1, 12)).padStart(2, "0")}${randInt(1950, 2003)}`;
+  const serial = String(randInt(1, 999999)).padStart(6, "0");
+  return prefix + date + serial;
+};
+const phone = () => `08${String(randInt(100000000, 999999999))}`;
+const roundTo = (value: number, step = 100000) => Math.round(value / step) * step;
+
+const demoCustomer = (): Partial<Values> => {
+  const first = pick(demoFirstNames);
+  const last = pick(demoLastNames);
+  const name = `${first} ${last}`;
+  return {
+    customerName: name,
+    customerId: nik(),
+    phone: phone(),
+    email: `${first.toLowerCase()}.${last.toLowerCase()}${randInt(1, 99)}@gmail.com`,
+    address: `${pick(demoStreets)} No. ${randInt(1, 120)}, Kec. ${pick(demoKecamatan)}, Kota ${pick(demoCities)}, ${pick(demoProvinces)}`,
+  };
+};
+const demoBusiness = (): Partial<Values> => {
+  const revenue = randInt(15, 80) * 1000000;
+  const expenses = roundTo(revenue * randInt(52, 72) / 100, 100000);
+  const installment = randInt(0, 4) * 500000;
+  const requested = roundTo(revenue * randInt(200, 360) / 100, 100000);
+  const collateral = roundTo(requested * randInt(125, 180) / 100, 500000);
+  return {
+    businessName: `${pick(demoBusinessNames)} ${pick(["Sejahtera", "Berkah", "Maju", "Jaya", "Abadi", "Mandiri", "Berseri", "Utama"])}`,
+    businessType: pick(demoBusinessTypes),
+    businessAge: String(randInt(18, 120)),
+    monthlyRevenue: String(revenue),
+    monthlyExpenses: String(expenses),
+    existingDebt: String(installment),
+    collateralValue: String(collateral),
+    requestedAmount: String(requested),
+    financingTenor: String(pick([12, 24, 36, 48])),
+    marginRate: String(pick([8, 10, 11, 12, 13])),
+    loanPurpose: pick(demoLoanPurposes),
+  };
+};
+const demoLegal = (): Partial<Values> => ({
+  legalDocuments: initial.legalDocuments.map(doc => ({ ...doc, status: pick(["complete", "verified", "verified"]) as Document["status"] })),
+  businessShariaCompliant: pick(["yes", "yes", "partial"]) as "yes" | "partial",
+  shariaComplianceNotes: pick(demoShariaNotes),
+});
+const demoEsg = (): Partial<Values> => ({
+  environmentalPractices: pick(demoEnvironmental),
+  socialImpact: pick(demoSocial),
+  governanceQuality: pick(["excellent", "good", "good", "fair"]) as "excellent" | "good" | "fair",
+});
+
 function Field({ name, label, values, setValues, ...props }: { name: string; label: string; values: Values; setValues: React.Dispatch<React.SetStateAction<Values>>; [key: string]: unknown }) {
   const Component = props.rows ? Textarea : Input;
   return <div className="space-y-2"><Label htmlFor={name}>{label}</Label><Component id={name} name={name} value={String(values[name] || "")} onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setValues(v => ({ ...v, [name]: e.target.value }))} {...props} /></div>;
@@ -72,6 +139,8 @@ export default function NewApplication() {
   useEffect(() => { try { localStorage.setItem(DRAFT_KEY, JSON.stringify({ version: 1, values, step })); } catch {} }, [values, step]);
   const restore = () => { try { const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || ""); if (saved.version === 1) { setValues({ ...initial, ...saved.values }); setStep(Math.min(saved.step || 0, 3)); setHasDraft(false); } } catch { toast.error("Draft tidak dapat dipulihkan"); } };
   const reset = () => { localStorage.removeItem(DRAFT_KEY); setValues(initial); setStep(0); setHasDraft(false); };
+  const fillDemo = (demoStep: number) => setValues(current => ({ ...current, ...(demoStep === 0 ? demoCustomer() : demoStep === 1 ? demoBusiness() : demoStep === 2 ? demoLegal() : demoEsg()) } as Values));
+  const fillAllDemo = () => setValues(current => ({ ...current, ...demoCustomer(), ...demoBusiness(), ...demoLegal(), ...demoEsg() } as Values));
   const selectKtpFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     setKtpProcessed(false);
@@ -152,10 +221,10 @@ export default function NewApplication() {
   const submit = (e: React.FormEvent) => { e.preventDefault(); const missing = required[3].filter(key => !values[key]?.trim()); if (missing.length) return; createMutation.mutate({ customerName: values.customerName, customerId: values.customerId, businessName: values.businessName, businessType: values.businessType, businessAge: parseInt(values.businessAge), address: values.address, phone: values.phone, email: values.email || undefined, monthlyRevenue: values.monthlyRevenue, monthlyExpenses: values.monthlyExpenses, existingDebt: values.existingDebt, collateralValue: values.collateralValue, requestedAmount: values.requestedAmount, financingTenor: parseInt(values.financingTenor), marginRate: parseFloat(values.marginRate), loanPurpose: values.loanPurpose, legalDocuments: values.legalDocuments, businessShariaCompliant: values.businessShariaCompliant as "yes" | "no" | "partial", shariaComplianceNotes: values.shariaComplianceNotes || undefined, environmentalPractices: values.environmentalPractices || undefined, socialImpact: values.socialImpact || undefined, governanceQuality: values.governanceQuality as "excellent" | "good" | "fair" | "poor" }); };
   const select = (name: string, label: string, options: [string, string][]) => <div className="space-y-2"><Label htmlFor={name}>{label}</Label><Select value={values[name]} onValueChange={value => setValues(v => ({ ...v, [name]: value }))}><SelectTrigger id={name}><SelectValue placeholder="Pilih" /></SelectTrigger><SelectContent>{options.map(([value, text]) => <SelectItem key={value} value={value}>{text}</SelectItem>)}</SelectContent></Select></div>;
   return <div className="min-h-screen bg-gray-50"><nav className="border-b bg-white"><div className="container flex items-center justify-between py-4"><Button variant="ghost" size="sm" asChild><Link href="/"><ArrowLeft className="mr-2 h-4 w-4" />Kembali</Link></Button><div className="flex items-center gap-2"><Shield className="h-6 w-6 text-primary" /><b className="text-xl text-primary">SSCI</b></div><span className="text-sm text-gray-600">{user?.name || ""}</span></div></nav>
-      <main className="container max-w-4xl py-6 sm:py-8"><div className="mb-6"><div><h1 className="text-3xl font-bold text-gray-900">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-gray-600">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan</p></div></div>
+      <main className="container max-w-4xl py-6 sm:py-8"><div className="mb-6"><div className="flex flex-wrap items-start justify-between gap-3"><div><h1 className="text-3xl font-bold text-gray-900">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-gray-600">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan</p></div><Button type="button" variant="outline" onClick={fillAllDemo}>Isi contoh data</Button></div><p className="mt-3 text-xs text-muted-foreground">Mengisi contoh data acak untuk pengujian alur. Data tetap dapat Anda periksa sebelum dikirim.</p></div>
       {hasDraft && <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm"><span>Draft tersimpan ditemukan.</span><span className="flex gap-2"><Button type="button" size="sm" onClick={restore}>Pulihkan draft</Button><Button type="button" size="sm" variant="ghost" onClick={reset}>Mulai ulang</Button></span></div>}
       <div className="mb-6"><div className="mb-2 flex justify-between text-sm font-medium"><span>Langkah {step + 1} dari 4</span><span>{steps[step]}</span></div><div className="flex gap-1">{steps.map((label, i) => <div key={label} className={`h-2 flex-1 rounded-full ${i <= step ? "bg-primary" : "bg-gray-200"}`} aria-label={label} />)}</div></div>
-        <form onSubmit={submit}><Card><CardHeader><div><CardTitle>{steps[step]}</CardTitle><CardDescription>{step === 0 ? "Data identitas dan kontak nasabah" : step === 1 ? "Detail usaha dan kebutuhan pembiayaan" : step === 2 ? "Kelengkapan dokumen dan kepatuhan syariah" : "Dampak usaha dan pemeriksaan akhir"}</CardDescription></div></CardHeader><CardContent className="space-y-4">
+        <form onSubmit={submit}><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle>{steps[step]}</CardTitle><CardDescription>{step === 0 ? "Data identitas dan kontak nasabah" : step === 1 ? "Detail usaha dan kebutuhan pembiayaan" : step === 2 ? "Kelengkapan dokumen dan kepatuhan syariah" : "Dampak usaha dan pemeriksaan akhir"}</CardDescription></div><Button type="button" variant="outline" size="sm" onClick={() => fillDemo(step)}>Isi contoh data</Button></div></CardHeader><CardContent className="space-y-4">
          {step === 0 && <><div className="grid gap-4 md:grid-cols-2"><Field name="customerName" label="Nama Lengkap *" values={values} setValues={setValues} required /><Field name="customerId" label="NIK / ID Nasabah *" values={values} setValues={setValues} required /><Field name="phone" label="Nomor Telepon *" values={values} setValues={setValues} type="tel" required /><Field name="email" label="Email (Opsional)" values={values} setValues={setValues} type="email" /></div><Field name="address" label="Alamat Lengkap *" values={values} setValues={setValues} rows={3} required /><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div><h3 className="font-medium">Isi data dari foto KTP</h3><p className="text-sm text-muted-foreground">JPG atau PNG, maksimal 5 MB. File hanya dikirim saat Anda menekan tombol proses dan tidak disimpan dalam draft.</p></div><Alert variant="destructive" className="border-amber-300 bg-amber-50 text-amber-950"><Shield /><AlertTitle>Peringatan privasi</AlertTitle><AlertDescription className="text-amber-900">Foto KTP berisi data pribadi. Pastikan Anda berwenang mengunggahnya dan setujui pemrosesan untuk OCR sebelum melanjutkan.</AlertDescription></Alert><div className="flex items-start gap-2"><Checkbox id="ktp-consent" checked={ktpConsent} onCheckedChange={checked => setKtpConsent(checked === true)} /><Label htmlFor="ktp-consent" className="cursor-pointer text-sm leading-5">Saya menyetujui pemrosesan foto KTP untuk mengisi data identitas.</Label></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept="image/jpeg,image/png" onChange={selectKtpFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={processKtp} disabled={extractKtpMutation.isPending}>{extractKtpMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Proses OCR KTP</Button></div>{ktpFile && <p className="text-xs text-muted-foreground">File dipilih: {ktpFile.name}</p>}{ktpError && <p className="flex items-center gap-1 text-sm text-red-600"><AlertCircle className="h-4 w-4" />{ktpError}</p>}{ktpProcessed && <Alert className="border-green-200 bg-green-50 text-green-900"><CheckCircle2 /><AlertTitle>Data OCR berhasil diisi</AlertTitle><AlertDescription className="text-green-800">Hasil OCR wajib diverifikasi secara manual sebelum aplikasi dikirimkan.</AlertDescription></Alert>}</div></>}
          {step === 1 && <><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-medium">Import data keuangan dari CSV</h3><p className="text-sm text-muted-foreground">Gunakan 1 sampai 12 baris bulanan dengan kolom month, revenue, expenses, existingInstallment.</p></div><Button type="button" variant="ghost" size="sm" onClick={downloadFinancialTemplate}><Download className="mr-2 h-4 w-4" />Unduh template CSV</Button></div><Alert className="border-amber-300 bg-amber-50 text-amber-950"><Shield /><AlertTitle>Pemberitahuan privasi</AlertTitle><AlertDescription className="text-amber-900">File hanya diproses sementara untuk menghitung rata-rata dan tidak disimpan sebagai file atau di draft.</AlertDescription></Alert><div className="flex flex-wrap items-center gap-3"><Input type="file" accept=".csv,text/csv" onChange={selectFinancialFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={importFinancialFile} disabled={importFinancialMutation.isPending}>{importFinancialMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Import data CSV</Button></div>{financialFile && <p className="text-xs text-muted-foreground">File dipilih: {financialFile.name}</p>}{financialError && <p className="text-sm text-red-600">{financialError}</p>}</div><div className="grid gap-4 md:grid-cols-2"><Field name="businessName" label="Nama Usaha *" values={values} setValues={setValues} required /><Field name="businessType" label="Jenis Usaha *" values={values} setValues={setValues} required /><Field name="businessAge" label="Lama Usaha (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><Field name="monthlyRevenue" label="Pendapatan Bulanan (Rp) *" values={values} setValues={setValues} type="number" min="0" required /><Field name="monthlyExpenses" label="Pengeluaran Bulanan (Rp) *" values={values} setValues={setValues} type="number" min="0" required /><Field name="existingDebt" label="Total Angsuran Existing per Bulan (Rp) *" values={values} setValues={setValues} type="number" min="0" required /><Field name="collateralValue" label="Nilai Agunan (Rp) *" values={values} setValues={setValues} type="number" min="0" required /><Field name="requestedAmount" label="Jumlah Pembiayaan (Rp) *" values={values} setValues={setValues} type="number" min="1" required /><Field name="financingTenor" label="Tenor Pembiayaan (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><Field name="marginRate" label="Total Margin Akad (%) *" values={values} setValues={setValues} type="number" min="0" max="100" step="0.01" required /></div><Field name="loanPurpose" label="Tujuan Pembiayaan *" values={values} setValues={setValues} rows={3} required /></>}
         {step === 2 && <><div className="space-y-4"><div className="font-medium">Dokumen Legal</div>{values.legalDocuments.map((doc, i) => <div key={doc.type} className="grid items-end gap-3 md:grid-cols-3"><Input value={doc.type} disabled /><Select value={doc.status} onValueChange={status => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, status: status as Document["status"] } : d) }))}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>{[["pending", "Pending"], ["complete", "Lengkap"], ["verified", "Terverifikasi"], ["missing", "Tidak Ada"]].map(([v, t]) => <SelectItem key={v} value={v}>{t}</SelectItem>)}</SelectContent></Select><Input placeholder="Catatan (opsional)" value={doc.notes} onChange={e => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, notes: e.target.value } : d) }))} /></div>)}</div>{select("businessShariaCompliant", "Kepatuhan Bisnis *", [["yes", "Ya, Sepenuhnya"], ["partial", "Sebagian"], ["no", "Tidak"]])}<Field name="shariaComplianceNotes" label="Catatan (Opsional)" values={values} setValues={setValues} rows={3} /></>}
