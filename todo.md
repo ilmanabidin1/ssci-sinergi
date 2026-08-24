@@ -1,4 +1,4 @@
-# SSCI AI Prototype - Project TODO
+# SSCI BPRS Platform - Project TODO
 
 ## Core Features
 
@@ -28,7 +28,7 @@
 
 - [x] Implementasi export PDF untuk assessment report
 - [x] Hapus referensi spesifik "BPRS HIK Parahyangan" dari dashboard
-- [x] Tambahkan disclaimer prototype untuk proposal SINERGI
+- [x] Tambahkan disclaimer keputusan final tetap pada BPRS
 - [x] Tambahkan logo Universitas Islam Bandung di halaman awal
 
 ## UX Improvements (User Request)
@@ -36,7 +36,7 @@
 - [x] Ganti SIUP dan TDP dengan NIB (Nomor Induk Berusaha)
 - [x] Tambahkan tooltip informasi (ikon i) untuk kepatuhan syariah dan keberlanjutan
 - [x] Tandai dengan jelas field wajib (*) dan opsional
-- [x] Hilangkan requirement login untuk menggunakan prototype
+- [x] Terapkan login untuk akses operasional BPRS
 
 ## Halaman Tentang SSCI (User Request)
 

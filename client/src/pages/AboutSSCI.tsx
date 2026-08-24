@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import {
   Scale,
   Leaf,
-  BookOpen,
+   BookOpen,
   ChevronRight,
   Info,
   CheckCircle2,
@@ -16,7 +16,6 @@ import {
   ArrowLeft,
   Building2,
   FileText,
-  Cpu,
 } from "lucide-react";
 import { SSCI_METHODOLOGY_VERSION } from "@shared/ssciMethodology";
 
@@ -217,8 +216,8 @@ export default function AboutSSCI() {
 
         {/* Hero Section */}
         <section className="text-center space-y-4">
-          <Badge className="bg-blue-100 text-blue-800 border-blue-200 px-4 py-1 text-sm">
-            Prototype — Program Hilirisasi Riset SINERGI 2026
+           <Badge className="bg-blue-100 text-blue-800 border-blue-200 px-4 py-1 text-sm">
+             Platform Penilaian Pembiayaan Syariah
           </Badge>
           <h1 className="text-4xl font-bold text-gray-900 leading-tight">
             Sustainable Sharia Creditworthiness Index
@@ -230,14 +229,6 @@ export default function AboutSSCI() {
             <div className="flex items-center gap-1.5">
               <Building2 className="h-4 w-4 text-blue-500" />
               <span>Universitas Islam Bandung</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Cpu className="h-4 w-4 text-blue-500" />
-              <span>TKT 6 → 9</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <BookOpen className="h-4 w-4 text-blue-500" />
-              <span>P2KI LPPM UNISBA</span>
             </div>
           </div>
         </section>
@@ -413,20 +404,12 @@ export default function AboutSSCI() {
 
         {/* Tim & Institusi */}
         <section className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Institusi & Afiliasi</h2>
+           <h2 className="text-xl font-bold text-gray-900 mb-6">Platform & Afiliasi</h2>
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-2">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perguruan Tinggi Pengusul</p>
-              <p className="font-semibold text-gray-800">Universitas Islam Bandung (UNISBA)</p>
-              <p className="text-sm text-gray-500">Fakultas Hukum — Program Studi Ilmu Hukum</p>
-              <p className="text-sm text-gray-500">Pusat Pengembangan dan Pelayanan Kekayaan Intelektual (P2KI) LPPM UNISBA</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Program</p>
-              <p className="font-semibold text-gray-800">Program Hilirisasi Riset SINERGI TA 2026</p>
-              <p className="text-sm text-gray-500">Skema: Inovasi Sosial</p>
-              <p className="text-sm text-gray-500">Sumber Dana: Dana Abadi Bidang Pendidikan LPDP</p>
-              <p className="text-sm text-gray-500">Durasi: 1 Tahun (TKT 6 → TKT 9)</p>
+               <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Afiliasi Platform</p>
+               <p className="font-semibold text-gray-800">Universitas Islam Bandung (UNISBA)</p>
+               <p className="text-sm text-gray-500">SSCI dikembangkan bersama ekosistem akademik dan mitra untuk mendukung proses penilaian BPRS.</p>
             </div>
           </div>
         </section>
@@ -435,7 +418,7 @@ export default function AboutSSCI() {
         <section className="text-center py-6">
           <Link href="/applications/new">
             <Button size="lg" className="gap-2 px-8">
-              Coba Penilaian SSCI Sekarang
+               Mulai Penilaian SSCI
               <ChevronRight className="h-5 w-5" />
             </Button>
           </Link>

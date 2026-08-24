@@ -100,25 +100,6 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
-    seedDemo: publicProcedure
-      .input(z.object({
-        email: z.string().trim().email().max(320),
-        password: z.string().min(4).max(200),
-        name: z.string().trim().min(1).max(255),
-        role: z.enum(["maker", "checker", "admin"]).default("maker"),
-      }))
-      .mutation(async ({ input }) => {
-        const email = input.email.toLowerCase();
-        const existing = await db.getUserByEmail(email);
-        if (existing) return { duplicate: true, email };
-        await db.createPilotAdmin({
-          email,
-          name: input.name,
-          passwordHash: await hashPassword(input.password),
-        });
-        await db.updateUserRole(email, input.role);
-        return { created: true, email };
-      }),
   }),
 
   applications: router({

@@ -358,9 +358,9 @@ export function generateAssessmentPDF(data: PDFData): string {
   </div>
 
   <div class="footer">
-    <p>Dokumen pendukung analisis, bukan keputusan pembiayaan final.</p>
+    <p>Laporan operasional pendukung analisis, bukan keputusan pembiayaan final.</p>
     <p>Sustainable Sharia Creditworthiness Index - Universitas Islam Bandung</p>
-    <p>© ${new Date().getFullYear()} - Prototype untuk Proposal SINERGI</p>
+    <p>© ${new Date().getFullYear()} - Laporan operasional SSCI</p>
   </div>
 </body>
 </html>

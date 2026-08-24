@@ -18,8 +18,6 @@ export default function AssessmentHistory() {
     { search, ...(status === "all" ? {} : { status }) }
   );
 
-  // Prototype mode: no login required
-
   const getStatusBadge = (status: string) => {
     const badges = {
       pending: <Badge variant="outline">Menunggu penilaian</Badge>,
