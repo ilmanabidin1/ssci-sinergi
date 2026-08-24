@@ -1,6 +1,6 @@
-import { eq, desc, and, gte, lte, like, or } from "drizzle-orm";
+import { eq, desc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, applications, assessments, InsertApplication, InsertAssessment } from "../drizzle/schema";
+import { InsertUser, users, applications, assessments, auditLogs, InsertApplication, InsertAssessment } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,23 +89,36 @@ export async function getUserByOpenId(openId: string) {
 }
 
 // Application queries
-export async function createApplication(data: InsertApplication) {
+export async function createApplication(data: InsertApplication & { organizationId: number }) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   
-  const result = await db.insert(applications).values(data);
-  return result[0].insertId;
+  return db.transaction(async tx => {
+    const result = await tx.insert(applications).values(data);
+    const applicationId = result[0].insertId;
+    await tx.insert(auditLogs).values({
+      organizationId: data.organizationId,
+      actorUserId: data.submittedBy,
+      action: "APPLICATION_CREATED",
+      entityType: "application",
+      entityId: applicationId,
+    });
+    return applicationId;
+  });
 }
 
-export async function getApplicationById(id: number) {
+export async function getApplicationById(id: number, organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   
-  const result = await db.select().from(applications).where(eq(applications.id, id)).limit(1);
+  const result = await db.select().from(applications)
+    .where(and(eq(applications.id, id), eq(applications.organizationId, organizationId)))
+    .limit(1);
   return result[0];
 }
 
-export async function getAllApplications(filters?: {
+export async function getAllApplications(filters: {
+  organizationId: number;
   status?: string;
   fromDate?: Date;
   toDate?: Date;
@@ -116,7 +129,7 @@ export async function getAllApplications(filters?: {
   
   let query = db.select().from(applications);
   
-  const conditions = [];
+  const conditions = [eq(applications.organizationId, filters.organizationId)];
   
   if (filters?.status) {
     conditions.push(eq(applications.status, filters.status as any));
@@ -157,39 +170,155 @@ export async function updateApplicationStatus(id: number, status: string) {
 }
 
 // Assessment queries
-export async function createAssessment(data: InsertAssessment) {
+export async function createAssessment(data: InsertAssessment & { organizationId: number }) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   
-  const result = await db.insert(assessments).values(data);
-  return result[0].insertId;
+  return db.transaction(async tx => {
+    const result = await tx.insert(assessments).values(data);
+    const assessmentId = result[0].insertId;
+    const updateResult = await tx
+      .update(applications)
+      .set({ status: "assessed", updatedAt: new Date() })
+      .where(and(
+        eq(applications.id, data.applicationId),
+        eq(applications.organizationId, data.organizationId),
+        eq(applications.status, "pending")
+      ));
+
+    if (updateResult[0].affectedRows !== 1) {
+      throw new Error("Aplikasi sudah dinilai atau statusnya tidak valid");
+    }
+
+    await tx.insert(auditLogs).values({
+      organizationId: data.organizationId,
+      actorUserId: data.assessedBy,
+      action: "ASSESSMENT_CREATED",
+      entityType: "assessment",
+      entityId: assessmentId,
+      metadata: { applicationId: data.applicationId, modelVersion: data.modelVersion },
+    });
+    return assessmentId;
+  });
 }
 
-export async function getAssessmentByApplicationId(applicationId: number) {
+export async function assertDatabaseConnectivity() {
+  const db = await getDb();
+  if (!db) throw new Error("DATABASE_URL is not configured");
+  await db.execute(sql`SELECT 1`);
+}
+
+export async function recordReportExport(actorUserId: number, applicationId: number, organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(auditLogs).values({
+    organizationId,
+    actorUserId,
+    action: "REPORT_EXPORTED",
+    entityType: "application",
+    entityId: applicationId,
+  });
+}
+
+export async function decideApplication(input: {
+  applicationId: number;
+  decision: "approved" | "rejected";
+  notes: string;
+  checkerId: number;
+  organizationId: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  await db.transaction(async tx => {
+    const application = await tx
+      .select()
+      .from(applications)
+      .where(and(
+        eq(applications.id, input.applicationId),
+        eq(applications.organizationId, input.organizationId)
+      ))
+      .limit(1);
+    const assessment = await tx
+      .select()
+      .from(assessments)
+      .where(and(
+        eq(assessments.applicationId, input.applicationId),
+        eq(assessments.organizationId, input.organizationId)
+      ))
+      .orderBy(desc(assessments.assessedAt))
+      .limit(1);
+
+    if (!application[0] || application[0].status !== "assessed" || !assessment[0]) {
+      throw new Error("Aplikasi belum dinilai atau sudah diputuskan");
+    }
+    if (
+      application[0].submittedBy === input.checkerId ||
+      assessment[0].assessedBy === input.checkerId
+    ) {
+      throw new Error("Maker-checker melarang pemeriksaan oleh pengguna yang sama");
+    }
+
+    const updateResult = await tx
+      .update(applications)
+      .set({
+        status: input.decision,
+        checkedBy: input.checkerId,
+        checkedAt: new Date(),
+        decisionNotes: input.notes,
+        updatedAt: new Date(),
+      })
+      .where(and(
+        eq(applications.id, input.applicationId),
+        eq(applications.organizationId, input.organizationId),
+        eq(applications.status, "assessed")
+      ));
+    if (updateResult[0].affectedRows !== 1) {
+      throw new Error("Status aplikasi berubah; muat ulang halaman");
+    }
+
+    await tx.insert(auditLogs).values({
+      organizationId: input.organizationId,
+      actorUserId: input.checkerId,
+      action: input.decision === "approved" ? "APPLICATION_APPROVED" : "APPLICATION_REJECTED",
+      entityType: "application",
+      entityId: input.applicationId,
+      metadata: { assessmentId: assessment[0].id },
+    });
+  });
+}
+
+export async function getAssessmentByApplicationId(applicationId: number, organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   
   const result = await db.select()
     .from(assessments)
-    .where(eq(assessments.applicationId, applicationId))
+    .where(and(
+      eq(assessments.applicationId, applicationId),
+      eq(assessments.organizationId, organizationId)
+    ))
     .orderBy(desc(assessments.assessedAt))
     .limit(1);
   
   return result[0];
 }
 
-export async function getAllAssessments() {
+export async function getAllAssessments(organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   
-  return db.select().from(assessments).orderBy(desc(assessments.assessedAt));
+  return db.select().from(assessments)
+    .where(eq(assessments.organizationId, organizationId))
+    .orderBy(desc(assessments.assessedAt));
 }
 
-export async function getAssessmentStats() {
+export async function getAssessmentStats(organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   
-  const allAssessments = await db.select().from(assessments);
+  const allAssessments = await db.select().from(assessments)
+    .where(eq(assessments.organizationId, organizationId));
   
   const stats = {
     total: allAssessments.length,

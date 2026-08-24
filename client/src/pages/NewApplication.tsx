@@ -15,7 +15,11 @@ import { toast } from "sonner";
 export default function NewApplication() {
   const { user } = useAuth();
   const [, setLocation] = useLocation();
-  const [legalDocs, setLegalDocs] = useState([
+  const [legalDocs, setLegalDocs] = useState<{
+    type: "KTP" | "NPWP" | "NIB";
+    status: "pending" | "complete" | "verified" | "missing";
+    notes: string;
+  }[]>([
     { type: "KTP", status: "pending", notes: "" },
     { type: "NPWP", status: "pending", notes: "" },
     { type: "NIB", status: "pending", notes: "" },
@@ -51,6 +55,8 @@ export default function NewApplication() {
       existingDebt: formData.get("existingDebt") as string,
       collateralValue: formData.get("collateralValue") as string,
       requestedAmount: formData.get("requestedAmount") as string,
+      financingTenor: parseInt(formData.get("financingTenor") as string),
+      marginRate: parseFloat(formData.get("marginRate") as string),
       loanPurpose: formData.get("loanPurpose") as string,
       legalDocuments: legalDocs,
       businessShariaCompliant: formData.get("businessShariaCompliant") as "yes" | "no" | "partial",
@@ -77,7 +83,7 @@ export default function NewApplication() {
               <h1 className="text-xl font-bold text-primary">SSCI</h1>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name || 'Demo Mode'}</span>
+          <span className="text-sm text-gray-600">{user?.name || "Belum masuk"}</span>
         </div>
       </nav>
 
@@ -162,7 +168,7 @@ export default function NewApplication() {
               </div>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="existingDebt">Hutang Existing (Rp) *</Label>
+                  <Label htmlFor="existingDebt">Total Angsuran Existing per Bulan (Rp) *</Label>
                   <Input id="existingDebt" name="existingDebt" type="number" min="0" step="1000" required />
                 </div>
                 <div className="space-y-2">
@@ -172,7 +178,17 @@ export default function NewApplication() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="requestedAmount">Jumlah Pembiayaan (Rp) *</Label>
-                <Input id="requestedAmount" name="requestedAmount" type="number" min="0" step="1000" required />
+                <Input id="requestedAmount" name="requestedAmount" type="number" min="1" step="1000" required />
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="financingTenor">Tenor Pembiayaan (bulan) *</Label>
+                  <Input id="financingTenor" name="financingTenor" type="number" min="1" max="360" required />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="marginRate">Total Margin Akad (%) *</Label>
+                  <Input id="marginRate" name="marginRate" type="number" min="0" max="100" step="0.01" required />
+                </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="loanPurpose">Tujuan Pembiayaan *</Label>
@@ -184,7 +200,7 @@ export default function NewApplication() {
           <Card>
             <CardHeader>
               <CardTitle>Dokumen Legal</CardTitle>
-              <CardDescription>Status kelengkapan dokumen</CardDescription>
+              <CardDescription>KTP, NPWP, dan NIB menjadi dasar kelengkapan legal pada versi aturan saat ini</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               {legalDocs.map((doc, index) => (
@@ -199,7 +215,7 @@ export default function NewApplication() {
                       value={doc.status}
                       onValueChange={(value) => {
                         const newDocs = [...legalDocs];
-                        newDocs[index]!.status = value;
+                        newDocs[index]!.status = value as typeof legalDocs[number]["status"];
                         setLegalDocs(newDocs);
                       }}
                     >

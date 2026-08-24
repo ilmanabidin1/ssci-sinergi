@@ -1,5 +1,13 @@
 import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, decimal, json } from "drizzle-orm/mysql-core";
 
+export const organizations = mysqlTable("organizations", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  slug: varchar("slug", { length: 100 }).notNull().unique(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
 /**
  * Core user table backing auth flow.
  */
@@ -9,7 +17,8 @@ export const users = mysqlTable("users", {
   name: text("name"),
   email: varchar("email", { length: 320 }),
   loginMethod: varchar("loginMethod", { length: 64 }),
-  role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
+  role: mysqlEnum("role", ["maker", "checker", "admin"]).default("maker").notNull(),
+  organizationId: int("organizationId").default(1).notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
@@ -23,6 +32,7 @@ export type InsertUser = typeof users.$inferInsert;
  */
 export const applications = mysqlTable("applications", {
   id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").default(1).notNull(),
   // Customer Information
   customerName: varchar("customerName", { length: 255 }).notNull(),
   customerId: varchar("customerId", { length: 100 }).notNull(),
@@ -39,6 +49,8 @@ export const applications = mysqlTable("applications", {
   existingDebt: decimal("existingDebt", { precision: 15, scale: 2 }).notNull(),
   collateralValue: decimal("collateralValue", { precision: 15, scale: 2 }).notNull(),
   requestedAmount: decimal("requestedAmount", { precision: 15, scale: 2 }).notNull(),
+  financingTenor: int("financingTenor").notNull(),
+  marginRate: decimal("marginRate", { precision: 5, scale: 2 }).notNull(),
   loanPurpose: text("loanPurpose").notNull(),
   
   // Legal Documents (stored as JSON array of document info)
@@ -60,6 +72,9 @@ export const applications = mysqlTable("applications", {
   // Application metadata
   status: mysqlEnum("status", ["pending", "assessed", "approved", "rejected"]).default("pending").notNull(),
   submittedBy: int("submittedBy").notNull(),
+  checkedBy: int("checkedBy"),
+  checkedAt: timestamp("checkedAt"),
+  decisionNotes: text("decisionNotes"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
@@ -72,6 +87,7 @@ export type InsertApplication = typeof applications.$inferInsert;
  */
 export const assessments = mysqlTable("assessments", {
   id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").default(1).notNull(),
   applicationId: int("applicationId").notNull(),
   
   // SSCI Score Components
@@ -118,6 +134,9 @@ export const assessments = mysqlTable("assessments", {
   // ML Model Metadata
   modelVersion: varchar("modelVersion", { length: 50 }).notNull(),
   confidence: decimal("confidence", { precision: 5, scale: 2 }),
+  recommendationStatus: mysqlEnum("recommendationStatus", ["generated", "rule_fallback"]).default("rule_fallback").notNull(),
+  recommendationModel: varchar("recommendationModel", { length: 100 }),
+  recommendationPromptVersion: varchar("recommendationPromptVersion", { length: 50 }),
   
   // Assessment metadata
   assessedBy: int("assessedBy").notNull(),
@@ -127,3 +146,14 @@ export const assessments = mysqlTable("assessments", {
 
 export type Assessment = typeof assessments.$inferSelect;
 export type InsertAssessment = typeof assessments.$inferInsert;
+
+export const auditLogs = mysqlTable("auditLogs", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").default(1).notNull(),
+  actorUserId: int("actorUserId").notNull(),
+  action: varchar("action", { length: 64 }).notNull(),
+  entityType: varchar("entityType", { length: 64 }).notNull(),
+  entityId: int("entityId").notNull(),
+  metadata: json("metadata").$type<Record<string, string | number | boolean | null>>(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});

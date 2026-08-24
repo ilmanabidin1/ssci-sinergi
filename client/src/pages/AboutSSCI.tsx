@@ -18,6 +18,7 @@ import {
   FileText,
   Cpu,
 } from "lucide-react";
+import { SSCI_METHODOLOGY_VERSION } from "@shared/ssciMethodology";
 
 const pillars = [
   {
@@ -32,32 +33,27 @@ const pillars = [
     subtitle: "Sustainable Finance Index (SFI)",
     weight: 55,
     description:
-      "Pilar ini mengevaluasi kelayakan keuangan nasabah secara komprehensif dengan mempertimbangkan aspek keberlanjutan usaha jangka panjang. Penilaian mencakup kapasitas pembayaran, stabilitas arus kas, profitabilitas, dan dampak lingkungan serta sosial dari kegiatan usaha.",
+      "Pilar ini mengevaluasi profitabilitas, kapasitas kewajiban, kemampuan pembayaran berdasarkan tenor dan margin akad, serta rasio pembiayaan terhadap agunan. Data ESG dikumpulkan sebagai informasi pendukung dan belum menambah skor pada versi aturan ini.",
     indicators: [
       {
-        name: "Rasio Kemampuan Bayar (Debt Service Coverage Ratio)",
-        weight: 20,
-        desc: "Kemampuan arus kas usaha untuk menutupi kewajiban pembiayaan",
-      },
-      {
-        name: "Stabilitas Pendapatan Usaha",
-        weight: 15,
-        desc: "Konsistensi dan tren pertumbuhan pendapatan dalam 12 bulan terakhir",
-      },
-      {
         name: "Rasio Profitabilitas (Net Profit Margin)",
-        weight: 10,
+        weight: 30,
         desc: "Efisiensi usaha dalam menghasilkan laba bersih",
       },
       {
-        name: "Indeks Keberlanjutan ESG",
-        weight: 5,
-        desc: "Dampak lingkungan (Environment), sosial (Social), dan tata kelola (Governance)",
+        name: "Kapasitas Kewajiban Existing",
+        weight: 25,
+        desc: "Perbandingan angsuran existing terhadap laba bersih bulanan",
       },
       {
-        name: "Riwayat Pembiayaan (Track Record)",
-        weight: 5,
-        desc: "Rekam jejak pembayaran kewajiban keuangan sebelumnya",
+        name: "Kemampuan Membayar Pembiayaan",
+        weight: 25,
+        desc: "Cakupan laba bersih terhadap angsuran existing dan estimasi angsuran baru",
+      },
+      {
+        name: "Rasio Agunan (Loan to Value)",
+        weight: 20,
+        desc: "Perbandingan jumlah pembiayaan terhadap nilai agunan",
       },
     ],
     legalBasis: [
@@ -81,24 +77,19 @@ const pillars = [
       "Pilar ini menilai sejauh mana profil usaha dan perilaku nasabah sesuai dengan prinsip-prinsip syariah Islam. Penilaian mengacu pada fatwa Dewan Syariah Nasional Majelis Ulama Indonesia (DSN-MUI) dan regulasi OJK terkait perbankan syariah, khususnya akad murabahah.",
     indicators: [
       {
-        name: "Kehalalan Objek Pembiayaan",
-        weight: 10,
-        desc: "Objek murabahah bukan barang/jasa yang diharamkan syariah (haram li-dzatihi maupun li-ghairihi)",
+        name: "Kepatuhan Bisnis",
+        weight: 40,
+        desc: "Pernyataan kepatuhan bisnis terhadap prinsip syariah",
       },
       {
-        name: "Kejelasan Akad dan Objek (Gharar)",
-        weight: 7,
-        desc: "Tidak ada unsur ketidakjelasan (gharar) dalam spesifikasi barang yang dibiayai",
+        name: "Kepatuhan Transaksi",
+        weight: 35,
+        desc: "Pemeriksaan awal jenis usaha dan tujuan pembiayaan terhadap kata kunci aktivitas terlarang",
       },
       {
-        name: "Bebas Unsur Riba",
-        weight: 5,
-        desc: "Struktur pembiayaan bebas dari unsur bunga (riba) dan sesuai margin murabahah yang disepakati",
-      },
-      {
-        name: "Rekam Jejak Kepatuhan Syariah",
-        weight: 3,
-        desc: "Riwayat kepatuhan nasabah terhadap kewajiban syariah dalam transaksi sebelumnya",
+        name: "Dokumentasi Kepatuhan",
+        weight: 25,
+        desc: "Kelengkapan catatan kepatuhan untuk ditinjau lebih lanjut oleh analis atau DPS",
       },
     ],
     legalBasis: [
@@ -124,24 +115,19 @@ const pillars = [
       "Pilar ini mengevaluasi kelengkapan dan keabsahan dokumen hukum nasabah sebagai subjek hukum yang cakap untuk melakukan perikatan pembiayaan. Penilaian mengacu pada ketentuan hukum perdata, hukum bisnis, dan regulasi perizinan usaha yang berlaku di Indonesia.",
     indicators: [
       {
-        name: "Kelengkapan Identitas Hukum",
-        weight: 8,
-        desc: "KTP, NPWP, dan dokumen identitas lain yang sah dan masih berlaku",
+        name: "Lama Operasional Usaha",
+        weight: 40,
+        desc: "Maturitas usaha berdasarkan lama operasional yang dilaporkan",
       },
       {
-        name: "Legalitas Usaha (NIB)",
-        weight: 7,
-        desc: "Nomor Induk Berusaha (NIB) yang diterbitkan melalui sistem OSS sebagai pengganti SIUP dan TDP",
+        name: "Kelengkapan Dokumen",
+        weight: 35,
+        desc: "Status kelengkapan atau verifikasi KTP, NPWP, dan NIB tanpa menghitung dokumen duplikat",
       },
       {
-        name: "Kapasitas Hukum untuk Berakad",
-        weight: 3,
-        desc: "Kecakapan hukum nasabah (ahliyyah al-ada') untuk melakukan perikatan murabahah",
-      },
-      {
-        name: "Kejelasan Status Agunan/Jaminan",
-        weight: 2,
-        desc: "Keabsahan dan kejelasan kepemilikan aset yang dijadikan jaminan pembiayaan",
+        name: "Kepatuhan Perizinan",
+        weight: 25,
+        desc: "Ketersediaan NIB sebagai bukti awal perizinan usaha melalui OSS",
       },
     ],
     legalBasis: [
@@ -163,21 +149,21 @@ const classifications = [
     border: "border-emerald-300",
     icon: Star,
     iconColor: "text-emerald-600",
-    desc: "Nasabah memenuhi seluruh kriteria dengan sangat baik. Pembiayaan murabahah dapat disetujui dengan syarat dan ketentuan standar.",
+    desc: "Kriteria awal terpenuhi dengan sangat baik dan dapat dilanjutkan ke review serta keputusan pejabat BPRS.",
   },
   {
     label: "Layak",
-    range: "60 – 79",
+    range: "65 – <80",
     color: "text-blue-700",
     bg: "bg-blue-50",
     border: "border-blue-300",
     icon: CheckCircle2,
     iconColor: "text-blue-600",
-    desc: "Nasabah memenuhi kriteria dengan baik. Pembiayaan dapat disetujui dengan beberapa persyaratan tambahan atau pengawasan berkala.",
+    desc: "Kriteria awal terpenuhi dengan baik dan dapat dipertimbangkan dengan persyaratan atau pengawasan berkala.",
   },
   {
     label: "Perlu Pengawasan",
-    range: "40 – 59",
+    range: "50 – <65",
     color: "text-amber-700",
     bg: "bg-amber-50",
     border: "border-amber-300",
@@ -187,13 +173,13 @@ const classifications = [
   },
   {
     label: "Tidak Layak",
-    range: "0 – 39",
+    range: "<50",
     color: "text-red-700",
     bg: "bg-red-50",
     border: "border-red-300",
     icon: XCircle,
     iconColor: "text-red-600",
-    desc: "Nasabah tidak memenuhi kriteria minimum kelayakan. Permohonan pembiayaan ditolak dan nasabah disarankan untuk memperbaiki profil keuangan dan kepatuhan.",
+    desc: "Kriteria awal belum terpenuhi. Hasil ini menjadi masukan bagi checker, bukan penolakan otomatis.",
   },
 ];
 
@@ -218,7 +204,7 @@ export default function AboutSSCI() {
               <span className="font-semibold text-gray-800">Tentang SSCI</span>
             </div>
           </div>
-          <Link href="/penilaian-baru">
+          <Link href="/applications/new">
             <Button size="sm" className="gap-2">
               Mulai Penilaian
               <ChevronRight className="h-4 w-4" />
@@ -238,7 +224,7 @@ export default function AboutSSCI() {
             Sustainable Sharia Creditworthiness Index
           </h1>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-            Sistem penilaian kelayakan pembiayaan murabahah berbasis kecerdasan buatan yang mengintegrasikan aspek keuangan berkelanjutan, kepatuhan syariah, dan legalitas hukum dalam satu indeks terpadu.
+            Sistem pendukung penilaian pembiayaan murabahah berbasis aturan yang mengintegrasikan aspek keuangan, kepatuhan syariah, dan legalitas dalam satu indeks terpadu.
           </p>
           <div className="flex items-center justify-center gap-6 pt-2 text-sm text-gray-500">
             <div className="flex items-center gap-1.5">
@@ -268,7 +254,7 @@ export default function AboutSSCI() {
                 Bank Perekonomian Rakyat Syariah (BPRS) memainkan peran strategis dalam penyaluran pembiayaan kepada Usaha Mikro Kecil (UMK) yang tidak terlayani oleh perbankan konvensional. Pembiayaan murabahah — jual beli dengan margin keuntungan yang disepakati — mendominasi <strong>71,61%</strong> dari total pembiayaan BPRS secara nasional.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Namun, metode penilaian kelayakan yang ada saat ini masih bersifat konvensional dan tidak mengintegrasikan aspek kepatuhan syariah secara terukur. SSCI hadir sebagai solusi inovatif yang menggabungkan tiga dimensi penilaian — keuangan berkelanjutan, kepatuhan syariah, dan legalitas hukum — dalam satu algoritma AI yang terstandarisasi dan dapat diaudit.
+                SSCI menggabungkan tiga dimensi penilaian — keuangan, kepatuhan syariah, dan legalitas hukum — dalam aturan terstandarisasi yang dapat ditelusuri. AI hanya menyusun narasi rekomendasi dan tidak dapat mengubah skor, klasifikasi, atau keputusan analis.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Penelitian ini sejalan dengan <strong>SDGs</strong> (khususnya SDG 1, 8, 9, dan 10 tentang pengentasan kemiskinan, pertumbuhan ekonomi inklusif, dan pengurangan kesenjangan) serta <strong>Asta Cita</strong> Pemerintah Indonesia dalam menjadikan Indonesia sebagai pusat ekonomi syariah dunia.
@@ -421,7 +407,7 @@ export default function AboutSSCI() {
             <p className="text-gray-400 text-xs">LCI = Legal Compliance Index (0–100)</p>
           </div>
           <p className="text-gray-400 text-sm">
-            Setiap sub-indeks dihitung dari normalisasi indikator-indikator di dalamnya menggunakan metode min-max normalization, kemudian dibobot sesuai kontribusi masing-masing indikator terhadap pilar. Model AI menggunakan algoritma <strong className="text-white">XGBoost</strong> yang dilatih dengan data historis pembiayaan murabahah untuk menghasilkan prediksi yang akurat dan dapat dijelaskan (<em>explainable AI</em>).
+            Skor dihitung secara deterministik menggunakan versi aturan <strong className="text-white">{SSCI_METHODOLOGY_VERSION}</strong>. OpenRouter dengan model <strong className="text-white">openai/gpt-5.6-luna</strong> hanya membantu menyusun narasi rekomendasi; keputusan pembiayaan final tetap menjadi kewenangan BPRS.
           </p>
         </section>
 
@@ -447,13 +433,13 @@ export default function AboutSSCI() {
 
         {/* CTA */}
         <section className="text-center py-6">
-          <Link href="/penilaian-baru">
+          <Link href="/applications/new">
             <Button size="lg" className="gap-2 px-8">
               Coba Penilaian SSCI Sekarang
               <ChevronRight className="h-5 w-5" />
             </Button>
           </Link>
-          <p className="text-sm text-gray-400 mt-3">Tidak perlu login — langsung gunakan dalam mode demo</p>
+          <p className="text-sm text-gray-400 mt-3">Hasil SSCI merupakan pendukung analisis, bukan keputusan pembiayaan final.</p>
         </section>
 
       </main>

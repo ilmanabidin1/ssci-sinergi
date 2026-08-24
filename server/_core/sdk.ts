@@ -272,6 +272,9 @@ class SDKServer {
 
     // If user not in DB, sync from OAuth server automatically
     if (!user) {
+      if (sessionUserId !== ENV.ownerOpenId) {
+        throw ForbiddenError("User has not been provisioned by an administrator");
+      }
       try {
         const userInfo = await this.getUserInfoWithJwt(sessionCookie ?? "");
         await db.upsertUser({

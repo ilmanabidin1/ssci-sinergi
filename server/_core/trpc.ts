@@ -27,6 +27,21 @@ const requireUser = t.middleware(async opts => {
 
 export const protectedProcedure = t.procedure.use(requireUser);
 
+const requireRole = (...roles: Array<"maker" | "checker" | "admin">) =>
+  t.middleware(async opts => {
+    const { ctx, next } = opts;
+    if (!ctx.user) {
+      throw new TRPCError({ code: "UNAUTHORIZED", message: UNAUTHED_ERR_MSG });
+    }
+    if (!roles.includes(ctx.user.role)) {
+      throw new TRPCError({ code: "FORBIDDEN", message: "Akses peran tidak mencukupi" });
+    }
+    return next({ ctx: { ...ctx, user: ctx.user } });
+  });
+
+export const makerProcedure = t.procedure.use(requireRole("maker", "admin"));
+export const checkerProcedure = t.procedure.use(requireRole("checker", "admin"));
+
 export const adminProcedure = t.procedure.use(
   t.middleware(async opts => {
     const { ctx, next } = opts;

@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { calculateSSCI } from "./scoring";
+import { calculateSSCI, classifyScore } from "./scoring";
 import type { Application } from "../drizzle/schema";
 
 describe("SSCI Scoring Algorithm", () => {
   const baseApplication: Application = {
     id: 1,
+    organizationId: 1,
     customerName: "Test Customer",
     customerId: "1234567890",
     businessName: "Test Business",
@@ -18,12 +19,13 @@ describe("SSCI Scoring Algorithm", () => {
     existingDebt: "10000000",
     collateralValue: "100000000",
     requestedAmount: "50000000",
+    financingTenor: 24,
+    marginRate: "12",
     loanPurpose: "Modal usaha",
     legalDocuments: [
       { type: "KTP", status: "complete", notes: "" },
       { type: "NPWP", status: "complete", notes: "" },
-      { type: "SIUP", status: "complete", notes: "" },
-      { type: "TDP", status: "complete", notes: "" },
+      { type: "NIB", status: "complete", notes: "" },
     ],
     businessShariaCompliant: "yes",
     shariaComplianceNotes: "Bisnis sepenuhnya patuh syariah",
@@ -57,64 +59,21 @@ describe("SSCI Scoring Algorithm", () => {
   });
 
   it("should classify score >= 80 as Sangat Layak", () => {
-    const excellentApp = { ...baseApplication };
-    const result = calculateSSCI(excellentApp);
-    
-    if (result.totalScore >= 80) {
-      expect(result.classification).toBe("Sangat Layak");
-    }
+    expect(classifyScore(80)).toBe("Sangat Layak");
   });
 
   it("should classify score 65-79 as Layak", () => {
-    const goodApp = {
-      ...baseApplication,
-      monthlyRevenue: "30000000",
-      existingDebt: "15000000",
-    };
-    const result = calculateSSCI(goodApp);
-    
-    if (result.totalScore >= 65 && result.totalScore < 80) {
-      expect(result.classification).toBe("Layak");
-    }
+    expect(classifyScore(65)).toBe("Layak");
+    expect(classifyScore(79.99)).toBe("Layak");
   });
 
   it("should classify score 50-64 as Perlu Pengawasan", () => {
-    const fairApp = {
-      ...baseApplication,
-      monthlyRevenue: "25000000",
-      monthlyExpenses: "23000000",
-      existingDebt: "20000000",
-      businessAge: 12, // 1 year
-      businessShariaCompliant: "partial" as const,
-    };
-    const result = calculateSSCI(fairApp);
-    
-    if (result.totalScore >= 50 && result.totalScore < 65) {
-      expect(result.classification).toBe("Perlu Pengawasan");
-    }
+    expect(classifyScore(50)).toBe("Perlu Pengawasan");
+    expect(classifyScore(64.99)).toBe("Perlu Pengawasan");
   });
 
   it("should classify score < 50 as Tidak Layak", () => {
-    const poorApp = {
-      ...baseApplication,
-      monthlyRevenue: "10000000",
-      monthlyExpenses: "12000000",
-      existingDebt: "50000000",
-      collateralValue: "10000000",
-      businessAge: 6, // 6 months
-      businessShariaCompliant: "no" as const,
-      legalDocuments: [
-        { type: "KTP", status: "pending", notes: "" },
-        { type: "NPWP", status: "missing", notes: "" },
-        { type: "SIUP", status: "missing", notes: "" },
-        { type: "TDP", status: "missing", notes: "" },
-      ],
-    };
-    const result = calculateSSCI(poorApp);
-    
-    if (result.totalScore < 50) {
-      expect(result.classification).toBe("Tidak Layak");
-    }
+    expect(classifyScore(49.99)).toBe("Tidak Layak");
   });
 
   it("should penalize non-sharia compliant business", () => {
@@ -166,5 +125,23 @@ describe("SSCI Scoring Algorithm", () => {
     expect(result.scoreBreakdown.sustainableFinance).toBeTruthy();
     expect(result.scoreBreakdown.sharia).toBeTruthy();
     expect(result.scoreBreakdown.legal).toBeTruthy();
+  });
+
+  it("does not count duplicate or obsolete legal documents", () => {
+    const result = calculateSSCI({
+      ...baseApplication,
+      legalDocuments: [
+        { type: "KTP", status: "complete" },
+        { type: "KTP", status: "complete" },
+        { type: "SIUP", status: "complete" },
+      ],
+    });
+    expect(result.scoreBreakdown.legal.document_completeness).toBe(12);
+  });
+
+  it("rejects invalid financial values", () => {
+    expect(() =>
+      calculateSSCI({ ...baseApplication, requestedAmount: "0" })
+    ).toThrow("harus lebih dari nol");
   });
 });

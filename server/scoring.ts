@@ -1,4 +1,10 @@
 import type { Application } from "../drizzle/schema";
+import {
+  classifySSCI,
+  SSCI_PILLAR_WEIGHTS,
+  SSCI_REQUIRED_LEGAL_DOCUMENTS,
+  type SSCIClassification,
+} from "@shared/ssciMethodology";
 
 /**
  * SSCI Scoring Algorithm
@@ -35,7 +41,7 @@ export interface SSCIResult {
   shariaScore: number;
   legalScore: number;
   totalScore: number;
-  classification: "Sangat Layak" | "Layak" | "Perlu Pengawasan" | "Tidak Layak";
+  classification: SSCIClassification;
   scoreBreakdown: ScoreBreakdown;
   recommendations: string;
   riskFactors: string;
@@ -52,6 +58,24 @@ function calculateSustainableFinanceScore(app: Application): { score: number; br
   const existingDebt = Number(app.existingDebt);
   const collateralValue = Number(app.collateralValue);
   const requestedAmount = Number(app.requestedAmount);
+  const financingTenor = Number(app.financingTenor);
+  const marginRate = Number(app.marginRate);
+
+  const financialValues = [
+    monthlyRevenue,
+    monthlyExpenses,
+    existingDebt,
+    collateralValue,
+    requestedAmount,
+    financingTenor,
+    marginRate,
+  ];
+  if (financialValues.some(value => !Number.isFinite(value) || value < 0)) {
+    throw new Error("Data keuangan harus berupa angka non-negatif yang valid");
+  }
+  if (monthlyRevenue <= 0 || requestedAmount <= 0 || financingTenor <= 0) {
+    throw new Error("Pendapatan, jumlah pembiayaan, dan tenor harus lebih dari nol");
+  }
   
   // 1. Financial Health (30 points) - based on profit margin
   const netIncome = monthlyRevenue - monthlyExpenses;
@@ -64,8 +88,7 @@ function calculateSustainableFinanceScore(app: Application): { score: number; br
   else if (profitMargin > 0) financialHealth = 10;
   
   // 2. Debt Capacity (25 points) - debt to income ratio
-  const totalMonthlyDebt = existingDebt / 12; // assuming yearly debt
-  const debtToIncomeRatio = netIncome > 0 ? (totalMonthlyDebt / netIncome) * 100 : 100;
+  const debtToIncomeRatio = netIncome > 0 ? (existingDebt / netIncome) * 100 : 100;
   let debtCapacity = 0;
   if (debtToIncomeRatio <= 30) debtCapacity = 25;
   else if (debtToIncomeRatio <= 40) debtCapacity = 20;
@@ -74,8 +97,13 @@ function calculateSustainableFinanceScore(app: Application): { score: number; br
   else debtCapacity = 5;
   
   // 3. Cash Flow (25 points) - ability to repay
-  const estimatedMonthlyPayment = requestedAmount * 0.05; // assuming 5% monthly
-  const cashFlowCoverage = netIncome > 0 ? (netIncome / estimatedMonthlyPayment) : 0;
+  const totalRepayment = requestedAmount * (1 + marginRate / 100);
+  const estimatedMonthlyPayment = totalRepayment / financingTenor;
+  const totalMonthlyObligations = existingDebt + estimatedMonthlyPayment;
+  const cashFlowCoverage =
+    netIncome > 0 && totalMonthlyObligations > 0
+      ? netIncome / totalMonthlyObligations
+      : 0;
   let cashFlow = 0;
   if (cashFlowCoverage >= 2) cashFlow = 25;
   else if (cashFlowCoverage >= 1.5) cashFlow = 20;
@@ -162,15 +190,22 @@ function calculateLegalScore(app: Application): { score: number; breakdown: Scor
   else businessLegality = 10;
   
   // 2. Document Completeness (35 points)
-  const requiredDocs = ['KTP', 'NPWP', 'SIUP', 'TDP'];
-  const completedDocs = docs.filter(d => d.status === 'complete' || d.status === 'verified');
-  const completenessRatio = completedDocs.length / requiredDocs.length;
-  let documentCompleteness = Math.round(completenessRatio * 35);
+  const completedDocumentTypes = new Set(
+    docs
+      .filter(d => d.status === "complete" || d.status === "verified")
+      .map(d => d.type.toUpperCase())
+  );
+  const completedRequiredDocuments = SSCI_REQUIRED_LEGAL_DOCUMENTS.filter(doc =>
+    completedDocumentTypes.has(doc)
+  );
+  const completenessRatio =
+    completedRequiredDocuments.length / SSCI_REQUIRED_LEGAL_DOCUMENTS.length;
+  const documentCompleteness = Math.round(completenessRatio * 35);
   
   // 3. Regulatory Compliance (25 points)
   let regulatoryCompliance = 20; // default assumption
   const hasBusinessPermit = docs.some(d => 
-    (d.type === 'SIUP' || d.type === 'NIB') && (d.status === 'complete' || d.status === 'verified')
+    d.type.toUpperCase() === "NIB" && (d.status === 'complete' || d.status === 'verified')
   );
   if (hasBusinessPermit) regulatoryCompliance = 25;
   
@@ -189,12 +224,7 @@ function calculateLegalScore(app: Application): { score: number; breakdown: Scor
 /**
  * Classify based on total SSCI score
  */
-function classifyScore(score: number): "Sangat Layak" | "Layak" | "Perlu Pengawasan" | "Tidak Layak" {
-  if (score >= 80) return "Sangat Layak";
-  if (score >= 65) return "Layak";
-  if (score >= 50) return "Perlu Pengawasan";
-  return "Tidak Layak";
-}
+export const classifyScore = classifySSCI;
 
 /**
  * Generate recommendations based on assessment
@@ -267,13 +297,13 @@ function generateRecommendations(result: Omit<SSCIResult, 'recommendations' | 'r
   
   // Overall recommendations
   if (result.classification === "Sangat Layak") {
-    recommendations.push("Pembiayaan dapat disetujui dengan syarat dan ketentuan standar");
+    recommendations.push("Lanjutkan ke review checker dengan syarat dan ketentuan standar");
   } else if (result.classification === "Layak") {
-    recommendations.push("Pembiayaan dapat disetujui dengan monitoring berkala");
+    recommendations.push("Pertimbangkan pada tahap review dengan monitoring berkala");
   } else if (result.classification === "Perlu Pengawasan") {
     recommendations.push("Pembiayaan memerlukan persetujuan komite dan pengawasan intensif");
   } else {
-    recommendations.push("Pembiayaan tidak direkomendasikan pada tahap ini");
+    recommendations.push("Tunda proses keputusan dan lakukan perbaikan profil sebelum review ulang");
   }
   
   return {
@@ -293,9 +323,10 @@ export function calculateSSCI(application: Application): SSCIResult {
   const legal = calculateLegalScore(application);
   
   // Apply weights: SF=55%, Sharia=25%, Legal=20%
-  const sustainableFinanceScore = (sustainableFinance.score / 100) * 55;
-  const shariaScore = (sharia.score / 100) * 25;
-  const legalScore = (legal.score / 100) * 20;
+  const sustainableFinanceScore =
+    (sustainableFinance.score / 100) * SSCI_PILLAR_WEIGHTS.sustainableFinance;
+  const shariaScore = (sharia.score / 100) * SSCI_PILLAR_WEIGHTS.sharia;
+  const legalScore = (legal.score / 100) * SSCI_PILLAR_WEIGHTS.legal;
   
   // Calculate total score (0-100)
   const totalScore = sustainableFinanceScore + shariaScore + legalScore;

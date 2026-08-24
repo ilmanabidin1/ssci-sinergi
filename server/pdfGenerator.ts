@@ -5,8 +5,35 @@ export interface PDFData {
   application: Application;
 }
 
+export function escapeHtml(value: unknown): string {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
 export function generateAssessmentPDF(data: PDFData): string {
   const { assessment, application } = data;
+  const safe = {
+    customerName: escapeHtml(application.customerName),
+    customerId: escapeHtml(application.customerId),
+    businessName: escapeHtml(application.businessName),
+    businessType: escapeHtml(application.businessType),
+    phone: escapeHtml(application.phone),
+    email: escapeHtml(application.email || "-"),
+    address: escapeHtml(application.address),
+    loanPurpose: escapeHtml(application.loanPurpose),
+    classification: escapeHtml(assessment.classification),
+    strengths: escapeHtml(assessment.strengths),
+    riskFactors: escapeHtml(assessment.riskFactors),
+    recommendations: escapeHtml(assessment.recommendations),
+    modelVersion: escapeHtml(assessment.modelVersion),
+    recommendationModel: escapeHtml(
+      assessment.recommendationModel || "Fallback aturan"
+    ),
+  };
   
   // Generate HTML content for PDF
   const html = `
@@ -14,6 +41,7 @@ export function generateAssessmentPDF(data: PDFData): string {
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
   <style>
     * {
       margin: 0;
@@ -209,32 +237,32 @@ export function generateAssessmentPDF(data: PDFData): string {
     <div class="info-grid">
       <div class="info-item">
         <div class="info-label">Nama Lengkap</div>
-        <div class="info-value">${application.customerName}</div>
+        <div class="info-value">${safe.customerName}</div>
       </div>
       <div class="info-item">
         <div class="info-label">NIK / ID Nasabah</div>
-        <div class="info-value">${application.customerId}</div>
+        <div class="info-value">${safe.customerId}</div>
       </div>
       <div class="info-item">
         <div class="info-label">Nama Usaha</div>
-        <div class="info-value">${application.businessName}</div>
+        <div class="info-value">${safe.businessName}</div>
       </div>
       <div class="info-item">
         <div class="info-label">Jenis Usaha</div>
-        <div class="info-value">${application.businessType}</div>
+        <div class="info-value">${safe.businessType}</div>
       </div>
       <div class="info-item">
         <div class="info-label">Telepon</div>
-        <div class="info-value">${application.phone}</div>
+        <div class="info-value">${safe.phone}</div>
       </div>
       <div class="info-item">
         <div class="info-label">Email</div>
-        <div class="info-value">${application.email || "-"}</div>
+        <div class="info-value">${safe.email}</div>
       </div>
     </div>
     <div class="info-item" style="margin-top: 10px;">
       <div class="info-label">Alamat</div>
-      <div class="info-value">${application.address}</div>
+      <div class="info-value">${safe.address}</div>
     </div>
   </div>
 
@@ -242,7 +270,7 @@ export function generateAssessmentPDF(data: PDFData): string {
     <div class="section-title">HASIL PENILAIAN SSCI</div>
     <div style="text-align: center;">
       <span class="classification ${getClassificationClass(assessment.classification)}">
-        ${assessment.classification}
+        ${safe.classification}
       </span>
     </div>
     <div class="score-container">
@@ -252,15 +280,15 @@ export function generateAssessmentPDF(data: PDFData): string {
       </div>
       <div class="score-card">
         <div class="score-value" style="color: #3b82f6;">${Number(assessment.sustainableFinanceScore).toFixed(1)}</div>
-        <div class="score-label">Keuangan (55%)</div>
+        <div class="score-label">Kontribusi Keuangan /55</div>
       </div>
       <div class="score-card">
         <div class="score-value" style="color: #10b981;">${Number(assessment.shariaScore).toFixed(1)}</div>
-        <div class="score-label">Syariah (25%)</div>
+        <div class="score-label">Kontribusi Syariah /25</div>
       </div>
       <div class="score-card">
         <div class="score-value" style="color: #8b5cf6;">${Number(assessment.legalScore).toFixed(1)}</div>
-        <div class="score-label">Legal (20%)</div>
+        <div class="score-label">Kontribusi Legal /20</div>
       </div>
     </div>
   </div>
@@ -281,7 +309,7 @@ export function generateAssessmentPDF(data: PDFData): string {
         <td style="text-align: right;">${Number(application.monthlyExpenses).toLocaleString("id-ID")}</td>
       </tr>
       <tr>
-        <td>Hutang Existing</td>
+        <td>Angsuran Existing per Bulan</td>
         <td style="text-align: right;">${Number(application.existingDebt).toLocaleString("id-ID")}</td>
       </tr>
       <tr>
@@ -295,7 +323,7 @@ export function generateAssessmentPDF(data: PDFData): string {
     </table>
     <div class="info-item" style="margin-top: 15px;">
       <div class="info-label">Tujuan Pembiayaan</div>
-      <div class="info-value">${application.loanPurpose}</div>
+      <div class="info-value">${safe.loanPurpose}</div>
     </div>
   </div>
 
@@ -304,22 +332,33 @@ export function generateAssessmentPDF(data: PDFData): string {
     
     <div class="strength-box">
       <div style="font-weight: bold; margin-bottom: 8px; color: #065f46;">✓ Kekuatan</div>
-      <div>${assessment.strengths}</div>
+      <div>${safe.strengths}</div>
     </div>
     
     <div class="risk-box">
       <div style="font-weight: bold; margin-bottom: 8px; color: #92400e;">⚠ Faktor Risiko</div>
-      <div>${assessment.riskFactors}</div>
+      <div>${safe.riskFactors}</div>
     </div>
     
     <div class="recommendation-box">
       <div style="font-weight: bold; margin-bottom: 8px; color: #1e40af;">📋 Rekomendasi</div>
-      <div>${assessment.recommendations}</div>
+      <div>${safe.recommendations}</div>
     </div>
   </div>
 
+  <div class="section">
+    <div class="section-title">METADATA AUDIT</div>
+    <div class="info-grid">
+      <div class="info-item"><div class="info-label">Versi Aturan</div><div class="info-value">${safe.modelVersion}</div></div>
+      <div class="info-item"><div class="info-label">Model Narasi</div><div class="info-value">${safe.recommendationModel}</div></div>
+      <div class="info-item"><div class="info-label">ID Aplikasi</div><div class="info-value">${application.id}</div></div>
+      <div class="info-item"><div class="info-label">ID Penilaian</div><div class="info-value">${assessment.id}</div></div>
+    </div>
+    <div class="recommendation-box">Skor dan klasifikasi dihitung oleh aturan SSCI. Narasi AI bersifat pendukung dan keputusan pembiayaan final tetap menjadi kewenangan BPRS.</div>
+  </div>
+
   <div class="footer">
-    <p>Dokumen ini dihasilkan secara otomatis oleh Sistem SSCI</p>
+    <p>Dokumen pendukung analisis, bukan keputusan pembiayaan final.</p>
     <p>Sustainable Sharia Creditworthiness Index - Universitas Islam Bandung</p>
     <p>© ${new Date().getFullYear()} - Prototype untuk Proposal SINERGI</p>
   </div>

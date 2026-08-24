@@ -1,12 +1,38 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
+import { checkerProcedure, makerProcedure, publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
 import { calculateSSCI } from "./scoring";
 import { TRPCError } from "@trpc/server";
 import { generateAssessmentPDF } from "./pdfGenerator";
+import {
+  SSCI_LEGAL_DOCUMENT_STATUSES,
+  SSCI_METHODOLOGY_VERSION,
+  SSCI_REQUIRED_LEGAL_DOCUMENTS,
+} from "@shared/ssciMethodology";
+import { generateNarrativeRecommendation } from "./openRouterRecommendations";
+
+const nonNegativeMoney = z
+  .string()
+  .regex(/^\d+(?:\.\d{1,2})?$/, "Nilai keuangan tidak valid");
+const positiveMoney = nonNegativeMoney.refine(value => Number(value) > 0, {
+  message: "Nilai harus lebih dari nol",
+});
+
+const legalDocumentsSchema = z
+  .array(
+    z.object({
+      type: z.enum(SSCI_REQUIRED_LEGAL_DOCUMENTS),
+      status: z.enum(SSCI_LEGAL_DOCUMENT_STATUSES),
+      notes: z.string().trim().max(500).optional(),
+    })
+  )
+  .length(SSCI_REQUIRED_LEGAL_DOCUMENTS.length)
+  .refine(documents => new Set(documents.map(document => document.type)).size === documents.length, {
+    message: "Jenis dokumen tidak boleh duplikat",
+  });
 
 export const appRouter = router({
   system: systemRouter,
@@ -22,36 +48,36 @@ export const appRouter = router({
   }),
 
   applications: router({
-    create: protectedProcedure
+    create: makerProcedure
       .input(z.object({
-        customerName: z.string().min(1),
-        customerId: z.string().min(1),
-        businessName: z.string().min(1),
-        businessType: z.string().min(1),
+        customerName: z.string().trim().min(1).max(255),
+        customerId: z.string().trim().min(1).max(100),
+        businessName: z.string().trim().min(1).max(255),
+        businessType: z.string().trim().min(1).max(100),
         businessAge: z.number().int().positive(),
-        address: z.string().min(1),
-        phone: z.string().min(1),
+        address: z.string().trim().min(1).max(2000),
+        phone: z.string().trim().min(1).max(50),
         email: z.string().email().optional(),
-        monthlyRevenue: z.string(),
-        monthlyExpenses: z.string(),
-        existingDebt: z.string(),
-        collateralValue: z.string(),
-        requestedAmount: z.string(),
-        loanPurpose: z.string().min(1),
-        legalDocuments: z.array(z.object({
-          type: z.string(),
-          status: z.string(),
-          notes: z.string().optional(),
-        })),
+        monthlyRevenue: positiveMoney,
+        monthlyExpenses: nonNegativeMoney,
+        existingDebt: nonNegativeMoney,
+        collateralValue: nonNegativeMoney,
+        requestedAmount: positiveMoney,
+        financingTenor: z.number().int().min(1).max(360),
+        marginRate: z.number().min(0).max(100),
+        loanPurpose: z.string().trim().min(1).max(2000),
+        legalDocuments: legalDocumentsSchema,
         businessShariaCompliant: z.enum(["yes", "no", "partial"]),
-        shariaComplianceNotes: z.string().optional(),
-        environmentalPractices: z.string().optional(),
-        socialImpact: z.string().optional(),
+        shariaComplianceNotes: z.string().trim().max(2000).optional(),
+        environmentalPractices: z.string().trim().max(2000).optional(),
+        socialImpact: z.string().trim().max(2000).optional(),
         governanceQuality: z.enum(["excellent", "good", "fair", "poor"]),
       }))
       .mutation(async ({ input, ctx }) => {
         const applicationId = await db.createApplication({
           ...input,
+          marginRate: input.marginRate.toString(),
+          organizationId: ctx.user.organizationId,
           submittedBy: ctx.user.id,
           status: "pending",
         });
@@ -60,8 +86,8 @@ export const appRouter = router({
 
     getById: protectedProcedure
       .input(z.object({ id: z.number() }))
-      .query(async ({ input }) => {
-        const application = await db.getApplicationById(input.id);
+      .query(async ({ input, ctx }) => {
+        const application = await db.getApplicationById(input.id, ctx.user.organizationId);
         if (!application) {
           throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
         }
@@ -70,77 +96,113 @@ export const appRouter = router({
 
     list: protectedProcedure
       .input(z.object({
-        status: z.string().optional(),
+        status: z.enum(["pending", "assessed", "approved", "rejected"]).optional(),
         fromDate: z.date().optional(),
         toDate: z.date().optional(),
         search: z.string().optional(),
       }).optional())
-      .query(async ({ input }) => {
-        return db.getAllApplications(input);
+      .query(async ({ input, ctx }) => {
+        return db.getAllApplications({ ...input, organizationId: ctx.user.organizationId });
       }),
 
-    assess: protectedProcedure
+    assess: makerProcedure
       .input(z.object({
         applicationId: z.number(),
-        notes: z.string().optional(),
+        notes: z.string().trim().max(2000).optional(),
       }))
       .mutation(async ({ input, ctx }) => {
         // Get application
-        const application = await db.getApplicationById(input.applicationId);
+        const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
         if (!application) {
           throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
         }
 
         // Calculate SSCI score
         const result = calculateSSCI(application);
+        const narrative = await generateNarrativeRecommendation({
+          classification: result.classification,
+          totalScore: result.totalScore,
+          sustainableFinanceScore: result.sustainableFinanceScore,
+          shariaScore: result.shariaScore,
+          legalScore: result.legalScore,
+          scoreBreakdown: result.scoreBreakdown,
+          strengths: result.strengths,
+          riskFactors: result.riskFactors,
+          fallbackRecommendation: result.recommendations,
+        });
 
         // Save assessment
         const assessmentId = await db.createAssessment({
           applicationId: input.applicationId,
+          organizationId: ctx.user.organizationId,
           sustainableFinanceScore: result.sustainableFinanceScore.toString(),
           shariaScore: result.shariaScore.toString(),
           legalScore: result.legalScore.toString(),
           totalScore: result.totalScore.toString(),
           classification: result.classification,
           scoreBreakdown: result.scoreBreakdown,
-          recommendations: result.recommendations,
+          recommendations: narrative.recommendation,
           riskFactors: result.riskFactors,
           strengths: result.strengths,
-          modelVersion: "1.0.0",
+          modelVersion: SSCI_METHODOLOGY_VERSION,
           confidence: result.confidence.toString(),
+          recommendationStatus: narrative.status,
+          recommendationModel: narrative.model,
+          recommendationPromptVersion: narrative.promptVersion,
           assessedBy: ctx.user.id,
           notes: input.notes,
         });
 
-        // Update application status
-        await db.updateApplicationStatus(input.applicationId, "assessed");
+        return {
+          assessmentId,
+          result: {
+            ...result,
+            recommendations: narrative.recommendation,
+            recommendationStatus: narrative.status,
+          },
+        };
+      }),
 
-        return { assessmentId, result };
+    decide: checkerProcedure
+      .input(z.object({
+        applicationId: z.number().int().positive(),
+        decision: z.enum(["approved", "rejected"]),
+        notes: z.string().trim().min(1).max(2000),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        await db.decideApplication({
+          applicationId: input.applicationId,
+          organizationId: ctx.user.organizationId,
+          decision: input.decision,
+          notes: input.notes,
+          checkerId: ctx.user.id,
+        });
+        return { success: true };
       }),
   }),
 
   assessments: router({
     getByApplicationId: protectedProcedure
       .input(z.object({ applicationId: z.number() }))
-      .query(async ({ input }) => {
-        return db.getAssessmentByApplicationId(input.applicationId);
+      .query(async ({ input, ctx }) => {
+        return db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
       }),
 
     list: protectedProcedure
-      .query(async () => {
-        return db.getAllAssessments();
+      .query(async ({ ctx }) => {
+        return db.getAllAssessments(ctx.user.organizationId);
       }),
 
     stats: protectedProcedure
-      .query(async () => {
-        return db.getAssessmentStats();
+      .query(async ({ ctx }) => {
+        return db.getAssessmentStats(ctx.user.organizationId);
       }),
 
     getWithApplication: protectedProcedure
       .input(z.object({ applicationId: z.number() }))
-      .query(async ({ input }) => {
-        const application = await db.getApplicationById(input.applicationId);
-        const assessment = await db.getAssessmentByApplicationId(input.applicationId);
+      .query(async ({ input, ctx }) => {
+        const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
+        const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
         
         if (!application) {
           throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
@@ -152,13 +214,13 @@ export const appRouter = router({
         };
       }),
     
-    exportPDF: protectedProcedure
+    exportReport: protectedProcedure
       .input(z.object({
         applicationId: z.number(),
       }))
-      .query(async ({ input }) => {
-        const application = await db.getApplicationById(input.applicationId);
-        const assessment = await db.getAssessmentByApplicationId(input.applicationId);
+      .mutation(async ({ input, ctx }) => {
+        const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
+        const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
         
         if (!application) {
           throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
@@ -169,10 +231,11 @@ export const appRouter = router({
         }
 
         const htmlContent = generateAssessmentPDF({ application, assessment });
+        await db.recordReportExport(ctx.user.id, application.id, ctx.user.organizationId);
         
         return {
           html: htmlContent,
-          filename: `SSCI_Assessment_${application.customerName}_${Date.now()}.pdf`,
+          filename: `SSCI_Assessment_${application.id}_${Date.now()}.html`,
         };
       }),
   }),

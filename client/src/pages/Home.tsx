@@ -39,7 +39,7 @@ export default function Home() {
                 Sustainable Sharia Creditworthiness Index
               </h1>
               <p className="text-xl text-gray-600">
-                Sistem Penilaian Kelayakan Pembiayaan Syariah Berbasis AI untuk Bank Perekonomian Rakyat Syariah (BPRS)
+                Sistem Pendukung Penilaian Pembiayaan Syariah Berbasis Aturan untuk Bank Perekonomian Rakyat Syariah (BPRS)
               </p>
               <div className="flex justify-center items-center gap-4 mt-6">
                 <img src="/unisba-logo.png" alt="Universitas Islam Bandung" className="h-16" />
@@ -77,11 +77,11 @@ export default function Home() {
               <Card>
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-blue-600 mb-2" />
-                  <CardTitle>AI-Powered Scoring</CardTitle>
+                  <CardTitle>Skoring Transparan</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Model machine learning untuk prediksi kelayakan dengan akurasi tinggi dan rekomendasi otomatis
+                    Aturan penilaian berversi dengan narasi rekomendasi berbantuan AI yang tidak mengubah skor
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -118,7 +118,7 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-primary">SSCI</h1>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600">Halo, {user?.name || 'Demo Mode'}</span>
+            <span className="text-sm text-gray-600">Halo, {user?.name || "Belum masuk"}</span>
             <Button variant="outline" size="sm" asChild>
               <Link href="/dashboard">Dashboard</Link>
             </Button>

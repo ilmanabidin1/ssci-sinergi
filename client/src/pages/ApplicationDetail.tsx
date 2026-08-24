@@ -10,6 +10,7 @@ import { toast } from "sonner";
 export default function ApplicationDetail() {
   const { id } = useParams<{ id: string }>();
   const { user } = useAuth();
+  const utils = trpc.useUtils();
   
   const applicationId = parseInt(id || "0");
   
@@ -19,32 +20,51 @@ export default function ApplicationDetail() {
   );
 
   const assessMutation = trpc.applications.assess.useMutation({
-    onSuccess: () => {
-      toast.success("Penilaian berhasil dilakukan");
+    onSuccess: async data => {
+      await utils.assessments.getWithApplication.invalidate({ applicationId });
+      if (data.result.recommendationStatus === "rule_fallback") {
+        toast.warning("Skor selesai. Narasi AI tidak tersedia; rekomendasi aturan digunakan.");
+      } else {
+        toast.success("Penilaian dan narasi pendukung berhasil dibuat");
+      }
     },
     onError: (error) => {
       toast.error(`Gagal melakukan penilaian: ${error.message}`);
     },
   });
 
-  const utils = trpc.useUtils();
+  const decideMutation = trpc.applications.decide.useMutation({
+    onSuccess: async () => {
+      await utils.assessments.getWithApplication.invalidate({ applicationId });
+      toast.success("Keputusan checker berhasil disimpan");
+    },
+    onError: error => toast.error(`Gagal menyimpan keputusan: ${error.message}`),
+  });
+
+  const decide = (decision: "approved" | "rejected") => {
+    const notes = window.prompt(
+      decision === "approved" ? "Catatan persetujuan:" : "Alasan penolakan:"
+    );
+    if (!notes?.trim()) return;
+    decideMutation.mutate({ applicationId, decision, notes: notes.trim() });
+  };
 
   const handleExportPDF = async () => {
     try {
-      const result = await utils.client.assessments.exportPDF.query({ applicationId });
+      const result = await utils.client.assessments.exportReport.mutate({ applicationId });
       
       // Create a Blob from HTML and trigger download
       const blob = new Blob([result.html], { type: 'text/html' });
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = result.filename.replace('.pdf', '.html');
+       link.download = result.filename;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
       
-      toast.success("File HTML berhasil diunduh. Anda dapat membukanya di browser dan print to PDF.");
+       toast.success("Laporan HTML aman berhasil diunduh dan dapat dicetak ke PDF.");
     } catch (error) {
       toast.error("Gagal mengekspor PDF");
     }
@@ -92,7 +112,7 @@ export default function ApplicationDetail() {
               <h1 className="text-xl font-bold text-primary">SSCI</h1>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name || 'Demo Mode'}</span>
+          <span className="text-sm text-gray-600">{user?.name || "Belum masuk"}</span>
         </div>
       </nav>
 
@@ -106,9 +126,27 @@ export default function ApplicationDetail() {
             {assessment && (
               <Button variant="outline" onClick={handleExportPDF}>
                 <Download className="mr-2 h-4 w-4" />
-                Export PDF
+                 Unduh Laporan
               </Button>
             )}
+            {assessment && application.status === "assessed" &&
+              (user?.role === "checker" || user?.role === "admin") && (
+                <>
+                  <Button
+                    variant="destructive"
+                    disabled={decideMutation.isPending}
+                    onClick={() => decide("rejected")}
+                  >
+                    Tolak
+                  </Button>
+                  <Button
+                    disabled={decideMutation.isPending}
+                    onClick={() => decide("approved")}
+                  >
+                    Setujui
+                  </Button>
+                </>
+              )}
             {!assessment && (
               <Button
                 onClick={() => assessMutation.mutate({ applicationId })}
@@ -126,8 +164,8 @@ export default function ApplicationDetail() {
             <CardHeader>
               <div className="flex justify-between items-start">
                 <div>
-                  <CardTitle className="text-2xl">Hasil Penilaian SSCI</CardTitle>
-                  <CardDescription>Skor dan klasifikasi kelayakan pembiayaan</CardDescription>
+                   <CardTitle className="text-2xl">Hasil Penilaian Berbasis Aturan SSCI</CardTitle>
+                   <CardDescription>Rekomendasi pendukung, bukan keputusan pembiayaan final</CardDescription>
                 </div>
                 {getClassificationBadge(assessment.classification)}
               </div>
@@ -140,15 +178,15 @@ export default function ApplicationDetail() {
                 </div>
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
                   <div className="text-2xl font-bold text-blue-700">{Number(assessment.sustainableFinanceScore).toFixed(1)}</div>
-                  <div className="text-sm text-gray-600 mt-1">Keuangan (55%)</div>
+                   <div className="text-sm text-gray-600 mt-1">Kontribusi Keuangan /55</div>
                 </div>
                 <div className="text-center p-4 bg-green-50 rounded-lg">
                   <div className="text-2xl font-bold text-green-700">{Number(assessment.shariaScore).toFixed(1)}</div>
-                  <div className="text-sm text-gray-600 mt-1">Syariah (25%)</div>
+                   <div className="text-sm text-gray-600 mt-1">Kontribusi Syariah /25</div>
                 </div>
                 <div className="text-center p-4 bg-purple-50 rounded-lg">
                   <div className="text-2xl font-bold text-purple-700">{Number(assessment.legalScore).toFixed(1)}</div>
-                  <div className="text-sm text-gray-600 mt-1">Legal (20%)</div>
+                   <div className="text-sm text-gray-600 mt-1">Kontribusi Legal /20</div>
                 </div>
               </div>
 
@@ -177,16 +215,41 @@ export default function ApplicationDetail() {
                 <div className="flex items-start gap-2">
                   <FileText className="h-5 w-5 text-blue-600 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-blue-900">Rekomendasi</div>
-                    <p className="text-sm text-blue-800 mt-1">{assessment.recommendations}</p>
-                  </div>
-                </div>
+                     <div className="font-semibold text-blue-900">
+                       {assessment.recommendationStatus === "generated"
+                         ? "Narasi Pendukung AI"
+                         : "Rekomendasi Berbasis Aturan"}
+                     </div>
+                     <p className="text-sm text-blue-800 mt-1">{assessment.recommendations}</p>
+                   </div>
+                 </div>
+               </div>
+              <div className="mt-4 border-t pt-4 text-xs text-gray-500 flex flex-wrap gap-x-6 gap-y-1">
+                <span>Versi aturan: {assessment.modelVersion}</span>
+                <span>
+                  Model narasi: {assessment.recommendationModel || "Fallback aturan"}
+                </span>
+                <span>
+                  Dinilai: {new Date(assessment.assessedAt).toLocaleString("id-ID")}
+                </span>
+                <span>Kelengkapan data: {Number(assessment.confidence).toFixed(0)}%</span>
               </div>
             </CardContent>
           </Card>
         )}
 
-        <div className="grid md:grid-cols-2 gap-6">
+         <div className="grid md:grid-cols-2 gap-6">
+          {(application.status === "approved" || application.status === "rejected") && (
+            <Card className="md:col-span-2">
+              <CardHeader>
+                <CardTitle>Keputusan Checker</CardTitle>
+                <CardDescription>
+                  Status: {application.status === "approved" ? "Disetujui" : "Ditolak"}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm">{application.decisionNotes}</CardContent>
+            </Card>
+          )}
           <Card>
             <CardHeader>
               <CardTitle>Informasi Nasabah</CardTitle>
@@ -217,9 +280,11 @@ export default function ApplicationDetail() {
             <CardContent className="space-y-2 text-sm">
               <div><span className="font-semibold">Pendapatan:</span> Rp {Number(application.monthlyRevenue).toLocaleString()}</div>
               <div><span className="font-semibold">Pengeluaran:</span> Rp {Number(application.monthlyExpenses).toLocaleString()}</div>
-              <div><span className="font-semibold">Hutang:</span> Rp {Number(application.existingDebt).toLocaleString()}</div>
+               <div><span className="font-semibold">Angsuran existing/bulan:</span> Rp {Number(application.existingDebt).toLocaleString("id-ID")}</div>
               <div><span className="font-semibold">Agunan:</span> Rp {Number(application.collateralValue).toLocaleString()}</div>
-              <div><span className="font-semibold">Pembiayaan Diajukan:</span> Rp {Number(application.requestedAmount).toLocaleString()}</div>
+               <div><span className="font-semibold">Pembiayaan Diajukan:</span> Rp {Number(application.requestedAmount).toLocaleString()}</div>
+               <div><span className="font-semibold">Tenor:</span> {application.financingTenor} bulan</div>
+               <div><span className="font-semibold">Total margin:</span> {Number(application.marginRate).toFixed(2)}%</div>
             </CardContent>
           </Card>
 

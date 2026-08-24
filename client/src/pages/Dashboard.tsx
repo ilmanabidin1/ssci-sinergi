@@ -36,7 +36,7 @@ export default function Dashboard() {
               <h1 className="text-xl font-bold text-primary">SSCI</h1>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name || 'Demo Mode'}</span>
+          <span className="text-sm text-gray-600">{user?.name || "Belum masuk"}</span>
         </div>
       </nav>
 
