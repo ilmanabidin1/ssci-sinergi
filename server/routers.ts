@@ -48,7 +48,7 @@ export const appRouter = router({
     login: publicProcedure
       .input(z.object({
         email: z.string().trim().email().max(320),
-        password: z.string().min(8).max(200),
+        password: z.string().min(4).max(200),
       }))
       .mutation(async ({ input, ctx }) => {
         const user = await db.getUserByEmail(input.email.toLowerCase());
