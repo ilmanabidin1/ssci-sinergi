@@ -1,6 +1,6 @@
 import { eq, desc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, applications, assessments, auditLogs, InsertApplication, InsertAssessment } from "../drizzle/schema";
+import { InsertUser, users, applications, assessments, auditLogs, documentFiles, InsertApplication, InsertAssessment, InsertDocumentFile } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -363,4 +363,26 @@ export async function getAssessmentStats(organizationId: number) {
   };
   
   return stats;
+}
+
+export async function createDocumentFile(data: InsertDocumentFile & { organizationId: number }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const application = await getApplicationById(data.applicationId, data.organizationId);
+  if (!application) return undefined;
+  const result = await db.insert(documentFiles).values(data);
+  return result[0].insertId;
+}
+
+export async function getDocumentFiles(applicationId: number, organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(documentFiles).where(and(eq(documentFiles.applicationId, applicationId), eq(documentFiles.organizationId, organizationId))).orderBy(desc(documentFiles.createdAt));
+}
+
+export async function updateDocumentVerification(input: { id: number; organizationId: number; status: "verified" | "rejected"; verifiedBy: number; rejectionReason?: string | null }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.update(documentFiles).set({ status: input.status, verifiedBy: input.verifiedBy, verifiedAt: new Date(), rejectionReason: input.status === "rejected" ? input.rejectionReason : null, updatedAt: new Date() }).where(and(eq(documentFiles.id, input.id), eq(documentFiles.organizationId, input.organizationId)));
+  return result[0].affectedRows === 1;
 }

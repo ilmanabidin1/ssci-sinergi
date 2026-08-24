@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download } from "lucide-react";
+import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { toast } from "sonner";
 
@@ -18,6 +18,53 @@ export default function ApplicationDetail() {
     { applicationId },
     { enabled: !!applicationId }
   );
+
+  const documentsQuery = trpc.documents.listDocuments.useQuery(
+    { applicationId },
+    { enabled: !!applicationId }
+  );
+
+  const uploadMutation = trpc.documents.uploadDocument.useMutation({
+    onSuccess: async () => {
+      await documentsQuery.refetch();
+      toast.success("Dokumen berhasil diunggah");
+    },
+    onError: error => toast.error(`Gagal mengunggah dokumen: ${error.message}`),
+  });
+
+  const verifyMutation = trpc.documents.verifyDocument.useMutation({
+    onSuccess: async () => {
+      await documentsQuery.refetch();
+      toast.success("Status dokumen berhasil diperbarui");
+    },
+    onError: error => toast.error(`Gagal memperbarui dokumen: ${error.message}`),
+  });
+
+  const uploadDocument = (documentType: "KTP" | "NPWP" | "NIB", file?: File) => {
+    if (!file) return;
+    const contentTypes = ["application/pdf", "image/jpeg", "image/png"] as const;
+    if (!contentTypes.includes(file.type as typeof contentTypes[number])) {
+      toast.error("Format dokumen harus PDF, JPG, atau PNG");
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      toast.error("Ukuran dokumen maksimal 5MB");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result !== "string") return;
+      uploadMutation.mutate({ applicationId, documentType, originalName: file.name, contentType: file.type as typeof contentTypes[number], data: reader.result });
+    };
+    reader.onerror = () => toast.error("Dokumen tidak dapat dibaca");
+    reader.readAsDataURL(file);
+  };
+
+  const verifyDocument = (id: number, status: "verified" | "rejected") => {
+    const reason = status === "rejected" ? window.prompt("Alasan penolakan dokumen:")?.trim() : undefined;
+    if (status === "rejected" && !reason) return;
+    verifyMutation.mutate({ id, status, reason });
+  };
 
   const assessMutation = trpc.applications.assess.useMutation({
     onSuccess: async data => {
@@ -85,6 +132,9 @@ export default function ApplicationDetail() {
   }
 
   const { application, assessment } = data;
+  const canVerifyDocuments = user?.role === "checker" || user?.role === "admin";
+  const documentTypes = ["KTP", "NPWP", "NIB"] as const;
+  const statusLabels = { uploaded: "Diunggah", verified: "Terverifikasi", rejected: "Ditolak" } as const;
 
   const getClassificationBadge = (classification: string) => {
     const badges = {
@@ -239,7 +289,48 @@ export default function ApplicationDetail() {
         )}
 
          <div className="grid md:grid-cols-2 gap-6">
-          {(application.status === "approved" || application.status === "rejected") && (
+           <Card className="md:col-span-2">
+             <CardHeader>
+               <CardTitle>Dokumen</CardTitle>
+               <CardDescription>Unggah PDF, JPG, atau PNG dengan ukuran maksimal 5MB.</CardDescription>
+             </CardHeader>
+             <CardContent className="space-y-4">
+               {documentTypes.map(documentType => {
+                 const document = documentsQuery.data?.find(item => item.documentType === documentType);
+                 return (
+                   <div key={documentType} className="flex flex-col gap-3 rounded-lg border p-4 sm:flex-row sm:items-center sm:justify-between">
+                     <div className="min-w-0">
+                       <div className="font-semibold">{documentType}</div>
+                       {document ? (
+                         <div className="text-sm text-gray-600">
+                           <span>{document.originalName}</span>{" "}
+                           <Badge variant={document.status === "rejected" ? "destructive" : document.status === "verified" ? "default" : "secondary"}>
+                             {statusLabels[document.status as keyof typeof statusLabels] || document.status}
+                           </Badge>
+                           {document.status === "rejected" && document.rejectionReason && <div className="mt-1 text-destructive">Alasan: {document.rejectionReason}</div>}
+                         </div>
+                       ) : <div className="text-sm text-gray-500">Belum diunggah</div>}
+                     </div>
+                     <div className="flex flex-wrap gap-2">
+                       <label className="inline-flex cursor-pointer">
+                         <Button type="button" variant="outline" asChild disabled={uploadMutation.isPending}>
+                           <span><Upload className="mr-2 h-4 w-4" />Unggah</span>
+                         </Button>
+                         <input className="sr-only" type="file" accept="application/pdf,image/jpeg,image/png" onChange={event => { uploadDocument(documentType, event.target.files?.[0]); event.target.value = ""; }} />
+                       </label>
+                       {canVerifyDocuments && document && document.status !== "verified" && (
+                         <>
+                           <Button size="sm" disabled={verifyMutation.isPending} onClick={() => verifyDocument(document.id, "verified")}>Verifikasi</Button>
+                           <Button size="sm" variant="destructive" disabled={verifyMutation.isPending} onClick={() => verifyDocument(document.id, "rejected")}>Tolak</Button>
+                         </>
+                       )}
+                     </div>
+                   </div>
+                 );
+               })}
+             </CardContent>
+           </Card>
+           {(application.status === "approved" || application.status === "rejected") && (
             <Card className="md:col-span-2">
               <CardHeader>
                 <CardTitle>Keputusan Checker</CardTitle>

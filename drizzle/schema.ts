@@ -158,3 +158,24 @@ export const auditLogs = mysqlTable("auditLogs", {
   metadata: json("metadata").$type<Record<string, string | number | boolean | null>>(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
+
+export const documentFiles = mysqlTable("documentFiles", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").notNull(),
+  applicationId: int("applicationId").notNull(),
+  documentType: mysqlEnum("documentType", ["KTP", "NPWP", "NIB"]).notNull(),
+  originalName: varchar("originalName", { length: 255 }).notNull(),
+  storedName: varchar("storedName", { length: 255 }).notNull(),
+  contentType: mysqlEnum("contentType", ["application/pdf", "image/jpeg", "image/png"]).notNull(),
+  sizeBytes: int("sizeBytes").notNull(),
+  status: mysqlEnum("status", ["uploaded", "verified", "rejected"]).default("uploaded").notNull(),
+  uploadedBy: int("uploadedBy").notNull(),
+  verifiedBy: int("verifiedBy"),
+  verifiedAt: timestamp("verifiedAt"),
+  rejectionReason: text("rejectionReason"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type DocumentFile = typeof documentFiles.$inferSelect;
+export type InsertDocumentFile = typeof documentFiles.$inferInsert;

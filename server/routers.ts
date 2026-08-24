@@ -16,6 +16,7 @@ import { generateNarrativeRecommendation } from "./openRouterRecommendations";
 import { hashPassword, verifyPassword } from "./passwordAuth";
 import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
+import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
 
 const nonNegativeMoney = z
   .string()
@@ -282,6 +283,28 @@ export const appRouter = router({
           filename: `SSCI_Assessment_${application.id}_${Date.now()}.html`,
         };
       }),
+  }),
+
+  documents: router({
+    uploadDocument: makerProcedure.input(z.object({
+      applicationId: z.number().int().positive(), documentType: z.enum(DOCUMENT_TYPES),
+      originalName: z.string().trim().min(1).max(255), contentType: z.enum(CONTENT_TYPES), data: z.string().min(1),
+    })).mutation(async ({ input, ctx }) => {
+      let bytes: Buffer;
+      try { bytes = decodeDocumentData(input.data); } catch (error) { throw new TRPCError({ code: "BAD_REQUEST", message: error instanceof Error ? error.message : "Invalid document" }); }
+      const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
+      if (!application) throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+      const storedName = await storeDocument(bytes, input.contentType);
+      const id = await db.createDocumentFile({ organizationId: ctx.user.organizationId, applicationId: input.applicationId, documentType: input.documentType, originalName: sanitizeOriginalName(input.originalName), storedName, contentType: input.contentType, sizeBytes: bytes.length, uploadedBy: ctx.user.id, status: "uploaded" });
+      if (!id) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Document could not be saved" });
+      return { id, storedName };
+    }),
+    listDocuments: protectedProcedure.input(z.object({ applicationId: z.number().int().positive() })).query(({ input, ctx }) => db.getDocumentFiles(input.applicationId, ctx.user.organizationId)),
+    verifyDocument: checkerProcedure.input(z.object({ id: z.number().int().positive(), status: z.enum(["verified", "rejected"]), reason: z.string().trim().max(2000).optional() }).refine(value => value.status !== "rejected" || !!value.reason, { message: "Rejection reason is required" })).mutation(async ({ input, ctx }) => {
+      const updated = await db.updateDocumentVerification({ id: input.id, organizationId: ctx.user.organizationId, status: input.status, verifiedBy: ctx.user.id, rejectionReason: input.reason });
+      if (!updated) throw new TRPCError({ code: "NOT_FOUND", message: "Document not found" });
+      return { success: true };
+    }),
   }),
 });
 

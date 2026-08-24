@@ -50,6 +50,13 @@
       "when": 1787579264322,
       "tag": "0006_pink_taskmaster",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1787582287096,
+      "tag": "0007_lush_stryfe",
+      "breakpoints": true
     }
   ]
 }
