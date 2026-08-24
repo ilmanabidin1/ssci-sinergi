@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
-import { AlertCircle, CheckCircle2, Clock3, FileText, Loader2, RefreshCw, Shield, XCircle } from "lucide-react";
+import { AlertCircle, CheckCircle2, Clock3, FileText, Loader2, LogOut, RefreshCw, Shield, XCircle } from "lucide-react";
 import { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 type Status = "all" | "pending" | "assessed" | "approved" | "rejected";
 
@@ -20,7 +20,8 @@ const statusLabels: Record<Exclude<Status, "all">, string> = {
 const formatMoney = (value: number) => `Rp ${value.toLocaleString("id-ID")}`;
 
 export default function Dashboard() {
-  const { user } = useAuth({ redirectOnUnauthenticated: true });
+  const { user, logout } = useAuth({ redirectOnUnauthenticated: true });
+  const [, setLocation] = useLocation();
   const [status, setStatus] = useState<Status>("all");
   const queueQuery = trpc.applications.queue.useQuery(status === "all" ? undefined : { status });
   const statsQuery = trpc.applications.operationalStats.useQuery();
@@ -44,7 +45,7 @@ export default function Dashboard() {
   ] as const;
 
   return <div className="min-h-screen bg-slate-50">
-    <nav className="border-b bg-white"><div className="container flex items-center justify-between py-4"><Link href="/" className="flex items-center gap-2 text-primary"><Shield className="h-6 w-6" /><span className="text-xl font-bold">SSCI BPRS</span></Link><span className="text-sm text-slate-600">{user?.name || "Belum masuk"}</span></div></nav>
+     <nav className="border-b bg-white"><div className="container flex items-center justify-between py-4"><Link href="/" className="flex items-center gap-2 text-primary"><Shield className="h-6 w-6" /><span className="text-xl font-bold">SSCI BPRS</span></Link><div className="flex items-center gap-3"><span className="hidden text-sm text-slate-600 sm:inline">{user?.name || "Belum masuk"}</span><Button variant="ghost" size="sm" onClick={async () => { await logout(); setLocation("/"); }}><LogOut className="mr-2 h-4 w-4" />Keluar</Button></div></div></nav>
     <main className="container max-w-7xl py-6 sm:py-8">
        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><div><p className="text-sm font-semibold uppercase tracking-wider text-primary">Operational center</p><h1 className="mt-1 text-3xl font-bold text-slate-900">Dashboard operasional</h1><p className="mt-2 text-slate-600">Pantau alur pengajuan pembiayaan BPRS secara real time.</p></div><div className="flex flex-wrap gap-2"><Button asChild><Link href="/applications/new"><FileText className="mr-2 h-4 w-4" />Mulai penilaian baru</Link></Button><Button asChild variant="outline"><Link href="/assessments">Riwayat penilaian</Link></Button><Button variant="outline" onClick={refresh} disabled={isLoading}><RefreshCw className={`mr-2 h-4 w-4 ${isLoading ? "animate-spin" : ""}`} />Refresh</Button></div></div>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">{cards.map(([label, value, Icon, color]) => <Card key={label} className="border-0 shadow-sm"><CardContent className="p-4"><div className="flex items-center justify-between"><p className="text-xs font-medium text-slate-500">{label}</p><Icon className={`h-4 w-4 ${color}`} /></div><p className="mt-2 text-xl font-bold text-slate-900">{value}</p></CardContent></Card>)}</div>
