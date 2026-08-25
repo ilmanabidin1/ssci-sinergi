@@ -1,6 +1,6 @@
 import { eq, desc, asc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification } from "../drizzle/schema";
+import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification, surveyPhotos, InsertSurveyPhoto } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -1099,4 +1099,48 @@ export async function getSlikExport(organizationId: number) {
       assessedAt: assessment?.assessedAt ?? null,
     };
   });
+}
+
+// Survey photos
+export async function createSurveyPhoto(data: InsertSurveyPhoto & { organizationId: number }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(surveyPhotos).values(data);
+  return Number(result[0].insertId);
+}
+
+export async function listSurveyPhotos(organizationId: number, applicationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(surveyPhotos)
+    .where(and(
+      eq(surveyPhotos.organizationId, organizationId),
+      eq(surveyPhotos.applicationId, applicationId)
+    ))
+    .orderBy(desc(surveyPhotos.createdAt));
+}
+
+export async function getSurveyPhotoById(id: number, organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select().from(surveyPhotos)
+    .where(and(eq(surveyPhotos.id, id), eq(surveyPhotos.organizationId, organizationId)))
+    .limit(1);
+  return result[0];
+}
+
+export async function updateSurveyAnalysis(id: number, organizationId: number, data: {
+  status: "analyzed" | "failed";
+  analysisResult?: Record<string, unknown> | null;
+  analyzedAt?: Date | null;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(surveyPhotos)
+    .set({
+      ...(data.status ? { status: data.status } : {}),
+      ...(data.analysisResult !== undefined ? { analysisResult: data.analysisResult } : {}),
+      ...(data.analyzedAt !== undefined ? { analyzedAt: data.analyzedAt } : {}),
+    })
+    .where(and(eq(surveyPhotos.id, id), eq(surveyPhotos.organizationId, organizationId)));
 }

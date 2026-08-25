@@ -20,6 +20,11 @@ import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
+import { analyzeSurveyImage, decodeSurveyImage, storeSurveyImage, SURVEY_CONTENT_TYPES, SurveyUploadError, SurveyProviderError } from "./surveyAnalysis";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+const UPLOAD_DIR = process.env.UPLOAD_DIR || "/data/uploads";
 
 const nonNegativeMoney = z
   .string()
@@ -655,6 +660,85 @@ export const appRouter = router({
       }
       return { success: true };
     }),
+  }),
+
+  survey: router({
+    uploadPhoto: makerProcedure
+      .input(z.object({
+        applicationId: z.number().int().positive(),
+        contentType: z.enum(SURVEY_CONTENT_TYPES),
+        data: z.string().min(1),
+        caption: z.string().trim().max(255).optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
+        if (!application) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+        }
+        let bytes: Buffer;
+        try {
+          bytes = decodeSurveyImage(input.data, input.contentType);
+        } catch (error) {
+          if (error instanceof SurveyUploadError) {
+            throw new TRPCError({ code: "BAD_REQUEST", message: error.message });
+          }
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Foto survey tidak dapat diproses" });
+        }
+        const storedName = await storeSurveyImage(bytes, input.contentType);
+        const id = await db.createSurveyPhoto({
+          organizationId: ctx.user.organizationId,
+          applicationId: input.applicationId,
+          uploadedBy: ctx.user.id,
+          storedName,
+          contentType: input.contentType,
+          caption: input.caption,
+        });
+        return { id, storedName };
+      }),
+
+    list: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(({ input, ctx }) => {
+        return db.listSurveyPhotos(ctx.user.organizationId, input.applicationId);
+      }),
+
+    analyze: makerProcedure
+      .input(z.object({ photoId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const photo = await db.getSurveyPhotoById(input.photoId, ctx.user.organizationId);
+        if (!photo) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Survey photo not found" });
+        }
+        if (photo.status !== "uploaded") {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Survey photo sudah dianalisis" });
+        }
+        const filePath = join(UPLOAD_DIR, photo.storedName);
+        let fileBuffer: Buffer;
+        try {
+          fileBuffer = readFileSync(filePath);
+        } catch (error) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Survey photo file not found" });
+        }
+        const imageBase64 = fileBuffer.toString("base64");
+        try {
+          const result = await analyzeSurveyImage(imageBase64, photo.contentType);
+          await db.updateSurveyAnalysis(input.photoId, ctx.user.organizationId, {
+            status: "analyzed",
+            analysisResult: result,
+            analyzedAt: new Date(),
+          });
+          return result;
+        } catch (error) {
+          if (error instanceof SurveyProviderError) {
+            await db.updateSurveyAnalysis(input.photoId, ctx.user.organizationId, {
+              status: "failed",
+              analyzedAt: new Date(),
+            });
+            throw new TRPCError({ code: "BAD_GATEWAY", message: "Survey AI service unavailable" });
+          }
+          throw error;
+        }
+      }),
   }),
 });
 

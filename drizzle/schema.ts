@@ -248,3 +248,20 @@ export const notifications = mysqlTable("notifications", {
 
 export type Notification = typeof notifications.$inferSelect;
 export type InsertNotification = typeof notifications.$inferInsert;
+
+export const surveyPhotos = mysqlTable("surveyPhotos", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").notNull(),
+  applicationId: int("applicationId").notNull(),
+  uploadedBy: int("uploadedBy").notNull(),
+  storedName: varchar("storedName", { length: 255 }).notNull(),
+  contentType: mysqlEnum("contentType", ["image/jpeg", "image/png"]).notNull(),
+  caption: varchar("caption", { length: 255 }),
+  status: mysqlEnum("status", ["uploaded", "analyzed", "failed"]).default("uploaded").notNull(),
+  analysisResult: json("analysisResult").$type<Record<string, unknown>>(),
+  analyzedAt: timestamp("analyzedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type SurveyPhoto = typeof surveyPhotos.$inferSelect;
+export type InsertSurveyPhoto = typeof surveyPhotos.$inferInsert;

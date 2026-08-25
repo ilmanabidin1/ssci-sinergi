@@ -4,8 +4,10 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload } from "lucide-react";
+import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload, Camera, Sparkles } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -31,6 +33,11 @@ export default function ApplicationDetail() {
     { enabled: !!applicationId }
   );
 
+  const surveyPhotosQuery = trpc.survey.list.useQuery(
+    { applicationId },
+    { enabled: !!applicationId }
+  );
+
   const commentsQuery = trpc.applications.listComments.useQuery(
     { applicationId },
     { enabled: !!applicationId }
@@ -42,6 +49,53 @@ export default function ApplicationDetail() {
   );
 
   const [commentText, setCommentText] = useState("");
+  const [surveyCaption, setSurveyCaption] = useState("");
+  const [analyzingPhotoId, setAnalyzingPhotoId] = useState<number | null>(null);
+
+  const uploadPhotoMutation = trpc.survey.uploadPhoto.useMutation({
+    onSuccess: async () => {
+      setSurveyCaption("");
+      await surveyPhotosQuery.refetch();
+      toast.success("Foto survey berhasil diunggah");
+    },
+    onError: error => toast.error(`Gagal mengunggah foto: ${error.message}`),
+  });
+
+  const analyzeMutation = trpc.survey.analyze.useMutation({
+    onMutate: ({ photoId }) => setAnalyzingPhotoId(photoId),
+    onSettled: () => setAnalyzingPhotoId(null),
+    onSuccess: async () => {
+      await surveyPhotosQuery.refetch();
+      toast.success("Analisis AI selesai");
+    },
+    onError: error => toast.error(`Gagal menganalisis foto: ${error.message}`),
+  });
+
+  const handleSurveyPhotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    if (!["image/jpeg", "image/png"].includes(file.type)) {
+      toast.error("Format foto harus JPG atau PNG");
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      toast.error("Ukuran foto maksimal 5MB");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result !== "string") return;
+      uploadPhotoMutation.mutate({
+        applicationId,
+        contentType: file.type as "image/jpeg" | "image/png",
+        data: reader.result,
+        caption: surveyCaption.trim() || undefined,
+      });
+    };
+    reader.onerror = () => toast.error("Foto tidak dapat dibaca");
+    reader.readAsDataURL(file);
+  };
 
   const addCommentMutation = trpc.applications.addComment.useMutation({
     onSuccess: async () => {
@@ -424,6 +478,83 @@ export default function ApplicationDetail() {
                })}
              </CardContent>
            </Card>
+           <Card className="md:col-span-2">
+             <CardHeader>
+               <CardTitle>Survey Lapangan</CardTitle>
+               <CardDescription>Unggah foto survey lokasi usaha (JPG/PNG, maks 5MB) untuk dianalisis AI.</CardDescription>
+             </CardHeader>
+             <CardContent className="space-y-4">
+               <div className="space-y-3 rounded-lg border p-4">
+                 <div>
+                   <Label htmlFor="survey-caption">Caption (opsional)</Label>
+                   <Input
+                     id="survey-caption"
+                     value={surveyCaption}
+                     onChange={event => setSurveyCaption(event.target.value)}
+                     placeholder="Tulis keterangan foto..."
+                     maxLength={255}
+                   />
+                 </div>
+                 <label className="inline-flex cursor-pointer items-center">
+                   <Button type="button" disabled={uploadPhotoMutation.isPending} asChild>
+                     <span>
+                       {uploadPhotoMutation.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Camera className="mr-2 h-4 w-4" />}
+                       {uploadPhotoMutation.isPending ? "Mengunggah..." : "Unggah Foto"}
+                     </span>
+                   </Button>
+                   <input className="sr-only" type="file" accept="image/jpeg,image/png" onChange={handleSurveyPhotoChange} />
+                 </label>
+               </div>
+
+               {surveyPhotosQuery.isLoading ? (
+                 <div className="flex items-center gap-2 py-6 text-sm text-gray-500">
+                   <Loader2 className="h-4 w-4 animate-spin" />
+                   Memuat foto survey...
+                 </div>
+               ) : (surveyPhotosQuery.data ?? []).length === 0 ? (
+                 <p className="py-4 text-sm text-gray-500">Belum ada foto survey.</p>
+               ) : (
+                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                   {(surveyPhotosQuery.data ?? []).map(photo => (
+                     <div key={photo.id} className="space-y-2 rounded-lg border p-3">
+                       <img
+                         src={`/uploads/${photo.storedName}`}
+                         alt={photo.caption || "Foto survey"}
+                         className="h-40 w-full rounded-md object-cover bg-gray-100"
+                       />
+                       {photo.caption && <p className="text-sm text-gray-700">{photo.caption}</p>}
+                       <div className="flex items-center justify-between text-xs text-gray-500">
+                         <span>{new Date(photo.createdAt).toLocaleString("id-ID")}</span>
+                         <Badge variant={photo.status === "failed" ? "destructive" : photo.status === "analyzed" ? "default" : "secondary"}>
+                           {photo.status === "uploaded" ? "Diunggah" : photo.status === "analyzed" ? "Terverifikasi" : "Gagal"}
+                         </Badge>
+                       </div>
+                       {photo.status === "uploaded" && (
+                         <Button
+                           size="sm"
+                           disabled={analyzingPhotoId !== null}
+                           onClick={() => analyzeMutation.mutate({ photoId: photo.id })}
+                         >
+                           {analyzingPhotoId === photo.id ? (
+                             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                           ) : (
+                             <Sparkles className="mr-2 h-4 w-4" />
+                           )}
+                           {analyzingPhotoId === photo.id ? "Menganalisis..." : "Analisis AI"}
+                         </Button>
+                       )}
+                       {photo.status === "failed" && (
+                         <p className="text-xs text-destructive">Analisis AI gagal. Silakan unggah ulang.</p>
+                       )}
+                       {photo.status === "analyzed" && photo.analysisResult && (
+                         <SurveyAnalysisBlock result={photo.analysisResult} />
+                       )}
+                     </div>
+                   ))}
+                 </div>
+               )}
+             </CardContent>
+           </Card>
            {(application.status === "approved" || application.status === "rejected") && (
             <Card className="md:col-span-2">
               <CardHeader>
@@ -562,6 +693,74 @@ export default function ApplicationDetail() {
           </Card>
         </div>
       </main>
+    </div>
+  );
+}
+
+type SurveyAnalysisResult = {
+  activityLevel?: unknown;
+  premisesCondition?: unknown;
+  stockAdequacy?: unknown;
+  equipmentCondition?: unknown;
+  cleanliness?: unknown;
+  observations?: unknown;
+  overallAssessment?: unknown;
+  confidence?: unknown;
+};
+
+function SurveyAnalysisBlock({ result }: { result: Record<string, unknown> }) {
+  const analysis = result as SurveyAnalysisResult;
+  const labels: { key: keyof SurveyAnalysisResult; label: string }[] = [
+    { key: "activityLevel", label: "Tingkat aktivitas" },
+    { key: "premisesCondition", label: "Kondisi tempat" },
+    { key: "stockAdequacy", label: "Kecukupan stok" },
+    { key: "equipmentCondition", label: "Kondisi peralatan" },
+    { key: "cleanliness", label: "Kebersihan" },
+  ];
+  const confidence = Number(analysis.confidence ?? 0) * 100;
+  const observations = Array.isArray(analysis.observations) ? analysis.observations as unknown[] : [];
+
+  return (
+    <div className="space-y-2 rounded-lg bg-blue-50 p-3 text-sm">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2 font-semibold text-blue-900">
+          <Sparkles className="h-4 w-4" />
+          Hasil Analisis AI
+        </div>
+        <Badge className="score-good">Kepercayaan: {confidence.toFixed(0)}%</Badge>
+      </div>
+      <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+        {labels.map(item => {
+          const value = analysis[item.key];
+          if (value == null) return null;
+          return (
+            <div key={item.key} className="flex items-start gap-1.5">
+              <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+              <div>
+                <span className="text-xs text-blue-800">{item.label}:</span>{" "}
+                <span className="text-xs text-gray-700">{String(value)}</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      {observations.length > 0 && (
+        <div>
+          <div className="text-xs font-semibold text-blue-900">Pengamatan</div>
+          <ul className="mt-1 list-inside list-disc space-y-0.5 text-xs text-gray-700">
+            {observations.map((obs, index) => (
+              <li key={index}>{String(obs)}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {analysis.overallAssessment != null && (
+        <div className="border-t border-blue-200 pt-2 text-xs text-gray-700">
+          <span className="font-semibold text-blue-900">Penilaian keseluruhan: </span>
+          {String(analysis.overallAssessment)}
+        </div>
+      )}
+      <p className="text-[11px] text-blue-600/70">Hasil bersifat pendukung, bukan keputusan final.</p>
     </div>
   );
 }
