@@ -164,10 +164,7 @@ export default function Settings() {
                 Kembali
               </Link>
             </Button>
-            <div className="flex items-center gap-2">
-              <Settings2 className="h-6 w-6 text-primary" />
-              <h1 className="text-xl font-bold text-primary">Pengaturan</h1>
-            </div>
+            <img src="/logo-light-bg.png" alt="SSCI" className="h-8 w-auto" />
           </div>
           <span className="hidden text-sm text-slate-600 sm:inline">{user?.name || "Belum masuk"}</span>
         </div>
