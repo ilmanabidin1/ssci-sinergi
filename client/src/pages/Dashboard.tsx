@@ -1,3 +1,4 @@
+import { ProfileMenu } from "@/components/ProfileMenu";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -11,7 +12,6 @@ import {
   Clock3,
   FileText,
   Loader2,
-  LogOut,
   RefreshCw,
   Shield,
   TrendingUp,
@@ -41,8 +41,7 @@ const statusTone: Record<string, string> = {
 const formatMoney = (value: number) => `Rp ${value.toLocaleString("id-ID")}`;
 
 export default function Dashboard() {
-  const { user, logout } = useAuth({ redirectOnUnauthenticated: true });
-  const [, setLocation] = useLocation();
+  const { user } = useAuth({ redirectOnUnauthenticated: true });
   const [status, setStatus] = useState<Status>("all");
   const queueQuery = trpc.applications.queue.useQuery(status === "all" ? undefined : { status });
   const statsQuery = trpc.applications.operationalStats.useQuery();
@@ -126,20 +125,7 @@ export default function Dashboard() {
               </span>
             )}
           </Link>
-          <div className="flex items-center gap-3">
-            <span className="hidden text-sm text-slate-600 sm:inline">{user?.name || "Belum masuk"}</span>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={async () => {
-                await logout();
-                setLocation("/");
-              }}
-            >
-              <LogOut className="mr-2 h-4 w-4" />
-              Keluar
-            </Button>
-          </div>
+          <ProfileMenu />
         </div>
       </nav>
 

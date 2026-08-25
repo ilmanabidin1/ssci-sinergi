@@ -1,3 +1,4 @@
+import { ProfileMenu } from "@/components/ProfileMenu";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -50,7 +51,7 @@ export default function AssessmentHistory() {
               </div>
             </div>
           </div>
-          <span className="text-sm text-gray-600">{user?.name || "Belum masuk"}</span>
+          <ProfileMenu />
         </div>
       </nav>
 
