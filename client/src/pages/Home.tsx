@@ -45,7 +45,7 @@ export default function Home() {
       <header className="relative z-10 border-b border-[#dfe4ec] bg-[#f7f8fb]/95">
         <nav className="container flex h-[76px] items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <img src="/logo-light-bg.png" alt="SSCI" className="h-10 w-auto" />
+            <img src="/logo-light-bg.png" alt="SSCI" className="h-11 w-auto" />
             <span><strong className="block text-lg tracking-[-.04em]">SSCI</strong><small className="block text-[9px] font-semibold uppercase tracking-[.18em] text-[#71809a]">Sustainable Sharia Index</small></span>
           </Link>
           <div className="hidden items-center gap-8 text-sm font-medium text-[#60708c] md:flex">
@@ -63,7 +63,7 @@ export default function Home() {
           <div className="absolute -right-20 -top-28 h-[440px] w-[440px] rounded-full border border-white/10" /><div className="absolute right-20 top-10 h-[250px] w-[250px] rounded-full border border-[#efb84b]/20" />
           <div className="container grid gap-14 py-20 md:grid-cols-[1.05fr_.95fr] md:items-center md:py-28">
             <div className="relative z-10">
-              <img src="/logo-dark-bg.png" alt="SSCI" className="mb-6 h-12 w-auto" />
+              <img src="/logo-dark-bg.png" alt="SSCI" className="mb-6 h-16 w-auto" />
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#efb84b]/40 bg-[#efb84b]/10 px-3 py-1.5 text-xs font-semibold text-[#f6cf78]"><span className="h-1.5 w-1.5 rounded-full bg-[#efb84b]" /> Platform penilaian pembiayaan BPRS</div>
               <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-.055em] sm:text-6xl">Keputusan pembiayaan yang <em className="font-serif font-normal text-[#efb84b]">lebih terang.</em></h1>
               <p className="mt-7 max-w-xl text-base leading-7 text-[#b9c4d8] sm:text-lg">SSCI membantu BPRS menilai kelayakan pembiayaan secara konsisten, transparan, dan tetap dalam kendali analis.</p>

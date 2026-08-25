@@ -215,7 +215,7 @@ export default function Dashboard() {
       <nav className="border-b bg-white">
         <div className="container flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-2 text-primary">
-            <img src={orgLogo || "/logo-light-bg.png"} alt="Logo BPRS" className="h-8 w-auto object-contain" />
+            <img src={orgLogo || "/logo-light-bg.png"} alt="SSCI" className="h-10 w-auto object-contain" />
             <span className="text-xl font-bold">{orgName || "SSCI BPRS"}</span>
             {orgName && (
               <span className="hidden rounded-md bg-slate-100 px-1.5 py-0.5 text-xs font-semibold text-slate-500 sm:inline">

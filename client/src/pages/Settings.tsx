@@ -164,7 +164,7 @@ export default function Settings() {
                 Kembali
               </Link>
             </Button>
-            <img src="/logo-light-bg.png" alt="SSCI" className="h-8 w-auto" />
+            <img src="/logo-light-bg.png" alt="SSCI" className="h-10 w-auto" />
           </div>
           <span className="hidden text-sm text-slate-600 sm:inline">{user?.name || "Belum masuk"}</span>
         </div>
