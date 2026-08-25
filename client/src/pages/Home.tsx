@@ -44,9 +44,8 @@ export default function Home() {
     <div className="min-h-screen overflow-hidden bg-[#f7f8fb] text-[#14213d]">
       <header className="relative z-10 border-b border-[#dfe4ec] bg-[#f7f8fb]/95">
         <nav className="container flex h-[76px] items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/logo-light-bg.png" alt="SSCI" className="h-11 w-auto" />
-            <span><strong className="block text-lg tracking-[-.04em]">SSCI</strong><small className="block text-[9px] font-semibold uppercase tracking-[.18em] text-[#71809a]">Sustainable Sharia Index</small></span>
+          <Link href="/" className="flex items-center">
+            <img src="/logo-light-bg.png" alt="SSCI" className="h-[62px] w-auto" />
           </Link>
           <div className="hidden items-center gap-8 text-sm font-medium text-[#60708c] md:flex">
             <a href="#cara-kerja">Cara kerja</a><a href="#pilar">Metodologi</a><a href="#keamanan">Keamanan</a>

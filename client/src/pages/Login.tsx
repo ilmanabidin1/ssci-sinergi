@@ -33,7 +33,7 @@ export default function Login() {
             <ShieldCheck className="h-7 w-7 text-white" />
           </div>
           <div>
-            <CardTitle className="text-2xl">Portal Pilot SSCI</CardTitle>
+            <CardTitle className="text-2xl">Portal SSCI</CardTitle>
             <CardDescription className="mt-2">
               Masuk menggunakan akun yang diberikan administrator BPRS.
             </CardDescription>
