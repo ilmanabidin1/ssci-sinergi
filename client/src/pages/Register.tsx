@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { trpc } from "@/lib/trpc";
 import { Loader2, ShieldCheck } from "lucide-react";
 import { useLocation } from "wouter";
@@ -20,6 +21,10 @@ export default function Register() {
         <form className="space-y-4" onSubmit={event => { event.preventDefault(); const data = new FormData(event.currentTarget); register.mutate({ organizationName: String(data.get("organizationName")), organizationSlug: String(data.get("organizationSlug")), adminName: String(data.get("adminName")), email: String(data.get("email")), password: String(data.get("password")) }); }}>
           {[['organizationName','Nama resmi BPRS','text'],['organizationSlug','Slug organisasi (contoh: bprs-amanah)','text'],['adminName','Nama administrator','text'],['email','Email','email']].map(([name,label,type]) => <div className="space-y-2" key={name}><Label htmlFor={name}>{label}</Label><Input id={name} name={name} type={type} required /></div>)}
           <div className="space-y-2"><Label htmlFor="password">Password</Label><Input id="password" name="password" type="password" minLength={8} required /><p className="text-xs text-slate-500">Minimal 8 karakter.</p></div>
+          <div className="space-y-2"><Label htmlFor="bprsAddress">Alamat BPRS</Label><Textarea id="bprsAddress" name="bprsAddress" rows={2} placeholder="Alamat kantor BPRS (opsional)" /></div>
+          <div className="space-y-2"><Label htmlFor="bprsPhone">Telepon BPRS</Label><Input id="bprsPhone" name="bprsPhone" type="tel" placeholder="Telepon BPRS (opsional)" /></div>
+          <div className="space-y-2"><Label htmlFor="adminPosition">Jabatan administrator</Label><Input id="adminPosition" name="adminPosition" type="text" placeholder="Misal: Direktur / Kepala Divisi (opsional)" /></div>
+          <div className="space-y-2"><Label htmlFor="adminPhone">Telepon administrator</Label><Input id="adminPhone" name="adminPhone" type="tel" placeholder="Telepon administrator (opsional)" /></div>
           <Button className="w-full" type="submit" disabled={register.isPending}>{register.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Kirim pendaftaran</Button>
           <p className="text-center text-sm text-slate-600"><a className="text-emerald-700 hover:underline" href="/login">Kembali ke login</a></p>
         </form>

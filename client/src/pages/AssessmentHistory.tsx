@@ -11,6 +11,8 @@ import { useState } from "react";
 
 export default function AssessmentHistory() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
+  const orgQuery = trpc.organization.getSettings.useQuery();
+  const orgName = orgQuery.data?.name;
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState<"all" | "pending" | "assessed" | "approved" | "rejected" | "cancelled">("all");
   
@@ -42,7 +44,10 @@ export default function AssessmentHistory() {
             </Button>
             <div className="flex items-center gap-2">
               <Shield className="h-6 w-6 text-primary" />
-              <h1 className="text-xl font-bold text-primary">SSCI</h1>
+              <div className="flex items-center gap-2">
+                <h1 className="text-xl font-bold text-primary">SSCI</h1>
+                {orgName && <span className="hidden rounded-md bg-slate-100 px-1.5 py-0.5 text-xs font-semibold text-slate-500 sm:inline">{orgName}</span>}
+              </div>
             </div>
           </div>
           <span className="text-sm text-gray-600">{user?.name || "Belum masuk"}</span>

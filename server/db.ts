@@ -478,6 +478,44 @@ export async function updateUserRole(email: string, role: "maker" | "checker" | 
   await db.update(users).set({ role }).where(eq(users.email, email));
 }
 
+export async function updateOrganizationSettings(organizationId: number, input: {
+  name?: string;
+  legalName?: string;
+  address?: string | null;
+  phone?: string | null;
+  email?: string | null;
+  logoUrl?: string | null;
+  primaryColor?: string;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(organizations).set({
+    ...(input.name ? { name: input.name } : {}),
+    ...(input.legalName ? { legalName: input.legalName } : {}),
+    ...(input.address !== undefined ? { address: input.address } : {}),
+    ...(input.phone !== undefined ? { phone: input.phone } : {}),
+    ...(input.email !== undefined ? { email: input.email } : {}),
+    ...(input.logoUrl !== undefined ? { logoUrl: input.logoUrl } : {}),
+    ...(input.primaryColor ? { primaryColor: input.primaryColor } : {}),
+    updatedAt: new Date(),
+  }).where(eq(organizations.id, organizationId));
+}
+
+export async function updateUserProfile(userId: number, input: {
+  name?: string;
+  position?: string | null;
+  phone?: string | null;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(users).set({
+    ...(input.name ? { name: input.name } : {}),
+    ...(input.position !== undefined ? { position: input.position } : {}),
+    ...(input.phone !== undefined ? { phone: input.phone } : {}),
+    updatedAt: new Date(),
+  }).where(eq(users.id, userId));
+}
+
 export async function getAssessmentStats(organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");

@@ -6,6 +6,11 @@ export const organizations = mysqlTable("organizations", {
   legalName: varchar("legalName", { length: 255 }).notNull(),
   slug: varchar("slug", { length: 100 }).notNull().unique(),
   registrationStatus: mysqlEnum("registrationStatus", ["pending", "active"]).default("active").notNull(),
+  address: text("address"),
+  phone: varchar("phone", { length: 50 }),
+  email: varchar("email", { length: 320 }),
+  logoUrl: varchar("logoUrl", { length: 500 }),
+  primaryColor: varchar("primaryColor", { length: 20 }).default("#2458d6"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
@@ -22,10 +27,15 @@ export const users = mysqlTable("users", {
   loginMethod: varchar("loginMethod", { length: 64 }),
   role: mysqlEnum("role", ["maker", "checker", "admin"]).default("maker").notNull(),
   organizationId: int("organizationId").default(1).notNull(),
+  position: varchar("position", { length: 100 }),
+  phone: varchar("phone", { length: 50 }),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
 });
+
+export type Organization = typeof organizations.$inferSelect;
+export type InsertOrganization = typeof organizations.$inferInsert;
 
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;

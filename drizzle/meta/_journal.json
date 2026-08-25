@@ -78,6 +78,13 @@
       "when": 1787591595940,
       "tag": "0010_hard_talon",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1787629894896,
+      "tag": "0011_curved_harpoon",
+      "breakpoints": true
     }
   ]
 }

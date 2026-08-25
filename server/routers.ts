@@ -1,7 +1,7 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { checkerProcedure, makerProcedure, publicProcedure, protectedProcedure, router } from "./_core/trpc";
+import { adminProcedure, checkerProcedure, makerProcedure, publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
 import { calculateRecommendedPlafon, calculateSSCI } from "./scoring";
@@ -100,6 +100,39 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+  }),
+
+  organization: router({
+    getSettings: protectedProcedure
+      .query(async ({ ctx }) => {
+        const organization = await db.getOrganizationById(ctx.user.organizationId);
+        if (!organization) throw new TRPCError({ code: "NOT_FOUND", message: "Organisasi tidak ditemukan" });
+        return organization;
+      }),
+    updateSettings: adminProcedure
+      .input(z.object({
+        name: z.string().trim().min(2).max(255).optional(),
+        legalName: z.string().trim().min(2).max(255).optional(),
+        address: z.string().trim().max(2000).nullable().optional(),
+        phone: z.string().trim().max(50).nullable().optional(),
+        email: z.string().trim().email().max(320).nullable().optional(),
+        logoUrl: z.string().trim().max(500).nullable().optional(),
+        primaryColor: z.string().trim().regex(/^#[0-9a-fA-F]{6}$/, "Warna harus format hex").optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        await db.updateOrganizationSettings(ctx.user.organizationId, input);
+        return { success: true };
+      }),
+    updateOperatorProfile: protectedProcedure
+      .input(z.object({
+        name: z.string().trim().min(2).max(255).optional(),
+        position: z.string().trim().max(100).nullable().optional(),
+        phone: z.string().trim().max(50).nullable().optional(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        await db.updateUserProfile(ctx.user.id, input);
+        return { success: true };
+      }),
   }),
 
   applications: router({
@@ -361,7 +394,8 @@ export const appRouter = router({
           throw new TRPCError({ code: "NOT_FOUND", message: "Assessment not found" });
         }
 
-        const htmlContent = generateAssessmentPDF({ application, assessment });
+        const organization = await db.getOrganizationById(ctx.user.organizationId);
+        const htmlContent = generateAssessmentPDF({ application, assessment, organization });
         await db.recordReportExport(ctx.user.id, application.id, ctx.user.organizationId);
         
         return {

@@ -1,8 +1,9 @@
-import type { Assessment, Application } from "../drizzle/schema";
+import type { Assessment, Application, Organization } from "../drizzle/schema";
 
 export interface PDFData {
   assessment: Assessment;
   application: Application;
+  organization?: Organization | null;
 }
 
 export function escapeHtml(value: unknown): string {
@@ -33,6 +34,11 @@ export function generateAssessmentPDF(data: PDFData): string {
     recommendationModel: escapeHtml(
       assessment.recommendationModel || "Fallback aturan"
     ),
+    orgName: escapeHtml(data.organization?.name || "SSCI BPRS"),
+    orgLegalName: escapeHtml(data.organization?.legalName || data.organization?.name || ""),
+    orgAddress: escapeHtml(data.organization?.address || ""),
+    orgPhone: escapeHtml(data.organization?.phone || ""),
+    orgEmail: escapeHtml(data.organization?.email || ""),
   };
   
   // Generate HTML content for PDF
@@ -223,9 +229,15 @@ export function generateAssessmentPDF(data: PDFData): string {
 </head>
 <body>
   <div class="header">
-    <h1>LAPORAN PENILAIAN KELAYAKAN PEMBIAYAAN SYARIAH</h1>
-    <p>Sustainable Sharia Creditworthiness Index (SSCI)</p>
-    <p>Tanggal: ${new Date(assessment.assessedAt).toLocaleDateString("id-ID", { 
+    <div style="font-size:20px;font-weight:bold;color:#2563eb;margin-bottom:4px;">${safe.orgName}</div>
+    ${safe.orgLegalName ? `<div style="font-size:14px;color:#666;margin-bottom:4px;">${safe.orgLegalName}</div>` : ""}
+    ${safe.orgAddress ? `<div style="font-size:12px;color:#666;">${safe.orgAddress}</div>` : ""}
+    ${safe.orgPhone ? `<div style="font-size:12px;color:#666;">Telp: ${safe.orgPhone}</div>` : ""}
+    <div style="margin-top:10px;padding-top:10px;border-top:1px solid #e5e7eb;">
+      <h1 style="font-size:18px;">LAPORAN PENILAIAN KELAYAKAN PEMBIAYAAN SYARIAH</h1>
+      <p style="font-size:13px;">Sustainable Sharia Creditworthiness Index (SSCI)</p>
+    </div>
+    <p style="font-size:12px;color:#666;">Tanggal: ${new Date(assessment.assessedAt).toLocaleDateString("id-ID", { 
       day: "numeric", 
       month: "long", 
       year: "numeric" 
