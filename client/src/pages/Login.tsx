@@ -3,8 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
-import { Loader2, ShieldCheck } from "lucide-react";
-import { useLocation } from "wouter";
+import { Loader2, ShieldCheck, X } from "lucide-react";
+import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 
 export default function Login() {
@@ -21,6 +21,13 @@ export default function Login() {
   return (
     <main className="min-h-screen bg-slate-950 px-4 py-12 flex items-center justify-center">
       <Card className="w-full max-w-md border-slate-700 shadow-2xl">
+        <div className="flex justify-end pt-3 pr-3">
+          <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:bg-white/10 hover:text-white" asChild>
+            <Link href="/" aria-label="Kembali ke beranda">
+              <X className="h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
         <CardHeader className="space-y-4">
           <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center">
             <ShieldCheck className="h-7 w-7 text-white" />
