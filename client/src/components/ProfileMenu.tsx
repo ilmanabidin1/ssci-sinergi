@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, CircleUserRound, LogOut, Settings2 } from "lucide-react";
+import { ChevronDown, CircleUserRound, LogOut, Settings2, Users, UsersRound } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
 export function ProfileMenu() {
@@ -42,6 +42,20 @@ export function ProfileMenu() {
             Pengaturan BPRS
           </Link>
         </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link to="/nasabah">
+            <Users className="mr-2 h-4 w-4" />
+            Nasabah
+          </Link>
+        </DropdownMenuItem>
+        {user?.role === "admin" && (
+          <DropdownMenuItem asChild>
+            <Link to="/tim">
+              <UsersRound className="mr-2 h-4 w-4" />
+              Kelola tim
+            </Link>
+          </DropdownMenuItem>
+        )}
         <DropdownMenuSeparator />
         <DropdownMenuItem
           onSelect={async () => {

@@ -21,6 +21,17 @@ import {
 import { useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 type Status = "all" | "pending" | "assessed" | "approved" | "rejected" | "cancelled";
 
@@ -47,6 +58,8 @@ export default function Dashboard() {
   const [status, setStatus] = useState<Status>("all");
   const queueQuery = trpc.applications.queue.useQuery(status === "all" ? undefined : { status });
   const statsQuery = trpc.applications.operationalStats.useQuery();
+  const trendQuery = trpc.applications.dashboardTrend.useQuery();
+  const analystQuery = trpc.applications.analystPerformance.useQuery();
   const orgQuery = trpc.organization.getSettings.useQuery();
   const orgName = orgQuery.data?.name;
   const orgLogo = orgQuery.data?.logoUrl;
@@ -57,6 +70,8 @@ export default function Dashboard() {
   const refresh = () => {
     void queueQuery.refetch();
     void statsQuery.refetch();
+    void trendQuery.refetch();
+    void analystQuery.refetch();
   };
   const utils = trpc.useUtils();
   const deleteAssessment = trpc.assessments.delete.useMutation({
@@ -233,6 +248,76 @@ export default function Dashboard() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </section>
+
+        {/* Analytics charts */}
+        <section className="mt-8">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">Analitik</h2>
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <Card className="border-0 shadow-sm">
+              <CardHeader>
+                <CardTitle>Trend skor 6 bulan</CardTitle>
+                <p className="text-sm text-slate-500">Rata-rata skor penilaian per bulan.</p>
+              </CardHeader>
+              <CardContent>
+                {trendQuery.isLoading ? (
+                  <div className="flex items-center justify-center gap-2 py-24 text-slate-500">
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Memuat tren...
+                  </div>
+                ) : (trendQuery.data ?? []).length === 0 ? (
+                  <p className="py-24 text-center text-slate-500">Belum ada data tren.</p>
+                ) : (
+                  <ResponsiveContainer width="100%" height={280}>
+                    <LineChart data={trendQuery.data ?? []} margin={{ top: 10, right: 16, left: -16, bottom: 0 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                      <XAxis dataKey="month" tick={{ fontSize: 12 }} tickFormatter={(m) => m.slice(5)} />
+                      <YAxis tick={{ fontSize: 12 }} domain={[0, 100]} />
+                      <Tooltip
+                        formatter={(value, _name, props) => [
+                          `${Number(value).toFixed(1)} skor (${props.payload.count} penilaian)`,
+                          "Rata-rata",
+                        ]}
+                      />
+                      <Line type="monotone" dataKey="averageScore" stroke="#7c3aed" strokeWidth={2} dot={{ r: 3 }} />
+                    </LineChart>
+                  </ResponsiveContainer>
+                )}
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-sm">
+              <CardHeader>
+                <CardTitle>Performa analis</CardTitle>
+                <p className="text-sm text-slate-500">Jumlah dan rata-rata skor per analis.</p>
+              </CardHeader>
+              <CardContent>
+                {analystQuery.isLoading ? (
+                  <div className="flex items-center justify-center gap-2 py-24 text-slate-500">
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Memuat performa analis...
+                  </div>
+                ) : (analystQuery.data ?? []).length === 0 ? (
+                  <p className="py-24 text-center text-slate-500">Belum ada data analis.</p>
+                ) : (
+                  <ResponsiveContainer width="100%" height={280}>
+                    <BarChart data={analystQuery.data ?? []} margin={{ top: 10, right: 16, left: -16, bottom: 0 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                      <XAxis dataKey="name" tick={{ fontSize: 12 }} />
+                      <YAxis tick={{ fontSize: 12 }} allowDecimals={false} />
+                      <Tooltip
+                        formatter={(value, _name, props) => [
+                          `${value} penilaian (rata-rata ${Number(props.payload.averageScore).toFixed(1)})`,
+                          "Jumlah",
+                        ]}
+                      />
+                      <Bar dataKey="count" fill="#0ea5e9" radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                )}
+              </CardContent>
+            </Card>
           </div>
         </section>
 

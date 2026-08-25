@@ -154,6 +154,56 @@ export const appRouter = router({
         await db.updateUserProfile(ctx.user.id, input);
         return { success: true };
       }),
+    createUser: adminProcedure
+      .input(z.object({
+        name: z.string().trim().min(2).max(255),
+        email: z.string().trim().email().max(320),
+        password: z.string().min(6).max(200),
+        position: z.string().trim().max(100).optional(),
+        phone: z.string().trim().max(50).optional(),
+        role: z.enum(["maker", "checker"]),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const email = input.email.toLowerCase();
+        const existing = await db.getUserByEmail(email);
+        if (existing) {
+          throw new TRPCError({ code: "CONFLICT", message: "Email sudah terdaftar" });
+        }
+        try {
+          await db.createTeamUser({
+            organizationId: ctx.user.organizationId,
+            name: input.name.trim(),
+            email,
+            position: input.position,
+            phone: input.phone,
+            passwordHash: await hashPassword(input.password),
+            role: input.role,
+          });
+        } catch (error) {
+          if (error instanceof Error && /duplicate|unique/i.test(error.message)) {
+            throw new TRPCError({ code: "CONFLICT", message: "Email sudah terdaftar" });
+          }
+          throw error;
+        }
+        return { success: true };
+      }),
+    listUsers: adminProcedure
+      .query(async ({ ctx }) => {
+        const users = await db.listOrganizationUsers(ctx.user.organizationId);
+        return users.map(({ passwordHash: _passwordHash, ...safeUser }) => safeUser);
+      }),
+    setUserActive: adminProcedure
+      .input(z.object({
+        userId: z.number().int().positive(),
+        active: z.boolean(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        if (input.userId === ctx.user.id) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Tidak dapat menonaktifkan akun sendiri" });
+        }
+        await db.setUserActive(ctx.user.organizationId, input.userId, input.active);
+        return { success: true };
+      }),
   }),
 
   applications: router({
@@ -264,6 +314,17 @@ export const appRouter = router({
     operationalStats: protectedProcedure
       .query(({ ctx }) => db.getOperationalStats(ctx.user.organizationId)),
 
+    customerMaster: protectedProcedure
+      .input(z.object({ search: z.string().trim().max(200).optional() }).optional())
+      .query(({ input, ctx }) => db.listCustomerMaster(ctx.user.organizationId, input?.search)),
+
+    dashboardTrend: protectedProcedure
+      .query(({ ctx }) => db.getDashboardTrend(ctx.user.organizationId)),
+
+    analystPerformance: protectedProcedure
+      .query(({ ctx }) => db.getAnalystPerformance(ctx.user.organizationId)),
+
+
     assess: makerProcedure
       .input(z.object({
         applicationId: z.number(),
@@ -363,6 +424,37 @@ export const appRouter = router({
           checkerId: ctx.user.id,
         });
         return { success: true };
+      }),
+
+    addComment: makerProcedure
+      .input(z.object({
+        applicationId: z.number().int().positive(),
+        content: z.string().trim().min(1).max(2000),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
+        if (!application) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+        }
+        const id = await db.addApplicationComment({
+          organizationId: ctx.user.organizationId,
+          applicationId: input.applicationId,
+          authorUserId: ctx.user.id,
+          content: input.content,
+        });
+        return { id };
+      }),
+
+    listComments: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        return db.listApplicationComments(ctx.user.organizationId, input.applicationId);
+      }),
+
+    listActivity: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        return db.listApplicationActivity(ctx.user.organizationId, input.applicationId);
       }),
   }),
 

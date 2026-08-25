@@ -1,6 +1,6 @@
-import { eq, desc, and, gte, lte, like, or, sql } from "drizzle-orm";
+import { eq, desc, asc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, InsertApplication, InsertAssessment, InsertDocumentFile } from "../drizzle/schema";
+import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, InsertApplication, InsertAssessment, InsertDocumentFile } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -624,6 +624,164 @@ export async function getAssessmentStats(organizationId: number) {
   return stats;
 }
 
+export async function listCustomerMaster(organizationId: number, search?: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const conditions = [eq(applications.organizationId, organizationId)];
+  const trimmed = search?.trim();
+  if (trimmed) {
+    const term = `%${trimmed}%`;
+    conditions.push(
+      or(
+        like(applications.customerName, term),
+        like(applications.customerId, term),
+        like(applications.businessName, term),
+      )!
+    );
+  }
+
+  const rows = await db.select().from(applications).where(and(...conditions));
+  if (rows.length === 0) return [];
+
+  const applicationIds = rows.map(app => app.id);
+  const assessmentRows = await db.select().from(assessments)
+    .where(and(
+      eq(assessments.organizationId, organizationId),
+      sql`${assessments.applicationId} IN (${sql.join(applicationIds.map(id => sql`${id}`), sql`, `)})`,
+    ))
+    .orderBy(desc(assessments.assessedAt));
+
+  const latestAssessments = new Map<number, typeof assessmentRows[number]>();
+  for (const assessment of assessmentRows) {
+    if (!latestAssessments.has(assessment.applicationId)) {
+      latestAssessments.set(assessment.applicationId, assessment);
+    }
+  }
+
+  const byCustomer = new Map<string, {
+    customerName: string;
+    customerId: string;
+    businessName: string;
+    totalApplications: number;
+    statuses: Record<string, number>;
+    lastApplicationDate: Date;
+    latestAssessmentDate: Date | null;
+    latestAssessmentScore: number | null;
+  }>();
+
+  for (const app of rows) {
+    let entry = byCustomer.get(app.customerId);
+    if (!entry) {
+      entry = {
+        customerName: app.customerName,
+        customerId: app.customerId,
+        businessName: app.businessName,
+        totalApplications: 0,
+        statuses: {},
+        lastApplicationDate: app.createdAt,
+        latestAssessmentDate: null,
+        latestAssessmentScore: null,
+      };
+      byCustomer.set(app.customerId, entry);
+    }
+    entry.totalApplications++;
+    entry.statuses[app.status] = (entry.statuses[app.status] ?? 0) + 1;
+    if (app.createdAt > entry.lastApplicationDate) {
+      entry.lastApplicationDate = app.createdAt;
+    }
+    const assessment = latestAssessments.get(app.id);
+    if (assessment) {
+      const assessedAt = new Date(assessment.assessedAt);
+      if (entry.latestAssessmentDate === null || assessedAt > entry.latestAssessmentDate) {
+        entry.latestAssessmentDate = assessedAt;
+        entry.latestAssessmentScore = Number(assessment.totalScore);
+      }
+    }
+  }
+
+  return Array.from(byCustomer.values())
+    .sort((a, b) => b.lastApplicationDate.getTime() - a.lastApplicationDate.getTime())
+    .slice(0, 100)
+    .map(entry => ({
+      customerName: entry.customerName,
+      customerId: entry.customerId,
+      businessName: entry.businessName,
+      totalApplications: entry.totalApplications,
+      statuses: entry.statuses,
+      latestAssessmentScore: entry.latestAssessmentScore,
+      lastApplicationDate: entry.lastApplicationDate.toISOString(),
+    }));
+}
+
+export async function getDashboardTrend(organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const assessmentRows = await db.select().from(assessments)
+    .where(eq(assessments.organizationId, organizationId));
+
+  const now = new Date();
+  const months: string[] = [];
+  for (let i = 5; i >= 0; i--) {
+    const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    months.push(`${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`);
+  }
+  const monthSet = new Set(months);
+  const buckets = new Map<string, { sum: number; count: number }>();
+  for (const month of months) buckets.set(month, { sum: 0, count: 0 });
+
+  for (const assessment of assessmentRows) {
+    const date = new Date(assessment.assessedAt);
+    const month = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+    if (!monthSet.has(month)) continue;
+    const bucket = buckets.get(month)!;
+    bucket.sum += Number(assessment.totalScore);
+    bucket.count++;
+  }
+
+  return months.map(month => {
+    const bucket = buckets.get(month)!;
+    return {
+      month,
+      averageScore: bucket.count > 0 ? bucket.sum / bucket.count : 0,
+      count: bucket.count,
+    };
+  });
+}
+
+export async function getAnalystPerformance(organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const assessmentRows = await db.select().from(assessments)
+    .where(eq(assessments.organizationId, organizationId));
+  const userRows = await db.select().from(users)
+    .where(eq(users.organizationId, organizationId));
+
+  const userMap = new Map<number, typeof userRows[number]>();
+  for (const user of userRows) userMap.set(user.id, user);
+
+  const buckets = new Map<number, { sum: number; count: number }>();
+  for (const assessment of assessmentRows) {
+    if (assessment.assessedBy == null) continue;
+    let bucket = buckets.get(assessment.assessedBy);
+    if (!bucket) {
+      bucket = { sum: 0, count: 0 };
+      buckets.set(assessment.assessedBy, bucket);
+    }
+    bucket.sum += Number(assessment.totalScore);
+    bucket.count++;
+  }
+
+  return Array.from(buckets.entries()).map(([userId, bucket]) => ({
+    userId,
+    name: userMap.get(userId)?.name ?? "Unknown",
+    count: bucket.count,
+    averageScore: bucket.count > 0 ? bucket.sum / bucket.count : 0,
+  }));
+}
+
 export async function createDocumentFile(data: InsertDocumentFile & { organizationId: number }) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
@@ -693,4 +851,82 @@ export async function updateDocumentVerification(input: { id: number; organizati
   if (!db) throw new Error("Database not available");
   const result = await db.update(documentFiles).set({ status: input.status, verifiedBy: input.verifiedBy, verifiedAt: new Date(), rejectionReason: input.status === "rejected" ? input.rejectionReason : null, updatedAt: new Date() }).where(and(eq(documentFiles.id, input.id), eq(documentFiles.organizationId, input.organizationId)));
   return result[0].affectedRows === 1;
+}
+
+// User/team management
+export async function createTeamUser(input: {
+  organizationId: number;
+  name: string;
+  email: string;
+  position?: string | null;
+  phone?: string | null;
+  passwordHash: string;
+  role: "maker" | "checker";
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(users).values({
+    openId: `local:${input.email}`,
+    email: input.email,
+    name: input.name,
+    position: input.position ?? null,
+    phone: input.phone ?? null,
+    passwordHash: input.passwordHash,
+    loginMethod: "password",
+    role: input.role,
+    organizationId: input.organizationId,
+    active: 1,
+  });
+  return Number(result[0].insertId);
+}
+
+export async function listOrganizationUsers(organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(users)
+    .where(eq(users.organizationId, organizationId))
+    .orderBy(desc(users.id));
+}
+
+export async function setUserActive(organizationId: number, userId: number, active: boolean) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(users)
+    .set({ active: active ? 1 : 0, updatedAt: new Date() })
+    .where(and(eq(users.id, userId), eq(users.organizationId, organizationId)));
+}
+
+// Application comments / timeline
+export async function addApplicationComment(input: {
+  organizationId: number;
+  applicationId: number;
+  authorUserId: number;
+  content: string;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(applicationComments).values(input);
+  return Number(result[0].insertId);
+}
+
+export async function listApplicationComments(organizationId: number, applicationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(applicationComments)
+    .where(and(
+      eq(applicationComments.organizationId, organizationId),
+      eq(applicationComments.applicationId, applicationId)
+    ))
+    .orderBy(asc(applicationComments.createdAt));
+}
+
+export async function listApplicationActivity(organizationId: number, applicationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(auditLogs)
+    .where(and(
+      eq(auditLogs.organizationId, organizationId),
+      eq(auditLogs.entityId, applicationId)
+    ))
+    .orderBy(desc(auditLogs.createdAt));
 }

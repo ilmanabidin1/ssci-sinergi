@@ -7,6 +7,7 @@ import { trpc } from "@/lib/trpc";
 import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { toast } from "sonner";
+import { useState } from "react";
 
 export default function ApplicationDetail() {
   const { id } = useParams<{ id: string }>();
@@ -28,6 +29,36 @@ export default function ApplicationDetail() {
     { applicationId },
     { enabled: !!applicationId }
   );
+
+  const commentsQuery = trpc.applications.listComments.useQuery(
+    { applicationId },
+    { enabled: !!applicationId }
+  );
+
+  const activityQuery = trpc.applications.listActivity.useQuery(
+    { applicationId },
+    { enabled: !!applicationId }
+  );
+
+  const [commentText, setCommentText] = useState("");
+
+  const addCommentMutation = trpc.applications.addComment.useMutation({
+    onSuccess: async () => {
+      setCommentText("");
+      await commentsQuery.refetch();
+      toast.success("Catatan berhasil ditambahkan");
+    },
+    onError: error => toast.error(`Gagal menambahkan catatan: ${error.message}`),
+  });
+
+  const handleAddComment = () => {
+    const content = commentText.trim();
+    if (!content) {
+      toast.error("Catatan tidak boleh kosong");
+      return;
+    }
+    addCommentMutation.mutate({ applicationId, content });
+  };
 
   const uploadMutation = trpc.documents.uploadDocument.useMutation({
     onSuccess: async () => {
@@ -444,6 +475,85 @@ export default function ApplicationDetail() {
             </CardHeader>
             <CardContent>
               <p className="text-sm">{application.loanPurpose}</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card className="md:col-span-2">
+            <CardHeader>
+              <CardTitle>Aktivitas & Catatan</CardTitle>
+              <CardDescription>Catatan kolaborasi dan riwayat aktivitas pengajuan.</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div>
+                <h3 className="mb-3 text-sm font-semibold text-slate-600">Catatan</h3>
+                <textarea
+                  className="w-full rounded-lg border p-3 text-sm"
+                  rows={3}
+                  placeholder="Tulis catatan atau komentar..."
+                  value={commentText}
+                  onChange={event => setCommentText(event.target.value)}
+                />
+                <div className="mt-2 flex justify-end">
+                  <Button
+                    onClick={handleAddComment}
+                    disabled={addCommentMutation.isPending || !commentText.trim()}
+                  >
+                    {addCommentMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                    Tambah Catatan
+                  </Button>
+                </div>
+              </div>
+
+              {commentsQuery.isLoading ? (
+                <div className="flex items-center gap-2 py-6 text-sm text-gray-500">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Memuat catatan...
+                </div>
+              ) : (commentsQuery.data ?? []).length === 0 ? (
+                <p className="py-4 text-sm text-gray-500">Belum ada catatan.</p>
+              ) : (
+                <ul className="space-y-3">
+                  {(commentsQuery.data ?? []).map(comment => (
+                    <li key={comment.id} className="rounded-lg border p-3">
+                      <div className="flex items-center justify-between gap-2 text-xs text-gray-500">
+                        <span className="font-semibold text-slate-700">User #{comment.authorUserId}</span>
+                        <span>{new Date(comment.createdAt).toLocaleString("id-ID")}</span>
+                      </div>
+                      <p className="mt-1 whitespace-pre-wrap text-sm text-gray-700">{comment.content}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </CardContent>
+          </Card>
+
+          <Card className="md:col-span-2">
+            <CardHeader>
+              <CardTitle>Aktivitas</CardTitle>
+              <CardDescription>Riwayat tindakan pada pengajuan ini.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              {activityQuery.isLoading ? (
+                <div className="flex items-center gap-2 py-6 text-sm text-gray-500">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Memuat aktivitas...
+                </div>
+              ) : (activityQuery.data ?? []).length === 0 ? (
+                <p className="py-4 text-sm text-gray-500">Belum ada aktivitas.</p>
+              ) : (
+                <ul className="space-y-2">
+                  {(activityQuery.data ?? []).map(activity => (
+                    <li key={activity.id} className="flex items-center justify-between gap-2 border-b py-2 text-sm last:border-b-0">
+                      <span className="text-gray-700">{activity.action}</span>
+                      <span className="whitespace-nowrap text-xs text-gray-500">
+                        {new Date(activity.createdAt).toLocaleString("id-ID")}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </CardContent>
           </Card>
         </div>

@@ -29,6 +29,7 @@ export const users = mysqlTable("users", {
   organizationId: int("organizationId").default(1).notNull(),
   position: varchar("position", { length: 100 }),
   phone: varchar("phone", { length: 50 }),
+  active: int("active").default(1).notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
@@ -206,3 +207,15 @@ export const documentFiles = mysqlTable("documentFiles", {
 
 export type DocumentFile = typeof documentFiles.$inferSelect;
 export type InsertDocumentFile = typeof documentFiles.$inferInsert;
+
+export const applicationComments = mysqlTable("applicationComments", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").notNull(),
+  applicationId: int("applicationId").notNull(),
+  authorUserId: int("authorUserId").notNull(),
+  content: text("content").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type ApplicationComment = typeof applicationComments.$inferSelect;
+export type InsertApplicationComment = typeof applicationComments.$inferInsert;

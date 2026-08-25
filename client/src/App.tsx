@@ -13,6 +13,8 @@ import AboutSSCI from "./pages/AboutSSCI";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Settings from "./pages/Settings";
+import Team from "./pages/Team";
+import Customers from "./pages/Customers";
 
 function Router() {
   return (
@@ -26,6 +28,8 @@ function Router() {
       <Route path={"/login"} component={Login} />
       <Route path={"/register"} component={Register} />
       <Route path={"/pengaturan"} component={Settings} />
+      <Route path={"/tim"} component={Team} />
+      <Route path={"/nasabah"} component={Customers} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
