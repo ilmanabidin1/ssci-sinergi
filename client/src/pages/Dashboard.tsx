@@ -14,11 +14,13 @@ import {
   Loader2,
   RefreshCw,
   Shield,
+  Trash2,
   TrendingUp,
   XCircle,
 } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
+import { toast } from "sonner";
 
 type Status = "all" | "pending" | "assessed" | "approved" | "rejected" | "cancelled";
 
@@ -55,6 +57,22 @@ export default function Dashboard() {
   const refresh = () => {
     void queueQuery.refetch();
     void statsQuery.refetch();
+  };
+  const utils = trpc.useUtils();
+  const deleteAssessment = trpc.assessments.delete.useMutation({
+    onSuccess: async () => {
+      await utils.applications.queue.invalidate();
+      await utils.applications.operationalStats.invalidate();
+      toast.success("Penilaian berhasil dihapus. Pengajuan kembali ke menunggu penilaian.");
+    },
+    onError: error => toast.error(`Gagal menghapus penilaian: ${error.message}`),
+  });
+
+  const handleDeleteAssessment = (item: { id: number; customerName: string }) => {
+    if (!window.confirm(`Hapus penilaian untuk "${item.customerName}"? Pengajuan akan kembali ke status menunggu penilaian.`)) {
+      return;
+    }
+    deleteAssessment.mutate({ applicationId: item.id });
   };
 
   const statusCards = [
@@ -285,9 +303,22 @@ export default function Dashboard() {
                             {new Date(item.createdAt).toLocaleDateString("id-ID")}
                           </td>
                           <td className="px-6 py-4">
-                            <Button asChild size="sm" variant="outline">
-                              <Link to={`/applications/${item.id}`}>Detail</Link>
-                            </Button>
+                            <div className="flex items-center justify-end gap-1">
+                              <Button asChild size="sm" variant="outline">
+                                <Link to={`/applications/${item.id}`}>Detail</Link>
+                              </Button>
+                              {item.latestAssessmentScore !== null && (
+                                <Button
+                                  size="icon"
+                                  variant="ghost"
+                                  className="h-8 w-8 text-slate-400 hover:text-red-600"
+                                  title="Hapus penilaian"
+                                  onClick={() => handleDeleteAssessment(item)}
+                                >
+                                  <Trash2 className="h-4 w-4" />
+                                </Button>
+                              )}
+                            </div>
                           </td>
                         </tr>
                       ))}

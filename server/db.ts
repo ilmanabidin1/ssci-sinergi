@@ -463,6 +463,55 @@ export async function getAssessmentByApplicationId(applicationId: number, organi
   return result[0];
 }
 
+export async function deleteAssessment(applicationId: number, organizationId: number, actorUserId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  return db.transaction(async tx => {
+    const application = await tx
+      .select()
+      .from(applications)
+      .where(and(
+        eq(applications.id, applicationId),
+        eq(applications.organizationId, organizationId)
+      ))
+      .limit(1);
+    if (!application[0]) {
+      throw new Error("Pengajuan tidak ditemukan");
+    }
+    if (application[0].status !== "assessed") {
+      throw new Error("Penilaian hanya dapat dihapus saat pengajuan menunggu keputusan");
+    }
+
+    const deleteResult = await tx
+      .delete(assessments)
+      .where(and(
+        eq(assessments.applicationId, applicationId),
+        eq(assessments.organizationId, organizationId)
+      ));
+    if (!deleteResult[0].affectedRows) {
+      throw new Error("Penilaian tidak ditemukan");
+    }
+
+    await tx
+      .update(applications)
+      .set({ status: "pending", updatedAt: new Date() })
+      .where(and(
+        eq(applications.id, applicationId),
+        eq(applications.organizationId, organizationId)
+      ));
+    await tx.insert(auditLogs).values({
+      organizationId,
+      actorUserId,
+      action: "ASSESSMENT_DELETED",
+      entityType: "assessment",
+      entityId: applicationId,
+      metadata: { applicationId },
+    });
+    return { success: true };
+  });
+}
+
 export async function getAllAssessments(organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
