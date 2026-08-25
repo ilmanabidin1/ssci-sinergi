@@ -78,14 +78,25 @@ export const applications = mysqlTable("applications", {
   businessShariaCompliant: mysqlEnum("businessShariaCompliant", ["yes", "no", "partial"]).notNull(),
   shariaComplianceNotes: text("shariaComplianceNotes"),
   
-  // Murabahah Akad Checklist (DSN-MUI Fatwa compliance)
-  murabahahSupplierName: mysqlEnum("murabahahSupplierName", ["yes", "no", "tidak_relevan"]),
-  murabahahObject: mysqlEnum("murabahahObject", ["yes", "no", "tidak_relevan"]),
-  murabahahPriceKnown: mysqlEnum("murabahahPriceKnown", ["yes", "no", "tidak_relevan"]),
-  murabahahMarginDisclosed: mysqlEnum("murabahahMarginDisclosed", ["yes", "no", "tidak_relevan"]),
-  murabahahDownPayment: mysqlEnum("murabahahDownPayment", ["yes", "no", "tidak_relevan"]),
-  murabahahWakalah: mysqlEnum("murabahahWakalah", ["yes", "no", "tidak_relevan"]),
-  murabahahDpsReviewed: mysqlEnum("murabahahDpsReviewed", ["yes", "no", "tidak_relevan"]),
+  // Murabahah Akad Checklist (OJK Pedoman Produk Murabahah & DSN-MUI compliance)
+  murabahahType: mysqlEnum("murabahahType", ["standard", "ultra_mikro", "personal"]),
+  murabahahSupplierName: varchar("murabahahSupplierName", { length: 255 }),
+  murabahahObject: varchar("murabahahObject", { length: 255 }),
+  murabahahPriceKnown: mysqlEnum("murabahahPriceKnown", ["yes", "no"]),
+  murabahahMarginDisclosed: mysqlEnum("murabahahMarginDisclosed", ["yes", "no"]),
+  murabahahDownPayment: mysqlEnum("murabahahDownPayment", ["yes", "no"]),
+  murabahahWakalah: mysqlEnum("murabahahWakalah", ["yes", "no"]),
+  murabahahDpsReviewed: mysqlEnum("murabahahDpsReviewed", ["yes", "no"]),
+  murabahahAcquisitionPrice: decimal("murabahahAcquisitionPrice", { precision: 15, scale: 2 }),
+  murabahahDirectCost: decimal("murabahahDirectCost", { precision: 15, scale: 2 }),
+  murabahahSupplierDiscount: decimal("murabahahSupplierDiscount", { precision: 15, scale: 2 }),
+  murabahahDownPaymentAmount: decimal("murabahahDownPaymentAmount", { precision: 15, scale: 2 }),
+  murabahahMarginAmount: decimal("murabahahMarginAmount", { precision: 15, scale: 2 }),
+  murabahahInvoiceNumber: varchar("murabahahInvoiceNumber", { length: 100 }),
+  murabahahWakalahConfirmedAt: timestamp("murabahahWakalahConfirmedAt"),
+  murabahahQabdhVerifiedAt: timestamp("murabahahQabdhVerifiedAt"),
+  murabahahSignedAt: timestamp("murabahahSignedAt"),
+  murabahahTaazirToWelfare: mysqlEnum("murabahahTaazirToWelfare", ["yes", "no"]).default("yes"),
   murabahahNotes: text("murabahahNotes"),
   
   // Sustainability Indicators

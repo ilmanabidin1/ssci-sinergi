@@ -25,7 +25,7 @@ type ExtractKtpMutation = {
     onError: (error: { message: string }) => void;
   }) => { isPending: boolean; mutate: (input: { imageBase64: string; contentType: "image/jpeg" | "image/png" }) => void };
 };
-const initial: Values = { customerName: "", customerId: "", businessName: "", businessType: "", businessAge: "", address: "", phone: "", email: "", monthlyRevenue: "", monthlyExpenses: "", existingDebt: "", collateralValue: "", requestedAmount: "", financingTenor: "", marginRate: "", loanPurpose: "", businessShariaCompliant: "", shariaComplianceNotes: "", murabahahSupplierName: "", murabahahObject: "", murabahahPriceKnown: "", murabahahMarginDisclosed: "", murabahahDownPayment: "", murabahahWakalah: "", murabahahDpsReviewed: "", murabahahNotes: "", environmentalPractices: "", socialImpact: "", governanceQuality: "", legalDocuments: [{ type: "KTP", status: "pending", notes: "" }, { type: "NPWP", status: "pending", notes: "" }, { type: "NIB", status: "pending", notes: "" }] };
+const initial: Values = { customerName: "", customerId: "", businessName: "", businessType: "", businessAge: "", address: "", phone: "", email: "", monthlyRevenue: "", monthlyExpenses: "", existingDebt: "", collateralValue: "", requestedAmount: "", financingTenor: "", marginRate: "", loanPurpose: "", businessShariaCompliant: "", shariaComplianceNotes: "", murabahahType: "", murabahahSupplierName: "", murabahahObject: "", murabahahPriceKnown: "", murabahahMarginDisclosed: "", murabahahDownPayment: "", murabahahWakalah: "", murabahahDpsReviewed: "", murabahahAcquisitionPrice: "", murabahahDirectCost: "", murabahahSupplierDiscount: "", murabahahDownPaymentAmount: "", murabahahWakalahConfirmedAt: "", murabahahInvoiceNumber: "", murabahahQabdhVerifiedAt: "", murabahahSignedAt: "", murabahahTaazirToWelfare: "yes", murabahahNotes: "", environmentalPractices: "", socialImpact: "", governanceQuality: "", legalDocuments: [{ type: "KTP", status: "pending", notes: "" }, { type: "NPWP", status: "pending", notes: "" }, { type: "NIB", status: "pending", notes: "" }] };
 
 const demoFirstNames = ["Andi", "Budi", "Citra", "Dewi", "Eko", "Fitri", "Gunawan", "Hendra", "Indah", "Joko", "Kartika", "Lestari", "Mulyadi", "Nurhayati", "Rahmat", "Siti", "Teguh", "Wulan", "Yudi", "Zainal"];
 const demoLastNames = ["Pratama", "Wijaya", "Santoso", "Kurniawan", "Hidayat", "Nugroho", "Saputra", "Maulana", "Rahmawati", "Suryani", "Firmansyah", "Wibowo", "Hakim", "Ramadhani", "Setiawan", "Anggraini", "Prasetyo", "Utami", "Susanti", "Lestari"];
@@ -83,13 +83,29 @@ const demoBusiness = (): Partial<Values> => {
     loanPurpose: pick(demoLoanPurposes),
   };
 };
-const murabahahOptions = (): string => pick(["yes", "yes", "no", "tidak_relevan", "tidak_relevan"]);
-const demoMurabahah = (): Partial<Values> => ({
-  murabahahSupplierName: murabahahOptions(), murabahahObject: murabahahOptions(), murabahahPriceKnown: murabahahOptions(),
-  murabahahMarginDisclosed: murabahahOptions(), murabahahDownPayment: murabahahOptions(), murabahahWakalah: murabahahOptions(),
-  murabahahDpsReviewed: murabahahOptions(),
-  murabahahNotes: pick(["Pengadaan telah disetujui oleh DPS.", "Pemasok telah diidentifikasi dan margin telah dihitung."]),
-});
+const demoMurabahah = (): Partial<Values> => {
+  const type = pick(["standard", "standard", "ultra_mikro", "personal"] as const);
+  const price = roundTo(randInt(10, 50) * 1000000, 100000);
+  return {
+    murabahahType: type,
+    murabahahSupplierName: pick(["PT Sinar Niaga Sejahtera", "UD Berkah Abadi", "PT Maju Bersama"]),
+    murabahahObject: pick(["Stok sembako dan kebutuhan pokok", "Mesin jahit dan peralatan konveksi", "Barang dagangan elektronik"]),
+    murabahahPriceKnown: "yes",
+    murabahahMarginDisclosed: "yes",
+    murabahahDpsReviewed: "yes",
+    murabahahAcquisitionPrice: String(price),
+    murabahahDirectCost: String(roundTo(price * randInt(2, 8) / 100, 10000)),
+    murabahahSupplierDiscount: String(roundTo(price * randInt(3, 10) / 100, 10000)),
+    murabahahDownPaymentAmount: String(roundTo(price * randInt(10, 25) / 100, 10000)),
+    murabahahWakalah: type === "personal" ? "no" : "yes",
+    murabahahWakalahConfirmedAt: "2026-01-15",
+    murabahahInvoiceNumber: `INV-${randInt(1000, 9999)}`,
+    murabahahQabdhVerifiedAt: "2026-01-20",
+    murabahahSignedAt: "2026-01-25",
+    murabahahTaazirToWelfare: "yes",
+    murabahahNotes: pick(["Pengadaan telah disetujui oleh DPS.", "Pemasok telah diidentifikasi dan margin telah dihitung."]),
+  };
+};
 const demoLegal = (): Partial<Values> => ({
   legalDocuments: initial.legalDocuments.map(doc => ({ ...doc, status: pick(["complete", "verified", "verified"]) as Document["status"] })),
   businessShariaCompliant: pick(["yes", "yes", "partial"]) as "yes" | "partial",
@@ -187,6 +203,19 @@ export default function NewApplication() {
   const historyQuery = trpc.applications.searchCustomerHistory.useQuery(
     { query: debouncedQuery },
     { enabled: debouncedQuery.length > 0, staleTime: 30_000 }
+  );
+
+  const hasMurabahahNumbers = ["murabahahAcquisitionPrice", "murabahahDirectCost", "murabahahSupplierDiscount", "murabahahDownPaymentAmount"].some(key => String(values[key] || "") !== "");
+  const murabahahPreviewQuery = trpc.applications.murabahahPreview.useQuery(
+    {
+      requestedAmount: String(values.requestedAmount || ""),
+      acquisitionPrice: String(values.murabahahAcquisitionPrice || "") || null,
+      directCost: String(values.murabahahDirectCost || "") || null,
+      supplierDiscount: String(values.murabahahSupplierDiscount || "") || null,
+      downPaymentAmount: String(values.murabahahDownPaymentAmount || "") || null,
+      marginRate: String(values.marginRate || "") || null,
+    },
+    { enabled: Boolean(values.requestedAmount) && hasMurabahahNumbers, staleTime: 30_000 }
   );
 
   useEffect(() => {
@@ -291,10 +320,54 @@ export default function NewApplication() {
   };
   const required: Record<number, string[]> = { 0: ["customerName", "customerId", "phone", "address"], 1: ["businessName", "businessType", "businessAge", "monthlyRevenue", "monthlyExpenses", "existingDebt", "collateralValue", "requestedAmount", "financingTenor", "marginRate", "loanPurpose"], 2: [], 3: ["businessShariaCompliant"], 4: ["governanceQuality"] };
   const next = () => { const missing = required[step].filter(key => !String(values[key] || "").trim()); if (missing.length) { toast.error("Lengkapi semua kolom wajib sebelum melanjutkan"); document.getElementById(missing[0])?.focus(); return; } setStep(s => s + 1); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const submit = (e: React.FormEvent) => { e.preventDefault(); const missing = required[4].filter(key => !values[key]?.trim()); if (missing.length) return; createMutation.mutate({ customerName: values.customerName, customerId: values.customerId, businessName: values.businessName, businessType: values.businessType, businessAge: parseInt(values.businessAge), address: values.address, phone: values.phone, email: values.email || undefined, monthlyRevenue: values.monthlyRevenue, monthlyExpenses: values.monthlyExpenses, existingDebt: values.existingDebt, collateralValue: values.collateralValue, requestedAmount: values.requestedAmount, financingTenor: parseInt(values.financingTenor), marginRate: parseFloat(values.marginRate), loanPurpose: values.loanPurpose, legalDocuments: values.legalDocuments, businessShariaCompliant: values.businessShariaCompliant as "yes" | "no" | "partial", shariaComplianceNotes: values.shariaComplianceNotes || undefined, murabahahSupplierName: values.murabahahSupplierName || undefined, murabahahObject: values.murabahahObject || undefined, murabahahPriceKnown: values.murabahahPriceKnown || undefined, murabahahMarginDisclosed: values.murabahahMarginDisclosed || undefined, murabahahDownPayment: values.murabahahDownPayment || undefined, murabahahWakalah: values.murabahahWakalah || undefined, murabahahDpsReviewed: values.murabahahDpsReviewed || undefined, murabahahNotes: values.murabahahNotes || undefined, environmentalPractices: values.environmentalPractices || undefined, socialImpact: values.socialImpact || undefined, governanceQuality: values.governanceQuality as "excellent" | "good" | "fair" | "poor" }); };
-  const murabahahField = (name: string, label: string) => <div className="space-y-2"><Label htmlFor={name}>{label}</Label><Select value={values[name]} onValueChange={value => setValues(v => ({ ...v, [name]: value }))}><SelectTrigger id={name}><SelectValue placeholder="Pilih" /></SelectTrigger><SelectContent><SelectItem value="yes">Ya</SelectItem><SelectItem value="no">Tidak</SelectItem><SelectItem value="tidak_relevan">Tidak Relevan</SelectItem></SelectContent></Select></div>;
-  const murabahahInfo = <Alert className="border-blue-300 bg-blue-50 text-blue-950"><HelpCircle className="h-4 w-4" /><AlertTitle>Panduan Akad Murabahah</AlertTitle><AlertDescription className="text-blue-900">Ceklist ini mengacu pada Fatwa DSN-MUI No. 04/DSN-MUI/IV/2000 tentang Murabahah. Akad Murabahah adalah akad jual beli di mana bank bertindak sebagai penjual dan nasabah sebagai pembeli, dengan margin keuntungan yang disepakati. Pengisian ceklist ini bersifat opsional.</AlertDescription></Alert>;
-  const murabahahStep = <>{murabahahInfo}<div className="grid gap-4 md:grid-cols-2">{murabahahField("murabahahSupplierName", "Nama pemasok disebutkan")}{murabahahField("murabahahObject", "Objek murabahah jelas")}{murabahahField("murabahahPriceKnown", "Harga pokok diketahui")}{murabahahField("murabahahMarginDisclosed", "Margin diungkapkan")}{murabahahField("murabahahDownPayment", "Uang muka disepakati")}{murabahahField("murabahahWakalah", "Wakalah diberikan")}{murabahahField("murabahahDpsReviewed", "Telah ditelaah oleh DPS")}</div><Field name="murabahahNotes" label="Catatan Akad Murabahah (Opsional)" values={values} setValues={setValues} rows={3} /></>;
+  const submit = (e: React.FormEvent) => { e.preventDefault(); const missing = required[4].filter(key => !values[key]?.trim()); if (missing.length) return; createMutation.mutate({ customerName: values.customerName, customerId: values.customerId, businessName: values.businessName, businessType: values.businessType, businessAge: parseInt(values.businessAge), address: values.address, phone: values.phone, email: values.email || undefined, monthlyRevenue: values.monthlyRevenue, monthlyExpenses: values.monthlyExpenses, existingDebt: values.existingDebt, collateralValue: values.collateralValue, requestedAmount: values.requestedAmount, financingTenor: parseInt(values.financingTenor), marginRate: parseFloat(values.marginRate), loanPurpose: values.loanPurpose, legalDocuments: values.legalDocuments, businessShariaCompliant: values.businessShariaCompliant as "yes" | "no" | "partial", shariaComplianceNotes: values.shariaComplianceNotes || undefined, murabahahType: values.murabahahType || undefined, murabahahSupplierName: values.murabahahSupplierName || undefined, murabahahObject: values.murabahahObject || undefined, murabahahPriceKnown: values.murabahahPriceKnown || undefined, murabahahMarginDisclosed: values.murabahahMarginDisclosed || undefined, murabahahDownPayment: values.murabahahDownPayment || undefined, murabahahWakalah: values.murabahahWakalah || undefined, murabahahDpsReviewed: values.murabahahDpsReviewed || undefined, murabahahAcquisitionPrice: values.murabahahAcquisitionPrice ? String(values.murabahahAcquisitionPrice) : undefined, murabahahDirectCost: values.murabahahDirectCost ? String(values.murabahahDirectCost) : undefined, murabahahSupplierDiscount: values.murabahahSupplierDiscount ? String(values.murabahahSupplierDiscount) : undefined, murabahahDownPaymentAmount: values.murabahahDownPaymentAmount ? String(values.murabahahDownPaymentAmount) : undefined, murabahahInvoiceNumber: values.murabahahInvoiceNumber || undefined, murabahahWakalahConfirmedAt: values.murabahahWakalahConfirmedAt ? new Date(values.murabahahWakalahConfirmedAt) : undefined, murabahahQabdhVerifiedAt: values.murabahahQabdhVerifiedAt ? new Date(values.murabahahQabdhVerifiedAt) : undefined, murabahahSignedAt: values.murabahahSignedAt ? new Date(values.murabahahSignedAt) : undefined, murabahahTaazirToWelfare: values.murabahahTaazirToWelfare || undefined, murabahahNotes: values.murabahahNotes || undefined, environmentalPractices: values.environmentalPractices || undefined, socialImpact: values.socialImpact || undefined, governanceQuality: values.governanceQuality as "excellent" | "good" | "fair" | "poor" }); };
+  const murabahahInfo = <Alert className="border-blue-300 bg-blue-50 text-blue-950"><HelpCircle className="h-4 w-4" /><AlertTitle>Panduan Akad Murabahah</AlertTitle><AlertDescription className="text-blue-900">Form ini mengacu pada OJK Pedoman Produk Murabahah dan Fatwa DSN-MUI No. 04/DSN-MUI/IV/2000. Akad Murabahah adalah akad jual beli di mana bank bertindak sebagai penjual dan nasabah sebagai pembeli, dengan margin keuntungan yang disepakati. Seluruh kolom bersifat opsional.</AlertDescription></Alert>;
+  const yesNo = (name: string, label: string, extra?: { disabled?: boolean; forceValue?: string }) => <div className="space-y-2"><Label htmlFor={name}>{label}</Label><Select value={extra?.forceValue ?? values[name]} disabled={extra?.disabled} onValueChange={value => setValues(v => ({ ...v, [name]: value }))}><SelectTrigger id={name}><SelectValue placeholder="Pilih" /></SelectTrigger><SelectContent><SelectItem value="yes">Ya</SelectItem><SelectItem value="no">Tidak</SelectItem></SelectContent></Select></div>;
+  const section = (title: string, children: React.ReactNode) => <div className="space-y-4 rounded-lg border border-slate-200 bg-slate-50 p-4"><h3 className="font-medium text-gray-800">{title}</h3>{children}</div>;
+  const isPersonal = values.murabahahType === "personal";
+  const fmt = (n: number) => Number(n || 0).toLocaleString("id-ID");
+  const previewData = murabahahPreviewQuery.data;
+  const murabahahPreviewPanel = <div className="rounded-lg border border-blue-200 bg-blue-50 p-4"><div className="mb-2 text-sm font-medium text-blue-950">Perhitungan Piutang Murabahah</div>{murabahahPreviewQuery.isLoading ? <div className="flex items-center gap-2 text-sm text-blue-900"><Loader2 className="h-4 w-4 animate-spin" />Menghitung...</div> : previewData ? <><dl className="grid gap-2 text-sm sm:grid-cols-2"><div className="flex justify-between gap-3 border-b border-blue-100 pb-1"><dt className="text-blue-900">Harga perolehan</dt><dd className="font-medium text-blue-950">Rp {fmt(previewData.hargaPerolehan)}</dd></div><div className="flex justify-between gap-3 border-b border-blue-100 pb-1"><dt className="text-blue-900">Pokok pembiayaan</dt><dd className="font-medium text-blue-950">Rp {fmt(previewData.pokokPembiayaan)}</dd></div><div className="flex justify-between gap-3 border-b border-blue-100 pb-1"><dt className="text-blue-900">Margin nominal</dt><dd className="font-medium text-blue-950">{previewData.marginNominal != null ? `Rp ${fmt(previewData.marginNominal)}` : "—"}</dd></div><div className="flex justify-between gap-3"><dt className="font-semibold text-blue-950">Piutang Murabahah</dt><dd className="font-semibold text-blue-950">Rp {fmt(previewData.piutangMurabahah)}</dd></div></dl><div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-blue-900">Tipe disarankan: <span className="rounded-full bg-blue-700 px-2 py-0.5 font-medium text-white">{previewData.suggestedType === "ultra_mikro" ? "Ultra Mikro (≤20jt)" : "Standard"}</span></div>{(previewData.wakalahForbidden || isPersonal) && <Alert className="mt-3 border-amber-300 bg-amber-50 text-amber-950"><AlertCircle className="h-4 w-4" /><AlertTitle>Perhatian</AlertTitle><AlertDescription className="text-amber-900">{(previewData.wakalahForbidden ? "Berdasarkan tipe akad, wakalah TIDAK boleh diberikan kepada nasabah. " : "")}{isPersonal ? "Personal Financing: bank TIDAK boleh memberi wakalah kepada nasabah; aset harus mudah dijual kembali." : ""}</AlertDescription></Alert>}</> : <p className="text-sm text-blue-900">Lengkapi harga pokok, biaya langsung, diskon pemasok, atau uang muka untuk menghitung Piutang Murabahah secara otomatis.</p>}</div>;
+  const murabahahStep = <>
+    {murabahahInfo}
+    {section("1. Jenis & Objek Akad", <>
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="space-y-2"><Label htmlFor="murabahahType">Jenis Akad Murabahah</Label><Select value={values.murabahahType} onValueChange={value => setValues(v => ({ ...v, murabahahType: value, ...(value === "personal" ? { murabahahWakalah: "no" } : {}) }))}><SelectTrigger id="murabahahType"><SelectValue placeholder="Pilih jenis akad" /></SelectTrigger><SelectContent><SelectItem value="standard">Standard</SelectItem><SelectItem value="ultra_mikro">Ultra Mikro (≤20jt)</SelectItem><SelectItem value="personal">Personal Financing (≤20jt)</SelectItem></SelectContent></Select></div>
+        <div className="space-y-2"><Label htmlFor="murabahahSupplierName">Nama Pemasok</Label><Input id="murabahahSupplierName" name="murabahahSupplierName" value={String(values.murabahahSupplierName || "")} onChange={e => setValues(v => ({ ...v, murabahahSupplierName: e.target.value }))} placeholder="Nama pemasok / penjual" /></div>
+        <Field name="murabahahObject" label="Objek / Barang Akad" values={values} setValues={setValues} placeholder="Uraian objek murabahah" />
+        {yesNo("murabahahPriceKnown", "Harga Pokok Diketahui Nasabah")}
+        {yesNo("murabahahMarginDisclosed", "Margin Diungkapkan ke Nasabah")}
+        {yesNo("murabahahDpsReviewed", "Telah Ditelaah oleh DPS")}
+      </div>
+      {values.murabahahType === "personal" && <Alert className="border-amber-300 bg-amber-50 text-amber-950"><AlertCircle className="h-4 w-4" /><AlertTitle>Personal Financing</AlertTitle><AlertDescription className="text-amber-900">Aset harus mudah dijual kembali; bank TIDAK boleh memberi wakalah kepada nasabah.</AlertDescription></Alert>}
+      {(values.murabahahType === "ultra_mikro" || values.murabahahType === "personal") && <Alert className="border-violet-300 bg-violet-50 text-violet-950"><AlertCircle className="h-4 w-4" /><AlertTitle>Ultra Mikro / Akad Mu'allag</AlertTitle><AlertDescription className="text-violet-900">Akad efektif setelah nasabah melaporkan bukti pembelian (maks 15 hari).</AlertDescription></Alert>}
+    </>)}
+    {section("2. Rincian Harga & Margin", <>
+      <div className="grid gap-4 md:grid-cols-2">
+        <CurrencyField name="murabahahAcquisitionPrice" label="Harga Pokok (Rp)" values={values} setValues={setValues} />
+        <CurrencyField name="murabahahDirectCost" label="Biaya Langsung (Rp)" values={values} setValues={setValues} />
+        <CurrencyField name="murabahahSupplierDiscount" label="Diskon Pemasok (Rp)" values={values} setValues={setValues} />
+        <CurrencyField name="murabahahDownPaymentAmount" label="Uang Muka (Rp)" values={values} setValues={setValues} />
+      </div>
+      <p className="text-xs text-muted-foreground">Margin dipakai dari kolom <span className="font-medium">marginRate</span> pada langkah sebelumnya (sekarang: {values.marginRate ? `${values.marginRate}%` : "belum diisi"}).</p>
+      {murabahahPreviewPanel}
+    </>)}
+    {section("3. Sequencing (Wakalah → Qabdh → Akad)", <>
+      <p className="text-xs text-muted-foreground">Urutan: 1) Wa'd &amp; Wakalah 2) Pembelian &amp; Qabdh 3) Konfirmasi bukti 4) Akad Murabahah.</p>
+      <div className="grid gap-4 md:grid-cols-2">
+        {yesNo("murabahahWakalah", "Wakalah Diberikan", { disabled: isPersonal, forceValue: isPersonal ? "no" : undefined })}
+        <div className="space-y-2"><Label htmlFor="murabahahWakalahConfirmedAt">Tanggal Konfirmasi Wakalah &amp; Wa'd</Label><Input id="murabahahWakalahConfirmedAt" name="murabahahWakalahConfirmedAt" type="date" value={String(values.murabahahWakalahConfirmedAt || "")} onChange={e => setValues(v => ({ ...v, murabahahWakalahConfirmedAt: e.target.value }))} /></div>
+        <Field name="murabahahInvoiceNumber" label="No. Invoice / Bukti Pembelian" values={values} setValues={setValues} placeholder="INV-0000" />
+        <div className="space-y-2"><Label htmlFor="murabahahQabdhVerifiedAt">Tanggal Verifikasi Penerimaan Barang / Qabdh</Label><Input id="murabahahQabdhVerifiedAt" name="murabahahQabdhVerifiedAt" type="date" value={String(values.murabahahQabdhVerifiedAt || "")} onChange={e => setValues(v => ({ ...v, murabahahQabdhVerifiedAt: e.target.value }))} /></div>
+        <div className="space-y-2"><Label htmlFor="murabahahSignedAt">Tanggal Penandatanganan Akad Murabahah</Label><Input id="murabahahSignedAt" name="murabahahSignedAt" type="date" value={String(values.murabahahSignedAt || "")} onChange={e => setValues(v => ({ ...v, murabahahSignedAt: e.target.value }))} /></div>
+      </div>
+    </>)}
+    {section("4. Sanksi", <>
+      {yesNo("murabahahTaazirToWelfare", "Denda (Ta'zir) Dialokasikan ke Dana Kebajikan")}
+      <p className="text-xs text-muted-foreground">Denda keterlambatan (ta'zir) dialokasikan ke Dana Kebajikan, bukan pendapatan bank.</p>
+    </>)}
+    <Field name="murabahahNotes" label="Catatan Akad Murabahah (Opsional)" values={values} setValues={setValues} rows={3} />
+  </>;
   const select = (name: string, label: string, options: [string, string][]) => <div className="space-y-2"><Label htmlFor={name}>{label}</Label><Select value={values[name]} onValueChange={value => setValues(v => ({ ...v, [name]: value }))}><SelectTrigger id={name}><SelectValue placeholder="Pilih" /></SelectTrigger><SelectContent>{options.map(([value, text]) => <SelectItem key={value} value={value}>{text}</SelectItem>)}</SelectContent></Select></div>;
   return <div className="min-h-screen bg-gray-50"><nav className="border-b bg-white"><div className="container flex items-center justify-between py-4"><Button variant="ghost" size="sm" asChild><Link href="/"><ArrowLeft className="mr-2 h-4 w-4" />Kembali</Link></Button><img src="/logo-light-bg.png" alt="SSCI" className="h-12 w-auto" /><div className="flex items-center gap-1"><NotificationBell /><ProfileMenu /></div></div></nav>
       <main className="container max-w-4xl py-6 sm:py-8"><div className="mb-6"><div className="flex flex-wrap items-start justify-between gap-3"><div><h1 className="text-3xl font-bold text-gray-900">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-gray-600">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan</p></div><Button type="button" variant="outline" onClick={fillAllDemo}>Isi contoh data</Button></div><p className="mt-3 text-xs text-muted-foreground">Mengisi contoh data acak untuk pengujian alur. Data tetap dapat Anda periksa sebelum dikirim.</p></div>

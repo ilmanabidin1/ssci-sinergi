@@ -20,6 +20,7 @@ import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
+import { calculateMurabahahBreakdown } from "./murabahah";
 import { analyzeSurveyImage, decodeSurveyImage, storeSurveyImage, SURVEY_CONTENT_TYPES, SurveyUploadError, SurveyProviderError } from "./surveyAnalysis";
 import { readFileSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
@@ -295,22 +296,39 @@ export const appRouter = router({
         legalDocuments: legalDocumentsSchema,
         businessShariaCompliant: z.enum(["yes", "no", "partial"]),
         shariaComplianceNotes: z.string().trim().max(2000).optional(),
-        murabahahSupplierName: z.enum(["yes", "no", "tidak_relevan"]).optional(),
-        murabahahObject: z.enum(["yes", "no", "tidak_relevan"]).optional(),
-        murabahahPriceKnown: z.enum(["yes", "no", "tidak_relevan"]).optional(),
-        murabahahMarginDisclosed: z.enum(["yes", "no", "tidak_relevan"]).optional(),
-        murabahahDownPayment: z.enum(["yes", "no", "tidak_relevan"]).optional(),
-        murabahahWakalah: z.enum(["yes", "no", "tidak_relevan"]).optional(),
-        murabahahDpsReviewed: z.enum(["yes", "no", "tidak_relevan"]).optional(),
+        murabahahType: z.enum(["standard", "ultra_mikro", "personal"]).optional(),
+        murabahahSupplierName: z.string().trim().max(255).optional(),
+        murabahahObject: z.string().trim().max(255).optional(),
+        murabahahPriceKnown: z.enum(["yes", "no"]).optional(),
+        murabahahMarginDisclosed: z.enum(["yes", "no"]).optional(),
+        murabahahDownPayment: z.enum(["yes", "no"]).optional(),
+        murabahahWakalah: z.enum(["yes", "no"]).optional(),
+        murabahahDpsReviewed: z.enum(["yes", "no"]).optional(),
+        murabahahAcquisitionPrice: nonNegativeMoney.nullable().optional(),
+        murabahahDirectCost: nonNegativeMoney.nullable().optional(),
+        murabahahSupplierDiscount: nonNegativeMoney.nullable().optional(),
+        murabahahDownPaymentAmount: nonNegativeMoney.nullable().optional(),
+        murabahahMarginAmount: nonNegativeMoney.nullable().optional(),
+        murabahahInvoiceNumber: z.string().trim().max(100).optional(),
+        murabahahWakalahConfirmedAt: z.date().nullable().optional(),
+        murabahahQabdhVerifiedAt: z.date().nullable().optional(),
+        murabahahSignedAt: z.date().nullable().optional(),
+        murabahahTaazirToWelfare: z.enum(["yes", "no"]).optional(),
         murabahahNotes: z.string().trim().max(2000).optional(),
         environmentalPractices: z.string().trim().max(2000).optional(),
         socialImpact: z.string().trim().max(2000).optional(),
         governanceQuality: z.enum(["excellent", "good", "fair", "poor"]),
       }))
       .mutation(async ({ input, ctx }) => {
+        const moneyOrNull = (value: string | null | undefined) => (value == null ? null : value.toString());
         const applicationId = await db.createApplication({
           ...input,
           marginRate: input.marginRate.toString(),
+          murabahahAcquisitionPrice: moneyOrNull(input.murabahahAcquisitionPrice),
+          murabahahDirectCost: moneyOrNull(input.murabahahDirectCost),
+          murabahahSupplierDiscount: moneyOrNull(input.murabahahSupplierDiscount),
+          murabahahDownPaymentAmount: moneyOrNull(input.murabahahDownPaymentAmount),
+          murabahahMarginAmount: moneyOrNull(input.murabahahMarginAmount),
           organizationId: ctx.user.organizationId,
           submittedBy: ctx.user.id,
           status: "pending",
@@ -333,6 +351,17 @@ export const appRouter = router({
         }
         return { id: applicationId };
       }),
+
+    murabahahPreview: protectedProcedure
+      .input(z.object({
+        requestedAmount: z.string(),
+        acquisitionPrice: z.string().nullable().optional(),
+        directCost: z.string().nullable().optional(),
+        supplierDiscount: z.string().nullable().optional(),
+        downPaymentAmount: z.string().nullable().optional(),
+        marginRate: z.string().nullable().optional(),
+      }))
+      .query(({ input }) => calculateMurabahahBreakdown(input)),
 
     getById: protectedProcedure
       .input(z.object({ id: z.number() }))
