@@ -4,13 +4,37 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, ImageUp, Landmark, Loader2, Save, Settings2, UserRound } from "lucide-react";
+import { ArrowLeft, ImageUp, Info, Landmark, Loader2, Save, Settings2, UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 
 const DEFAULT_PRIMARY_COLOR = "#2458d6";
+
+function LabelWithInfo({ label, info }: { label: string; info: string }) {
+  return (
+    <div className="flex items-center gap-1.5">
+      <Label>{label}</Label>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Info className="h-3.5 w-3.5 cursor-help text-slate-400" />
+          </TooltipTrigger>
+          <TooltipContent side="top" className="max-w-xs">
+            <p className="text-xs leading-relaxed">{info}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+    </div>
+  );
+}
 
 export default function Settings() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
@@ -275,7 +299,10 @@ export default function Settings() {
                 <form className="space-y-4" onSubmit={handleCreditPolicySubmit}>
                   <div className="grid gap-4 sm:grid-cols-3">
                     <div className="space-y-2">
-                      <Label htmlFor="dscrMin">DSCR minimum</Label>
+                      <LabelWithInfo
+                        label="DSCR minimum"
+                        info="Debt Service Coverage Ratio: perbandingan laba bersih bulanan terhadap total angsuran (existing + baru). Contoh 1.25 artinya laba bersih minimal 1.25x angsuran. Semakin tinggi semakin aman. Ini rasio risiko, bukan ketentuan syariah."
+                      />
                       <Input
                         id="dscrMin"
                         name="dscrMin"
@@ -290,7 +317,10 @@ export default function Settings() {
                       <p className="text-xs text-slate-500">Nilai default 1.25</p>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="ltvMax">LTV maksimal (%)</Label>
+                      <LabelWithInfo
+                        label="LTV maksimal (%)"
+                        info="Loan to Value: rasio pembiayaan terhadap nilai agunan. Contoh 80 artinya pembiayaan maksimal 80% dari nilai jaminan. Menilai kecukupan agunan; sejalan dengan prinsip jaminan (rahn) dalam syariah."
+                      />
                       <Input
                         id="ltvMax"
                         name="ltvMax"
@@ -305,7 +335,10 @@ export default function Settings() {
                       <p className="text-xs text-slate-500">Nilai default 80</p>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="maxPlafon">Plafon maksimal (Rp)</Label>
+                      <LabelWithInfo
+                        label="Plafon maksimal (Rp)"
+                        info="Batas atas jumlah pembiayaan yang direkomendasikan sistem. Rekomendasi otomatis tidak akan melebihi angka ini. Kosongkan jika tidak ingin ada batas."
+                      />
                       <Input
                         id="maxPlafon"
                         name="maxPlafon"
