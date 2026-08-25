@@ -396,6 +396,19 @@ export const appRouter = router({
         }
       }),
 
+    hardDelete: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        try {
+          return await db.hardDeleteApplication(input.applicationId, ctx.user.organizationId, ctx.user.id);
+        } catch (error) {
+          if (error instanceof Error) {
+            throw new TRPCError({ code: "BAD_REQUEST", message: error.message });
+          }
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Gagal menghapus pengajuan" });
+        }
+      }),
+
     getWithApplication: protectedProcedure
       .input(z.object({ applicationId: z.number() }))
       .query(async ({ input, ctx }) => {

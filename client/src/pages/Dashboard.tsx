@@ -68,11 +68,27 @@ export default function Dashboard() {
     onError: error => toast.error(`Gagal menghapus penilaian: ${error.message}`),
   });
 
+  const hardDelete = trpc.assessments.hardDelete.useMutation({
+    onSuccess: async () => {
+      await utils.applications.queue.invalidate();
+      await utils.applications.operationalStats.invalidate();
+      toast.success("Pengajuan berhasil dihapus permanen.");
+    },
+    onError: error => toast.error(`Gagal menghapus pengajuan: ${error.message}`),
+  });
+
   const handleDeleteAssessment = (item: { id: number; customerName: string }) => {
     if (!window.confirm(`Hapus penilaian untuk "${item.customerName}"? Pengajuan akan kembali ke status menunggu penilaian.`)) {
       return;
     }
     deleteAssessment.mutate({ applicationId: item.id });
+  };
+
+  const handleHardDelete = (item: { id: number; customerName: string }) => {
+    if (!window.confirm(`Hapus permanen pengajuan "${item.customerName}" beserta semua penilaian dan dokumennya? Aksi ini tidak dapat dibatalkan.`)) {
+      return;
+    }
+    hardDelete.mutate({ applicationId: item.id });
   };
 
   const statusCards = [
@@ -311,13 +327,22 @@ export default function Dashboard() {
                                 <Button
                                   size="icon"
                                   variant="ghost"
-                                  className="h-8 w-8 text-slate-400 hover:text-red-600"
+                                  className="h-8 w-8 text-slate-400 hover:text-orange-600"
                                   title="Hapus penilaian"
                                   onClick={() => handleDeleteAssessment(item)}
                                 >
                                   <Trash2 className="h-4 w-4" />
                                 </Button>
                               )}
+                              <Button
+                                size="icon"
+                                variant="ghost"
+                                className="h-8 w-8 text-slate-400 hover:text-red-600"
+                                title="Hapus permanen pengajuan"
+                                onClick={() => handleHardDelete(item)}
+                              >
+                                <Trash2 className="h-4 w-4 text-red-500" />
+                              </Button>
                             </div>
                           </td>
                         </tr>

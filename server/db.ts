@@ -512,6 +512,44 @@ export async function deleteAssessment(applicationId: number, organizationId: nu
   });
 }
 
+export async function hardDeleteApplication(applicationId: number, organizationId: number, actorUserId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  return db.transaction(async tx => {
+    const application = await tx
+      .select()
+      .from(applications)
+      .where(and(
+        eq(applications.id, applicationId),
+        eq(applications.organizationId, organizationId)
+      ))
+      .limit(1);
+    if (!application[0]) {
+      throw new Error("Pengajuan tidak ditemukan");
+    }
+
+    await tx.delete(documentFiles).where(and(
+      eq(documentFiles.applicationId, applicationId),
+      eq(documentFiles.organizationId, organizationId)
+    ));
+    await tx.delete(assessments).where(and(
+      eq(assessments.applicationId, applicationId),
+      eq(assessments.organizationId, organizationId)
+    ));
+    await tx.delete(applications).where(and(
+      eq(applications.id, applicationId),
+      eq(applications.organizationId, organizationId)
+    ));
+    await tx.delete(auditLogs).where(and(
+      eq(auditLogs.organizationId, organizationId),
+      eq(auditLogs.entityId, applicationId)
+    ));
+
+    return { success: true };
+  });
+}
+
 export async function getAllAssessments(organizationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
