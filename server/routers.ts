@@ -21,7 +21,7 @@ import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
 import { analyzeSurveyImage, decodeSurveyImage, storeSurveyImage, SURVEY_CONTENT_TYPES, SurveyUploadError, SurveyProviderError } from "./surveyAnalysis";
-import { readFileSync } from "node:fs";
+import { readFileSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 
 const UPLOAD_DIR = process.env.UPLOAD_DIR || "/data/uploads";
@@ -700,6 +700,22 @@ export const appRouter = router({
       .input(z.object({ applicationId: z.number().int().positive() }))
       .query(({ input, ctx }) => {
         return db.listSurveyPhotos(ctx.user.organizationId, input.applicationId);
+      }),
+
+    deletePhoto: makerProcedure
+      .input(z.object({ photoId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const photo = await db.deleteSurveyPhoto(input.photoId, ctx.user.organizationId);
+        if (!photo) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Survey photo not found" });
+        }
+        try {
+          const filePath = join(UPLOAD_DIR, photo.storedName);
+          unlinkSync(filePath);
+        } catch {
+          // file already missing is fine
+        }
+        return { success: true };
       }),
 
     analyze: makerProcedure

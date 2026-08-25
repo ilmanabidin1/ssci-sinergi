@@ -1129,6 +1129,16 @@ export async function getSurveyPhotoById(id: number, organizationId: number) {
   return result[0];
 }
 
+export async function deleteSurveyPhoto(id: number, organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const photo = await getSurveyPhotoById(id, organizationId);
+  if (!photo) return null;
+  await db.delete(surveyPhotos)
+    .where(and(eq(surveyPhotos.id, id), eq(surveyPhotos.organizationId, organizationId)));
+  return photo;
+}
+
 export async function updateSurveyAnalysis(id: number, organizationId: number, data: {
   status: "analyzed" | "failed";
   analysisResult?: Record<string, unknown> | null;

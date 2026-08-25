@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload, Camera, Sparkles } from "lucide-react";
+import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload, Camera, Sparkles, Trash2 } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -70,6 +70,19 @@ export default function ApplicationDetail() {
     },
     onError: error => toast.error(`Gagal menganalisis foto: ${error.message}`),
   });
+
+  const deletePhotoMutation = trpc.survey.deletePhoto.useMutation({
+    onSuccess: async () => {
+      await surveyPhotosQuery.refetch();
+      toast.success("Foto survey berhasil dihapus");
+    },
+    onError: error => toast.error(`Gagal menghapus foto: ${error.message}`),
+  });
+
+  const handleDeletePhoto = (photoId: number) => {
+    if (!window.confirm("Hapus foto survey ini? Aksi tidak dapat dibatalkan.")) return;
+    deletePhotoMutation.mutate({ photoId });
+  };
 
   const handleSurveyPhotoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -516,19 +529,31 @@ export default function ApplicationDetail() {
                ) : (
                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                    {(surveyPhotosQuery.data ?? []).map(photo => (
-                     <div key={photo.id} className="space-y-2 rounded-lg border p-3">
-                       <img
-                         src={`/uploads/${photo.storedName}`}
-                         alt={photo.caption || "Foto survey"}
-                         className="h-40 w-full rounded-md object-cover bg-gray-100"
-                       />
-                       {photo.caption && <p className="text-sm text-gray-700">{photo.caption}</p>}
-                       <div className="flex items-center justify-between text-xs text-gray-500">
-                         <span>{new Date(photo.createdAt).toLocaleString("id-ID")}</span>
-                         <Badge variant={photo.status === "failed" ? "destructive" : photo.status === "analyzed" ? "default" : "secondary"}>
-                           {photo.status === "uploaded" ? "Diunggah" : photo.status === "analyzed" ? "Terverifikasi" : "Gagal"}
-                         </Badge>
-                       </div>
+                      <div key={photo.id} className="space-y-2 rounded-lg border p-3">
+                        <div className="relative">
+                          <img
+                            src={`/uploads/${photo.storedName}`}
+                            alt={photo.caption || "Foto survey"}
+                            className="h-40 w-full rounded-md object-cover bg-gray-100"
+                          />
+                          <Button
+                            size="icon"
+                            variant="destructive"
+                            className="absolute right-2 top-2 h-7 w-7"
+                            title="Hapus foto"
+                            disabled={deletePhotoMutation.isPending}
+                            onClick={() => handleDeletePhoto(photo.id)}
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+                        {photo.caption && <p className="text-sm text-gray-700">{photo.caption}</p>}
+                        <div className="flex items-center justify-between text-xs text-gray-500">
+                          <span>{new Date(photo.createdAt).toLocaleString("id-ID")}</span>
+                          <Badge variant={photo.status === "failed" ? "destructive" : photo.status === "analyzed" ? "default" : "secondary"}>
+                            {photo.status === "uploaded" ? "Diunggah" : photo.status === "analyzed" ? "Terverifikasi" : "Gagal"}
+                          </Badge>
+                        </div>
                        {photo.status === "uploaded" && (
                          <Button
                            size="sm"
