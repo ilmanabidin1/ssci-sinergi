@@ -192,8 +192,7 @@ export default function ApplicationDetail() {
                  Unduh Laporan
               </Button>
             )}
-            {assessment && application.status === "assessed" &&
-              (user?.role === "checker" || user?.role === "admin") && (
+            {assessment && application.status === "assessed" && (
                 <>
                   <Button
                     variant="destructive"

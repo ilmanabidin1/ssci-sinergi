@@ -294,7 +294,7 @@ export const appRouter = router({
         return { success: true };
       }),
 
-    decide: checkerProcedure
+    decide: protectedProcedure
       .input(z.object({
         applicationId: z.number().int().positive(),
         decision: z.enum(["approved", "rejected"]),

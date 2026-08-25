@@ -418,13 +418,6 @@ export async function decideApplication(input: {
     if (!application[0] || application[0].status !== "assessed" || !assessment[0]) {
       throw new Error("Aplikasi belum dinilai atau sudah diputuskan");
     }
-    if (
-      application[0].submittedBy === input.checkerId ||
-      assessment[0].assessedBy === input.checkerId
-    ) {
-      throw new Error("Maker-checker melarang pemeriksaan oleh pengguna yang sama");
-    }
-
     const updateResult = await tx
       .update(applications)
       .set({
