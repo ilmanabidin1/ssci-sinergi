@@ -1,3 +1,4 @@
+import { NotificationBell } from "@/components/NotificationBell";
 import { ProfileMenu } from "@/components/ProfileMenu";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -214,7 +215,10 @@ export default function ApplicationDetail() {
               </div>
             </div>
           </div>
-          <ProfileMenu />
+          <div className="flex items-center gap-1">
+            <NotificationBell />
+            <ProfileMenu />
+          </div>
         </div>
       </nav>
 

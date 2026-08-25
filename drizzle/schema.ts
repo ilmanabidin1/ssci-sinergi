@@ -219,3 +219,32 @@ export const applicationComments = mysqlTable("applicationComments", {
 
 export type ApplicationComment = typeof applicationComments.$inferSelect;
 export type InsertApplicationComment = typeof applicationComments.$inferInsert;
+
+export const creditPolicies = mysqlTable("creditPolicies", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").notNull().unique(),
+  dscrMin: decimal("dscrMin", { precision: 5, scale: 2 }).notNull().default("1.25"),
+  ltvMax: decimal("ltvMax", { precision: 5, scale: 2 }).notNull().default("80"),
+  maxPlafon: decimal("maxPlafon", { precision: 15, scale: 2 }),
+  updatedBy: int("updatedBy"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type CreditPolicy = typeof creditPolicies.$inferSelect;
+export type InsertCreditPolicy = typeof creditPolicies.$inferInsert;
+
+export const notifications = mysqlTable("notifications", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").notNull(),
+  userId: int("userId").notNull(),
+  type: varchar("type", { length: 64 }).notNull(),
+  title: varchar("title", { length: 255 }).notNull(),
+  content: text("content"),
+  applicationId: int("applicationId"),
+  read: int("read").default(0).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type Notification = typeof notifications.$inferSelect;
+export type InsertNotification = typeof notifications.$inferInsert;

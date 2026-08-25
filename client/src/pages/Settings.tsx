@@ -5,8 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, ImageUp, Loader2, Save, Settings2, UserRound } from "lucide-react";
-import { useRef, useState } from "react";
+import { ArrowLeft, ImageUp, Landmark, Loader2, Save, Settings2, UserRound } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 
@@ -45,6 +45,42 @@ export default function Settings() {
     onError: error => toast.error(`Gagal mengunggah logo: ${error.message}`),
   });
   const logoInputRef = useRef<HTMLInputElement>(null);
+
+  const creditPolicyQuery = trpc.organization.getCreditPolicy.useQuery(undefined, {
+    enabled: !!user && user.role === "admin",
+  });
+  const [dscrMin, setDscrMin] = useState("1.25");
+  const [ltvMax, setLtvMax] = useState("80");
+  const [maxPlafon, setMaxPlafon] = useState("");
+
+  useEffect(() => {
+    if (creditPolicyQuery.data) {
+      setDscrMin(String(creditPolicyQuery.data.dscrMin));
+      setLtvMax(String(creditPolicyQuery.data.ltvMax));
+      setMaxPlafon(
+        creditPolicyQuery.data.maxPlafon !== null && creditPolicyQuery.data.maxPlafon !== undefined
+          ? String(creditPolicyQuery.data.maxPlafon)
+          : ""
+      );
+    }
+  }, [creditPolicyQuery.data]);
+
+  const updateCreditPolicy = trpc.organization.updateCreditPolicy.useMutation({
+    onSuccess: async () => {
+      await utils.organization.getCreditPolicy.invalidate();
+      toast.success("Kebijakan kredit berhasil disimpan");
+    },
+    onError: error => toast.error(`Gagal menyimpan kebijakan kredit: ${error.message}`),
+  });
+
+  const handleCreditPolicySubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    updateCreditPolicy.mutate({
+      dscrMin: Number.parseFloat(dscrMin),
+      ltvMax: Number.parseFloat(ltvMax),
+      maxPlafon: maxPlafon.trim() === "" ? null : Number.parseFloat(maxPlafon),
+    });
+  };
 
   const handleLogoUpload = (file?: File) => {
     if (!file) return;
@@ -214,6 +250,78 @@ export default function Settings() {
                   <Button type="submit" disabled={updateSettings.isPending}>
                     {updateSettings.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Save className="mr-2 h-4 w-4" />}
                     Simpan branding
+                  </Button>
+                </form>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
+        {isAdmin && (
+          <Card className="mb-6 border-0 shadow-sm">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Landmark className="h-5 w-5 text-primary" />
+                Kebijakan Kredit
+              </CardTitle>
+              <CardDescription>Atur batas minimum DSCR, LTV, dan plafon pembiayaan yang diterapkan pada penilaian.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              {creditPolicyQuery.isLoading ? (
+                <div className="flex items-center justify-center gap-2 py-10 text-slate-500">
+                  <Loader2 className="h-5 w-5 animate-spin" />Memuat kebijakan kredit...
+                </div>
+              ) : (
+                <form className="space-y-4" onSubmit={handleCreditPolicySubmit}>
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    <div className="space-y-2">
+                      <Label htmlFor="dscrMin">DSCR minimum</Label>
+                      <Input
+                        id="dscrMin"
+                        name="dscrMin"
+                        type="number"
+                        step="0.01"
+                        min="1"
+                        max="10"
+                        value={dscrMin}
+                        onChange={event => setDscrMin(event.target.value)}
+                        required
+                      />
+                      <p className="text-xs text-slate-500">Nilai default 1.25</p>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="ltvMax">LTV maksimal (%)</Label>
+                      <Input
+                        id="ltvMax"
+                        name="ltvMax"
+                        type="number"
+                        step="1"
+                        min="1"
+                        max="100"
+                        value={ltvMax}
+                        onChange={event => setLtvMax(event.target.value)}
+                        required
+                      />
+                      <p className="text-xs text-slate-500">Nilai default 80</p>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="maxPlafon">Plafon maksimal (Rp)</Label>
+                      <Input
+                        id="maxPlafon"
+                        name="maxPlafon"
+                        type="number"
+                        step="100000"
+                        min="0"
+                        placeholder="Opsional"
+                        value={maxPlafon}
+                        onChange={event => setMaxPlafon(event.target.value)}
+                      />
+                      <p className="text-xs text-slate-500">Kosongkan jika tidak ada batas</p>
+                    </div>
+                  </div>
+                  <Button type="submit" disabled={updateCreditPolicy.isPending}>
+                    {updateCreditPolicy.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Save className="mr-2 h-4 w-4" />}
+                    Simpan kebijakan kredit
                   </Button>
                 </form>
               )}

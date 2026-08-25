@@ -1,6 +1,6 @@
 import { eq, desc, asc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, InsertApplication, InsertAssessment, InsertDocumentFile } from "../drizzle/schema";
+import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -797,6 +797,15 @@ export async function getDocumentFiles(applicationId: number, organizationId: nu
   return db.select().from(documentFiles).where(and(eq(documentFiles.applicationId, applicationId), eq(documentFiles.organizationId, organizationId))).orderBy(desc(documentFiles.createdAt));
 }
 
+export async function getDocumentFileById(id: number, organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select().from(documentFiles)
+    .where(and(eq(documentFiles.id, id), eq(documentFiles.organizationId, organizationId)))
+    .limit(1);
+  return result[0];
+}
+
 export async function searchCustomerHistory(organizationId: number, query: string) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
@@ -929,4 +938,165 @@ export async function listApplicationActivity(organizationId: number, applicatio
       eq(auditLogs.entityId, applicationId)
     ))
     .orderBy(desc(auditLogs.createdAt));
+}
+
+// Credit policy
+export async function getCreditPolicy(organizationId: number): Promise<{
+  dscrMin: number;
+  ltvMax: number;
+  maxPlafon: number | null;
+}> {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const rows = await db.select().from(creditPolicies)
+    .where(eq(creditPolicies.organizationId, organizationId))
+    .limit(1);
+
+  if (rows.length === 0) {
+    return { dscrMin: 1.25, ltvMax: 80, maxPlafon: null };
+  }
+
+  const policy = rows[0];
+  return {
+    dscrMin: Number(policy.dscrMin),
+    ltvMax: Number(policy.ltvMax),
+    maxPlafon: policy.maxPlafon !== null && policy.maxPlafon !== undefined ? Number(policy.maxPlafon) : null,
+  };
+}
+
+export async function upsertCreditPolicy(organizationId: number, input: {
+  dscrMin: number;
+  ltvMax: number;
+  maxPlafon: number | null;
+  updatedBy: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const values: InsertCreditPolicy = {
+    organizationId,
+    dscrMin: input.dscrMin.toString(),
+    ltvMax: input.ltvMax.toString(),
+    maxPlafon: input.maxPlafon !== null ? input.maxPlafon.toString() : null,
+    updatedBy: input.updatedBy,
+  };
+
+  await db.insert(creditPolicies).values(values).onDuplicateKeyUpdate({
+    set: {
+      dscrMin: input.dscrMin.toString(),
+      ltvMax: input.ltvMax.toString(),
+      maxPlafon: input.maxPlafon !== null ? input.maxPlafon.toString() : null,
+      updatedBy: input.updatedBy,
+      updatedAt: new Date(),
+    },
+  });
+
+  return { success: true };
+}
+
+// Notifications
+export async function createNotification(input: {
+  organizationId: number;
+  userId: number;
+  type: string;
+  title: string;
+  content?: string | null;
+  applicationId?: number | null;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const values: InsertNotification = {
+    organizationId: input.organizationId,
+    userId: input.userId,
+    type: input.type,
+    title: input.title,
+    content: input.content ?? null,
+    applicationId: input.applicationId ?? null,
+  };
+
+  const result = await db.insert(notifications).values(values);
+  return Number(result[0].insertId);
+}
+
+export async function listNotifications(organizationId: number, userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(notifications)
+    .where(and(
+      eq(notifications.organizationId, organizationId),
+      eq(notifications.userId, userId)
+    ))
+    .orderBy(desc(notifications.createdAt))
+    .limit(50);
+}
+
+export async function countUnreadNotifications(organizationId: number, userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.select({ count: sql`COUNT(*)` })
+    .from(notifications)
+    .where(and(
+      eq(notifications.organizationId, organizationId),
+      eq(notifications.userId, userId),
+      eq(notifications.read, 0)
+    ));
+  return Number(result[0].count);
+}
+
+export async function markNotificationsRead(organizationId: number, userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(notifications)
+    .set({ read: 1 })
+    .where(and(
+      eq(notifications.organizationId, organizationId),
+      eq(notifications.userId, userId),
+      eq(notifications.read, 0)
+    ));
+  return { success: true };
+}
+
+// SLIK / BI-checking export
+export async function getSlikExport(organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const rows = await db.select().from(applications)
+    .where(eq(applications.organizationId, organizationId))
+    .orderBy(desc(applications.createdAt))
+    .limit(500);
+
+  if (rows.length === 0) return [];
+
+  const applicationIds = rows.map(application => application.id);
+  const assessmentRows = await db.select().from(assessments)
+    .where(and(
+      eq(assessments.organizationId, organizationId),
+      sql`${assessments.applicationId} IN (${sql.join(applicationIds.map(id => sql`${id}`), sql`, `)})`,
+    ))
+    .orderBy(desc(assessments.assessedAt));
+
+  const latestAssessments = new Map<number, typeof assessmentRows[number]>();
+  for (const assessment of assessmentRows) {
+    if (!latestAssessments.has(assessment.applicationId)) {
+      latestAssessments.set(assessment.applicationId, assessment);
+    }
+  }
+
+  return rows.map(application => {
+    const assessment = latestAssessments.get(application.id);
+    return {
+      customerName: application.customerName,
+      customerId: application.customerId,
+      businessName: application.businessName,
+      businessType: application.businessType,
+      requestedAmount: Number(application.requestedAmount),
+      status: application.status,
+      totalScore: assessment ? Number(assessment.totalScore) : null,
+      classification: assessment?.classification ?? null,
+      assessedAt: assessment?.assessedAt ?? null,
+    };
+  });
 }

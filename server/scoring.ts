@@ -324,7 +324,10 @@ export interface RecommendedPlafon {
   };
 }
 
-export function calculateRecommendedPlafon(application: Application): RecommendedPlafon {
+export function calculateRecommendedPlafon(
+  application: Application,
+  policy?: { dscrMin?: number; ltvMax?: number; maxPlafon?: number | null }
+): RecommendedPlafon {
   const monthlyRevenue = Number(application.monthlyRevenue);
   const monthlyExpenses = Number(application.monthlyExpenses);
   const existingDebt = Number(application.existingDebt);
@@ -334,7 +337,7 @@ export function calculateRecommendedPlafon(application: Application): Recommende
 
   const netIncome = monthlyRevenue - monthlyExpenses;
 
-  const dscrTarget = 1.25;
+  const dscrTarget = policy?.dscrMin ?? 1.25;
   const maxMonthlyInstallment = Math.max(
     0,
     (netIncome - dscrTarget * existingDebt) / dscrTarget
@@ -342,10 +345,13 @@ export function calculateRecommendedPlafon(application: Application): Recommende
 
   const amountFromDscr = maxMonthlyInstallment * tenor / (1 + marginRate / 100);
 
-  const ltvTarget = 80;
+  const ltvTarget = policy?.ltvMax ?? 80;
   const amountFromLtv = collateralValue * (ltvTarget / 100);
 
-  const recommendedAmount = Math.round(Math.min(amountFromDscr, amountFromLtv) * 100) / 100;
+  let recommendedAmount = Math.round(Math.min(amountFromDscr, amountFromLtv) * 100) / 100;
+  if (policy?.maxPlafon && recommendedAmount > policy.maxPlafon) {
+    recommendedAmount = policy.maxPlafon;
+  }
 
   const recommendedMonthlyInstallment =
     recommendedAmount * (1 + marginRate / 100) / tenor;

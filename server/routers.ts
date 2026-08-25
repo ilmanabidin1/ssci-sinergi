@@ -204,6 +204,40 @@ export const appRouter = router({
         await db.setUserActive(ctx.user.organizationId, input.userId, input.active);
         return { success: true };
       }),
+    getCreditPolicy: protectedProcedure
+      .query(async ({ ctx }) => {
+        return db.getCreditPolicy(ctx.user.organizationId);
+      }),
+    updateCreditPolicy: adminProcedure
+      .input(z.object({
+        dscrMin: z.number().min(1).max(10),
+        ltvMax: z.number().min(1).max(100),
+        maxPlafon: z.number().min(0).nullable(),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        await db.upsertCreditPolicy(ctx.user.organizationId, {
+          dscrMin: input.dscrMin,
+          ltvMax: input.ltvMax,
+          maxPlafon: input.maxPlafon,
+          updatedBy: ctx.user.id,
+        });
+        return { success: true };
+      }),
+  }),
+
+  notifications: router({
+    list: protectedProcedure
+      .query(async ({ ctx }) => {
+        return db.listNotifications(ctx.user.organizationId, ctx.user.id);
+      }),
+    unreadCount: protectedProcedure
+      .query(async ({ ctx }) => {
+        return db.countUnreadNotifications(ctx.user.organizationId, ctx.user.id);
+      }),
+    markRead: protectedProcedure
+      .mutation(async ({ ctx }) => {
+        return db.markNotificationsRead(ctx.user.organizationId, ctx.user.id);
+      }),
   }),
 
   applications: router({
@@ -276,6 +310,22 @@ export const appRouter = router({
           submittedBy: ctx.user.id,
           status: "pending",
         });
+        try {
+          const admins = (await db.listOrganizationUsers(ctx.user.organizationId))
+            .filter(user => user.role === "admin");
+          for (const admin of admins) {
+            await db.createNotification({
+              organizationId: ctx.user.organizationId,
+              userId: admin.id,
+              type: "APPLICATION_CREATED",
+              title: "Pengajuan baru",
+              content: `Pengajuan baru atas nama ${input.customerName} telah dibuat`,
+              applicationId,
+            });
+          }
+        } catch (error) {
+          console.warn("[Notification] Failed to notify admins:", error);
+        }
         return { id: applicationId };
       }),
 
@@ -339,7 +389,8 @@ export const appRouter = router({
 
         // Calculate SSCI score
         const result = calculateSSCI(application);
-        const plafon = calculateRecommendedPlafon(application);
+        const policy = await db.getCreditPolicy(ctx.user.organizationId);
+        const plafon = calculateRecommendedPlafon(application, policy);
         const narrative = await generateNarrativeRecommendation({
           classification: result.classification,
           totalScore: result.totalScore,
@@ -377,6 +428,23 @@ export const appRouter = router({
           notes: input.notes,
         });
 
+        try {
+          const recipients = (await db.listOrganizationUsers(ctx.user.organizationId))
+            .filter(user => user.role === "admin" || user.role === "checker");
+          for (const recipient of recipients) {
+            await db.createNotification({
+              organizationId: ctx.user.organizationId,
+              userId: recipient.id,
+              type: "ASSESSMENT_CREATED",
+              title: "Penilaian selesai",
+              content: `Pengajuan ${application.customerName} telah dinilai`,
+              applicationId: input.applicationId,
+            });
+          }
+        } catch (error) {
+          console.warn("[Notification] Failed to notify admins/checkers:", error);
+        }
+
         return {
           assessmentId,
           result: {
@@ -385,6 +453,7 @@ export const appRouter = router({
             recommendationStatus: narrative.status,
             plafon,
           },
+          policy,
         };
       }),
 
@@ -392,6 +461,11 @@ export const appRouter = router({
       .input(z.object({ query: z.string().trim().max(200) }))
       .query(async ({ input, ctx }) => {
         return db.searchCustomerHistory(ctx.user.organizationId, input.query);
+      }),
+
+    exportSlik: protectedProcedure
+      .query(async ({ ctx }) => {
+        return db.getSlikExport(ctx.user.organizationId);
       }),
 
     cancel: makerProcedure
@@ -562,6 +636,23 @@ export const appRouter = router({
     verifyDocument: checkerProcedure.input(z.object({ id: z.number().int().positive(), status: z.enum(["verified", "rejected"]), reason: z.string().trim().max(2000).optional() }).refine(value => value.status !== "rejected" || !!value.reason, { message: "Rejection reason is required" })).mutation(async ({ input, ctx }) => {
       const updated = await db.updateDocumentVerification({ id: input.id, organizationId: ctx.user.organizationId, status: input.status, verifiedBy: ctx.user.id, rejectionReason: input.reason });
       if (!updated) throw new TRPCError({ code: "NOT_FOUND", message: "Document not found" });
+      if (input.status === "rejected") {
+        try {
+          const document = await db.getDocumentFileById(input.id, ctx.user.organizationId);
+          if (document) {
+            await db.createNotification({
+              organizationId: ctx.user.organizationId,
+              userId: document.uploadedBy,
+              type: "DOCUMENT_REJECTED",
+              title: "Dokumen ditolak",
+              content: `Dokumen ${document.originalName} ditolak: ${input.reason}`,
+              applicationId: document.applicationId,
+            });
+          }
+        } catch (error) {
+          console.warn("[Notification] Failed to notify uploader:", error);
+        }
+      }
       return { success: true };
     }),
   }),

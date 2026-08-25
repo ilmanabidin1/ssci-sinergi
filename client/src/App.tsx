@@ -15,6 +15,7 @@ import Register from "./pages/Register";
 import Settings from "./pages/Settings";
 import Team from "./pages/Team";
 import Customers from "./pages/Customers";
+import Notifications from "./pages/Notifications";
 
 function Router() {
   return (
@@ -30,6 +31,7 @@ function Router() {
       <Route path={"/pengaturan"} component={Settings} />
       <Route path={"/tim"} component={Team} />
       <Route path={"/nasabah"} component={Customers} />
+      <Route path={"/notifikasi"} component={Notifications} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

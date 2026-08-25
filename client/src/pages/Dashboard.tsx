@@ -1,3 +1,4 @@
+import { NotificationBell } from "@/components/NotificationBell";
 import { ProfileMenu } from "@/components/ProfileMenu";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
@@ -10,6 +11,7 @@ import {
   ArrowUpRight,
   CheckCircle2,
   Clock3,
+  Download,
   FileText,
   Loader2,
   RefreshCw,
@@ -106,6 +108,52 @@ export default function Dashboard() {
     hardDelete.mutate({ applicationId: item.id });
   };
 
+  const exportSlikQuery = trpc.applications.exportSlik.useQuery(undefined, { enabled: false });
+
+  const downloadCsv = (rows: NonNullable<typeof exportSlikQuery.data>) => {
+    const header = ["Nama", "NIK", "Usaha", "Jenis", "Pembiayaan", "Status", "Skor", "Klasifikasi", "Tanggal"];
+    const escapeCell = (value: string | number | null | undefined) => {
+      const text = value === null || value === undefined ? "" : String(value);
+      return `"${text.replace(/"/g, '""')}"`;
+    };
+    const lines = rows.map(row => [
+      row.customerName,
+      row.customerId,
+      row.businessName,
+      row.businessType,
+      row.requestedAmount,
+      row.status,
+      row.totalScore !== null && row.totalScore !== undefined ? row.totalScore : "",
+      row.classification ?? "",
+      row.assessedAt ? new Date(row.assessedAt).toLocaleDateString("id-ID") : "",
+    ]);
+    const csv = [header, ...lines].map(line => line.map(escapeCell).join(",")).join("\r\n");
+    const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `slik-export-${new Date().toISOString().slice(0, 10)}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleExportSlik = async () => {
+    try {
+      const result = await exportSlikQuery.refetch();
+      const rows = result.data ?? [];
+      if (rows.length === 0) {
+        toast.error("Tidak ada data pengajuan untuk diekspor.");
+        return;
+      }
+      downloadCsv(rows);
+      toast.success("Export SLIK berhasil diunduh.");
+    } catch (error) {
+      toast.error(`Gagal mengekspor SLIK: ${(error as Error).message}`);
+    }
+  };
+
   const statusCards = [
     {
       label: "Menunggu penilaian",
@@ -179,7 +227,10 @@ export default function Dashboard() {
               </span>
             )}
           </Link>
-          <ProfileMenu />
+          <div className="flex items-center gap-1">
+            <NotificationBell />
+            <ProfileMenu />
+          </div>
         </div>
       </nav>
 
@@ -329,19 +380,29 @@ export default function Dashboard() {
                 <CardTitle>Queue pengajuan</CardTitle>
                 <p className="mt-1 text-sm text-slate-500">Prioritas pekerjaan assessment dan keputusan.</p>
               </div>
-              <Select value={status} onValueChange={(value) => setStatus(value as Status)}>
-                <SelectTrigger className="w-full sm:w-56" aria-label="Filter status">
-                  <SelectValue placeholder="Semua status" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Semua status</SelectItem>
-                  {Object.entries(statusLabels).map(([key, label]) => (
-                    <SelectItem key={key} value={key}>
-                      {label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
+                <Button variant="outline" onClick={handleExportSlik} disabled={exportSlikQuery.isFetching}>
+                  {exportSlikQuery.isFetching ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    <Download className="mr-2 h-4 w-4" />
+                  )}
+                  Export SLIK
+                </Button>
+                <Select value={status} onValueChange={(value) => setStatus(value as Status)}>
+                  <SelectTrigger className="w-full sm:w-56" aria-label="Filter status">
+                    <SelectValue placeholder="Semua status" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Semua status</SelectItem>
+                    {Object.entries(statusLabels).map(([key, label]) => (
+                      <SelectItem key={key} value={key}>
+                        {label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </CardHeader>
 
             <CardContent className="p-0">
