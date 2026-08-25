@@ -78,6 +78,9 @@ export const applications = mysqlTable("applications", {
   businessShariaCompliant: mysqlEnum("businessShariaCompliant", ["yes", "no", "partial"]).notNull(),
   shariaComplianceNotes: text("shariaComplianceNotes"),
   
+  // Akad financing (dynamic checklist selector)
+  financingAkad: mysqlEnum("financingAkad", ["murabahah", "mudharabah"]),
+
   // Murabahah Akad Checklist (OJK Pedoman Produk Murabahah & DSN-MUI compliance)
   murabahahType: mysqlEnum("murabahahType", ["standard", "ultra_mikro", "personal"]),
   murabahahSupplierName: varchar("murabahahSupplierName", { length: 255 }),
@@ -98,6 +101,22 @@ export const applications = mysqlTable("applications", {
   murabahahSignedAt: timestamp("murabahahSignedAt"),
   murabahahTaazirToWelfare: mysqlEnum("murabahahTaazirToWelfare", ["yes", "no"]).default("yes"),
   murabahahNotes: text("murabahahNotes"),
+
+  // Mudharabah Akad Checklist (OJK Pedoman Produk Mudarabah & DSN-MUI compliance)
+  mudharabahType: mysqlEnum("mudharabahType", ["muthlaqah", "muqayyadah"]),
+  mudharabahCapitalValue: decimal("mudharabahCapitalValue", { precision: 15, scale: 2 }),
+  mudharabahCapitalForm: mysqlEnum("mudharabahCapitalForm", ["uang", "aset", "kombinasi"]),
+  mudharabahBusinessPurpose: text("mudharabahBusinessPurpose"),
+  mudharabahProfitSharingMethod: mysqlEnum("mudharabahProfitSharingMethod", ["profit_sharing", "net_revenue"]),
+  mudharabahBankNisbah: decimal("mudharabahBankNisbah", { precision: 5, scale: 2 }),
+  mudharabahCustomerNisbah: decimal("mudharabahCustomerNisbah", { precision: 5, scale: 2 }),
+  mudharabahPbh: decimal("mudharabahPbh", { precision: 15, scale: 2 }),
+  mudharabahRbh: decimal("mudharabahRbh", { precision: 15, scale: 2 }),
+  mudharabahCollateral: mysqlEnum("mudharabahCollateral", ["yes", "no"]),
+  mudharabahGuarantor: mysqlEnum("mudharabahGuarantor", ["yes", "no"]),
+  mudharabahTaazirToWelfare: mysqlEnum("mudharabahTaazirToWelfare", ["yes", "no"]).default("yes"),
+  mudharabahSignedAt: timestamp("mudharabahSignedAt"),
+  mudharabahNotes: text("mudharabahNotes"),
   
   // Sustainability Indicators
   environmentalPractices: text("environmentalPractices"),
