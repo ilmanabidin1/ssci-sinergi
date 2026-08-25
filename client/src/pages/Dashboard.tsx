@@ -47,6 +47,7 @@ export default function Dashboard() {
   const statsQuery = trpc.applications.operationalStats.useQuery();
   const orgQuery = trpc.organization.getSettings.useQuery();
   const orgName = orgQuery.data?.name;
+  const orgLogo = orgQuery.data?.logoUrl;
   const isLoading = queueQuery.isLoading || statsQuery.isLoading;
   const isError = queueQuery.isError || statsQuery.isError;
   const applications = queueQuery.data ?? [];
@@ -117,7 +118,11 @@ export default function Dashboard() {
       <nav className="border-b bg-white">
         <div className="container flex items-center justify-between py-4">
           <Link to="/" className="flex items-center gap-2 text-primary">
-            <Shield className="h-6 w-6" />
+            {orgLogo ? (
+              <img src={orgLogo} alt="Logo BPRS" className="h-7 w-7 rounded object-contain" />
+            ) : (
+              <Shield className="h-6 w-6" />
+            )}
             <span className="text-xl font-bold">{orgName || "SSCI BPRS"}</span>
             {orgName && (
               <span className="hidden rounded-md bg-slate-100 px-1.5 py-0.5 text-xs font-semibold text-slate-500 sm:inline">

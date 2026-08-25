@@ -5,8 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Loader2, Save, Settings2, UserRound } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft, ImageUp, Loader2, Save, Settings2, UserRound } from "lucide-react";
+import { useRef, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 
@@ -36,6 +36,36 @@ export default function Settings() {
     },
     onError: error => toast.error(`Gagal menyimpan profil: ${error.message}`),
   });
+
+  const uploadLogo = trpc.organization.uploadLogo.useMutation({
+    onSuccess: async () => {
+      await utils.organization.getSettings.invalidate();
+      toast.success("Logo BPRS berhasil diunggah");
+    },
+    onError: error => toast.error(`Gagal mengunggah logo: ${error.message}`),
+  });
+  const logoInputRef = useRef<HTMLInputElement>(null);
+
+  const handleLogoUpload = (file?: File) => {
+    if (!file) return;
+    const allowed = ["image/png", "image/jpeg", "image/svg+xml"];
+    if (!allowed.includes(file.type)) {
+      toast.error("Format logo harus PNG, JPG, atau SVG");
+      return;
+    }
+    if (file.size > 2 * 1024 * 1024) {
+      toast.error("Ukuran logo maksimal 2 MB");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = String(reader.result || "");
+      const base64 = result.includes(",") ? result.slice(result.indexOf(",") + 1) : result;
+      uploadLogo.mutate({ data: base64, contentType: file.type as "image/png" | "image/jpeg" | "image/svg+xml" });
+    };
+    reader.onerror = () => toast.error("Logo tidak dapat dibaca");
+    reader.readAsDataURL(file);
+  };
 
   const isAdmin = user?.role === "admin";
   const isAdminLoading = settingsQuery.isLoading;
@@ -143,6 +173,44 @@ export default function Settings() {
                       <span className="text-sm text-slate-500">{primaryColor}</span>
                     </div>
                   </div>
+
+                  <div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
+                    <Label>Logo BPRS</Label>
+                    <div className="flex flex-wrap items-center gap-4">
+                      {settingsQuery.data?.logoUrl ? (
+                        <img
+                          src={settingsQuery.data.logoUrl}
+                          alt="Logo BPRS"
+                          className="h-14 w-14 rounded-lg border border-slate-200 bg-white object-contain p-1"
+                        />
+                      ) : (
+                        <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white text-xs text-slate-400">
+                          Belum ada
+                        </div>
+                      )}
+                      <input
+                        ref={logoInputRef}
+                        type="file"
+                        accept="image/png,image/jpeg,image/svg+xml"
+                        className="hidden"
+                        onChange={event => {
+                          handleLogoUpload(event.target.files?.[0]);
+                          event.target.value = "";
+                        }}
+                      />
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => logoInputRef.current?.click()}
+                        disabled={uploadLogo.isPending}
+                      >
+                        {uploadLogo.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <ImageUp className="mr-2 h-4 w-4" />}
+                        {settingsQuery.data?.logoUrl ? "Ganti logo" : "Upload logo"}
+                      </Button>
+                    </div>
+                    <p className="text-xs text-slate-500">PNG, JPG, atau SVG. Maksimal 2 MB. Logo tampil di portal dan laporan.</p>
+                  </div>
+
                   <Button type="submit" disabled={updateSettings.isPending}>
                     {updateSettings.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Save className="mr-2 h-4 w-4" />}
                     Simpan branding

@@ -15,9 +15,28 @@ export function escapeHtml(value: unknown): string {
     .replaceAll("'", "&#39;");
 }
 
+function buildLogoDataUrl(logoUrl: string | null | undefined): string {
+  if (!logoUrl) return "";
+  if (logoUrl.startsWith("data:")) return logoUrl;
+  if (!logoUrl.startsWith("/uploads/")) return "";
+  try {
+    const { readFileSync } = require("node:fs");
+    const { join } = require("node:path");
+    const directory = process.env.UPLOAD_DIR || "/data/uploads";
+    const filename = logoUrl.replace("/uploads/", "");
+    const buffer = readFileSync(join(directory, filename));
+    const mime = filename.endsWith(".svg") ? "image/svg+xml" : filename.endsWith(".png") ? "image/png" : "image/jpeg";
+    return `data:${mime};base64,${buffer.toString("base64")}`;
+  } catch {
+    return "";
+  }
+}
+
 export function generateAssessmentPDF(data: PDFData): string {
   const { assessment, application } = data;
+  const logoDataUrl = buildLogoDataUrl(data.organization?.logoUrl);
   const safe = {
+    logoDataUrl: escapeHtml(logoDataUrl),
     customerName: escapeHtml(application.customerName),
     customerId: escapeHtml(application.customerId),
     businessName: escapeHtml(application.businessName),
@@ -229,6 +248,7 @@ export function generateAssessmentPDF(data: PDFData): string {
 </head>
 <body>
   <div class="header">
+    ${safe.logoDataUrl ? `<img src="${safe.logoDataUrl}" style="max-height:64px;max-width:200px;object-fit:contain;margin:0 auto 8px;" />` : ""}
     <div style="font-size:20px;font-weight:bold;color:#2563eb;margin-bottom:4px;">${safe.orgName}</div>
     ${safe.orgLegalName ? `<div style="font-size:14px;color:#666;margin-bottom:4px;">${safe.orgLegalName}</div>` : ""}
     ${safe.orgAddress ? `<div style="font-size:12px;color:#666;">${safe.orgAddress}</div>` : ""}

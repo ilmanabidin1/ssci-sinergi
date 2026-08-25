@@ -14,6 +14,7 @@ import {
 } from "@shared/ssciMethodology";
 import { generateNarrativeRecommendation } from "./openRouterRecommendations";
 import { hashPassword, verifyPassword } from "./passwordAuth";
+import { decodeLogo, LOGO_CONTENT_TYPES, LogoUploadError, storeLogo } from "./logoUpload";
 import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
@@ -122,6 +123,26 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         await db.updateOrganizationSettings(ctx.user.organizationId, input);
         return { success: true };
+      }),
+    uploadLogo: adminProcedure
+      .input(z.object({
+        data: z.string().min(1).max(2_800_000),
+        contentType: z.enum(LOGO_CONTENT_TYPES),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        let bytes: Buffer;
+        try {
+          bytes = decodeLogo(input.data, input.contentType);
+        } catch (error) {
+          if (error instanceof LogoUploadError) {
+            throw new TRPCError({ code: "BAD_REQUEST", message: error.message });
+          }
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Logo tidak dapat diproses" });
+        }
+        const storedName = await storeLogo(bytes, input.contentType);
+        const logoUrl = `/uploads/${storedName}`;
+        await db.updateOrganizationSettings(ctx.user.organizationId, { logoUrl });
+        return { logoUrl };
       }),
     updateOperatorProfile: protectedProcedure
       .input(z.object({

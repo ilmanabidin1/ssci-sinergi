@@ -42,6 +42,8 @@ async function startServer() {
   app.use(express.json({ limit: "2mb" }));
   app.use(express.urlencoded({ limit: "2mb", extended: true }));
   app.get("/api/health", (_req, res) => res.status(200).json({ ok: true }));
+  const uploadDir = process.env.UPLOAD_DIR || "/data/uploads";
+  app.use("/uploads", express.static(uploadDir));
   // OAuth callback under /api/oauth/callback
   registerOAuthRoutes(app);
   // tRPC API

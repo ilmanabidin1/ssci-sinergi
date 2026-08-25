@@ -15,6 +15,7 @@ export default function ApplicationDetail() {
 
   const orgQuery = trpc.organization.getSettings.useQuery();
   const orgName = orgQuery.data?.name;
+  const orgLogo = orgQuery.data?.logoUrl;
 
   const applicationId = parseInt(id || "0");
   
@@ -175,7 +176,7 @@ export default function ApplicationDetail() {
               </Link>
             </Button>
             <div className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" />
+              {orgLogo ? <img src={orgLogo} alt="Logo BPRS" className="h-7 w-7 rounded object-contain" /> : <Shield className="h-6 w-6 text-primary" />}
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold text-primary">SSCI</h1>
                 {orgName && <span className="hidden rounded-md bg-slate-100 px-1.5 py-0.5 text-xs font-semibold text-slate-500 sm:inline">{orgName}</span>}
