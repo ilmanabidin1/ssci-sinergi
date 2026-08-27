@@ -110,7 +110,10 @@ export const appRouter = router({
     changePassword: protectedProcedure
       .input(z.object({
         currentPassword: z.string().min(4).max(200),
-        newPassword: z.string().min(8).max(200),
+        newPassword: z.string().min(8).max(200).refine(
+          value => /[a-zA-Z]/.test(value) && /\d/.test(value),
+          { message: "Password harus mengandung minimal satu huruf dan satu angka" }
+        ),
       }))
       .mutation(async ({ input, ctx }) => {
         const user = await db.getUserById(ctx.user.id);
@@ -120,6 +123,18 @@ export const appRouter = router({
         const newPasswordHash = await hashPassword(input.newPassword);
         await db.updateUserPassword(user.id, newPasswordHash);
         return { success: true };
+      }),
+    checkPasswordExpiry: protectedProcedure
+      .query(async ({ ctx }) => {
+        const user = await db.getUserById(ctx.user.id);
+        if (!user) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengguna tidak ditemukan" });
+        }
+        const daysSinceChange = Math.floor((Date.now() - user.passwordChangedAt.getTime()) / 86400000);
+        return {
+          expired: daysSinceChange > 90,
+          daysSinceChange,
+        };
       }),
   }),
 
@@ -426,6 +441,7 @@ export const appRouter = router({
         limit: z.number().int().positive().max(100).default(50),
         fromDate: z.date().optional(),
         toDate: z.date().optional(),
+        submittedBy: z.number().int().positive().optional(),
       }).optional())
       .query(({ input, ctx }) => db.getApplicationQueue({
         ...input,
@@ -437,8 +453,27 @@ export const appRouter = router({
       .input(z.object({
         fromDate: z.date().optional(),
         toDate: z.date().optional(),
+        analystId: z.number().int().positive().optional(),
       }).optional())
       .query(({ input, ctx }) => db.getOperationalStats(ctx.user.organizationId, input)),
+
+    listAnalysts: protectedProcedure
+      .query(async ({ ctx }) => {
+        const users = await db.listOrganizationUsers(ctx.user.organizationId);
+        return users
+          .filter(user => user.role === "maker" || user.role === "checker" || user.role === "admin")
+          .map(({ passwordHash: _passwordHash, ...safeUser }) => safeUser);
+      }),
+
+    slaMetrics: protectedProcedure
+      .query(({ ctx }) => db.getSlaMetrics(ctx.user.organizationId)),
+
+    bulkExport: protectedProcedure
+      .input(z.object({
+        fromDate: z.date().optional(),
+        toDate: z.date().optional(),
+      }).optional())
+      .query(({ input, ctx }) => db.getBulkExport(ctx.user.organizationId, input)),
 
     customerMaster: protectedProcedure
       .input(z.object({ search: z.string().trim().max(200).optional() }).optional())

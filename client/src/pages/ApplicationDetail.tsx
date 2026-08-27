@@ -295,12 +295,12 @@ export default function ApplicationDetail() {
       </nav>
 
       <main className="container py-8 max-w-6xl">
-        <div className="mb-6 flex justify-between items-start">
-          <div>
+        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start">
+          <div className="min-w-0">
             <h1 className="text-3xl font-bold text-gray-900">{application.customerName}</h1>
             <p className="text-gray-600 mt-1">{application.businessName}</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {assessment && (
               <Button variant="outline" onClick={handleExportPDF}>
                 <Download className="mr-2 h-4 w-4" />
@@ -710,8 +710,8 @@ export default function ApplicationDetail() {
               ) : (
                 <ul className="space-y-2">
                   {(activityQuery.data ?? []).map(activity => (
-                    <li key={activity.id} className="flex items-center justify-between gap-2 border-b py-2 text-sm last:border-b-0">
-                      <span className="text-gray-700">{activity.action}</span>
+                    <li key={activity.id} className="flex flex-wrap items-center justify-between gap-2 border-b py-2 text-sm last:border-b-0">
+                      <span className="min-w-0 text-gray-700">{activity.action}</span>
                       <span className="whitespace-nowrap text-xs text-gray-500">
                         {new Date(activity.createdAt).toLocaleString("id-ID")}
                       </span>

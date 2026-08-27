@@ -1,5 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useSessionTimeout } from "@/hooks/useSessionTimeout";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -41,6 +42,7 @@ function Router() {
 }
 
 function App() {
+  useSessionTimeout();
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">

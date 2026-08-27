@@ -11,7 +11,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, ImageUp, Info, Landmark, Loader2, Lock, Save, Settings2, UserRound } from "lucide-react";
+import { ArrowLeft, AlertCircle, ImageUp, Info, Landmark, Loader2, Lock, Save, Settings2, UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
@@ -133,6 +133,11 @@ export default function Settings() {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const passwordExpiryQuery = trpc.auth.checkPasswordExpiry.useQuery(undefined, {
+    enabled: !!user,
+    refetchOnWindowFocus: false,
+  });
 
   const changePassword = trpc.auth.changePassword.useMutation({
     onSuccess: () => {
@@ -427,6 +432,23 @@ export default function Settings() {
             <CardDescription>Perbarui password akun Anda untuk keamanan.</CardDescription>
           </CardHeader>
           <CardContent>
+            {passwordExpiryQuery.data?.expired && (
+              <div className="mb-4 flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+                <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
+                <span>Password Anda sudah kedaluwarsa. Silakan ubah password segera.</span>
+              </div>
+            )}
+            {!passwordExpiryQuery.data?.expired &&
+              passwordExpiryQuery.data &&
+              passwordExpiryQuery.data.daysSinceChange > 90 && (
+                <div className="mb-4 flex items-start gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-600">
+                  <Info className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
+                  <span>
+                    Password sudah {passwordExpiryQuery.data.daysSinceChange} hari tidak diubah. Disarankan
+                    memperbarui secara berkala.
+                  </span>
+                </div>
+              )}
             <form className="space-y-4" onSubmit={handleChangePassword}>
               <div className="space-y-2">
                 <Label htmlFor="currentPassword">Password saat ini</Label>

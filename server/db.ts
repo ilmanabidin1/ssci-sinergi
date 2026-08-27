@@ -104,7 +104,7 @@ export async function updateUserPassword(userId: number, newPasswordHash: string
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   await db.update(users)
-    .set({ passwordHash: newPasswordHash, updatedAt: new Date() })
+    .set({ passwordHash: newPasswordHash, passwordChangedAt: new Date(), updatedAt: new Date() })
     .where(eq(users.id, userId));
 }
 
@@ -186,6 +186,7 @@ export async function getApplicationQueue(filters: {
   limit: number;
   fromDate?: Date;
   toDate?: Date;
+  submittedBy?: number;
 }) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
@@ -194,6 +195,7 @@ export async function getApplicationQueue(filters: {
   if (filters.status) conditions.push(eq(applications.status, filters.status));
   if (filters.fromDate) conditions.push(gte(applications.createdAt, filters.fromDate));
   if (filters.toDate) conditions.push(lte(applications.createdAt, filters.toDate));
+  if (filters.submittedBy) conditions.push(eq(applications.submittedBy, filters.submittedBy));
 
   const rows = await db.select().from(applications)
     .where(and(...conditions))
@@ -227,7 +229,7 @@ export async function getApplicationQueue(filters: {
 
 export async function getOperationalStats(
   organizationId: number,
-  filters?: { fromDate?: Date; toDate?: Date }
+  filters?: { fromDate?: Date; toDate?: Date; analystId?: number }
 ) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
@@ -235,6 +237,7 @@ export async function getOperationalStats(
   const applicationConditions = [eq(applications.organizationId, organizationId)];
   if (filters?.fromDate) applicationConditions.push(gte(applications.createdAt, filters.fromDate));
   if (filters?.toDate) applicationConditions.push(lte(applications.createdAt, filters.toDate));
+  if (filters?.analystId) applicationConditions.push(eq(applications.submittedBy, filters.analystId));
   const applicationRows = await db.select().from(applications)
     .where(and(...applicationConditions));
 
@@ -1152,6 +1155,88 @@ export async function getSlikExport(organizationId: number) {
       status: application.status,
       totalScore: assessment ? Number(assessment.totalScore) : null,
       classification: assessment?.classification ?? null,
+      assessedAt: assessment?.assessedAt ?? null,
+    };
+  });
+}
+
+// SLA & turnaround time monitoring
+export async function getSlaMetrics(organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const rows = await db.select({
+    applicationId: applications.id,
+    customerName: applications.customerName,
+    status: applications.status,
+    createdAt: applications.createdAt,
+  })
+    .from(applications)
+    .where(and(
+      eq(applications.organizationId, organizationId),
+      or(eq(applications.status, "pending"), eq(applications.status, "assessed"))!,
+    ))
+    .orderBy(asc(applications.createdAt))
+    .limit(50);
+
+  const now = Date.now();
+  return rows
+    .map(application => {
+      const hoursSinceCreated = Math.round((now - application.createdAt.getTime()) / 3600000);
+      return {
+        applicationId: application.applicationId,
+        customerName: application.customerName,
+        status: application.status,
+        createdAt: application.createdAt,
+        hoursSinceCreated,
+        daysSinceCreated: Math.floor(hoursSinceCreated / 24),
+      };
+    })
+    .sort((a, b) => b.hoursSinceCreated - a.hoursSinceCreated);
+}
+
+// Bulk export of applications with latest assessment
+export async function getBulkExport(organizationId: number, filters?: { fromDate?: Date; toDate?: Date }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const conditions = [eq(applications.organizationId, organizationId)];
+  if (filters?.fromDate) conditions.push(gte(applications.createdAt, filters.fromDate));
+  if (filters?.toDate) conditions.push(lte(applications.createdAt, filters.toDate));
+
+  const rows = await db.select().from(applications)
+    .where(and(...conditions))
+    .orderBy(desc(applications.createdAt));
+
+  if (rows.length === 0) return [];
+
+  const applicationIds = rows.map(application => application.id);
+  const assessmentRows = await db.select().from(assessments)
+    .where(and(
+      eq(assessments.organizationId, organizationId),
+      sql`${assessments.applicationId} IN (${sql.join(applicationIds.map(id => sql`${id}`), sql`, `)})`,
+    ))
+    .orderBy(desc(assessments.assessedAt));
+
+  const latestAssessments = new Map<number, typeof assessmentRows[number]>();
+  for (const assessment of assessmentRows) {
+    if (!latestAssessments.has(assessment.applicationId)) {
+      latestAssessments.set(assessment.applicationId, assessment);
+    }
+  }
+
+  return rows.map(application => {
+    const assessment = latestAssessments.get(application.id);
+    return {
+      customerName: application.customerName,
+      customerId: application.customerId,
+      businessName: application.businessName,
+      requestedAmount: Number(application.requestedAmount),
+      financingTenor: application.financingTenor,
+      status: application.status,
+      totalScore: assessment ? Number(assessment.totalScore) : null,
+      classification: assessment?.classification ?? null,
+      createdAt: application.createdAt,
       assessedAt: assessment?.assessedAt ?? null,
     };
   });
