@@ -4,6 +4,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
 import {
@@ -58,8 +59,20 @@ const formatMoney = (value: number) => `Rp ${value.toLocaleString("id-ID")}`;
 export default function Dashboard() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
   const [status, setStatus] = useState<Status>("all");
-  const queueQuery = trpc.applications.queue.useQuery(status === "all" ? undefined : { status });
-  const statsQuery = trpc.applications.operationalStats.useQuery();
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+
+  const dateInput = {
+    fromDate: fromDate ? new Date(`${fromDate}T00:00:00`) : undefined,
+    toDate: toDate ? new Date(`${toDate}T23:59:59`) : undefined,
+  };
+  const hasDateFilter = Boolean(fromDate || toDate);
+
+  const queueQuery = trpc.applications.queue.useQuery({
+    ...(status !== "all" ? { status } : {}),
+    ...dateInput,
+  });
+  const statsQuery = trpc.applications.operationalStats.useQuery(dateInput);
   const trendQuery = trpc.applications.dashboardTrend.useQuery();
   const analystQuery = trpc.applications.analystPerformance.useQuery();
   const orgQuery = trpc.organization.getSettings.useQuery();
@@ -370,6 +383,43 @@ export default function Dashboard() {
 
         {/* Queue */}
         <section className="mt-8">
+          <div className="mb-4 flex flex-col gap-3 rounded-lg border border-slate-200 bg-white p-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="flex flex-wrap items-end gap-3">
+              <div className="space-y-1">
+                <label htmlFor="fromDate" className="block text-xs font-medium text-slate-500">Dari tanggal</label>
+                <Input
+                  id="fromDate"
+                  type="date"
+                  value={fromDate}
+                  onChange={event => setFromDate(event.target.value)}
+                  className="w-44"
+                />
+              </div>
+              <div className="space-y-1">
+                <label htmlFor="toDate" className="block text-xs font-medium text-slate-500">Sampai tanggal</label>
+                <Input
+                  id="toDate"
+                  type="date"
+                  value={toDate}
+                  onChange={event => setToDate(event.target.value)}
+                  className="w-44"
+                />
+              </div>
+              {hasDateFilter && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setFromDate("");
+                    setToDate("");
+                  }}
+                >
+                  Reset tanggal
+                </Button>
+              )}
+            </div>
+            <p className="text-xs text-slate-500">Filter berlaku pada queue dan ringkasan status.</p>
+          </div>
           <Card className="border-0 shadow-sm">
             <CardHeader className="flex flex-col gap-4 border-b px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
               <div>

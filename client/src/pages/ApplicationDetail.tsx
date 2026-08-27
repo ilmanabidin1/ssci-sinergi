@@ -218,19 +218,24 @@ export default function ApplicationDetail() {
   const handleExportPDF = async () => {
     try {
       const result = await utils.client.assessments.exportReport.mutate({ applicationId });
-      
-      // Create a Blob from HTML and trigger download
-      const blob = new Blob([result.html], { type: 'text/html' });
+
+      const byteCharacters = atob(result.pdf);
+      const byteNumbers = new Array<number>(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], { type: "application/pdf" });
       const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = url;
-       link.download = result.filename;
+      link.download = result.filename.replace(/\.html$/i, ".pdf");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
-      
-       toast.success("Laporan HTML aman berhasil diunduh dan dapat dicetak ke PDF.");
+
+      toast.success("Laporan PDF berhasil diunduh.");
     } catch (error) {
       toast.error("Gagal mengekspor PDF");
     }

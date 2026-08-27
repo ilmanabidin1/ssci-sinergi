@@ -88,6 +88,26 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
+export async function getUserById(id: number) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get user: database not available");
+    return undefined;
+  }
+
+  const result = await db.select().from(users).where(eq(users.id, id)).limit(1);
+
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function updateUserPassword(userId: number, newPasswordHash: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(users)
+    .set({ passwordHash: newPasswordHash, updatedAt: new Date() })
+    .where(eq(users.id, userId));
+}
+
 // Application queries
 export async function createApplication(data: InsertApplication & { organizationId: number }) {
   const db = await getDb();
@@ -164,12 +184,16 @@ export async function getApplicationQueue(filters: {
   organizationId: number;
   status?: "pending" | "assessed" | "approved" | "rejected" | "cancelled";
   limit: number;
+  fromDate?: Date;
+  toDate?: Date;
 }) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
   const conditions = [eq(applications.organizationId, filters.organizationId)];
   if (filters.status) conditions.push(eq(applications.status, filters.status));
+  if (filters.fromDate) conditions.push(gte(applications.createdAt, filters.fromDate));
+  if (filters.toDate) conditions.push(lte(applications.createdAt, filters.toDate));
 
   const rows = await db.select().from(applications)
     .where(and(...conditions))
@@ -201,14 +225,24 @@ export async function getApplicationQueue(filters: {
   }));
 }
 
-export async function getOperationalStats(organizationId: number) {
+export async function getOperationalStats(
+  organizationId: number,
+  filters?: { fromDate?: Date; toDate?: Date }
+) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
+  const applicationConditions = [eq(applications.organizationId, organizationId)];
+  if (filters?.fromDate) applicationConditions.push(gte(applications.createdAt, filters.fromDate));
+  if (filters?.toDate) applicationConditions.push(lte(applications.createdAt, filters.toDate));
   const applicationRows = await db.select().from(applications)
-    .where(eq(applications.organizationId, organizationId));
+    .where(and(...applicationConditions));
+
+  const assessmentConditions = [eq(assessments.organizationId, organizationId)];
+  if (filters?.fromDate) assessmentConditions.push(gte(assessments.assessedAt, filters.fromDate));
+  if (filters?.toDate) assessmentConditions.push(lte(assessments.assessedAt, filters.toDate));
   const assessmentRows = await db.select().from(assessments)
-    .where(eq(assessments.organizationId, organizationId));
+    .where(and(...assessmentConditions));
 
   const counts = { pending: 0, assessed: 0, approved: 0, rejected: 0, cancelled: 0 };
   for (const application of applicationRows) counts[application.status]++;
@@ -938,6 +972,28 @@ export async function listApplicationActivity(organizationId: number, applicatio
       eq(auditLogs.entityId, applicationId)
     ))
     .orderBy(desc(auditLogs.createdAt));
+}
+
+export async function listAuditLogs(organizationId: number, filters?: {
+  limit?: number;
+  offset?: number;
+  action?: string;
+  entityId?: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const limit = filters?.limit ?? 100;
+  const offset = filters?.offset ?? 0;
+  const conditions = [eq(auditLogs.organizationId, organizationId)];
+  if (filters?.action) conditions.push(eq(auditLogs.action, filters.action));
+  if (filters?.entityId !== undefined) conditions.push(eq(auditLogs.entityId, filters.entityId));
+
+  return db.select().from(auditLogs)
+    .where(and(...conditions))
+    .orderBy(desc(auditLogs.createdAt))
+    .limit(limit)
+    .offset(offset);
 }
 
 // Credit policy

@@ -6,7 +6,7 @@ import { z } from "zod";
 import * as db from "./db";
 import { calculateRecommendedPlafon, calculateSSCI } from "./scoring";
 import { TRPCError } from "@trpc/server";
-import { generateAssessmentPDF } from "./pdfGenerator";
+import { generatePdfReport } from "./pdfReport";
 import {
   SSCI_LEGAL_DOCUMENT_STATUSES,
   SSCI_METHODOLOGY_VERSION,
@@ -107,6 +107,20 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+    changePassword: protectedProcedure
+      .input(z.object({
+        currentPassword: z.string().min(4).max(200),
+        newPassword: z.string().min(8).max(200),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const user = await db.getUserById(ctx.user.id);
+        if (!user?.passwordHash || !(await verifyPassword(input.currentPassword, user.passwordHash))) {
+          throw new TRPCError({ code: "UNAUTHORIZED", message: "Password saat ini tidak sesuai" });
+        }
+        const newPasswordHash = await hashPassword(input.newPassword);
+        await db.updateUserPassword(user.id, newPasswordHash);
+        return { success: true };
+      }),
   }),
 
   organization: router({
@@ -229,6 +243,13 @@ export const appRouter = router({
         });
         return { success: true };
       }),
+    auditLog: adminProcedure
+      .input(z.object({
+        limit: z.number().int().positive().max(500).optional(),
+        offset: z.number().int().min(0).optional(),
+        action: z.string().trim().max(64).optional(),
+      }).optional())
+      .query(({ input, ctx }) => db.listAuditLogs(ctx.user.organizationId, input)),
   }),
 
   notifications: router({
@@ -403,6 +424,8 @@ export const appRouter = router({
       .input(z.object({
         status: z.enum(["pending", "assessed", "approved", "rejected", "cancelled"]).optional(),
         limit: z.number().int().positive().max(100).default(50),
+        fromDate: z.date().optional(),
+        toDate: z.date().optional(),
       }).optional())
       .query(({ input, ctx }) => db.getApplicationQueue({
         ...input,
@@ -411,7 +434,11 @@ export const appRouter = router({
       })),
 
     operationalStats: protectedProcedure
-      .query(({ ctx }) => db.getOperationalStats(ctx.user.organizationId)),
+      .input(z.object({
+        fromDate: z.date().optional(),
+        toDate: z.date().optional(),
+      }).optional())
+      .query(({ input, ctx }) => db.getOperationalStats(ctx.user.organizationId, input)),
 
     customerMaster: protectedProcedure
       .input(z.object({ search: z.string().trim().max(200).optional() }).optional())
@@ -657,12 +684,12 @@ export const appRouter = router({
         }
 
         const organization = await db.getOrganizationById(ctx.user.organizationId);
-        const htmlContent = generateAssessmentPDF({ application, assessment, organization });
+        const pdfBuffer = await generatePdfReport({ application, assessment, organization });
         await db.recordReportExport(ctx.user.id, application.id, ctx.user.organizationId);
         
         return {
-          html: htmlContent,
-          filename: `SSCI_Assessment_${application.id}_${Date.now()}.html`,
+          pdf: pdfBuffer.toString("base64"),
+          filename: `SSCI_Laporan_${application.id}_${Date.now()}.pdf`,
         };
       }),
   }),
