@@ -1,5 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useSessionTimeout } from "@/hooks/useSessionTimeout";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -8,6 +9,7 @@ import Home from "./pages/Home";
 import NewApplication from "./pages/NewApplication";
 import ApplicationDetail from "./pages/ApplicationDetail";
 import AssessmentHistory from "./pages/AssessmentHistory";
+import AuditLog from "./pages/AuditLog";
 import Dashboard from "./pages/Dashboard";
 import AboutSSCI from "./pages/AboutSSCI";
 import Login from "./pages/Login";
@@ -32,6 +34,7 @@ function Router() {
       <Route path={"/tim"} component={Team} />
       <Route path={"/nasabah"} component={Customers} />
       <Route path={"/notifikasi"} component={Notifications} />
+      <Route path={"/audit"} component={AuditLog} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
@@ -39,6 +42,7 @@ function Router() {
 }
 
 function App() {
+  useSessionTimeout();
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">

@@ -218,19 +218,24 @@ export default function ApplicationDetail() {
   const handleExportPDF = async () => {
     try {
       const result = await utils.client.assessments.exportReport.mutate({ applicationId });
-      
-      // Create a Blob from HTML and trigger download
-      const blob = new Blob([result.html], { type: 'text/html' });
+
+      const byteCharacters = atob(result.pdf);
+      const byteNumbers = new Array<number>(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], { type: "application/pdf" });
       const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = url;
-       link.download = result.filename;
+      link.download = result.filename.replace(/\.html$/i, ".pdf");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
-      
-       toast.success("Laporan HTML aman berhasil diunduh dan dapat dicetak ke PDF.");
+
+      toast.success("Laporan PDF berhasil diunduh.");
     } catch (error) {
       toast.error("Gagal mengekspor PDF");
     }
@@ -290,12 +295,12 @@ export default function ApplicationDetail() {
       </nav>
 
       <main className="container py-8 max-w-6xl">
-        <div className="mb-6 flex justify-between items-start">
-          <div>
+        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start">
+          <div className="min-w-0">
             <h1 className="text-3xl font-bold text-gray-900">{application.customerName}</h1>
             <p className="text-gray-600 mt-1">{application.businessName}</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {assessment && (
               <Button variant="outline" onClick={handleExportPDF}>
                 <Download className="mr-2 h-4 w-4" />
@@ -705,8 +710,8 @@ export default function ApplicationDetail() {
               ) : (
                 <ul className="space-y-2">
                   {(activityQuery.data ?? []).map(activity => (
-                    <li key={activity.id} className="flex items-center justify-between gap-2 border-b py-2 text-sm last:border-b-0">
-                      <span className="text-gray-700">{activity.action}</span>
+                    <li key={activity.id} className="flex flex-wrap items-center justify-between gap-2 border-b py-2 text-sm last:border-b-0">
+                      <span className="min-w-0 text-gray-700">{activity.action}</span>
                       <span className="whitespace-nowrap text-xs text-gray-500">
                         {new Date(activity.createdAt).toLocaleString("id-ID")}
                       </span>

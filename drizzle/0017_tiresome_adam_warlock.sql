@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `passwordChangedAt` timestamp DEFAULT (now()) NOT NULL;

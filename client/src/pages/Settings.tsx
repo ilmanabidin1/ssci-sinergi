@@ -11,7 +11,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, ImageUp, Info, Landmark, Loader2, Save, Settings2, UserRound } from "lucide-react";
+import { ArrowLeft, AlertCircle, ImageUp, Info, Landmark, Loader2, Lock, Save, Settings2, UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
@@ -129,6 +129,38 @@ export default function Settings() {
 
   const isAdmin = user?.role === "admin";
   const isAdminLoading = settingsQuery.isLoading;
+
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const passwordExpiryQuery = trpc.auth.checkPasswordExpiry.useQuery(undefined, {
+    enabled: !!user,
+    refetchOnWindowFocus: false,
+  });
+
+  const changePassword = trpc.auth.changePassword.useMutation({
+    onSuccess: () => {
+      toast.success("Password berhasil diubah");
+      setCurrentPassword("");
+      setNewPassword("");
+      setConfirmPassword("");
+    },
+    onError: error => toast.error(`Gagal mengubah password: ${error.message}`),
+  });
+
+  const handleChangePassword = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (newPassword !== confirmPassword) {
+      toast.error("Password baru dan konfirmasi tidak cocok");
+      return;
+    }
+    if (newPassword.length < 8) {
+      toast.error("Password baru minimal 8 karakter");
+      return;
+    }
+    changePassword.mutate({ currentPassword, newPassword });
+  };
 
   const handleBrandingSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -386,6 +418,82 @@ export default function Settings() {
               <Button type="submit" disabled={updateOperatorProfile.isPending}>
                 {updateOperatorProfile.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Save className="mr-2 h-4 w-4" />}
                 Simpan profil
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+
+        <Card className="border-0 shadow-sm">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Lock className="h-5 w-5 text-primary" />
+              Ubah Password
+            </CardTitle>
+            <CardDescription>Perbarui password akun Anda untuk keamanan.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {passwordExpiryQuery.data?.expired && (
+              <div className="mb-4 flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+                <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
+                <span>Password Anda sudah kedaluwarsa. Silakan ubah password segera.</span>
+              </div>
+            )}
+            {!passwordExpiryQuery.data?.expired &&
+              passwordExpiryQuery.data &&
+              passwordExpiryQuery.data.daysSinceChange > 90 && (
+                <div className="mb-4 flex items-start gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-600">
+                  <Info className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
+                  <span>
+                    Password sudah {passwordExpiryQuery.data.daysSinceChange} hari tidak diubah. Disarankan
+                    memperbarui secara berkala.
+                  </span>
+                </div>
+              )}
+            <form className="space-y-4" onSubmit={handleChangePassword}>
+              <div className="space-y-2">
+                <Label htmlFor="currentPassword">Password saat ini</Label>
+                <Input
+                  id="currentPassword"
+                  type="password"
+                  value={currentPassword}
+                  onChange={event => setCurrentPassword(event.target.value)}
+                  required
+                  autoComplete="current-password"
+                />
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="newPassword">Password baru</Label>
+                  <Input
+                    id="newPassword"
+                    type="password"
+                    value={newPassword}
+                    onChange={event => setNewPassword(event.target.value)}
+                    required
+                    minLength={8}
+                    autoComplete="new-password"
+                  />
+                  <p className="text-xs text-slate-500">Minimal 8 karakter</p>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="confirmPassword">Konfirmasi password baru</Label>
+                  <Input
+                    id="confirmPassword"
+                    type="password"
+                    value={confirmPassword}
+                    onChange={event => setConfirmPassword(event.target.value)}
+                    required
+                    minLength={8}
+                    autoComplete="new-password"
+                  />
+                  {confirmPassword !== "" && newPassword !== confirmPassword && (
+                    <p className="text-xs text-red-600">Konfirmasi tidak cocok dengan password baru</p>
+                  )}
+                </div>
+              </div>
+              <Button type="submit" disabled={changePassword.isPending}>
+                {changePassword.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Lock className="mr-2 h-4 w-4" />}
+                Ubah password
               </Button>
             </form>
           </CardContent>

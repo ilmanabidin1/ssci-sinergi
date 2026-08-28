@@ -4,6 +4,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
 import {
@@ -37,6 +38,19 @@ import {
 
 type Status = "all" | "pending" | "assessed" | "approved" | "rejected" | "cancelled";
 
+type BulkExportRow = {
+  customerName: string;
+  customerId: string;
+  businessName: string;
+  requestedAmount: number | string;
+  financingTenor: number;
+  status: string;
+  totalScore: number | null;
+  classification: string | null;
+  createdAt: Date | string | null;
+  assessedAt: Date | string | null;
+};
+
 const statusLabels: Record<Exclude<Status, "all">, string> = {
   pending: "Menunggu penilaian",
   assessed: "Menunggu keputusan",
@@ -58,8 +72,26 @@ const formatMoney = (value: number) => `Rp ${value.toLocaleString("id-ID")}`;
 export default function Dashboard() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
   const [status, setStatus] = useState<Status>("all");
-  const queueQuery = trpc.applications.queue.useQuery(status === "all" ? undefined : { status });
-  const statsQuery = trpc.applications.operationalStats.useQuery();
+  const [analystId, setAnalystId] = useState<string>("all");
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+
+  const dateInput = {
+    fromDate: fromDate ? new Date(`${fromDate}T00:00:00`) : undefined,
+    toDate: toDate ? new Date(`${toDate}T23:59:59`) : undefined,
+  };
+  const hasDateFilter = Boolean(fromDate || toDate);
+  const analystFilter = analystId !== "all" ? Number(analystId) : undefined;
+
+  const queueQuery = trpc.applications.queue.useQuery({
+    ...(status !== "all" ? { status } : {}),
+    ...(analystFilter !== undefined ? { submittedBy: analystFilter } : {}),
+    ...dateInput,
+  });
+  const statsQuery = trpc.applications.operationalStats.useQuery({
+    ...dateInput,
+    ...(analystFilter !== undefined ? { analystId: analystFilter } : {}),
+  });
   const trendQuery = trpc.applications.dashboardTrend.useQuery();
   const analystQuery = trpc.applications.analystPerformance.useQuery();
   const orgQuery = trpc.organization.getSettings.useQuery();
@@ -69,11 +101,14 @@ export default function Dashboard() {
   const isError = queueQuery.isError || statsQuery.isError;
   const applications = queueQuery.data ?? [];
   const stats = statsQuery.data;
+  const slaQuery = trpc.applications.slaMetrics.useQuery();
+  const analystsQuery = trpc.applications.listAnalysts.useQuery();
   const refresh = () => {
     void queueQuery.refetch();
     void statsQuery.refetch();
     void trendQuery.refetch();
     void analystQuery.refetch();
+    void slaQuery.refetch();
   };
   const utils = trpc.useUtils();
   const deleteAssessment = trpc.assessments.delete.useMutation({
@@ -151,6 +186,51 @@ export default function Dashboard() {
       toast.success("Export SLIK berhasil diunduh.");
     } catch (error) {
       toast.error(`Gagal mengekspor SLIK: ${(error as Error).message}`);
+    }
+  };
+
+  const bulkExportQuery = trpc.applications.bulkExport.useQuery({
+    ...(dateInput.fromDate ? { fromDate: dateInput.fromDate } : {}),
+    ...(dateInput.toDate ? { toDate: dateInput.toDate } : {}),
+  }, { enabled: false });
+
+  const handleExportAll = async () => {
+    try {
+      const rows = (await bulkExportQuery.refetch()).data as BulkExportRow[] | undefined;
+      if (!rows || rows.length === 0) {
+        toast.error("Tidak ada data untuk diekspor.");
+        return;
+      }
+      const header = ["Nama", "NIK", "Usaha", "Pembiayaan", "Tenor", "Status", "Skor", "Klasifikasi", "Dibuat", "Dinilai"];
+      const escapeCell = (value: string | number | null | undefined) => {
+        const text = value === null || value === undefined ? "" : String(value);
+        return `"${text.replace(/"/g, '""')}"`;
+      };
+      const lines = rows.map(row => [
+        row.customerName,
+        row.customerId,
+        row.businessName,
+        row.requestedAmount,
+        row.financingTenor,
+        row.status,
+        row.totalScore !== null && row.totalScore !== undefined ? row.totalScore : "",
+        row.classification ?? "",
+        row.createdAt ? new Date(row.createdAt).toLocaleDateString("id-ID") : "",
+        row.assessedAt ? new Date(row.assessedAt).toLocaleDateString("id-ID") : "",
+      ]);
+      const csv = [header, ...lines].map(line => line.map(escapeCell).join(",")).join("\r\n");
+      const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `export-semua-${new Date().toISOString().slice(0, 10)}.csv`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      toast.success("Export semua berhasil diunduh.");
+    } catch (error) {
+      toast.error(`Gagal mengekspor data: ${(error as Error).message}`);
     }
   };
 
@@ -298,6 +378,75 @@ export default function Dashboard() {
           </div>
         </section>
 
+        {/* SLA & wait time */}
+        <section className="mt-8">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">SLA &amp; Waktu tunggu</h2>
+          <Card className="border-0 shadow-sm">
+            <CardHeader className="border-b px-6 py-5">
+              <CardTitle>Pengajuan menunggu lama</CardTitle>
+              <p className="mt-1 text-sm text-slate-500">
+                Pengajuan dengan waktu tunggu melebihi 48 jam perlu diprioritaskan.
+              </p>
+            </CardHeader>
+            <CardContent className="p-0">
+              {slaQuery.isLoading ? (
+                <div className="flex items-center justify-center gap-2 py-16 text-slate-500">
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                  Memuat SLA...
+                </div>
+              ) : slaQuery.isError ? (
+                <div className="flex flex-col items-center gap-3 py-16 text-center text-red-600">
+                  <AlertCircle className="h-8 w-8" />
+                  <p>Data SLA tidak dapat dimuat.</p>
+                  <Button variant="outline" onClick={() => slaQuery.refetch()}>
+                    Coba lagi
+                  </Button>
+                </div>
+              ) : (slaQuery.data ?? []).length === 0 ? (
+                <div className="py-16 text-center text-slate-500">Tidak ada pengajuan menunggu.</div>
+              ) : (
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[520px] text-left text-sm">
+                    <thead className="bg-slate-50 text-xs uppercase text-slate-500">
+                      <tr>
+                        <th className="px-6 py-3 font-semibold">Nasabah</th>
+                        <th className="px-6 py-3 font-semibold">Status</th>
+                        <th className="px-6 py-3 font-semibold">Waktu tunggu</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      {(slaQuery.data ?? []).map(row => {
+                        const isOverdue = row.hoursSinceCreated > 48;
+                        const waitText =
+                          row.hoursSinceCreated > 24
+                            ? `${row.daysSinceCreated} hari`
+                            : `${row.hoursSinceCreated} jam`;
+                        return (
+                          <tr key={row.applicationId} className="hover:bg-slate-50">
+                            <td className="px-6 py-3 font-semibold text-slate-900">{row.customerName}</td>
+                            <td className="px-6 py-3">
+                              <Badge variant={statusTone[row.status] as "default" | "destructive" | "secondary"}>
+                                {statusLabels[row.status as Exclude<Status, "all">] ?? row.status}
+                              </Badge>
+                            </td>
+                            <td
+                              className={`whitespace-nowrap px-6 py-3 ${
+                                isOverdue ? "font-semibold text-amber-600" : "text-slate-600"
+                              }`}
+                            >
+                              {waitText}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </section>
+
         {/* Analytics charts */}
         <section className="mt-8">
           <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">Analitik</h2>
@@ -370,13 +519,50 @@ export default function Dashboard() {
 
         {/* Queue */}
         <section className="mt-8">
+          <div className="mb-4 flex flex-col gap-3 rounded-lg border border-slate-200 bg-white p-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="flex flex-wrap items-end gap-3">
+              <div className="space-y-1">
+                <label htmlFor="fromDate" className="block text-xs font-medium text-slate-500">Dari tanggal</label>
+                <Input
+                  id="fromDate"
+                  type="date"
+                  value={fromDate}
+                  onChange={event => setFromDate(event.target.value)}
+                  className="w-44"
+                />
+              </div>
+              <div className="space-y-1">
+                <label htmlFor="toDate" className="block text-xs font-medium text-slate-500">Sampai tanggal</label>
+                <Input
+                  id="toDate"
+                  type="date"
+                  value={toDate}
+                  onChange={event => setToDate(event.target.value)}
+                  className="w-44"
+                />
+              </div>
+              {hasDateFilter && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setFromDate("");
+                    setToDate("");
+                  }}
+                >
+                  Reset tanggal
+                </Button>
+              )}
+            </div>
+            <p className="text-xs text-slate-500">Filter berlaku pada queue dan ringkasan status.</p>
+          </div>
           <Card className="border-0 shadow-sm">
             <CardHeader className="flex flex-col gap-4 border-b px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <CardTitle>Queue pengajuan</CardTitle>
                 <p className="mt-1 text-sm text-slate-500">Prioritas pekerjaan assessment dan keputusan.</p>
               </div>
-              <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
+              <div className="flex w-full flex-col flex-wrap gap-2 sm:w-auto sm:flex-row sm:items-center">
                 <Button variant="outline" onClick={handleExportSlik} disabled={exportSlikQuery.isFetching}>
                   {exportSlikQuery.isFetching ? (
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -384,6 +570,14 @@ export default function Dashboard() {
                     <Download className="mr-2 h-4 w-4" />
                   )}
                   Export SLIK
+                </Button>
+                <Button variant="outline" onClick={handleExportAll} disabled={bulkExportQuery.isFetching}>
+                  {bulkExportQuery.isFetching ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    <Download className="mr-2 h-4 w-4" />
+                  )}
+                  Export Semua
                 </Button>
                 <Select value={status} onValueChange={(value) => setStatus(value as Status)}>
                   <SelectTrigger className="w-full sm:w-56" aria-label="Filter status">
@@ -394,6 +588,19 @@ export default function Dashboard() {
                     {Object.entries(statusLabels).map(([key, label]) => (
                       <SelectItem key={key} value={key}>
                         {label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select value={analystId} onValueChange={setAnalystId}>
+                  <SelectTrigger className="w-full sm:w-56" aria-label="Filter analis">
+                    <SelectValue placeholder="Semua analis" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Semua analis</SelectItem>
+                    {(analystsQuery.data ?? []).map(analyst => (
+                      <SelectItem key={analyst.id} value={String(analyst.id)}>
+                        {analyst.name || analyst.email}
                       </SelectItem>
                     ))}
                   </SelectContent>
