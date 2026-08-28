@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKADIFY - Platform AI Pengembangan Akad Syariah Otomatis</title>
+  <!-- Favicon transparan untuk browser tab -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Stepper Styling */
+    .stepper-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .stepper-container::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: #e2e8f0;
+      z-index: 1;
+    }
+    .step-item {
+      position: relative;
+      z-index: 2;
+      background: white;
+      padding: 0 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+    }
+    .step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+    .step-item.active .step-number {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+    .step-item.completed .step-number {
+      background: var(--success);
+      color: white;
+    }
+    .step-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .step-item.active .step-label {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+    .pihak-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .pihak-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.85rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       LANDING PAGE PUBLIK MODERN (AKADIFY)
+       ========================================== -->
+  <div id="landing-page-container">
+    <!-- Navbar Landing -->
+    <header class="landing-nav">
+      <div style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;" onclick="quickStartDemo()" title="AKADIFY - Beranda / Dashboard">
+        <img src="logo_transparent.png" alt="AKADIFY Logo" style="height: 42px; width: auto; display: block;">
+      </div>
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <a href="#fitur-section" style="text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 600; margin-right: 0.5rem;">Fitur Unggulan</a>
+        <a href="#riset-section" style="text-decoration: none; color: var(--text-muted); font-size: 0.9rem; font-weight: 600; margin-right: 0.5rem;">Riset & Legalitas</a>
+        <button class="btn btn-outline" onclick="openLoginModal('register')" style="padding: 0.6rem 1.15rem; font-size: 0.85rem; border-radius: 30px; font-weight: 600;">
+          📝 Daftar Lembaga
+        </button>
+        <button class="btn btn-outline" onclick="openLoginModal('login')" style="padding: 0.6rem 1.25rem; font-size: 0.85rem; border-radius: 30px; font-weight: 600;">
+          🔐 Masuk
+        </button>
+        <button class="btn btn-primary" onclick="quickStartDemo()" style="padding: 0.6rem 1.35rem; font-size: 0.85rem; border-radius: 30px; box-shadow: 0 4px 14px rgba(4, 120, 87, 0.3); font-weight: 700;">
+          🚀 Buka Dashboard
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="landing-hero">
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-subtle); color: var(--primary-dark); padding: 0.4rem 1rem; border-radius: 30px; font-size: 0.825rem; font-weight: 700; margin-bottom: 1.5rem; border: 1px solid rgba(16, 185, 129, 0.3);">
+        🏛️ Riset Terapan PDUPT Fakultas Hukum UNISBA 2026
+      </div>
+      <h1>Platform AI Pengembangan & Legalitas <span>Akad Syariah Otomatis</span></h1>
+      <p>Solusi cerdas bagi Koperasi Syariah (BMT/KSPPS) dan Dewan Pengawas Syariah (DPS) untuk menyusun dokumen akad yang sah secara hukum perdata, patuh 100% pada Fatwa DSN-MUI, dan bebas dari unsur Riba, Gharar, serta Maisir.</p>
+      
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn btn-primary" onclick="quickStartDemo()" style="padding: 0.85rem 2rem; font-size: 1rem; border-radius: 30px; font-weight: 700; box-shadow: 0 4px 15px rgba(4, 120, 87, 0.35);">
+          🚀 Mulai / Masuk Dashboard
+        </button>
+        <button class="btn btn-outline" onclick="openLoginModal('login')" style="padding: 0.85rem 1.75rem; font-size: 1rem; border-radius: 30px; font-weight: 600; background: white;">
+          🔐 Masuk Akun
+        </button>
+        <button class="btn btn-outline" onclick="openLoginModal('register')" style="padding: 0.85rem 1.75rem; font-size: 1rem; border-radius: 30px; font-weight: 600; background: white;">
+          📝 Registrasi Lembaga
+        </button>
+      </div>
+
+      <div style="margin-top: 3.5rem; display: flex; justify-content: center; gap: 2rem; color: var(--text-muted); font-size: 0.85rem; flex-wrap: wrap;">
+        <div>✅ <strong>100% Kepatuhan Fatwa DSN-MUI</strong></div>
+        <div>✅ <strong>Kalkulator Finansial & Margin Otomatis</strong></div>
+        <div>✅ <strong>Verifikasi QR Code & Export Word (.doc)</strong></div>
+      </div>
+    </section>
+
+    <!-- Feature Grid Section -->
+    <section id="fitur-section" style="padding: 4rem 1.5rem; background: #f8fafc; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+        <h2 style="font-size: 2rem; color: #0f172a; font-weight: 800;">Ekosistem Terintegrasi Koperasi Syariah</h2>
+        <p style="color: var(--text-muted); margin-top: 0.5rem;">Didesain khusus untuk efisiensi, akurasi hukum, dan transparansi tata kelola pembiayaan syariah.</p>
+      </div>
+
+      <div class="landing-features-grid">
+        <div class="feature-box">
+          <div class="feature-icon"><img src="icons/generator.svg" alt="Generator Akad" style="width: 32px; height: 32px; filter: invert(34%) sepia(85%) saturate(850%) hue-rotate(120deg) brightness(85%);"></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #0f172a;">AI Akad Generator Dinamis</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Menyusun klausula hukum secara presisi untuk Murabahah, Mudharabah, Ijarah, Qardh, dan Syirkah dalam hitungan detik.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"><img src="icons/calculator.svg" alt="Kalkulator" style="width: 32px; height: 32px; filter: invert(34%) sepia(85%) saturate(850%) hue-rotate(120deg) brightness(85%);"></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #0f172a;">Kalkulator & Amortisasi</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Simulasi margin tetap, bagi hasil nisbah, dan tabel jadwal angsuran bulanan yang dapat langsung diterapkan ke form akad.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"><img src="icons/verification.svg" alt="Compliance Engine" style="width: 32px; height: 32px; filter: invert(34%) sepia(85%) saturate(850%) hue-rotate(120deg) brightness(85%);"></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #0f172a;">DSN-MUI Compliance Engine</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Pemeriksaan otomatis rukun dan syarat akad secara real-time guna memastikan dokumen bebas dari riba dan cacat hukum.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"><img src="icons/ai-syariah.svg" alt="Konsultan AI" style="width: 32px; height: 32px; filter: invert(34%) sepia(85%) saturate(850%) hue-rotate(120deg) brightness(85%);"></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #0f172a;">Konsultan Syariah AI</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Asisten interaktif cerdas untuk konsultasi fiqih muamalah, mitigasi risiko sengketa, dan telaah regulasi perbankan syariah.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Riset Attribution Section -->
+    <section id="riset-section" style="padding: 4rem 1.5rem; text-align: center; max-width: 900px; margin: 0 auto;">
+      <h3 style="font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem;">Landasan Riset & Pengembang</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">
+        Aplikasi ini dikembangkan berdasarkan Riset Terapan Hibah PDUPT (Penelitian Terapan Unggulan Perguruan Tinggi) Kemendikbudristek 2026 dengan judul:
+        <br>
+        <strong>"Model Pengembangan Akad Perjanjian Berbasis Artificial Intelligence untuk Penguatan Tata Kelola Koperasi Syariah"</strong>
+      </p>
+      <div style="display: inline-flex; gap: 2rem; justify-content: center; flex-wrap: wrap; background: #f1f5f9; padding: 1rem 2rem; border-radius: 12px; font-size: 0.9rem;">
+        <div>👤 <strong>Prof. Dr. Neni Sri Imaniyati, S.H., M.Hum.</strong> (Guru Besar Hukum Bisnis Syariah)</div>
+        <div>👤 <strong>Dr. M. Ilman Abidin, S.H., M.H.</strong> (Peneliti Hukum & Teknologi)</div>
+      </div>
+    </section>
+
+    <!-- Footer Landing -->
+    <footer style="background: #0f172a; color: #94a3b8; text-align: center; padding: 2.5rem 1.5rem; font-size: 0.85rem; border-top: 1px solid #1e293b;">
+      <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+        <a href="javascript:void(0)" onclick="toggleFooterModal('about')" style="color: #cbd5e1; text-decoration: none; font-weight: 500;">📖 Tentang & Tim Peneliti</a>
+        <span style="color: #475569;">•</span>
+        <a href="javascript:void(0)" onclick="toggleFooterModal('terms')" style="color: #cbd5e1; text-decoration: none; font-weight: 500;">⚖️ Syarat & Kepatuhan Fatwa</a>
+        <span style="color: #475569;">•</span>
+        <a href="javascript:void(0)" onclick="toggleFooterModal('privacy')" style="color: #34d399; text-decoration: none; font-weight: 600;">🛡️ Kebijakan Privasi</a>
+      </div>
+      <p>© 2026 AKADIFY. Hak Cipta Dilindungi Undang-Undang. Fakultas Hukum Universitas Islam Bandung (UNISBA).</p>
+    </footer>
+  </div>
+
+  <!-- ==========================================
+       MODAL AUTHENTICATION (LOGIN & REGISTRASI)
+       ========================================== -->
+  <div id="auth-modal" class="auth-modal-overlay" style="display: none;">
+    <div class="auth-card" style="max-width: 480px;">
+      <div style="background: #0f172a; padding: 1.5rem; text-align: center; color: #ffffff; position: relative;">
+        <button onclick="closeLoginModal()" style="position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer;">&times;</button>
+        <img src="logo_transparent.png" alt="AKADIFY" style="height: 42px; margin-bottom: 0.5rem;">
+        <h3 id="auth-modal-title" style="margin: 0; font-size: 1.2rem;">Portal Akses AKADIFY</h3>
+        <p id="auth-modal-subtitle" style="margin: 4px 0 0 0; font-size: 0.8rem; color: #94a3b8;">Platform Manajemen & Legalitas Akad Syariah</p>
+      </div>
+
+      <!-- Auth Tabs Switcher -->
+      <div style="display: flex; border-bottom: 1px solid var(--border-color); background: #f8fafc;">
+        <button id="tab-btn-login" type="button" onclick="switchAuthTab('login')" style="flex: 1; padding: 0.75rem; border: none; background: transparent; font-weight: 700; color: var(--primary); border-bottom: 2px solid var(--primary); cursor: pointer;">
+          🔐 Masuk (Login)
+        </button>
+        <button id="tab-btn-register" type="button" onclick="switchAuthTab('register')" style="flex: 1; padding: 0.75rem; border: none; background: transparent; font-weight: 600; color: var(--text-muted); cursor: pointer;">
+          📝 Daftar Akun Baru
+        </button>
+      </div>
+
+      <!-- VIEW 1: FORM LOGIN -->
+      <div id="auth-view-login" style="padding: 1.75rem;">
+        <form onsubmit="handleLoginSubmit(event)">
+          <div id="login-error-msg" style="display: none; background: #fee2e2; color: #b91c1c; padding: 0.65rem; border-radius: 8px; font-size: 0.825rem; margin-bottom: 1rem; border: 1px solid #fca5a5;"></div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Username / Email</label>
+            <input type="text" id="login-username" class="form-control" placeholder="Masukkan username atau email" required autocomplete="username" style="width: 100%; padding: 0.65rem 0.85rem;">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Kata Sandi / Password</label>
+            <input type="password" id="login-password" class="form-control" placeholder="Masukkan kata sandi" required autocomplete="current-password" style="width: 100%; padding: 0.65rem 0.85rem;">
+          </div>
+
+          <button type="submit" id="btn-login-submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; border-radius: 8px;">
+            Masuk ke Sistem →
+          </button>
+        </form>
+      </div>
+
+      <!-- VIEW 2: FORM REGISTRASI LENGKAP -->
+      <div id="auth-view-register" style="display: none; padding: 1.75rem; max-height: 70vh; overflow-y: auto;">
+        <form onsubmit="handleRegisterSubmit(event)">
+          <div id="register-error-msg" style="display: none; background: #fee2e2; color: #b91c1c; padding: 0.65rem; border-radius: 8px; font-size: 0.825rem; margin-bottom: 1rem; border: 1px solid #fca5a5;"></div>
+          <div id="register-success-msg" style="display: none; background: #dcfce7; color: #15803d; padding: 0.65rem; border-radius: 8px; font-size: 0.825rem; margin-bottom: 1rem; border: 1px solid #86efac;"></div>
+
+          <!-- Pilihan Kategori / Sortir Entitas Pengguna -->
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.5rem;">
+              🏷️ Kategori Entitas Pendaftar
+            </label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 8px; cursor: pointer; background: #f8fafc; font-size: 0.825rem; font-weight: 600;">
+                <input type="radio" name="registerUserType" value="KOPERASI" checked onchange="toggleRegisterTypeFields('KOPERASI')">
+                <span>🏛️ Koperasi Syariah / BMT</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 8px; cursor: pointer; background: #f8fafc; font-size: 0.825rem; font-weight: 600;">
+                <input type="radio" name="registerUserType" value="DPS" onchange="toggleRegisterTypeFields('DPS')">
+                <span>🛡️ Dewan Pengawas (DPS)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Dynamic Label berdasarkan Kategori -->
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label id="label-institution-name" style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Nama Lembaga Koperasi / BMT / KSPPS</label>
+            <input type="text" id="reg-institution" class="form-control" placeholder="Contoh: KSPPS BMT Bina Ummah Sejahtera" required style="width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label id="label-legal-number" style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Nomor Badan Hukum / SK Kemenkumham (AHU)</label>
+            <input type="text" id="reg-legal-number" class="form-control" placeholder="Contoh: AHU-0012345.AH.01.26.TAHUN 2024" required style="width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Nama Lengkap Pengurus / Pejabat Berwenang</label>
+            <input type="text" id="reg-fullname" class="form-control" placeholder="Nama lengkap beserta gelar" required style="width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Alamat Email Resmi</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="email@koperasi.id" required autocomplete="email" style="width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div class="form-group">
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Username Akun</label>
+              <input type="text" id="reg-username" class="form-control" placeholder="Buat username" required autocomplete="username" style="width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;">
+            </div>
+            <div class="form-group">
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem;">Kata Sandi</label>
+              <input type="password" id="reg-password" class="form-control" placeholder="Minimal 6 karakter" minlength="6" required autocomplete="new-password" style="width: 100%; padding: 0.6rem 0.8rem; font-size: 0.85rem;">
+            </div>
+          </div>
+
+          <button type="submit" id="btn-register-submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; border-radius: 8px;">
+            Daftarkan Akun Lembaga →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-container" id="main-app-wrapper" style="display: none;">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-container" onclick="switchTab('dashboard')" style="cursor: pointer; transition: transform 0.2s ease;" title="Kembali ke Dashboard Utama" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          <img src="logo_transparent.png" alt="AKADIFY Logo" class="sidebar-logo-full">
+          <img src="favicon.png" alt="AKADIFY" class="sidebar-logo-mini" title="AKADIFY - Dashboard Utama" style="width: 32px; height: 32px; object-fit: contain;">
+        </div>
+        <!-- Tombol Lipat Standar Platform Modern (SVG Sidebar Collapse) -->
+        <button class="sidebar-collapse-btn" onclick="toggleSidebarFold()" title="Lipat / Perluas Sidebar (Ctrl + B)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+            <line x1="9" x2="9" y1="3" y2="21"/>
+            <path d="m14 9-3 3 3 3"/>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <button id="nav-dashboard" class="active" onclick="switchTab('dashboard')" data-tooltip="Dashboard Utama">
+            <span class="nav-icon"><img src="icons/dashboard.svg" alt="Dashboard"></span>
+            <span class="nav-text">Dashboard Utama</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button id="nav-generator" onclick="switchTab('generator')" data-tooltip="Buat Akad Dinamis">
+            <span class="nav-icon"><img src="icons/generator.svg" alt="Buat Akad"></span>
+            <span class="nav-text">Buat Akad Dinamis</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button id="nav-calculator" onclick="switchTab('calculator')" data-tooltip="Kalkulator Syariah">
+            <span class="nav-icon"><img src="icons/calculator.svg" alt="Kalkulator"></span>
+            <span class="nav-text">Kalkulator Syariah</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button id="nav-ai-syariah" onclick="switchTab('ai-syariah')" data-tooltip="AI Syariah (Asisten Fatwa)">
+            <span class="nav-icon"><img src="icons/ai-syariah.svg" alt="AI Syariah"></span>
+            <span class="nav-text">AI Syariah</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button id="nav-verification" onclick="switchTab('verification')" data-tooltip="Daftar Akad Terbit">
+            <span class="nav-icon"><img src="icons/verification.svg" alt="Akad Terbit"></span>
+            <span class="nav-text">Daftar Akad Terbit</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button id="nav-audit" onclick="switchTab('audit')" data-tooltip="Audit Log">
+            <span class="nav-icon"><img src="icons/audit.svg" alt="Audit Log"></span>
+            <span class="nav-text">Audit Log</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- User Profile & Action Dropdown at the Bottom of Sidebar -->
+      <div class="sidebar-footer" style="margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1); position: relative;">
+        <!-- User Profile Button Trigger -->
+        <button id="sidebar-user-menu-btn" onclick="toggleSidebarUserDropdown(event)" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.75rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: white; cursor: pointer; transition: all 0.2s ease;">
+          <div style="display: flex; align-items: center; gap: 0.65rem; min-width: 0;">
+            <div id="sidebar-user-avatar" style="width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0; color: white; border: 1px solid rgba(255,255,255,0.2);">
+              <img src="icons/judge.svg" alt="Avatar" style="width: 20px; height: 20px; filter: brightness(0) invert(1);">
+            </div>
+            <div class="nav-text" style="text-align: left; min-width: 0; overflow: hidden;">
+              <div id="sidebar-user-fullname" style="font-weight: 700; font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white;">Pengguna</div>
+              <div id="sidebar-user-role" style="font-size: 0.725rem; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Koperasi</div>
+            </div>
+          </div>
+          <span class="nav-text" style="font-size: 0.8rem; color: #94a3b8; margin-left: 4px;">▼</span>
+        </button>
+
+        <!-- Dropdown Menu Popover -->
+        <div id="sidebar-user-dropdown" style="display: none; position: absolute; bottom: 100%; left: 0; width: 100%; min-width: 210px; background: #1e293b; border: 1px solid #334155; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5); padding: 0.5rem; margin-bottom: 0.5rem; z-index: 1000; flex-direction: column; gap: 0.25rem;">
+          <div style="padding: 0.5rem 0.75rem; border-bottom: 1px solid #334155; margin-bottom: 0.25rem;">
+            <div id="dropdown-user-inst" style="font-size: 0.75rem; font-weight: 700; color: #34d399; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">KSPPS BMT Bina Ummah</div>
+            <div id="dropdown-user-email" style="font-size: 0.7rem; color: #94a3b8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">pengurus@koperasi.id</div>
+          </div>
+          
+          <button class="dropdown-item-btn" onclick="switchTab('settings'); closeSidebarUserDropdown();" style="width: 100%; display: flex; align-items: center; gap: 0.65rem; padding: 0.55rem 0.75rem; background: transparent; border: none; color: #cbd5e1; font-size: 0.825rem; border-radius: 6px; cursor: pointer; text-align: left;">
+            <img class="dropdown-icon" src="icons/settings.svg" alt="Pengaturan">
+            <span>Pengaturan</span>
+          </button>
+
+          <button class="dropdown-item-btn" onclick="openInfoModal('about')" style="width: 100%; display: flex; align-items: center; gap: 0.65rem; padding: 0.55rem 0.75rem; background: transparent; border: none; color: #cbd5e1; font-size: 0.825rem; border-radius: 6px; cursor: pointer; text-align: left;">
+            <img class="dropdown-icon" src="icons/about.svg" alt="Tentang">
+            <span>Tentang & Tim Peneliti</span>
+          </button>
+
+          <button class="dropdown-item-btn" onclick="openInfoModal('terms')" style="width: 100%; display: flex; align-items: center; gap: 0.65rem; padding: 0.55rem 0.75rem; background: transparent; border: none; color: #cbd5e1; font-size: 0.825rem; border-radius: 6px; cursor: pointer; text-align: left;">
+            <img class="dropdown-icon" src="icons/terms.svg" alt="Syarat">
+            <span>Syarat & Kepatuhan Fatwa</span>
+          </button>
+
+          <button class="dropdown-item-btn" onclick="openInfoModal('privacy')" style="width: 100%; display: flex; align-items: center; gap: 0.65rem; padding: 0.55rem 0.75rem; background: transparent; border: none; color: #cbd5e1; font-size: 0.825rem; border-radius: 6px; cursor: pointer; text-align: left;">
+            <img class="dropdown-icon" src="icons/privacy.svg" alt="Privasi">
+            <span>Kebijakan Privasi</span>
+          </button>
+
+          <div style="border-top: 1px solid #334155; margin: 0.25rem 0;"></div>
+
+          <button class="dropdown-item-btn" onclick="handleLogout()" style="width: 100%; display: flex; align-items: center; gap: 0.65rem; padding: 0.55rem 0.75rem; background: transparent; border: none; color: #f87171; font-size: 0.825rem; font-weight: 600; border-radius: 6px; cursor: pointer; text-align: left;">
+            <span style="font-size: 1rem;">🚪</span>
+            <span>Keluar (Logout)</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Application View -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <header class="top-bar">
+        <div style="display: flex; align-items: center;">
+          <button class="btn-sidebar-toggle" id="sidebar-toggle-btn" onclick="toggleSidebarFold()" title="Lipat / Buka Sidebar (Ctrl + B)">
+            <svg id="sidebar-toggle-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+              <line x1="9" x2="9" y1="3" y2="21"/>
+            </svg>
+          </button>
+          <h1 id="page-title">Dashboard Utama</h1>
+        </div>
+      </header>
+
+      <!-- Content Area Body -->
+      <div class="content-body">
+        
+        <!-- VIEW 1: DASHBOARD OVERVIEW -->
+        <section id="view-dashboard">
+          <div class="grid-cols-3">
+            <div class="card stat-card">
+              <div class="stat-icon icon-green">📜</div>
+              <div>
+                <div class="stat-val" id="stat-total-akad">0</div>
+                <div class="stat-lbl">Dokumen Akad Terbit</div>
+              </div>
+            </div>
+            <div class="card stat-card">
+              <div class="stat-icon icon-gold">🛡️</div>
+              <div>
+                <div class="stat-val" id="stat-syariah-score">-</div>
+                <div class="stat-lbl">Skor Kepatuhan Syariah</div>
+              </div>
+            </div>
+            <div class="card stat-card" style="cursor: pointer;" onclick="switchTab('ai-syariah')" title="Buka Asisten AI Syariah">
+              <div class="stat-icon icon-blue">🤖</div>
+              <div>
+                <div class="stat-val" id="stat-ai-status">DSN-MUI AI</div>
+                <div class="stat-lbl">Asisten Fatwa & Fiqih →</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-cols-2" style="margin-top: 1rem;">
+            <div class="card">
+              <h3>Ringkasan Distribusi Akad Syariah</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Statistik akad dinamis platform AKADIFY</p>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Jenis Akad</th>
+                    <th>Jumlah Akad</th>
+                    <th>Status Syariah</th>
+                  </tr>
+                </thead>
+                <tbody id="dashboard-table-body">
+                  <tr>
+                    <td colspan="3" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                      Belum ada akad yang dibuat. Klik tombol di samping untuk membuat akad baru.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card">
+              <h3>Buat Akad Baru</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Pilih jenis akad syariah yang ingin disusun secara dinamis (Sesuai Fatwa & Standar DSN-MUI)</p>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                <button class="btn btn-primary" onclick="startAkad('Murabahah')" style="padding: 0.6rem 0.75rem; font-size: 0.825rem;">
+                  🛒 Murabahah (Jual Beli)
+                </button>
+                <button class="btn btn-gold" onclick="startAkad('Qardh')" style="padding: 0.6rem 0.75rem; font-size: 0.825rem;">
+                  🤝 Qardh (Pinjaman Kebajikan)
+                </button>
+                <button class="btn btn-outline" onclick="startAkad('Mudharabah')" style="padding: 0.6rem 0.75rem; font-size: 0.825rem; border-color: var(--primary); color: var(--primary-dark);">
+                  📈 Mudharabah (Bagi Hasil)
+                </button>
+                <button class="btn btn-outline" onclick="startAkad('Ijarah')" style="padding: 0.6rem 0.75rem; font-size: 0.825rem; border-color: #0284c7; color: #0284c7;">
+                  🏠 Ijarah (Sewa / Ujrah)
+                </button>
+                <button class="btn btn-outline" onclick="startAkad('Syirkah')" style="padding: 0.6rem 0.75rem; font-size: 0.825rem; border-color: #d97706; color: #b45309;">
+                  🤝 Syirkah (Kemitraan Usaha)
+                </button>
+                <button class="btn btn-outline" onclick="startAkad('Koperasi Syariah')" style="padding: 0.6rem 0.75rem; font-size: 0.825rem; border-color: #059669; color: #047857;">
+                  🏛️ Koperasi Syariah (Keanggotaan)
+                </button>
+              </div>
+
+              <!-- Shortcut Langsung ke Kalkulator Finansial Syariah -->
+              <div style="margin-top: 1rem; padding-top: 0.85rem; border-top: 1px dashed var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Ingin simulasi cicilan & margin terlebih dahulu?</span>
+                <button class="btn btn-primary" onclick="switchTab('calculator')" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+                  🧮 Buka Kalkulator Syariah
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- FOOTER COMPACT LINK KECIL -->
+          <footer style="margin-top: 2rem; padding: 1rem; text-align: center; font-size: 0.775rem; color: var(--text-muted);">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 0.4rem;">
+              <a href="javascript:void(0)" onclick="toggleFooterModal('about')" style="color: var(--primary); text-decoration: none; font-weight: 600;">Tentang Kami</a>
+              <span>•</span>
+              <a href="javascript:void(0)" onclick="toggleFooterModal('terms')" style="color: var(--primary); text-decoration: none; font-weight: 600;">Syarat & Ketentuan</a>
+            </div>
+            <div>
+              © 2026 AKADIFY - Platform AI Pengembangan Akad Syariah Otomatis. All Rights Reserved.
+            </div>
+          </footer>
+        </section>
+
+        <!-- VIEW 2: GENERATOR AKAD DINAMIS (WIZARD 3-STEP) -->
+        <section id="view-generator" style="display: none;">
+          <div class="grid-cols-2">
+            <!-- Form Input Parameters with Wizard Stepper -->
+            <div class="card">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                <h3>Form Parameter Akad Syariah</h3>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                  <button type="button" class="btn btn-outline" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-color: var(--accent-gold); color: #b45309;" onclick="fillQuickDemoData()">
+                    ⚡ Quick Fill Demo
+                  </button>
+                  <select id="form-akad-type" class="form-control" style="width: auto;" onchange="onAkadTypeChange(this.value)">
+                    <option value="Murabahah">Akad Murabahah (Jual Beli)</option>
+                    <option value="Qardh">Akad Qardh (Pinjaman Kebajikan)</option>
+                    <option value="Mudharabah">Akad Mudharabah (Bagi Hasil)</option>
+                    <option value="Ijarah">Akad Ijarah (Sewa / Ujrah)</option>
+                    <option value="Syirkah">Akad Syirkah (Kemitraan Usaha)</option>
+                    <option value="Koperasi Syariah">Akad Koperasi Syariah (Keanggotaan)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Wizard Stepper Indicator Bar -->
+              <div class="stepper-container">
+                <div class="step-item active" id="step-btn-1" onclick="goToWizardStep(1)">
+                  <div class="step-number" id="step-num-1">1</div>
+                  <div class="step-label">Para Pihak</div>
+                </div>
+                <div class="step-item" id="step-btn-2" onclick="goToWizardStep(2)">
+                  <div class="step-number" id="step-num-2">2</div>
+                  <div class="step-label">Detail Transaksi</div>
+                </div>
+                <div class="step-item" id="step-btn-3" onclick="goToWizardStep(3)">
+                  <div class="step-number" id="step-num-3">3</div>
+                  <div class="step-label">Saksi & Legalitas</div>
+                </div>
+              </div>
+
+              <form id="akad-form" onsubmit="handleFormSubmit(event)">
+                
+                <!-- STEP 1: DETIL PARA PIHAK (PIHAK I & PIHAK II DETIL NOTARIS/KOPERASI) -->
+                <div id="wizard-step-1">
+                  <!-- Waktu & Tempat Akad -->
+                  <div style="background: #e0f2fe; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid #bae6fd; margin-bottom: 1.25rem; font-size: 0.825rem; color: #0369a1;">
+                    <strong>🕒 Waktu & Tempat Penandatanganan Akad:</strong>
+                  </div>
+                  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 1rem;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                      <label>Hari & Tanggal Akad</label>
+                      <input type="text" id="tanggalAkad" class="form-control" placeholder="Contoh: Senin, 15 Juni 2026" oninput="triggerValidation()">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                      <label>Waktu & Tempat Akad</label>
+                      <input type="text" id="tempatAkad" class="form-control" placeholder="Contoh: Pukul 10.00 WIB di Kantor Koperasi" oninput="triggerValidation()">
+                    </div>
+                  </div>
+
+                  <!-- PIHAK PERTAMA (PENJUAL / PEMODAL / KOPERASI) -->
+                  <div class="pihak-box" style="border: 2px solid #cbd5e1; background: #f8fafc;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+                      <div class="pihak-title" style="margin-bottom: 0;">🏢 PIHAK PERTAMA (Lembaga / Pemodal)</div>
+                      <button type="button" class="btn btn-outline" onclick="autoFillInstitutionPihakPertama(true)" style="padding: 0.3rem 0.65rem; font-size: 0.75rem; border-color: #94a3b8; color: #475569; background: white;" title="Isi ulang data sesuai profil lembaga yang login">
+                        🔄 Muat Ulang Data Profil Lembaga
+                      </button>
+                    </div>
+                    <div class="form-group">
+                      <label>Nama Pejabat / Perwakilan</label>
+                      <input type="text" id="pihakPertama" class="form-control" placeholder="Contoh: Iswahyudi, S.Sy" required oninput="triggerValidation()">
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                      <div class="form-group">
+                        <label>Umur Pihak I</label>
+                        <input type="text" id="umurPihak1" class="form-control" placeholder="Contoh: 35 Tahun">
+                      </div>
+                      <div class="form-group">
+                        <label>NIK Pihak I</label>
+                        <input type="text" id="nikPihak1" class="form-control" placeholder="16071012345678">
+                      </div>
+                      <div class="form-group">
+                        <label>Jabatan Pihak I</label>
+                        <input type="text" id="jabatanPihak1" class="form-control" placeholder="Contoh: Kepala Divisi / Pengurus">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Nama Lembaga / Koperasi</label>
+                      <input type="text" id="lembagaPihak1" class="form-control" placeholder="Contoh: Koperasi Syariah Al Firdaus UNISBA">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                      <label>Alamat Kantor / Berkedudukan Di</label>
+                      <input type="text" id="alamatPihak1" class="form-control" placeholder="Alamat lengkap lembaga Pihak Pertama">
+                    </div>
+                  </div>
+
+                  <!-- PIHAK KEDUA (PEMBELI / PENGELOLA / ANGGOTA) -->
+                  <div class="pihak-box" style="border: 2px solid var(--primary-light); background: #fdfdfd; position: relative;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+                      <div class="pihak-title" style="margin-bottom: 0;">👤 PIHAK KEDUA (Pembeli / Anggota / Pengelola)</div>
+                      
+                      <!-- OCR KTP Trigger Button & File Input -->
+                      <div>
+                        <input type="file" id="ktp-file-input" accept="image/*" style="display: none;" onchange="handleKtpImageUpload(event)">
+                        <button type="button" class="btn btn-outline" onclick="document.getElementById('ktp-file-input').click()" style="padding: 0.35rem 0.75rem; font-size: 0.775rem; border-color: var(--primary); color: var(--primary-dark); background: #ecfdf5; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+                          <img src="icons/privacy.svg" alt="OCR" style="width: 14px; height: 14px;"> 📷 Scan OCR e-KTP (Auto-Fill)
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- OCR KTP Scanning Banner / Status -->
+                    <div id="ktp-ocr-status-banner" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 0.65rem 0.85rem; margin-bottom: 1rem; font-size: 0.8rem; color: #1e40af; align-items: center; justify-content: space-between;">
+                      <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span id="ktp-ocr-spinner" style="display: inline-block;">⏳</span>
+                        <span id="ktp-ocr-text">AI sedang membaca NIK & identitas dari foto e-KTP...</span>
+                      </div>
+                      <button type="button" onclick="closeKtpOcrBanner()" style="background: none; border: none; font-size: 1rem; cursor: pointer; color: #64748b;">✖</button>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Nama Lengkap Anggota / Nasabah</label>
+                      <input type="text" id="pihakKedua" class="form-control" placeholder="Contoh: Asrori Agus Latif, S.Sy" required oninput="triggerValidation()">
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                      <div class="form-group">
+                        <label>Umur Pihak II</label>
+                        <input type="text" id="umurPihak2" class="form-control" placeholder="Contoh: 29 Tahun">
+                      </div>
+                      <div class="form-group">
+                        <label>NIK Pihak II</label>
+                        <input type="text" id="nikPihak2" class="form-control" placeholder="1234567891012314">
+                      </div>
+                      <div class="form-group">
+                        <label>Pekerjaan Pihak II</label>
+                        <input type="text" id="pekerjaanPihak2" class="form-control" placeholder="Contoh: Pegawai Negeri / Wiraswasta">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                      <label>Alamat Tempat Tinggal Pihak II</label>
+                      <input type="text" id="alamatPihak2" class="form-control" placeholder="Alamat lengkap sesuai KTP Pihak Kedua">
+                    </div>
+                  </div>
+
+                  <div style="text-align: right; margin-top: 1.25rem;">
+                    <button type="button" class="btn btn-primary" onclick="goToWizardStep(2)">
+                      Lanjut: Detail Transaksi ➡️
+                    </button>
+                  </div>
+                </div>
+
+                <!-- STEP 2: DETAIL TRANSAKSI (DYNAMIC FIELDS) -->
+                <div id="wizard-step-2" style="display: none;">
+                  <div id="dynamic-fields">
+                    <!-- Default Murabahah / Dynamic fields rendered by JS -->
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin-top: 1.25rem;">
+                    <button type="button" class="btn btn-outline" onclick="goToWizardStep(1)">
+                      ⬅️ Kembali
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="goToWizardStep(3)">
+                      Lanjut: Saksi & Legalitas ➡️
+                    </button>
+                  </div>
+                </div>
+
+                <!-- STEP 3: SAKSI & FINAL SUBMIT -->
+                <div id="wizard-step-3" style="display: none;">
+                  <div class="form-group">
+                    <label>Identitas Saksi 1 & Saksi 2</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                      <input type="text" id="saksi1" class="form-control" placeholder="Nama Saksi 1 (opsional)">
+                      <input type="text" id="saksi2" class="form-control" placeholder="Nama Saksi 2 (opsional)">
+                    </div>
+                  </div>
+                  
+                  <div style="background: #f8fafc; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1rem; font-size: 0.825rem; color: var(--text-muted);">
+                    ℹ️ Parameter telah lengkap. Sistem AI & Rules Engine siap memproses draft akad notaris.
+                  </div>
+
+                  <div style="display: flex; gap: 0.75rem;">
+                    <button type="button" class="btn btn-outline" onclick="goToWizardStep(2)">
+                      ⬅️ Kembali
+                    </button>
+                    <button type="submit" id="btn-submit-ai" class="btn btn-primary" style="flex: 1;">
+                      ⚡ Susun Akad dengan AI
+                    </button>
+                  </div>
+
+                  <!-- Progress Bar Container -->
+                  <div id="progress-container" style="display: none; background: #f1f5f9; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark);">
+                      <span id="progress-status-text">⏳ Mempersiapkan data transaksi...</span>
+                      <span id="progress-percent-text">0%</span>
+                    </div>
+                    <div style="width: 100%; background: #e2e8f0; height: 10px; border-radius: 5px; overflow: hidden; position: relative;">
+                      <div id="progress-bar-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-light)); transition: width 0.3s ease; border-radius: 5px;"></div>
+                    </div>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">Harap tunggu, Sistem AI sedang memproses & menyelaraskan pasal-pasal akad syariah...</p>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Syariah Rules Validation Panel -->
+            <div>
+              <div class="syariah-checker-panel">
+                <div class="checker-header">
+                  <div>
+                    <h3 style="font-size: 1.05rem; color: var(--primary-dark);">Validasi Rukun & Syarat Syariah</h3>
+                    <p style="font-size: 0.75rem; color: var(--text-muted);">Real-time Rule Engine Fatwa DSN-MUI</p>
+                  </div>
+                  <div id="score-badge-container">
+                    <span class="score-badge score-low">0% belum diisi</span>
+                  </div>
+                </div>
+
+                <div id="validation-checklist">
+                  <!-- Dynamic Checklist Output -->
+                </div>
+              </div>
+
+              <!-- Action button for Document Generation -->
+              <div class="card" style="margin-top: 1.5rem; text-align: center;">
+                <h4>Pratinjau Hasil Redaksi AI</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Dokumen yang disusun akan tervalidasi secara hukum & fatwa DSN-MUI</p>
+                <button class="btn btn-gold" onclick="viewGeneratedDocument()">
+                  👁️ Buka Pratinjau Dokumen Akad
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 3: DOCUMENT PREVIEW & PRINT -->
+        <section id="view-document" style="display: none;">
+          <div class="no-print" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <button class="btn btn-outline" onclick="switchTab('generator')">⬅️ Kembali ke Form</button>
+            <div style="display: flex; gap: 0.75rem;">
+              <button class="btn btn-outline" onclick="exportToWordDocx()" style="border-color: #0284c7; color: #0284c7; font-weight: 600;">📝 Export Word (.docx)</button>
+              <button class="btn btn-primary" onclick="window.print()">🖨️ Cetak / Download PDF</button>
+              <button class="btn btn-gold" onclick="approveContract()">✅ Sahkan Dokumen</button>
+            </div>
+          </div>
+
+          <div class="document-paper">
+            <!-- Dynamic Institution Kop Surat Header -->
+            <div id="doc-kop-header-container" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 3px double #0f172a; padding-bottom: 0.85rem; margin-bottom: 1.5rem; position: relative;">
+              <div style="width: 75px; height: 75px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <img id="doc-kop-logo" src="logo_transparent.png" alt="Logo Koperasi" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+              </div>
+              <div style="flex: 1; text-align: center; padding: 0 1rem;">
+                <h2 id="doc-kop-title" style="margin: 0; font-size: 1.25rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Times New Roman', serif;">KSPPS BMT BINA UMMAH SEJAHTERA</h2>
+                <p id="doc-kop-tagline" style="margin: 3px 0 0 0; font-size: 0.85rem; font-weight: 600; color: #334155; font-family: sans-serif;">Badan Hukum No. AHU-0012345.AH.01.26.TAHUN 2024</p>
+                <p id="doc-kop-address" style="margin: 2px 0 0 0; font-size: 0.775rem; color: #64748b; font-family: sans-serif;">Jl. Raya Pajajaran No. 45, Bandung | Telp: (022) 7654321</p>
+                <p id="doc-kop-email" style="margin: 1px 0 0 0; font-size: 0.75rem; color: var(--primary); font-family: sans-serif;">kontak@bmtbinaummah.co.id</p>
+              </div>
+              <div style="width: 75px; flex-shrink: 0; display: flex; justify-content: flex-end;">
+                <div class="doc-stamp" id="approval-stamp" style="font-size: 0.7rem; padding: 0.35rem 0.5rem;">DRAFT AKAD</div>
+              </div>
+            </div>
+
+            <div id="document-content-area">
+              <p style="text-align: center; color: var(--text-muted); padding: 3rem;">Belum ada dokumen yang dibuat. Silakan isi form akad dinamis terlebih dahulu.</p>
+            </div>
+
+            <!-- QR Code Legalitas & Footer Dokumen -->
+            <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #cbd5e1; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif; font-size: 0.85rem;">
+              <!-- QR Code Verification Badge -->
+              <div style="display: flex; align-items: center; gap: 0.75rem; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 6px; background: #f8fafc;">
+                <img id="doc-qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=60x60&data=AKADIFY-VERIFIED-SYARIAH-DSN-MUI" alt="QR Code Legalitas" style="width: 60px; height: 60px;">
+                <div>
+                  <p style="font-weight: bold; margin: 0; color: #0f172a; font-size: 0.8rem;">VERIFIKASI AKAD DIGITAL RESMI</p>
+                  <p style="font-size: 0.725rem; color: #64748b; margin: 2px 0;">Tervalidasi Rules Engine Syariah & Fatwa DSN-MUI</p>
+                  <p style="font-size: 0.7rem; color: #059669; font-weight: 600; margin: 0;" id="doc-qr-hash">Hash: AKD-884920491</p>
+                </div>
+              </div>
+
+              <div style="text-align: right; color: #64748b; font-size: 0.75rem;">
+                <p style="margin: 0;">Dokumen ini sah dan mengikat para pihak sesuai KUHPerdata & Fatwa DSN-MUI.</p>
+                <p style="margin: 2px 0 0 0;">Dicetak otomatis melalui Platform AKADIFY.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 4: VERIFIKASI & APPROVAL (WITH SEARCH & FILTER) -->
+        <section id="view-verification" style="display: none;">
+          <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <h3>Daftar Dokumen Akad Terbit</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">Daftar akad yang telah disusun dan tersimpan di sistem AKADIFY.</p>
+              </div>
+
+              <!-- Search & Filter Controls -->
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <input type="text" id="contract-search-input" class="form-control" placeholder="🔍 Cari nama anggota / No. Akad..." style="width: 220px; font-size: 0.825rem;" oninput="filterContractsTable()">
+                <select id="contract-status-filter" class="form-control" style="width: auto; font-size: 0.825rem;" onchange="filterContractsTable()">
+                  <option value="ALL">Semua Status</option>
+                  <option value="DRAFT">Status: DRAFT</option>
+                  <option value="APPROVED">Status: DISAHKAN</option>
+                </select>
+              </div>
+            </div>
+            
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No. Akad</th>
+                  <th>Jenis Akad</th>
+                  <th>Anggota / Pihak II</th>
+                  <th>Tanggal Buat</th>
+                  <th>Skor Syariah</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="verification-table-body">
+                <tr>
+                  <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                    Belum ada akad aktif yang dibuat.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- VIEW: SHARIA FINANCIAL CALCULATOR & AMORTISASI -->
+        <section id="view-calculator" style="display: none;">
+          <div class="grid-cols-2">
+            <!-- Parameter Kalkulator Form -->
+            <div class="card">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                <div>
+                  <h3 style="margin: 0; color: var(--primary-dark);">🧮 Simulasi Finansial & Margin Syariah</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Hitung angsuran, bagi hasil, dan jadwal pembayaran bebas Riba</p>
+                </div>
+                <button type="button" class="btn btn-outline" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-color: var(--accent-gold); color: #b45309;" onclick="fillQuickCalcDemo()">
+                  ⚡ Contoh Kasus
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label>Skema Akad Transaksi</label>
+                <select id="calc-akad-type" class="form-control" onchange="onCalcTypeChange(this.value)">
+                  <option value="Murabahah">Murabahah (Jual Beli - Margin Tetap)</option>
+                  <option value="Ijarah">Ijarah Multijasa (Sewa / Ujrah)</option>
+                  <option value="Mudharabah">Mudharabah / Musyarakah (Bagi Hasil Nisbah)</option>
+                  <option value="Qardh">Qardh (Pinjaman Kebajikan - Tanpa Tambahan)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label id="calc-label-pokok">Nilai Pokok / Harga Beli (Rp)</label>
+                <input type="text" id="calc-pokok" class="form-control rupiah-input" placeholder="Contoh: 25.000.000" oninput="formatRupiahInput(this); calculateShariaFinance();">
+              </div>
+
+              <!-- Container Khusus Murabahah & Ijarah (Margin / Ujrah) -->
+              <div id="calc-group-margin">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                  <div class="form-group">
+                    <label>Margin / Ujrah (%) per Tahun</label>
+                    <input type="number" id="calc-margin-percent" class="form-control" placeholder="Contoh: 12" value="12" step="0.5" oninput="calculateShariaFinance()">
+                  </div>
+                  <div class="form-group">
+                    <label>Metode Angsuran</label>
+                    <select id="calc-margin-type" class="form-control" onchange="calculateShariaFinance()">
+                      <option value="flat">Flat / Anuitas Syariah</option>
+                      <option value="proporsional">Proporsional Bulanan</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Container Khusus Bagi Hasil (Mudharabah) -->
+              <div id="calc-group-nisbah" style="display: none;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                  <div class="form-group">
+                    <label>Nisbah Koperasi (%)</label>
+                    <input type="number" id="calc-nisbah-koperasi" class="form-control" placeholder="40" value="40" oninput="calculateShariaFinance()">
+                  </div>
+                  <div class="form-group">
+                    <label>Nisbah Anggota (%)</label>
+                    <input type="number" id="calc-nisbah-anggota" class="form-control" placeholder="60" value="60" readonly style="background: #f1f5f9;">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Proyeksi Keuntungan Usaha / Bulan (Rp)</label>
+                  <input type="text" id="calc-proyeksi-laba" class="form-control rupiah-input" placeholder="Contoh: 3.000.000" oninput="formatRupiahInput(this); calculateShariaFinance();">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                <div class="form-group">
+                  <label>Jangka Waktu / Tenor (Bulan)</label>
+                  <input type="number" id="calc-tenor" class="form-control" placeholder="Contoh: 12" value="12" min="1" max="120" oninput="calculateShariaFinance()">
+                </div>
+                <div class="form-group">
+                  <label>Tanggal Mulai Akad</label>
+                  <input type="date" id="calc-start-date" class="form-control" onchange="calculateShariaFinance()">
+                </div>
+              </div>
+
+              <div style="margin-top: 1.25rem; display: flex; gap: 0.75rem;">
+                <button class="btn btn-primary" style="flex: 1;" onclick="applyCalcToAkadGenerator()">
+                  ✍️ Terapkan ke Form Akad Dinamis
+                </button>
+                <button class="btn btn-outline" onclick="printAmortizationTable()">
+                  🖨️ Cetak Jadwal
+                </button>
+              </div>
+            </div>
+
+            <!-- Ringkasan Hasil Kalkulasi & Fatwa Badge -->
+            <div>
+              <div class="card" style="background: linear-gradient(135deg, #0f172a, #1e293b); color: white; border: none; margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                  <div>
+                    <span class="badge" style="background: #059669; color: white; font-size: 0.75rem;">BEBAS RIBA & GHARAR</span>
+                    <h4 style="font-size: 0.95rem; color: #94a3b8; margin-top: 0.5rem; font-weight: 500;">TOTAL ANGSURAN PER BULAN</h4>
+                  </div>
+                  <div style="font-size: 1.8rem;">💎</div>
+                </div>
+
+                <div id="calc-result-angsuran" style="font-size: 2.2rem; font-weight: 800; color: #34d399; letter-spacing: -0.5px; margin-bottom: 1.25rem;">
+                  Rp 0
+                </div>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.85rem;">
+                  <div>
+                    <span style="color: #94a3b8;">Total Pokok:</span>
+                    <p style="font-weight: 700; color: white; margin: 2px 0 0 0;" id="calc-result-pokok">Rp 0</p>
+                  </div>
+                  <div>
+                    <span style="color: #94a3b8;" id="calc-label-res-margin">Total Margin Keuntungan:</span>
+                    <p style="font-weight: 700; color: #fbbf24; margin: 2px 0 0 0;" id="calc-result-margin">Rp 0</p>
+                  </div>
+                  <div style="grid-column: span 2; background: rgba(255,255,255,0.05); padding: 0.65rem 0.85rem; border-radius: 6px;">
+                    <span style="color: #94a3b8;">Total Kewajiban Pembayaran (Piutang Akad):</span>
+                    <p style="font-size: 1.15rem; font-weight: 800; color: white; margin: 2px 0 0 0;" id="calc-result-total">Rp 0</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fatwa Compliance Note for Calculation -->
+              <div class="card" style="background: #f8fafc; border-left: 4px solid var(--primary); padding: 1rem;">
+                <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                  <span style="font-size: 1.25rem;">⚖️</span>
+                  <div style="font-size: 0.825rem; line-height: 1.5; color: var(--text-main);">
+                    <strong style="color: var(--primary-dark);">Kepatuhan Fatwa DSN-MUI No. 04/DSN-MUI/IV/2000:</strong>
+                    <p style="margin: 4px 0 0 0; color: var(--text-muted);" id="calc-compliance-note">
+                      Harga jual Murabahah bersifat mengikat dan tetap (fixed) sepanjang masa tenor. Koperasi tidak diperkenankan mengubah margin secara sepihak atau mengenakan bunga majemuk atas keterlambatan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TABEL JADWAL ANGSURAN RESMI (AMORTISASI) -->
+          <div class="card" style="margin-top: 1.5rem;" id="amortization-container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+              <div>
+                <h3 style="margin: 0;">📅 Tabel Jadwal Angsuran Resmi (Simulasi Amortisasi)</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2px;">Rincian angsuran pokok, margin bagi hasil, dan sisa saldo piutang anggota</p>
+              </div>
+              <span class="badge" style="background: var(--primary-subtle); color: var(--primary-dark); font-weight: 600;" id="amortization-badge-tenor">12 Bulan Angsuran</span>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="data-table" id="table-amortization">
+                <thead>
+                  <tr>
+                    <th style="width: 60px; text-align: center;">Ke-</th>
+                    <th>Jatuh Tempo</th>
+                    <th style="text-align: right;">Angsuran Pokok</th>
+                    <th style="text-align: right;" id="th-calc-margin">Margin / Ujrah</th>
+                    <th style="text-align: right;">Total Angsuran</th>
+                    <th style="text-align: right;">Sisa Piutang</th>
+                  </tr>
+                </thead>
+                <tbody id="amortization-table-body">
+                  <tr>
+                    <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                      Masukkan nilai pokok dan tenor di atas untuk menghasilkan tabel jadwal angsuran.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW: AI SYARIAH ASISTEN FATWA & KONSULTASI LENGKAP -->
+        <section id="view-ai-syariah" style="display: none;">
+          <div class="grid-cols-2" style="grid-template-columns: 320px 1fr; gap: 1.5rem;">
+            <!-- Panel Kiri: Topik Fatwa & Quick Prompts -->
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="card" style="background: #0f172a; color: white;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                  <span style="font-size: 1.8rem;">⚖️</span>
+                  <div>
+                    <h3 style="margin: 0; font-size: 1.1rem; color: white;">AI Syariah Expert</h3>
+                    <p style="margin: 2px 0 0 0; font-size: 0.75rem; color: #34d399;">● Knowledge Base DSN-MUI Terintegrasi</p>
+                  </div>
+                </div>
+                <p style="font-size: 0.825rem; color: #94a3b8; line-height: 1.5; margin: 0;">
+                  Didukung model AI penalaran fikih muamalah kontemporer untuk membantu Koperasi dan DPS dalam menelaah fatwa, batasan margin, ujrah, denda (ta'widh), dan klausul sengketa.
+                </p>
+              </div>
+
+              <div class="card">
+                <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.75rem;">
+                  💡 Pertanyaan Cepat (Quick Topics)
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                  <button class="btn btn-outline" style="text-align: left; padding: 0.6rem 0.75rem; font-size: 0.8rem; justify-content: flex-start;" onclick="sendQuickChatPrompt('Apakah koperasi syariah boleh mengenakan denda keterlambatan (ta\'widh) dan bagaimana penyalurannya menurut DSN-MUI?')">
+                    📌 Hukum Denda Ta'widh & Dana Kebajikan
+                  </button>
+                  <button class="btn btn-outline" style="text-align: left; padding: 0.6rem 0.75rem; font-size: 0.8rem; justify-content: flex-start;" onclick="sendQuickChatPrompt('Jelaskan rukun dan syarat sah akad Murabahah bil Wakalah agar terhindar dari Riba dan Ba\'i al-Inah!')">
+                    📌 Rukun Murabahah bil Wakalah
+                  </button>
+                  <button class="btn btn-outline" style="text-align: left; padding: 0.6rem 0.75rem; font-size: 0.8rem; justify-content: flex-start;" onclick="sendQuickChatPrompt('Bagaimana aturan nisbah bagi hasil Mudharabah jika usaha anggota mengalami kerugian non-kelalaian?')">
+                    📌 Risiko Kerugian Usaha Mudharabah
+                  </button>
+                  <button class="btn btn-outline" style="text-align: left; padding: 0.6rem 0.75rem; font-size: 0.8rem; justify-content: flex-start;" onclick="sendQuickChatPrompt('Apa perbedaan mendasar antara akad Ijarah murni dengan Ijarah Muntahiyah Bittamlik (IMBT)?')">
+                    📌 Ketentuan Sewa Beli (IMBT)
+                  </button>
+                </div>
+              </div>
+
+              <div class="card" style="background: #f8fafc; font-size: 0.8rem; color: var(--text-muted);">
+                <strong style="color: var(--primary-dark);">📚 Referensi Hukum:</strong>
+                <ul style="margin: 0.5rem 0 0 1.25rem; line-height: 1.6;">
+                  <li>Fatwa DSN-MUI No. 04 (Murabahah)</li>
+                  <li>Fatwa DSN-MUI No. 07 (Mudharabah)</li>
+                  <li>Fatwa DSN-MUI No. 09 (Ijarah)</li>
+                  <li>Fatwa DSN-MUI No. 19 (Al-Qardh)</li>
+                  <li>Fatwa DSN-MUI No. 43 (Ganti Rugi / Ta'widh)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Panel Kanan: Full Interface Chat Window -->
+            <div class="card" style="display: flex; flex-direction: column; height: 680px; padding: 0; overflow: hidden; border: 1px solid var(--border-color);">
+              <!-- Chat Room Header -->
+              <div style="background: #f8fafc; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <h3 style="margin: 0; font-size: 1.05rem; color: #0f172a;">Konsultasi & Asisten Fatwa Syariah</h3>
+                  <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: var(--text-muted);">Tanyakan permasalahan legalitas akad, klausula kontrak, dan regulasi OJK / DSN-MUI</p>
+                </div>
+                <button class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;" onclick="clearChatHistory()">
+                  🧹 Bersihkan Percakapan
+                </button>
+              </div>
+
+              <!-- Chat Messages Stream -->
+              <div id="full-chat-messages-container" style="flex: 1; padding: 1.5rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; background: #ffffff;">
+                <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                  <div style="width: 36px; height: 36px; border-radius: 50%; background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;">⚖️</div>
+                  <div style="background: #f1f5f9; color: var(--text-main); padding: 1rem 1.25rem; border-radius: 16px; border-top-left-radius: 2px; max-width: 85%; font-size: 0.9rem; line-height: 1.6; border: 1px solid #e2e8f0;">
+                    Assalamu'alaikum Warahmatullahi Wabarakatuh.<br><br>
+                    Saya adalah <strong>Asisten Ahli AI Syariah AKADIFY</strong>. Saya siap membantu Pengurus Koperasi dan Dewan Pengawas Syariah (DPS) untuk:
+                    <ul style="margin: 0.5rem 0 0 1.25rem;">
+                      <li>Konsultasi kesesuaian fatwa DSN-MUI dan Fiqih Muamalah.</li>
+                      <li>Review klausula perlindungan hukum dan mitigasi risiko wanprestasi.</li>
+                      <li>Analisis skema pembiayaan (Murabahah, Mudharabah, Ijarah, Qardh, Syirkah).</li>
+                    </ul>
+                    <br>
+                    Silakan ketik pertanyaan Anda di bawah atau klik topik rekomendasi di sebelah kiri.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chat Input Bar -->
+              <form onsubmit="handleFullChatSubmit(event)" style="padding: 1rem 1.5rem; background: #f8fafc; border-top: 1px solid var(--border-color); display: flex; gap: 0.75rem; align-items: center;">
+                <input type="text" id="full-chat-input" placeholder="Ketik pertanyaan fatwa, klausul, atau masalah pembiayaan syariah..." required style="flex: 1; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.9rem; outline: none; background: white;">
+                <button type="submit" id="btn-full-chat-send" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-weight: 700; border-radius: var(--radius-md);">
+                  Kirim Pertanyaan 🚀
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW: PUSAT PENGATURAN KOMPREHENSIF (SETTINGS HUB) -->
+        <section id="view-settings" style="display: none;">
+          <!-- Settings Navigation Sub-Tabs -->
+          <div style="display: flex; gap: 0.5rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1.5rem; overflow-x: auto; padding-bottom: 2px;">
+            <button id="set-tab-profile-btn" class="btn btn-outline active" onclick="switchSettingsSubTab('profile')" style="border-radius: 8px 8px 0 0; padding: 0.6rem 1.25rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+              <img src="icons/judge.svg" alt="Profil" style="width: 16px; height: 16px;"> Profil & Kontak Lembaga
+            </button>
+            <button id="set-tab-whitelabel-btn" class="btn btn-outline" onclick="switchSettingsSubTab('whitelabel')" style="border-radius: 8px 8px 0 0; padding: 0.6rem 1.25rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+              <img src="icons/settings.svg" alt="White-Label" style="width: 16px; height: 16px;"> Kop Surat & White-Label
+            </button>
+            <button id="set-tab-security-btn" class="btn btn-outline" onclick="switchSettingsSubTab('security')" style="border-radius: 8px 8px 0 0; padding: 0.6rem 1.25rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+              <img src="icons/protection.svg" alt="Keamanan" style="width: 16px; height: 16px;"> Keamanan & Akun
+            </button>
+          </div>
+
+          <!-- SUB-TAB 1: PROFIL PENGGUNA & KONTAK -->
+          <div id="settings-sub-profile" style="display: block;">
+            <div class="grid-cols-2" style="gap: 1.5rem;">
+              <div class="card">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                  <span style="font-size: 1.6rem;">👤</span>
+                  <div>
+                    <h3 style="margin: 0; color: var(--primary-dark);">Profil Pengurus & Kontak Akun</h3>
+                    <p style="margin: 2px 0 0 0; font-size: 0.825rem; color: var(--text-muted);">Kelola data personal pejabat berwenang dan kontak resmi pengurus</p>
+                  </div>
+                </div>
+
+                <form id="user-profile-form" onsubmit="handleSaveUserProfile(event)">
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Nama Lengkap Pengurus / Operator</label>
+                    <input type="text" id="prof-fullname" class="form-control" placeholder="Contoh: Asrori Agus Latif, S.Sy" required>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Jabatan / Posisi di Lembaga</label>
+                    <input type="text" id="prof-position" class="form-control" placeholder="Contoh: Ketua Pengurus / Legal Officer Syariah">
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Alamat Email Resmi</label>
+                    <input type="email" id="prof-email" class="form-control" placeholder="pengurus@koperasi.id" required>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Nomor WhatsApp / Telepon Pengurus</label>
+                    <input type="text" id="prof-phone" class="form-control" placeholder="Contoh: 081234567890">
+                  </div>
+
+                  <button type="submit" id="btn-save-profile" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-weight: 700;">
+                    💾 Simpan Perubahan Profil
+                  </button>
+                </form>
+              </div>
+
+              <!-- Summary Card Status Akun -->
+              <div class="card" style="background: #f8fafc; border: 1px solid var(--border-color);">
+                <h4 style="margin: 0 0 1rem 0; font-size: 0.95rem; color: var(--primary-dark);">🛡️ Rincian Akun & Hak Akses</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+                  <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem;">
+                    <span style="color: var(--text-muted);">Tipe Akun:</span>
+                    <strong id="prof-badge-role" class="badge badge-success">Koperasi Syariah</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem;">
+                    <span style="color: var(--text-muted);">Username Login:</span>
+                    <strong id="prof-display-username">demo</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem;">
+                    <span style="color: var(--text-muted);">Lembaga Terdaftar:</span>
+                    <strong id="prof-display-inst">KSPPS BMT BINA UMMAH SEJAHTERA</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem;">
+                    <span style="color: var(--text-muted);">Status Legalitas:</span>
+                    <strong style="color: #059669;">✅ Terverifikasi DSN-MUI</strong>
+                  </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 0.85rem; background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 8px; font-size: 0.8rem; color: #0369a1; line-height: 1.5;">
+                  💡 <strong>Info Keamanan:</strong> Data pengurus digunakan sebagai penanggung jawab hukum resmi pada akad pembiayaan yang diterbitkan oleh sistem.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-TAB 2: KOP SURAT & WHITE-LABEL -->
+          <div id="settings-sub-whitelabel" style="display: none;">
+            <div class="grid-cols-2" style="gap: 1.5rem;">
+              <!-- Form Input Pengaturan White-Label -->
+              <div class="card">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                  <span style="font-size: 1.6rem;">🏛️</span>
+                  <div>
+                    <h3 style="margin: 0; color: var(--primary-dark);">Pengaturan Kop Surat & Identitas Koperasi</h3>
+                    <p style="margin: 2px 0 0 0; font-size: 0.825rem; color: var(--text-muted);">Sesuaikan identitas resmi lembaga pada seluruh berkas dokumen akad terbit</p>
+                  </div>
+                </div>
+
+                <form id="white-label-form" onsubmit="handleSaveWhiteLabel(event)">
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Nama Resmi Lembaga / Koperasi</label>
+                    <input type="text" id="wl-inst-name" class="form-control" placeholder="Contoh: KSPPS BMT BINA UMMAH SEJAHTERA" required oninput="updateLiveKopPreview()">
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Nomor Badan Hukum / SK Kemenkumham (AHU)</label>
+                    <input type="text" id="wl-inst-tagline" class="form-control" placeholder="Contoh: Badan Hukum No. AHU-0012345.AH.01.26.TAHUN 2024" oninput="updateLiveKopPreview()">
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Alamat Kantor Pusat & Nomor Telepon</label>
+                    <input type="text" id="wl-inst-address" class="form-control" placeholder="Contoh: Jl. Raya Pajajaran No. 45, Bandung | Telp: (022) 7654321" oninput="updateLiveKopPreview()">
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Email & Website Resmi Lembaga</label>
+                    <input type="text" id="wl-inst-email" class="form-control" placeholder="Contoh: kontak@bmtbinaummah.co.id | www.bmtbinaummah.co.id" oninput="updateLiveKopPreview()">
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Logo Lembaga (URL Gambar atau Upload File)</label>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                      <input type="text" id="wl-inst-logo" class="form-control" placeholder="logo_transparent.png atau https://link-gambar.png" oninput="updateLiveKopPreview()">
+                      <label class="btn btn-outline" style="cursor: pointer; white-space: nowrap; font-size: 0.8rem; padding: 0.5rem 0.75rem;">
+                        📁 Unggah File
+                        <input type="file" id="wl-logo-upload" accept="image/*" style="display: none;" onchange="handleLogoFileUpload(event)">
+                      </label>
+                    </div>
+                    <small style="color: var(--text-muted); font-size: 0.75rem;">Format PNG atau JPEG transparan disarankan (Rasio 1:1 atau persegi panjang proporsional).</small>
+                  </div>
+
+                  <button type="submit" id="btn-save-wl" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-weight: 700;">
+                    💾 Simpan Pengaturan White-Label
+                  </button>
+                </form>
+              </div>
+
+              <!-- Live Preview Kop Surat Fisik -->
+              <div>
+                <div class="card" style="background: #f8fafc; border: 1px solid var(--border-color); position: sticky; top: 1rem;">
+                  <h4 style="margin: 0 0 1rem 0; font-size: 0.95rem; color: var(--primary-dark);">👁️ Pratinjau Tampilan Kop Surat Dokumen</h4>
+                  
+                  <!-- Mockup Kertas Kop -->
+                  <div style="background: white; border: 1px solid #cbd5e1; border-radius: 4px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); min-height: 280px;">
+                    <!-- Header Kop Surat -->
+                    <div id="live-kop-container" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 3px double #0f172a; padding-bottom: 0.75rem; margin-bottom: 1.25rem;">
+                      <div style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <img id="live-kop-logo" src="logo_transparent.png" alt="Logo Koperasi" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                      </div>
+                      <div style="flex: 1; text-align: center; padding: 0 1rem;">
+                        <h3 id="live-kop-title" style="margin: 0; font-size: 1.1rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px;">KSPPS BMT BINA UMMAH SEJAHTERA</h3>
+                        <p id="live-kop-tagline" style="margin: 3px 0 0 0; font-size: 0.75rem; font-weight: 600; color: #334155;">Badan Hukum No. AHU-0012345.AH.01.26.TAHUN 2024</p>
+                        <p id="live-kop-address" style="margin: 2px 0 0 0; font-size: 0.7rem; color: #64748b;">Jl. Raya Pajajaran No. 45, Bandung | Telp: (022) 7654321</p>
+                        <p id="live-kop-email" style="margin: 1px 0 0 0; font-size: 0.7rem; color: var(--primary);">kontak@bmtbinaummah.co.id</p>
+                      </div>
+                      <div style="width: 70px; flex-shrink: 0;"></div>
+                    </div>
+
+                    <!-- Mockup Isi Dokumen -->
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                      <span style="display: inline-block; width: 140px; height: 8px; background: #e2e8f0; border-radius: 4px; margin-bottom: 0.5rem;"></span>
+                      <br>
+                      <span style="display: inline-block; width: 220px; height: 8px; background: #f1f5f9; border-radius: 4px;"></span>
+                    </div>
+                    <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                      <div style="width: 100%; height: 6px; background: #f8fafc; border-radius: 3px;"></div>
+                      <div style="width: 95%; height: 6px; background: #f8fafc; border-radius: 3px;"></div>
+                      <div style="width: 90%; height: 6px; background: #f8fafc; border-radius: 3px;"></div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                    💡 <strong>Info:</strong> Kop surat di atas otomatis disematkan pada lembar pratinjau, cetak PDF, dan berkas ekspor Microsoft Word (`.doc`).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-TAB 3: KEAMANAN & GANTI PASSWORD & DELETE ACCOUNT -->
+          <div id="settings-sub-security" style="display: none;">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 650px; margin: 0 auto;">
+              <!-- Form Ganti Kata Sandi -->
+              <div class="card">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                  <span style="font-size: 1.6rem;">🔒</span>
+                  <div>
+                    <h3 style="margin: 0; color: var(--primary-dark);">Ubah Kata Sandi Akun (Change Password)</h3>
+                    <p style="margin: 2px 0 0 0; font-size: 0.825rem; color: var(--text-muted);">Gunakan kombinasi kata sandi yang kuat untuk menjaga keamanan data akad lembaga</p>
+                  </div>
+                </div>
+
+                <form id="change-password-form" onsubmit="handleChangePassword(event)">
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Kata Sandi Saat Ini (Lama)</label>
+                    <input type="password" id="pwd-old" class="form-control" placeholder="Masukkan password lama" required>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Kata Sandi Baru</label>
+                    <input type="password" id="pwd-new" class="form-control" placeholder="Minimal 4 karakter" minlength="4" required>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label style="font-weight: 600; font-size: 0.85rem;">Konfirmasi Kata Sandi Baru</label>
+                    <input type="password" id="pwd-confirm" class="form-control" placeholder="Ulangi password baru" minlength="4" required>
+                  </div>
+
+                  <button type="submit" id="btn-change-pwd" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-weight: 700;">
+                    🔐 Simpan Kata Sandi Baru
+                  </button>
+                </form>
+              </div>
+
+              <!-- Danger Zone: Hapus Akun Permanen (Right to Erasure UU PDP) -->
+              <div class="card" style="border: 1px solid #fca5a5; background: #fff5f5;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                  <span style="font-size: 1.6rem;">⚠️</span>
+                  <div>
+                    <h3 style="margin: 0; color: #b91c1c;">Zona Berbahaya: Hapus Akun Permanen</h3>
+                    <p style="margin: 2px 0 0 0; font-size: 0.825rem; color: #7f1d1d;">Hak Penghapusan Data (<em>Right to Erasure</em>) sesuai Pasal 8 UU PDP No. 27/2022</p>
+                  </div>
+                </div>
+
+                <p style="font-size: 0.85rem; color: #991b1b; line-height: 1.5; margin-bottom: 1rem;">
+                  Tindakan ini bersifat <strong>permanen dan tidak dapat dibatalkan</strong>. Seluruh data profil akun, hak akses, riwayat draft, dan dokumen akad yang Anda terbitkan akan dihapus dari server.
+                </p>
+
+                <form onsubmit="handleDeleteAccount(event)" style="background: white; padding: 1.25rem; border-radius: 8px; border: 1px solid #fed7aa;">
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label style="font-weight: 700; font-size: 0.85rem; color: #991b1b;">Konfirmasi Kata Sandi Anda untuk Menghapus:</label>
+                    <input type="password" id="delete-account-pwd" class="form-control" placeholder="Ketik kata sandi akun Anda" required style="border-color: #f87171;">
+                  </div>
+                  <button type="submit" id="btn-delete-account" class="btn btn-danger" style="width: 100%; padding: 0.75rem; font-weight: 700; background: #dc2626; border-color: #dc2626; color: white;">
+                    🗑️ Hapus Akun & Seluruh Data Secara Permanen
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 5: AUDIT TRAIL LOG -->
+        <section id="view-audit" style="display: none;">
+          <div class="card">
+            <h3>Audit Trail Log Kepatuhan Syariah</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Pencatatan transparan untuk pengawasan regulator OJK & DSN-MUI</p>
+            
+            <div id="audit-log-container" style="font-family: monospace; font-size: 0.85rem; background: #0f172a; color: #38bdf8; padding: 1.5rem; border-radius: var(--radius-md); overflow-x: auto; min-height: 200px;">
+              <p>[SYSTEM INIT] Syariah Engine v2.4 (DSN-MUI Rulebook Active)...</p>
+              <p>[SYSTEM READY] Terhubung dengan Backend DeepSeek AI Server.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- MODAL RINGKAS TENTANG KAMI & SYARAT KETENTUAN -->
+  <div id="info-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; padding: 1rem;">
+    <div style="background: white; border-radius: var(--radius-lg); max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 1.75rem; box-shadow: var(--shadow-lg); position: relative;">
+      <button onclick="closeFooterModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.25rem; cursor: pointer; color: var(--text-muted);">✖</button>
+      
+      <!-- Content Rendered Dynamically -->
+      <div id="modal-body-content"></div>
+
+      <div style="margin-top: 1.5rem; text-align: right;">
+        <button class="btn btn-primary" onclick="closeFooterModal()">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="js/syariah-rules-engine.js"></script>
+  <script src="js/deepseek-service.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

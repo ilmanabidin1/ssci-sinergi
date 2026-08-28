@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "AKADIFY - Akad Syariah AI",
+    "slug": "akadify-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "../public/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "../public/logo_transparent.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.akadify.syariah"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "../public/logo.png",
+        "backgroundColor": "#0f172a"
+      },
+      "package": "com.akadify.syariah"
+    },
+    "web": {
+      "favicon": "../public/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "26727bd3-eb09-49eb-a1df-9a8bd4e6c7ab"
+      }
+    }
+  }
+}
