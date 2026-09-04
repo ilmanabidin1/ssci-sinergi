@@ -594,7 +594,7 @@ export const appRouter = router({
         return { success: true };
       }),
 
-    decide: protectedProcedure
+    decide: checkerProcedure
       .input(z.object({
         applicationId: z.number().int().positive(),
         decision: z.enum(["approved", "rejected"]),
@@ -660,7 +660,7 @@ export const appRouter = router({
         return db.getAssessmentStats(ctx.user.organizationId);
       }),
 
-    delete: protectedProcedure
+    delete: checkerProcedure
       .input(z.object({ applicationId: z.number().int().positive() }))
       .mutation(async ({ input, ctx }) => {
         try {
@@ -673,7 +673,7 @@ export const appRouter = router({
         }
       }),
 
-    hardDelete: protectedProcedure
+    hardDelete: adminProcedure
       .input(z.object({ applicationId: z.number().int().positive() }))
       .mutation(async ({ input, ctx }) => {
         try {

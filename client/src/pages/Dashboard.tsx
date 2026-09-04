@@ -672,7 +672,8 @@ export default function Dashboard() {
                               <Button asChild size="sm" variant="outline">
                                 <Link to={`/applications/${item.id}`}>Detail</Link>
                               </Button>
-                              {item.latestAssessmentScore !== null && (
+                              {item.latestAssessmentScore !== null &&
+                                (user?.role === "checker" || user?.role === "admin") && (
                                 <Button
                                   size="icon"
                                   variant="ghost"
@@ -683,15 +684,17 @@ export default function Dashboard() {
                                   <Trash2 className="h-4 w-4" />
                                 </Button>
                               )}
-                              <Button
-                                size="icon"
-                                variant="ghost"
-                                className="h-8 w-8 text-slate-400 hover:text-red-600"
-                                title="Hapus permanen pengajuan"
-                                onClick={() => handleHardDelete(item)}
-                              >
-                                <Trash2 className="h-4 w-4 text-red-500" />
-                              </Button>
+                              {user?.role === "admin" && (
+                                <Button
+                                  size="icon"
+                                  variant="ghost"
+                                  className="h-8 w-8 text-slate-400 hover:text-red-600"
+                                  title="Hapus permanen pengajuan"
+                                  onClick={() => handleHardDelete(item)}
+                                >
+                                  <Trash2 className="h-4 w-4 text-red-500" />
+                                </Button>
+                              )}
                             </div>
                           </td>
                         </tr>

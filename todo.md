@@ -11,7 +11,7 @@
 - [x] Breakdown scoring per aspek dan rekomendasi pembiayaan
 - [x] Halaman riwayat penilaian dengan search dan filter
 - [ ] Fungsi export PDF untuk laporan penilaian
-- [ ] Role-based access control untuk analis
+- [x] Role-based access control untuk analis (maker/checker/admin ditegakkan di tRPC: decide & hapus penilaian = checker+, hapus permanen = admin; UI menyembunyikan aksi sesuai role)
 
 ## Technical Implementation
 
@@ -21,7 +21,7 @@
 - [x] Build tRPC procedures untuk CRUD operations
 - [x] Design professional UI untuk institusi keuangan
 - [x] Implement data visualization dengan recharts
-- [ ] Add PDF generation functionality
+- [x] Add PDF generation functionality
 - [x] Write vitest tests untuk core logic
 
 ## New Features (User Request)
