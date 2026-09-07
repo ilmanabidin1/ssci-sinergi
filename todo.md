@@ -62,6 +62,14 @@
 - [x] Kolom tanda tangan berjenjang 3 pemutus (Inisiasi AO, Review Kacab/Koordinator, Final Pemutus sesuai plafon)
 - [x] Informasi di UI `ApplicationDetail.tsx` bahwa dokumen PDF menyertakan lembar disposisi komite & opini risiko
 
+## Tahapan 4: Kepatuhan Pihak Terkait, Pemilahan Sumber Pembayaran, dan Akad Al-Qardh
+
+- [x] Deteksi Calon Nasabah Pihak Terkait BPRS (`isRelatedParty`, `relatedPartyRelation`) dengan eskalasi pemutus ke Direktur Bisnis & Dewan Komisaris + alert BMPD Pihak Terkait maks 10%
+- [x] Opsi Akad Pembiayaan Al-Qardh (pinjaman kebajikan/talangan mikro/haji, margin 0%, biaya administrasi nominal riil) di `NewApplication.tsx`, `schema.ts`, dan `routers.ts`
+- [x] Pemilahan Sumber Pembayaran Utama (`incomeSourceType`: Penghasilan Tetap, Tidak Tetap, Joint Income) dengan panduan bukti pendukung kapasitas DSR 40%
+- [x] Integrasi tanda tangan Dewan Komisaris & warning Pihak Terkait pada lembar disposisi cetak PDF
+- [x] Unit test eskalasi Pihak Terkait di `server/bprsPolicy.test.ts` (total 45 tests lulus)
+
 ## Halaman Tentang SSCI (User Request)
 
 - [x] Buat halaman /tentang-ssci dengan metodologi 3 pilar lengkap

@@ -352,7 +352,12 @@ export const appRouter = router({
         murabahahSignedAt: z.date().nullable().optional(),
         murabahahTaazirToWelfare: z.enum(["yes", "no"]).optional(),
         murabahahNotes: z.string().trim().max(2000).optional(),
-        financingAkad: z.enum(["murabahah", "mudharabah"]).optional(),
+        financingAkad: z.enum(["murabahah", "mudharabah", "qardh"]).optional(),
+        isRelatedParty: z.enum(["yes", "no"]).optional(),
+        relatedPartyRelation: z.string().trim().max(255).optional(),
+        incomeSourceType: z.enum(["fixed", "non_fixed", "joint_income"]).optional(),
+        qardhAdminFee: nonNegativeMoney.nullable().optional(),
+        qardhPurpose: z.string().trim().max(255).optional(),
         mudharabahType: z.enum(["muthlaqah", "muqayyadah"]).optional(),
         mudharabahCapitalValue: nonNegativeMoney.nullable().optional(),
         mudharabahCapitalForm: z.enum(["uang", "aset", "kombinasi"]).optional(),
@@ -705,6 +710,8 @@ export const appRouter = router({
           existingDebt: Number(application.existingDebt),
           tenorMonths: Number(application.financingTenor),
           marginRate: Number(application.marginRate),
+          isRelatedParty: application.isRelatedParty === "yes",
+          relatedPartyRelation: application.relatedPartyRelation || undefined,
           isNonIndividual: application.businessType?.toLowerCase().includes("pt") ||
             application.businessType?.toLowerCase().includes("cv") ||
             application.businessType?.toLowerCase().includes("badan"),

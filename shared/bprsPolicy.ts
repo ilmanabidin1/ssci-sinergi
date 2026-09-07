@@ -127,6 +127,9 @@ export interface BprsPolicyEvaluation {
   /** Kebutuhan opini legal */
   needsLegalOpinion: boolean;
   legalOpinionNote: string;
+  /** Flag apakah calon nasabah pihak terkait */
+  isRelatedParty?: boolean;
+  relatedPartyNote?: string;
 }
 
 /**
@@ -142,6 +145,8 @@ export function evaluateBprsPolicy(params: {
   marginRate: number;
   segment?: BprsProductSegment;
   isNonIndividual?: boolean; // Badan Usaha
+  isRelatedParty?: boolean; // Pihak Terkait BPRS
+  relatedPartyRelation?: string;
 }): BprsPolicyEvaluation {
   const {
     requestedAmount,
@@ -153,6 +158,8 @@ export function evaluateBprsPolicy(params: {
     marginRate,
     segment = "umkm",
     isNonIndividual = false,
+    isRelatedParty = false,
+    relatedPartyRelation = "",
   } = params;
 
   const segmentConfig = BPRS_SEGMENT_DETAILS[segment] || BPRS_SEGMENT_DETAILS.umkm;
@@ -172,9 +179,15 @@ export function evaluateBprsPolicy(params: {
   const maxAllowedInstallmentDsr = Math.max(0, maxTotalAllowedCommitment - existingDebt);
   const maxPlafonByDsr = Math.round((maxAllowedInstallmentDsr * tenor / (1 + marginRate / 100)) * 100) / 100;
 
-  // 1. Kewenangan Memutus Pembiayaan (Bab Kewenangan Memutus)
+  // 1. Kewenangan Memutus Pembiayaan (Bab Kewenangan Memutus & Pihak Terkait)
   let approvalAuthority: BprsPolicyEvaluation["approvalAuthority"];
-  if (requestedAmount <= BPRS_POLICY_CONSTANTS.APPROVAL_LEVEL_1_MAX) {
+  if (isRelatedParty) {
+    approvalAuthority = {
+      roleTitle: "Direktur Bisnis & 1 Orang Dewan Komisaris",
+      description: "Khusus Pihak Terkait BPRS (sesuai ketentuan BMPD maks 10% modal)",
+      subordinateApprovalRequired: "Wajib persetujuan Direktur Bisnis & minimal 1 anggota Dewan Komisaris (non-pemohon)",
+    };
+  } else if (requestedAmount <= BPRS_POLICY_CONSTANTS.APPROVAL_LEVEL_1_MAX) {
     approvalAuthority = {
       roleTitle: "Kepala Bagian Marketing",
       description: "Plafond s.d. Rp 10.000.000,-",
@@ -233,5 +246,9 @@ export function evaluateBprsPolicy(params: {
     complianceOpinionNote,
     needsLegalOpinion,
     legalOpinionNote,
+    isRelatedParty,
+    relatedPartyNote: isRelatedParty
+      ? `Calon nasabah teridentifikasi sebagai Pihak Terkait BPRS (${relatedPartyRelation || "Keluarga / Pengurus / Pemegang Saham"}). Wajib persetujuan Dewan Komisaris dan tunduk pada BMPD Pihak Terkait maks 10% modal.`
+      : undefined,
   };
 }

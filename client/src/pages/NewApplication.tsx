@@ -30,7 +30,73 @@ type ExtractKtpMutation = {
     onError: (error: { message: string }) => void;
   }) => { isPending: boolean; mutate: (input: { imageBase64: string; contentType: "image/jpeg" | "image/png" }) => void };
 };
-const initial: Values = { productSegment: "umkm", customerName: "", customerId: "", businessName: "", businessType: "", businessAge: "", address: "", phone: "", email: "", monthlyRevenue: "", monthlyExpenses: "", existingDebt: "", collateralValue: "", requestedAmount: "", financingTenor: "", marginRate: "", loanPurpose: "", businessShariaCompliant: "", shariaComplianceNotes: "", financingAkad: "murabahah", murabahahType: "", murabahahSupplierName: "", murabahahObject: "", murabahahPriceKnown: "", murabahahMarginDisclosed: "", murabahahDownPayment: "", murabahahWakalah: "", murabahahDpsReviewed: "", murabahahAcquisitionPrice: "", murabahahDirectCost: "", murabahahSupplierDiscount: "", murabahahDownPaymentAmount: "", murabahahWakalahConfirmedAt: "", murabahahInvoiceNumber: "", murabahahQabdhVerifiedAt: "", murabahahSignedAt: "", murabahahTaazirToWelfare: "yes", murabahahNotes: "", mudharabahType: "", mudharabahCapitalValue: "", mudharabahCapitalForm: "", mudharabahBusinessPurpose: "", mudharabahProfitSharingMethod: "", mudharabahBankNisbah: "", mudharabahCustomerNisbah: "", mudharabahPbh: "", mudharabahRbh: "", mudharabahCollateral: "", mudharabahGuarantor: "", mudharabahTaazirToWelfare: "yes", mudharabahSignedAt: "", mudharabahNotes: "", environmentalPractices: "", socialImpact: "", governanceQuality: "", legalDocuments: [{ type: "KTP", status: "pending", notes: "" }, { type: "NPWP", status: "pending", notes: "" }, { type: "NIB", status: "pending", notes: "" }] };
+const initial: Values = {
+  productSegment: "umkm",
+  isRelatedParty: "no",
+  relatedPartyRelation: "",
+  incomeSourceType: "non_fixed",
+  customerName: "",
+  customerId: "",
+  businessName: "",
+  businessType: "",
+  businessAge: "",
+  address: "",
+  phone: "",
+  email: "",
+  monthlyRevenue: "",
+  monthlyExpenses: "",
+  existingDebt: "",
+  collateralValue: "",
+  requestedAmount: "",
+  financingTenor: "",
+  marginRate: "",
+  loanPurpose: "",
+  businessShariaCompliant: "",
+  shariaComplianceNotes: "",
+  financingAkad: "murabahah",
+  qardhAdminFee: "",
+  qardhPurpose: "",
+  murabahahType: "",
+  murabahahSupplierName: "",
+  murabahahObject: "",
+  murabahahPriceKnown: "",
+  murabahahMarginDisclosed: "",
+  murabahahDownPayment: "",
+  murabahahWakalah: "",
+  murabahahDpsReviewed: "",
+  murabahahAcquisitionPrice: "",
+  murabahahDirectCost: "",
+  murabahahSupplierDiscount: "",
+  murabahahDownPaymentAmount: "",
+  murabahahWakalahConfirmedAt: "",
+  murabahahInvoiceNumber: "",
+  murabahahQabdhVerifiedAt: "",
+  murabahahSignedAt: "",
+  murabahahTaazirToWelfare: "yes",
+  murabahahNotes: "",
+  mudharabahType: "",
+  mudharabahCapitalValue: "",
+  mudharabahCapitalForm: "",
+  mudharabahBusinessPurpose: "",
+  mudharabahProfitSharingMethod: "",
+  mudharabahBankNisbah: "",
+  mudharabahCustomerNisbah: "",
+  mudharabahPbh: "",
+  mudharabahRbh: "",
+  mudharabahCollateral: "",
+  mudharabahGuarantor: "",
+  mudharabahTaazirToWelfare: "yes",
+  mudharabahSignedAt: "",
+  mudharabahNotes: "",
+  environmentalPractices: "",
+  socialImpact: "",
+  governanceQuality: "",
+  legalDocuments: [
+    { type: "KTP", status: "pending", notes: "" },
+    { type: "NPWP", status: "pending", notes: "" },
+    { type: "NIB", status: "pending", notes: "" },
+  ],
+};
 
 const demoFirstNames = ["Andi", "Budi", "Citra", "Dewi", "Eko", "Fitri", "Gunawan", "Hendra", "Indah", "Joko", "Kartika", "Lestari", "Mulyadi", "Nurhayati", "Rahmat", "Siti", "Teguh", "Wulan", "Yudi", "Zainal"];
 const demoLastNames = ["Pratama", "Wijaya", "Santoso", "Kurniawan", "Hidayat", "Nugroho", "Saputra", "Maulana", "Rahmawati", "Suryani", "Firmansyah", "Wibowo", "Hakim", "Ramadhani", "Setiawan", "Anggraini", "Prasetyo", "Utami", "Susanti", "Lestari"];
@@ -366,7 +432,74 @@ export default function NewApplication() {
     5: ["governanceQuality"],
   };
   const next = () => { const missing = required[step].filter(key => !String(values[key] || "").trim()); if (missing.length) { toast.error("Lengkapi semua kolom wajib sebelum melanjutkan"); document.getElementById(missing[0])?.focus(); return; } setStep(s => s + 1); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const submit = (e: React.FormEvent) => { e.preventDefault(); const missing = required[5].filter(key => !values[key]?.trim()); if (missing.length) return; createMutation.mutate({ customerName: values.customerName, customerId: values.customerId, businessName: values.businessName, businessType: values.businessType, businessAge: parseInt(values.businessAge), address: values.address, phone: values.phone, email: values.email || undefined, monthlyRevenue: values.monthlyRevenue, monthlyExpenses: values.monthlyExpenses, existingDebt: values.existingDebt, collateralValue: values.collateralValue, requestedAmount: values.requestedAmount, financingTenor: parseInt(values.financingTenor), marginRate: parseFloat(values.marginRate), loanPurpose: values.loanPurpose,   legalDocuments: values.legalDocuments, businessShariaCompliant: values.businessShariaCompliant as "yes" | "no" | "partial", shariaComplianceNotes: values.shariaComplianceNotes || undefined, financingAkad: values.financingAkad === "mudharabah" ? "mudharabah" : "murabahah", mudharabahType: values.mudharabahType || undefined, mudharabahCapitalValue: values.mudharabahCapitalValue ? String(values.mudharabahCapitalValue) : undefined, mudharabahCapitalForm: values.mudharabahCapitalForm || undefined, mudharabahBusinessPurpose: values.mudharabahBusinessPurpose || undefined, mudharabahProfitSharingMethod: values.mudharabahProfitSharingMethod || undefined, mudharabahBankNisbah: values.mudharabahBankNisbah ? String(values.mudharabahBankNisbah) : undefined, mudharabahCustomerNisbah: values.mudharabahCustomerNisbah ? String(values.mudharabahCustomerNisbah) : undefined, mudharabahPbh: values.mudharabahPbh ? String(values.mudharabahPbh) : undefined, mudharabahRbh: values.mudharabahRbh ? String(values.mudharabahRbh) : undefined, mudharabahCollateral: values.mudharabahCollateral || undefined, mudharabahGuarantor: values.mudharabahGuarantor || undefined, mudharabahTaazirToWelfare: values.mudharabahTaazirToWelfare || undefined, mudharabahSignedAt: values.mudharabahSignedAt ? new Date(values.mudharabahSignedAt) : undefined, mudharabahNotes: values.mudharabahNotes || undefined, murabahahType: values.murabahahType || undefined, murabahahSupplierName: values.murabahahSupplierName || undefined, murabahahObject: values.murabahahObject || undefined, murabahahPriceKnown: values.murabahahPriceKnown || undefined, murabahahMarginDisclosed: values.murabahahMarginDisclosed || undefined, murabahahDownPayment: values.murabahahDownPayment || undefined, murabahahWakalah: values.murabahahWakalah || undefined, murabahahDpsReviewed: values.murabahahDpsReviewed || undefined, murabahahAcquisitionPrice: values.murabahahAcquisitionPrice ? String(values.murabahahAcquisitionPrice) : undefined, murabahahDirectCost: values.murabahahDirectCost ? String(values.murabahahDirectCost) : undefined, murabahahSupplierDiscount: values.murabahahSupplierDiscount ? String(values.murabahahSupplierDiscount) : undefined, murabahahDownPaymentAmount: values.murabahahDownPaymentAmount ? String(values.murabahahDownPaymentAmount) : undefined, murabahahMarginAmount: values.murabahahMarginAmount ? String(values.murabahahMarginAmount) : undefined, murabahahInvoiceNumber: values.murabahahInvoiceNumber || undefined, murabahahWakalahConfirmedAt: values.murabahahWakalahConfirmedAt ? new Date(values.murabahahWakalahConfirmedAt) : undefined, murabahahQabdhVerifiedAt: values.murabahahQabdhVerifiedAt ? new Date(values.murabahahQabdhVerifiedAt) : undefined, murabahahSignedAt: values.murabahahSignedAt ? new Date(values.murabahahSignedAt) : undefined, murabahahTaazirToWelfare: values.murabahahTaazirToWelfare || undefined, murabahahNotes: values.murabahahNotes || undefined, environmentalPractices: values.environmentalPractices || undefined, socialImpact: values.socialImpact || undefined, governanceQuality: values.governanceQuality }); };
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const missing = required[5].filter(key => !values[key]?.trim());
+    if (missing.length) return;
+    createMutation.mutate({
+      customerName: values.customerName,
+      customerId: values.customerId,
+      businessName: values.businessName,
+      businessType: values.businessType,
+      businessAge: parseInt(values.businessAge),
+      address: values.address,
+      phone: values.phone,
+      email: values.email || undefined,
+      monthlyRevenue: values.monthlyRevenue,
+      monthlyExpenses: values.monthlyExpenses,
+      existingDebt: values.existingDebt,
+      collateralValue: values.collateralValue,
+      requestedAmount: values.requestedAmount,
+      financingTenor: parseInt(values.financingTenor),
+      marginRate: parseFloat(values.marginRate),
+      loanPurpose: values.loanPurpose,
+      legalDocuments: values.legalDocuments,
+      businessShariaCompliant: values.businessShariaCompliant as "yes" | "no" | "partial",
+      shariaComplianceNotes: values.shariaComplianceNotes || undefined,
+      financingAkad: values.financingAkad === "mudharabah" ? "mudharabah" : values.financingAkad === "qardh" ? "qardh" : "murabahah",
+      isRelatedParty: values.isRelatedParty as "yes" | "no",
+      relatedPartyRelation: values.relatedPartyRelation || undefined,
+      incomeSourceType: values.incomeSourceType as "fixed" | "non_fixed" | "joint_income",
+      qardhAdminFee: values.qardhAdminFee ? String(values.qardhAdminFee) : undefined,
+      qardhPurpose: values.qardhPurpose || undefined,
+      mudharabahType: values.mudharabahType || undefined,
+      mudharabahCapitalValue: values.mudharabahCapitalValue ? String(values.mudharabahCapitalValue) : undefined,
+      mudharabahCapitalForm: values.mudharabahCapitalForm || undefined,
+      mudharabahBusinessPurpose: values.mudharabahBusinessPurpose || undefined,
+      mudharabahProfitSharingMethod: values.mudharabahProfitSharingMethod || undefined,
+      mudharabahBankNisbah: values.mudharabahBankNisbah ? String(values.mudharabahBankNisbah) : undefined,
+      mudharabahCustomerNisbah: values.mudharabahCustomerNisbah ? String(values.mudharabahCustomerNisbah) : undefined,
+      mudharabahPbh: values.mudharabahPbh ? String(values.mudharabahPbh) : undefined,
+      mudharabahRbh: values.mudharabahRbh ? String(values.mudharabahRbh) : undefined,
+      mudharabahCollateral: values.mudharabahCollateral || undefined,
+      mudharabahGuarantor: values.mudharabahGuarantor || undefined,
+      mudharabahTaazirToWelfare: values.mudharabahTaazirToWelfare || undefined,
+      mudharabahSignedAt: values.mudharabahSignedAt ? new Date(values.mudharabahSignedAt) : undefined,
+      mudharabahNotes: values.mudharabahNotes || undefined,
+      murabahahType: values.murabahahType || undefined,
+      murabahahSupplierName: values.murabahahSupplierName || undefined,
+      murabahahObject: values.murabahahObject || undefined,
+      murabahahPriceKnown: values.murabahahPriceKnown || undefined,
+      murabahahMarginDisclosed: values.murabahahMarginDisclosed || undefined,
+      murabahahDownPayment: values.murabahahDownPayment || undefined,
+      murabahahWakalah: values.murabahahWakalah || undefined,
+      murabahahDpsReviewed: values.murabahahDpsReviewed || undefined,
+      murabahahAcquisitionPrice: values.murabahahAcquisitionPrice ? String(values.murabahahAcquisitionPrice) : undefined,
+      murabahahDirectCost: values.murabahahDirectCost ? String(values.murabahahDirectCost) : undefined,
+      murabahahSupplierDiscount: values.murabahahSupplierDiscount ? String(values.murabahahSupplierDiscount) : undefined,
+      murabahahDownPaymentAmount: values.murabahahDownPaymentAmount ? String(values.murabahahDownPaymentAmount) : undefined,
+      murabahahMarginAmount: values.murabahahMarginAmount ? String(values.murabahahMarginAmount) : undefined,
+      murabahahInvoiceNumber: values.murabahahInvoiceNumber || undefined,
+      murabahahWakalahConfirmedAt: values.murabahahWakalahConfirmedAt ? new Date(values.murabahahWakalahConfirmedAt) : undefined,
+      murabahahQabdhVerifiedAt: values.murabahahQabdhVerifiedAt ? new Date(values.murabahahQabdhVerifiedAt) : undefined,
+      murabahahSignedAt: values.murabahahSignedAt ? new Date(values.murabahahSignedAt) : undefined,
+      murabahahTaazirToWelfare: values.murabahahTaazirToWelfare || undefined,
+      murabahahNotes: values.murabahahNotes || undefined,
+      environmentalPractices: values.environmentalPractices || undefined,
+      socialImpact: values.socialImpact || undefined,
+      governanceQuality: values.governanceQuality,
+    });
+  };
   const murabahahInfo = <Alert className="border-blue-300 bg-blue-50 text-blue-950"><HelpCircle className="h-4 w-4" /><AlertTitle>Panduan Akad Murabahah</AlertTitle><AlertDescription className="text-blue-900">Form ini mengacu pada OJK Pedoman Produk Murabahah dan Fatwa DSN-MUI No. 04/DSN-MUI/IV/2000. Akad Murabahah adalah akad jual beli di mana bank bertindak sebagai penjual dan nasabah sebagai pembeli, dengan margin keuntungan yang disepakati. Seluruh kolom bersifat opsional.</AlertDescription></Alert>;
   const yesNo = (name: string, label: string, extra?: { disabled?: boolean; forceValue?: string }) => <div className="space-y-2"><Label htmlFor={name}>{label}</Label><Select value={extra?.forceValue ?? values[name]} disabled={extra?.disabled} onValueChange={value => setValues(v => ({ ...v, [name]: value }))}><SelectTrigger id={name}><SelectValue placeholder="Pilih" /></SelectTrigger><SelectContent><SelectItem value="yes">Ya</SelectItem><SelectItem value="no">Tidak</SelectItem></SelectContent></Select></div>;
   const section = (title: string, children: React.ReactNode) => <div className="space-y-4 rounded-lg border border-slate-200 bg-slate-50 p-4"><h3 className="font-medium text-gray-800">{title}</h3>{children}</div>;
@@ -450,14 +583,33 @@ export default function NewApplication() {
     </>)}
     <Field name="mudharabahNotes" label="Catatan Akad Mudharabah (Opsional)" values={values} setValues={setValues} rows={3} />
   </>;
+  const qardhStep = <>
+    <Alert className="border-emerald-300 bg-emerald-50 text-emerald-950">
+      <HelpCircle className="h-4 w-4" />
+      <AlertTitle>Ketentuan Akad Al-Qardh (Fatwa DSN-MUI & Pedoman KPB BPRS)</AlertTitle>
+      <AlertDescription className="text-emerald-900">
+        Pembiayaan Qardh adalah pinjaman dana kebajikan/talangan di mana nasabah wajib mengembalikan pokok yang diterimanya tanpa imbalan/keuntungan bagi bank. BPRS hanya diperkenankan membebankan biaya administrasi riil (nominal tetap, bukan persentase).
+      </AlertDescription>
+    </Alert>
+    {section("1. Rincian Fasilitas Al-Qardh", <>
+      <div className="grid gap-4 md:grid-cols-2">
+        <Field name="qardhPurpose" label="Tujuan Pinjaman Qardh *" values={values} setValues={setValues} placeholder="Contoh: Dana talangan haji/umrah, talangan pendidikan, atau talangan darurat" />
+        <CurrencyField name="qardhAdminFee" label="Biaya Administrasi Riil (Nominal Rp)" values={values} setValues={setValues} />
+      </div>
+      <p className="text-xs text-muted-foreground">
+        Margin p.a. otomatis dinolkan (0%). Biaya administrasi dibebankan secara nominal riil dan tidak dikaitkan dengan jangka waktu atau besaran pinjaman.
+      </p>
+    </>)}
+  </>;
   const akadStep = <>
     {section("Jenis Akad Pembiayaan", <>
       <div className="grid gap-3 sm:grid-cols-2">
         <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "murabahah" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "murabahah" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Murabahah</div><div className="text-xs text-muted-foreground">Jual beli dengan margin</div></button>
         <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "mudharabah" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "mudharabah" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Mudharabah</div><div className="text-xs text-muted-foreground">Bagi hasil</div></button>
+        <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "qardh", marginRate: "0" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "qardh" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Al-Qardh</div><div className="text-xs text-muted-foreground">Pinjaman kebajikan / talangan (tanpa margin)</div></button>
       </div>
     </>)}
-    {values.financingAkad === "mudharabah" ? mudharabahStep : murabahahStep}
+    {values.financingAkad === "mudharabah" ? mudharabahStep : values.financingAkad === "qardh" ? qardhStep : murabahahStep}
   </>;
   return <div className="min-h-screen bg-gray-50"><nav className="border-b bg-white"><div className="container flex items-center justify-between py-4"><Button variant="ghost" size="sm" asChild><Link href="/"><ArrowLeft className="mr-2 h-4 w-4" />Kembali</Link></Button><img src="/logo-light-bg.png" alt="SSCI" className="h-12 w-auto" /><div className="flex items-center gap-1"><NotificationBell /><ProfileMenu /></div></div></nav>
       <main className="container max-w-4xl py-6 sm:py-8"><div className="mb-6"><div className="flex flex-wrap items-start justify-between gap-3"><div><h1 className="text-3xl font-bold text-gray-900">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-gray-600">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan</p></div><Button type="button" variant="outline" onClick={fillAllDemo}>Isi contoh data</Button></div><p className="mt-3 text-xs text-muted-foreground">Mengisi contoh data acak untuk pengujian alur. Data tetap dapat Anda periksa sebelum dikirim.</p></div>
@@ -514,8 +666,41 @@ export default function NewApplication() {
               </div>
             </div>
           )}
-          {step === 1 && <><div className="grid gap-4 md:grid-cols-2"><Field name="customerName" label="Nama Lengkap *" values={values} setValues={setValues} required /><Field name="customerId" label="NIK / ID Nasabah *" values={values} setValues={setValues} required /><Field name="phone" label="Nomor Telepon *" values={values} setValues={setValues} type="tel" required /><Field name="email" label="Email (Opsional)" values={values} setValues={setValues} type="email" /></div>{historyVisible && historyQuery.data && historyQuery.data.length > 0 && <div ref={searchRef} className="relative"><div className="absolute z-10 w-full rounded-lg border border-slate-200 bg-white shadow-lg"><div className="p-2 text-xs font-medium text-muted-foreground">Riwayat pengajuan nasabah</div><div className="max-h-64 overflow-y-auto">{selectedHistory ? <div className="border-t p-3"><p className="text-sm font-medium">Lanjutkan pengajuan untuk nasabah ini?</p><p className="mt-1 text-sm text-muted-foreground">{selectedHistory.customerName} - {selectedHistory.businessName}</p><div className="mt-2 flex gap-2"><Button type="button" size="sm" onClick={() => fillFromHistory(selectedHistory)}>Ya, lanjutkan</Button><Button type="button" size="sm" variant="outline" onClick={() => setSelectedHistory(null)}>Batal</Button></div></div> : historyQuery.data.map(item => <button key={item.customerId + item.date} type="button" className="flex w-full items-center gap-3 border-t px-3 py-2 text-left hover:bg-slate-50" onClick={() => setSelectedHistory({ customerName: item.customerName, customerId: item.customerId, businessName: item.businessName, status: item.status, latestAssessmentScore: item.latestAssessmentScore, latestAssessmentClassification: item.latestAssessmentClassification, date: item.date })}><div className="flex-1 min-w-0"><div className="text-sm font-medium truncate">{item.customerName}</div><div className="text-xs text-muted-foreground truncate">{item.businessName}</div></div><div className="text-right"><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${item.status === "approved" ? "bg-green-100 text-green-800" : item.status === "rejected" ? "bg-red-100 text-red-800" : item.status === "assessed" ? "bg-blue-100 text-blue-800" : "bg-yellow-100 text-yellow-800"}`}>{item.status === "approved" ? "Disetujui" : item.status === "rejected" ? "Ditolak" : item.status === "assessed" ? "Dinilai" : "Pending"}</span>{item.latestAssessmentScore !== null && <div className="mt-0.5 text-xs text-muted-foreground">Skor: {item.latestAssessmentScore} {item.latestAssessmentClassification ? `(${item.latestAssessmentClassification})` : ""}</div>}</div></button>)}</div>{historyQuery.isFetching && <div className="border-t p-2 text-center text-xs text-muted-foreground"><Loader2 className="mr-1 inline h-3 w-3 animate-spin" />Mencari...</div>}</div></div>}<Field name="address" label="Alamat Lengkap *" values={values} setValues={setValues} rows={3} required /><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div><h3 className="font-medium">Isi data dari foto KTP</h3><p className="text-sm text-muted-foreground">JPG atau PNG, maksimal 5 MB. File hanya dikirim saat Anda menekan tombol proses dan tidak disimpan dalam draft.</p></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept="image/jpeg,image/png" onChange={selectKtpFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={processKtp} disabled={extractKtpMutation.isPending}>{extractKtpMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Proses OCR KTP</Button></div>{ktpFile && <p className="text-xs text-muted-foreground">File dipilih: {ktpFile.name}</p>}{ktpError && <p className="flex items-center gap-1 text-sm text-red-600"><AlertCircle className="h-4 w-4" />{ktpError}</p>}{ktpProcessed && <Alert className="border-green-200 bg-green-50 text-green-900"><CheckCircle2 /><AlertTitle>Data OCR berhasil diisi</AlertTitle><AlertDescription className="text-green-800">Hasil OCR wajib diverifikasi secara manual sebelum aplikasi dikirimkan.</AlertDescription></Alert>}</div></>}
-          {step === 2 && <><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-medium">Import data keuangan dari CSV</h3><p className="text-sm text-muted-foreground">Gunakan 1 sampai 12 baris bulanan dengan kolom month, revenue, expenses, existingInstallment.</p></div><Button type="button" variant="ghost" size="sm" onClick={downloadFinancialTemplate}><Download className="mr-2 h-4 w-4" />Unduh template CSV</Button></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept=".csv,text/csv" onChange={selectFinancialFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={importFinancialFile} disabled={importFinancialMutation.isPending}>{importFinancialMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Import data CSV</Button></div>{financialFile && <p className="text-xs text-muted-foreground">File dipilih: {financialFile.name}</p>}{financialError && <p className="text-sm text-red-600">{financialError}</p>}</div><div className="grid gap-4 md:grid-cols-2"><Field name="businessName" label="Nama Usaha *" values={values} setValues={setValues} required /><Field name="businessType" label="Jenis Usaha *" values={values} setValues={setValues} required /><Field name="businessAge" label="Lama Usaha (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><CurrencyField name="monthlyRevenue" label="Pendapatan Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="monthlyExpenses" label="Pengeluaran Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="existingDebt" label="Total Angsuran Existing per Bulan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="collateralValue" label="Nilai Agunan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="requestedAmount" label="Jumlah Pembiayaan (Rp) *" values={values} setValues={setValues} /><Field name="financingTenor" label="Tenor Pembiayaan (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><Field name="marginRate" label="Total Margin Akad (%) *" values={values} setValues={setValues} type="number" min="0" max="100" step="0.01" required /></div><Field name="loanPurpose" label="Tujuan Pembiayaan *" values={values} setValues={setValues} rows={3} required /></>}
+          {step === 1 && <><div className="grid gap-4 md:grid-cols-2"><Field name="customerName" label="Nama Lengkap *" values={values} setValues={setValues} required /><Field name="customerId" label="NIK / ID Nasabah *" values={values} setValues={setValues} required /><Field name="phone" label="Nomor Telepon *" values={values} setValues={setValues} type="tel" required /><Field name="email" label="Email (Opsional)" values={values} setValues={setValues} type="email" /></div>
+          <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 space-y-3">
+            <div className="font-semibold text-amber-950 text-sm">Status Keterkaitan dengan BPRS (Pihak Terkait)</div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {yesNo("isRelatedParty", "Apakah Nasabah Termasuk Pihak Terkait BPRS?")}
+              {values.isRelatedParty === "yes" && (
+                <Field name="relatedPartyRelation" label="Hubungan / Jabatan Pihak Terkait *" values={values} setValues={setValues} placeholder="Contoh: Direksi / Komisaris / Anak Kandung Pemegang Saham" required />
+              )}
+            </div>
+            {values.isRelatedParty === "yes" && (
+              <p className="text-xs text-amber-800">
+                Sesuai KPB BPRS, pembiayaan pihak terkait wajib memperoleh persetujuan Direktur Bisnis dan minimal 1 orang Dewan Komisaris serta diperhitungkan dalam BMPD Pihak Terkait (maksimal 10% modal).
+              </p>
+            )}
+          </div>{historyVisible && historyQuery.data && historyQuery.data.length > 0 && <div ref={searchRef} className="relative"><div className="absolute z-10 w-full rounded-lg border border-slate-200 bg-white shadow-lg"><div className="p-2 text-xs font-medium text-muted-foreground">Riwayat pengajuan nasabah</div><div className="max-h-64 overflow-y-auto">{selectedHistory ? <div className="border-t p-3"><p className="text-sm font-medium">Lanjutkan pengajuan untuk nasabah ini?</p><p className="mt-1 text-sm text-muted-foreground">{selectedHistory.customerName} - {selectedHistory.businessName}</p><div className="mt-2 flex gap-2"><Button type="button" size="sm" onClick={() => fillFromHistory(selectedHistory)}>Ya, lanjutkan</Button><Button type="button" size="sm" variant="outline" onClick={() => setSelectedHistory(null)}>Batal</Button></div></div> : historyQuery.data.map(item => <button key={item.customerId + item.date} type="button" className="flex w-full items-center gap-3 border-t px-3 py-2 text-left hover:bg-slate-50" onClick={() => setSelectedHistory({ customerName: item.customerName, customerId: item.customerId, businessName: item.businessName, status: item.status, latestAssessmentScore: item.latestAssessmentScore, latestAssessmentClassification: item.latestAssessmentClassification, date: item.date })}><div className="flex-1 min-w-0"><div className="text-sm font-medium truncate">{item.customerName}</div><div className="text-xs text-muted-foreground truncate">{item.businessName}</div></div><div className="text-right"><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${item.status === "approved" ? "bg-green-100 text-green-800" : item.status === "rejected" ? "bg-red-100 text-red-800" : item.status === "assessed" ? "bg-blue-100 text-blue-800" : "bg-yellow-100 text-yellow-800"}`}>{item.status === "approved" ? "Disetujui" : item.status === "rejected" ? "Ditolak" : item.status === "assessed" ? "Dinilai" : "Pending"}</span>{item.latestAssessmentScore !== null && <div className="mt-0.5 text-xs text-muted-foreground">Skor: {item.latestAssessmentScore} {item.latestAssessmentClassification ? `(${item.latestAssessmentClassification})` : ""}</div>}</div></button>)}</div>{historyQuery.isFetching && <div className="border-t p-2 text-center text-xs text-muted-foreground"><Loader2 className="mr-1 inline h-3 w-3 animate-spin" />Mencari...</div>}</div></div>}<Field name="address" label="Alamat Lengkap *" values={values} setValues={setValues} rows={3} required /><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div><h3 className="font-medium">Isi data dari foto KTP</h3><p className="text-sm text-muted-foreground">JPG atau PNG, maksimal 5 MB. File hanya dikirim saat Anda menekan tombol proses dan tidak disimpan dalam draft.</p></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept="image/jpeg,image/png" onChange={selectKtpFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={processKtp} disabled={extractKtpMutation.isPending}>{extractKtpMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Proses OCR KTP</Button></div>{ktpFile && <p className="text-xs text-muted-foreground">File dipilih: {ktpFile.name}</p>}{ktpError && <p className="flex items-center gap-1 text-sm text-red-600"><AlertCircle className="h-4 w-4" />{ktpError}</p>}{ktpProcessed && <Alert className="border-green-200 bg-green-50 text-green-900"><CheckCircle2 /><AlertTitle>Data OCR berhasil diisi</AlertTitle><AlertDescription className="text-green-800">Hasil OCR wajib diverifikasi secara manual sebelum aplikasi dikirimkan.</AlertDescription></Alert>}</div></>}
+          {step === 2 && <><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-medium">Import data keuangan dari CSV</h3><p className="text-sm text-muted-foreground">Gunakan 1 sampai 12 baris bulanan dengan kolom month, revenue, expenses, existingInstallment.</p></div><Button type="button" variant="ghost" size="sm" onClick={downloadFinancialTemplate}><Download className="mr-2 h-4 w-4" />Unduh template CSV</Button></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept=".csv,text/csv" onChange={selectFinancialFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={importFinancialFile} disabled={importFinancialMutation.isPending}>{importFinancialMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Import data CSV</Button></div>{financialFile && <p className="text-xs text-muted-foreground">File dipilih: {financialFile.name}</p>}{financialError && <p className="text-sm text-red-600">{financialError}</p>}</div>
+          <div className="space-y-2">
+            <Label htmlFor="incomeSourceType">Sumber Pembayaran Utama (Analisa Kapasitas KPB BPRS) *</Label>
+            <Select value={values.incomeSourceType} onValueChange={value => setValues(v => ({ ...v, incomeSourceType: value }))}>
+              <SelectTrigger id="incomeSourceType"><SelectValue placeholder="Pilih sumber pembayaran" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="fixed">Penghasilan Tetap (Gaji PNS / BUMN / Karyawan Tetap - Wajib Slip Gaji & Rekening Koran)</SelectItem>
+                <SelectItem value="non_fixed">Penghasilan Tidak Tetap (Wiraswasta / Usaha - Wajib Buku Kas / Mutasi Usaha)</SelectItem>
+                <SelectItem value="joint_income">Penghasilan Bersama (Joint Income Suami-Istri - Wajib Persetujuan Pasangan)</SelectItem>
+              </SelectContent>
+            </Select>
+            <p className="text-xs text-muted-foreground">
+              {values.incomeSourceType === "fixed"
+                ? "Batas angsuran maksimal 40% dari take home pay, diverifikasi melalui slip gaji & mutasi bank."
+                : values.incomeSourceType === "joint_income"
+                ? "Batas angsuran maksimal 40% gabungan suami-istri, wajib melampirkan bukti penghasilan kedua pihak."
+                : "Batas angsuran maksimal 40% dari rata-rata laba bersih usaha, diverifikasi melalui catatan penjualan/kas."}
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2"><Field name="businessName" label="Nama Usaha *" values={values} setValues={setValues} required /><Field name="businessType" label="Jenis Usaha *" values={values} setValues={setValues} required /><Field name="businessAge" label="Lama Usaha (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><CurrencyField name="monthlyRevenue" label="Pendapatan Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="monthlyExpenses" label="Pengeluaran Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="existingDebt" label="Total Angsuran Existing per Bulan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="collateralValue" label="Nilai Agunan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="requestedAmount" label="Jumlah Pembiayaan (Rp) *" values={values} setValues={setValues} /><Field name="financingTenor" label="Tenor Pembiayaan (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><Field name="marginRate" label="Total Margin Akad (%) *" values={values} setValues={setValues} type="number" min="0" max="100" step="0.01" required /></div><Field name="loanPurpose" label="Tujuan Pembiayaan *" values={values} setValues={setValues} rows={3} required /></>}
           {step === 3 && akadStep}
           {step === 4 && <><div className="space-y-4"><div className="font-medium">Dokumen Persyaratan ({BPRS_SEGMENT_DETAILS[values.productSegment]?.label})</div>{values.legalDocuments.map((doc, i) => <div key={doc.type} className="grid items-end gap-3 md:grid-cols-3"><Input value={doc.type} disabled /><Select value={doc.status} onValueChange={status => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, status: status as Document["status"] } : d) }))}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>{[["pending", "Pending"], ["complete", "Lengkap"], ["verified", "Terverifikasi"], ["missing", "Tidak Ada"]].map(([v, t]) => <SelectItem key={v} value={v}>{t}</SelectItem>)}</SelectContent></Select><Input placeholder="Catatan (opsional)" value={doc.notes} onChange={e => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, notes: e.target.value } : d) }))} /></div>)}</div>{select("businessShariaCompliant", "Kepatuhan Bisnis *", [["yes", "Ya, Sepenuhnya"], ["partial", "Sebagian"], ["no", "Tidak"]])}<Field name="shariaComplianceNotes" label="Catatan (Opsional)" values={values} setValues={setValues} rows={3} /></>}
           {step === 5 && <><Field name="environmentalPractices" label="Praktik Lingkungan (Opsional)" values={values} setValues={setValues} rows={2} /><Field name="socialImpact" label="Dampak Sosial (Opsional)" values={values} setValues={setValues} rows={2} />{select("governanceQuality", "Tata Kelola *", [["excellent", "Sangat Baik"], ["good", "Baik"], ["fair", "Cukup"], ["poor", "Kurang"]])}<p className="rounded-md bg-muted p-3 text-sm text-muted-foreground">Periksa kembali data sebelum mengirimkan aplikasi. Draft tersimpan otomatis di perangkat ini.</p></>}

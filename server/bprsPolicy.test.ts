@@ -84,4 +84,22 @@ describe("evaluateBprsPolicy", () => {
     expect(result.appliedMaxDsr).toBe(80);
     expect(result.isDsrCompliant).toBe(true);
   });
+
+  it("escalates approval authority to Direktur Bisnis and Dewan Komisaris when isRelatedParty is true", () => {
+    const result = evaluateBprsPolicy({
+      requestedAmount: 15_000_000, // Walau nominal kecil (level Kacab), jika Pihak Terkait wajib ke Direksi & Komisaris
+      collateralValue: 20_000_000,
+      monthlyRevenue: 10_000_000,
+      monthlyExpenses: 5_000_000,
+      existingDebt: 0,
+      tenorMonths: 12,
+      marginRate: 10,
+      isRelatedParty: true,
+      relatedPartyRelation: "Anak Kandung Direksi",
+    });
+
+    expect(result.isRelatedParty).toBe(true);
+    expect(result.approvalAuthority.roleTitle).toContain("Dewan Komisaris");
+    expect(result.relatedPartyNote).toContain("BMPD Pihak Terkait");
+  });
 });

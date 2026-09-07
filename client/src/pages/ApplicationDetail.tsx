@@ -495,6 +495,15 @@ export default function ApplicationDetail() {
                    </div>
 
                    <div className="space-y-2 text-xs">
+                     {data.bprsEvaluation.isRelatedParty && (
+                       <div className="p-2.5 rounded border bg-rose-50 border-rose-200 text-rose-900 flex items-start gap-2">
+                         <AlertCircle className="h-4 w-4 text-rose-600 shrink-0 mt-0.5" />
+                         <div>
+                           <span className="font-bold">PERHATIAN PIHAK TERKAIT: </span>
+                           <span>{data.bprsEvaluation.relatedPartyNote}</span>
+                         </div>
+                       </div>
+                     )}
                      <div className={`p-2 rounded border flex items-start gap-2 ${data.bprsEvaluation.needsComplianceOpinion ? "bg-amber-50 border-amber-200 text-amber-800" : "bg-white border-slate-100 text-slate-600"}`}>
                        <span className="font-semibold">Opini Kepatuhan & MR:</span>
                        <span>{data.bprsEvaluation.complianceOpinionNote}</span>
@@ -503,7 +512,7 @@ export default function ApplicationDetail() {
                        <span className="font-semibold">Opini Legal:</span>
                        <span>{data.bprsEvaluation.legalOpinionNote}</span>
                      </div>
-                     {(data.bprsEvaluation.needsComplianceOpinion || data.bprsEvaluation.needsLegalOpinion || Number(data.application.requestedAmount) >= 25_000_000) && (
+                     {(data.bprsEvaluation.isRelatedParty || data.bprsEvaluation.needsComplianceOpinion || data.bprsEvaluation.needsLegalOpinion || Number(data.application.requestedAmount) >= 25_000_000) && (
                        <div className="p-2 rounded border bg-blue-50 border-blue-200 text-blue-800 flex items-center justify-between">
                          <span className="font-medium">
                            📄 PDF Laporan mencakup Lembar Lampiran Disposisi Komite Pembiayaan & Kolom Opini Kepatuhan/Legal otomatis.

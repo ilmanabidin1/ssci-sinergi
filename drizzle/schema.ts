@@ -80,7 +80,14 @@ export const applications = mysqlTable("applications", {
   shariaComplianceNotes: text("shariaComplianceNotes"),
   
   // Akad financing (dynamic checklist selector)
-  financingAkad: mysqlEnum("financingAkad", ["murabahah", "mudharabah"]),
+  financingAkad: mysqlEnum("financingAkad", ["murabahah", "mudharabah", "qardh"]),
+
+  // Pihak Terkait & Sumber Penghasilan (Pedoman Kebijakan BPRS)
+  isRelatedParty: mysqlEnum("isRelatedParty", ["yes", "no"]).default("no"),
+  relatedPartyRelation: varchar("relatedPartyRelation", { length: 255 }),
+  incomeSourceType: mysqlEnum("incomeSourceType", ["fixed", "non_fixed", "joint_income"]).default("non_fixed"),
+  qardhAdminFee: decimal("qardhAdminFee", { precision: 15, scale: 2 }),
+  qardhPurpose: varchar("qardhPurpose", { length: 255 }),
 
   // Murabahah Akad Checklist (OJK Pedoman Produk Murabahah & DSN-MUI compliance)
   murabahahType: mysqlEnum("murabahahType", ["standard", "ultra_mikro", "personal"]),

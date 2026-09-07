@@ -226,6 +226,8 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
       existingDebt: Number(application.existingDebt),
       tenorMonths: Number(application.financingTenor),
       marginRate: Number(application.marginRate),
+      isRelatedParty: application.isRelatedParty === "yes",
+      relatedPartyRelation: application.relatedPartyRelation || undefined,
       isNonIndividual: application.businessType?.toLowerCase().includes("pt") ||
         application.businessType?.toLowerCase().includes("cv") ||
         application.businessType?.toLowerCase().includes("badan"),
@@ -256,7 +258,7 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
     renderKeyValues(doc, auditRows, contentWidth);
 
     // Lembar Lampiran Khusus: Komite Pembiayaan & Opini Kepatuhan/Legal
-    if (bprsEval.needsComplianceOpinion || bprsEval.needsLegalOpinion || Number(application.requestedAmount) >= 25_000_000) {
+    if (bprsEval.isRelatedParty || bprsEval.needsComplianceOpinion || bprsEval.needsLegalOpinion || Number(application.requestedAmount) >= 25_000_000) {
       doc.addPage();
       const page2Top = doc.y;
 
@@ -274,6 +276,26 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
         align: "center",
         width: contentWidth,
       });
+
+      if (bprsEval.isRelatedParty) {
+        doc.moveDown(1);
+        doc.rect(doc.page.margins.left, doc.y, contentWidth, 30).fill("#fff1f2");
+        doc.font("Helvetica-Bold").fontSize(9).fillColor("#9f1239");
+        doc.text(
+          "PERHATIAN: CALON NASABAH PIHAK TERKAIT BPRS",
+          doc.page.margins.left + 8,
+          doc.y - 24,
+          { width: contentWidth - 16 }
+        );
+        doc.font("Helvetica").fontSize(8).fillColor("#be123c");
+        doc.text(
+          `Hubungan: ${escapeText(application.relatedPartyRelation || "-")}. Wajib persetujuan Direktur Bisnis & minimal 1 Dewan Komisaris.`,
+          doc.page.margins.left + 8,
+          doc.y,
+          { width: contentWidth - 16 }
+        );
+        doc.y += 10;
+      }
 
       doc.moveDown(1.5);
       sectionTitle(doc, "1. OPINI KEPATUHAN & MANAJEMEN RISIKO");
@@ -314,11 +336,17 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
       const komiteCols = contentWidth / 3;
       const komiteY = doc.y;
 
-      const roles = [
-        ["Pemutus 1 (Inisiasi)", "Account Officer / Ka. Marketing"],
-        ["Pemutus 2 (Review)", "Ka. Kantor Cabang / Koordinator"],
-        ["Pemutus 3 (Final)", bprsEval.approvalAuthority.roleTitle],
-      ];
+      const roles = bprsEval.isRelatedParty
+        ? [
+            ["Pemutus 1 (Inisiasi)", "Account Officer / Ka. Marketing"],
+            ["Pemutus 2 (Direksi)", "Direktur yang Membawahi Bisnis"],
+            ["Pemutus 3 (Dewan Komisaris)", "Anggota Dewan Komisaris (Non-Pemohon)"],
+          ]
+        : [
+            ["Pemutus 1 (Inisiasi)", "Account Officer / Ka. Marketing"],
+            ["Pemutus 2 (Review)", "Ka. Kantor Cabang / Koordinator"],
+            ["Pemutus 3 (Final)", bprsEval.approvalAuthority.roleTitle],
+          ];
 
       roles.forEach(([title, role], idx) => {
         const xPos = doc.page.margins.left + idx * komiteCols;
