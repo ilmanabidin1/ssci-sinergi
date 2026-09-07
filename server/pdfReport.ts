@@ -199,7 +199,8 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
       ["Nilai Agunan", formatIdMoney(application.collateralValue), "right"],
       ["Pembiayaan Diajukan", formatIdMoney(application.requestedAmount), "right"],
       ["Tenor (bulan)", String(application.financingTenor), "right"],
-      ["Margin Rate (%)", String(application.marginRate), "right"],
+      ["Skema Akad", (application.financingAkad || "murabahah").toUpperCase(), "right"],
+      ["Margin / Ujrah (%)", String(application.marginRate), "right"],
     ];
     renderTable(doc, ["Keterangan", "Nilai"], financialRows, contentWidth);
     doc.moveDown(0.5);
@@ -244,6 +245,18 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
       ["Opini Kepatuhan & MR", bprsEval.needsComplianceOpinion ? "Wajib (Plafon >= Rp 100 Juta)" : "Tidak dipersyaratkan khusus", "right"],
       ["Opini Legal", bprsEval.needsLegalOpinion ? "Wajib (Plafon >= Rp 250 Juta / Badan Usaha)" : "Standar verifikasi legal", "right"],
     ];
+    if (application.financingAkad === "multijasa") {
+      bprsRows.push([
+        "Rincian Jasa",
+        `${escapeText(application.multijasaServiceProvider || "-")} (${escapeText(application.multijasaSourceObject || "-")})`,
+        "right",
+      ]);
+      bprsRows.push([
+        "Nilai Jasa & Ujrah",
+        `Biaya: ${formatIdMoney(application.multijasaServiceCost || 0)}, Ujrah: ${formatIdMoney(application.multijasaUjrahAmount || 0)}`,
+        "right",
+      ]);
+    }
     renderTable(doc, ["Parameter Pedoman KPB", "Status / Rekomendasi"], bprsRows, contentWidth);
 
     doc.moveDown(1.5);

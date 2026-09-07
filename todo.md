@@ -70,6 +70,14 @@
 - [x] Integrasi tanda tangan Dewan Komisaris & warning Pihak Terkait pada lembar disposisi cetak PDF
 - [x] Unit test eskalasi Pihak Terkait di `server/bprsPolicy.test.ts` (total 45 tests lulus)
 
+## Tahapan 5: Integrasi Pembiayaan Ijarah Multijasa (Fatwa DSN-MUI No. 44 & Pedoman OJK)
+
+- [x] Skema database & migrasi 0019 untuk akad Multijasa (`multijasaAkadType`, `multijasaServiceCategory`, `multijasaServiceProvider`, `multijasaSourceObject`, `multijasaServiceCost`, `multijasaDownPayment`, `multijasaUjrahAmount`, `multijasaWakalah`, `multijasaDpsReviewed`, `multijasaTaazirToWelfare`)
+- [x] Logika kalkulasi piutang Ijarah Multijasa (pokok = biaya jasa - uang muka; piutang = pokok + ujrah nominal; angsuran bulanan) di `server/multijasa.ts`
+- [x] Form wizard akad ke-4: Ijarah Multijasa di `NewApplication.tsx` dengan kategori manfaat jasa (pendidikan/kuliah, umrah/haji, kesehatan, renovasi/tenaga kerja, sewa properti)
+- [x] Rincian objek jasa dan nilai ujrah di halaman `ApplicationDetail.tsx` dan tabel PDF `server/pdfReport.ts`
+- [x] Unit test kalkulasi multijasa di `server/multijasa.test.ts` (total 47 tests lulus)
+
 ## Halaman Tentang SSCI (User Request)
 
 - [x] Buat halaman /tentang-ssci dengan metodologi 3 pilar lengkap

@@ -716,7 +716,18 @@ export default function ApplicationDetail() {
               <div><span className="font-semibold">Agunan:</span> Rp {Number(application.collateralValue).toLocaleString()}</div>
                <div><span className="font-semibold">Pembiayaan Diajukan:</span> Rp {Number(application.requestedAmount).toLocaleString()}</div>
                <div><span className="font-semibold">Tenor:</span> {application.financingTenor} bulan</div>
-               <div><span className="font-semibold">Total margin:</span> {Number(application.marginRate).toFixed(2)}%</div>
+               <div><span className="font-semibold">Total margin / ujrah:</span> {Number(application.marginRate).toFixed(2)}%</div>
+               <div><span className="font-semibold">Skema Akad:</span> <span className="uppercase font-medium text-primary">{application.financingAkad || "murabahah"}</span></div>
+               {application.financingAkad === "multijasa" && (
+                 <div className="mt-2 p-2.5 bg-indigo-50 border border-indigo-100 rounded text-xs space-y-1">
+                   <div className="font-semibold text-indigo-950">Rincian Ijarah Multijasa:</div>
+                   <div>Penyedia Jasa: {application.multijasaServiceProvider || "-"}</div>
+                   <div>Objek Jasa: {application.multijasaSourceObject || "-"}</div>
+                   <div>Nilai Jasa: Rp {Number(application.multijasaServiceCost || 0).toLocaleString("id-ID")}</div>
+                   <div>Uang Muka (Hamish Jiddiyyah): Rp {Number(application.multijasaDownPayment || 0).toLocaleString("id-ID")}</div>
+                   <div>Ujrah Nominal: Rp {Number(application.multijasaUjrahAmount || 0).toLocaleString("id-ID")}</div>
+                 </div>
+               )}
             </CardContent>
           </Card>
 

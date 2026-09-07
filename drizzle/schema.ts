@@ -80,7 +80,7 @@ export const applications = mysqlTable("applications", {
   shariaComplianceNotes: text("shariaComplianceNotes"),
   
   // Akad financing (dynamic checklist selector)
-  financingAkad: mysqlEnum("financingAkad", ["murabahah", "mudharabah", "qardh"]),
+  financingAkad: mysqlEnum("financingAkad", ["murabahah", "mudharabah", "qardh", "multijasa"]),
 
   // Pihak Terkait & Sumber Penghasilan (Pedoman Kebijakan BPRS)
   isRelatedParty: mysqlEnum("isRelatedParty", ["yes", "no"]).default("no"),
@@ -88,6 +88,19 @@ export const applications = mysqlTable("applications", {
   incomeSourceType: mysqlEnum("incomeSourceType", ["fixed", "non_fixed", "joint_income"]).default("non_fixed"),
   qardhAdminFee: decimal("qardhAdminFee", { precision: 15, scale: 2 }),
   qardhPurpose: varchar("qardhPurpose", { length: 255 }),
+
+  // Multijasa Akad Checklist (Fatwa DSN-MUI No. 44 & Pedoman Produk OJK)
+  multijasaAkadType: mysqlEnum("multijasaAkadType", ["ijarah", "kafalah_bil_ujrah"]).default("ijarah"),
+  multijasaServiceCategory: mysqlEnum("multijasaServiceCategory", ["pendidikan", "umrah_haji", "kesehatan", "tenaga_kerja_renovasi", "sewa_properti", "lainnya"]),
+  multijasaServiceProvider: varchar("multijasaServiceProvider", { length: 255 }),
+  multijasaSourceObject: varchar("multijasaSourceObject", { length: 255 }),
+  multijasaServiceCost: decimal("multijasaServiceCost", { precision: 15, scale: 2 }),
+  multijasaDownPayment: decimal("multijasaDownPayment", { precision: 15, scale: 2 }),
+  multijasaUjrahAmount: decimal("multijasaUjrahAmount", { precision: 15, scale: 2 }),
+  multijasaWakalah: mysqlEnum("multijasaWakalah", ["yes", "no"]).default("no"),
+  multijasaDpsReviewed: mysqlEnum("multijasaDpsReviewed", ["yes", "no"]).default("yes"),
+  multijasaTaazirToWelfare: mysqlEnum("multijasaTaazirToWelfare", ["yes", "no"]).default("yes"),
+  multijasaNotes: text("multijasaNotes"),
 
   // Murabahah Akad Checklist (OJK Pedoman Produk Murabahah & DSN-MUI compliance)
   murabahahType: mysqlEnum("murabahahType", ["standard", "ultra_mikro", "personal"]),

@@ -462,6 +462,17 @@ export default function NewApplication() {
       incomeSourceType: values.incomeSourceType as "fixed" | "non_fixed" | "joint_income",
       qardhAdminFee: values.qardhAdminFee ? String(values.qardhAdminFee) : undefined,
       qardhPurpose: values.qardhPurpose || undefined,
+      multijasaAkadType: values.multijasaAkadType || undefined,
+      multijasaServiceCategory: values.multijasaServiceCategory || undefined,
+      multijasaServiceProvider: values.multijasaServiceProvider || undefined,
+      multijasaSourceObject: values.multijasaSourceObject || undefined,
+      multijasaServiceCost: values.multijasaServiceCost ? String(values.multijasaServiceCost) : undefined,
+      multijasaDownPayment: values.multijasaDownPayment ? String(values.multijasaDownPayment) : undefined,
+      multijasaUjrahAmount: values.multijasaUjrahAmount ? String(values.multijasaUjrahAmount) : undefined,
+      multijasaWakalah: values.multijasaWakalah || undefined,
+      multijasaDpsReviewed: values.multijasaDpsReviewed || undefined,
+      multijasaTaazirToWelfare: values.multijasaTaazirToWelfare || undefined,
+      multijasaNotes: values.multijasaNotes || undefined,
       mudharabahType: values.mudharabahType || undefined,
       mudharabahCapitalValue: values.mudharabahCapitalValue ? String(values.mudharabahCapitalValue) : undefined,
       mudharabahCapitalForm: values.mudharabahCapitalForm || undefined,
@@ -601,15 +612,80 @@ export default function NewApplication() {
       </p>
     </>)}
   </>;
+  const multijasaStep = <>
+    <Alert className="border-indigo-300 bg-indigo-50 text-indigo-950">
+      <HelpCircle className="h-4 w-4" />
+      <AlertTitle>Ketentuan Pembiayaan Multijasa (Fatwa DSN-MUI No. 44 & Pedoman OJK)</AlertTitle>
+      <AlertDescription className="text-indigo-900">
+        Pembiayaan Multijasa menggunakan akad Ijarah (sewa manfaat jasa) atau Kafalah bil Ujrah (penjaminan). Bank menyewa manfaat jasa dari penyedia jasa atau menunjuk nasabah sebagai wakil, lalu menyewakannya kembali kepada nasabah dengan imbalan ujrah dalam nominal tetap.
+      </AlertDescription>
+    </Alert>
+    {section("1. Objek & Penyedia Jasa (Service Provider)", <>
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="space-y-2">
+          <Label htmlFor="multijasaServiceCategory">Kategori Manfaat Jasa *</Label>
+          <Select value={values.multijasaServiceCategory || "pendidikan"} onValueChange={value => setValues(v => ({ ...v, multijasaServiceCategory: value }))}>
+            <SelectTrigger id="multijasaServiceCategory"><SelectValue placeholder="Pilih kategori jasa" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="pendidikan">Pendidikan (Uang Kuliah / Sekolah / Kursus)</SelectItem>
+              <SelectItem value="umrah_haji">Ibadah Umrah / Porsi Haji Khusus</SelectItem>
+              <SelectItem value="kesehatan">Kesehatan / Tindakan Medis Rumah Sakit</SelectItem>
+              <SelectItem value="tenaga_kerja_renovasi">Jasa Tenaga Kerja / Renovasi Bangunan</SelectItem>
+              <SelectItem value="sewa_properti">Sewa Tempat Usaha / Gedung / Properti</SelectItem>
+              <SelectItem value="lainnya">Jasa Halal Lainnya</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="multijasaAkadType">Pilihan Konstruksi Akad *</Label>
+          <Select value={values.multijasaAkadType || "ijarah"} onValueChange={value => setValues(v => ({ ...v, multijasaAkadType: value }))}>
+            <SelectTrigger id="multijasaAkadType"><SelectValue placeholder="Pilih akad" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="ijarah">Ijarah Multijasa (Sewa Ulang Manfaat Jasa)</SelectItem>
+              <SelectItem value="kafalah_bil_ujrah">Kafalah bil Ujrah (Penjaminan Jasa)</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <Field name="multijasaServiceProvider" label="Nama Lembaga / Penyedia Jasa *" values={values} setValues={setValues} placeholder="Contoh: Universitas Islam Bandung / Travel Umrah / RS Hermina" required />
+        <Field name="multijasaSourceObject" label="Rincian / Spesifikasi Manfaat Jasa *" values={values} setValues={setValues} placeholder="Contoh: SPP & Biaya Kuliah Semester 1-4 / Paket Umrah Reguler 12 Hari" required />
+      </div>
+      <p className="text-xs text-muted-foreground">
+        Objek jasa harus halal, dapat dispesifikasikan secara jelas, dan belum dibayar lunas oleh nasabah ke pihak penyedia jasa.
+      </p>
+    </>)}
+    {section("2. Perhitungan Nilai Jasa & Ujrah (Nominal Tetap)", <>
+      <div className="grid gap-4 md:grid-cols-3">
+        <CurrencyField name="multijasaServiceCost" label="Nilai Perolehan Jasa (Rp) *" values={values} setValues={setValues} />
+        <CurrencyField name="multijasaDownPayment" label="Uang Muka / Hamish Jiddiyyah (Rp)" values={values} setValues={setValues} />
+        <CurrencyField name="multijasaUjrahAmount" label="Imbalan Ujrah Bank (Nominal Rp) *" values={values} setValues={setValues} />
+      </div>
+      <div className="grid gap-4 md:grid-cols-3">
+        {yesNo("multijasaWakalah", "Gunakan Akad Wakalah Pembelian Jasa")}
+        {yesNo("multijasaDpsReviewed", "Kesesuaian Ditelaah oleh DPS")}
+        {yesNo("multijasaTaazirToWelfare", "Denda (Ta'zir) ke Dana Kebajikan")}
+      </div>
+      <p className="text-xs text-muted-foreground">
+        Besaran ujrah wajib disepakati di awal akad dan dinyatakan dalam bentuk nominal tetap, bukan persentase berfluktuasi (Fatwa DSN-MUI No. 44 Diktum Pertama angka 5).
+      </p>
+    </>)}
+    <Field name="multijasaNotes" label="Catatan Tambahan Akad Multijasa (Opsional)" values={values} setValues={setValues} rows={3} />
+  </>;
   const akadStep = <>
     {section("Jenis Akad Pembiayaan", <>
       <div className="grid gap-3 sm:grid-cols-2">
-        <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "murabahah" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "murabahah" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Murabahah</div><div className="text-xs text-muted-foreground">Jual beli dengan margin</div></button>
-        <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "mudharabah" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "mudharabah" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Mudharabah</div><div className="text-xs text-muted-foreground">Bagi hasil</div></button>
+        <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "murabahah" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "murabahah" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Murabahah</div><div className="text-xs text-muted-foreground">Jual beli barang dengan margin</div></button>
+        <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "mudharabah" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "mudharabah" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Mudharabah</div><div className="text-xs text-muted-foreground">Kemitraan bagi hasil usaha</div></button>
         <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "qardh", marginRate: "0" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "qardh" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Al-Qardh</div><div className="text-xs text-muted-foreground">Pinjaman kebajikan / talangan (tanpa margin)</div></button>
+        <button type="button" onClick={() => setValues(v => ({ ...v, financingAkad: "multijasa" }))} className={`rounded-lg border p-4 text-left transition ${values.financingAkad === "multijasa" ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}><div className="font-medium text-gray-900">Ijarah Multijasa</div><div className="text-xs text-muted-foreground">Sewa manfaat jasa (pendidikan, umrah, renovasi)</div></button>
       </div>
     </>)}
-    {values.financingAkad === "mudharabah" ? mudharabahStep : values.financingAkad === "qardh" ? qardhStep : murabahahStep}
+    {values.financingAkad === "mudharabah"
+      ? mudharabahStep
+      : values.financingAkad === "qardh"
+      ? qardhStep
+      : values.financingAkad === "multijasa"
+      ? multijasaStep
+      : murabahahStep}
   </>;
   return <div className="min-h-screen bg-gray-50"><nav className="border-b bg-white"><div className="container flex items-center justify-between py-4"><Button variant="ghost" size="sm" asChild><Link href="/"><ArrowLeft className="mr-2 h-4 w-4" />Kembali</Link></Button><img src="/logo-light-bg.png" alt="SSCI" className="h-12 w-auto" /><div className="flex items-center gap-1"><NotificationBell /><ProfileMenu /></div></div></nav>
       <main className="container max-w-4xl py-6 sm:py-8"><div className="mb-6"><div className="flex flex-wrap items-start justify-between gap-3"><div><h1 className="text-3xl font-bold text-gray-900">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-gray-600">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan</p></div><Button type="button" variant="outline" onClick={fillAllDemo}>Isi contoh data</Button></div><p className="mt-3 text-xs text-muted-foreground">Mengisi contoh data acak untuk pengujian alur. Data tetap dapat Anda periksa sebelum dikirim.</p></div>
