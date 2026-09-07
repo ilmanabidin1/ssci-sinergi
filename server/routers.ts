@@ -377,7 +377,7 @@ export const appRouter = router({
         governanceQuality: z.enum(["excellent", "good", "fair", "poor"]),
       }))
       .mutation(async ({ input, ctx }) => {
-        const moneyOrNull = (value: string | null | undefined) => (value == null ? null : value.toString());
+        const moneyOrNull = (value: string | null | undefined) => (!value || value === "" ? null : value.toString());
         const applicationId = await db.createApplication({
           ...input,
           marginRate: input.marginRate.toString(),
@@ -386,6 +386,10 @@ export const appRouter = router({
           murabahahSupplierDiscount: moneyOrNull(input.murabahahSupplierDiscount),
           murabahahDownPaymentAmount: moneyOrNull(input.murabahahDownPaymentAmount),
           murabahahMarginAmount: moneyOrNull(input.murabahahMarginAmount),
+          qardhAdminFee: moneyOrNull(input.qardhAdminFee),
+          mudharabahCapitalValue: moneyOrNull(input.mudharabahCapitalValue),
+          mudharabahPbh: moneyOrNull(input.mudharabahPbh),
+          mudharabahRbh: moneyOrNull(input.mudharabahRbh),
           organizationId: ctx.user.organizationId,
           submittedBy: ctx.user.id,
           status: "pending",
