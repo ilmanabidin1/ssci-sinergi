@@ -907,7 +907,7 @@ export async function createTeamUser(input: {
   position?: string | null;
   phone?: string | null;
   passwordHash: string;
-  role: "maker" | "checker";
+  role: "maker" | "checker" | "admin";
 }) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");

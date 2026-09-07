@@ -20,6 +20,53 @@ export async function verifyPassword(password: string, encodedHash: string) {
 }
 
 export async function ensurePilotAdmin() {
+  // 1. Akun bawaan demo pemisahan fungsi (Four-Eyes Principle / KPB BPRS)
+  const defaultDemoUsers: Array<{
+    email: string;
+    name: string;
+    password: string;
+    role: "maker" | "checker" | "admin";
+    position: string;
+  }> = [
+    {
+      email: "analis@bprs.id",
+      name: "Ahmad Fauzi (Account Officer / Analis)",
+      password: "password123",
+      role: "maker",
+      position: "Account Officer Pembiayaan",
+    },
+    {
+      email: "komite@bprs.id",
+      name: "Drs. H. Mulyadi (Komite Pembiayaan)",
+      password: "password123",
+      role: "checker",
+      position: "Kepala Cabang / Pemutus",
+    },
+    {
+      email: "admin@bprs.id",
+      name: "Administrator BPRS",
+      password: "password123",
+      role: "admin",
+      position: "Admin Sistem BPRS",
+    },
+  ];
+
+  for (const demo of defaultDemoUsers) {
+    const existing = await db.getUserByEmail(demo.email);
+    if (!existing) {
+      await db.createTeamUser({
+        organizationId: 1,
+        name: demo.name,
+        email: demo.email,
+        position: demo.position,
+        passwordHash: await hashPassword(demo.password),
+        role: demo.role,
+      });
+      console.log(`[Auth] Seeded BPRS demo user: ${demo.email} (${demo.role})`);
+    }
+  }
+
+  // 2. Pilot Admin dari Environment jika dikonfigurasi
   if (!ENV.pilotAdminEmail || !ENV.pilotAdminPassword) return;
   const email = ENV.pilotAdminEmail.trim().toLowerCase();
   const existing = await db.getUserByEmail(email);

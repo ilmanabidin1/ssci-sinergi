@@ -64,6 +64,51 @@ export default function Login() {
               Masuk
             </Button>
           </form>
+
+          <div className="mt-6 border-t border-slate-200 pt-4">
+            <div className="text-xs font-semibold text-slate-500 mb-2">
+              Akun Simulasi Pedoman BPRS (Klik untuk isi cepat):
+            </div>
+            <div className="space-y-1.5 text-xs">
+              <button
+                type="button"
+                className="w-full text-left p-2 rounded bg-slate-100 hover:bg-slate-200 transition flex items-center justify-between"
+                onClick={() => {
+                  const emailInput = document.getElementById("email") as HTMLInputElement;
+                  const passInput = document.getElementById("password") as HTMLInputElement;
+                  if (emailInput && passInput) {
+                    emailInput.value = "analis@bprs.id";
+                    passInput.value = "password123";
+                  }
+                }}
+              >
+                <div>
+                  <span className="font-semibold text-slate-800">1. Analis / Account Officer (Maker)</span>
+                  <div className="text-[11px] text-slate-500">analis@bprs.id (Input pengajuan & hitung kelayakan)</div>
+                </div>
+                <span className="rounded bg-emerald-100 text-emerald-800 px-1.5 py-0.5 text-[10px] font-medium">Isi</span>
+              </button>
+
+              <button
+                type="button"
+                className="w-full text-left p-2 rounded bg-slate-100 hover:bg-slate-200 transition flex items-center justify-between"
+                onClick={() => {
+                  const emailInput = document.getElementById("email") as HTMLInputElement;
+                  const passInput = document.getElementById("password") as HTMLInputElement;
+                  if (emailInput && passInput) {
+                    emailInput.value = "komite@bprs.id";
+                    passInput.value = "password123";
+                  }
+                }}
+              >
+                <div>
+                  <span className="font-semibold text-slate-800">2. Komite Pembiayaan (Checker)</span>
+                  <div className="text-[11px] text-slate-500">komite@bprs.id (Persetujuan / Keputusan komite)</div>
+                </div>
+                <span className="rounded bg-indigo-100 text-indigo-800 px-1.5 py-0.5 text-[10px] font-medium">Isi</span>
+              </button>
+            </div>
+          </div>
         </CardContent>
       </Card>
     </main>
