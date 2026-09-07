@@ -255,6 +255,89 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
     ];
     renderKeyValues(doc, auditRows, contentWidth);
 
+    // Lembar Lampiran Khusus: Komite Pembiayaan & Opini Kepatuhan/Legal
+    if (bprsEval.needsComplianceOpinion || bprsEval.needsLegalOpinion || Number(application.requestedAmount) >= 25_000_000) {
+      doc.addPage();
+      const page2Top = doc.y;
+
+      doc.font("Helvetica-Bold");
+      doc.fontSize(13);
+      doc.fillColor("#111827");
+      doc.text("LEMBAR DISPOSISI KOMITE PEMBIAYAAN & OPINI RISIKO", doc.page.margins.left, page2Top, {
+        align: "center",
+        width: contentWidth,
+      });
+      doc.font("Helvetica");
+      doc.fontSize(9);
+      doc.fillColor("#6b7280");
+      doc.text("Lampiran Evaluasi Kebijakan Pembiayaan BPRS (KPB)", {
+        align: "center",
+        width: contentWidth,
+      });
+
+      doc.moveDown(1.5);
+      sectionTitle(doc, "1. OPINI KEPATUHAN & MANAJEMEN RISIKO");
+      doc.font("Helvetica");
+      doc.fontSize(9);
+      doc.fillColor("#374151");
+      doc.text(
+        bprsEval.needsComplianceOpinion
+          ? "Status: WAJIB (Plafon >= Rp 100.000.000,-). PE Kepatuhan & Manajemen Risiko wajib memberikan analisis independen."
+          : "Status: Opsional/Standar (Plafon < Rp 100.000.000,-).",
+        { width: contentWidth }
+      );
+      doc.moveDown(0.5);
+      doc.rect(doc.page.margins.left, doc.y, contentWidth, 55).strokeColor("#d1d5db").lineWidth(0.5).stroke();
+      doc.font("Helvetica-Oblique").fontSize(8).fillColor("#9ca3af");
+      doc.text("Catatan / Rekomendasi Opini Kepatuhan & Manajemen Risiko (diisi oleh PE Kepatuhan & MR):", doc.page.margins.left + 6, doc.y + 6, { width: contentWidth - 12 });
+      doc.y += 45;
+
+      doc.moveDown(1.5);
+      sectionTitle(doc, "2. OPINI LEGAL PEMBIAYAAN");
+      doc.font("Helvetica");
+      doc.fontSize(9);
+      doc.fillColor("#374151");
+      doc.text(
+        bprsEval.needsLegalOpinion
+          ? "Status: WAJIB (Plafon >= Rp 250.000.000,- atau Pembiayaan Non-Perorangan). Bagian Legal wajib memeriksa keabsahan subjek & objek akad."
+          : "Status: Standar Verifikasi Administrasi Pembiayaan & Legal.",
+        { width: contentWidth }
+      );
+      doc.moveDown(0.5);
+      doc.rect(doc.page.margins.left, doc.y, contentWidth, 55).strokeColor("#d1d5db").lineWidth(0.5).stroke();
+      doc.font("Helvetica-Oblique").fontSize(8).fillColor("#9ca3af");
+      doc.text("Catatan / Rekomendasi Opini Legal (diisi oleh Pejabat Legal):", doc.page.margins.left + 6, doc.y + 6, { width: contentWidth - 12 });
+      doc.y += 45;
+
+      doc.moveDown(1.5);
+      sectionTitle(doc, "3. KEPUTUSAN KOMITE PEMBIAYAAN");
+      const komiteCols = contentWidth / 3;
+      const komiteY = doc.y;
+
+      const roles = [
+        ["Pemutus 1 (Inisiasi)", "Account Officer / Ka. Marketing"],
+        ["Pemutus 2 (Review)", "Ka. Kantor Cabang / Koordinator"],
+        ["Pemutus 3 (Final)", bprsEval.approvalAuthority.roleTitle],
+      ];
+
+      roles.forEach(([title, role], idx) => {
+        const xPos = doc.page.margins.left + idx * komiteCols;
+        doc.font("Helvetica-Bold").fontSize(9).fillColor("#111827");
+        doc.text(title, xPos, komiteY, { width: komiteCols - 10, align: "center" });
+        doc.font("Helvetica").fontSize(8).fillColor("#6b7280");
+        doc.text(role, xPos, doc.y, { width: komiteCols - 10, align: "center" });
+        
+        doc.moveDown(3);
+        const lY = doc.y;
+        doc.moveTo(xPos + 10, lY).lineTo(xPos + komiteCols - 20, lY).strokeColor("#9ca3af").lineWidth(0.5).stroke();
+        doc.font("Helvetica-Oblique").fontSize(7).fillColor("#9ca3af");
+        doc.text("(Tanda Tangan & Tanggal)", xPos, lY + 3, { width: komiteCols - 10, align: "center" });
+        doc.y = komiteY;
+      });
+
+      doc.y = komiteY + 80;
+    }
+
     doc.moveDown(2);
     const signatureY = doc.y;
     const halfWidth = contentWidth / 2 - 20;

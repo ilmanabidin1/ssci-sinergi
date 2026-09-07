@@ -54,6 +54,14 @@
 - [x] Perluasan tipe dokumen unggahan (`documentUpload.ts`, `drizzle/schema.ts`) mendukung dokumen khusus BPRS (sertifikat pendidik, SK mengajar, slip gaji, BPJS-TK, akta AD/ART badan usaha)
 - [x] Unit test DSR relaksasi segmen guru sertifikasi 80% lulus (total 44 tests passing)
 
+## Tahapan 3: Lembar Disposisi Komite Pembiayaan & Format Opini Kepatuhan/Legal di PDF
+
+- [x] Tambahkan halaman lampiran khusus ke `server/pdfReport.ts`: "LEMBAR DISPOSISI KOMITE PEMBIAYAAN & OPINI RISIKO"
+- [x] Format kolom isian tertulis resmi untuk Opini Kepatuhan & Manajemen Risiko (Plafon >= Rp 100 Juta)
+- [x] Format kolom isian tertulis resmi untuk Opini Legal Pembiayaan (Plafon >= Rp 250 Juta / Non-Perorangan)
+- [x] Kolom tanda tangan berjenjang 3 pemutus (Inisiasi AO, Review Kacab/Koordinator, Final Pemutus sesuai plafon)
+- [x] Informasi di UI `ApplicationDetail.tsx` bahwa dokumen PDF menyertakan lembar disposisi komite & opini risiko
+
 ## Halaman Tentang SSCI (User Request)
 
 - [x] Buat halaman /tentang-ssci dengan metodologi 3 pilar lengkap

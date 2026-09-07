@@ -503,6 +503,16 @@ export default function ApplicationDetail() {
                        <span className="font-semibold">Opini Legal:</span>
                        <span>{data.bprsEvaluation.legalOpinionNote}</span>
                      </div>
+                     {(data.bprsEvaluation.needsComplianceOpinion || data.bprsEvaluation.needsLegalOpinion || Number(data.application.requestedAmount) >= 25_000_000) && (
+                       <div className="p-2 rounded border bg-blue-50 border-blue-200 text-blue-800 flex items-center justify-between">
+                         <span className="font-medium">
+                           📄 PDF Laporan mencakup Lembar Lampiran Disposisi Komite Pembiayaan & Kolom Opini Kepatuhan/Legal otomatis.
+                         </span>
+                         <Button size="sm" variant="outline" className="h-7 text-xs bg-white" onClick={handleExportPDF}>
+                           Unduh PDF Lengkap
+                         </Button>
+                       </div>
+                     )}
                    </div>
                  </div>
                )}
