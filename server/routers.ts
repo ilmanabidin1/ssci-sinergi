@@ -38,12 +38,12 @@ const positiveMoney = nonNegativeMoney.refine(value => Number(value) > 0, {
 const legalDocumentsSchema = z
   .array(
     z.object({
-      type: z.enum(SSCI_REQUIRED_LEGAL_DOCUMENTS),
+      type: z.string().trim().min(1).max(100),
       status: z.enum(SSCI_LEGAL_DOCUMENT_STATUSES),
       notes: z.string().trim().max(500).optional(),
     })
   )
-  .length(SSCI_REQUIRED_LEGAL_DOCUMENTS.length)
+  .min(1)
   .refine(documents => new Set(documents.map(document => document.type)).size === documents.length, {
     message: "Jenis dokumen tidak boleh duplikat",
   });

@@ -3,7 +3,25 @@ import { join } from "node:path";
 import { randomUUID } from "node:crypto";
 
 export const MAX_DOCUMENT_SIZE = 5 * 1024 * 1024;
-export const DOCUMENT_TYPES = ["KTP", "NPWP", "NIB"] as const;
+export const DOCUMENT_TYPES = [
+  "KTP",
+  "NPWP",
+  "NIB",
+  "Kartu Keluarga",
+  "Surat Nikah",
+  "Kartu Pegawai",
+  "Slip Gaji",
+  "Rekening Koran",
+  "BPJS Ketenagakerjaan",
+  "Saldo JHT",
+  "Sertifikat Pendidik",
+  "Ijazah Terakhir",
+  "Akta Pendirian",
+  "Akta Perubahan",
+  "Laporan Keuangan",
+  "SPT Pajak",
+  "Lainnya",
+] as const;
 export const CONTENT_TYPES = ["application/pdf", "image/jpeg", "image/png"] as const;
 export type DocumentContentType = (typeof CONTENT_TYPES)[number];
 

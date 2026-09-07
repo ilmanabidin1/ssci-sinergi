@@ -144,7 +144,7 @@ export default function ApplicationDetail() {
     onError: error => toast.error(`Gagal memperbarui dokumen: ${error.message}`),
   });
 
-  const uploadDocument = (documentType: "KTP" | "NPWP" | "NIB", file?: File) => {
+  const uploadDocument = (documentType: string, file?: File) => {
     if (!file) return;
     const contentTypes = ["application/pdf", "image/jpeg", "image/png"] as const;
     if (!contentTypes.includes(file.type as typeof contentTypes[number])) {
@@ -158,7 +158,7 @@ export default function ApplicationDetail() {
     const reader = new FileReader();
     reader.onload = () => {
       if (typeof reader.result !== "string") return;
-      uploadMutation.mutate({ applicationId, documentType, originalName: file.name, contentType: file.type as typeof contentTypes[number], data: reader.result });
+      uploadMutation.mutate({ applicationId, documentType: documentType as any, originalName: file.name, contentType: file.type as typeof contentTypes[number], data: reader.result });
     };
     reader.onerror = () => toast.error("Dokumen tidak dapat dibaca");
     reader.readAsDataURL(file);
@@ -255,7 +255,10 @@ export default function ApplicationDetail() {
 
   const { application, assessment } = data;
   const canVerifyDocuments = user?.role === "checker" || user?.role === "admin";
-  const documentTypes = ["KTP", "NPWP", "NIB"] as const;
+  const appLegalDocs = Array.isArray(data?.application?.legalDocuments)
+    ? (data.application.legalDocuments as Array<{ type: string }>).map(d => d.type)
+    : [];
+  const documentTypes = Array.from(new Set(["KTP", "NPWP", "NIB", ...appLegalDocs]));
   const statusLabels = { uploaded: "Diunggah", verified: "Terverifikasi", rejected: "Ditolak" } as const;
 
   const getClassificationBadge = (classification: string) => {

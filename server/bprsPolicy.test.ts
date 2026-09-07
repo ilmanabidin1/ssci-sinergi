@@ -68,4 +68,20 @@ describe("evaluateBprsPolicy", () => {
     expect(result.isDsrCompliant).toBe(false);
     expect(result.dsrRatio).toBeGreaterThan(BPRS_POLICY_CONSTANTS.MAX_DSR_RATIO);
   });
+
+  it("supports guru_sertifikasi segment with 80% DSR allowance", () => {
+    const result = evaluateBprsPolicy({
+      requestedAmount: 30_000_000,
+      collateralValue: 40_000_000,
+      monthlyRevenue: 5_000_000, // Tunjangan sertifikasi 5jt
+      monthlyExpenses: 1_000_000, // Net 4jt. 80% = 3.2jt
+      existingDebt: 0,
+      tenorMonths: 12,
+      marginRate: 10,
+      segment: "guru_sertifikasi",
+    });
+
+    expect(result.appliedMaxDsr).toBe(80);
+    expect(result.isDsrCompliant).toBe(true);
+  });
 });

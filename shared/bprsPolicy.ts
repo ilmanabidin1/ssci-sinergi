@@ -3,8 +3,86 @@
  * Sesuai dokumen KPB per 17 Maret 2025.
  */
 
+export const BPRS_PRODUCT_SEGMENTS = [
+  "umkm", // Usaha Produktif / Komersial UMKM
+  "karyawan_swasta", // Pembiayaan Karyawan Swasta (Payroll / BPJS-TK)
+  "guru_sertifikasi", // Pembiayaan Guru dengan jaminan Sertifikat Pendidik
+  "non_perorangan", // Pembiayaan Badan Usaha / Non-Perorangan (PT/CV)
+] as const;
+
+export type BprsProductSegment = (typeof BPRS_PRODUCT_SEGMENTS)[number];
+
+export const BPRS_SEGMENT_DETAILS: Record<
+  BprsProductSegment,
+  {
+    label: string;
+    description: string;
+    defaultMaxDsr: number; // Persen
+    requiredDocuments: string[];
+    collateralNotes: string;
+  }
+> = {
+  umkm: {
+    label: "Usaha / Komersial UMKM",
+    description: "Pembiayaan produktif modal kerja / investasi bagi pelaku usaha UMKM",
+    defaultMaxDsr: 40,
+    requiredDocuments: ["KTP", "NPWP", "NIB"],
+    collateralNotes: "Tanah, bangunan, kendaraan, atau agunan usaha produktif",
+  },
+  karyawan_swasta: {
+    label: "Karyawan Swasta (Payroll / Jamsostek)",
+    description: "Pembiayaan konsumtif/multiguna bagi pegawai swasta dengan potong gaji/ATM",
+    defaultMaxDsr: 40, // s.d. 50% jika kepesertaan JHT > 4 tahun
+    requiredDocuments: [
+      "KTP",
+      "Kartu Keluarga",
+      "Surat Nikah",
+      "NPWP",
+      "Kartu Pegawai / ID Card",
+      "Slip Gaji Terakhir",
+      "Buku Tabungan / Rekening Koran Payroll",
+      "Kartu BPJS Ketenagakerjaan / Jamsostek",
+      "Bukti Saldo JHT BPJS-TK",
+    ],
+    collateralNotes: "Jaminan Utama: Saldo JHT BPJS-TK / BPKB / SHM. Jaminan Tambahan: Buku Nikah / Ijazah Asli",
+  },
+  guru_sertifikasi: {
+    label: "Guru Sertifikasi (PNS / Non-PNS)",
+    description: "Fasilitas pembiayaan guru dengan jaminan Sertifikat Pendidik & tunjangan sertifikasi",
+    defaultMaxDsr: 80, // Maks 80% dari tunjangan sertifikasi/inpassing sesuai pedoman
+    requiredDocuments: [
+      "KTP Suami/Istri",
+      "Kartu Keluarga",
+      "NPWP",
+      "Kartu Pegawai (KARPEG) / SK Mengajar",
+      "Sertifikat Pendidik (Serdik)",
+      "Buku Tabungan Rekening Sertifikasi",
+      "Rekening Koran Tunjangan 1 Tahun Terakhir",
+      "Ijazah Terakhir & Akta IV",
+      "Surat Rekomendasi Sekolah",
+    ],
+    collateralNotes: "Jaminan: Sertifikat Pendidik, Ijazah Terakhir, Akta IV, titip Kartu ATM & Buku Tabungan Sertifikasi (Tabungan blokir 4-6x angsuran)",
+  },
+  non_perorangan: {
+    label: "Non-Perorangan (Badan Hukum PT / CV / Koperasi)",
+    description: "Fasilitas pembiayaan untuk korporasi/badan usaha berbadan hukum",
+    defaultMaxDsr: 40,
+    requiredDocuments: [
+      "KTP & NPWP Seluruh Pengurus / Direksi",
+      "KTP & NPWP Pemilik Saham",
+      "Akta Pendirian Badan Usaha",
+      "Akta Perubahan AD/ART Terakhir & SK Kemenkumham",
+      "NIB (Nomor Induk Berusaha)",
+      "NPWP Badan Usaha",
+      "Laporan Keuangan (Neraca, Laba Rugi, Cashflow)",
+      "SPT Pajak Terakhir",
+      "Rekening Koran Usaha 6 Bulan Terakhir",
+    ],
+    collateralNotes: "Aset tetap perusahaan, tanah & bangunan SHM/HGB, personal guarantee / corporate guarantee",
+  },
+};
+
 export const BPRS_POLICY_CONSTANTS = {
-  /** Batas Rasio Angsuran (DSR) maksimum terhadap penghasilan bersih/tetap */
   MAX_DSR_RATIO: 40, // 40%
   /** Threshold taksasi agunan internal vs eksternal (KJPP) */
   EXTERNAL_APPRAISAL_THRESHOLD: 500_000_000, // Rp 500.000.000
@@ -23,8 +101,10 @@ export interface BprsPolicyEvaluation {
   monthlyInstallment: number;
   /** Rasio angsuran (DSR) terhadap net income dalam persen */
   dsrRatio: number;
-  /** Apakah DSR memenuhi batas maksimal 40% */
+  /** Apakah DSR memenuhi batas maksimal kebijakan segmen */
   isDsrCompliant: boolean;
+  /** Batas maksimal DSR segmen yang diterapkan (%) */
+  appliedMaxDsr: number;
   /** Batas maksimal angsuran berdasarkan DSR 40% */
   maxAllowedInstallmentDsr: number;
   /** Rekomendasi plafon maksimal berdasarkan kapasitas DSR 40% */
@@ -60,6 +140,7 @@ export function evaluateBprsPolicy(params: {
   existingDebt: number;
   tenorMonths: number;
   marginRate: number;
+  segment?: BprsProductSegment;
   isNonIndividual?: boolean; // Badan Usaha
 }): BprsPolicyEvaluation {
   const {
@@ -70,20 +151,24 @@ export function evaluateBprsPolicy(params: {
     existingDebt,
     tenorMonths,
     marginRate,
+    segment = "umkm",
     isNonIndividual = false,
   } = params;
+
+  const segmentConfig = BPRS_SEGMENT_DETAILS[segment] || BPRS_SEGMENT_DETAILS.umkm;
+  const maxDsrAllowed = segmentConfig.defaultMaxDsr;
 
   const netIncome = Math.max(0, monthlyRevenue - monthlyExpenses);
   const tenor = Math.max(1, tenorMonths);
   const monthlyInstallment = requestedAmount * (1 + marginRate / 100) / tenor;
   const totalMonthlyCommitment = existingDebt + monthlyInstallment;
-
+  
   // DSR = (Total Kewajiban Bulanan / Net Income) * 100
   const dsrRatio = netIncome > 0 ? (totalMonthlyCommitment / netIncome) * 100 : 999;
-  const isDsrCompliant = dsrRatio <= BPRS_POLICY_CONSTANTS.MAX_DSR_RATIO;
+  const isDsrCompliant = dsrRatio <= maxDsrAllowed;
 
-  // Kapasitas angsuran baru maksimal sesuai DSR 40%
-  const maxTotalAllowedCommitment = netIncome * (BPRS_POLICY_CONSTANTS.MAX_DSR_RATIO / 100);
+  // Kapasitas angsuran baru maksimal sesuai DSR limit segmen
+  const maxTotalAllowedCommitment = netIncome * (maxDsrAllowed / 100);
   const maxAllowedInstallmentDsr = Math.max(0, maxTotalAllowedCommitment - existingDebt);
   const maxPlafonByDsr = Math.round((maxAllowedInstallmentDsr * tenor / (1 + marginRate / 100)) * 100) / 100;
 
@@ -139,6 +224,7 @@ export function evaluateBprsPolicy(params: {
     monthlyInstallment: Math.round(monthlyInstallment * 100) / 100,
     dsrRatio: Math.round(dsrRatio * 100) / 100,
     isDsrCompliant,
+    appliedMaxDsr: maxDsrAllowed,
     maxAllowedInstallmentDsr: Math.round(maxAllowedInstallmentDsr * 100) / 100,
     maxPlafonByDsr,
     approvalAuthority,

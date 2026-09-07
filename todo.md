@@ -46,6 +46,14 @@
 - [x] Integrasi tabel evaluasi kebijakan BPRS di cetakan PDF laporan penilaian `server/pdfReport.ts`
 - [x] Unit test kepatuhan kebijakan BPRS `server/bprsPolicy.test.ts` (4 tests lulus)
 
+## Tahapan 2: Segmentasi Form Pengajuan & Persyaratan Dokumen Sesuai Produk BPRS
+
+- [x] Definisi 4 segmen produk BPRS (`umkm`, `karyawan_swasta`, `guru_sertifikasi`, `non_perorangan`) beserta batas DSR dan checklist dokumen di `shared/bprsPolicy.ts`
+- [x] Langkah ke-0 di wizard `NewApplication.tsx` untuk pemilihan segmen produk pembiayaan dengan kartu visual interaktif
+- [x] Checklist dokumen legal dinamis di form dan detail pengajuan sesuai segmen produk terpilih
+- [x] Perluasan tipe dokumen unggahan (`documentUpload.ts`, `drizzle/schema.ts`) mendukung dokumen khusus BPRS (sertifikat pendidik, SK mengajar, slip gaji, BPJS-TK, akta AD/ART badan usaha)
+- [x] Unit test DSR relaksasi segmen guru sertifikasi 80% lulus (total 44 tests passing)
+
 ## Halaman Tentang SSCI (User Request)
 
 - [x] Buat halaman /tentang-ssci dengan metodologi 3 pilar lengkap

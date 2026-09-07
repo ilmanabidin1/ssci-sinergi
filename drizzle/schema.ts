@@ -222,7 +222,7 @@ export const documentFiles = mysqlTable("documentFiles", {
   id: int("id").autoincrement().primaryKey(),
   organizationId: int("organizationId").notNull(),
   applicationId: int("applicationId").notNull(),
-  documentType: mysqlEnum("documentType", ["KTP", "NPWP", "NIB"]).notNull(),
+  documentType: varchar("documentType", { length: 100 }).notNull(),
   originalName: varchar("originalName", { length: 255 }).notNull(),
   storedName: varchar("storedName", { length: 255 }).notNull(),
   contentType: mysqlEnum("contentType", ["application/pdf", "image/jpeg", "image/png"]).notNull(),
