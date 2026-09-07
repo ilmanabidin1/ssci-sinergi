@@ -197,6 +197,63 @@ const demoMudharabah = (): Partial<Values> => {
     mudharabahNotes: pick(["Proyeksi bagi hasil telah disepakati kedua belah pihak.", "Nisbah disepakati secara proporsional sesuai kemampuan usaha."]),
   };
 };
+const demoQardh = (): Partial<Values> => ({
+  qardhPurpose: pick([
+    "Dana talangan biaya pendaftaran porsi haji reguler.",
+    "Dana talangan uang kuliah tunggal (UKT) semester berjalan.",
+    "Talangan modal darurat operasional mikro.",
+  ]),
+  qardhAdminFee: String(pick([150000, 250000, 350000, 500000])),
+  marginRate: "0",
+});
+
+const demoMultijasa = (): Partial<Values> => {
+  const category = pick([
+    "pendidikan",
+    "umrah_haji",
+    "kesehatan",
+    "tenaga_kerja_renovasi",
+  ] as const);
+  const cost = roundTo(randInt(15, 60) * 1000000, 500000);
+  const dp = roundTo(cost * pick([0, 10, 20]) / 100, 100000);
+  const ujrah = roundTo((cost - dp) * randInt(8, 14) / 100, 50000);
+
+  const providerMap: Record<typeof category, { provider: string; object: string }> = {
+    pendidikan: {
+      provider: "Universitas Islam Bandung (Unisba)",
+      object: "Biaya Pendidikan & SPP Semester 1 s.d. 4 Fakultas Tarbiyah",
+    },
+    umrah_haji: {
+      provider: "PT Al-Firdaus Tour & Travel Umrah",
+      object: "Paket Perjalanan Ibadah Umrah Reguler 12 Hari Quad Room",
+    },
+    kesehatan: {
+      provider: "RS Syariah Al-Islam Bandung",
+      object: "Biaya Tindakan Medis Operasi & Perawatan Rawat Inap",
+    },
+    tenaga_kerja_renovasi: {
+      provider: "CV Karya Bersama Konstruksi",
+      object: "Jasa Pemborong & Tenaga Kerja Renovasi Tempat Usaha",
+    },
+  };
+
+  const sample = providerMap[category];
+
+  return {
+    multijasaAkadType: "ijarah",
+    multijasaServiceCategory: category,
+    multijasaServiceProvider: sample.provider,
+    multijasaSourceObject: sample.object,
+    multijasaServiceCost: String(cost),
+    multijasaDownPayment: String(dp),
+    multijasaUjrahAmount: String(ujrah),
+    multijasaWakalah: pick(["yes", "no"] as const),
+    multijasaDpsReviewed: "yes",
+    multijasaTaazirToWelfare: "yes",
+    multijasaNotes: "Objek jasa telah dikonfirmasi ke lembaga penyedia dan memenuhi ketentuan syariah.",
+  };
+};
+
 const demoLegal = (): Partial<Values> => ({
   legalDocuments: initial.legalDocuments.map(doc => ({ ...doc, status: pick(["complete", "verified", "verified"]) as Document["status"] })),
   businessShariaCompliant: pick(["yes", "yes", "partial"]) as "yes" | "partial",
@@ -336,6 +393,13 @@ export default function NewApplication() {
   useEffect(() => { try { localStorage.setItem(DRAFT_KEY, JSON.stringify({ version: 1, values, step })); } catch {} }, [values, step]);
   const restore = () => { try { const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || ""); if (saved.version === 2) { setValues({ ...initial, ...saved.values }); setStep(Math.min(saved.step || 0, 4)); setHasDraft(false); } } catch { toast.error("Draft tidak dapat dipulihkan"); } };
   const reset = () => { localStorage.removeItem(DRAFT_KEY); setValues(initial); setStep(0); setHasDraft(false); };
+  const getAkadDemo = (akad?: string) => {
+    if (akad === "mudharabah") return demoMudharabah();
+    if (akad === "qardh") return demoQardh();
+    if (akad === "multijasa") return demoMultijasa();
+    return demoMurabahah();
+  };
+
   const fillDemo = (demoStep: number) =>
     setValues(current => ({
       ...current,
@@ -346,12 +410,20 @@ export default function NewApplication() {
         : demoStep === 2
         ? demoBusiness()
         : demoStep === 3
-        ? (current.financingAkad === "mudharabah" ? demoMudharabah() : demoMurabahah())
+        ? getAkadDemo(current.financingAkad)
         : demoStep === 4
         ? demoLegal()
         : demoEsg()),
     } as Values));
-  const fillAllDemo = () => setValues(current => ({ ...current, ...demoCustomer(), ...demoBusiness(), ...(current.financingAkad === "mudharabah" ? demoMudharabah() : demoMurabahah()), ...demoLegal(), ...demoEsg() } as Values));
+  const fillAllDemo = () =>
+    setValues(current => ({
+      ...current,
+      ...demoCustomer(),
+      ...demoBusiness(),
+      ...getAkadDemo(current.financingAkad),
+      ...demoLegal(),
+      ...demoEsg(),
+    } as Values));
   const selectKtpFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     setKtpProcessed(false);
