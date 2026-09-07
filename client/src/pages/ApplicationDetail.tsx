@@ -441,6 +441,69 @@ export default function ApplicationDetail() {
                  </div>
                )}
 
+               {data.bprsEvaluation && (
+                 <div className="mt-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                   <div className="flex items-center gap-2 mb-3">
+                     <Shield className="h-5 w-5 text-indigo-600" />
+                     <div>
+                       <div className="font-semibold text-slate-900">Kesesuaian Pedoman Kebijakan Pembiayaan BPRS</div>
+                       <p className="text-xs text-slate-600">Evaluasi otomatis berdasarkan Pedoman Kebijakan Pembiayaan BPRS (KPB 2025)</p>
+                     </div>
+                   </div>
+
+                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+                     <div className="bg-white p-3 rounded border border-slate-100 shadow-xs">
+                       <div className="text-xs text-slate-500 font-medium">Kapasitas Angsuran (DSR)</div>
+                       <div className="flex items-baseline gap-2 mt-1">
+                         <span className={`text-xl font-bold ${data.bprsEvaluation.isDsrCompliant ? "text-emerald-600" : "text-rose-600"}`}>
+                           {data.bprsEvaluation.dsrRatio}%
+                         </span>
+                         <span className="text-xs text-slate-500">(Maks 40%)</span>
+                       </div>
+                       <div className="text-xs mt-1 text-slate-600">
+                         {data.bprsEvaluation.isDsrCompliant ? "✓ Sesuai batas DSR maksimal 40%" : "⚠ Melebihi batas maksimal 40%"}
+                       </div>
+                     </div>
+
+                     <div className="bg-white p-3 rounded border border-slate-100 shadow-xs">
+                       <div className="text-xs text-slate-500 font-medium">Kewenangan Memutus</div>
+                       <div className="text-sm font-bold text-slate-800 mt-1">
+                         {data.bprsEvaluation.approvalAuthority.roleTitle}
+                       </div>
+                       <div className="text-xs text-slate-500 mt-0.5">
+                         {data.bprsEvaluation.approvalAuthority.description}
+                       </div>
+                       <div className="text-[11px] text-amber-700 mt-1">
+                         {data.bprsEvaluation.approvalAuthority.subordinateApprovalRequired}
+                       </div>
+                     </div>
+
+                     <div className="bg-white p-3 rounded border border-slate-100 shadow-xs">
+                       <div className="text-xs text-slate-500 font-medium">Ketentuan Taksasi Agunan</div>
+                       <div className="text-sm font-bold text-slate-800 mt-1">
+                         {data.bprsEvaluation.appraisalRequirement.label}
+                       </div>
+                       <div className="text-xs text-slate-500 mt-0.5">
+                         {data.bprsEvaluation.appraisalRequirement.type === "KJPP_EKSTERNAL"
+                           ? "Wajib Kantor Jasa Penilai Publik (Plafon >= Rp 500 Juta)"
+                           : "Cukup taksasi oleh petugas intern BPRS (Plafon < Rp 500 Juta)"}
+                       </div>
+                     </div>
+                   </div>
+
+                   <div className="space-y-2 text-xs">
+                     <div className={`p-2 rounded border flex items-start gap-2 ${data.bprsEvaluation.needsComplianceOpinion ? "bg-amber-50 border-amber-200 text-amber-800" : "bg-white border-slate-100 text-slate-600"}`}>
+                       <span className="font-semibold">Opini Kepatuhan & MR:</span>
+                       <span>{data.bprsEvaluation.complianceOpinionNote}</span>
+                     </div>
+                     <div className={`p-2 rounded border flex items-start gap-2 ${data.bprsEvaluation.needsLegalOpinion ? "bg-amber-50 border-amber-200 text-amber-800" : "bg-white border-slate-100 text-slate-600"}`}>
+                       <span className="font-semibold">Opini Legal:</span>
+                       <span>{data.bprsEvaluation.legalOpinionNote}</span>
+                     </div>
+                   </div>
+                 </div>
+               )}
+
               <div className="mt-4 border-t pt-4 text-xs text-gray-500 flex flex-wrap gap-x-6 gap-y-1">
                 <span>Versi aturan: {assessment.modelVersion}</span>
                 <span>

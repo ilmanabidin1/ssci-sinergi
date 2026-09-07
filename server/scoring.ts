@@ -1,4 +1,5 @@
 import type { Application } from "../drizzle/schema";
+import { evaluateBprsPolicy, type BprsPolicyEvaluation } from "@shared/bprsPolicy";
 import {
   classifySSCI,
   SSCI_PILLAR_WEIGHTS,
@@ -318,6 +319,8 @@ export interface RecommendedPlafon {
   maxMonthlyInstallment: number;
   dscrRatio: number;
   ltvRatio: number;
+  dsrRatio?: number;
+  bprsEvaluation?: BprsPolicyEvaluation;
   assumptions: {
     tenor: number;
     marginRate: number;
@@ -364,11 +367,27 @@ export function calculateRecommendedPlafon(
       ? Math.round((recommendedAmount / collateralValue) * 10000) / 100
       : 0;
 
+  // Integrasi Kebijakan BPRS (DSR 40%, limit kewenangan, taksasi)
+  const bprsEvaluation = evaluateBprsPolicy({
+    requestedAmount: Number(application.requestedAmount),
+    collateralValue,
+    monthlyRevenue,
+    monthlyExpenses,
+    existingDebt,
+    tenorMonths: tenor,
+    marginRate,
+    isNonIndividual: application.businessType?.toLowerCase().includes("pt") ||
+      application.businessType?.toLowerCase().includes("cv") ||
+      application.businessType?.toLowerCase().includes("badan"),
+  });
+
   return {
     recommendedAmount,
     maxMonthlyInstallment: Math.round(maxMonthlyInstallment * 100) / 100,
     dscrRatio,
     ltvRatio,
+    dsrRatio: bprsEvaluation.dsrRatio,
+    bprsEvaluation,
     assumptions: {
       tenor,
       marginRate: Math.round(marginRate * 100) / 100,

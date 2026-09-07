@@ -7,6 +7,7 @@ import * as db from "./db";
 import { calculateRecommendedPlafon, calculateSSCI } from "./scoring";
 import { TRPCError } from "@trpc/server";
 import { generatePdfReport } from "./pdfReport";
+import { evaluateBprsPolicy } from "@shared/bprsPolicy";
 import {
   SSCI_LEGAL_DOCUMENT_STATUSES,
   SSCI_METHODOLOGY_VERSION,
@@ -696,9 +697,23 @@ export const appRouter = router({
           throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
         }
 
+        const bprsEvaluation = evaluateBprsPolicy({
+          requestedAmount: Number(application.requestedAmount),
+          collateralValue: Number(application.collateralValue),
+          monthlyRevenue: Number(application.monthlyRevenue),
+          monthlyExpenses: Number(application.monthlyExpenses),
+          existingDebt: Number(application.existingDebt),
+          tenorMonths: Number(application.financingTenor),
+          marginRate: Number(application.marginRate),
+          isNonIndividual: application.businessType?.toLowerCase().includes("pt") ||
+            application.businessType?.toLowerCase().includes("cv") ||
+            application.businessType?.toLowerCase().includes("badan"),
+        });
+
         return {
           application,
           assessment,
+          bprsEvaluation,
         };
       }),
     

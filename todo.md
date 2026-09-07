@@ -38,6 +38,14 @@
 - [x] Tandai dengan jelas field wajib (*) dan opsional
 - [x] Terapkan login untuk akses operasional BPRS
 
+## Tahapan 1: Penyesuaian Pedoman Kebijakan Pembiayaan BPRS (KPB 2025)
+
+- [x] Engine evaluasi kebijakan BPRS `shared/bprsPolicy.ts` (Rasio DSR maks 40%, limit kewenangan memutus 3 jenjang, taksasi internal vs KJPP threshold Rp 500 jt, trigger Opini Kepatuhan Rp 100 jt, Opini Legal Rp 250 jt/Badan Usaha)
+- [x] Integrasi evaluasi kebijakan BPRS ke scoring & detail pengajuan `server/scoring.ts`, `server/routers.ts`
+- [x] Kartu Kesesuaian Pedoman Kebijakan Pembiayaan BPRS di halaman `ApplicationDetail.tsx`
+- [x] Integrasi tabel evaluasi kebijakan BPRS di cetakan PDF laporan penilaian `server/pdfReport.ts`
+- [x] Unit test kepatuhan kebijakan BPRS `server/bprsPolicy.test.ts` (4 tests lulus)
+
 ## Halaman Tentang SSCI (User Request)
 
 - [x] Buat halaman /tentang-ssci dengan metodologi 3 pilar lengkap

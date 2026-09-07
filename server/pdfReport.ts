@@ -3,6 +3,7 @@ import QRCode from "qrcode";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Application, Assessment, Organization } from "../drizzle/schema";
+import { evaluateBprsPolicy } from "@shared/bprsPolicy";
 
 export interface PdfReportData {
   application: Application;
@@ -215,6 +216,33 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
     renderTextBlock(doc, "Kekuatan", escapeText(assessment.strengths || "-"), "#065f46");
     renderTextBlock(doc, "Faktor Risiko", escapeText(assessment.riskFactors || "-"), "#92400e");
     renderTextBlock(doc, "Rekomendasi", escapeText(assessment.recommendations), "#1e40af");
+
+    // Evaluasi Kesesuaian Kebijakan BPRS (KPB 2025)
+    const bprsEval = evaluateBprsPolicy({
+      requestedAmount: Number(application.requestedAmount),
+      collateralValue: Number(application.collateralValue),
+      monthlyRevenue: Number(application.monthlyRevenue),
+      monthlyExpenses: Number(application.monthlyExpenses),
+      existingDebt: Number(application.existingDebt),
+      tenorMonths: Number(application.financingTenor),
+      marginRate: Number(application.marginRate),
+      isNonIndividual: application.businessType?.toLowerCase().includes("pt") ||
+        application.businessType?.toLowerCase().includes("cv") ||
+        application.businessType?.toLowerCase().includes("badan"),
+    });
+
+    doc.moveDown(1.5);
+    sectionTitle(doc, "KESESUAIAN KEBIJAKAN PEMBIAYAAN BPRS (KPB)");
+    const bprsRows: Array<[string, string, "left" | "right"]> = [
+      ["Kapasitas Angsuran (DSR)", `${bprsEval.dsrRatio}% (${bprsEval.isDsrCompliant ? "Memenuhi maks 40%" : "Melebihi batas 40%"})`, "right"],
+      ["Estimasi Angsuran Baru", formatIdMoney(bprsEval.monthlyInstallment), "right"],
+      ["Kewenangan Memutus", `${bprsEval.approvalAuthority.roleTitle} (${bprsEval.approvalAuthority.description})`, "right"],
+      ["Rekomendasi Hirarki", bprsEval.approvalAuthority.subordinateApprovalRequired, "right"],
+      ["Ketentuan Taksasi Agunan", `${bprsEval.appraisalRequirement.label}`, "right"],
+      ["Opini Kepatuhan & MR", bprsEval.needsComplianceOpinion ? "Wajib (Plafon >= Rp 100 Juta)" : "Tidak dipersyaratkan khusus", "right"],
+      ["Opini Legal", bprsEval.needsLegalOpinion ? "Wajib (Plafon >= Rp 250 Juta / Badan Usaha)" : "Standar verifikasi legal", "right"],
+    ];
+    renderTable(doc, ["Parameter Pedoman KPB", "Status / Rekomendasi"], bprsRows, contentWidth);
 
     doc.moveDown(1.5);
     sectionTitle(doc, "METADATA AUDIT");
