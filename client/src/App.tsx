@@ -19,10 +19,13 @@ import Team from "./pages/Team";
 import Customers from "./pages/Customers";
 import Notifications from "./pages/Notifications";
 
+import TrackApplication from "./pages/TrackApplication";
+
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/track"} component={TrackApplication} />
       <Route path={"/dashboard"} component={Dashboard} />
       <Route path={"/applications/new"} component={NewApplication} />
       <Route path={"/applications/:id"} component={ApplicationDetail} />

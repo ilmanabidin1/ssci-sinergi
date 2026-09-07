@@ -137,6 +137,53 @@ export async function getApplicationById(id: number, organizationId: number) {
   return result[0];
 }
 
+export async function trackApplicationPublic(applicationId: number, customerIdLast4: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const appList = await db.select().from(applications)
+    .where(eq(applications.id, applicationId))
+    .limit(1);
+  const app = appList[0];
+  if (!app) return null;
+
+  // Verifikasi 4 digit terakhir NIK/ID nasabah untuk perlindungan privasi
+  const normalizedCustomerId = (app.customerId || "").trim();
+  if (!normalizedCustomerId.endsWith(customerIdLast4.trim())) {
+    return null;
+  }
+
+  // Ambil assessment jika sudah dinilai
+  const assessList = await db.select().from(assessments)
+    .where(eq(assessments.applicationId, applicationId))
+    .orderBy(desc(assessments.assessedAt))
+    .limit(1);
+  const assessment = assessList[0];
+
+  // Ambil data organisasi BPRS
+  const orgList = await db.select().from(organizations)
+    .where(eq(organizations.id, app.organizationId))
+    .limit(1);
+  const org = orgList[0];
+
+  return {
+    applicationId: app.id,
+    ticketNumber: `SSCI-${app.id.toString().padStart(5, "0")}`,
+    customerName: app.customerName.replace(/^(...).*(...)$/, "$1***$2"),
+    businessName: app.businessName,
+    businessType: app.businessType,
+    financingAkad: app.financingAkad,
+    requestedAmount: Number(app.requestedAmount),
+    financingTenor: app.financingTenor,
+    status: app.status,
+    createdAt: app.createdAt,
+    assessedAt: assessment ? assessment.assessedAt : null,
+    checkedAt: app.checkedAt,
+    decisionNotes: app.decisionNotes,
+    bprsName: org ? org.name : "BPRS Mitra",
+  };
+}
+
 export async function getAllApplications(filters: {
   organizationId: number;
   status?: string;

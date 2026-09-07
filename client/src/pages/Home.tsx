@@ -8,6 +8,7 @@ import {
   ChevronRight,
   ClipboardList,
   FileCheck2,
+  FileSearch,
   LockKeyhole,
   Menu,
   Scale,
@@ -49,8 +50,14 @@ export default function Home() {
           </Link>
           <div className="hidden items-center gap-8 text-sm font-medium text-[#60708c] md:flex">
             <a href="#cara-kerja">Cara kerja</a><a href="#pilar">Metodologi</a><a href="#keamanan">Keamanan</a>
+            <Link href="/track" className="text-[#2458d6] hover:underline flex items-center gap-1 font-semibold">
+              <FileSearch className="h-3.5 w-3.5" /> Lacak Pengajuan
+            </Link>
           </div>
           <div className="flex items-center gap-2">
+            <Button asChild variant="outline" size="sm" className="rounded-full border-[#2458d6] text-[#2458d6] hover:bg-blue-50 md:hidden">
+              <Link href="/track">Lacak</Link>
+            </Button>
             {authenticated ? <Button asChild className="rounded-full bg-[#2458d6] px-5 hover:bg-[#1945b0]"><Link href="/dashboard">Dashboard <ArrowRight className="ml-2 h-4 w-4" /></Link></Button> : <><Button asChild variant="ghost" className="hidden rounded-full text-[#14213d] sm:inline-flex"><a href={getLoginUrl()}>Masuk</a></Button><Button asChild className="rounded-full bg-[#2458d6] px-5 hover:bg-[#1945b0]"><Link href="/register">Daftar BPRS <ArrowRight className="ml-2 h-4 w-4" /></Link></Button></>}
             <Menu className="ml-2 h-5 w-5 text-[#60708c] md:hidden" />
           </div>

@@ -300,7 +300,12 @@ export default function ApplicationDetail() {
       <main className="container py-8 max-w-6xl">
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start">
           <div className="min-w-0">
-            <h1 className="text-3xl font-bold text-gray-900">{application.customerName}</h1>
+            <div className="flex items-center gap-2">
+              <h1 className="text-3xl font-bold text-gray-900">{application.customerName}</h1>
+              <span className="rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800">
+                Tiket: SSCI-{application.id.toString().padStart(5, "0")}
+              </span>
+            </div>
             <p className="text-gray-600 mt-1">{application.businessName}</p>
           </div>
           <div className="flex flex-wrap gap-2">

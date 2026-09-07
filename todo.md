@@ -78,6 +78,13 @@
 - [x] Rincian objek jasa dan nilai ujrah di halaman `ApplicationDetail.tsx` dan tabel PDF `server/pdfReport.ts`
 - [x] Unit test kalkulasi multijasa di `server/multijasa.test.ts` (total 47 tests lulus)
 
+## Tahapan 6: Portal Pelacakan Status Pengajuan (Loan Tracker)
+
+- [x] Endpoint publik `applications.trackStatus` di `server/routers.ts` dan `server/db.ts` dengan verifikasi 4 digit terakhir NIK nasabah demi privasi
+- [x] Halaman publik `/track` (`TrackApplication.tsx`) untuk nasabah/AO melacak progres 4 tahapan penilaian (Berkas Terdaftar -> Penilaian SSCI -> Telaah Komite -> Keputusan Final)
+- [x] Label nomor tiket resmi (contoh: `SSCI-00042`) di halaman `ApplicationDetail.tsx`
+- [x] Tautan navigasi "Lacak Pengajuan" di halaman Beranda (`Home.tsx`)
+
 ## Halaman Tentang SSCI (User Request)
 
 - [x] Buat halaman /tentang-ssci dengan metodologi 3 pilar lengkap

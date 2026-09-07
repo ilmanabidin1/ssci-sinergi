@@ -284,6 +284,29 @@ export const appRouter = router({
   }),
 
   applications: router({
+    trackStatus: publicProcedure
+      .input(z.object({
+        ticketOrId: z.string().trim().min(1).max(50),
+        customerIdLast4: z.string().trim().length(4, "Masukkan 4 digit terakhir NIK / ID"),
+      }))
+      .query(async ({ input }) => {
+        // Parse ID dari format "SSCI-00042" atau angka murni "42"
+        const cleanIdStr = input.ticketOrId.replace(/^SSCI-/i, "").replace(/^0+/, "");
+        const id = Number.parseInt(cleanIdStr, 10);
+        if (Number.isNaN(id) || id <= 0) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Nomor tiket pengajuan tidak valid" });
+        }
+
+        const data = await db.trackApplicationPublic(id, input.customerIdLast4);
+        if (!data) {
+          throw new TRPCError({
+            code: "NOT_FOUND",
+            message: "Pengajuan tidak ditemukan atau 4 digit terakhir NIK tidak sesuai",
+          });
+        }
+        return data;
+      }),
+
     importFinancialCsv: makerProcedure
       .input(z.object({ data: z.string().min(1).max(1_400_000) }))
       .mutation(({ input }) => {
