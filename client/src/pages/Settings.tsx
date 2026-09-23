@@ -1,3 +1,4 @@
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,12 +12,11 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, AlertCircle, ImageUp, Info, Landmark, Loader2, Lock, Save, Settings2, UserRound } from "lucide-react";
+import { AlertCircle, ImageUp, Info, Landmark, Loader2, Lock, Save, Settings2, UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "wouter";
 import { toast } from "sonner";
 
-const DEFAULT_PRIMARY_COLOR = "#2458d6";
+const DEFAULT_PRIMARY_COLOR = "#14213d";
 
 function LabelWithInfo({ label, info }: { label: string; info: string }) {
   return (
@@ -186,30 +186,17 @@ export default function Settings() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <nav className="border-b bg-white">
-        <div className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Kembali
-              </Link>
-            </Button>
-            <img src="/logo-light-bg.png" alt="SSCI" className="h-12 w-auto" />
-          </div>
-          <span className="hidden text-sm text-slate-600 sm:inline">{user?.name || "Belum masuk"}</span>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-ivory">
+      <AppHeader />
 
       <main className="container max-w-3xl py-8">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-slate-900">Pengaturan</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Pengaturan</h1>
           <p className="mt-1 text-slate-600">Kelola branding BPRS dan profil operator Anda.</p>
         </div>
 
         {isAdmin && (
-          <Card className="mb-6 border-0 shadow-sm">
+          <Card className="mb-6 border-border shadow-premium">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Settings2 className="h-5 w-5 text-primary" />
@@ -311,7 +298,7 @@ export default function Settings() {
         )}
 
         {isAdmin && (
-          <Card className="mb-6 border-0 shadow-sm">
+          <Card className="mb-6 border-border shadow-premium">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Landmark className="h-5 w-5 text-primary" />
@@ -391,7 +378,7 @@ export default function Settings() {
           </Card>
         )}
 
-        <Card className="border-0 shadow-sm">
+        <Card className="border-border shadow-premium">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <UserRound className="h-5 w-5 text-primary" />
@@ -423,7 +410,7 @@ export default function Settings() {
           </CardContent>
         </Card>
 
-        <Card className="border-0 shadow-sm">
+        <Card className="border-border shadow-premium">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Lock className="h-5 w-5 text-primary" />

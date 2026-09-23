@@ -1,10 +1,11 @@
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Empty, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Bell, BellRing, CheckCheck, Loader2 } from "lucide-react";
+import { BellRing, CheckCheck, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 
@@ -26,29 +27,13 @@ export default function Notifications() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <nav className="border-b bg-white">
-        <div className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link to="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Kembali
-              </Link>
-            </Button>
-            <div className="flex items-center gap-2">
-              <Bell className="h-6 w-6 text-primary" />
-              <h1 className="text-xl font-bold text-primary">Notifikasi</h1>
-            </div>
-          </div>
-          <span className="hidden text-sm text-slate-600 sm:inline">{user?.name || "Belum masuk"}</span>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-ivory">
+      <AppHeader />
 
       <main className="container max-w-3xl py-8">
         <div className="mb-6 flex items-end justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900">Notifikasi</h1>
+            <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Notifikasi</h1>
             <p className="mt-1 text-slate-600">Pembaruan status pengajuan dan aktivitas penilaian Anda.</p>
           </div>
           <Button variant="outline" onClick={() => markAllRead.mutate()} disabled={markAllRead.isPending || unreadCount === 0}>
@@ -57,7 +42,7 @@ export default function Notifications() {
           </Button>
         </div>
 
-        <Card className="border-0 shadow-sm">
+        <Card className="border-border shadow-premium">
           <CardHeader className="border-b px-6 py-5">
             <CardTitle>Inbox</CardTitle>
             <CardDescription>

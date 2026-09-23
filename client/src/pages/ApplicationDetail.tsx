@@ -1,5 +1,4 @@
-import { NotificationBell } from "@/components/NotificationBell";
-import { ProfileMenu } from "@/components/ProfileMenu";
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,8 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload, Camera, Sparkles, Trash2 } from "lucide-react";
-import { Link, useParams } from "wouter";
+import { Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload, Camera, Sparkles, Trash2 } from "lucide-react";
+import { useParams } from "wouter";
 import { toast } from "sonner";
 import { useState } from "react";
 
@@ -17,9 +16,6 @@ export default function ApplicationDetail() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
   const utils = trpc.useUtils();
 
-  const orgQuery = trpc.organization.getSettings.useQuery();
-  const orgName = orgQuery.data?.name;
-  const orgLogo = orgQuery.data?.logoUrl;
 
   const applicationId = parseInt(id || "0");
   
@@ -272,37 +268,15 @@ export default function ApplicationDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="border-b bg-white">
-        <div className="container py-4 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Kembali
-              </Link>
-            </Button>
-            <div className="flex items-center gap-2">
-              <img src={orgLogo || "/logo-light-bg.png"} alt="SSCI" className="h-12 w-auto" />
-              <div className="flex items-center gap-2">
-                <h1 className="text-xl font-bold text-primary">SSCI</h1>
-                {orgName && <span className="hidden rounded-md bg-slate-100 px-1.5 py-0.5 text-xs font-semibold text-slate-500 sm:inline">{orgName}</span>}
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-1">
-            <NotificationBell />
-            <ProfileMenu />
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-ivory">
+      <AppHeader />
 
       <main className="container py-8 max-w-6xl">
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start">
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <h1 className="text-3xl font-bold text-gray-900">{application.customerName}</h1>
-              <span className="rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800">
+              <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">{application.customerName}</h1>
+              <span className="rounded-full border border-gold-400/40 bg-gold-50 px-2.5 py-0.5 text-xs font-semibold text-gold-500">
                 Tiket: SSCI-{application.id.toString().padStart(5, "0")}
               </span>
             </div>
@@ -362,22 +336,28 @@ export default function ApplicationDetail() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-4 gap-6 mb-6">
-                <div className="text-center p-4 bg-primary/5 rounded-lg">
-                  <div className="text-4xl font-bold text-primary">{Number(assessment.totalScore).toFixed(1)}</div>
-                  <div className="text-sm text-gray-600 mt-1">Total Skor</div>
+              <div className="mb-8 grid gap-6 md:grid-cols-[auto_1fr] md:items-center">
+                <div className="relative mx-auto flex flex-col items-center rounded-2xl bg-navy-900 px-8 py-6 text-white shadow-premium-lg">
+                  <div className="pattern-islamic pointer-events-none absolute inset-0 rounded-2xl opacity-[0.05]" />
+                  <ScoreRing value={Number(assessment.totalScore)} />
+                  <div className="relative mt-3 text-xs font-bold uppercase tracking-[.18em] text-gold-300">Total Skor SSCI</div>
                 </div>
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-700">{Number(assessment.sustainableFinanceScore).toFixed(1)}</div>
-                   <div className="text-sm text-gray-600 mt-1">Kontribusi Keuangan /55</div>
-                </div>
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <div className="text-2xl font-bold text-green-700">{Number(assessment.shariaScore).toFixed(1)}</div>
-                   <div className="text-sm text-gray-600 mt-1">Kontribusi Syariah /25</div>
-                </div>
-                <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <div className="text-2xl font-bold text-purple-700">{Number(assessment.legalScore).toFixed(1)}</div>
-                   <div className="text-sm text-gray-600 mt-1">Kontribusi Legal /20</div>
+                <div className="space-y-4">
+                  {[
+                    { label: "Keuangan berkelanjutan", value: Number(assessment.sustainableFinanceScore), max: 55, bar: "bg-royal-600" },
+                    { label: "Kepatuhan syariah", value: Number(assessment.shariaScore), max: 25, bar: "bg-gold-400" },
+                    { label: "Legalitas", value: Number(assessment.legalScore), max: 20, bar: "bg-[#7d8fae]" },
+                  ].map(item => (
+                    <div key={item.label}>
+                      <div className="mb-1.5 flex items-baseline justify-between text-sm">
+                        <span className="font-medium text-navy-900">{item.label}</span>
+                        <span className="text-muted-foreground"><span className="font-serif text-lg text-navy-900">{item.value.toFixed(1)}</span> / {item.max}</span>
+                      </div>
+                      <div className="h-2 overflow-hidden rounded-full bg-[#e6ebf3]">
+                        <div className={`h-full rounded-full ${item.bar} transition-all duration-700`} style={{ width: `${Math.min(100, (item.value / item.max) * 100)}%` }} />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -402,16 +382,16 @@ export default function ApplicationDetail() {
                 </div>
               </div>
 
-              <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+              <div className="mt-4 p-4 bg-[#eef2f8] rounded-lg">
                 <div className="flex items-start gap-2">
-                  <FileText className="h-5 w-5 text-blue-600 mt-0.5" />
+                  <FileText className="h-5 w-5 text-royal-600 mt-0.5" />
                   <div>
-                     <div className="font-semibold text-blue-900">
+                     <div className="font-semibold text-navy-900">
                        {assessment.recommendationStatus === "generated"
                          ? "Narasi Pendukung AI"
                          : "Rekomendasi Berbasis Aturan"}
                      </div>
-                     <p className="text-sm text-blue-800 mt-1">{assessment.recommendations}</p>
+                     <p className="text-sm text-navy-800 mt-1">{assessment.recommendations}</p>
                    </div>
                  </div>
                </div>
@@ -452,7 +432,7 @@ export default function ApplicationDetail() {
                {data.bprsEvaluation && (
                  <div className="mt-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
                    <div className="flex items-center gap-2 mb-3">
-                     <Shield className="h-5 w-5 text-indigo-600" />
+                     <Shield className="h-5 w-5 text-royal-600" />
                      <div>
                        <div className="font-semibold text-slate-900">Kesesuaian Pedoman Kebijakan Pembiayaan BPRS</div>
                        <p className="text-xs text-slate-600">Evaluasi otomatis berdasarkan Pedoman Kebijakan Pembiayaan BPRS (KPB 2025)</p>
@@ -518,7 +498,7 @@ export default function ApplicationDetail() {
                        <span>{data.bprsEvaluation.legalOpinionNote}</span>
                      </div>
                      {(data.bprsEvaluation.isRelatedParty || data.bprsEvaluation.needsComplianceOpinion || data.bprsEvaluation.needsLegalOpinion || Number(data.application.requestedAmount) >= 25_000_000) && (
-                       <div className="p-2 rounded border bg-blue-50 border-blue-200 text-blue-800 flex items-center justify-between">
+                       <div className="p-2 rounded border bg-[#eef2f8] border-[#cfd8e8] text-navy-800 flex items-center justify-between">
                          <span className="font-medium">
                            📄 PDF Laporan mencakup Lembar Lampiran Disposisi Komite Pembiayaan & Kolom Opini Kepatuhan/Legal otomatis.
                          </span>
@@ -724,8 +704,8 @@ export default function ApplicationDetail() {
                <div><span className="font-semibold">Total margin / ujrah:</span> {Number(application.marginRate).toFixed(2)}%</div>
                <div><span className="font-semibold">Skema Akad:</span> <span className="uppercase font-medium text-primary">{application.financingAkad || "murabahah"}</span></div>
                {application.financingAkad === "multijasa" && (
-                 <div className="mt-2 p-2.5 bg-indigo-50 border border-indigo-100 rounded text-xs space-y-1">
-                   <div className="font-semibold text-indigo-950">Rincian Ijarah Multijasa:</div>
+                 <div className="mt-2 p-2.5 bg-[#eef2f8] border border-[#e1e8f4] rounded text-xs space-y-1">
+                   <div className="font-semibold text-navy-900">Rincian Ijarah Multijasa:</div>
                    <div>Penyedia Jasa: {application.multijasaServiceProvider || "-"}</div>
                    <div>Objek Jasa: {application.multijasaSourceObject || "-"}</div>
                    <div>Nilai Jasa: Rp {Number(application.multijasaServiceCost || 0).toLocaleString("id-ID")}</div>
@@ -853,9 +833,9 @@ function SurveyAnalysisBlock({ result }: { result: Record<string, unknown> }) {
   const observations = Array.isArray(analysis.observations) ? analysis.observations as unknown[] : [];
 
   return (
-    <div className="space-y-2 rounded-lg bg-blue-50 p-3 text-sm">
+    <div className="space-y-2 rounded-lg bg-[#eef2f8] p-3 text-sm">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 font-semibold text-blue-900">
+        <div className="flex items-center gap-2 font-semibold text-navy-900">
           <Sparkles className="h-4 w-4" />
           Hasil Analisis AI
         </div>
@@ -869,7 +849,7 @@ function SurveyAnalysisBlock({ result }: { result: Record<string, unknown> }) {
             <div key={item.key} className="flex items-start gap-1.5">
               <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
               <div>
-                <span className="text-xs text-blue-800">{item.label}:</span>{" "}
+                <span className="text-xs text-navy-800">{item.label}:</span>{" "}
                 <span className="text-xs text-gray-700">{String(value)}</span>
               </div>
             </div>
@@ -878,7 +858,7 @@ function SurveyAnalysisBlock({ result }: { result: Record<string, unknown> }) {
       </div>
       {observations.length > 0 && (
         <div>
-          <div className="text-xs font-semibold text-blue-900">Pengamatan</div>
+          <div className="text-xs font-semibold text-navy-900">Pengamatan</div>
           <ul className="mt-1 list-inside list-disc space-y-0.5 text-xs text-gray-700">
             {observations.map((obs, index) => (
               <li key={index}>{String(obs)}</li>
@@ -887,12 +867,35 @@ function SurveyAnalysisBlock({ result }: { result: Record<string, unknown> }) {
         </div>
       )}
       {analysis.overallAssessment != null && (
-        <div className="border-t border-blue-200 pt-2 text-xs text-gray-700">
-          <span className="font-semibold text-blue-900">Penilaian keseluruhan: </span>
+        <div className="border-t border-[#cfd8e8] pt-2 text-xs text-gray-700">
+          <span className="font-semibold text-navy-900">Penilaian keseluruhan: </span>
           {String(analysis.overallAssessment)}
         </div>
       )}
-      <p className="text-[11px] text-blue-600/70">Hasil bersifat pendukung, bukan keputusan final.</p>
+      <p className="text-[11px] text-royal-600/70">Hasil bersifat pendukung, bukan keputusan final.</p>
+    </div>
+  );
+}
+
+function ScoreRing({ value }: { value: number }) {
+  const r = 42;
+  const c = 2 * Math.PI * r;
+  const pct = Math.max(0, Math.min(100, value)) / 100;
+  return (
+    <div className="relative h-32 w-32">
+      <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90">
+        <defs>
+          <linearGradient id="detail-score" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#f6cf78" />
+            <stop offset="100%" stopColor="#d99e2b" />
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r={r} fill="none" stroke="rgb(255 255 255 / 0.12)" strokeWidth="7" />
+        <circle cx="50" cy="50" r={r} fill="none" stroke="url(#detail-score)" strokeWidth="7" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={c * (1 - pct)} />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="font-serif text-4xl">{value.toFixed(1)}</span>
+      </div>
     </div>
   );
 }

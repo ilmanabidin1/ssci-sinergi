@@ -1,5 +1,4 @@
-import { NotificationBell } from "@/components/NotificationBell";
-import { ProfileMenu } from "@/components/ProfileMenu";
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -94,9 +93,6 @@ export default function Dashboard() {
   });
   const trendQuery = trpc.applications.dashboardTrend.useQuery();
   const analystQuery = trpc.applications.analystPerformance.useQuery();
-  const orgQuery = trpc.organization.getSettings.useQuery();
-  const orgName = orgQuery.data?.name;
-  const orgLogo = orgQuery.data?.logoUrl;
   const isLoading = queueQuery.isLoading || statsQuery.isLoading;
   const isError = queueQuery.isError || statsQuery.isError;
   const applications = queueQuery.data ?? [];
@@ -247,8 +243,8 @@ export default function Dashboard() {
       label: "Menunggu keputusan",
       value: stats?.pendingDecision ?? 0,
       Icon: FileText,
-      color: "text-blue-600",
-      bg: "bg-blue-50",
+      color: "text-royal-600",
+      bg: "bg-[#eef2f8]",
       to: "/assessments",
     },
     {
@@ -292,25 +288,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-ivory">
-      <nav className="relative overflow-hidden bg-navy-900 text-white">
-        <div className="pattern-islamic pointer-events-none absolute inset-0 opacity-[0.04]" />
-        <div className="container relative flex items-center justify-between py-3">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={orgLogo || "/logo-dark-bg.png"} alt="SSCI" className="h-12 w-auto" />
-            <span className="font-serif text-xl">{orgName || "SSCI BPRS"}</span>
-            {orgName && (
-              <span className="hidden rounded-full border border-gold-400/40 bg-gold-400/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold-300 sm:inline">
-                BPRS
-              </span>
-            )}
-          </Link>
-          <div className="flex items-center gap-1 rounded-full bg-white/95 px-1 text-navy-900">
-            <NotificationBell />
-            <ProfileMenu />
-          </div>
-        </div>
-        <div className="gold-rule absolute inset-x-0 bottom-0 opacity-60" />
-      </nav>
+      <AppHeader />
 
       <main className="container max-w-7xl px-4 py-8 sm:px-6">
         {/* Page header */}

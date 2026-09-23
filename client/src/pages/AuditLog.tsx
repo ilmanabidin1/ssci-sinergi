@@ -1,10 +1,10 @@
-import { ProfileMenu } from "@/components/ProfileMenu";
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, ChevronLeft, ChevronRight, Loader2, ScrollText, Shield } from "lucide-react";
+import { ChevronLeft, ChevronRight, Loader2, ScrollText } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 
@@ -47,18 +47,10 @@ export default function AuditLog() {
 
   if (!isAdmin) {
     return (
-      <div className="min-h-screen bg-slate-50">
-        <nav className="border-b bg-white">
-          <div className="container flex items-center justify-between py-4">
-            <div className="flex items-center gap-2 text-primary">
-              <Shield className="h-6 w-6" />
-              <span className="text-xl font-bold">SSCI BPRS</span>
-            </div>
-            <ProfileMenu />
-          </div>
-        </nav>
+      <div className="min-h-screen bg-ivory">
+        <AppHeader />
         <main className="container max-w-3xl py-16 text-center">
-          <h1 className="text-2xl font-bold text-slate-900">Akses ditolak</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900">Akses ditolak</h1>
           <p className="mt-2 text-slate-600">Halaman ini hanya dapat diakses oleh admin.</p>
         </main>
       </div>
@@ -66,32 +58,16 @@ export default function AuditLog() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <nav className="border-b bg-white">
-        <div className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Kembali
-              </Link>
-            </Button>
-            <div className="flex items-center gap-2 text-primary">
-              <Shield className="h-6 w-6" />
-              <span className="text-xl font-bold">SSCI BPRS</span>
-            </div>
-          </div>
-          <ProfileMenu />
-        </div>
-      </nav>
+    <div className="min-h-screen bg-ivory">
+      <AppHeader />
 
       <main className="container max-w-6xl px-4 py-8 sm:px-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-slate-900">Audit Log</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Audit Log</h1>
           <p className="mt-1 text-slate-600">Riwayat tindakan penting di organisasi BPRS Anda.</p>
         </div>
 
-        <Card className="border-0 shadow-sm">
+        <Card className="border-border shadow-premium">
           <CardHeader className="flex flex-col gap-4 border-b px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
             <CardTitle className="flex items-center gap-2">
               <ScrollText className="h-5 w-5 text-primary" />

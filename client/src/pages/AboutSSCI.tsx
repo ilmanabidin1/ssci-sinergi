@@ -1,6 +1,6 @@
+import { AppHeader } from "@/components/AppHeader";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -13,8 +13,7 @@ import {
   AlertTriangle,
   XCircle,
   Star,
-  ArrowLeft,
-  Building2,
+  
   FileText,
 } from "lucide-react";
 import { SSCI_METHODOLOGY_VERSION } from "@shared/ssciMethodology";
@@ -65,10 +64,10 @@ const pillars = [
     id: 2,
     icon: Scale,
     color: "blue",
-    bgColor: "bg-blue-50",
-    borderColor: "border-blue-200",
-    iconColor: "text-blue-600",
-    badgeColor: "bg-blue-100 text-blue-800",
+    bgColor: "bg-[#eef2f8]",
+    borderColor: "border-[#cfd8e8]",
+    iconColor: "text-royal-600",
+    badgeColor: "bg-[#e1e8f4] text-navy-800",
     title: "Indeks Kepatuhan Syariah",
     subtitle: "Sharia Compliance Index (SCI)",
     weight: 25,
@@ -103,10 +102,10 @@ const pillars = [
     id: 3,
     icon: FileText,
     color: "purple",
-    bgColor: "bg-purple-50",
-    borderColor: "border-purple-200",
-    iconColor: "text-purple-600",
-    badgeColor: "bg-purple-100 text-purple-800",
+    bgColor: "bg-[#eef2f8]",
+    borderColor: "border-[#cfd8e8]",
+    iconColor: "text-royal-600",
+    badgeColor: "bg-[#e1e8f4] text-navy-800",
     title: "Indeks Legalitas",
     subtitle: "Legal Compliance Index (LCI)",
     weight: 20,
@@ -153,11 +152,11 @@ const classifications = [
   {
     label: "Layak",
     range: "65 – <80",
-    color: "text-blue-700",
-    bg: "bg-blue-50",
-    border: "border-blue-300",
+    color: "text-royal-600",
+    bg: "bg-[#eef2f8]",
+    border: "border-[#cfd8e8]",
     icon: CheckCircle2,
-    iconColor: "text-blue-600",
+    iconColor: "text-royal-600",
     desc: "Kriteria awal terpenuhi dengan baik dan dapat dipertimbangkan dengan persyaratan atau pengawasan berkala.",
   },
   {
@@ -184,60 +183,39 @@ const classifications = [
 
 export default function AboutSSCI() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-ivory">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Link href="/">
-              <Button variant="ghost" size="sm" className="gap-2 text-gray-600">
-                <ArrowLeft className="h-4 w-4" />
-                Kembali
-              </Button>
-            </Link>
-            <Separator orientation="vertical" className="h-5" />
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-navy-900 rounded-md flex items-center justify-center">
-                <Scale className="h-4 w-4 text-gold-300" />
-              </div>
-              <span className="font-semibold text-gray-800">Tentang SSCI</span>
-            </div>
-          </div>
-          <Link href="/applications/new">
-            <Button size="sm" className="gap-2">
-              Mulai Penilaian
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-      </header>
+      <AppHeader />
 
       <main className="max-w-6xl mx-auto px-4 py-10 space-y-12">
 
         {/* Hero Section */}
-        <section className="text-center space-y-4">
-           <Badge className="bg-blue-100 text-blue-800 border-blue-200 px-4 py-1 text-sm">
-             Platform Penilaian Pembiayaan Syariah
-          </Badge>
-          <h1 className="text-4xl font-bold text-gray-900 leading-tight">
-            Sustainable Sharia Creditworthiness Index
-          </h1>
-          <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-            Sistem pendukung penilaian pembiayaan murabahah berbasis aturan yang mengintegrasikan aspek keuangan, kepatuhan syariah, dan legalitas dalam satu indeks terpadu.
-          </p>
-          <div className="flex items-center justify-center gap-6 pt-2 text-sm text-gray-500">
-            <div className="flex items-center gap-1.5">
-              <Building2 className="h-4 w-4 text-blue-500" />
+        <section className="relative overflow-hidden rounded-3xl bg-navy-900 px-6 py-14 text-center text-white shadow-premium-lg sm:px-12">
+          <div className="pattern-islamic pointer-events-none absolute inset-0 opacity-[0.05]" />
+          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gold-400/15 blur-3xl" />
+          <div className="relative space-y-5">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold-400/40 bg-gold-400/10 px-3.5 py-1.5 text-xs font-semibold text-gold-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold-400" /> Platform Penilaian Pembiayaan Syariah
+            </span>
+            <h1 className="mx-auto max-w-3xl font-serif text-4xl font-medium leading-tight sm:text-5xl">
+              Sustainable Sharia <em className="text-gold-gradient">Creditworthiness Index</em>
+            </h1>
+            <div className="gold-rule mx-auto w-24" />
+            <p className="mx-auto max-w-3xl text-lg leading-8 text-[#b9c4d8]">
+              Sistem pendukung penilaian pembiayaan murabahah berbasis aturan yang mengintegrasikan aspek keuangan, kepatuhan syariah, dan legalitas dalam satu indeks terpadu.
+            </p>
+            <div className="flex items-center justify-center gap-3 pt-2 text-sm text-[#b9c4d8]">
+              <img src="/unisba-logo.png" alt="" className="h-8 w-auto rounded bg-white/95 p-0.5" />
               <span>Universitas Islam Bandung</span>
             </div>
           </div>
         </section>
 
         {/* Latar Belakang */}
-        <section className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+        <section className="bg-white rounded-2xl border border-border p-8 shadow-premium">
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-              <Info className="h-5 w-5 text-blue-600" />
+            <div className="w-10 h-10 bg-[#e1e8f4] rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+              <Info className="h-5 w-5 text-royal-600" />
             </div>
             <div className="space-y-3">
               <h2 className="text-xl font-bold text-gray-900">Latar Belakang</h2>
@@ -277,10 +255,10 @@ export default function AboutSSCI() {
               <div className="bg-emerald-500 flex items-center justify-center text-white text-sm font-bold" style={{ width: "55%" }}>
                 SFI 55%
               </div>
-              <div className="bg-blue-500 flex items-center justify-center text-white text-sm font-bold" style={{ width: "25%" }}>
+              <div className="bg-navy-900 flex items-center justify-center text-white text-sm font-bold" style={{ width: "25%" }}>
                 SCI 25%
               </div>
-              <div className="bg-purple-500 flex items-center justify-center text-white text-sm font-bold" style={{ width: "20%" }}>
+              <div className="bg-navy-900 flex items-center justify-center text-white text-sm font-bold" style={{ width: "20%" }}>
                 LCI 20%
               </div>
             </div>
@@ -388,9 +366,9 @@ export default function AboutSSCI() {
               {" = "}
               <span className="text-emerald-400">(SFI × 0.55)</span>
               {" + "}
-              <span className="text-blue-400">(SCI × 0.25)</span>
+              <span className="text-royal-600">(SCI × 0.25)</span>
               {" + "}
-              <span className="text-purple-400">(LCI × 0.20)</span>
+              <span className="text-royal-600">(LCI × 0.20)</span>
             </p>
             <Separator className="bg-gray-700 my-2" />
             <p className="text-gray-400 text-xs">SFI = Sustainable Finance Index (0–100)</p>
@@ -403,7 +381,7 @@ export default function AboutSSCI() {
         </section>
 
         {/* Tim & Institusi */}
-        <section className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+        <section className="bg-white rounded-2xl border border-border p-8 shadow-premium">
            <h2 className="text-xl font-bold text-gray-900 mb-6">Platform & Afiliasi</h2>
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-2">

@@ -1,5 +1,4 @@
-import { NotificationBell } from "@/components/NotificationBell";
-import { ProfileMenu } from "@/components/ProfileMenu";
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,15 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, Shield, Search, Loader2 } from "lucide-react";
+import { Search, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 
 export default function AssessmentHistory() {
   const { user } = useAuth({ redirectOnUnauthenticated: true });
-  const orgQuery = trpc.organization.getSettings.useQuery();
-  const orgName = orgQuery.data?.name;
-  const orgLogo = orgQuery.data?.logoUrl;
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState<"all" | "pending" | "assessed" | "approved" | "rejected" | "cancelled">("all");
   
@@ -26,7 +22,7 @@ export default function AssessmentHistory() {
   const getStatusBadge = (status: string) => {
     const badges = {
       pending: <Badge variant="outline">Menunggu penilaian</Badge>,
-      assessed: <Badge className="bg-blue-100 text-blue-800">Menunggu keputusan</Badge>,
+      assessed: <Badge className="bg-[#e1e8f4] text-navy-800">Menunggu keputusan</Badge>,
       approved: <Badge className="bg-green-100 text-green-800">Disetujui</Badge>,
       rejected: <Badge className="bg-red-100 text-red-800">Ditolak</Badge>,
       cancelled: <Badge variant="outline">Dibatalkan</Badge>,
@@ -35,34 +31,12 @@ export default function AssessmentHistory() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="border-b bg-white">
-        <div className="container py-4 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Kembali
-              </Link>
-            </Button>
-            <div className="flex items-center gap-2">
-              <img src={orgLogo || "/logo-light-bg.png"} alt="SSCI" className="h-12 w-auto" />
-              <div className="flex items-center gap-2">
-                <h1 className="text-xl font-bold text-primary">SSCI</h1>
-                {orgName && <span className="hidden rounded-md bg-slate-100 px-1.5 py-0.5 text-xs font-semibold text-slate-500 sm:inline">{orgName}</span>}
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-1">
-            <NotificationBell />
-            <ProfileMenu />
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-ivory">
+      <AppHeader />
 
       <main className="container py-8 max-w-6xl">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Riwayat Penilaian</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Riwayat Penilaian</h1>
           <p className="text-gray-600 mt-2">Daftar aplikasi pembiayaan dan hasil assessment</p>
         </div>
 

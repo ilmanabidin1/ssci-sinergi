@@ -1,11 +1,11 @@
-import { ProfileMenu } from "@/components/ProfileMenu";
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { trpc } from "@/lib/trpc";
-import { Loader2, Search, Shield, Users } from "lucide-react";
+import { Loader2, Search, Users } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -46,10 +46,10 @@ export default function Customers() {
 
   if (isError) {
     return (
-      <div className="min-h-screen bg-slate-50">
-        <Nav />
+      <div className="min-h-screen bg-ivory">
+        <AppHeader />
         <main className="container max-w-6xl px-4 py-16 sm:px-6">
-          <Card className="border-0 shadow-sm">
+          <Card className="border-border shadow-premium">
             <CardContent className="flex flex-col items-center gap-4 py-12 text-center">
               <p className="text-slate-600">Gagal memuat data nasabah.</p>
               <button
@@ -69,17 +69,17 @@ export default function Customers() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Nav />
+    <div className="min-h-screen bg-ivory">
+      <AppHeader />
       <main className="container max-w-6xl px-4 py-8 sm:px-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-slate-900">Master Nasabah</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Master Nasabah</h1>
           <p className="mt-1 text-slate-600">
             Ringkasan nasabah BPRS berdasarkan riwayat pengajuan pembiayaan.
           </p>
         </div>
 
-        <Card className="mb-6 border-0 shadow-sm">
+        <Card className="mb-6 border-border shadow-premium">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Search className="h-5 w-5 text-primary" />
@@ -111,7 +111,7 @@ export default function Customers() {
           </CardContent>
         </Card>
 
-        <Card className="border-0 shadow-sm">
+        <Card className="border-border shadow-premium">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-5 w-5 text-primary" />
@@ -158,7 +158,7 @@ export default function Customers() {
                         <td className="px-4 py-3 text-center">
                           {entry.latestAssessmentScore !== null &&
                           entry.latestAssessmentScore !== undefined ? (
-                            <Badge className="bg-blue-100 text-blue-800">
+                            <Badge className="bg-[#e1e8f4] text-navy-800">
                               {formatScore(entry.latestAssessmentScore)}
                             </Badge>
                           ) : (
@@ -179,23 +179,3 @@ export default function Customers() {
   );
 }
 
-function Nav() {
-  const orgQuery = trpc.organization.getSettings.useQuery();
-  const orgName = orgQuery.data?.name;
-  const orgLogo = orgQuery.data?.logoUrl;
-  return (
-    <nav className="border-b bg-white">
-      <div className="container flex items-center justify-between py-4">
-        <div className="flex items-center gap-2 text-primary">
-          {orgLogo ? (
-            <img src={orgLogo} alt="Logo BPRS" className="h-6 w-6 rounded object-contain" />
-          ) : (
-            <Shield className="h-6 w-6" />
-          )}
-          <span className="text-xl font-bold">{orgName || "SSCI BPRS"}</span>
-        </div>
-        <ProfileMenu />
-      </div>
-    </nav>
-  );
-}

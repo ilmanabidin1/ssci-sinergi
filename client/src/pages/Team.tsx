@@ -1,4 +1,4 @@
-import { ProfileMenu } from "@/components/ProfileMenu";
+import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { trpc } from "@/lib/trpc";
-import { Loader2, Shield, UserPlus, Users } from "lucide-react";
+import { Loader2, UserPlus, Users } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -76,18 +76,10 @@ export default function Team() {
 
   if (!isAdmin) {
     return (
-      <div className="min-h-screen bg-slate-50">
-        <nav className="border-b bg-white">
-          <div className="container flex items-center justify-between py-4">
-            <div className="flex items-center gap-2 text-primary">
-              <Shield className="h-6 w-6" />
-              <span className="text-xl font-bold">SSCI BPRS</span>
-            </div>
-            <ProfileMenu />
-          </div>
-        </nav>
+      <div className="min-h-screen bg-ivory">
+        <AppHeader />
         <main className="container max-w-3xl py-16 text-center">
-          <h1 className="text-2xl font-bold text-slate-900">Akses ditolak</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900">Akses ditolak</h1>
           <p className="mt-2 text-slate-600">Halaman ini hanya dapat diakses oleh admin.</p>
         </main>
       </div>
@@ -95,27 +87,19 @@ export default function Team() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <nav className="border-b bg-white">
-        <div className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-2 text-primary">
-            <Shield className="h-6 w-6" />
-            <span className="text-xl font-bold">SSCI BPRS</span>
-          </div>
-          <ProfileMenu />
-        </div>
-      </nav>
+    <div className="min-h-screen bg-ivory">
+      <AppHeader />
 
       <main className="container max-w-6xl px-4 py-8 sm:px-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-slate-900">Kelola Tim</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Kelola Tim</h1>
           <p className="mt-1 text-slate-600">
             Tambahkan dan kelola akun maker/checker untuk tim pembiayaan BPRS Anda.
           </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[380px_1fr]">
-          <Card className="h-fit border-0 shadow-sm">
+          <Card className="h-fit border-border shadow-premium">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <UserPlus className="h-5 w-5 text-primary" />
@@ -202,7 +186,7 @@ export default function Team() {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-sm">
+          <Card className="border-border shadow-premium">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-primary" />
