@@ -197,8 +197,8 @@ export default function AboutSSCI() {
             </Link>
             <Separator orientation="vertical" className="h-5" />
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-blue-600 rounded-md flex items-center justify-center">
-                <Scale className="h-4 w-4 text-white" />
+              <div className="w-7 h-7 bg-navy-900 rounded-md flex items-center justify-center">
+                <Scale className="h-4 w-4 text-gold-300" />
               </div>
               <span className="font-semibold text-gray-800">Tentang SSCI</span>
             </div>

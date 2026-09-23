@@ -1,14 +1,23 @@
+import { AuthShell } from "@/components/AuthShell";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
-import { Loader2, ShieldCheck, X } from "lucide-react";
+import { ChevronDown, FlaskConical, Loader2 } from "lucide-react";
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
 
+const demoAccounts = [
+  { email: "analis@bprs.id", role: "Analis / Account Officer", desc: "Input pengajuan dan hitung kelayakan", tag: "Maker" },
+  { email: "komite@bprs.id", role: "Komite Pembiayaan", desc: "Persetujuan dan keputusan komite", tag: "Checker" },
+];
+
 export default function Login() {
   const [, setLocation] = useLocation();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showDemo, setShowDemo] = useState(false);
   const utils = trpc.useUtils();
   const login = trpc.auth.login.useMutation({
     onSuccess: async () => {
@@ -19,98 +28,96 @@ export default function Login() {
   });
 
   return (
-    <main className="min-h-screen bg-slate-950 px-4 py-12 flex items-center justify-center">
-      <Card className="w-full max-w-md border-slate-700 shadow-2xl">
-        <div className="flex justify-end pt-3 pr-3">
-          <Button variant="ghost" size="icon" className="h-8 w-8 text-slate-400 hover:bg-white/10 hover:text-white" asChild>
-            <Link href="/" aria-label="Kembali ke beranda">
-              <X className="h-4 w-4" />
-            </Link>
-          </Button>
+    <AuthShell
+      eyebrow="Portal SSCI"
+      title="Selamat datang kembali"
+      description="Masuk menggunakan akun yang diberikan administrator BPRS Anda."
+    >
+      <form
+        className="space-y-5"
+        onSubmit={event => {
+          event.preventDefault();
+          login.mutate({ email, password });
+        }}
+      >
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
+          <Input
+            id="email"
+            type="email"
+            autoComplete="username"
+            required
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            className="h-11 bg-white"
+          />
         </div>
-        <CardHeader className="space-y-4">
-          <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center">
-            <ShieldCheck className="h-7 w-7 text-white" />
-          </div>
-          <div>
-            <CardTitle className="text-2xl">Portal SSCI</CardTitle>
-            <CardDescription className="mt-2">
-              Masuk menggunakan akun yang diberikan administrator BPRS.
-            </CardDescription>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <form
-            className="space-y-4"
-            onSubmit={event => {
-              event.preventDefault();
-              const data = new FormData(event.currentTarget);
-              login.mutate({
-                email: String(data.get("email")),
-                password: String(data.get("password")),
-              });
-            }}
-          >
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" name="email" type="email" autoComplete="username" required />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
-           <Input id="password" name="password" type="password" autoComplete="current-password" minLength={4} required />
-            </div>
-            <Button className="w-full" type="submit" disabled={login.isPending}>
-              {login.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Masuk
-            </Button>
-          </form>
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
+          <Input
+            id="password"
+            type="password"
+            autoComplete="current-password"
+            minLength={4}
+            required
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            className="h-11 bg-white"
+          />
+        </div>
+        <Button
+          className="h-11 w-full rounded-full bg-navy-900 text-white shadow-premium hover:bg-navy-800"
+          type="submit"
+          disabled={login.isPending}
+        >
+          {login.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          Masuk
+        </Button>
+      </form>
 
-          <div className="mt-6 border-t border-slate-200 pt-4">
-            <div className="text-xs font-semibold text-slate-500 mb-2">
-              Akun Simulasi Pedoman BPRS (Klik untuk isi cepat):
-            </div>
-            <div className="space-y-1.5 text-xs">
+      <p className="mt-6 text-center text-sm text-muted-foreground">
+        Belum terdaftar?{" "}
+        <Link href="/register" className="font-semibold text-navy-900 underline-offset-4 hover:underline">
+          Daftarkan BPRS Anda
+        </Link>
+      </p>
+
+      <div className="mt-8 border-t border-border pt-5">
+        <button
+          type="button"
+          onClick={() => setShowDemo(v => !v)}
+          className="flex w-full items-center justify-between text-xs font-semibold text-muted-foreground transition-colors hover:text-navy-900"
+          aria-expanded={showDemo}
+        >
+          <span className="inline-flex items-center gap-2">
+            <FlaskConical className="h-3.5 w-3.5 text-gold-500" /> Mode demo
+          </span>
+          <ChevronDown className={`h-4 w-4 transition-transform ${showDemo ? "rotate-180" : ""}`} />
+        </button>
+        {showDemo && (
+          <div className="mt-3 space-y-2">
+            {demoAccounts.map(account => (
               <button
+                key={account.email}
                 type="button"
-                className="w-full text-left p-2 rounded bg-slate-100 hover:bg-slate-200 transition flex items-center justify-between"
+                className="hover-lift flex w-full items-center justify-between rounded-xl border border-border bg-white p-3 text-left"
                 onClick={() => {
-                  const emailInput = document.getElementById("email") as HTMLInputElement;
-                  const passInput = document.getElementById("password") as HTMLInputElement;
-                  if (emailInput && passInput) {
-                    emailInput.value = "analis@bprs.id";
-                    passInput.value = "password123";
-                  }
+                  setEmail(account.email);
+                  setPassword("password123");
                 }}
               >
                 <div>
-                  <span className="font-semibold text-slate-800">1. Analis / Account Officer (Maker)</span>
-                  <div className="text-[11px] text-slate-500">analis@bprs.id (Input pengajuan & hitung kelayakan)</div>
+                  <span className="text-sm font-semibold text-navy-900">{account.role}</span>
+                  <div className="text-[11px] text-muted-foreground">{account.desc}</div>
                 </div>
-                <span className="rounded bg-emerald-100 text-emerald-800 px-1.5 py-0.5 text-[10px] font-medium">Isi</span>
+                <span className="rounded-full bg-gold-50 px-2 py-0.5 text-[10px] font-semibold text-gold-500">
+                  {account.tag}
+                </span>
               </button>
-
-              <button
-                type="button"
-                className="w-full text-left p-2 rounded bg-slate-100 hover:bg-slate-200 transition flex items-center justify-between"
-                onClick={() => {
-                  const emailInput = document.getElementById("email") as HTMLInputElement;
-                  const passInput = document.getElementById("password") as HTMLInputElement;
-                  if (emailInput && passInput) {
-                    emailInput.value = "komite@bprs.id";
-                    passInput.value = "password123";
-                  }
-                }}
-              >
-                <div>
-                  <span className="font-semibold text-slate-800">2. Komite Pembiayaan (Checker)</span>
-                  <div className="text-[11px] text-slate-500">komite@bprs.id (Persetujuan / Keputusan komite)</div>
-                </div>
-                <span className="rounded bg-indigo-100 text-indigo-800 px-1.5 py-0.5 text-[10px] font-medium">Isi</span>
-              </button>
-            </div>
+            ))}
           </div>
-        </CardContent>
-      </Card>
-    </main>
+        )}
+      </div>
+    </AuthShell>
   );
 }

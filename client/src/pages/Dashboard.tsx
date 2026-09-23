@@ -274,52 +274,54 @@ export default function Dashboard() {
       label: "Total pengajuan",
       value: formatMoney(stats?.totalRequestedAmount ?? 0),
       Icon: TrendingUp,
-      color: "text-slate-600",
+      color: "text-gold-300",
     },
     {
       label: "Total disetujui",
       value: formatMoney(stats?.approvedAmount ?? 0),
       Icon: CheckCircle2,
-      color: "text-emerald-600",
+      color: "text-gold-300",
     },
     {
       label: "Rata-rata skor",
       value: (stats?.averageAssessedScore ?? 0).toFixed(1),
       Icon: Shield,
-      color: "text-violet-600",
+      color: "text-gold-300",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <nav className="border-b bg-white">
-        <div className="container flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center gap-2 text-primary">
-            <img src={orgLogo || "/logo-light-bg.png"} alt="SSCI" className="h-12 w-auto" />
-            <span className="text-xl font-bold">{orgName || "SSCI BPRS"}</span>
+    <div className="min-h-screen bg-ivory">
+      <nav className="relative overflow-hidden bg-navy-900 text-white">
+        <div className="pattern-islamic pointer-events-none absolute inset-0 opacity-[0.04]" />
+        <div className="container relative flex items-center justify-between py-3">
+          <Link to="/" className="flex items-center gap-3">
+            <img src={orgLogo || "/logo-dark-bg.png"} alt="SSCI" className="h-12 w-auto" />
+            <span className="font-serif text-xl">{orgName || "SSCI BPRS"}</span>
             {orgName && (
-              <span className="hidden rounded-md bg-slate-100 px-1.5 py-0.5 text-xs font-semibold text-slate-500 sm:inline">
+              <span className="hidden rounded-full border border-gold-400/40 bg-gold-400/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold-300 sm:inline">
                 BPRS
               </span>
             )}
           </Link>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 rounded-full bg-white/95 px-1 text-navy-900">
             <NotificationBell />
             <ProfileMenu />
           </div>
         </div>
+        <div className="gold-rule absolute inset-x-0 bottom-0 opacity-60" />
       </nav>
 
       <main className="container max-w-7xl px-4 py-8 sm:px-6">
         {/* Page header */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary">Operational center</p>
-            <h1 className="mt-1 text-3xl font-bold text-slate-900">Dashboard operasional</h1>
+            <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[.2em] text-gold-500"><span className="h-px w-8 bg-gold-400" />Operational center</p>
+            <h1 className="mt-2 font-serif text-4xl font-medium text-navy-900">Dashboard operasional</h1>
             <p className="mt-2 text-slate-600">Pantau alur pengajuan pembiayaan BPRS secara real time.</p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Button asChild>
+            <Button asChild className="rounded-full bg-navy-900 text-white shadow-premium hover:bg-navy-800">
               <Link to="/applications/new">
                 <FileText className="mr-2 h-4 w-4" />
                 Mulai penilaian baru
@@ -337,10 +339,10 @@ export default function Dashboard() {
 
         {/* Status summary */}
         <section className="mt-8">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">Ringkasan status</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-slate-400">Ringkasan status</h2>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {statusCards.map(({ label, value, Icon, color, bg, to }) => (
-              <Card key={label} className="border-0 shadow-sm">
+              <Card key={label} className="hover-lift border-border shadow-premium">
                 <CardContent className="p-5">
                   <div className="flex items-start justify-between">
                     <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${bg}`}>
@@ -352,7 +354,7 @@ export default function Dashboard() {
                       </Link>
                     </Button>
                   </div>
-                  <p className="mt-4 text-2xl font-bold text-slate-900">{value}</p>
+                  <p className="mt-4 font-serif text-4xl text-navy-900">{value}</p>
                   <p className="mt-1 text-sm text-slate-500">{label}</p>
                 </CardContent>
               </Card>
@@ -362,16 +364,17 @@ export default function Dashboard() {
 
         {/* Financial summary */}
         <section className="mt-8">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">Ringkasan keuangan</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-slate-400">Ringkasan keuangan</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {financialCards.map(({ label, value, Icon, color }) => (
-              <Card key={label} className="border-0 shadow-sm">
-                <CardContent className="flex items-center justify-between p-5">
+              <Card key={label} className="relative overflow-hidden border-border shadow-premium">
+                <span className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-gold-300 to-gold-500" />
+                <CardContent className="flex items-center justify-between p-5 pl-6">
                   <div>
                     <p className="text-sm text-slate-500">{label}</p>
-                    <p className="mt-1 text-xl font-bold text-slate-900">{value}</p>
+                    <p className="mt-1 font-serif text-2xl text-navy-900">{value}</p>
                   </div>
-                  <Icon className={`h-6 w-6 ${color}`} />
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-navy-900"><Icon className={`h-5 w-5 ${color}`} /></div>
                 </CardContent>
               </Card>
             ))}
@@ -380,8 +383,8 @@ export default function Dashboard() {
 
         {/* SLA & wait time */}
         <section className="mt-8">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">SLA &amp; Waktu tunggu</h2>
-          <Card className="border-0 shadow-sm">
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-slate-400">SLA &amp; Waktu tunggu</h2>
+          <Card className="border-border shadow-premium">
             <CardHeader className="border-b px-6 py-5">
               <CardTitle>Pengajuan menunggu lama</CardTitle>
               <p className="mt-1 text-sm text-slate-500">
@@ -449,9 +452,9 @@ export default function Dashboard() {
 
         {/* Analytics charts */}
         <section className="mt-8">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">Analitik</h2>
+          <h2 className="mb-4 text-xs font-bold uppercase tracking-[.18em] text-slate-400">Analitik</h2>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            <Card className="border-0 shadow-sm">
+            <Card className="border-border shadow-premium">
               <CardHeader>
                 <CardTitle>Trend skor 6 bulan</CardTitle>
                 <p className="text-sm text-slate-500">Rata-rata skor penilaian per bulan.</p>
@@ -476,14 +479,14 @@ export default function Dashboard() {
                           "Rata-rata",
                         ]}
                       />
-                      <Line type="monotone" dataKey="averageScore" stroke="#7c3aed" strokeWidth={2} dot={{ r: 3 }} />
+                      <Line type="monotone" dataKey="averageScore" stroke="#14213d" strokeWidth={2.5} dot={{ r: 4, fill: "#efb84b", stroke: "#14213d", strokeWidth: 2 }} />
                     </LineChart>
                   </ResponsiveContainer>
                 )}
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm">
+            <Card className="border-border shadow-premium">
               <CardHeader>
                 <CardTitle>Performa analis</CardTitle>
                 <p className="text-sm text-slate-500">Jumlah dan rata-rata skor per analis.</p>
@@ -508,7 +511,7 @@ export default function Dashboard() {
                           "Jumlah",
                         ]}
                       />
-                      <Bar dataKey="count" fill="#0ea5e9" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="count" fill="#efb84b" radius={[6, 6, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
                 )}
@@ -556,7 +559,7 @@ export default function Dashboard() {
             </div>
             <p className="text-xs text-slate-500">Filter berlaku pada queue dan ringkasan status.</p>
           </div>
-          <Card className="border-0 shadow-sm">
+          <Card className="border-border shadow-premium">
             <CardHeader className="flex flex-col gap-4 border-b px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <CardTitle>Queue pengajuan</CardTitle>

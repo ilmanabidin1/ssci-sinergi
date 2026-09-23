@@ -65,36 +65,38 @@ export default function TrackApplication() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-ivory">
       {/* Header */}
-      <nav className="border-b bg-white">
-        <div className="container mx-auto flex items-center justify-between py-4 px-4 max-w-5xl">
-          <Button variant="ghost" size="sm" asChild>
+      <nav className="relative overflow-hidden bg-navy-900 text-white">
+        <div className="pattern-islamic pointer-events-none absolute inset-0 opacity-[0.05]" />
+        <div className="gold-rule absolute inset-x-0 bottom-0 opacity-60" />
+        <div className="container relative mx-auto flex items-center justify-between py-3 px-4 max-w-5xl">
+          <Button variant="ghost" size="sm" asChild className="text-white hover:bg-white/10 hover:text-white">
             <Link href="/">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Kembali ke Beranda
             </Link>
           </Button>
           <div className="flex items-center gap-2">
-            <img src="/logo-light-bg.png" alt="SSCI" className="h-10 w-auto" />
-            <span className="text-base font-bold text-[#2458d6]">SSCI Tracking Portal</span>
+            <img src="/logo-dark-bg.png" alt="SSCI" className="h-10 w-auto" />
+            <span className="hidden font-serif text-lg text-gold-300 sm:inline">Tracking Portal</span>
           </div>
         </div>
       </nav>
 
       <main className="container mx-auto py-8 px-4 max-w-2xl">
         <div className="mb-6 text-center">
-          <div className="mx-auto w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 mb-3">
+          <div className="mx-auto w-14 h-14 rounded-full bg-navy-900 flex items-center justify-center text-gold-300 mb-4 shadow-premium">
             <FileSearch className="h-6 w-6" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Pelacakan Status Pengajuan Pembiayaan</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900">Pelacakan Status Pengajuan Pembiayaan</h1>
           <p className="mt-1 text-sm text-gray-600">
             Cek progres tahapan penilaian kelayakan pembiayaan Anda secara transparan
           </p>
         </div>
 
         {/* Form Cari */}
-        <Card className="shadow-sm border-slate-200 mb-6">
+        <Card className="shadow-premium border-border mb-6">
           <CardHeader className="pb-3">
             <CardTitle className="text-base">Masukkan Nomor Tiket / ID Pengajuan</CardTitle>
             <CardDescription className="text-xs">
@@ -127,7 +129,7 @@ export default function TrackApplication() {
                 </div>
               </div>
 
-              <Button type="submit" className="w-full bg-[#2458d6] hover:bg-[#1945b0]" disabled={trackQuery.isFetching}>
+              <Button type="submit" className="h-11 w-full rounded-full bg-navy-900 text-white hover:bg-navy-800" disabled={trackQuery.isFetching}>
                 {trackQuery.isFetching && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 Lacak Status Pengajuan
               </Button>
@@ -145,11 +147,11 @@ export default function TrackApplication() {
         {/* Hasil Pencarian */}
         {app && (
           <div className="space-y-6">
-            <Card className="shadow-sm border-slate-200 overflow-hidden">
-              <div className="bg-slate-900 text-white p-4 flex flex-wrap items-center justify-between gap-2">
+            <Card className="shadow-premium border-border overflow-hidden">
+              <div className="bg-navy-900 text-white p-4 flex flex-wrap items-center justify-between gap-2">
                 <div>
                   <div className="text-xs text-slate-400">Nomor Tiket / Referensi:</div>
-                  <div className="text-lg font-bold text-amber-400">{app.ticketNumber}</div>
+                  <div className="font-serif text-xl text-gold-300">{app.ticketNumber}</div>
                 </div>
                 <div className="text-right">
                   <div className="text-xs text-slate-400">Mitra BPRS:</div>
