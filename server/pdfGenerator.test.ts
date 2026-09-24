@@ -64,7 +64,7 @@ describe("assessment report", () => {
       modelVersion: "ssci-rules-1.1.0",
       confidence: "85",
       recommendationStatus: "generated",
-      recommendationModel: "openai/gpt-5.6-luna",
+      recommendationModel: "openai/gpt-6-luna",
       recommendationPromptVersion: "ssci-narrative-1.0.0",
       assessedBy: 2,
       assessedAt: now,
@@ -75,6 +75,6 @@ describe("assessment report", () => {
     expect(html).not.toContain("<script>customer()");
     expect(html).not.toContain("<script>ai()");
     expect(html).toContain("&lt;script&gt;customer()&lt;/script&gt;");
-    expect(html).toContain("openai/gpt-5.6-luna");
+    expect(html).toContain("openai/gpt-6-luna");
   });
 });

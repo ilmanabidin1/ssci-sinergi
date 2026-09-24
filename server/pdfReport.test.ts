@@ -71,7 +71,7 @@ const assessment = {
   modelVersion: "ssci-rules-1.1.0",
   confidence: "88",
   recommendationStatus: "generated",
-  recommendationModel: "openai/gpt-5.6-luna",
+  recommendationModel: "openai/gpt-6-luna",
   recommendationPromptVersion: "ssci-narrative-1.0.0",
   assessedBy: 2,
   assessedAt: now,

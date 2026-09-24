@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { ENV } from "./_core/env";
 
-export const OPENROUTER_KTP_OCR_MODEL = "openai/gpt-5.6-luna";
+export const OPENROUTER_KTP_OCR_MODEL = "openai/gpt-6-luna";
 export const KTP_OCR_TIMEOUT_MS = 20_000;
 export const KTP_OCR_MAX_BYTES = 5 * 1024 * 1024;
 

@@ -49,7 +49,7 @@ describe("OpenRouter recommendations", () => {
 
     expect(result).toMatchObject({
       status: "generated",
-      model: "openai/gpt-5.6-luna",
+      model: "openai/gpt-6-luna",
       recommendation: "Tinjau sesuai kebijakan BPRS.",
     });
   });

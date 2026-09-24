@@ -376,7 +376,7 @@ export default function AboutSSCI() {
             <p className="text-gray-400 text-xs">LCI = Legal Compliance Index (0–100)</p>
           </div>
           <p className="text-gray-400 text-sm">
-            Skor dihitung secara deterministik menggunakan versi aturan <strong className="text-white">{SSCI_METHODOLOGY_VERSION}</strong>. OpenRouter dengan model <strong className="text-white">openai/gpt-5.6-luna</strong> hanya membantu menyusun narasi rekomendasi; keputusan pembiayaan final tetap menjadi kewenangan BPRS.
+            Skor dihitung secara deterministik menggunakan versi aturan <strong className="text-white">{SSCI_METHODOLOGY_VERSION}</strong>. OpenRouter dengan model <strong className="text-white">openai/gpt-6-luna</strong> hanya membantu menyusun narasi rekomendasi; keputusan pembiayaan final tetap menjadi kewenangan BPRS.
           </p>
         </section>
 

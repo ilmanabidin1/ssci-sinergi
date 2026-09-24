@@ -4,7 +4,7 @@ import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { ENV } from "./_core/env";
 
-export const OPENROUTER_SURVEY_MODEL = "openai/gpt-5.6-luna";
+export const OPENROUTER_SURVEY_MODEL = "openai/gpt-6-luna";
 export const SURVEY_TIMEOUT_MS = 30_000;
 export const MAX_SURVEY_SIZE = 5 * 1024 * 1024;
 export const SURVEY_CONTENT_TYPES = ["image/jpeg", "image/png"] as const;
