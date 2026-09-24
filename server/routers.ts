@@ -19,6 +19,7 @@ import { decodeLogo, LOGO_CONTENT_TYPES, LogoUploadError, storeLogo } from "./lo
 import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
+import { AiInputError, AiProviderError, checkApplicationConsistency, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot } from "./aiAssist";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
 import { calculateMurabahahBreakdown } from "./murabahah";
@@ -47,6 +48,56 @@ const legalDocumentsSchema = z
   .refine(documents => new Set(documents.map(document => document.type)).size === documents.length, {
     message: "Jenis dokumen tidak boleh duplikat",
   });
+
+type ApplicationRecord = NonNullable<Awaited<ReturnType<typeof db.getApplicationById>>>;
+
+function toSnapshot(application: ApplicationRecord): ApplicationSnapshot {
+  return {
+    customerName: application.customerName,
+    customerId: application.customerId,
+    businessName: application.businessName,
+    businessType: application.businessType,
+    businessAge: Number(application.businessAge),
+    address: application.address,
+    monthlyRevenue: Number(application.monthlyRevenue),
+    monthlyExpenses: Number(application.monthlyExpenses),
+    existingDebt: Number(application.existingDebt),
+    collateralValue: Number(application.collateralValue),
+    requestedAmount: Number(application.requestedAmount),
+    financingTenor: Number(application.financingTenor),
+    marginRate: Number(application.marginRate),
+    financingAkad: application.financingAkad || "murabahah",
+    loanPurpose: application.loanPurpose,
+    businessShariaCompliant: application.businessShariaCompliant,
+    shariaComplianceNotes: application.shariaComplianceNotes,
+    legalDocuments: Array.isArray(application.legalDocuments) ? application.legalDocuments.map(d => ({ type: d.type, status: d.status })) : [],
+  };
+}
+
+function policyFor(application: ApplicationRecord) {
+  return evaluateBprsPolicy({
+    requestedAmount: Number(application.requestedAmount),
+    collateralValue: Number(application.collateralValue),
+    monthlyRevenue: Number(application.monthlyRevenue),
+    monthlyExpenses: Number(application.monthlyExpenses),
+    existingDebt: Number(application.existingDebt),
+    tenorMonths: Number(application.financingTenor),
+    marginRate: Number(application.marginRate),
+    isRelatedParty: application.isRelatedParty === "yes",
+    relatedPartyRelation: application.relatedPartyRelation || undefined,
+    isNonIndividual: application.businessType?.toLowerCase().includes("pt") ||
+      application.businessType?.toLowerCase().includes("cv") ||
+      application.businessType?.toLowerCase().includes("badan"),
+  });
+}
+
+async function loadApplicationOrThrow(applicationId: number, organizationId: number) {
+  const application = await db.getApplicationById(applicationId, organizationId);
+  if (!application) throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
+  return application;
+}
+
+const AI_UNAVAILABLE = "Layanan AI sedang tidak tersedia. Coba lagi beberapa saat lagi.";
 
 export const appRouter = router({
   system: systemRouter,
@@ -921,6 +972,68 @@ export const appRouter = router({
             });
             throw new TRPCError({ code: "BAD_GATEWAY", message: "Survey AI service unavailable" });
           }
+          throw error;
+        }
+      }),
+  }),
+  aiAssist: router({
+    extractDocument: makerProcedure
+      .input(documentExtractionInputSchema)
+      .mutation(async ({ input }) => {
+        try {
+          return await extractSupportingDocument(input);
+        } catch (error) {
+          if (error instanceof AiInputError) throw new TRPCError({ code: "BAD_REQUEST", message: error.message });
+          throw new TRPCError({ code: "BAD_GATEWAY", message: AI_UNAVAILABLE });
+        }
+      }),
+
+    checkConsistency: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        return checkApplicationConsistency(toSnapshot(application));
+      }),
+
+    checkSharia: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        try {
+          return await checkShariaConformity(toSnapshot(application));
+        } catch (error) {
+          if (error instanceof AiProviderError) throw new TRPCError({ code: "BAD_GATEWAY", message: AI_UNAVAILABLE });
+          throw error;
+        }
+      }),
+
+    committeeBrief: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
+        const policy = policyFor(application);
+        try {
+          return await generateCommitteeBrief({
+            application: toSnapshot(application),
+            assessment: assessment ? {
+              totalScore: Number(assessment.totalScore),
+              classification: assessment.classification,
+              sustainableFinanceScore: Number(assessment.sustainableFinanceScore),
+              shariaScore: Number(assessment.shariaScore),
+              legalScore: Number(assessment.legalScore),
+              strengths: assessment.strengths,
+              riskFactors: assessment.riskFactors,
+            } : null,
+            policy: {
+              dsrRatio: policy.dsrRatio,
+              isDsrCompliant: policy.isDsrCompliant,
+              approvalAuthority: policy.approvalAuthority.roleTitle,
+              appraisal: policy.appraisalRequirement.label,
+            },
+          });
+        } catch (error) {
+          if (error instanceof AiProviderError) throw new TRPCError({ code: "BAD_GATEWAY", message: AI_UNAVAILABLE });
           throw error;
         }
       }),

@@ -1,3 +1,4 @@
+import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -524,6 +525,10 @@ export default function ApplicationDetail() {
             </CardContent>
           </Card>
         )}
+
+        <div className="mb-6">
+          <AiAssessmentAssistant applicationId={application.id} />
+        </div>
 
          <div className="grid md:grid-cols-2 gap-6">
            <Card className="md:col-span-2">
