@@ -19,7 +19,7 @@ import { decodeLogo, LOGO_CONTENT_TYPES, LogoUploadError, storeLogo } from "./lo
 import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
-import { AiInputError, AiProviderError, checkApplicationConsistency, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot } from "./aiAssist";
+import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot } from "./aiAssist";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
 import { calculateMurabahahBreakdown } from "./murabahah";
@@ -588,6 +588,7 @@ export const appRouter = router({
       .input(z.object({
         applicationId: z.number(),
         notes: z.string().trim().max(2000).optional(),
+        dataCheckAcknowledgement: z.string().trim().max(2000).optional(),
       }))
       .mutation(async ({ input, ctx }) => {
         // Get application
@@ -596,21 +597,37 @@ export const appRouter = router({
           throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
         }
 
+        const snapshot = toSnapshot(application);
+        const ruleIssues = ruleConsistencyIssues(snapshot);
+        const blocking = blockingIssues(ruleIssues);
+        const acknowledgement = input.dataCheckAcknowledgement?.trim() || null;
+        if (blocking.length > 0 && (!acknowledgement || acknowledgement.length < 10)) {
+          throw new TRPCError({
+            code: "PRECONDITION_FAILED",
+            message: `Ada ${blocking.length} temuan pemeriksaan data yang wajib diperbaiki atau dikonfirmasi dengan catatan (minimal 10 karakter) sebelum penilaian.`,
+          });
+        }
+
         // Calculate SSCI score
         const result = calculateSSCI(application);
+        const riskFactors = mergeRiskFactors(result.riskFactors, ruleIssues);
         const policy = await db.getCreditPolicy(ctx.user.organizationId);
         const plafon = calculateRecommendedPlafon(application, policy);
-        const narrative = await generateNarrativeRecommendation({
-          classification: result.classification,
-          totalScore: result.totalScore,
-          sustainableFinanceScore: result.sustainableFinanceScore,
-          shariaScore: result.shariaScore,
-          legalScore: result.legalScore,
-          scoreBreakdown: result.scoreBreakdown,
-          strengths: result.strengths,
-          riskFactors: result.riskFactors,
-          fallbackRecommendation: result.recommendations,
-        });
+        const [narrative, consistency] = await Promise.all([
+          generateNarrativeRecommendation({
+            classification: result.classification,
+            totalScore: result.totalScore,
+            sustainableFinanceScore: result.sustainableFinanceScore,
+            shariaScore: result.shariaScore,
+            legalScore: result.legalScore,
+            scoreBreakdown: result.scoreBreakdown,
+            strengths: result.strengths,
+            riskFactors,
+            fallbackRecommendation: mergeFallbackRecommendation(result.recommendations, ruleIssues),
+          }),
+          checkApplicationConsistency(snapshot),
+        ]);
+        const toFinding = ({ severity, field, message }: { severity: "tinggi" | "sedang" | "rendah"; field: string; message: string }) => ({ severity, field, message });
 
         // Save assessment
         const assessmentId = await db.createAssessment({
@@ -623,7 +640,7 @@ export const appRouter = router({
           classification: result.classification,
           scoreBreakdown: result.scoreBreakdown,
           recommendations: narrative.recommendation,
-          riskFactors: result.riskFactors,
+          riskFactors,
           strengths: result.strengths,
           modelVersion: SSCI_METHODOLOGY_VERSION,
           confidence: result.confidence.toString(),
@@ -635,6 +652,13 @@ export const appRouter = router({
           ltvRatio: plafon.ltvRatio.toString(),
           assessedBy: ctx.user.id,
           notes: input.notes,
+          dataChecks: {
+            ruleIssues: ruleIssues.map(toFinding),
+            aiNotes: consistency.issues.filter(issue => issue.source === "ai").map(toFinding),
+            aiStatus: consistency.aiStatus,
+            acknowledgement: blocking.length > 0 ? acknowledgement : null,
+            checkedAt: new Date().toISOString(),
+          },
         });
 
         try {
@@ -977,6 +1001,14 @@ export const appRouter = router({
       }),
   }),
   aiAssist: router({
+    ruleCheck: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const issues = ruleConsistencyIssues(toSnapshot(application));
+        return { issues, blockingCount: blockingIssues(issues).length };
+      }),
+
     extractDocument: makerProcedure
       .input(documentExtractionInputSchema)
       .mutation(async ({ input }) => {

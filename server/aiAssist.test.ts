@@ -1,7 +1,10 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { ENV } from "./_core/env";
 import {
+  blockingIssues,
   checkApplicationConsistency,
+  mergeFallbackRecommendation,
+  mergeRiskFactors,
   checkShariaConformity,
   compareWithDeclared,
   extractSupportingDocument,
@@ -146,5 +149,27 @@ describe("supporting documents", () => {
     );
     expect(result.monthlyIncome).toBe(9_000_000);
     expect(result.mismatches).toHaveLength(1);
+  });
+});
+
+describe("data checks in the assessment", () => {
+  const issues = ruleConsistencyIssues(app);
+
+  it("only blocks on high and medium findings", () => {
+    expect(blockingIssues(issues).every(i => i.severity !== "rendah")).toBe(true);
+    expect(blockingIssues(ruleConsistencyIssues({ ...app, customerId: "3674210219898204", marginRate: 10, legalDocuments: [] }))).toHaveLength(0);
+  });
+
+  it("adds blocking findings to risk factors and replaces the no-risk text", () => {
+    const merged = mergeRiskFactors("Tidak ada faktor risiko signifikan.", issues);
+    expect(merged.startsWith("Temuan pemeriksaan data:")).toBe(true);
+    expect(merged).toContain("NIK tidak terdiri dari 16 digit");
+    expect(merged).not.toContain("Tidak ada faktor risiko");
+    expect(mergeRiskFactors("Usia bisnis masih muda.", issues)).toMatch(/^Usia bisnis masih muda\. Temuan pemeriksaan data:/);
+    expect(mergeRiskFactors("Usia bisnis masih muda.", [])).toBe("Usia bisnis masih muda.");
+  });
+
+  it("mentions data findings in the rule-based fallback recommendation", () => {
+    expect(mergeFallbackRecommendation("Lanjutkan ke review.", issues)).toContain("temuan pemeriksaan data");
   });
 });

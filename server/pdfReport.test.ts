@@ -114,6 +114,26 @@ describe("generatePdfReport", () => {
     expect(text).toContain("Laporan operasional pendukung analisis");
   });
 
+  it("lists data check findings and the analyst acknowledgement", async () => {
+    const buffer = await generatePdfReport({
+      application,
+      organization,
+      assessment: {
+        ...assessment,
+        dataChecks: {
+          ruleIssues: [{ severity: "sedang", field: "NIK", message: "NIK tidak terdiri dari 16 digit angka." }],
+          aiNotes: [{ severity: "rendah", field: "Jenis usaha", message: "Nama usaha tidak cocok dengan jenis usaha." }],
+          aiStatus: "generated",
+          acknowledgement: "NIK sudah dicek dengan KTP asli.",
+          checkedAt: now.toISOString(),
+        },
+      },
+    });
+    const text = extractPdfText(buffer);
+    expect(text).toContain("NIK tidak terdiri dari 16 digit angka.");
+    expect(text).toContain("Konfirmasi analis: NIK sudah dicek dengan KTP asli.");
+  });
+
   it("works without an organization", async () => {
     const buffer = await generatePdfReport({ application, assessment });
 

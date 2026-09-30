@@ -255,6 +255,20 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
     renderCallout(doc, "Kekuatan", escapeText(assessment.strengths || "-"), C.green, C.greenSoft, ensureSpace);
     renderCallout(doc, "Faktor Risiko", escapeText(assessment.riskFactors || "-"), C.goldDark, C.amberSoft, ensureSpace);
     renderCallout(doc, "Rekomendasi", escapeText(assessment.recommendations), C.navy, "#eef2f8", ensureSpace);
+    const checks = assessment.dataChecks;
+    if (checks) {
+      const lines = [
+        ...checks.ruleIssues.map(i => `[${i.severity.toUpperCase()}] ${i.field}: ${i.message}`),
+        ...checks.aiNotes.map(i => `[CATATAN AI] ${i.field}: ${i.message}`),
+      ];
+      const body = [
+        lines.length ? lines.map(l => `- ${escapeText(l)}`).join("\n") : "Tidak ditemukan ketidaksesuaian data.",
+        checks.acknowledgement ? `\nKonfirmasi analis: ${escapeText(checks.acknowledgement)}` : "",
+        "\nSkor SSCI dihitung dari data yang diisi. Catatan AI tidak memengaruhi skor.",
+      ].join("");
+      const hasBlocking = checks.ruleIssues.some(i => i.severity !== "rendah");
+      renderCallout(doc, "Temuan pemeriksaan data", body, hasBlocking ? C.red : C.green, hasBlocking ? C.redSoft : C.greenSoft, ensureSpace);
+    }
 
     // 05 BPRS policy
     sectionTitle(doc, "05", "KESESUAIAN KEBIJAKAN PEMBIAYAAN BPRS (KPB)", ensureSpace);

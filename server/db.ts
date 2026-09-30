@@ -384,7 +384,12 @@ export async function createAssessment(data: InsertAssessment & { organizationId
       action: "ASSESSMENT_CREATED",
       entityType: "assessment",
       entityId: assessmentId,
-      metadata: { applicationId: data.applicationId, modelVersion: data.modelVersion },
+      metadata: {
+        applicationId: data.applicationId,
+        modelVersion: data.modelVersion,
+        dataCheckIssues: data.dataChecks?.ruleIssues.length ?? 0,
+        dataCheckAcknowledged: Boolean(data.dataChecks?.acknowledgement),
+      },
     });
     return assessmentId;
   });

@@ -491,3 +491,25 @@ export async function generateCommitteeBrief(input: CommitteeBriefInput, options
   });
   return { ...result, model: OPENROUTER_ASSIST_MODEL };
 }
+
+// ---------------------------------------------------------------------------
+// Data checks carried into the assessment record
+// ---------------------------------------------------------------------------
+
+export function blockingIssues(issues: ConsistencyIssue[]): ConsistencyIssue[] {
+  return issues.filter(issue => issue.severity !== "rendah");
+}
+
+export function mergeRiskFactors(riskFactors: string, issues: ConsistencyIssue[]): string {
+  const relevant = blockingIssues(issues);
+  if (relevant.length === 0) return riskFactors;
+  const dataPart = `Temuan pemeriksaan data: ${relevant.map(i => i.message.replace(/\.$/, "")).join("; ")}.`;
+  if (!riskFactors || riskFactors.startsWith("Tidak ada faktor risiko")) return dataPart;
+  return `${riskFactors} ${dataPart}`;
+}
+
+export function mergeFallbackRecommendation(recommendation: string, issues: ConsistencyIssue[]): string {
+  const relevant = blockingIssues(issues);
+  if (relevant.length === 0) return recommendation;
+  return `${recommendation} Skor dihitung dari data yang diisi; terdapat ${relevant.length} temuan pemeriksaan data yang telah dikonfirmasi analis dan wajib diverifikasi sebelum keputusan.`;
+}

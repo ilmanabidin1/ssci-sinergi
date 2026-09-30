@@ -69,7 +69,7 @@ export async function generateNarrativeRecommendation(
           {
             role: "system",
             content:
-              "Anda membantu analis BPRS menyusun narasi rekomendasi SSCI dalam Bahasa Indonesia. Skor, klasifikasi, risiko, dan kekuatan sudah final serta tidak boleh diubah. Jangan menyatakan keputusan persetujuan final. Kembalikan JSON dengan satu properti recommendation.",
+              "Anda membantu analis BPRS menyusun narasi rekomendasi SSCI dalam Bahasa Indonesia. Skor, klasifikasi, risiko, dan kekuatan sudah final serta tidak boleh diubah. Jangan menyatakan keputusan persetujuan final. Jika riskFactors memuat \"Temuan pemeriksaan data\", sebutkan temuan tersebut secara eksplisit dan nyatakan perlu diverifikasi. Kembalikan JSON dengan satu properti recommendation.",
           },
           {
             role: "user",

@@ -222,7 +222,22 @@ export const assessments = mysqlTable("assessments", {
   assessedBy: int("assessedBy").notNull(),
   assessedAt: timestamp("assessedAt").defaultNow().notNull(),
   notes: text("notes"),
+  dataChecks: json("dataChecks").$type<AssessmentDataChecks>(),
 });
+
+export type DataCheckFinding = {
+  severity: "tinggi" | "sedang" | "rendah";
+  field: string;
+  message: string;
+};
+
+export type AssessmentDataChecks = {
+  ruleIssues: DataCheckFinding[];
+  aiNotes: DataCheckFinding[];
+  aiStatus: "generated" | "unavailable";
+  acknowledgement: string | null;
+  checkedAt: string;
+};
 
 export type Assessment = typeof assessments.$inferSelect;
 export type InsertAssessment = typeof assessments.$inferInsert;

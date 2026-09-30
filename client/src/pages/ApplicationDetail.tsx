@@ -1,3 +1,4 @@
+import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChecks";
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -170,6 +171,7 @@ export default function ApplicationDetail() {
   const assessMutation = trpc.applications.assess.useMutation({
     onSuccess: async data => {
       await utils.assessments.getWithApplication.invalidate({ applicationId });
+      await utils.aiAssist.ruleCheck.invalidate({ applicationId });
       if (data.result.recommendationStatus === "rule_fallback") {
         toast.warning("Skor selesai. Narasi AI tidak tersedia; rekomendasi aturan digunakan.");
       } else {
@@ -309,13 +311,11 @@ export default function ApplicationDetail() {
                 </>
               )}
             {!assessment && (
-              <Button
-                onClick={() => assessMutation.mutate({ applicationId })}
-                disabled={assessMutation.isPending}
-            >
-              {assessMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Lakukan Penilaian SSCI
-            </Button>
+              <AssessButtonWithDataCheck
+                applicationId={applicationId}
+                pending={assessMutation.isPending}
+                onAssess={acknowledgement => assessMutation.mutate({ applicationId, dataCheckAcknowledgement: acknowledgement })}
+              />
             )}
             {application.status === "pending" && (user?.role === "maker" || user?.role === "admin") && (
               <Button variant="destructive" onClick={handleCancel} disabled={cancelMutation.isPending}>
@@ -382,6 +382,8 @@ export default function ApplicationDetail() {
                   </div>
                 </div>
               </div>
+
+              <DataChecksPanel dataChecks={assessment.dataChecks} />
 
               <div className="mt-4 p-4 bg-[#eef2f8] rounded-lg">
                 <div className="flex items-start gap-2">

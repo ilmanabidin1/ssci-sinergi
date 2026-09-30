@@ -141,6 +141,13 @@
       "when": 1788799342065,
       "tag": "0019_spooky_sugar_man",
       "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "5",
+      "when": 1790735227323,
+      "tag": "0020_tough_zaran",
+      "breakpoints": true
     }
   ]
 }
