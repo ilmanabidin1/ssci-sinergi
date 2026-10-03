@@ -148,6 +148,13 @@
       "when": 1790735227323,
       "tag": "0020_tough_zaran",
       "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "5",
+      "when": 1791007458741,
+      "tag": "0021_wandering_wiccan",
+      "breakpoints": true
     }
   ]
 }

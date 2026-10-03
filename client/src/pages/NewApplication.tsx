@@ -1,3 +1,4 @@
+import { demoBusiness, demoCustomer, demoMurabahahObject } from "@shared/demoData";
 import { AiDocumentReader } from "@/components/AiDocumentReader";
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -98,69 +99,22 @@ const initial: Values = {
   ],
 };
 
-const demoFirstNames = ["Andi", "Budi", "Citra", "Dewi", "Eko", "Fitri", "Gunawan", "Hendra", "Indah", "Joko", "Kartika", "Lestari", "Mulyadi", "Nurhayati", "Rahmat", "Siti", "Teguh", "Wulan", "Yudi", "Zainal"];
-const demoLastNames = ["Pratama", "Wijaya", "Santoso", "Kurniawan", "Hidayat", "Nugroho", "Saputra", "Maulana", "Rahmawati", "Suryani", "Firmansyah", "Wibowo", "Hakim", "Ramadhani", "Setiawan", "Anggraini", "Prasetyo", "Utami", "Susanti", "Lestari"];
-const demoStreets = ["Jl. Merdeka", "Jl. Sudirman", "Jl. Ahmad Yani", "Jl. Gatot Subroto", "Jl. Diponegoro", "Jl. Soekarno-Hatta", "Jl. Pahlawan", "Jl. Veteran", "Jl. Kebon Kawung", "Jl. Asia Afrika"];
-const demoKecamatan = ["Cibeunying", "Coblong", "Astanaanyar", "Tegallega", "Lengkong", "Cicendo", "Bojongloa", "Kiaracondong", "Batununggal", "Regol"];
-const demoCities = ["Bandung", "Bekasi", "Depok", "Bogor", "Semarang", "Surabaya", "Medan", "Makassar", "Yogyakarta", "Palembang", "Tangerang", "Malang"];
-const demoProvinces = ["Jawa Barat", "Banten", "Jawa Tengah", "Jawa Timur", "DI Yogyakarta", "Sumatera Utara", "Sulawesi Selatan", "Sumatera Selatan"];
-const demoBusinessNames = ["Toko Sembako", "Bengkel Motor", "Warung Makan", "Laundry", "Konveksi", "Toko Elektronik", "Jasa Pengiriman", "Katering", "Toko Pakaian", "Perbengkelan", "Toko Pertanian", "Fotokopi", "Butik", "Toko Bangunan", "Usaha Ayam Potong", "Toko Kelontong"];
-const demoBusinessTypes = ["Perdagangan", "Jasa", "Manufaktur", "Kuliner", "Retail", "Transportasi", "Pertanian"];
-const demoLoanPurposes = ["Modal kerja untuk pengembangan usaha", "Pembelian stok barang dagangan", "Penambahan peralatan usaha", "Perluasan tempat usaha", "Penambahan armada pengiriman", "Pembelian bahan baku produksi", "Renovasi tempat usaha", "Penambahan mesin produksi"];
 const demoShariaNotes = ["Usaha tidak mengandung unsur riba, gharar, atau maysir dan sesuai fatwa DSN-MUI.", "Seluruh transaksi dicatat secara syariah tanpa bunga dan telah dikaji oleh pihak internal."];
 const demoEnvironmental = ["Menggunakan kemasan ramah lingkungan dan mengurangi limbah kemasan.", "Menerapkan pengelolaan limbah dan hemat energi pada operasional harian."];
 const demoSocial = ["Mempekerjakan tenaga kerja dari sekitar lingkungan usaha.", "Memberdayakan masyarakat lokal melalui kemitraan usaha dan pemasok lokal."];
 
 const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
 const randInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
-const nik = () => {
-  const prefix = pick(["3273", "3171", "3271", "3507", "3674", "1271", "1371", "7371", "3402", "3301"]);
-  const date = `${String(randInt(1, 28)).padStart(2, "0")}${String(randInt(1, 12)).padStart(2, "0")}${randInt(1950, 2003)}`;
-  const serial = String(randInt(1, 999999)).padStart(6, "0");
-  return prefix + date + serial;
-};
-const phone = () => `08${String(randInt(100000000, 999999999))}`;
 const roundTo = (value: number, step = 100000) => Math.round(value / step) * step;
 
-const demoCustomer = (): Partial<Values> => {
-  const first = pick(demoFirstNames);
-  const last = pick(demoLastNames);
-  const name = `${first} ${last}`;
-  return {
-    customerName: name,
-    customerId: nik(),
-    phone: phone(),
-    email: `${first.toLowerCase()}.${last.toLowerCase()}${randInt(1, 99)}@gmail.com`,
-    address: `${pick(demoStreets)} No. ${randInt(1, 120)}, Kec. ${pick(demoKecamatan)}, Kota ${pick(demoCities)}, ${pick(demoProvinces)}`,
-  };
-};
-const demoBusiness = (): Partial<Values> => {
-  const revenue = randInt(15, 80) * 1000000;
-  const expenses = roundTo(revenue * randInt(52, 72) / 100, 100000);
-  const installment = randInt(0, 4) * 500000;
-  const requested = roundTo(revenue * randInt(200, 360) / 100, 100000);
-  const collateral = roundTo(requested * randInt(125, 180) / 100, 500000);
-  return {
-    businessName: `${pick(demoBusinessNames)} ${pick(["Sejahtera", "Berkah", "Maju", "Jaya", "Abadi", "Mandiri", "Berseri", "Utama"])}`,
-    businessType: pick(demoBusinessTypes),
-    businessAge: String(randInt(18, 120)),
-    monthlyRevenue: String(revenue),
-    monthlyExpenses: String(expenses),
-    existingDebt: String(installment),
-    collateralValue: String(collateral),
-    requestedAmount: String(requested),
-    financingTenor: String(pick([12, 24, 36, 48])),
-    marginRate: String(pick([8, 10, 11, 12, 13])),
-    loanPurpose: pick(demoLoanPurposes),
-  };
-};
-const demoMurabahah = (): Partial<Values> => {
+const demoMurabahah = (businessName?: string, requestedAmount?: string): Partial<Values> => {
   const type = pick(["standard", "standard", "ultra_mikro", "personal"] as const);
-  const price = roundTo(randInt(10, 50) * 1000000, 100000);
+  const requested = Number(requestedAmount) || 0;
+  const price = requested > 0 ? roundTo(requested * randInt(110, 125) / 100, 100000) : roundTo(randInt(10, 50) * 1000000, 100000);
   return {
     murabahahType: type,
     murabahahSupplierName: pick(["PT Sinar Niaga Sejahtera", "UD Berkah Abadi", "PT Maju Bersama"]),
-    murabahahObject: pick(["Stok sembako dan kebutuhan pokok", "Mesin jahit dan peralatan konveksi", "Barang dagangan elektronik"]),
+    murabahahObject: demoMurabahahObject(businessName),
     murabahahPriceKnown: "yes",
     murabahahMarginDisclosed: "yes",
     murabahahDpsReviewed: "yes",
@@ -393,11 +347,11 @@ export default function NewApplication() {
   useEffect(() => { try { localStorage.setItem(DRAFT_KEY, JSON.stringify({ version: 1, values, step })); } catch {} }, [values, step]);
   const restore = () => { try { const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || ""); if (saved.version === 2) { setValues({ ...initial, ...saved.values }); setStep(Math.min(saved.step || 0, 4)); setHasDraft(false); } } catch { toast.error("Draft tidak dapat dipulihkan"); } };
   const reset = () => { localStorage.removeItem(DRAFT_KEY); setValues(initial); setStep(0); setHasDraft(false); };
-  const getAkadDemo = (akad?: string) => {
+  const getAkadDemo = (akad?: string, businessName?: string, requestedAmount?: string) => {
     if (akad === "mudharabah") return demoMudharabah();
     if (akad === "qardh") return demoQardh();
     if (akad === "multijasa") return demoMultijasa();
-    return demoMurabahah();
+    return demoMurabahah(businessName, requestedAmount);
   };
 
   const fillDemo = (demoStep: number) =>
@@ -410,20 +364,23 @@ export default function NewApplication() {
         : demoStep === 2
         ? demoBusiness()
         : demoStep === 3
-        ? getAkadDemo(current.financingAkad)
+        ? getAkadDemo(current.financingAkad, current.businessName, current.requestedAmount)
         : demoStep === 4
         ? demoLegal()
         : demoEsg()),
     } as Values));
   const fillAllDemo = () =>
-    setValues(current => ({
+    setValues(current => {
+      const business = demoBusiness();
+      return {
       ...current,
       ...demoCustomer(),
-      ...demoBusiness(),
-      ...getAkadDemo(current.financingAkad),
+      ...business,
+      ...getAkadDemo(current.financingAkad, business.businessName, business.requestedAmount),
       ...demoLegal(),
       ...demoEsg(),
-    } as Values));
+    } as Values;
+    });
   const selectKtpFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     setKtpProcessed(false);

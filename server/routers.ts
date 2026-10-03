@@ -19,6 +19,8 @@ import { decodeLogo, LOGO_CONTENT_TYPES, LogoUploadError, storeLogo } from "./lo
 import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
+import { isSameActor, maskNik } from "@shared/privacy";
+import { buildEnrollment, clearLoginFailures, decryptSecret, encryptSecret, generateTotpSecret, isLoginLocked, recordLoginFailure, verifyTotp } from "./twoFactor";
 import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot } from "./aiAssist";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
@@ -97,6 +99,11 @@ async function loadApplicationOrThrow(applicationId: number, organizationId: num
   return application;
 }
 
+function toSafeUser<T extends { passwordHash?: unknown; twoFactorSecret?: unknown; twoFactorLastStep?: unknown }>(user: T) {
+  const { passwordHash: _passwordHash, twoFactorSecret: _secret, twoFactorLastStep: _lastStep, ...safeUser } = user;
+  return safeUser;
+}
+
 const AI_UNAVAILABLE = "Layanan AI sedang tidak tersedia. Coba lagi beberapa saat lagi.";
 
 export const appRouter = router({
@@ -104,19 +111,38 @@ export const appRouter = router({
   auth: router({
     me: publicProcedure.query(({ ctx }) => {
       if (!ctx.user) return null;
-      const { passwordHash: _passwordHash, ...safeUser } = ctx.user;
-      return safeUser;
+      return toSafeUser(ctx.user);
     }),
     login: publicProcedure
       .input(z.object({
         email: z.string().trim().email().max(320),
         password: z.string().min(4).max(200),
+        otp: z.string().trim().max(10).optional(),
       }))
       .mutation(async ({ input, ctx }) => {
-        const user = await db.getUserByEmail(input.email.toLowerCase());
+        const email = input.email.toLowerCase();
+        const limiterKey = `${email}|${ctx.req.ip ?? ""}`;
+        if (isLoginLocked(limiterKey)) {
+          throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Terlalu banyak percobaan gagal. Coba lagi dalam 15 menit." });
+        }
+        const user = await db.getUserByEmail(email);
         if (!user?.passwordHash || !(await verifyPassword(input.password, user.passwordHash))) {
+          recordLoginFailure(limiterKey);
           throw new TRPCError({ code: "UNAUTHORIZED", message: "Email atau password salah" });
         }
+        if (!user.active) {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Akun ini telah dinonaktifkan. Hubungi administrator BPRS." });
+        }
+        if (user.twoFactorEnabled && user.twoFactorSecret) {
+          if (!input.otp) return { success: false, requiresTwoFactor: true } as const;
+          const step = verifyTotp(decryptSecret(user.twoFactorSecret), input.otp, { lastUsedStep: user.twoFactorLastStep });
+          if (step === null) {
+            recordLoginFailure(limiterKey);
+            throw new TRPCError({ code: "UNAUTHORIZED", message: "Kode autentikasi salah atau kedaluwarsa" });
+          }
+          await db.updateTwoFactor(user.id, { twoFactorLastStep: step });
+        }
+        clearLoginFailures(limiterKey);
         const organization = await db.getOrganizationById(user.organizationId);
         if (organization?.registrationStatus === "pending") {
           throw new TRPCError({ code: "FORBIDDEN", message: "Pendaftaran BPRS masih menunggu verifikasi" });
@@ -127,6 +153,47 @@ export const appRouter = router({
           name: user.name || user.email || "Pengguna SSCI",
         });
         ctx.res.cookie(COOKIE_NAME, token, getSessionCookieOptions(ctx.req));
+        return { success: true, requiresTwoFactor: false } as const;
+      }),
+    setupTwoFactor: protectedProcedure
+      .mutation(async ({ ctx }) => {
+        if (ctx.user.twoFactorEnabled) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Autentikasi dua faktor sudah aktif" });
+        }
+        const secret = generateTotpSecret();
+        await db.updateTwoFactor(ctx.user.id, { twoFactorSecret: encryptSecret(secret), twoFactorEnabled: false, twoFactorLastStep: null });
+        return buildEnrollment(secret, ctx.user.email || ctx.user.name || `user-${ctx.user.id}`);
+      }),
+    enableTwoFactor: protectedProcedure
+      .input(z.object({ code: z.string().trim().min(6).max(10) }))
+      .mutation(async ({ input, ctx }) => {
+        const user = await db.getUserById(ctx.user.id);
+        if (!user?.twoFactorSecret) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Mulai pengaturan 2FA terlebih dahulu" });
+        }
+        const step = verifyTotp(decryptSecret(user.twoFactorSecret), input.code);
+        if (step === null) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Kode tidak sesuai. Pastikan jam ponsel sudah benar lalu coba lagi." });
+        }
+        await db.updateTwoFactor(user.id, { twoFactorEnabled: true, twoFactorLastStep: step });
+        await db.recordAuditEvent({ organizationId: user.organizationId, actorUserId: user.id, action: "TWO_FACTOR_ENABLED", entityType: "user", entityId: user.id });
+        return { success: true };
+      }),
+    disableTwoFactor: protectedProcedure
+      .input(z.object({ password: z.string().min(4).max(200), code: z.string().trim().min(6).max(10) }))
+      .mutation(async ({ input, ctx }) => {
+        const user = await db.getUserById(ctx.user.id);
+        if (!user?.twoFactorEnabled || !user.twoFactorSecret) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Autentikasi dua faktor belum aktif" });
+        }
+        if (!user.passwordHash || !(await verifyPassword(input.password, user.passwordHash))) {
+          throw new TRPCError({ code: "UNAUTHORIZED", message: "Password saat ini tidak sesuai" });
+        }
+        if (verifyTotp(decryptSecret(user.twoFactorSecret), input.code, { lastUsedStep: user.twoFactorLastStep }) === null) {
+          throw new TRPCError({ code: "UNAUTHORIZED", message: "Kode autentikasi salah atau kedaluwarsa" });
+        }
+        await db.updateTwoFactor(user.id, { twoFactorSecret: null, twoFactorEnabled: false, twoFactorLastStep: null });
+        await db.recordAuditEvent({ organizationId: user.organizationId, actorUserId: user.id, action: "TWO_FACTOR_DISABLED", entityType: "user", entityId: user.id });
         return { success: true };
       }),
     registerBprs: publicProcedure
@@ -277,7 +344,7 @@ export const appRouter = router({
     listUsers: adminProcedure
       .query(async ({ ctx }) => {
         const users = await db.listOrganizationUsers(ctx.user.organizationId);
-        return users.map(({ passwordHash: _passwordHash, ...safeUser }) => safeUser);
+        return users.map(toSafeUser);
       }),
     setUserActive: adminProcedure
       .input(z.object({
@@ -289,6 +356,17 @@ export const appRouter = router({
           throw new TRPCError({ code: "BAD_REQUEST", message: "Tidak dapat menonaktifkan akun sendiri" });
         }
         await db.setUserActive(ctx.user.organizationId, input.userId, input.active);
+        return { success: true };
+      }),
+    resetUserTwoFactor: adminProcedure
+      .input(z.object({ userId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const target = await db.getUserById(input.userId);
+        if (!target || target.organizationId !== ctx.user.organizationId) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengguna tidak ditemukan" });
+        }
+        await db.updateTwoFactor(target.id, { twoFactorSecret: null, twoFactorEnabled: false, twoFactorLastStep: null });
+        await db.recordAuditEvent({ organizationId: ctx.user.organizationId, actorUserId: ctx.user.id, action: "TWO_FACTOR_RESET", entityType: "user", entityId: target.id });
         return { success: true };
       }),
     getCreditPolicy: protectedProcedure
@@ -560,22 +638,29 @@ export const appRouter = router({
         const users = await db.listOrganizationUsers(ctx.user.organizationId);
         return users
           .filter(user => user.role === "maker" || user.role === "checker" || user.role === "admin")
-          .map(({ passwordHash: _passwordHash, ...safeUser }) => safeUser);
+          .map(toSafeUser);
       }),
 
     slaMetrics: protectedProcedure
       .query(({ ctx }) => db.getSlaMetrics(ctx.user.organizationId)),
 
-    bulkExport: protectedProcedure
+    bulkExport: checkerProcedure
       .input(z.object({
         fromDate: z.date().optional(),
         toDate: z.date().optional(),
       }).optional())
-      .query(({ input, ctx }) => db.getBulkExport(ctx.user.organizationId, input)),
+      .query(async ({ input, ctx }) => {
+        const rows = await db.getBulkExport(ctx.user.organizationId, input);
+        await db.recordAuditEvent({ organizationId: ctx.user.organizationId, actorUserId: ctx.user.id, action: "BULK_EXPORTED", entityType: "organization", entityId: ctx.user.organizationId, metadata: { rows: rows.length } });
+        return rows;
+      }),
 
     customerMaster: protectedProcedure
       .input(z.object({ search: z.string().trim().max(200).optional() }).optional())
-      .query(({ input, ctx }) => db.listCustomerMaster(ctx.user.organizationId, input?.search)),
+      .query(async ({ input, ctx }) => {
+        const rows = await db.listCustomerMaster(ctx.user.organizationId, input?.search);
+        return rows.map(row => ({ ...row, customerId: maskNik(row.customerId) }));
+      }),
 
     dashboardTrend: protectedProcedure
       .query(({ ctx }) => db.getDashboardTrend(ctx.user.organizationId)),
@@ -696,9 +781,19 @@ export const appRouter = router({
         return db.searchCustomerHistory(ctx.user.organizationId, input.query);
       }),
 
-    exportSlik: protectedProcedure
+    exportSlik: checkerProcedure
       .query(async ({ ctx }) => {
-        return db.getSlikExport(ctx.user.organizationId);
+        const rows = await db.getSlikExport(ctx.user.organizationId);
+        await db.recordAuditEvent({ organizationId: ctx.user.organizationId, actorUserId: ctx.user.id, action: "SLIK_EXPORTED", entityType: "organization", entityId: ctx.user.organizationId, metadata: { rows: rows.length } });
+        return rows;
+      }),
+
+    revealNik: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        await db.recordAuditEvent({ organizationId: ctx.user.organizationId, actorUserId: ctx.user.id, action: "NIK_REVEALED", entityType: "application", entityId: application.id });
+        return { customerId: application.customerId };
       }),
 
     cancel: makerProcedure
@@ -723,6 +818,14 @@ export const appRouter = router({
         notes: z.string().trim().min(1).max(2000),
       }))
       .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
+        if (isSameActor(ctx.user.id, application.submittedBy, assessment?.assessedBy)) {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Pemisahan maker-checker: Anda membuat atau menilai pengajuan ini, sehingga keputusan harus diambil pengguna lain.",
+          });
+        }
         await db.decideApplication({
           applicationId: input.applicationId,
           organizationId: ctx.user.organizationId,
@@ -834,7 +937,7 @@ export const appRouter = router({
         });
 
         return {
-          application,
+          application: { ...application, customerId: maskNik(application.customerId) },
           assessment,
           bprsEvaluation,
         };

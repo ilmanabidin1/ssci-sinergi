@@ -168,6 +168,12 @@ export default function ApplicationDetail() {
     verifyMutation.mutate({ id, status, reason });
   };
 
+  const [revealedNik, setRevealedNik] = useState<string | null>(null);
+  const revealNikMutation = trpc.applications.revealNik.useMutation({
+    onSuccess: data => setRevealedNik(data.customerId),
+    onError: error => toast.error(`NIK tidak dapat ditampilkan: ${error.message}`),
+  });
+
   const assessMutation = trpc.applications.assess.useMutation({
     onSuccess: async data => {
       await utils.assessments.getWithApplication.invalidate({ applicationId });
@@ -254,6 +260,7 @@ export default function ApplicationDetail() {
 
   const { application, assessment } = data;
   const canVerifyDocuments = user?.role === "checker" || user?.role === "admin";
+  const isOwnWork = !!user && (application.submittedBy === user.id || assessment?.assessedBy === user.id);
   const appLegalDocs = Array.isArray(data?.application?.legalDocuments)
     ? (data.application.legalDocuments as Array<{ type: string }>).map(d => d.type)
     : [];
@@ -293,7 +300,13 @@ export default function ApplicationDetail() {
               </Button>
             )}
             {assessment && application.status === "assessed" &&
-              (user?.role === "checker" || user?.role === "admin") && (
+              (user?.role === "checker" || user?.role === "admin") && isOwnWork && (
+                <span className="max-w-xs self-center text-xs text-muted-foreground">
+                  Anda membuat atau menilai pengajuan ini. Keputusan harus diambil checker lain (pemisahan maker-checker).
+                </span>
+              )}
+            {assessment && application.status === "assessed" &&
+              (user?.role === "checker" || user?.role === "admin") && !isOwnWork && (
                 <>
                   <Button
                     variant="destructive"
@@ -679,7 +692,19 @@ export default function ApplicationDetail() {
               <CardTitle>Informasi Nasabah</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm">
-              <div><span className="font-semibold">NIK:</span> {application.customerId}</div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span><span className="font-semibold">NIK:</span> {revealedNik ?? application.customerId}</span>
+                {!revealedNik && (
+                  <button
+                    type="button"
+                    className="text-xs font-semibold text-royal-600 hover:underline disabled:opacity-50"
+                    disabled={revealNikMutation.isPending}
+                    onClick={() => revealNikMutation.mutate({ applicationId })}
+                  >
+                    Tampilkan (tercatat di audit)
+                  </button>
+                )}
+              </div>
               <div><span className="font-semibold">Telepon:</span> {application.phone}</div>
               <div><span className="font-semibold">Email:</span> {application.email || "-"}</div>
               <div><span className="font-semibold">Alamat:</span> {application.address}</div>

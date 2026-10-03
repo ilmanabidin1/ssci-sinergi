@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
-import { ChevronDown, FlaskConical, Loader2 } from "lucide-react";
+import { ChevronDown, FlaskConical, Loader2, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { toast } from "sonner";
@@ -18,9 +18,15 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showDemo, setShowDemo] = useState(false);
+  const [needsOtp, setNeedsOtp] = useState(false);
+  const [otp, setOtp] = useState("");
   const utils = trpc.useUtils();
   const login = trpc.auth.login.useMutation({
-    onSuccess: async () => {
+    onSuccess: async data => {
+      if (data.requiresTwoFactor) {
+        setNeedsOtp(true);
+        return;
+      }
       await utils.auth.me.invalidate();
       setLocation("/dashboard");
     },
@@ -37,9 +43,37 @@ export default function Login() {
         className="space-y-5"
         onSubmit={event => {
           event.preventDefault();
-          login.mutate({ email, password });
+          login.mutate({ email, password, ...(needsOtp ? { otp } : {}) });
         }}
       >
+        {needsOtp ? (
+          <div className="space-y-3">
+            <div className="flex items-start gap-3 rounded-xl border border-gold-400/40 bg-gold-50 p-4 text-sm text-navy-900">
+              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-gold-500" />
+              <span>Akun ini memakai autentikasi dua faktor. Masukkan kode 6 digit dari aplikasi authenticator Anda.</span>
+            </div>
+            <Label htmlFor="otp">Kode autentikasi</Label>
+            <Input
+              id="otp"
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              autoFocus
+              maxLength={6}
+              value={otp}
+              onChange={e => setOtp(e.target.value.replace(/\D/g, ""))}
+              className="h-12 bg-white text-center font-mono text-xl tracking-[.4em]"
+              required
+            />
+            <button
+              type="button"
+              className="text-xs font-semibold text-muted-foreground hover:text-navy-900"
+              onClick={() => { setNeedsOtp(false); setOtp(""); }}
+            >
+              Kembali ke email dan password
+            </button>
+          </div>
+        ) : (
+          <>
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input
@@ -65,13 +99,15 @@ export default function Login() {
             className="h-11 bg-white"
           />
         </div>
+          </>
+        )}
         <Button
           className="h-11 w-full rounded-full bg-navy-900 text-white shadow-premium hover:bg-navy-800"
           type="submit"
           disabled={login.isPending}
         >
           {login.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          Masuk
+          {needsOtp ? "Verifikasi dan masuk" : "Masuk"}
         </Button>
       </form>
 

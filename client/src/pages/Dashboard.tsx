@@ -544,6 +544,8 @@ export default function Dashboard() {
                 <p className="mt-1 text-sm text-slate-500">Prioritas pekerjaan assessment dan keputusan.</p>
               </div>
               <div className="flex w-full flex-col flex-wrap gap-2 sm:w-auto sm:flex-row sm:items-center">
+                {(user?.role === "checker" || user?.role === "admin") && (
+                  <>
                 <Button variant="outline" onClick={handleExportSlik} disabled={exportSlikQuery.isFetching}>
                   {exportSlikQuery.isFetching ? (
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -560,6 +562,8 @@ export default function Dashboard() {
                   )}
                   Export Semua
                 </Button>
+                  </>
+                )}
                 <Select value={status} onValueChange={(value) => setStatus(value as Status)}>
                   <SelectTrigger className="w-full sm:w-56" aria-label="Filter status">
                     <SelectValue placeholder="Semua status" />

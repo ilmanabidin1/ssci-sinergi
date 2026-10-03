@@ -1,3 +1,4 @@
+import { isSameActor } from "@shared/privacy";
 import { eq, desc, asc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification, surveyPhotos, InsertSurveyPhoto } from "../drizzle/schema";
@@ -506,6 +507,9 @@ export async function decideApplication(input: {
 
     if (!application[0] || application[0].status !== "assessed" || !assessment[0]) {
       throw new Error("Aplikasi belum dinilai atau sudah diputuskan");
+    }
+    if (isSameActor(input.checkerId, application[0].submittedBy, assessment[0].assessedBy)) {
+      throw new Error("Pemisahan maker-checker: pembuat atau penilai pengajuan tidak boleh memutuskan pengajuan yang sama");
     }
     const updateResult = await tx
       .update(applications)
@@ -1346,4 +1350,30 @@ export async function updateSurveyAnalysis(id: number, organizationId: number, d
       ...(data.analyzedAt !== undefined ? { analyzedAt: data.analyzedAt } : {}),
     })
     .where(and(eq(surveyPhotos.id, id), eq(surveyPhotos.organizationId, organizationId)));
+}
+
+export async function recordAuditEvent(input: {
+  organizationId: number;
+  actorUserId: number;
+  action: string;
+  entityType: string;
+  entityId: number;
+  metadata?: Record<string, string | number | boolean | null>;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(auditLogs).values(input);
+}
+
+export async function updateTwoFactor(userId: number, data: { twoFactorSecret?: string | null; twoFactorEnabled?: boolean; twoFactorLastStep?: number | null }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(users)
+    .set({
+      ...(data.twoFactorSecret !== undefined ? { twoFactorSecret: data.twoFactorSecret } : {}),
+      ...(data.twoFactorEnabled !== undefined ? { twoFactorEnabled: data.twoFactorEnabled ? 1 : 0 } : {}),
+      ...(data.twoFactorLastStep !== undefined ? { twoFactorLastStep: data.twoFactorLastStep } : {}),
+      updatedAt: new Date(),
+    })
+    .where(eq(users.id, userId));
 }

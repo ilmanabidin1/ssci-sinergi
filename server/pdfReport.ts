@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Application, Assessment, Organization } from "../drizzle/schema";
 import { evaluateBprsPolicy } from "@shared/bprsPolicy";
+import { maskNik } from "@shared/privacy";
 
 export interface PdfReportData {
   application: Application;
@@ -197,7 +198,7 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
     sectionTitle(doc, "01", "INFORMASI NASABAH", ensureSpace);
     renderGrid(doc, [
       ["Nama lengkap", escapeText(application.customerName)],
-      ["NIK / ID nasabah", escapeText(application.customerId)],
+      ["NIK / ID nasabah", escapeText(maskNik(application.customerId))],
       ["Nama usaha", escapeText(application.businessName)],
       ["Jenis usaha", escapeText(application.businessType)],
       ["Telepon", escapeText(application.phone)],

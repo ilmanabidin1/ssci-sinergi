@@ -58,6 +58,14 @@ export default function Team() {
     onError: error => toast.error(`Gagal memperbarui status: ${error.message}`),
   });
 
+  const resetTwoFactor = trpc.organization.resetUserTwoFactor.useMutation({
+    onSuccess: async () => {
+      await utils.organization.listUsers.invalidate();
+      toast.success("2FA anggota tim berhasil direset. Anggota perlu mengatur ulang dari halaman Pengaturan.");
+    },
+    onError: error => toast.error(`Gagal mereset 2FA: ${error.message}`),
+  });
+
   const handleCreate = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     createUser.mutate({
@@ -220,6 +228,11 @@ export default function Team() {
                           ) : (
                             <Badge variant="outline">Nonaktif</Badge>
                           )}
+                          {entry.twoFactorEnabled === 1 ? (
+                            <Badge className="bg-[#e1e8f4] text-navy-900">2FA aktif</Badge>
+                          ) : (
+                            <Badge variant="outline" className="text-amber-700">Tanpa 2FA</Badge>
+                          )}
                         </div>
                         <p className="mt-1 truncate text-sm text-slate-500">{entry.email}</p>
                         <div className="mt-1 flex flex-wrap gap-x-4 gap-y-0.5 text-xs text-slate-500">
@@ -228,6 +241,20 @@ export default function Team() {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
+                        {entry.twoFactorEnabled === 1 && entry.id !== user?.id && (
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            disabled={resetTwoFactor.isPending}
+                            onClick={() => {
+                              if (window.confirm(`Reset 2FA untuk ${entry.name}? Gunakan hanya jika anggota kehilangan akses ke aplikasi authenticator.`)) {
+                                resetTwoFactor.mutate({ userId: entry.id });
+                              }
+                            }}
+                          >
+                            Reset 2FA
+                          </Button>
+                        )}
                         <span className="text-sm text-slate-600">
                           {entry.active === 1 ? "Aktif" : "Nonaktif"}
                         </span>

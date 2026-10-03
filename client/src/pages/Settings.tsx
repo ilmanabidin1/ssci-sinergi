@@ -1,3 +1,4 @@
+import { TwoFactorSettings } from "@/components/TwoFactorSettings";
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -409,6 +410,8 @@ export default function Settings() {
             </form>
           </CardContent>
         </Card>
+
+        <TwoFactorSettings />
 
         <Card className="border-border shadow-premium">
           <CardHeader>
