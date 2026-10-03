@@ -226,6 +226,12 @@ export const assessments = mysqlTable("assessments", {
   assessedAt: timestamp("assessedAt").defaultNow().notNull(),
   notes: text("notes"),
   dataChecks: json("dataChecks").$type<AssessmentDataChecks>(),
+
+  // Human review: checker may override the classification with a written reason.
+  overrideClassification: mysqlEnum("overrideClassification", ["Sangat Layak", "Layak", "Perlu Pengawasan", "Tidak Layak"]),
+  overrideReason: text("overrideReason"),
+  overriddenBy: int("overriddenBy"),
+  overriddenAt: timestamp("overriddenAt"),
 });
 
 export type DataCheckFinding = {

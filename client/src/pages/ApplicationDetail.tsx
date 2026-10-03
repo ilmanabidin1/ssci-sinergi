@@ -1,3 +1,4 @@
+import { OverridePanel, SensitivityPanel } from "@/components/HumanReview";
 import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChecks";
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
 import { AppHeader } from "@/components/AppHeader";
@@ -346,7 +347,10 @@ export default function ApplicationDetail() {
                    <CardTitle className="text-2xl">Hasil Penilaian Berbasis Aturan SSCI</CardTitle>
                    <CardDescription>Rekomendasi pendukung, bukan keputusan pembiayaan final</CardDescription>
                 </div>
-                {getClassificationBadge(assessment.classification)}
+                <div className="flex flex-col items-end gap-1">
+                  {getClassificationBadge(assessment.overrideClassification ?? assessment.classification)}
+                  {assessment.overrideClassification && <span className="text-[11px] text-muted-foreground">Ditinjau checker (sistem: {assessment.classification})</span>}
+                </div>
               </div>
             </CardHeader>
             <CardContent>
@@ -539,6 +543,26 @@ export default function ApplicationDetail() {
               </div>
             </CardContent>
           </Card>
+        )}
+
+        {assessment && (
+          <div className="mb-6 grid gap-6">
+            <OverridePanel
+              applicationId={application.id}
+              assessment={assessment}
+              canReview={application.status === "assessed" && (user?.role === "checker" || user?.role === "admin") && !isOwnWork}
+              blockedReason={
+                application.status !== "assessed"
+                  ? "Peninjauan hanya dapat dilakukan setelah penilaian dan sebelum keputusan."
+                  : isOwnWork
+                    ? "Anda membuat atau menilai pengajuan ini, sehingga peninjauan harus dilakukan checker lain."
+                    : user?.role === "maker"
+                      ? "Peninjauan dilakukan oleh checker atau admin."
+                      : undefined
+              }
+            />
+            <SensitivityPanel applicationId={application.id} />
+          </div>
         )}
 
         <div className="mb-6">

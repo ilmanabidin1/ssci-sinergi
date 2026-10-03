@@ -1377,3 +1377,22 @@ export async function updateTwoFactor(userId: number, data: { twoFactorSecret?: 
     })
     .where(eq(users.id, userId));
 }
+
+export async function setAssessmentOverride(input: {
+  assessmentId: number;
+  organizationId: number;
+  classification: "Sangat Layak" | "Layak" | "Perlu Pengawasan" | "Tidak Layak" | null;
+  reason: string | null;
+  actorUserId: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(assessments)
+    .set({
+      overrideClassification: input.classification,
+      overrideReason: input.reason,
+      overriddenBy: input.classification ? input.actorUserId : null,
+      overriddenAt: input.classification ? new Date() : null,
+    })
+    .where(and(eq(assessments.id, input.assessmentId), eq(assessments.organizationId, input.organizationId)));
+}

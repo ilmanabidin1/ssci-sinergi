@@ -20,6 +20,7 @@ import { sdk } from "./_core/sdk";
 import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
 import { isSameActor, maskNik } from "@shared/privacy";
+import { runSensitivity } from "./sensitivity";
 import { buildEnrollment, clearLoginFailures, decryptSecret, encryptSecret, generateTotpSecret, isLoginLocked, recordLoginFailure, verifyTotp } from "./twoFactor";
 import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot } from "./aiAssist";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
@@ -786,6 +787,63 @@ export const appRouter = router({
         const rows = await db.getSlikExport(ctx.user.organizationId);
         await db.recordAuditEvent({ organizationId: ctx.user.organizationId, actorUserId: ctx.user.id, action: "SLIK_EXPORTED", entityType: "organization", entityId: ctx.user.organizationId, metadata: { rows: rows.length } });
         return rows;
+      }),
+
+    sensitivity: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        try {
+          return runSensitivity(application);
+        } catch (error) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: error instanceof Error ? error.message : "Uji sensitivitas tidak dapat dijalankan" });
+        }
+      }),
+
+    overrideClassification: checkerProcedure
+      .input(z.object({
+        applicationId: z.number().int().positive(),
+        classification: z.enum(["Sangat Layak", "Layak", "Perlu Pengawasan", "Tidak Layak"]).nullable(),
+        reason: z.string().trim().max(2000),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
+        if (!assessment || application.status !== "assessed") {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Peninjauan hanya dapat dilakukan setelah penilaian dan sebelum keputusan." });
+        }
+        if (isSameActor(ctx.user.id, application.submittedBy, assessment.assessedBy)) {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Pemisahan maker-checker: peninjauan harus dilakukan pengguna lain." });
+        }
+        if (input.classification === assessment.classification) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Klasifikasi hasil peninjauan sama dengan klasifikasi sistem." });
+        }
+        if (input.reason.length < 20) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Alasan peninjauan wajib diisi minimal 20 karakter." });
+        }
+        await db.setAssessmentOverride({
+          assessmentId: assessment.id,
+          organizationId: ctx.user.organizationId,
+          classification: input.classification,
+          reason: input.classification ? input.reason : null,
+          actorUserId: ctx.user.id,
+        });
+        await db.recordAuditEvent({
+          organizationId: ctx.user.organizationId,
+          actorUserId: ctx.user.id,
+          action: input.classification ? "CLASSIFICATION_OVERRIDDEN" : "CLASSIFICATION_OVERRIDE_CLEARED",
+          entityType: "assessment",
+          entityId: assessment.id,
+          metadata: {
+            applicationId: application.id,
+            systemClassification: assessment.classification,
+            systemScore: Number(assessment.totalScore),
+            previousOverride: assessment.overrideClassification ?? null,
+            newOverride: input.classification,
+            reason: input.reason.slice(0, 250),
+          },
+        });
+        return { success: true };
       }),
 
     revealNik: protectedProcedure

@@ -256,6 +256,16 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
     renderCallout(doc, "Kekuatan", escapeText(assessment.strengths || "-"), C.green, C.greenSoft, ensureSpace);
     renderCallout(doc, "Faktor Risiko", escapeText(assessment.riskFactors || "-"), C.goldDark, C.amberSoft, ensureSpace);
     renderCallout(doc, "Rekomendasi", escapeText(assessment.recommendations), C.navy, "#eef2f8", ensureSpace);
+    if (assessment.overrideClassification) {
+      renderCallout(
+        doc,
+        "Hasil peninjauan pejabat berwenang",
+        `Klasifikasi setelah peninjauan: ${assessment.overrideClassification} (klasifikasi sistem: ${assessment.classification}, skor ${Number(assessment.totalScore).toFixed(2)}).\nAlasan: ${escapeText(assessment.overrideReason || "-")}${assessment.overriddenAt ? `\nTanggal peninjauan: ${formatIdDate(assessment.overriddenAt)}` : ""}`,
+        C.goldDark,
+        C.goldSoft,
+        ensureSpace,
+      );
+    }
     const checks = assessment.dataChecks;
     if (checks) {
       const lines = [

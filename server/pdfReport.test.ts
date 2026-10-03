@@ -134,6 +134,17 @@ describe("generatePdfReport", () => {
     expect(text).toContain("Konfirmasi analis: NIK sudah dicek dengan KTP asli.");
   });
 
+  it("shows the checker override next to the system classification", async () => {
+    const buffer = await generatePdfReport({
+      application,
+      organization,
+      assessment: { ...assessment, overrideClassification: "Layak", overrideReason: "Pendapatan musiman tidak tercermin dalam data tiga bulan.", overriddenBy: 3, overriddenAt: now },
+    });
+    const text = extractPdfText(buffer);
+    expect(text).toContain("Klasifikasi setelah peninjauan: Layak");
+    expect(text).toContain("Pendapatan musiman tidak tercermin");
+  });
+
   it("works without an organization", async () => {
     const buffer = await generatePdfReport({ application, assessment });
 
