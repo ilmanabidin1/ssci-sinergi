@@ -12,6 +12,11 @@ export const ENV = {
     process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1",
   pilotAdminEmail: process.env.PILOT_ADMIN_EMAIL ?? "",
   pilotAdminPassword: process.env.PILOT_ADMIN_PASSWORD ?? "",
+  enforceTwoFactor: process.env.ENFORCE_TWO_FACTOR !== "false",
+  superAdminEmails: (process.env.SUPERADMIN_EMAILS || process.env.PILOT_ADMIN_EMAIL || "")
+    .split(",")
+    .map(email => email.trim().toLowerCase())
+    .filter(Boolean),
 };
 
 export function validateRuntimeEnvironment() {

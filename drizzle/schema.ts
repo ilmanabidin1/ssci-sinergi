@@ -104,6 +104,8 @@ export const applications = mysqlTable("applications", {
   multijasaDpsReviewed: mysqlEnum("multijasaDpsReviewed", ["yes", "no"]).default("yes"),
   multijasaTaazirToWelfare: mysqlEnum("multijasaTaazirToWelfare", ["yes", "no"]).default("yes"),
   multijasaNotes: text("multijasaNotes"),
+  financialDataSource: mysqlEnum("financialDataSource", ["laporan_keuangan", "omzet_harian", "mutasi_rekening", "dokumen_ai"]),
+  financialDataNote: text("financialDataNote"),
 
   // Murabahah Akad Checklist (OJK Pedoman Produk Murabahah & DSN-MUI compliance)
   murabahahType: mysqlEnum("murabahahType", ["standard", "ultra_mikro", "personal"]),

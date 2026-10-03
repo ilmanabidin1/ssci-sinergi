@@ -1,0 +1,2 @@
+ALTER TABLE `applications` ADD `financialDataSource` enum('laporan_keuangan','omzet_harian','mutasi_rekening','dokumen_ai');--> statement-breakpoint
+ALTER TABLE `applications` ADD `financialDataNote` text;

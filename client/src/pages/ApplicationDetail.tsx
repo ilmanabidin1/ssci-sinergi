@@ -1,5 +1,5 @@
 import { CustomerRequestsPanel } from "@/components/CustomerRequestsPanel";
-import { OverridePanel, SensitivityPanel } from "@/components/HumanReview";
+import { ExitGatePanel, OverridePanel, SensitivityPanel } from "@/components/HumanReview";
 import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChecks";
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
 import { AppHeader } from "@/components/AppHeader";
@@ -552,6 +552,7 @@ export default function ApplicationDetail() {
 
         {assessment && (
           <div className="mb-6 grid gap-6">
+            {application.status === "assessed" && <ExitGatePanel applicationId={application.id} />}
             <OverridePanel
               applicationId={application.id}
               assessment={assessment}
@@ -756,6 +757,11 @@ export default function ApplicationDetail() {
               <CardTitle>Data Keuangan</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm">
+              {application.financialDataNote && (
+                <div className="rounded-lg bg-ivory p-2 text-xs text-muted-foreground">
+                  <span className="font-semibold text-navy-900">Sumber angka: </span>{application.financialDataNote}
+                </div>
+              )}
               <div><span className="font-semibold">Pendapatan:</span> Rp {Number(application.monthlyRevenue).toLocaleString()}</div>
               <div><span className="font-semibold">Pengeluaran:</span> Rp {Number(application.monthlyExpenses).toLocaleString()}</div>
                <div><span className="font-semibold">Angsuran existing/bulan:</span> Rp {Number(application.existingDebt).toLocaleString("id-ID")}</div>

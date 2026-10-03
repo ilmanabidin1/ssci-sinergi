@@ -1,7 +1,7 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { adminProcedure, checkerProcedure, makerProcedure, publicProcedure, protectedProcedure, router } from "./_core/trpc";
+import { adminProcedure, checkerProcedure, isSuperAdmin, makerProcedure, needsTwoFactorSetup, publicProcedure, protectedProcedure, router, superAdminProcedure } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
 import { calculateRecommendedPlafon, calculateSSCI } from "./scoring";
@@ -21,6 +21,7 @@ import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
 import { isSameActor, maskNik } from "@shared/privacy";
 import { runSensitivity } from "./sensitivity";
+import { determineReviewTrack, evaluateExitGate } from "@shared/reviewTrack";
 import { buildEnrollment, clearLoginFailures, decryptSecret, encryptSecret, generateTotpSecret, isLoginLocked, recordLoginFailure, verifyTotp } from "./twoFactor";
 import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot } from "./aiAssist";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
@@ -113,6 +114,20 @@ function parseTicket(ticketOrId: string): number {
   return id;
 }
 
+async function computeExitGate(application: ApplicationRecord, organizationId: number) {
+  const [documents, photos, requests] = await Promise.all([
+    db.getDocumentFiles(application.id, organizationId),
+    db.listSurveyPhotos(organizationId, application.id),
+    db.listCustomerRequests(application.id, organizationId),
+  ]);
+  return evaluateExitGate({
+    track: determineReviewTrack(application),
+    documents,
+    surveyPhotoCount: photos.length,
+    openCustomerRequests: requests.filter(r => r.status === "open").length,
+  });
+}
+
 const AI_UNAVAILABLE = "Layanan AI sedang tidak tersedia. Coba lagi beberapa saat lagi.";
 
 export const appRouter = router({
@@ -120,7 +135,11 @@ export const appRouter = router({
   auth: router({
     me: publicProcedure.query(({ ctx }) => {
       if (!ctx.user) return null;
-      return toSafeUser(ctx.user);
+      return {
+        ...toSafeUser(ctx.user),
+        needsTwoFactorSetup: needsTwoFactorSetup(ctx.user),
+        isSuperAdmin: isSuperAdmin(ctx.user),
+      };
     }),
     login: publicProcedure
       .input(z.object({
@@ -619,6 +638,8 @@ export const appRouter = router({
         environmentalPractices: z.string().trim().max(2000).optional(),
         socialImpact: z.string().trim().max(2000).optional(),
         governanceQuality: z.enum(["excellent", "good", "fair", "poor"]),
+        financialDataSource: z.enum(["laporan_keuangan", "omzet_harian", "mutasi_rekening", "dokumen_ai"]).optional(),
+        financialDataNote: z.string().trim().max(1000).optional(),
       }))
       .mutation(async ({ input, ctx }) => {
         const moneyOrNull = (value: string | null | undefined) => (!value || value === "" ? null : value.toString());
@@ -926,6 +947,13 @@ export const appRouter = router({
         return { success: true };
       }),
 
+    exitGate: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        return computeExitGate(application, ctx.user.organizationId);
+      }),
+
     revealNik: protectedProcedure
       .input(z.object({ applicationId: z.number().int().positive() }))
       .mutation(async ({ input, ctx }) => {
@@ -962,6 +990,13 @@ export const appRouter = router({
           throw new TRPCError({
             code: "FORBIDDEN",
             message: "Pemisahan maker-checker: Anda membuat atau menilai pengajuan ini, sehingga keputusan harus diambil pengguna lain.",
+          });
+        }
+        const gate = input.decision === "approved" ? await computeExitGate(application, ctx.user.organizationId) : null;
+        if (gate && !gate.passed) {
+          throw new TRPCError({
+            code: "PRECONDITION_FAILED",
+            message: `Syarat persetujuan ${gate.track === "ringkas" ? "jalur ringkas" : "jalur lengkap"} belum terpenuhi: ${gate.items.filter(i => !i.ok).map(i => i.label).join("; ")}.`,
           });
         }
         await db.decideApplication({
@@ -1241,6 +1276,34 @@ export const appRouter = router({
         }
       }),
   }),
+  platform: router({
+    listOrganizations: superAdminProcedure.query(() => db.listOrganizationsForPlatform()),
+
+    setOrganizationStatus: superAdminProcedure
+      .input(z.object({ organizationId: z.number().int().positive(), status: z.enum(["pending", "active"]) }))
+      .mutation(async ({ input, ctx }) => {
+        if (input.organizationId === ctx.user.organizationId) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Status organisasi sendiri tidak dapat diubah dari konsol platform." });
+        }
+        const organization = await db.getOrganizationById(input.organizationId);
+        if (!organization) throw new TRPCError({ code: "NOT_FOUND", message: "Organisasi tidak ditemukan" });
+        await db.setOrganizationRegistrationStatus(input.organizationId, input.status);
+        await db.recordAuditEvent({
+          organizationId: input.organizationId,
+          actorUserId: ctx.user.id,
+          action: input.status === "active" ? "ORGANIZATION_APPROVED" : "ORGANIZATION_SUSPENDED",
+          entityType: "organization",
+          entityId: input.organizationId,
+          metadata: { by: "superadmin", previousStatus: organization.registrationStatus },
+        });
+        return { success: true };
+      }),
+
+    auditLogs: superAdminProcedure
+      .input(z.object({ organizationId: z.number().int().positive().optional(), action: z.string().trim().max(64).optional(), limit: z.number().int().min(1).max(500).optional() }).optional())
+      .query(({ input }) => db.listPlatformAuditLogs(input ?? {})),
+  }),
+
   aiAssist: router({
     ruleCheck: protectedProcedure
       .input(z.object({ applicationId: z.number().int().positive() }))

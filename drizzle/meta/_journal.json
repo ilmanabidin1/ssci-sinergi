@@ -169,6 +169,13 @@
       "when": 1791010285314,
       "tag": "0023_colorful_inhumans",
       "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "5",
+      "when": 1791012685580,
+      "tag": "0024_cool_hammerhead",
+      "breakpoints": true
     }
   ]
 }

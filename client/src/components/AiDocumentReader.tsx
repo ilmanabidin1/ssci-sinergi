@@ -82,7 +82,15 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
   }
 
   const apply = (key: string, value: number | string) => {
-    setValues(v => ({ ...v, [key]: String(value) }));
+    const financial = ["monthlyRevenue", "monthlyExpenses", "existingDebt"].includes(key);
+    setValues(v => ({
+      ...v,
+      [key]: String(value),
+      ...(financial ? {
+        financialDataSource: docType === "mutasi_rekening" ? "mutasi_rekening" : "dokumen_ai",
+        financialDataNote: `Angka dibaca AI dari ${DOC_OPTIONS.find(([d]) => d === docType)?.[1] ?? "dokumen"} dan diverifikasi analis.`,
+      } : {}),
+    }));
     setApplied(a => [...a, key]);
   };
 

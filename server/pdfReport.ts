@@ -250,6 +250,9 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
     ], ensureSpace);
     doc.y += 8;
     renderCallout(doc, "Tujuan pembiayaan", escapeText(application.loanPurpose), C.gold, C.goldSoft, ensureSpace);
+    if (application.financialDataNote) {
+      renderCallout(doc, "Sumber angka keuangan", escapeText(application.financialDataNote), C.navy, "#eef2f8", ensureSpace);
+    }
 
     // 04 Analysis
     sectionTitle(doc, "04", "ANALISIS & REKOMENDASI", ensureSpace);

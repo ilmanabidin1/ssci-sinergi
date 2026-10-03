@@ -222,3 +222,26 @@ export function OverridePanel({
     </Card>
   );
 }
+
+export function ExitGatePanel({ applicationId }: { applicationId: number }) {
+  const query = trpc.applications.exitGate.useQuery({ applicationId });
+  const gate = query.data;
+  if (!gate) return null;
+  return (
+    <div className={`rounded-xl border p-4 text-sm ${gate.passed ? "border-emerald-200 bg-emerald-50" : "border-amber-200 bg-amber-50"}`}>
+      <p className="mb-2 font-semibold text-navy-900">
+        Syarat persetujuan {gate.track === "ringkas" ? "jalur ringkas" : "jalur lengkap"}{" "}
+        <span className={`ml-1 text-xs font-bold ${gate.passed ? "text-emerald-700" : "text-amber-800"}`}>{gate.passed ? "terpenuhi" : "belum terpenuhi"}</span>
+      </p>
+      <ul className="space-y-1">
+        {gate.items.map(item => (
+          <li key={item.label} className="flex items-center gap-2">
+            {item.ok ? <CheckCircle2 className="h-4 w-4 text-emerald-600" /> : <AlertTriangle className="h-4 w-4 text-amber-600" />}
+            <span className={item.ok ? "text-navy-900" : "text-amber-900"}>{item.label}</span>
+          </li>
+        ))}
+      </ul>
+      {!gate.passed && <p className="mt-2 text-xs text-muted-foreground">Pengajuan tetap dapat ditolak. Persetujuan baru dapat diberikan setelah semua syarat terpenuhi.</p>}
+    </div>
+  );
+}

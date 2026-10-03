@@ -1461,3 +1461,50 @@ export async function resolveCustomerRequest(input: { id: number; organizationId
     .where(eq(customerRequests.id, input.id));
   return request;
 }
+
+export async function listOrganizationsForPlatform() {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const orgs = await db.select().from(organizations).orderBy(desc(organizations.createdAt));
+  const userCounts = await db.select({ organizationId: users.organizationId, count: sql<number>`count(*)` }).from(users).groupBy(users.organizationId);
+  const appCounts = await db.select({ organizationId: applications.organizationId, count: sql<number>`count(*)` }).from(applications).groupBy(applications.organizationId);
+  const admins = await db.select({ organizationId: users.organizationId, name: users.name, email: users.email }).from(users).where(eq(users.role, "admin"));
+  return orgs.map(org => ({
+    id: org.id,
+    name: org.name,
+    legalName: org.legalName,
+    slug: org.slug,
+    registrationStatus: org.registrationStatus,
+    address: org.address,
+    phone: org.phone,
+    createdAt: org.createdAt,
+    userCount: Number(userCounts.find(c => c.organizationId === org.id)?.count ?? 0),
+    applicationCount: Number(appCounts.find(c => c.organizationId === org.id)?.count ?? 0),
+    admins: admins.filter(a => a.organizationId === org.id).map(a => ({ name: a.name, email: a.email })),
+  }));
+}
+
+export async function setOrganizationRegistrationStatus(organizationId: number, status: "pending" | "active") {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(organizations).set({ registrationStatus: status, updatedAt: new Date() }).where(eq(organizations.id, organizationId));
+}
+
+export async function listPlatformAuditLogs(filters: { organizationId?: number; action?: string; limit?: number }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const conditions = [];
+  if (filters.organizationId) conditions.push(eq(auditLogs.organizationId, filters.organizationId));
+  if (filters.action) conditions.push(eq(auditLogs.action, filters.action));
+  const rows = await db.select().from(auditLogs)
+    .where(conditions.length ? and(...conditions) : undefined)
+    .orderBy(desc(auditLogs.createdAt))
+    .limit(filters.limit ?? 200);
+  const orgs = await db.select({ id: organizations.id, name: organizations.name }).from(organizations);
+  const actors = await db.select({ id: users.id, name: users.name, email: users.email }).from(users);
+  return rows.map(row => ({
+    ...row,
+    organizationName: orgs.find(o => o.id === row.organizationId)?.name ?? `#${row.organizationId}`,
+    actorName: row.actorUserId === 0 ? "Nasabah (publik)" : actors.find(a => a.id === row.actorUserId)?.name ?? actors.find(a => a.id === row.actorUserId)?.email ?? `#${row.actorUserId}`,
+  }));
+}

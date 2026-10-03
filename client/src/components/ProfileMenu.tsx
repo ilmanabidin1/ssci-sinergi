@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, CircleUserRound, LogOut, ScrollText, Settings2, Users, UsersRound } from "lucide-react";
+import { ChevronDown, CircleUserRound, LogOut, ScrollText, Settings2, ShieldCheck, Users, UsersRound } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
 export function ProfileMenu() {
@@ -61,6 +61,14 @@ export function ProfileMenu() {
             <Link to="/audit">
               <ScrollText className="mr-2 h-4 w-4" />
               Audit Log
+            </Link>
+          </DropdownMenuItem>
+        )}
+        {user?.isSuperAdmin && (
+          <DropdownMenuItem asChild>
+            <Link to="/platform">
+              <ShieldCheck className="mr-2 h-4 w-4" />
+              Konsol SuperAdmin
             </Link>
           </DropdownMenuItem>
         )}

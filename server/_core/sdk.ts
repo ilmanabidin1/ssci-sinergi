@@ -299,6 +299,11 @@ class SDKServer {
       throw ForbiddenError("User account is deactivated");
     }
 
+    const organization = await db.getOrganizationById(user.organizationId);
+    if (organization?.registrationStatus === "pending") {
+      throw ForbiddenError("Organization is not active");
+    }
+
     await db.upsertUser({
       openId: user.openId,
       lastSignedIn: signedInAt,

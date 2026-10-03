@@ -6,6 +6,8 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Platform from "./pages/Platform";
+import { TwoFactorGate } from "./components/TwoFactorGate";
 import NewApplication from "./pages/NewApplication";
 import ApplicationDetail from "./pages/ApplicationDetail";
 import AssessmentHistory from "./pages/AssessmentHistory";
@@ -38,6 +40,7 @@ function Router() {
       <Route path={"/nasabah"} component={Customers} />
       <Route path={"/notifikasi"} component={Notifications} />
       <Route path={"/audit"} component={AuditLog} />
+      <Route path={"/platform"} component={Platform} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
@@ -51,7 +54,9 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <TwoFactorGate>
+            <Router />
+          </TwoFactorGate>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
