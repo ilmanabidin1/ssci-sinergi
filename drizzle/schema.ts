@@ -321,6 +321,22 @@ export const notifications = mysqlTable("notifications", {
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
 
+export const customerRequests = mysqlTable("customerRequests", {
+  id: int("id").autoincrement().primaryKey(),
+  organizationId: int("organizationId").notNull(),
+  applicationId: int("applicationId").notNull(),
+  type: mysqlEnum("type", ["pembaruan_data", "peninjauan_keputusan"]).notNull(),
+  message: text("message").notNull(),
+  contactPhone: varchar("contactPhone", { length: 50 }),
+  status: mysqlEnum("status", ["open", "resolved"]).default("open").notNull(),
+  resolutionNote: text("resolutionNote"),
+  resolvedBy: int("resolvedBy"),
+  resolvedAt: timestamp("resolvedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type CustomerRequest = typeof customerRequests.$inferSelect;
+
 export type Notification = typeof notifications.$inferSelect;
 export type InsertNotification = typeof notifications.$inferInsert;
 

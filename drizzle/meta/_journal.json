@@ -162,6 +162,13 @@
       "when": 1791009781547,
       "tag": "0022_chilly_chimera",
       "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "5",
+      "when": 1791010285314,
+      "tag": "0023_colorful_inhumans",
+      "breakpoints": true
     }
   ]
 }

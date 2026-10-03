@@ -1,7 +1,8 @@
 import { isSameActor } from "@shared/privacy";
+import { buildCustomerExplanation } from "@shared/customerExplanation";
 import { eq, desc, asc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification, surveyPhotos, InsertSurveyPhoto } from "../drizzle/schema";
+import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification, surveyPhotos, InsertSurveyPhoto, customerRequests } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -180,8 +181,23 @@ export async function trackApplicationPublic(applicationId: number, customerIdLa
     createdAt: app.createdAt,
     assessedAt: assessment ? assessment.assessedAt : null,
     checkedAt: app.checkedAt,
-    decisionNotes: app.decisionNotes,
     bprsName: org ? org.name : "BPRS Mitra",
+    explanation: buildCustomerExplanation({
+      status: app.status,
+      breakdown: assessment?.scoreBreakdown,
+      legalDocuments: Array.isArray(app.legalDocuments) ? app.legalDocuments : [],
+    }),
+    requests: (await db.select().from(customerRequests)
+      .where(eq(customerRequests.applicationId, app.id))
+      .orderBy(desc(customerRequests.createdAt))
+      .limit(10)).map(r => ({
+        id: r.id,
+        type: r.type,
+        status: r.status,
+        createdAt: r.createdAt,
+        resolvedAt: r.resolvedAt,
+        resolutionNote: r.resolutionNote,
+      })),
   };
 }
 
@@ -1395,4 +1411,53 @@ export async function setAssessmentOverride(input: {
       overriddenAt: input.classification ? new Date() : null,
     })
     .where(and(eq(assessments.id, input.assessmentId), eq(assessments.organizationId, input.organizationId)));
+}
+
+export async function getApplicationForCustomer(applicationId: number, customerIdLast4: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const rows = await db.select().from(applications).where(eq(applications.id, applicationId)).limit(1);
+  const app = rows[0];
+  if (!app || !(app.customerId || "").trim().endsWith(customerIdLast4.trim())) return null;
+  return app;
+}
+
+export async function createCustomerRequest(input: {
+  organizationId: number;
+  applicationId: number;
+  type: "pembaruan_data" | "peninjauan_keputusan";
+  message: string;
+  contactPhone?: string | null;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const open = await db.select({ id: customerRequests.id }).from(customerRequests).where(and(
+    eq(customerRequests.applicationId, input.applicationId),
+    eq(customerRequests.type, input.type),
+    eq(customerRequests.status, "open"),
+  )).limit(1);
+  if (open.length > 0) return { created: false as const };
+  const result = await db.insert(customerRequests).values({ ...input, contactPhone: input.contactPhone || null });
+  return { created: true as const, id: result[0].insertId };
+}
+
+export async function listCustomerRequests(applicationId: number, organizationId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  return db.select().from(customerRequests)
+    .where(and(eq(customerRequests.applicationId, applicationId), eq(customerRequests.organizationId, organizationId)))
+    .orderBy(desc(customerRequests.createdAt));
+}
+
+export async function resolveCustomerRequest(input: { id: number; organizationId: number; resolvedBy: number; resolutionNote: string }) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const rows = await db.select().from(customerRequests)
+    .where(and(eq(customerRequests.id, input.id), eq(customerRequests.organizationId, input.organizationId))).limit(1);
+  const request = rows[0];
+  if (!request || request.status !== "open") return null;
+  await db.update(customerRequests)
+    .set({ status: "resolved", resolutionNote: input.resolutionNote, resolvedBy: input.resolvedBy, resolvedAt: new Date() })
+    .where(eq(customerRequests.id, input.id));
+  return request;
 }

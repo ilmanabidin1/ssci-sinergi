@@ -1,3 +1,4 @@
+import { CustomerRequestsPanel } from "@/components/CustomerRequestsPanel";
 import { OverridePanel, SensitivityPanel } from "@/components/HumanReview";
 import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChecks";
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
@@ -337,6 +338,10 @@ export default function ApplicationDetail() {
               </Button>
             )}
           </div>
+        </div>
+
+        <div className="mb-6 empty:hidden">
+          <CustomerRequestsPanel applicationId={application.id} />
         </div>
 
         {assessment && (

@@ -1,3 +1,4 @@
+import { CustomerRequestSection, DecisionExplanation } from "@/components/CustomerTracking";
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -258,6 +259,18 @@ export default function TrackApplication() {
                 </div>
               </CardContent>
             </Card>
+
+            {app.explanation && <DecisionExplanation explanation={app.explanation} />}
+
+            {searchParams && (
+              <CustomerRequestSection
+                ticketOrId={searchParams.ticketOrId}
+                customerIdLast4={searchParams.customerIdLast4}
+                status={app.status}
+                requests={app.requests}
+                onSubmitted={() => void trackQuery.refetch()}
+              />
+            )}
           </div>
         )}
       </main>

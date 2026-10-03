@@ -105,6 +105,14 @@ function toSafeUser<T extends { passwordHash?: unknown; twoFactorSecret?: unknow
   return safeUser;
 }
 
+function parseTicket(ticketOrId: string): number {
+  const id = Number.parseInt(ticketOrId.trim().replace(/^SSCI-/i, "").replace(/^0+/, ""), 10);
+  if (Number.isNaN(id) || id <= 0) {
+    throw new TRPCError({ code: "NOT_FOUND", message: "Nomor tiket pengajuan tidak valid" });
+  }
+  return id;
+}
+
 const AI_UNAVAILABLE = "Layanan AI sedang tidak tersedia. Coba lagi beberapa saat lagi.";
 
 export const appRouter = router({
@@ -420,21 +428,93 @@ export const appRouter = router({
         customerIdLast4: z.string().trim().length(4, "Masukkan 4 digit terakhir NIK / ID"),
       }))
       .query(async ({ input }) => {
-        // Parse ID dari format "SSCI-00042" atau angka murni "42"
-        const cleanIdStr = input.ticketOrId.replace(/^SSCI-/i, "").replace(/^0+/, "");
-        const id = Number.parseInt(cleanIdStr, 10);
-        if (Number.isNaN(id) || id <= 0) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Nomor tiket pengajuan tidak valid" });
+        const id = parseTicket(input.ticketOrId);
+        const limiterKey = `track:${id}`;
+        if (isLoginLocked(limiterKey)) {
+          throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Terlalu banyak percobaan. Coba lagi dalam 15 menit." });
         }
 
         const data = await db.trackApplicationPublic(id, input.customerIdLast4);
         if (!data) {
+          recordLoginFailure(limiterKey);
           throw new TRPCError({
             code: "NOT_FOUND",
             message: "Pengajuan tidak ditemukan atau 4 digit terakhir NIK tidak sesuai",
           });
         }
         return data;
+      }),
+
+    submitCustomerRequest: publicProcedure
+      .input(z.object({
+        ticketOrId: z.string().trim().min(1).max(50),
+        customerIdLast4: z.string().trim().length(4),
+        type: z.enum(["pembaruan_data", "peninjauan_keputusan"]),
+        message: z.string().trim().min(20, "Jelaskan permintaan Anda minimal 20 karakter").max(1000),
+        contactPhone: z.string().trim().max(30).regex(/^[0-9+\-\s]*$/, "Nomor telepon tidak valid").optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const id = parseTicket(input.ticketOrId);
+        const limiterKey = `track:${id}`;
+        if (isLoginLocked(limiterKey)) {
+          throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Terlalu banyak percobaan. Coba lagi dalam 15 menit." });
+        }
+        const application = await db.getApplicationForCustomer(id, input.customerIdLast4);
+        if (!application) {
+          recordLoginFailure(limiterKey);
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan atau 4 digit terakhir NIK tidak sesuai" });
+        }
+        if (input.type === "pembaruan_data" && application.status !== "pending") {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Pembaruan data hanya dapat diajukan sebelum pengajuan dinilai. Setelah keputusan, gunakan permintaan peninjauan ulang." });
+        }
+        if (input.type === "peninjauan_keputusan" && application.status !== "rejected") {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Peninjauan ulang hanya dapat diajukan untuk pengajuan yang belum disetujui." });
+        }
+        const result = await db.createCustomerRequest({
+          organizationId: application.organizationId,
+          applicationId: application.id,
+          type: input.type,
+          message: input.message,
+          contactPhone: input.contactPhone,
+        });
+        if (!result.created) {
+          throw new TRPCError({ code: "CONFLICT", message: "Permintaan sejenis masih diproses oleh BPRS. Mohon tunggu tanggapan." });
+        }
+        const label = input.type === "pembaruan_data" ? "pembaruan data" : "peninjauan ulang keputusan";
+        try {
+          const recipients = (await db.listOrganizationUsers(application.organizationId))
+            .filter(user => user.active && (user.role === "admin" || user.role === "checker" || user.id === application.submittedBy));
+          for (const recipient of recipients) {
+            await db.createNotification({
+              organizationId: application.organizationId,
+              userId: recipient.id,
+              type: "CUSTOMER_REQUEST",
+              title: `Permintaan ${label} dari nasabah`,
+              content: `Tiket SSCI-${String(application.id).padStart(5, "0")}: nasabah mengajukan ${label}.`,
+              applicationId: application.id,
+            });
+          }
+        } catch (error) {
+          console.warn("[Notification] Failed to notify about customer request:", error);
+        }
+        await db.recordAuditEvent({ organizationId: application.organizationId, actorUserId: 0, action: "CUSTOMER_REQUEST_CREATED", entityType: "application", entityId: application.id, metadata: { type: input.type, requestId: result.id } });
+        return { success: true };
+      }),
+
+    listCustomerRequests: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        return db.listCustomerRequests(input.applicationId, ctx.user.organizationId);
+      }),
+
+    resolveCustomerRequest: protectedProcedure
+      .input(z.object({ id: z.number().int().positive(), resolutionNote: z.string().trim().min(10, "Tanggapan minimal 10 karakter").max(1000) }))
+      .mutation(async ({ input, ctx }) => {
+        const request = await db.resolveCustomerRequest({ id: input.id, organizationId: ctx.user.organizationId, resolvedBy: ctx.user.id, resolutionNote: input.resolutionNote });
+        if (!request) throw new TRPCError({ code: "NOT_FOUND", message: "Permintaan tidak ditemukan atau sudah ditanggapi" });
+        await db.recordAuditEvent({ organizationId: ctx.user.organizationId, actorUserId: ctx.user.id, action: "CUSTOMER_REQUEST_RESOLVED", entityType: "application", entityId: request.applicationId, metadata: { requestId: request.id, type: request.type } });
+        return { success: true };
       }),
 
     importFinancialCsv: makerProcedure
