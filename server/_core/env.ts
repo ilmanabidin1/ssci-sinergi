@@ -13,6 +13,8 @@ export const ENV = {
   pilotAdminEmail: process.env.PILOT_ADMIN_EMAIL ?? "",
   pilotAdminPassword: process.env.PILOT_ADMIN_PASSWORD ?? "",
   enforceTwoFactor: process.env.ENFORCE_TWO_FACTOR !== "false",
+  resetPilotAdminPassword: process.env.RESET_PILOT_ADMIN_PASSWORD === "true",
+  resetPilotAdminTwoFactor: process.env.RESET_PILOT_ADMIN_2FA === "true",
   superAdminEmails: (process.env.SUPERADMIN_EMAILS || process.env.PILOT_ADMIN_EMAIL || "")
     .split(",")
     .map(email => email.trim().toLowerCase())

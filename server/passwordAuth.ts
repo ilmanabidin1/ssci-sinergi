@@ -70,7 +70,10 @@ export async function ensurePilotAdmin() {
   if (!ENV.pilotAdminEmail || !ENV.pilotAdminPassword) return;
   const email = ENV.pilotAdminEmail.trim().toLowerCase();
   const existing = await db.getUserByEmail(email);
-  if (existing) return;
+  if (existing) {
+    await applyPilotAdminRecovery(existing);
+    return;
+  }
 
   await db.createPilotAdmin({
     email,
@@ -78,4 +81,32 @@ export async function ensurePilotAdmin() {
     passwordHash: await hashPassword(ENV.pilotAdminPassword),
   });
   console.log("[Auth] Pilot administrator provisioned");
+}
+
+/**
+ * Break-glass recovery for the platform owner, driven by one-off Railway
+ * variables. Only someone with access to the server settings can trigger it.
+ */
+export async function applyPilotAdminRecovery(user: { id: number; organizationId: number; active: number; twoFactorEnabled: number }) {
+  if (!ENV.resetPilotAdminPassword && !ENV.resetPilotAdminTwoFactor) return;
+  const actions: string[] = [];
+  if (ENV.resetPilotAdminPassword) {
+    await db.updateUserPassword(user.id, await hashPassword(ENV.pilotAdminPassword));
+    if (!user.active) await db.setUserActive(user.organizationId, user.id, true);
+    actions.push("password");
+  }
+  if (ENV.resetPilotAdminTwoFactor && user.twoFactorEnabled) {
+    await db.updateTwoFactor(user.id, { twoFactorSecret: null, twoFactorEnabled: false, twoFactorLastStep: null });
+    actions.push("2fa");
+  }
+  if (actions.length === 0) return;
+  await db.recordAuditEvent({
+    organizationId: user.organizationId,
+    actorUserId: user.id,
+    action: "PILOT_ADMIN_RECOVERED",
+    entityType: "user",
+    entityId: user.id,
+    metadata: { reset: actions.join(",") },
+  });
+  console.warn(`[Auth] Pilot administrator recovered (${actions.join(", ")}). Remove RESET_PILOT_ADMIN_PASSWORD / RESET_PILOT_ADMIN_2FA from the environment now.`);
 }

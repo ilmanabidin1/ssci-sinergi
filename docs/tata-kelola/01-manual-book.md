@@ -103,3 +103,12 @@ Checker tidak dapat memutuskan atau meninjau pengajuan yang ia buat atau nilai s
 | `ENFORCE_TWO_FACTOR` | `false` untuk menonaktifkan wajib 2FA (hanya untuk demo) |
 | `SUPERADMIN_EMAILS` | Daftar email SuperAdmin dipisah koma; jika kosong memakai `PILOT_ADMIN_EMAIL` |
 | `OPENROUTER_API_KEY` | Kunci layanan AI; jika kosong fitur AI nonaktif dan sistem memakai aturan |
+| `RESET_PILOT_ADMIN_PASSWORD` | `true` untuk mereset password pilot admin (SuperAdmin) ke nilai `PILOT_ADMIN_PASSWORD` saat server dimulai; hapus lagi setelah berhasil login |
+| `RESET_PILOT_ADMIN_2FA` | `true` untuk mereset 2FA pilot admin jika ponsel hilang; hapus lagi setelah dipakai |
+
+### Lupa password SuperAdmin
+1. Di Railway, buka service aplikasi, tab Variables.
+2. Isi `PILOT_ADMIN_PASSWORD` dengan password baru, lalu tambahkan `RESET_PILOT_ADMIN_PASSWORD=true` (dan `RESET_PILOT_ADMIN_2FA=true` jika aplikasi authenticator juga hilang).
+3. Tunggu redeploy selesai, lalu login dengan password baru.
+4. **Hapus** variabel `RESET_...` agar password tidak tereset lagi setiap server dimulai ulang.
+5. Pemulihan ini tercatat di log audit sebagai `PILOT_ADMIN_RECOVERED`.
