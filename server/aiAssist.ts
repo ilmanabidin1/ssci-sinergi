@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
 import { ENV } from "./_core/env";
+import { MAX_STATEMENT_ROWS, type BprsProfile, type BprsScoreResult } from "@shared/bprsTemplate";
 
 export const OPENROUTER_ASSIST_MODEL = "openai/gpt-6-luna";
 const TIMEOUT_MS = 30_000;
@@ -512,4 +513,241 @@ export function mergeFallbackRecommendation(recommendation: string, issues: Cons
   const relevant = blockingIssues(issues);
   if (relevant.length === 0) return recommendation;
   return `${recommendation} Skor dihitung dari data yang diisi; terdapat ${relevant.length} temuan pemeriksaan data yang telah dikonfirmasi analis dan wajib diverifikasi sebelum keputusan.`;
+}
+
+// ---------------------------------------------------------------------------
+// 6. Format Excel BPRS: baca rekening koran, draf narasi, penjelasan skor
+// ---------------------------------------------------------------------------
+
+export const MAX_STATEMENT_PAGES = 6;
+
+export const bankStatementInputSchema = z.object({
+  pages: z.array(z.object({
+    imageBase64: z.string().min(1),
+    contentType: z.enum(["image/jpeg", "image/png"]),
+  })).min(1).max(MAX_STATEMENT_PAGES),
+  customerName: z.string().max(255).optional(),
+});
+
+const statementMonthAiSchema = z.object({
+  month: z.string().regex(/^\d{4}-\d{2}$/),
+  credits: z.array(z.number().positive()),
+  debits: z.array(z.number().positive()),
+}).strict();
+
+const bankStatementAiSchema = z.object({
+  bank: z.string().nullable(),
+  accountNumber: z.string().nullable(),
+  holderName: z.string().nullable(),
+  openingBalance: z.number().nullable(),
+  months: z.array(statementMonthAiSchema),
+  confidence: z.number().min(0).max(1),
+  warnings: z.array(z.string()),
+}).strict();
+
+export type BankStatementResult = {
+  bank: string | null;
+  accountNumber: string | null;
+  holderName: string | null;
+  openingBalance: number | null;
+  firstMonth: string | null;
+  months: Array<{ month: string; credits: number[]; debits: number[] }>;
+  confidence: number;
+  warnings: string[];
+  model: string;
+};
+
+/** Menjaga jumlah baris per kolom sesuai template (48). Sisa transaksi digabung ke baris terakhir. */
+export function fitStatementRows(values: number[], maxRows = MAX_STATEMENT_ROWS): number[] {
+  const clean = values.filter(v => Number.isFinite(v) && v > 0).map(v => Math.round(v));
+  if (clean.length <= maxRows) return clean;
+  const head = clean.slice(0, maxRows - 1);
+  const rest = clean.slice(maxRows - 1).reduce((a, b) => a + b, 0);
+  return [...head, rest];
+}
+
+export async function readBankStatement(
+  input: z.infer<typeof bankStatementInputSchema>,
+  options?: FetchOptions,
+): Promise<BankStatementResult> {
+  for (const page of input.pages) validateImage(page.imageBase64, page.contentType);
+  const extracted = await callOpenRouterJson({
+    name: "bank_statement_reading",
+    schema: bankStatementAiSchema,
+    maxTokens: 4000,
+    options,
+    jsonSchema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        bank: nullableString,
+        accountNumber: nullableString,
+        holderName: nullableString,
+        openingBalance: nullableNumber,
+        months: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            properties: {
+              month: { type: "string" },
+              credits: { type: "array", items: { type: "number" } },
+              debits: { type: "array", items: { type: "number" } },
+            },
+            required: ["month", "credits", "debits"],
+          },
+        },
+        confidence: { type: "number", minimum: 0, maximum: 1 },
+        warnings: strArray,
+      },
+      required: ["bank", "accountNumber", "holderName", "openingBalance", "months", "confidence", "warnings"],
+    },
+    system:
+      "Baca halaman rekening koran (mutasi rekening) untuk diisikan ke format Excel BPRS. " +
+      "Kelompokkan transaksi per bulan kalender (month dalam format YYYY-MM, urut dari yang paling lama, maksimal 3 bulan terakhir). " +
+      "credits = daftar nominal setiap transaksi uang masuk (kredit), debits = daftar nominal setiap transaksi uang keluar (debit), dalam Rupiah tanpa titik. " +
+      "Jangan masukkan saldo sebagai transaksi. openingBalance = saldo awal sebelum transaksi pertama bulan pertama. " +
+      "Jika satu bulan berisi lebih dari 48 transaksi pada satu sisi, gabungkan per hari. " +
+      "Field yang tidak terbaca diisi null dan beri peringatan. Jika halaman tidak tampak seperti rekening koran, tulis peringatan.",
+    user: [
+      { type: "text", text: `Baca ${input.pages.length} halaman rekening koran berikut dan kembalikan JSON sesuai skema.` },
+      ...input.pages.map(page => ({ type: "image_url", image_url: { url: `data:${page.contentType};base64,${page.imageBase64}` } })),
+    ],
+  });
+
+  const months = [...extracted.months]
+    .sort((a, b) => a.month.localeCompare(b.month))
+    .slice(-3)
+    .map(m => ({ month: m.month, credits: fitStatementRows(m.credits), debits: fitStatementRows(m.debits) }));
+  const warnings = extracted.warnings.map(w => w.trim()).filter(Boolean);
+  if (extracted.months.length > 3) warnings.push("Rekening koran berisi lebih dari 3 bulan. Hanya 3 bulan terakhir yang dipakai.");
+  if (months.some(m => m.credits.length === MAX_STATEMENT_ROWS || m.debits.length === MAX_STATEMENT_ROWS)) {
+    warnings.push("Ada bulan dengan lebih dari 48 transaksi. Sisa transaksi digabung di baris terakhir.");
+  }
+  for (let i = 1; i < months.length; i++) {
+    const [y0, m0] = months[i - 1]!.month.split("-").map(Number);
+    const [y1, m1] = months[i]!.month.split("-").map(Number);
+    if ((y1! - y0!) * 12 + (m1! - m0!) !== 1) warnings.push("Bulan pada rekening koran tidak berurutan. Periksa halaman yang diunggah.");
+  }
+  if (extracted.holderName && input.customerName) {
+    const a = normalizeName(extracted.holderName);
+    const b = normalizeName(input.customerName);
+    if (a && b && !a.includes(b) && !b.includes(a)) {
+      warnings.push(`Nama pemilik rekening (${extracted.holderName}) berbeda dengan nama nasabah.`);
+    }
+  }
+  return {
+    bank: extracted.bank,
+    accountNumber: extracted.accountNumber,
+    holderName: extracted.holderName,
+    openingBalance: extracted.openingBalance,
+    firstMonth: months[0]?.month ?? null,
+    months,
+    confidence: extracted.confidence,
+    warnings,
+    model: OPENROUTER_ASSIST_MODEL,
+  };
+}
+
+const narrativeSchema = z.object({
+  latarBelakang: z.string(),
+  pengalamanUsaha: z.string(),
+  indikatorReputasi: z.string(),
+}).strict();
+
+export type BprsNarrativeResult = z.infer<typeof narrativeSchema> & { model: string };
+
+export async function draftBprsNarrative(
+  app: ApplicationSnapshot,
+  profile: BprsProfile,
+  options?: FetchOptions,
+): Promise<BprsNarrativeResult> {
+  const answers = [
+    profile.statusPerkawinan && `Status perkawinan: ${profile.statusPerkawinan}`,
+    profile.tanggungan && `Jumlah tanggungan: ${profile.tanggungan.trim()}`,
+    profile.statusTempatTinggal && `Tempat tinggal: ${profile.statusTempatTinggal}`,
+    profile.lamaMenetap && `Lama menetap: ${profile.lamaMenetap}`,
+    profile.reputasi && `Reputasi (isian AO): ${profile.reputasi}`,
+    profile.sistemPenjualan && `Sistem penjualan: ${profile.sistemPenjualan}`,
+    profile.kepemilikanTempatUsaha && `Tempat usaha: ${profile.kepemilikanTempatUsaha}`,
+    profile.lokasiUsaha && `Lokasi usaha: ${profile.lokasiUsaha}`,
+    profile.daerahPemasaran && `Daerah pemasaran: ${profile.daerahPemasaran}`,
+    profile.tenagaKerja && `Tenaga kerja: ${profile.tenagaKerja}`,
+    profile.pengelolaanKeuangan && `Pengelolaan keuangan: ${profile.pengelolaanKeuangan}`,
+    profile.hubunganBank && `Hubungan dengan bank: ${profile.hubunganBank}`,
+    profile.riwayatSlik && `Riwayat SLIK: ${profile.riwayatSlik}`,
+    profile.pembiayaanKe && `Pembiayaan ke-${profile.pembiayaanKe}`,
+  ].filter(Boolean).join("\n");
+  const result = await callOpenRouterJson({
+    name: "bprs_narrative_draft",
+    schema: narrativeSchema,
+    maxTokens: 1200,
+    options,
+    jsonSchema: {
+      type: "object",
+      additionalProperties: false,
+      properties: {
+        latarBelakang: { type: "string" },
+        pengalamanUsaha: { type: "string" },
+        indikatorReputasi: { type: "string" },
+      },
+      required: ["latarBelakang", "pengalamanUsaha", "indikatorReputasi"],
+    },
+    system:
+      "Susun draf teks untuk kolom naratif formulir analisa pembiayaan BPRS. Sebut nasabah sebagai \"Pemohon\", jangan menulis nama atau NIK. " +
+      "latarBelakang: 3 sampai 5 kalimat tentang pemohon, usaha, dan tujuan pembiayaan. " +
+      "pengalamanUsaha: 2 sampai 4 kalimat tentang lama dan cara menjalankan usaha. " +
+      "indikatorReputasi: 1 sampai 2 kalimat yang menjelaskan dasar penilaian reputasi. Jika data reputasi tidak ada, tulis bahwa reputasi perlu dikonfirmasi melalui survei lingkungan. " +
+      "Hanya gunakan fakta dari data yang diberikan. Tulis kalimat biasa tanpa poin, tanpa tanda pisah panjang.",
+    user: `Data pengajuan:\n${describeApplication({ ...app, customerName: "", customerId: "" })}\n\nIsian profil format BPRS:\n${answers || "-"}`,
+  });
+  return { ...result, model: OPENROUTER_ASSIST_MODEL };
+}
+
+export type ScoreComparisonInput = {
+  ssci: { totalScore: number; classification: string } | null;
+  bprs: BprsScoreResult;
+};
+
+export type ScoreComparisonResult = { explanation: string; source: "ai" | "aturan"; model: string | null };
+
+export function ruleScoreComparison(input: ScoreComparisonInput): string {
+  const lost = [...input.bprs.criteria]
+    .map(c => ({ ...c, gap: c.maxPoints - c.points }))
+    .filter(c => c.gap > 0.01)
+    .sort((a, b) => b.gap - a.gap)
+    .slice(0, 4);
+  const parts: string[] = [];
+  parts.push(`Estimasi skor format BPRS ${input.bprs.score.toFixed(2)} (${input.bprs.rating}, ${input.bprs.status}).`);
+  if (input.ssci) {
+    const diff = input.bprs.score - input.ssci.totalScore;
+    parts.push(`Skor SSCI ${input.ssci.totalScore.toFixed(2)} (${input.ssci.classification}), selisih ${diff >= 0 ? "+" : ""}${diff.toFixed(2)} poin.`);
+    parts.push("Kedua skor memakai bobot berbeda: SSCI menilai pilar keuangan berkelanjutan, syariah, dan legal, sedangkan format BPRS menilai karakter, usaha, rekening, dan agunan.");
+  }
+  if (!input.bprs.rpcAdequate) parts.push("Kemampuan bayar belum memadai menurut rumus BPRS, sehingga skor BPRS dikurangi menjadi 70%.");
+  if (lost.length > 0) {
+    parts.push(`Poin terbanyak hilang di: ${lost.map(c => `${c.label.toLowerCase()} (${c.answer ? `-${c.gap.toFixed(2)}` : "belum diisi"})`).join(", ")}.`);
+  }
+  return parts.join(" ");
+}
+
+export async function explainScoreComparison(input: ScoreComparisonInput, options?: FetchOptions): Promise<ScoreComparisonResult> {
+  const fallback = ruleScoreComparison(input);
+  if (!ENV.openRouterApiKey) return { explanation: fallback, source: "aturan", model: null };
+  try {
+    const result = await callOpenRouterJson({
+      name: "score_comparison",
+      schema: z.object({ explanation: z.string() }).strict(),
+      maxTokens: 600,
+      options,
+      jsonSchema: { type: "object", additionalProperties: false, properties: { explanation: { type: "string" } }, required: ["explanation"] },
+      system:
+        "Jelaskan kepada staf BPRS mengapa skor SSCI dan estimasi skor format Excel BPRS bisa berbeda, dalam 3 sampai 5 kalimat sederhana. " +
+        "Sebut kriteria yang paling banyak mengurangi poin dan apa yang dapat dilengkapi analis. Jangan menyarankan keputusan. Tanpa tanda pisah panjang.",
+      user: `${fallback}\n\nRincian kriteria format BPRS:\n${input.bprs.criteria.map(c => `${c.label}: ${c.answer ?? "belum diisi"} (${c.points.toFixed(2)} dari ${c.maxPoints})`).join("\n")}`,
+    });
+    return { explanation: result.explanation.trim() || fallback, source: "ai", model: OPENROUTER_ASSIST_MODEL };
+  } catch {
+    return { explanation: fallback, source: "aturan", model: null };
+  }
 }

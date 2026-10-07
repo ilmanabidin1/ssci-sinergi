@@ -1,5 +1,6 @@
 import { isSameActor } from "@shared/privacy";
 import { buildCustomerExplanation } from "@shared/customerExplanation";
+import type { BprsProfile } from "@shared/bprsTemplate";
 import { eq, desc, asc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification, surveyPhotos, InsertSurveyPhoto, customerRequests } from "../drizzle/schema";
@@ -1507,4 +1508,12 @@ export async function listPlatformAuditLogs(filters: { organizationId?: number; 
     organizationName: orgs.find(o => o.id === row.organizationId)?.name ?? `#${row.organizationId}`,
     actorName: row.actorUserId === 0 ? "Nasabah (publik)" : actors.find(a => a.id === row.actorUserId)?.name ?? actors.find(a => a.id === row.actorUserId)?.email ?? `#${row.actorUserId}`,
   }));
+}
+
+export async function updateBprsProfile(applicationId: number, organizationId: number, profile: BprsProfile) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(applications)
+    .set({ bprsProfile: profile })
+    .where(and(eq(applications.id, applicationId), eq(applications.organizationId, organizationId)));
 }

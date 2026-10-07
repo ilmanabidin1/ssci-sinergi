@@ -2,6 +2,7 @@ import { CustomerRequestsPanel } from "@/components/CustomerRequestsPanel";
 import { ExitGatePanel, OverridePanel, SensitivityPanel } from "@/components/HumanReview";
 import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChecks";
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
+import { BprsWorkbookPanel } from "@/components/BprsWorkbookPanel";
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -573,6 +574,14 @@ export default function ApplicationDetail() {
 
         <div className="mb-6">
           <AiAssessmentAssistant applicationId={application.id} />
+        </div>
+
+        <div className="mb-6">
+          <BprsWorkbookPanel
+            applicationId={application.id}
+            canEdit={user?.role === "maker" || user?.role === "admin"}
+            ssciScore={assessment ? { totalScore: Number(assessment.totalScore), classification: assessment.overrideClassification ?? assessment.classification } : null}
+          />
         </div>
 
          <div className="grid md:grid-cols-2 gap-6">

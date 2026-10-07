@@ -23,11 +23,13 @@ import { isSameActor, maskNik } from "@shared/privacy";
 import { runSensitivity } from "./sensitivity";
 import { determineReviewTrack, evaluateExitGate } from "@shared/reviewTrack";
 import { buildEnrollment, clearLoginFailures, decryptSecret, encryptSecret, generateTotpSecret, isLoginLocked, recordLoginFailure, verifyTotp } from "./twoFactor";
-import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot } from "./aiAssist";
+import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot, bankStatementInputSchema, readBankStatement, draftBprsNarrative, explainScoreComparison } from "./aiAssist";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
 import { calculateMurabahahBreakdown } from "./murabahah";
 import { analyzeSurveyImage, decodeSurveyImage, storeSurveyImage, SURVEY_CONTENT_TYPES, SurveyUploadError, SurveyProviderError } from "./surveyAnalysis";
+import { AKAD_TO_BPRS, bprsProfileSchema, checkBprsProfile, computeBprsScore, lamaUsahaFromMonths } from "@shared/bprsTemplate";
+import { bprsWorkbookFilename, fillFluktuatifWorkbook, loadFluktuatifTemplate, type BprsExportApplication } from "./bprsExcel";
 import { readFileSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 
@@ -129,6 +131,30 @@ async function computeExitGate(application: ApplicationRecord, organizationId: n
 }
 
 const AI_UNAVAILABLE = "Layanan AI sedang tidak tersedia. Coba lagi beberapa saat lagi.";
+
+function toBprsApplication(application: ApplicationRecord): BprsExportApplication {
+  return {
+    customerName: application.customerName,
+    customerId: application.customerId,
+    address: application.address,
+    phone: application.phone,
+    businessName: application.businessName,
+    businessType: application.businessType,
+    loanPurpose: application.loanPurpose,
+    businessAge: application.businessAge,
+    monthlyRevenue: Number(application.monthlyRevenue),
+    monthlyExpenses: Number(application.monthlyExpenses),
+    existingDebt: Number(application.existingDebt),
+    collateralValue: Number(application.collateralValue),
+    requestedAmount: Number(application.requestedAmount),
+    financingTenor: application.financingTenor,
+    marginRate: Number(application.marginRate),
+    financingAkad: application.financingAkad ?? null,
+    createdAt: application.createdAt,
+  };
+}
+
+const BPRS_LOCKED_STATUSES = new Set(["approved", "rejected", "cancelled"]);
 
 export const appRouter = router({
   system: systemRouter,
@@ -1302,6 +1328,103 @@ export const appRouter = router({
     auditLogs: superAdminProcedure
       .input(z.object({ organizationId: z.number().int().positive().optional(), action: z.string().trim().max(64).optional(), limit: z.number().int().min(1).max(500).optional() }).optional())
       .query(({ input }) => db.listPlatformAuditLogs(input ?? {})),
+  }),
+
+  bprsWorkbook: router({
+    get: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const profile = application.bprsProfile ?? {};
+        const app = toBprsApplication(application);
+        return {
+          profile,
+          score: computeBprsScore(profile, app),
+          checks: checkBprsProfile(profile, app),
+          derived: {
+            lamaUsaha: lamaUsahaFromMonths(app.businessAge),
+            akad: app.financingAkad ? AKAD_TO_BPRS[app.financingAkad] ?? null : null,
+          },
+          editable: !BPRS_LOCKED_STATUSES.has(application.status),
+        };
+      }),
+
+    save: makerProcedure
+      .input(z.object({ applicationId: z.number().int().positive(), profile: bprsProfileSchema }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        if (BPRS_LOCKED_STATUSES.has(application.status)) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Pengajuan sudah diputuskan atau dibatalkan, isian format BPRS tidak dapat diubah" });
+        }
+        await db.updateBprsProfile(application.id, ctx.user.organizationId, input.profile);
+        await db.recordAuditEvent({
+          organizationId: ctx.user.organizationId,
+          actorUserId: ctx.user.id,
+          action: "BPRS_PROFILE_UPDATED",
+          entityType: "application",
+          entityId: application.id,
+          metadata: { filledFields: Object.keys(input.profile).length },
+        });
+        const app = toBprsApplication(application);
+        return { score: computeBprsScore(input.profile, app), checks: checkBprsProfile(input.profile, app) };
+      }),
+
+    exportExcel: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        let buffer: Buffer;
+        try {
+          buffer = await fillFluktuatifWorkbook(await loadFluktuatifTemplate(), toBprsApplication(application), application.bprsProfile ?? {});
+        } catch (error) {
+          console.error("[bprsWorkbook] export failed", error);
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "File Excel BPRS gagal dibuat" });
+        }
+        await db.recordAuditEvent({
+          organizationId: ctx.user.organizationId,
+          actorUserId: ctx.user.id,
+          action: "BPRS_EXCEL_EXPORTED",
+          entityType: "application",
+          entityId: application.id,
+          metadata: { template: "fluktuatif-umkm" },
+        });
+        return { filename: bprsWorkbookFilename(application.id), base64: buffer.toString("base64") };
+      }),
+
+    readStatement: makerProcedure
+      .input(bankStatementInputSchema.extend({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        try {
+          return await readBankStatement({ pages: input.pages, customerName: application.customerName });
+        } catch (error) {
+          if (error instanceof AiInputError) throw new TRPCError({ code: "BAD_REQUEST", message: error.message });
+          throw new TRPCError({ code: "BAD_GATEWAY", message: AI_UNAVAILABLE });
+        }
+      }),
+
+    draftNarrative: makerProcedure
+      .input(z.object({ applicationId: z.number().int().positive(), profile: bprsProfileSchema }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        try {
+          return await draftBprsNarrative(toSnapshot(application), input.profile);
+        } catch {
+          throw new TRPCError({ code: "BAD_GATEWAY", message: AI_UNAVAILABLE });
+        }
+      }),
+
+    compareScores: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
+        const bprs = computeBprsScore(application.bprsProfile ?? {}, toBprsApplication(application));
+        return explainScoreComparison({
+          ssci: assessment ? { totalScore: Number(assessment.totalScore), classification: assessment.classification } : null,
+          bprs,
+        });
+      }),
   }),
 
   aiAssist: router({

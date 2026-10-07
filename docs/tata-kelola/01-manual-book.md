@@ -58,6 +58,19 @@ Admin dan checker **wajib** mengaktifkan autentikasi dua faktor (2FA). SuperAdmi
 2. Tekan **Lakukan Penilaian SSCI**. Jika pemeriksaan data menemukan masalah tingkat tinggi atau sedang (misalnya NIK tidak 16 digit), perbaiki datanya atau isi **catatan konfirmasi**. Catatan ini tersimpan dan tercantum di laporan.
 3. Gunakan **Asisten AI Penilaian** bila perlu: konsistensi data, kesesuaian syariah (merujuk fatwa DSN-MUI), dan ringkasan komite. Hasil AI adalah catatan pendukung dan tidak mengubah skor.
 
+### 3.3 Format Excel BPRS (Skoring Fluktuatif UMKM)
+Panel **Format Excel BPRS** di halaman detail mengisi otomatis file Excel skoring yang selama ini dipakai BPRS.
+1. Data SSCI (identitas, alamat, HP, plafon, tenor, margin, akad, tujuan, omzet, biaya usaha, angsuran existing, lama usaha) terisi sendiri.
+2. Lengkapi tab **Identitas**, **Tempat tinggal & usaha**, **Bank & pembiayaan**, **Agunan & mitigasi**. Pilihan jawaban sama persis dengan dropdown di Excel.
+3. Tab **Rekening koran**: ketik mutasi 3 bulan (satu nominal per baris) atau unggah foto halaman rekening koran lalu tekan **Baca** (AI). Periksa hasilnya, tekan **Pakai hasil ini**, lalu simpan.
+4. Tab **Narasi**: tombol **Buat draf narasi dengan AI** menyusun latar belakang, pengalaman usaha, dan indikator reputasi tanpa nama dan NIK. AO wajib menyunting.
+5. Perhatikan kotak **Periksa sebelum mengunduh** (isian yang saling bertentangan) dan **Estimasi skor format BPRS** dibandingkan skor SSCI. Tombol **Jelaskan perbedaan skor** memberi penjelasan singkat.
+6. Tekan **Simpan isian**, lalu **Unduh Excel BPRS**. Excel menghitung ulang skor, rating, dan jadwal angsuran saat file dibuka. Nilai resmi adalah yang tampil di Excel.
+
+Setiap penyimpanan dan pengunduhan tercatat di log audit (`BPRS_PROFILE_UPDATED`, `BPRS_EXCEL_EXPORTED`). File berisi NIK lengkap, jadi simpan sesuai kebijakan data BPRS.
+
+Template Fix Income (karyawan) belum didukung karena rumus skor akhirnya rusak (`#REF!`) di file asli BPRS.
+
 ## 4. Panduan Checker
 
 1. **Verifikasi dokumen** yang diunggah maker.
