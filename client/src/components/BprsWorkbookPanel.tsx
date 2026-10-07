@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { trpc } from "@/lib/trpc";
-import { BPRS_OPTIONS, MAX_STATEMENT_ROWS, type BprsOptionKey, type BprsProfile } from "@shared/bprsTemplate";
+import { BPRS_OPTIONS, BPRS_TEMPLATE_LABELS, MAX_STATEMENT_ROWS, type BprsOptionKey, type BprsProfile, type BprsTemplateKind } from "@shared/bprsTemplate";
 import { AlertTriangle, CheckCircle2, FileScan, FileSpreadsheet, Loader2, Plus, Save, Sparkles, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
@@ -63,6 +63,28 @@ const BANK_SELECT: SelectField[] = [
   { key: "jenisMargin", label: "Jenis margin" },
   { key: "rpcPersen", label: "% RPC dari laba bersih" },
 ];
+const PEKERJAAN_SELECT: SelectField[] = [
+  { key: "statusKaryawan", label: "Status karyawan" },
+  { key: "bidangPekerjaan", label: "Bidang usaha tempat bekerja" },
+  { key: "bonafiditas", label: "Bonafiditas perusahaan" },
+  { key: "suratKeteranganBekerja", label: "Surat keterangan bekerja" },
+  { key: "slipGaji", label: "Slip gaji" },
+  { key: "rekeningGaji", label: "Rekening gaji" },
+  { key: "mouInstansi", label: "MoU instansi dengan BPRS" },
+  { key: "suratKuasaPotongGaji", label: "Surat kuasa potong gaji" },
+  { key: "potonganGaji", label: "Persentase potongan gaji" },
+  { key: "statusTempatTinggal", label: "Kepemilikan tempat tinggal" },
+  { key: "reputasiFix", label: "Reputasi di tempat kerja dan tempat tinggal" },
+];
+const PEKERJAAN_TEXT: TextField[] = [
+  { key: "gajiBulanan", label: "Gaji bulanan / THP (Rp)", type: "number" },
+  { key: "uangLembur", label: "Uang lembur (Rp)", type: "number" },
+  { key: "pendapatanTetapLain", label: "Pendapatan tetap lainnya (Rp)", type: "number" },
+  { key: "namaInstansi", label: "Nama instansi / perusahaan" },
+  { key: "alamatInstansi", label: "Alamat perusahaan" },
+  { key: "nomorSk", label: "Nomor SK pengangkatan" },
+  { key: "tanggalSk", label: "Tanggal SK" },
+];
 const MITIGASI_SELECT: SelectField[] = [
   { key: "pengikatan", label: "Mitigasi risiko hukum" },
   { key: "asuransiJiwa", label: "Mitigasi risiko kematian" },
@@ -70,7 +92,11 @@ const MITIGASI_SELECT: SelectField[] = [
 ];
 
 const rp = (n: number) => `Rp ${Math.round(n).toLocaleString("id-ID")}`;
-const optionLabel = (key: BprsOptionKey, value: string) => (key === "rpcPersen" ? `${Number(value) * 100}%` : value.trim());
+const optionLabel = (key: BprsOptionKey, value: string) => {
+  if (key === "rpcPersen" || key === "potonganGaji") return `${Math.round(Number(value) * 100)}%`;
+  if (key === "template") return BPRS_TEMPLATE_LABELS[value as BprsTemplateKind] ?? value;
+  return value.trim();
+};
 
 const parseAmounts = (text: string) =>
   text.split(/[\n,;]+/).map(s => Number(s.replace(/[^\d]/g, ""))).filter(n => Number.isFinite(n) && n > 0);
@@ -220,7 +246,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
   const renderSelect = ({ key, label }: SelectField) => (
     <div key={key} className="space-y-1.5">
       <Label className="text-xs">{label}</Label>
-      <Select value={(profile[key] as string | undefined) ?? ""} onValueChange={v => update(key, v as never)} disabled={!editable}>
+      <Select value={key === "template" ? template : (profile[key] as string | undefined) ?? ""} onValueChange={v => update(key, v as never)} disabled={!editable}>
         <SelectTrigger className="w-full"><SelectValue placeholder="Pilih" /></SelectTrigger>
         <SelectContent>
           {BPRS_OPTIONS[key].map(option => <SelectItem key={option} value={option}>{optionLabel(key, option)}</SelectItem>)}
@@ -243,6 +269,9 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
 
   const score = query.data?.score;
   const checks = query.data?.checks ?? [];
+  const template: BprsTemplateKind = (profile.template as BprsTemplateKind | undefined) ?? query.data?.defaultTemplate ?? "fluktuatif";
+  const isFix = template === "fix_income";
+  const templateChanged = query.data != null && template !== query.data.template;
 
   return (
     <Card>
@@ -253,7 +282,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
             <div>
               <CardTitle className="text-xl">Format Excel BPRS</CardTitle>
               <CardDescription>
-                Mengisi otomatis file "Skoring Fluktuatif Income UMKM" yang biasa dipakai BPRS. Data SSCI langsung dipakai; isian di bawah melengkapi kolom yang hanya ada di format BPRS. Rumus, dropdown, dan rating di Excel tetap berjalan seperti biasa.
+                Mengisi otomatis file "{BPRS_TEMPLATE_LABELS[template]}" yang biasa dipakai BPRS. Data SSCI langsung dipakai; isian di bawah melengkapi kolom yang hanya ada di format BPRS. Rumus, dropdown, dan rating di Excel tetap berjalan seperti biasa.
               </CardDescription>
             </div>
           </div>
@@ -328,9 +357,19 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
           <p className="flex items-center gap-2 text-sm text-emerald-800"><CheckCircle2 className="h-4 w-4" />Tidak ada isian yang saling bertentangan.</p>
         )}
 
+        <div className="grid gap-3 rounded-xl border border-border p-4 sm:grid-cols-[minmax(0,320px)_1fr] sm:items-end">
+          {renderSelect({ key: "template", label: "Template Excel BPRS" })}
+          <p className="text-xs text-muted-foreground">
+            Bawaan mengikuti sumber penghasilan pengajuan: penghasilan tetap memakai Fix Income, selain itu Fluktuatif UMKM.
+            {templateChanged && " Simpan isian agar estimasi skor dihitung dengan template yang dipilih."}
+          </p>
+        </div>
+
         {query.data && (
           <p className="text-xs text-muted-foreground">
-            Diisi otomatis dari SSCI: identitas, alamat, HP, plafon, tenor, margin, akad ({query.data.derived.akad ?? "-"}), tujuan, omzet, biaya usaha, angsuran existing, dan lama usaha ({query.data.derived.lamaUsaha}).
+            {isFix
+              ? <>Diisi otomatis dari SSCI: identitas, alamat, HP, plafon, tenor, margin, akad ({query.data.derived.akad ?? "-"}), tujuan, angsuran existing, dan gaji (dari pendapatan bulanan jika belum diisi).</>
+              : <>Diisi otomatis dari SSCI: identitas, alamat, HP, plafon, tenor, margin, akad ({query.data.derived.akad ?? "-"}), tujuan, omzet, biaya usaha, angsuran existing, dan lama usaha ({query.data.derived.lamaUsaha}).</>}
             {!editable && " Isian hanya dapat diubah oleh maker atau admin sebelum pengajuan diputuskan."}
           </p>
         )}
@@ -338,7 +377,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
         <Tabs defaultValue="identitas">
           <TabsList className="flex h-auto flex-wrap">
             <TabsTrigger value="identitas">Identitas</TabsTrigger>
-            <TabsTrigger value="usaha">Tempat tinggal & usaha</TabsTrigger>
+            <TabsTrigger value="usaha">{isFix ? "Pekerjaan & gaji" : "Tempat tinggal & usaha"}</TabsTrigger>
             <TabsTrigger value="bank">Bank & pembiayaan</TabsTrigger>
             <TabsTrigger value="rekening">Rekening koran</TabsTrigger>
             <TabsTrigger value="agunan">Agunan & mitigasi</TabsTrigger>
@@ -347,18 +386,27 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
           </TabsList>
 
           <TabsContent value="identitas" className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {IDENTITAS_SELECT.map(renderSelect)}
+            {IDENTITAS_SELECT.map(f => (isFix && f.key === "pendidikan" ? { ...f, key: "pendidikanFix" as const } : f)).map(renderSelect)}
             {IDENTITAS_TEXT.map(renderText)}
           </TabsContent>
 
           <TabsContent value="usaha" className="mt-4 grid gap-4 sm:grid-cols-2">
-            {USAHA_SELECT.map(renderSelect)}
-            {renderText({ key: "kas", label: "Kas saat ini (Rp)", type: "number" })}
-            {renderText({ key: "biayaRumahTangga", label: "Biaya rumah tangga per bulan (Rp)", type: "number" })}
+            {isFix ? (
+              <>
+                {PEKERJAAN_SELECT.map(renderSelect)}
+                {PEKERJAAN_TEXT.map(renderText)}
+              </>
+            ) : (
+              <>
+                {USAHA_SELECT.map(renderSelect)}
+                {renderText({ key: "kas", label: "Kas saat ini (Rp)", type: "number" })}
+                {renderText({ key: "biayaRumahTangga", label: "Biaya rumah tangga per bulan (Rp)", type: "number" })}
+              </>
+            )}
           </TabsContent>
 
           <TabsContent value="bank" className="mt-4 grid gap-4 sm:grid-cols-2">
-            {BANK_SELECT.map(renderSelect)}
+            {BANK_SELECT.filter(f => !(isFix && f.key === "rpcPersen")).map(renderSelect)}
             {renderText({ key: "pembiayaanKe", label: "Permohonan pembiayaan ke-", type: "number" })}
           </TabsContent>
 
@@ -514,7 +562,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
             <p className="text-xs text-muted-foreground">AI hanya menyusun draf dari data pengajuan tanpa nama dan NIK. AO tetap memeriksa dan menyunting isinya.</p>
             {([
               ["latarBelakang", "Latar belakang nasabah"],
-              ["pengalamanUsaha", "Pengalaman usaha nasabah"],
+              ["pengalamanUsaha", isFix ? "Pengalaman bekerja nasabah" : "Pengalaman usaha nasabah"],
               ["indikatorReputasi", "Indikator reputasi"],
             ] as const).map(([key, label]) => (
               <div key={key} className="space-y-1.5">

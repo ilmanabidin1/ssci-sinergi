@@ -6,13 +6,26 @@ import {
   BPRS_POINTS,
   bprsProfileSchema,
   checkBprsProfile,
+  checkFixIncomeProfile,
   computeBprsScore,
+  computeFixIncomeScore,
+  templateFor,
   lamaUsahaFromMonths,
   type BprsProfile,
 } from "@shared/bprsTemplate";
 import { ENV } from "./_core/env";
 import { fitStatementRows, readBankStatement, ruleScoreComparison } from "./aiAssist";
-import { FLUKTUATIF_TEMPLATE_PATH, SHEET, buildFluktuatifCells, fillFluktuatifWorkbook, type BprsExportApplication } from "./bprsExcel";
+import {
+  BPRS_TEMPLATES,
+  FIX_SHEET,
+  FLUKTUATIF_TEMPLATE_PATH,
+  SHEET,
+  buildFixIncomeCells,
+  buildFluktuatifCells,
+  fillBprsWorkbook,
+  fillFluktuatifWorkbook,
+  type BprsExportApplication,
+} from "./bprsExcel";
 import { excelDateSerial, stripFormulaCaches, writeCells } from "./xlsxPatch";
 
 const app: BprsExportApplication = {
@@ -263,5 +276,91 @@ describe("ruleScoreComparison", () => {
     const text = ruleScoreComparison({ ssci: { totalScore: 88, classification: "Sangat Layak" }, bprs });
     expect(text).toContain("Skor SSCI 88.00");
     expect(text).toContain("riwayat slik (belum diisi)");
+  });
+});
+
+describe("Fix Income template", () => {
+  const fixApp: BprsExportApplication = {
+    ...app,
+    customerName: "Contoh Karyawan",
+    monthlyRevenue: 3_968_000,
+    monthlyExpenses: 1_000_000,
+    existingDebt: 0,
+    collateralValue: 0,
+    requestedAmount: 45_000_000,
+    financingTenor: 60,
+    marginRate: 96,
+    createdAt: "2025-05-15",
+  };
+  const fixProfile: BprsProfile = {
+    tanggalLahir: "1999-12-28", statusPerkawinan: "Lajang", tanggungan: "Tidak Mempunyai Tanggungan", pendidikanFix: "SMA",
+    statusTempatTinggal: "Milik sendiri", statusKaryawan: "Tetap Swasta", reputasiFix: "Dikenal baik", suratKeteranganBekerja: "Tidak Ada",
+    slipGaji: "Ada", rekeningGaji: "Ada", hubunganBank: "Nasabah/debitur bank 1 - 3 tahun", riwayatSlik: "Tidak pernah terlambat 12 bulan terakhir",
+    pembiayaanKe: 2, potonganGaji: "0.4", gajiBulanan: 3_968_000, pengikatan: "Pengikatan Notaril", asuransiJiwa: "Asuransi Jiwa Syariah",
+    asuransiAgunan: "Tidak Diasuransikan",
+    agunanTanah: [{ jenisSurat: "Sertipikat Hak Milik", nomor: "1", atasNama: "X", luasTanah: 73, nilaiPasar: 198_142_857, persen: 0.7, pengikatan: "SKMHT" }],
+  };
+  const fixNow = new Date("2025-05-15T03:00:00Z");
+
+  // Acuan: file hasil fillBprsWorkbook("fix_income", ...) dihitung ulang dengan LibreOffice Calc.
+  it("matches Excel for the BPRS sample profile (78.3, BBB+, Layak)", () => {
+    const result = computeFixIncomeScore(fixProfile, fixApp, fixNow);
+    expect(result.score).toBeCloseTo(78.3, 6);
+    expect(result.rating).toBe("BBB+");
+    expect(result.coverageRatio).toBeCloseTo(2.6993, 3);
+  });
+
+  it("matches Excel when there is an existing installment", () => {
+    const result = computeFixIncomeScore(fixProfile, { ...fixApp, existingDebt: 900_000 }, fixNow);
+    expect(result.coverageRatio).toBeCloseTo(1.67426, 4);
+    expect(result.score).toBeCloseTo(78.3, 6);
+  });
+
+  it("cuts the score to 70% when a non-PNS tenor runs past retirement, as Excel does", () => {
+    const result = computeFixIncomeScore({ ...fixProfile, tanggalLahir: "1975-01-10" }, { ...fixApp, financingTenor: 120, marginRate: 192 }, fixNow);
+    expect(result.score).toBeCloseTo(53.4975, 4);
+    expect(result.status).toBe("Tidak Layak");
+    expect(checkFixIncomeProfile({ ...fixProfile, tanggalLahir: "1975-01-10" }, { ...fixApp, financingTenor: 120 }, fixNow).map(c => c.message).join(" "))
+      .toContain("melewati usia pensiun");
+  });
+
+  it("picks the template from the income source unless the analyst overrides it", () => {
+    expect(templateFor({}, "fixed")).toBe("fix_income");
+    expect(templateFor({}, "non_fixed")).toBe("fluktuatif");
+    expect(templateFor({ template: "fluktuatif" }, "fixed")).toBe("fluktuatif");
+  });
+
+  it("writes the existing installment as a zero-margin 12-month facility the template can read", () => {
+    const cells = buildFixIncomeCells({ ...fixApp, existingDebt: 900_000 }, fixProfile, fixNow);
+    const keuangan = cells[FIX_SHEET.keuangan]!;
+    expect(keuangan.F74).toBe(10_800_000);
+    expect(keuangan.L74).toBe(0);
+    expect(keuangan.Y74).toBe("Efektif");
+    expect(keuangan.T74).toEqual({ date: "2026-05-15" });
+    expect(cells[FIX_SHEET.nonKeuangan]!.N34).toBe(198_142_857);
+    expect(cells[FIX_SHEET.usulan]!.J55).toBeCloseTo(0.016, 10);
+  });
+
+  it("fills the template without losing dropdowns", async () => {
+    const template = await readFile(BPRS_TEMPLATES.fix_income.path);
+    const { buffer, filename } = await fillBprsWorkbook("fix_income", fixApp, fixProfile, fixNow);
+    const count = async (data: Buffer) => {
+      const zip = await JSZip.loadAsync(data);
+      let total = 0;
+      for (const name of Object.keys(zip.files).filter(n => n.startsWith("xl/worksheets/sheet"))) {
+        total += ((await zip.file(name)!.async("string")).match(/<x14:dataValidation /g) ?? []).length;
+      }
+      return total;
+    };
+    expect(await count(buffer)).toBe(await count(template));
+    expect(filename(7)).toBe("SSCI-00007 Skoring Fix Income.xlsx");
+  });
+
+  it("ships a template without sample customer, staff or third-party data", async () => {
+    const zip = await JSZip.loadAsync(await readFile(BPRS_TEMPLATES.fix_income.path));
+    for (const name of Object.keys(zip.files).filter(n => /\.(xml|rels)$/.test(n))) {
+      const xml = await zip.file(name)!.async("string");
+      expect(xml, name).not.toMatch(/Fitri|3204166812990002|Santi|Fengtay|Heru Sukmawan|Linda Hasanah|Hardiman|Nurahman|Syafi|Lampani|Walelang|09020299765|Zaenal/i);
+    }
   });
 });

@@ -166,6 +166,10 @@ export class XlsxWorkbook {
     return new XlsxWorkbook(zip, sheetPaths);
   }
 
+  filePaths(): string[] {
+    return Object.keys(this.zip.files);
+  }
+
   sheetNames(): string[] {
     return Array.from(this.sheetPaths.keys());
   }

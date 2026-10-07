@@ -1,23 +1,26 @@
 /**
  * Membuat template Excel BPRS yang bersih dari file contoh BPRS.
  *
- *   npx tsx scripts/build-bprs-template.ts <file-asli.xlsx>
+ *   npx tsx scripts/build-bprs-template.ts fluktuatif <file-asli.xlsx>
+ *   npx tsx scripts/build-bprs-template.ts fix_income <file-asli.xlsx>
  *
- * Semua sel isian dikosongkan, nilai cache rumus dihapus, dan teks yang tidak
- * lagi dipakai di sharedStrings diganti kosong, sehingga data nasabah contoh
- * tidak ikut tersimpan di repositori.
+ * Semua sel isian dikosongkan, nilai cache rumus dihapus, teks yang tidak lagi
+ * dipakai di sharedStrings diganti kosong, dan path tautan eksternal (yang bisa
+ * memuat nama nasabah atau pegawai) dinetralkan, sehingga data contoh tidak ikut
+ * tersimpan di repositori.
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import { FLUKTUATIF_INPUT_CELLS, FLUKTUATIF_TEMPLATE_PATH } from "../server/bprsExcel";
+import { BPRS_TEMPLATES } from "../server/bprsExcel";
 import { XlsxWorkbook, stripFormulaCaches } from "../server/xlsxPatch";
 
 async function main() {
-  const source = process.argv[2];
-  if (!source) throw new Error("Pakai: npx tsx scripts/build-bprs-template.ts <file-asli.xlsx>");
+  const [kind, source] = process.argv.slice(2);
+  const spec = BPRS_TEMPLATES[kind as keyof typeof BPRS_TEMPLATES];
+  if (!spec || !source) throw new Error("Pakai: npx tsx scripts/build-bprs-template.ts <fluktuatif|fix_income> <file-asli.xlsx>");
   const workbook = await XlsxWorkbook.load(await readFile(source));
 
-  for (const [sheet, cells] of Object.entries(FLUKTUATIF_INPUT_CELLS)) {
+  for (const [sheet, cells] of Object.entries(spec.inputCells)) {
     await workbook.write(sheet, Object.fromEntries(cells.map(c => [c, null])), { overwriteFormulas: true });
   }
   await workbook.transformAllSheets(stripFormulaCaches);
@@ -41,10 +44,15 @@ async function main() {
   // Lokasi folder asli di komputer BPRS (berisi nama pegawai) tidak perlu ikut.
   await workbook.transformFile("xl/workbook.xml", xml =>
     xml.replace(/<mc:AlternateContent\b[^>]*>(?:(?!<\/mc:AlternateContent>)[\s\S])*?x15ac:absPath[\s\S]*?<\/mc:AlternateContent>/, ""));
+  for (const path of workbook.filePaths().filter(p => /^xl\/externalLinks\/_rels\/.*\.rels$/.test(p))) {
+    await workbook.transformFile(path, xml => xml.replace(/Target="[^"]*"/g, 'Target="file:///tautan-eksternal.xlsx"'));
+  }
+  await workbook.transformFile("docProps/core.xml", xml =>
+    xml.replace(/<cp:lastModifiedBy>[\s\S]*?<\/cp:lastModifiedBy>/, "<cp:lastModifiedBy>SSCI</cp:lastModifiedBy>"));
   await workbook.forceRecalculation();
-  await mkdir(dirname(FLUKTUATIF_TEMPLATE_PATH), { recursive: true });
-  await writeFile(FLUKTUATIF_TEMPLATE_PATH, await workbook.toBuffer());
-  console.log(`Template ditulis ke ${FLUKTUATIF_TEMPLATE_PATH} (${blanked} teks contoh dikosongkan)`);
+  await mkdir(dirname(spec.path), { recursive: true });
+  await writeFile(spec.path, await workbook.toBuffer());
+  console.log(`Template ditulis ke ${spec.path} (${blanked} teks contoh dikosongkan)`);
 }
 
 main().catch(error => {

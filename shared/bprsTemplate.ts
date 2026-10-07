@@ -60,6 +60,19 @@ export const BPRS_OPTIONS = {
   ],
   pengikatanTanah: ["APHT", "SKMHT&APHT", "SKMHT", "Legalisasi", "Warmeking", "Di Bawah Tangan"],
   pengikatanKendaraan: ["Fidusia", "Legalisasi", "Warmeking", "Di Bawah Tangan"],
+  // Khusus template Fix Income (karyawan)
+  template: ["fluktuatif", "fix_income"],
+  pendidikanFix: ["SMA", "D1 - D4", "S1", "S2 - S3"],
+  reputasiFix: ["Tidak baik", "Tidak dikenal", "Dikenal namum kurang bersosialisasi", "Dikenal baik"],
+  statusKaryawan: ["TNI/POLRI", "PNS", "Kontrak Swasta", "Kontrak ASN/PPPK", "Tetap Swasta"],
+  bidangPekerjaan: ["Perdagangan", "Jasa", "Pendidikan", "Kesehatan", "Pemerintahan"],
+  bonafiditas: ["Bonafide", "Cukup Bonafide", "Kurang Bonafide"],
+  suratKeteranganBekerja: ["Tidak Ada", "Ada"],
+  slipGaji: ["Tidak Ada", "Ada"],
+  rekeningGaji: ["Tidak Ada", "Ada"],
+  mouInstansi: ["Tidak Ada", "Ada"],
+  suratKuasaPotongGaji: ["Tidak Ada", "Ada"],
+  potonganGaji: ["0.3", "0.35", "0.4"],
 } as const;
 
 export type BprsOptionKey = keyof typeof BPRS_OPTIONS;
@@ -121,6 +134,26 @@ export const bprsProfileSchema = z.object({
   jenisPenggunaan: opt("jenisPenggunaan"),
   jenisMargin: opt("jenisMargin"),
   rpcPersen: opt("rpcPersen"),
+  // Template Fix Income (karyawan)
+  template: opt("template"),
+  pendidikanFix: opt("pendidikanFix"),
+  reputasiFix: opt("reputasiFix"),
+  statusKaryawan: opt("statusKaryawan"),
+  bidangPekerjaan: opt("bidangPekerjaan"),
+  bonafiditas: opt("bonafiditas"),
+  suratKeteranganBekerja: opt("suratKeteranganBekerja"),
+  slipGaji: opt("slipGaji"),
+  rekeningGaji: opt("rekeningGaji"),
+  mouInstansi: opt("mouInstansi"),
+  suratKuasaPotongGaji: opt("suratKuasaPotongGaji"),
+  potonganGaji: opt("potonganGaji"),
+  gajiBulanan: money,
+  uangLembur: money,
+  pendapatanTetapLain: money,
+  namaInstansi: text(),
+  alamatInstansi: text(500),
+  nomorSk: text(100),
+  tanggalSk: text(50),
   // Aspek Non Keuangan
   latarBelakang: text(3000),
   pengalamanUsaha: text(3000),
@@ -564,4 +597,203 @@ export function checkBprsProfile(profile: BprsProfile, app: BprsApplicationData,
     checks.push({ severity: "rendah", message: `${missingCore.length} isian penilaian utama belum diisi. Skor format BPRS akan lebih rendah dari seharusnya.` });
   }
   return checks;
+}
+
+// ---------------------------------------------------------------------------
+// Template Fix Income (karyawan, dengan agunan)
+// ---------------------------------------------------------------------------
+
+export type BprsTemplateKind = (typeof BPRS_OPTIONS.template)[number];
+
+export const BPRS_TEMPLATE_LABELS: Record<BprsTemplateKind, string> = {
+  fluktuatif: "Skoring Fluktuatif Income UMKM",
+  fix_income: "Skoring Fix Income dengan Agunan",
+};
+
+/** Template mengikuti sumber penghasilan pengajuan, kecuali analis memilih lain. */
+export function templateFor(profile: BprsProfile, incomeSourceType: string | null | undefined): BprsTemplateKind {
+  if (profile.template === "fluktuatif" || profile.template === "fix_income") return profile.template;
+  return incomeSourceType === "fixed" ? "fix_income" : "fluktuatif";
+}
+
+/** Nilai K dari sheet Parameter template Fix Income. */
+export const FIX_POINTS: Record<string, PointsTable> = {
+  usia: { "20 - 30 tahun": 3.75, "31 - 40 tahun": 3, "41 - 50 tahun": 2.25, "51 - 55 tahun": 1.5, "51 - 60 tahun": 1.5 },
+  statusPerkawinan: { Menikah: 3, Lajang: 2.4, Cerai: 1.95 },
+  tanggungan: { "> 5 Orang": 0.75, "3 - 5 Orang": 1.5, " 1 - 2 Orang": 2.25, "Tidak Mempunyai Tanggungan": 3 },
+  pendidikanFix: { SMA: 0.75, "D1 - D4": 1.5, S1: 2.25, "S2 - S3": 3 },
+  statusTempatTinggal: { Sewa: 1.25, "Lain-lain (Menumpang)": 2.5, Angsuran: 3.75, "Milik sendiri": 5 },
+  statusKaryawan: { "TNI/POLRI": 1, PNS: 5, "Kontrak Swasta": 2, "Kontrak ASN/PPPK": 3, "Tetap Swasta": 4 },
+  reputasiFix: { "Tidak baik": 0, "Tidak dikenal": 1.2, "Dikenal namum kurang bersosialisasi": 4.5, "Dikenal baik": 6 },
+  usiaPensiun: { "<5 Tahun": 1.25, "5 Tahun - 15 Tahun": 3.125, ">15 Tahun": 4.6875, "Masa kerja panjang": 6 },
+  suratKeteranganBekerja: { "Tidak Ada": 0.4, Ada: 3 },
+  slipGaji: { "Tidak Ada": 0.4, Ada: 3 },
+  rekeningGaji: { "Tidak Ada": 0.4, Ada: 3 },
+  hubunganBank: Object.fromEntries(BPRS_OPTIONS.hubunganBank.map((o, i) => [o, [2, 2.5, 5, 6.25][i]!])),
+  riwayatSlik: Object.fromEntries(BPRS_OPTIONS.riwayatSlik.map((o, i) => [o, [0, 1.75, 5.25, 7][i]!])),
+  rpc: { "RPC tidak memadai": 0, "RPC memadai": 9, "RPC baik": 13.5, "RPC sangat baik": 18 },
+  jangkaWaktu: { ">8 Tahun": 1, "7 - 8 Tahun": 2, "5 - 6 Tahun": 3, "3 - 4 Tahun": 4, "1 - 2 Tahun": 5 },
+  pembiayaanKe: { "1-2": 2, "3-4": 3, ">=5": 4 },
+  agunan: { "100% s.d 125%": 5, ">125% s.d 150%": 7.5, ">150%": 10, "<100%": -30 },
+  pengikatan: { "Tidak Pengikatan Notaril": 1, "Pengikatan Notaril": 2 },
+  asuransiJiwa: { "Tidak Diasuransikan": 1, "Asuransi Jiwa Syariah": 2 },
+  asuransiAgunan: { "Tidak Diasuransikan": 1, "Asuransi Kerugian Syariah": 2 },
+};
+
+const FIX_LABELS: Record<string, string> = {
+  ...BPRS_CRITERIA_LABELS,
+  pendidikanFix: "Pendidikan terakhir",
+  reputasiFix: "Reputasi",
+  statusKaryawan: "Status karyawan",
+  usiaPensiun: "Sisa masa kerja sampai pensiun",
+  suratKeteranganBekerja: "Surat keterangan bekerja",
+  slipGaji: "Slip gaji",
+  rekeningGaji: "Rekening gaji",
+};
+
+/** TNI/POLRI dan PNS memakai aturan PNS (pensiun 60 tahun). */
+export function isPnsRules(statusKaryawan: string | undefined): boolean {
+  return statusKaryawan === "TNI/POLRI" || statusKaryawan === "PNS";
+}
+
+export function retirementAge(statusKaryawan: string | undefined): number {
+  return isPnsRules(statusKaryawan) ? 60 : 55;
+}
+
+function fixAgeBucket(age: number, pns: boolean): string | null {
+  if (age >= 21 && age <= 30) return "20 - 30 tahun";
+  if (age >= 31 && age <= 40) return "31 - 40 tahun";
+  if (age >= 41 && age <= 50) return "41 - 50 tahun";
+  if (age >= 51 && age <= (pns ? 60 : 55)) return pns ? "51 - 60 tahun" : "51 - 55 tahun";
+  return null;
+}
+
+function retirementBucket(yearsLeft: number, pns: boolean): string {
+  if (yearsLeft < 5) return "<5 Tahun";
+  if (yearsLeft <= 15) return "5 Tahun - 15 Tahun";
+  if (yearsLeft <= (pns ? 30 : 25)) return ">15 Tahun";
+  return "Masa kerja panjang";
+}
+
+/** Gaji pokok (THP) yang dipakai rumus RPC: isian profil, atau pendapatan bulanan SSCI. */
+export function fixSalary(profile: BprsProfile, app: BprsApplicationData): number {
+  return profile.gajiBulanan ?? app.monthlyRevenue;
+}
+
+export function computeFixIncomeScore(profile: BprsProfile, app: BprsApplicationData, referenceDate = new Date()): BprsScoreResult {
+  const criteria: BprsCriterionResult[] = [];
+  const missing: string[] = [];
+  const add = (key: string, answer: string | null | undefined, source: BprsCriterionResult["source"]) => {
+    const table = FIX_POINTS[key]!;
+    const maxPoints = Math.max(...Object.values(table));
+    const filled = answer != null && answer in table;
+    if (!filled) missing.push(FIX_LABELS[key]!);
+    criteria.push({ key, label: FIX_LABELS[key]!, answer: filled ? answer! : null, points: filled ? table[answer!]! : 0, maxPoints, source: filled ? source : "belum_diisi" });
+  };
+
+  const pns = isPnsRules(profile.statusKaryawan);
+  const age = profile.tanggalLahir ? ageOn(profile.tanggalLahir, referenceDate) : null;
+  add("usia", age == null ? null : fixAgeBucket(age, pns), "profil");
+  add("statusPerkawinan", profile.statusPerkawinan, "profil");
+  add("tanggungan", profile.tanggungan, "profil");
+  add("pendidikanFix", profile.pendidikanFix, "profil");
+  add("statusTempatTinggal", profile.statusTempatTinggal, "profil");
+  add("statusKaryawan", profile.statusKaryawan, "profil");
+  add("reputasiFix", profile.reputasiFix, "profil");
+  const yearsLeft = age == null || !profile.statusKaryawan ? null : retirementAge(profile.statusKaryawan) - age;
+  add("usiaPensiun", yearsLeft == null ? null : retirementBucket(yearsLeft, pns), "profil");
+  add("suratKeteranganBekerja", profile.suratKeteranganBekerja, "profil");
+  add("slipGaji", profile.slipGaji, "profil");
+  add("rekeningGaji", profile.rekeningGaji, "profil");
+  add("hubunganBank", profile.hubunganBank, "profil");
+  add("riwayatSlik", profile.riwayatSlik, "profil");
+
+  // Usulan Pembiayaan AA54..AA59: RPC = gaji / (angsuran existing + angsuran baru), batas minimal = 1 / 60%.
+  const salary = fixSalary(profile, app);
+  const installment = newInstallment(app);
+  const totalInstallments = app.existingDebt + installment;
+  const coverageRatio = totalInstallments > 0 ? salary / totalInstallments : 0;
+  const coverageThreshold = 1 / 0.6;
+  const rpcAdequate = salary > 0 && coverageRatio >= coverageThreshold;
+  let rpcBand = "RPC tidak memadai";
+  if (rpcAdequate) {
+    if (coverageRatio > coverageThreshold + 3.75) rpcBand = "RPC sangat baik";
+    else if (coverageRatio > coverageThreshold + 1.75) rpcBand = "RPC baik";
+    else rpcBand = "RPC memadai";
+  }
+  add("rpc", rpcBand, "data_ssci");
+  add("jangkaWaktu", bucketTenor(app.financingTenor), "data_ssci");
+  const nth = profile.pembiayaanKe ?? 1;
+  add("pembiayaanKe", nth <= 2 ? "1-2" : nth < 5 ? "3-4" : ">=5", profile.pembiayaanKe ? "profil" : "data_ssci");
+  const collateral = collateralTotal(profile, app);
+  add("agunan", app.requestedAmount > 0 ? bucketCoverage(collateral / app.requestedAmount) : null, "data_ssci");
+  add("pengikatan", profile.pengikatan, "profil");
+  add("asuransiJiwa", profile.asuransiJiwa, "profil");
+  add("asuransiAgunan", profile.asuransiAgunan, "profil");
+
+  // Excel hanya menerapkan pemotongan jangka waktu > pensiun untuk non PNS (lihat Usulan AB82).
+  const beyondRetirement = !pns && yearsLeft != null && app.financingTenor > yearsLeft * 12;
+  const subtotal = criteria.reduce((sum, c) => sum + c.points, 0);
+  const penalized = !rpcAdequate || beyondRetirement;
+  const score = Math.max(0, penalized ? subtotal * 0.7 : subtotal);
+  const band = bprsRating(score);
+  return {
+    criteria,
+    subtotal,
+    rpcAdequate: rpcAdequate && !beyondRetirement,
+    coverageRatio,
+    coverageThreshold,
+    score,
+    rating: band.rating,
+    ratingLabel: band.label,
+    status: score >= 70 ? "Layak" : "Tidak Layak",
+    missing,
+    netProfit: salary,
+  };
+}
+
+export function checkFixIncomeProfile(profile: BprsProfile, app: BprsApplicationData, referenceDate = new Date()): BprsCheck[] {
+  const checks: BprsCheck[] = [];
+  const pns = isPnsRules(profile.statusKaryawan);
+  const age = profile.tanggalLahir ? ageOn(profile.tanggalLahir, referenceDate) : null;
+  if (age != null && fixAgeBucket(age, pns) == null) {
+    checks.push({ severity: "tinggi", message: `Usia nasabah ${age} tahun di luar tabel usia BPRS (21 sampai ${pns ? 60 : 55} tahun untuk ${pns ? "PNS/TNI/POLRI" : "non PNS"}). Skor usia di Excel akan #N/A.` });
+  }
+  if (age != null && profile.statusKaryawan) {
+    const monthsLeft = (retirementAge(profile.statusKaryawan) - age) * 12;
+    if (app.financingTenor > monthsLeft) {
+      checks.push({
+        severity: "tinggi",
+        message: pns
+          ? "Jangka waktu melewati usia pensiun. Excel BPRS tidak memotong skor untuk PNS/TNI/POLRI, tetapi hal ini perlu dipertimbangkan komite."
+          : "Jangka waktu melewati usia pensiun (55 tahun). Excel BPRS memotong skor menjadi 70%.",
+      });
+    }
+  }
+  if (profile.slipGaji === "Tidak Ada" && profile.rekeningGaji === "Tidak Ada") {
+    checks.push({ severity: "sedang", message: "Slip gaji dan rekening gaji sama-sama tidak ada. Penghasilan belum terverifikasi." });
+  }
+  if (profile.gajiBulanan != null && app.monthlyRevenue > 0 && Math.abs(profile.gajiBulanan - app.monthlyRevenue) / app.monthlyRevenue > 0.2) {
+    checks.push({ severity: "rendah", message: "Gaji di format BPRS berbeda lebih dari 20% dari pendapatan bulanan di SSCI." });
+  }
+  if (profile.riwayatSlik === "Belum memiliki kredit/Pembiayaan" && app.existingDebt > 0) {
+    checks.push({ severity: "tinggi", message: "SLIK diisi belum memiliki pembiayaan, padahal ada angsuran existing. Periksa iDeb SLIK." });
+  }
+  if (app.requestedAmount > 0 && collateralTotal(profile, app) < app.requestedAmount) {
+    checks.push({ severity: "tinggi", message: "Nilai agunan di bawah 100% plafon. Di Excel BPRS ini memberi nilai -30 pada skor agunan." });
+  }
+  const missingCore = (["statusKaryawan", "statusPerkawinan", "tanggungan", "pendidikanFix", "statusTempatTinggal", "reputasiFix", "riwayatSlik", "hubunganBank"] as const)
+    .filter(key => !profile[key]);
+  if (missingCore.length > 0) {
+    checks.push({ severity: "rendah", message: `${missingCore.length} isian penilaian utama belum diisi. Skor format BPRS akan lebih rendah dari seharusnya.` });
+  }
+  return checks;
+}
+
+export function scoreForTemplate(kind: BprsTemplateKind, profile: BprsProfile, app: BprsApplicationData, referenceDate = new Date()) {
+  return kind === "fix_income" ? computeFixIncomeScore(profile, app, referenceDate) : computeBprsScore(profile, app, referenceDate);
+}
+
+export function checksForTemplate(kind: BprsTemplateKind, profile: BprsProfile, app: BprsApplicationData, referenceDate = new Date()) {
+  return kind === "fix_income" ? checkFixIncomeProfile(profile, app, referenceDate) : checkBprsProfile(profile, app, referenceDate);
 }

@@ -28,8 +28,8 @@ import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema
 import { FinancialImportError, parseFinancialCsv } from "./financialImport";
 import { calculateMurabahahBreakdown } from "./murabahah";
 import { analyzeSurveyImage, decodeSurveyImage, storeSurveyImage, SURVEY_CONTENT_TYPES, SurveyUploadError, SurveyProviderError } from "./surveyAnalysis";
-import { AKAD_TO_BPRS, bprsProfileSchema, checkBprsProfile, computeBprsScore, lamaUsahaFromMonths } from "@shared/bprsTemplate";
-import { bprsWorkbookFilename, fillFluktuatifWorkbook, loadFluktuatifTemplate, type BprsExportApplication } from "./bprsExcel";
+import { AKAD_TO_BPRS, BPRS_TEMPLATE_LABELS, bprsProfileSchema, checksForTemplate, lamaUsahaFromMonths, scoreForTemplate, templateFor } from "@shared/bprsTemplate";
+import { fillBprsWorkbook, type BprsExportApplication } from "./bprsExcel";
 import { readFileSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 
@@ -1337,10 +1337,14 @@ export const appRouter = router({
         const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
         const profile = application.bprsProfile ?? {};
         const app = toBprsApplication(application);
+        const template = templateFor(profile, application.incomeSourceType);
         return {
           profile,
-          score: computeBprsScore(profile, app),
-          checks: checkBprsProfile(profile, app),
+          template,
+          templateLabel: BPRS_TEMPLATE_LABELS[template],
+          defaultTemplate: templateFor({}, application.incomeSourceType),
+          score: scoreForTemplate(template, profile, app),
+          checks: checksForTemplate(template, profile, app),
           derived: {
             lamaUsaha: lamaUsahaFromMonths(app.businessAge),
             akad: app.financingAkad ? AKAD_TO_BPRS[app.financingAkad] ?? null : null,
@@ -1366,16 +1370,19 @@ export const appRouter = router({
           metadata: { filledFields: Object.keys(input.profile).length },
         });
         const app = toBprsApplication(application);
-        return { score: computeBprsScore(input.profile, app), checks: checkBprsProfile(input.profile, app) };
+        const template = templateFor(input.profile, application.incomeSourceType);
+        return { score: scoreForTemplate(template, input.profile, app), checks: checksForTemplate(template, input.profile, app) };
       }),
 
     exportExcel: protectedProcedure
       .input(z.object({ applicationId: z.number().int().positive() }))
       .mutation(async ({ input, ctx }) => {
         const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
-        let buffer: Buffer;
+        const profile = application.bprsProfile ?? {};
+        const template = templateFor(profile, application.incomeSourceType);
+        let result: Awaited<ReturnType<typeof fillBprsWorkbook>>;
         try {
-          buffer = await fillFluktuatifWorkbook(await loadFluktuatifTemplate(), toBprsApplication(application), application.bprsProfile ?? {});
+          result = await fillBprsWorkbook(template, toBprsApplication(application), profile);
         } catch (error) {
           console.error("[bprsWorkbook] export failed", error);
           throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "File Excel BPRS gagal dibuat" });
@@ -1386,9 +1393,9 @@ export const appRouter = router({
           action: "BPRS_EXCEL_EXPORTED",
           entityType: "application",
           entityId: application.id,
-          metadata: { template: "fluktuatif-umkm" },
+          metadata: { template },
         });
-        return { filename: bprsWorkbookFilename(application.id), base64: buffer.toString("base64") };
+        return { filename: result.filename(application.id), base64: result.buffer.toString("base64") };
       }),
 
     readStatement: makerProcedure
@@ -1419,7 +1426,8 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
         const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
-        const bprs = computeBprsScore(application.bprsProfile ?? {}, toBprsApplication(application));
+        const profile = application.bprsProfile ?? {};
+        const bprs = scoreForTemplate(templateFor(profile, application.incomeSourceType), profile, toBprsApplication(application));
         return explainScoreComparison({
           ssci: assessment ? { totalScore: Number(assessment.totalScore), classification: assessment.classification } : null,
           bprs,

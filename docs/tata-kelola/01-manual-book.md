@@ -69,7 +69,9 @@ Panel **Format Excel BPRS** di halaman detail mengisi otomatis file Excel skorin
 
 Setiap penyimpanan dan pengunduhan tercatat di log audit (`BPRS_PROFILE_UPDATED`, `BPRS_EXCEL_EXPORTED`). File berisi NIK lengkap, jadi simpan sesuai kebijakan data BPRS.
 
-Template Fix Income (karyawan) belum didukung karena rumus skor akhirnya rusak (`#REF!`) di file asli BPRS.
+Ada dua template, dipilih otomatis dari sumber penghasilan pengajuan dan dapat diganti analis:
+- **Skoring Fluktuatif Income UMKM** untuk penghasilan tidak tetap (usaha).
+- **Skoring Fix Income dengan Agunan** untuk penghasilan tetap (karyawan). Tab **Pekerjaan & gaji** berisi status karyawan, slip gaji, rekening gaji, potongan gaji, gaji bulanan, dan data instansi. Jika tenor melewati usia pensiun (55 tahun untuk non PNS), Excel memotong skor menjadi 70%; untuk PNS/TNI/POLRI Excel tidak memotong, tetapi SSCI tetap memberi peringatan.
 
 ## 4. Panduan Checker
 
