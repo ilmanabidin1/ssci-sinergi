@@ -22,6 +22,7 @@ import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName
 import { isSameActor, maskNik } from "@shared/privacy";
 import { runSensitivity } from "./sensitivity";
 import { determineReviewTrack, evaluateExitGate } from "@shared/reviewTrack";
+import { computeCompleteness, syncLegalDocuments } from "@shared/workflow";
 import { buildEnrollment, clearLoginFailures, decryptSecret, encryptSecret, generateTotpSecret, isLoginLocked, recordLoginFailure, verifyTotp } from "./twoFactor";
 import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot, bankStatementInputSchema, readBankStatement, draftBprsNarrative, explainScoreComparison } from "./aiAssist";
 import { extractKtpOcr, KtpOcrInputError, KtpOcrProviderError, ktpOcrInputSchema } from "./ktpOcr";
@@ -666,6 +667,7 @@ export const appRouter = router({
         governanceQuality: z.enum(["excellent", "good", "fair", "poor"]),
         financialDataSource: z.enum(["laporan_keuangan", "omzet_harian", "mutasi_rekening", "dokumen_ai"]).optional(),
         financialDataNote: z.string().trim().max(1000).optional(),
+        bprsProfile: bprsProfileSchema.optional(),
       }))
       .mutation(async ({ input, ctx }) => {
         const moneyOrNull = (value: string | null | undefined) => (!value || value === "" ? null : value.toString());
@@ -808,6 +810,14 @@ export const appRouter = router({
         const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
         if (!application) {
           throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+        }
+
+        // Status dokumen legal mengikuti unggahan dan verifikasi checker.
+        const uploads = await db.getDocumentFiles(application.id, ctx.user.organizationId);
+        const syncedDocuments = syncLegalDocuments((application.legalDocuments ?? []) as Array<{ type: string; status: string; notes?: string }>, uploads);
+        if (JSON.stringify(syncedDocuments) !== JSON.stringify(application.legalDocuments)) {
+          await db.updateLegalDocuments(application.id, ctx.user.organizationId, syncedDocuments);
+          application.legalDocuments = syncedDocuments;
         }
 
         const snapshot = toSnapshot(application);
@@ -971,6 +981,31 @@ export const appRouter = router({
           },
         });
         return { success: true };
+      }),
+
+    workflow: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const [documents, photos, requests, assessment] = await Promise.all([
+          db.getDocumentFiles(application.id, ctx.user.organizationId),
+          db.listSurveyPhotos(ctx.user.organizationId, application.id),
+          db.listCustomerRequests(application.id, ctx.user.organizationId),
+          db.getAssessmentByApplicationId(application.id, ctx.user.organizationId),
+        ]);
+        const profile = application.bprsProfile ?? {};
+        const track = determineReviewTrack(application);
+        const completeness = computeCompleteness({
+          status: application.status,
+          track,
+          hasAssessment: !!assessment,
+          documents,
+          surveyPhotoCount: photos.length,
+          openCustomerRequests: requests.filter(r => r.status === "open").length,
+          blockingDataIssues: blockingIssues(ruleConsistencyIssues(toSnapshot(application))).length,
+          bprsMissingCriteria: scoreForTemplate(templateFor(profile, application.incomeSourceType), profile, toBprsApplication(application)).missing,
+        });
+        return { track, completeness };
       }),
 
     exitGate: protectedProcedure
@@ -1361,6 +1396,15 @@ export const appRouter = router({
           throw new TRPCError({ code: "BAD_REQUEST", message: "Pengajuan sudah diputuskan atau dibatalkan, isian format BPRS tidak dapat diubah" });
         }
         await db.updateBprsProfile(application.id, ctx.user.organizationId, input.profile);
+        // Rincian agunan menjadi sumber tunggal nilai agunan selama pengajuan belum dinilai.
+        const collateralRows = [...(input.profile.agunanTanah ?? []), ...(input.profile.agunanKendaraan ?? [])];
+        const collateralMarketValue = collateralRows.reduce((sum, row) => sum + (row.nilaiPasar ?? 0), 0);
+        let collateralUpdated = false;
+        if (application.status === "pending" && collateralMarketValue > 0 && collateralMarketValue !== Number(application.collateralValue)) {
+          await db.updateCollateralValue(application.id, ctx.user.organizationId, collateralMarketValue);
+          application.collateralValue = collateralMarketValue.toFixed(2);
+          collateralUpdated = true;
+        }
         await db.recordAuditEvent({
           organizationId: ctx.user.organizationId,
           actorUserId: ctx.user.id,
@@ -1371,7 +1415,7 @@ export const appRouter = router({
         });
         const app = toBprsApplication(application);
         const template = templateFor(input.profile, application.incomeSourceType);
-        return { score: scoreForTemplate(template, input.profile, app), checks: checksForTemplate(template, input.profile, app) };
+        return { score: scoreForTemplate(template, input.profile, app), checks: checksForTemplate(template, input.profile, app), collateralUpdated };
       }),
 
     exportExcel: protectedProcedure

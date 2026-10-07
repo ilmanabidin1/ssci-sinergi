@@ -159,10 +159,12 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
   }, [query.data, dirty]);
 
   const save = trpc.bprsWorkbook.save.useMutation({
-    onSuccess: () => {
-      toast.success("Isian format BPRS tersimpan");
+    onSuccess: result => {
+      toast.success(result.collateralUpdated ? "Isian tersimpan. Nilai agunan pengajuan diperbarui dari rincian agunan." : "Isian format BPRS tersimpan");
       setDirty(false);
       utils.bprsWorkbook.get.invalidate({ applicationId });
+      utils.applications.workflow.invalidate({ applicationId });
+      utils.assessments.getWithApplication.invalidate({ applicationId });
     },
     onError: e => toast.error(e.message),
   });
@@ -313,7 +315,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
                 Dihitung dengan bobot sheet Parameter. Kemampuan bayar {score.rpcAdequate ? "memadai" : "belum memadai (skor dikali 70%)"}: rasio {score.coverageRatio.toFixed(2)} terhadap batas {score.coverageThreshold.toFixed(2)}.
-                {" "}Nilai resmi tetap yang dihitung Excel saat file dibuka.
+                {" "}Angka ini pembanding untuk staf yang terbiasa dengan Excel BPRS. Skor utama untuk keputusan tetap skor SSCI.
               </p>
               {score.missing.length > 0 && (
                 <p className="mt-2 text-xs text-amber-800">{score.missing.length} kriteria belum diisi: {score.missing.join(", ")}.</p>

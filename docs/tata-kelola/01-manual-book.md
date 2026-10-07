@@ -39,24 +39,27 @@ Admin dan checker **wajib** mengaktifkan autentikasi dua faktor (2FA). SuperAdmi
 
 ## 3. Panduan Maker
 
-### 3.1 Membuat pengajuan
-1. Menu **Pengajuan baru**, pilih segmen produk.
-2. Isi data nasabah. Foto KTP dapat dibaca otomatis (OCR) dan **wajib diperiksa ulang**.
-3. Isi data usaha dan keuangan. Tiga cara mengisi angka keuangan:
-   - **Laporan keuangan** jika tersedia.
-   - **Kalkulator omzet harian** untuk nasabah tanpa laporan keuangan (omzet per hari, hari buka, persentase modal, biaya tetap).
-   - **Baca dokumen dengan AI** dari slip gaji, mutasi rekening, NIB, atau NPWP. Angka hanya dipakai jika menekan "Pakai".
-
-   Metode yang dipakai tercatat dan tampil di laporan.
-4. Sistem menampilkan **jalur pemeriksaan**:
-   - **Jalur ringkas**: plafon sampai Rp 25 juta dan bukan pihak terkait.
+### 3.1 Membuat pengajuan (4 langkah)
+1. **Nasabah & usaha**: segmen produk, identitas (foto KTP dapat dibaca otomatis dan **wajib diperiksa ulang**), usaha, sumber penghasilan, dan profil singkat untuk format Excel BPRS (opsional).
+2. **Keuangan & akad**: pilih satu sumber angka (isi langsung, omzet harian, baca dokumen dengan AI, atau import CSV), lalu isi kebutuhan pembiayaan dan ceklist akad. Sistem menampilkan jalur pemeriksaan:
+   - **Jalur ringkas**: plafon sampai Rp 25 juta dan bukan pihak terkait. Isian ESG menjadi opsional dan dilipat.
    - **Jalur lengkap**: plafon di atas Rp 25 juta atau pihak terkait.
-5. Lengkapi akad, dokumen legal, kepatuhan syariah, dan tinjauan ESG, lalu kirim.
+3. **Dokumen & syariah**: daftar dokumen wajib, kepatuhan syariah, dan tata kelola. Status dokumen di sini hanya catatan awal.
+4. **Periksa & kirim**: ringkasan seluruh isian dengan tombol "Ubah" ke langkah terkait.
 
-### 3.2 Menilai pengajuan
-1. Buka detail pengajuan, unggah dokumen (KTP, NPWP, NIB) dan foto survei lapangan.
-2. Tekan **Lakukan Penilaian SSCI**. Jika pemeriksaan data menemukan masalah tingkat tinggi atau sedang (misalnya NIK tidak 16 digit), perbaiki datanya atau isi **catatan konfirmasi**. Catatan ini tersimpan dan tercantum di laporan.
-3. Gunakan **Asisten AI Penilaian** bila perlu: konsistensi data, kesesuaian syariah (merujuk fatwa DSN-MUI), dan ringkasan komite. Hasil AI adalah catatan pendukung dan tidak mengubah skor.
+Draft tersimpan otomatis di perangkat dan dapat dipulihkan.
+
+### 3.2 Halaman detail pengajuan
+Bagian atas menampilkan **tahap** (Lengkapi, Nilai, Tinjau, Putuskan), **satu aksi berikutnya** sesuai peran, dan **bilah kelengkapan** yang menggabungkan semua kekurangan. Klik kekurangan untuk langsung ke tab terkait. Isi halaman dibagi menjadi tab:
+- **Ringkasan**: permintaan nasabah, syarat jalur, skor SSCI (skor utama), dan Asisten AI.
+- **Data & Dokumen**: unggah dan verifikasi dokumen, foto survei, data nasabah dan keuangan.
+- **Analisis lanjutan**: peninjauan klasifikasi oleh pejabat berwenang dan uji sensitivitas.
+- **Format Excel BPRS**: lihat 3.3.
+- **Riwayat**: catatan dan aktivitas.
+
+Langkah maker:
+1. Di tab **Data & Dokumen**, unggah dokumen wajib dan foto survei. Status dokumen legal untuk skor diambil otomatis dari unggahan dan verifikasi checker saat penilaian.
+2. Tekan **Lakukan Penilaian SSCI**. Jika pemeriksaan data menemukan masalah tingkat tinggi atau sedang, perbaiki datanya atau isi **catatan konfirmasi**. Setelah penilaian, pemeriksaan konsistensi, kesesuaian syariah, dan ringkasan komite oleh AI **berjalan otomatis**. Hasil AI adalah catatan pendukung dan tidak mengubah skor.
 
 ### 3.3 Format Excel BPRS (Skoring Fluktuatif UMKM)
 Panel **Format Excel BPRS** di halaman detail mengisi otomatis file Excel skoring yang selama ini dipakai BPRS.
@@ -64,8 +67,9 @@ Panel **Format Excel BPRS** di halaman detail mengisi otomatis file Excel skorin
 2. Lengkapi tab **Identitas**, **Tempat tinggal & usaha**, **Bank & pembiayaan**, **Agunan & mitigasi**. Pilihan jawaban sama persis dengan dropdown di Excel.
 3. Tab **Rekening koran**: ketik mutasi 3 bulan (satu nominal per baris) atau unggah foto halaman rekening koran lalu tekan **Baca** (AI). Periksa hasilnya, tekan **Pakai hasil ini**, lalu simpan.
 4. Tab **Narasi**: tombol **Buat draf narasi dengan AI** menyusun latar belakang, pengalaman usaha, dan indikator reputasi tanpa nama dan NIK. AO wajib menyunting.
-5. Perhatikan kotak **Periksa sebelum mengunduh** (isian yang saling bertentangan) dan **Estimasi skor format BPRS** dibandingkan skor SSCI. Tombol **Jelaskan perbedaan skor** memberi penjelasan singkat.
-6. Tekan **Simpan isian**, lalu **Unduh Excel BPRS**. Excel menghitung ulang skor, rating, dan jadwal angsuran saat file dibuka. Nilai resmi adalah yang tampil di Excel.
+5. Jika rincian agunan diisi saat pengajuan belum dinilai, nilai agunan pengajuan ikut diperbarui otomatis dari jumlah nilai pasar.
+6. Perhatikan kotak **Periksa sebelum mengunduh** (isian yang saling bertentangan) dan **Estimasi skor format BPRS** dibandingkan skor SSCI. Tombol **Jelaskan perbedaan skor** memberi penjelasan singkat.
+7. Tekan **Simpan isian**, lalu **Unduh Excel BPRS**. Excel menghitung ulang skor, rating, dan jadwal angsuran saat file dibuka. Nilai resmi adalah yang tampil di Excel.
 
 Setiap penyimpanan dan pengunduhan tercatat di log audit (`BPRS_PROFILE_UPDATED`, `BPRS_EXCEL_EXPORTED`). File berisi NIK lengkap, jadi simpan sesuai kebijakan data BPRS.
 

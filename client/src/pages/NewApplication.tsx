@@ -15,14 +15,25 @@ import { AlertCircle, Check, CheckCircle2, Download, HelpCircle, Loader2 } from 
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
+import { determineReviewTrack } from "@shared/reviewTrack";
+import { BPRS_OPTIONS, BPRS_TEMPLATE_LABELS, type BprsProfile } from "@shared/bprsTemplate";
 import {
   BPRS_PRODUCT_SEGMENTS,
   BPRS_SEGMENT_DETAILS,
   type BprsProductSegment,
 } from "@shared/bprsPolicy";
 
-const DRAFT_KEY = "ssci-new-application-draft-v3";
-const steps = ["Segmen Produk", "Nasabah", "Usaha & keuangan", "Akad Pembiayaan", "Legal & syariah", "ESG & tinjauan"];
+const DRAFT_KEY = "ssci-new-application-draft-v4";
+const DRAFT_VERSION = 4;
+const steps = ["Nasabah & usaha", "Keuangan & akad", "Dokumen & syariah", "Periksa & kirim"];
+const STEP_DESCRIPTIONS = [
+  "Segmen produk, identitas nasabah, dan usaha",
+  "Angka keuangan, kebutuhan pembiayaan, dan ceklist akad",
+  "Kelengkapan dokumen, kepatuhan syariah, dan tata kelola",
+  "Periksa ringkasan sebelum mengirim",
+];
+/** Langkah formulir baru dipetakan ke contoh data lama (0 segmen, 1 nasabah, 2 usaha, 3 akad, 4 legal, 5 ESG). */
+const DEMO_STEPS: Record<number, number[]> = { 0: [0, 1], 1: [2, 3], 2: [4, 5], 3: [] };
 type Document = { type: string; status: "pending" | "complete" | "verified" | "missing"; notes: string };
 type Values = Record<string, any> & { legalDocuments: Document[]; productSegment: BprsProductSegment };
 type ExtractKtpResult = { customerName?: string | null; customerId?: string | null; address?: string | null };
@@ -93,6 +104,7 @@ const initial: Values = {
   environmentalPractices: "",
   socialImpact: "",
   governanceQuality: "",
+  bprsProfile: {},
   legalDocuments: [
     { type: "KTP", status: "pending", notes: "" },
     { type: "NPWP", status: "pending", notes: "" },
@@ -105,6 +117,18 @@ const demoEnvironmental = ["Menggunakan kemasan ramah lingkungan dan mengurangi 
 const demoSocial = ["Mempekerjakan tenaga kerja dari sekitar lingkungan usaha.", "Memberdayakan masyarakat lokal melalui kemitraan usaha dan pemasok lokal."];
 
 const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
+const demoProfile = (incomeSourceType?: string): BprsProfile => {
+  const year = new Date().getFullYear() - (25 + Math.floor(Math.random() * 25));
+  const fixed = incomeSourceType === "fixed";
+  return {
+    tanggalLahir: `${year}-0${1 + Math.floor(Math.random() * 9)}-1${Math.floor(Math.random() * 9)}`,
+    jenisKelamin: pick(["Pria", "Wanita"]),
+    statusPerkawinan: pick(["Menikah", "Menikah", "Lajang"]),
+    tanggungan: pick([" 1 - 2 Orang", "3 - 5 Orang", "Tidak Mempunyai Tanggungan"]),
+    ...(fixed ? { pendidikanFix: pick(["SMA", "S1"]), statusKaryawan: "Tetap Swasta" } : { pendidikan: pick(["SMA", "Dip./S1-S3"]), lamaMenetap: pick(["> 5 - 8 tahun", "> 8 tahun"]) }),
+    statusTempatTinggal: pick(["Milik sendiri", "Sewa"]),
+  };
+};
 const randInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 const roundTo = (value: number, step = 100000) => Math.round(value / step) * step;
 
@@ -251,6 +275,8 @@ export default function NewApplication() {
   const [, setLocation] = useLocation();
   const [values, setValues] = useState<Values>(initial);
   const [step, setStep] = useState(0);
+  const [financeMethod, setFinanceMethod] = useState<FinanceMethod>("manual");
+  const isFastTrack = determineReviewTrack({ requestedAmount: values.requestedAmount || 0, isRelatedParty: values.isRelatedParty }) === "ringkas";
   const [hasDraft, setHasDraft] = useState(false);
   const [ktpFile, setKtpFile] = useState<File | null>(null);
   const [ktpError, setKtpError] = useState("");
@@ -345,8 +371,8 @@ export default function NewApplication() {
   };
 
   useEffect(() => { try { const saved = localStorage.getItem(DRAFT_KEY); if (saved) setHasDraft(true); } catch {} }, []);
-  useEffect(() => { try { localStorage.setItem(DRAFT_KEY, JSON.stringify({ version: 1, values, step })); } catch {} }, [values, step]);
-  const restore = () => { try { const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || ""); if (saved.version === 2) { setValues({ ...initial, ...saved.values }); setStep(Math.min(saved.step || 0, 4)); setHasDraft(false); } } catch { toast.error("Draft tidak dapat dipulihkan"); } };
+  useEffect(() => { try { localStorage.setItem(DRAFT_KEY, JSON.stringify({ version: DRAFT_VERSION, values, step })); } catch {} }, [values, step]);
+  const restore = () => { try { const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || ""); if (saved.version === DRAFT_VERSION) { setValues({ ...initial, ...saved.values }); setStep(Math.min(saved.step || 0, steps.length - 1)); setHasDraft(false); } else { toast.error("Draft dari versi formulir lama tidak dapat dipulihkan"); } } catch { toast.error("Draft tidak dapat dipulihkan"); } };
   const reset = () => { localStorage.removeItem(DRAFT_KEY); setValues(initial); setStep(0); setHasDraft(false); };
   const getAkadDemo = (akad?: string, businessName?: string, requestedAmount?: string) => {
     if (akad === "mudharabah") return demoMudharabah();
@@ -361,7 +387,7 @@ export default function NewApplication() {
       ...(demoStep === 0
         ? { productSegment: "umkm" }
         : demoStep === 1
-        ? demoCustomer()
+        ? { ...demoCustomer(), bprsProfile: demoProfile(current.incomeSourceType) }
         : demoStep === 2
         ? demoBusiness()
         : demoStep === 3
@@ -376,6 +402,7 @@ export default function NewApplication() {
       return {
       ...current,
       ...demoCustomer(),
+      bprsProfile: demoProfile(current.incomeSourceType),
       ...business,
       ...getAkadDemo(current.financingAkad, business.businessName, business.requestedAmount),
       ...demoLegal(),
@@ -454,18 +481,22 @@ export default function NewApplication() {
     URL.revokeObjectURL(url);
   };
   const required: Record<number, string[]> = {
-    0: [], // Segmen produk sudah ada default
-    1: ["customerName", "customerId", "phone", "address"],
-    2: ["businessName", "businessType", "businessAge", "monthlyRevenue", "monthlyExpenses", "existingDebt", "collateralValue", "requestedAmount", "financingTenor", "marginRate", "loanPurpose"],
+    0: ["customerName", "customerId", "phone", "address", "businessName", "businessType", "businessAge"],
+    1: ["monthlyRevenue", "monthlyExpenses", "existingDebt", "collateralValue", "requestedAmount", "financingTenor", "marginRate", "loanPurpose"],
+    2: ["businessShariaCompliant", "governanceQuality"],
     3: [],
-    4: ["businessShariaCompliant"],
-    5: ["governanceQuality"],
   };
   const next = () => { const missing = required[step].filter(key => !String(values[key] || "").trim()); if (missing.length) { toast.error("Lengkapi semua kolom wajib sebelum melanjutkan"); document.getElementById(missing[0])?.focus(); return; } setStep(s => s + 1); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    const missing = required[5].filter(key => !values[key]?.trim());
-    if (missing.length) return;
+    if (step < steps.length - 1) return next();
+    const missingIndex = [0, 1, 2].find(i => required[i].some(key => !String(values[key] || "").trim()));
+    if (missingIndex !== undefined) {
+      toast.error(`Masih ada isian wajib di langkah "${steps[missingIndex]}"`);
+      setStep(missingIndex);
+      return;
+    }
+    const bprsProfile = compactProfile(values.bprsProfile);
     createMutation.mutate({
       customerName: values.customerName,
       customerId: values.customerId,
@@ -488,7 +519,8 @@ export default function NewApplication() {
       financialDataNote: values.financialDataNote || undefined,
       businessShariaCompliant: values.businessShariaCompliant as "yes" | "no" | "partial",
       shariaComplianceNotes: values.shariaComplianceNotes || undefined,
-      financingAkad: values.financingAkad === "mudharabah" ? "mudharabah" : values.financingAkad === "qardh" ? "qardh" : "murabahah",
+      financingAkad: (["murabahah", "mudharabah", "qardh", "multijasa"] as const).find(a => a === values.financingAkad) ?? "murabahah",
+      bprsProfile,
       isRelatedParty: values.isRelatedParty as "yes" | "no",
       relatedPartyRelation: values.relatedPartyRelation || undefined,
       incomeSourceType: values.incomeSourceType as "fixed" | "non_fixed" | "joint_income",
@@ -723,9 +755,9 @@ export default function NewApplication() {
       <main className="container max-w-4xl py-6 sm:py-8"><div className="mb-6"><div className="flex flex-wrap items-start justify-between gap-3"><div><h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-gray-600">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan</p></div><Button type="button" variant="outline" onClick={fillAllDemo}>Isi contoh data</Button></div><p className="mt-3 text-xs text-muted-foreground">Mengisi contoh data acak untuk pengujian alur. Data tetap dapat Anda periksa sebelum dikirim.</p></div>
       {hasDraft && <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-[#cfd8e8] bg-[#eef2f8] p-3 text-sm"><span>Draft tersimpan ditemukan.</span><span className="flex gap-2"><Button type="button" size="sm" onClick={restore}>Pulihkan draft</Button><Button type="button" size="sm" variant="ghost" onClick={reset}>Mulai ulang</Button></span></div>}
       <div className="mb-8 rounded-2xl border border-border bg-white p-5 shadow-premium"><div className="mb-4 flex justify-between text-xs font-bold uppercase tracking-[.16em] text-muted-foreground"><span>Langkah {step + 1} dari {steps.length}</span><span className="text-gold-500">{steps[step]}</span></div><ol className="flex items-center">{steps.map((label, i) => <li key={label} className="flex flex-1 items-center last:flex-none" aria-label={label} aria-current={i === step ? "step" : undefined}><span title={label} className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold transition-all ${i < step ? "bg-navy-900 text-gold-300" : i === step ? "bg-gold-400 text-navy-900 ring-4 ring-gold-400/25" : "border border-border bg-ivory text-muted-foreground"}`}>{i < step ? <Check className="h-4 w-4" /> : i + 1}</span>{i < steps.length - 1 && <span className={`mx-1.5 h-0.5 flex-1 rounded-full ${i < step ? "bg-navy-900" : "bg-border"}`} />}</li>)}</ol></div>
-        <form onSubmit={submit}><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle>{steps[step]}</CardTitle>                  <CardDescription>{step === 0 ? "Pilih segmen pembiayaan sesuai pedoman kebijakan BPRS" : step === 1 ? "Data identitas dan kontak nasabah" : step === 2 ? "Detail usaha dan kebutuhan pembiayaan" : step === 3 ? "Ceklist akad pembiayaan sesuai jenis akad yang dipilih" : step === 4 ? "Kelengkapan dokumen dan kepatuhan syariah" : "Dampak usaha dan pemeriksaan akhir"}</CardDescription></div><Button type="button" variant="outline" size="sm" onClick={() => fillDemo(step)}>Isi contoh data</Button></div></CardHeader><CardContent className="space-y-4">
-          {step === 0 && (
-            <div className="space-y-4">
+        <form onSubmit={submit}><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle>{steps[step]}</CardTitle>                  <CardDescription>{STEP_DESCRIPTIONS[step]}</CardDescription></div>{DEMO_STEPS[step]!.length > 0 && <Button type="button" variant="outline" size="sm" onClick={() => DEMO_STEPS[step]!.forEach(fillDemo)}>Isi contoh data</Button>}</div></CardHeader><CardContent className="space-y-4">
+          {step === 0 && <>
+            {section("Segmen produk", <>            <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-2">
                 {BPRS_PRODUCT_SEGMENTS.map(segKey => {
                   const seg = BPRS_SEGMENT_DETAILS[segKey];
@@ -772,9 +804,8 @@ export default function NewApplication() {
                 </div>
                 <p>{BPRS_SEGMENT_DETAILS[values.productSegment]?.collateralNotes}</p>
               </div>
-            </div>
-          )}
-          {step === 1 && <><div className="grid gap-4 md:grid-cols-2"><Field name="customerName" label="Nama Lengkap *" values={values} setValues={setValues} required /><Field name="customerId" label="NIK / ID Nasabah *" values={values} setValues={setValues} required /><Field name="phone" label="Nomor Telepon *" values={values} setValues={setValues} type="tel" required /><Field name="email" label="Email (Opsional)" values={values} setValues={setValues} type="email" /></div>
+            </div></>)}
+            {section("Identitas nasabah", <><div className="grid gap-4 md:grid-cols-2"><Field name="customerName" label="Nama Lengkap *" values={values} setValues={setValues} required /><Field name="customerId" label="NIK / ID Nasabah *" values={values} setValues={setValues} required /><Field name="phone" label="Nomor Telepon *" values={values} setValues={setValues} type="tel" required /><Field name="email" label="Email (Opsional)" values={values} setValues={setValues} type="email" /></div>
           <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 space-y-3">
             <div className="font-semibold text-amber-950 text-sm">Status Keterkaitan dengan BPRS (Pihak Terkait)</div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -788,9 +819,8 @@ export default function NewApplication() {
                 Sesuai KPB BPRS, pembiayaan pihak terkait wajib memperoleh persetujuan Direktur Bisnis dan minimal 1 orang Dewan Komisaris serta diperhitungkan dalam BMPD Pihak Terkait (maksimal 10% modal).
               </p>
             )}
-          </div>{historyVisible && historyQuery.data && historyQuery.data.length > 0 && <div ref={searchRef} className="relative"><div className="absolute z-10 w-full rounded-lg border border-slate-200 bg-white shadow-lg"><div className="p-2 text-xs font-medium text-muted-foreground">Riwayat pengajuan nasabah</div><div className="max-h-64 overflow-y-auto">{selectedHistory ? <div className="border-t p-3"><p className="text-sm font-medium">Lanjutkan pengajuan untuk nasabah ini?</p><p className="mt-1 text-sm text-muted-foreground">{selectedHistory.customerName} - {selectedHistory.businessName}</p><div className="mt-2 flex gap-2"><Button type="button" size="sm" onClick={() => fillFromHistory(selectedHistory)}>Ya, lanjutkan</Button><Button type="button" size="sm" variant="outline" onClick={() => setSelectedHistory(null)}>Batal</Button></div></div> : historyQuery.data.map(item => <button key={item.customerId + item.date} type="button" className="flex w-full items-center gap-3 border-t px-3 py-2 text-left hover:bg-slate-50" onClick={() => setSelectedHistory({ customerName: item.customerName, customerId: item.customerId, businessName: item.businessName, status: item.status, latestAssessmentScore: item.latestAssessmentScore, latestAssessmentClassification: item.latestAssessmentClassification, date: item.date })}><div className="flex-1 min-w-0"><div className="text-sm font-medium truncate">{item.customerName}</div><div className="text-xs text-muted-foreground truncate">{item.businessName}</div></div><div className="text-right"><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${item.status === "approved" ? "bg-green-100 text-green-800" : item.status === "rejected" ? "bg-red-100 text-red-800" : item.status === "assessed" ? "bg-[#e1e8f4] text-navy-800" : "bg-yellow-100 text-yellow-800"}`}>{item.status === "approved" ? "Disetujui" : item.status === "rejected" ? "Ditolak" : item.status === "assessed" ? "Dinilai" : "Pending"}</span>{item.latestAssessmentScore !== null && <div className="mt-0.5 text-xs text-muted-foreground">Skor: {item.latestAssessmentScore} {item.latestAssessmentClassification ? `(${item.latestAssessmentClassification})` : ""}</div>}</div></button>)}</div>{historyQuery.isFetching && <div className="border-t p-2 text-center text-xs text-muted-foreground"><Loader2 className="mr-1 inline h-3 w-3 animate-spin" />Mencari...</div>}</div></div>}<Field name="address" label="Alamat Lengkap *" values={values} setValues={setValues} rows={3} required /><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div><h3 className="font-medium">Isi data dari foto KTP</h3><p className="text-sm text-muted-foreground">JPG atau PNG, maksimal 5 MB. File hanya dikirim saat Anda menekan tombol proses dan tidak disimpan dalam draft.</p></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept="image/jpeg,image/png" onChange={selectKtpFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={processKtp} disabled={extractKtpMutation.isPending}>{extractKtpMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Proses OCR KTP</Button></div>{ktpFile && <p className="text-xs text-muted-foreground">File dipilih: {ktpFile.name}</p>}{ktpError && <p className="flex items-center gap-1 text-sm text-red-600"><AlertCircle className="h-4 w-4" />{ktpError}</p>}{ktpProcessed && <Alert className="border-green-200 bg-green-50 text-green-900"><CheckCircle2 /><AlertTitle>Data OCR berhasil diisi</AlertTitle><AlertDescription className="text-green-800">Hasil OCR wajib diverifikasi secara manual sebelum aplikasi dikirimkan.</AlertDescription></Alert>}</div></>}
-          {step === 2 && <><DailySalesCalculator setValues={setValues} /><AiDocumentReader values={values} setValues={setValues} /><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-medium">Import data keuangan dari CSV</h3><p className="text-sm text-muted-foreground">Gunakan 1 sampai 12 baris bulanan dengan kolom month, revenue, expenses, existingInstallment.</p></div><Button type="button" variant="ghost" size="sm" onClick={downloadFinancialTemplate}><Download className="mr-2 h-4 w-4" />Unduh template CSV</Button></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept=".csv,text/csv" onChange={selectFinancialFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={importFinancialFile} disabled={importFinancialMutation.isPending}>{importFinancialMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Import data CSV</Button></div>{financialFile && <p className="text-xs text-muted-foreground">File dipilih: {financialFile.name}</p>}{financialError && <p className="text-sm text-red-600">{financialError}</p>}</div>
-          <div className="space-y-2">
+          </div>{historyVisible && historyQuery.data && historyQuery.data.length > 0 && <div ref={searchRef} className="relative"><div className="absolute z-10 w-full rounded-lg border border-slate-200 bg-white shadow-lg"><div className="p-2 text-xs font-medium text-muted-foreground">Riwayat pengajuan nasabah</div><div className="max-h-64 overflow-y-auto">{selectedHistory ? <div className="border-t p-3"><p className="text-sm font-medium">Lanjutkan pengajuan untuk nasabah ini?</p><p className="mt-1 text-sm text-muted-foreground">{selectedHistory.customerName} - {selectedHistory.businessName}</p><div className="mt-2 flex gap-2"><Button type="button" size="sm" onClick={() => fillFromHistory(selectedHistory)}>Ya, lanjutkan</Button><Button type="button" size="sm" variant="outline" onClick={() => setSelectedHistory(null)}>Batal</Button></div></div> : historyQuery.data.map(item => <button key={item.customerId + item.date} type="button" className="flex w-full items-center gap-3 border-t px-3 py-2 text-left hover:bg-slate-50" onClick={() => setSelectedHistory({ customerName: item.customerName, customerId: item.customerId, businessName: item.businessName, status: item.status, latestAssessmentScore: item.latestAssessmentScore, latestAssessmentClassification: item.latestAssessmentClassification, date: item.date })}><div className="flex-1 min-w-0"><div className="text-sm font-medium truncate">{item.customerName}</div><div className="text-xs text-muted-foreground truncate">{item.businessName}</div></div><div className="text-right"><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${item.status === "approved" ? "bg-green-100 text-green-800" : item.status === "rejected" ? "bg-red-100 text-red-800" : item.status === "assessed" ? "bg-[#e1e8f4] text-navy-800" : "bg-yellow-100 text-yellow-800"}`}>{item.status === "approved" ? "Disetujui" : item.status === "rejected" ? "Ditolak" : item.status === "assessed" ? "Dinilai" : "Pending"}</span>{item.latestAssessmentScore !== null && <div className="mt-0.5 text-xs text-muted-foreground">Skor: {item.latestAssessmentScore} {item.latestAssessmentClassification ? `(${item.latestAssessmentClassification})` : ""}</div>}</div></button>)}</div>{historyQuery.isFetching && <div className="border-t p-2 text-center text-xs text-muted-foreground"><Loader2 className="mr-1 inline h-3 w-3 animate-spin" />Mencari...</div>}</div></div>}<Field name="address" label="Alamat Lengkap *" values={values} setValues={setValues} rows={3} required /><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div><h3 className="font-medium">Isi data dari foto KTP</h3><p className="text-sm text-muted-foreground">JPG atau PNG, maksimal 5 MB. File hanya dikirim saat Anda menekan tombol proses dan tidak disimpan dalam draft.</p></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept="image/jpeg,image/png" onChange={selectKtpFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={processKtp} disabled={extractKtpMutation.isPending}>{extractKtpMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Proses OCR KTP</Button></div>{ktpFile && <p className="text-xs text-muted-foreground">File dipilih: {ktpFile.name}</p>}{ktpError && <p className="flex items-center gap-1 text-sm text-red-600"><AlertCircle className="h-4 w-4" />{ktpError}</p>}{ktpProcessed && <Alert className="border-green-200 bg-green-50 text-green-900"><CheckCircle2 /><AlertTitle>Data OCR berhasil diisi</AlertTitle><AlertDescription className="text-green-800">Hasil OCR wajib diverifikasi secara manual sebelum aplikasi dikirimkan.</AlertDescription></Alert>}</div></>)}
+            {section("Usaha dan sumber penghasilan", <><div className="grid gap-4 md:grid-cols-3"><Field name="businessName" label="Nama Usaha *" values={values} setValues={setValues} required /><Field name="businessType" label="Jenis Usaha *" values={values} setValues={setValues} required /><Field name="businessAge" label="Lama Usaha (bulan) *" values={values} setValues={setValues} type="number" min="1" required /></div><div className="space-y-2">
             <Label htmlFor="incomeSourceType">Sumber Pembayaran Utama (Analisa Kapasitas KPB BPRS) *</Label>
             <Select value={values.incomeSourceType} onValueChange={value => setValues(v => ({ ...v, incomeSourceType: value }))}>
               <SelectTrigger id="incomeSourceType"><SelectValue placeholder="Pilih sumber pembayaran" /></SelectTrigger>
@@ -808,10 +838,177 @@ export default function NewApplication() {
                 : "Batas angsuran maksimal 40% dari rata-rata laba bersih usaha, diverifikasi melalui catatan penjualan/kas."}
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2"><Field name="businessName" label="Nama Usaha *" values={values} setValues={setValues} required /><Field name="businessType" label="Jenis Usaha *" values={values} setValues={setValues} required /><Field name="businessAge" label="Lama Usaha (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><CurrencyField name="monthlyRevenue" label="Pendapatan Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="monthlyExpenses" label="Pengeluaran Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="existingDebt" label="Total Angsuran Existing per Bulan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="collateralValue" label="Nilai Agunan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="requestedAmount" label="Jumlah Pembiayaan (Rp) *" values={values} setValues={setValues} /><Field name="financingTenor" label="Tenor Pembiayaan (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><Field name="marginRate" label="Total Margin Akad (%) *" values={values} setValues={setValues} type="number" min="0" max="100" step="0.01" required /></div><Field name="loanPurpose" label="Tujuan Pembiayaan *" values={values} setValues={setValues} rows={3} required /><ReviewTrackHint requestedAmount={values.requestedAmount} isRelatedParty={values.isRelatedParty} />{values.financialDataNote && <p className="rounded-lg bg-ivory p-3 text-xs text-muted-foreground"><strong className="text-navy-900">Sumber angka keuangan:</strong> {values.financialDataNote}</p>}</>}
-          {step === 3 && akadStep}
-          {step === 4 && <><div className="space-y-4"><div className="font-medium">Dokumen Persyaratan ({BPRS_SEGMENT_DETAILS[values.productSegment]?.label})</div>{values.legalDocuments.map((doc, i) => <div key={doc.type} className="grid items-end gap-3 md:grid-cols-3"><Input value={doc.type} disabled /><Select value={doc.status} onValueChange={status => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, status: status as Document["status"] } : d) }))}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>{[["pending", "Pending"], ["complete", "Lengkap"], ["verified", "Terverifikasi"], ["missing", "Tidak Ada"]].map(([v, t]) => <SelectItem key={v} value={v}>{t}</SelectItem>)}</SelectContent></Select><Input placeholder="Catatan (opsional)" value={doc.notes} onChange={e => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, notes: e.target.value } : d) }))} /></div>)}</div>{select("businessShariaCompliant", "Kepatuhan Bisnis *", [["yes", "Ya, Sepenuhnya"], ["partial", "Sebagian"], ["no", "Tidak"]])}<Field name="shariaComplianceNotes" label="Catatan (Opsional)" values={values} setValues={setValues} rows={3} /></>}
-          {step === 5 && <><Field name="environmentalPractices" label="Praktik Lingkungan (Opsional)" values={values} setValues={setValues} rows={2} /><Field name="socialImpact" label="Dampak Sosial (Opsional)" values={values} setValues={setValues} rows={2} />{select("governanceQuality", "Tata Kelola *", [["excellent", "Sangat Baik"], ["good", "Baik"], ["fair", "Cukup"], ["poor", "Kurang"]])}<p className="rounded-md bg-muted p-3 text-sm text-muted-foreground">Periksa kembali data sebelum mengirimkan aplikasi. Draft tersimpan otomatis di perangkat ini.</p></>}
-             </CardContent></Card><div className="mt-6 flex gap-3">{step > 0 && <Button type="button" variant="outline" onClick={() => setStep(s => s - 1)}>Kembali</Button>}{step < steps.length - 1 ? <Button type="button" className="ml-auto" onClick={next}>Lanjutkan</Button> : <Button type="submit" className="ml-auto" disabled={createMutation.isPending}>{createMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Kirim Aplikasi</Button>}</div></form>
+          </>)}
+            {section("Profil nasabah untuk format BPRS (opsional, dapat dilengkapi nanti)", <ProfileQuickFields values={values} setValues={setValues} />)}
+          </>}
+          {step === 1 && <>
+            <FinanceSourceChooser method={financeMethod} setMethod={setFinanceMethod} />
+            {financeMethod === "harian" && <DailySalesCalculator setValues={setValues} />}
+            {financeMethod === "dokumen" && <AiDocumentReader values={values} setValues={setValues} />}
+            {financeMethod === "csv" && <><div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-medium">Import data keuangan dari CSV</h3><p className="text-sm text-muted-foreground">Gunakan 1 sampai 12 baris bulanan dengan kolom month, revenue, expenses, existingInstallment.</p></div><Button type="button" variant="ghost" size="sm" onClick={downloadFinancialTemplate}><Download className="mr-2 h-4 w-4" />Unduh template CSV</Button></div><div className="flex flex-wrap items-center gap-3"><Input type="file" accept=".csv,text/csv" onChange={selectFinancialFile} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={importFinancialFile} disabled={importFinancialMutation.isPending}>{importFinancialMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Import data CSV</Button></div>{financialFile && <p className="text-xs text-muted-foreground">File dipilih: {financialFile.name}</p>}{financialError && <p className="text-sm text-red-600">{financialError}</p>}</div>
+          </>}
+            <div className="grid gap-4 md:grid-cols-2"><CurrencyField name="monthlyRevenue" label="Pendapatan Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="monthlyExpenses" label="Pengeluaran Bulanan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="existingDebt" label="Total Angsuran Existing per Bulan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="collateralValue" label="Nilai Agunan (Rp) *" values={values} setValues={setValues} /><CurrencyField name="requestedAmount" label="Jumlah Pembiayaan (Rp) *" values={values} setValues={setValues} /><Field name="financingTenor" label="Tenor Pembiayaan (bulan) *" values={values} setValues={setValues} type="number" min="1" required /><Field name="marginRate" label="Total Margin Akad (%) *" values={values} setValues={setValues} type="number" min="0" max="100" step="0.01" required /></div><Field name="loanPurpose" label="Tujuan Pembiayaan *" values={values} setValues={setValues} rows={3} required /><ReviewTrackHint requestedAmount={values.requestedAmount} isRelatedParty={values.isRelatedParty} />{values.financialDataNote && <p className="rounded-lg bg-ivory p-3 text-xs text-muted-foreground"><strong className="text-navy-900">Sumber angka keuangan:</strong> {values.financialDataNote}</p>}
+            <div className="space-y-4 border-t border-slate-200 pt-4"><h3 className="font-medium text-navy-900">Akad pembiayaan</h3>{akadStep}</div>
+          </>}
+          {step === 2 && <>
+            <Alert className="border-[#cfd8e8] bg-[#eef2f8] text-navy-900"><HelpCircle className="h-4 w-4" /><AlertTitle>Dokumen diunggah setelah pengajuan dikirim</AlertTitle><AlertDescription className="text-navy-900">Status dokumen di bawah hanya catatan awal. Setelah dokumen diunggah di halaman detail dan diverifikasi checker, statusnya diperbarui otomatis saat penilaian.</AlertDescription></Alert>
+            <div className="space-y-4"><div className="font-medium">Dokumen Persyaratan ({BPRS_SEGMENT_DETAILS[values.productSegment]?.label})</div>{values.legalDocuments.map((doc, i) => <div key={doc.type} className="grid items-end gap-3 md:grid-cols-3"><Input value={doc.type} disabled /><Select value={doc.status} onValueChange={status => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, status: status as Document["status"] } : d) }))}><SelectTrigger><SelectValue /></SelectTrigger><SelectContent>{[["pending", "Pending"], ["complete", "Lengkap"], ["verified", "Terverifikasi"], ["missing", "Tidak Ada"]].map(([v, t]) => <SelectItem key={v} value={v}>{t}</SelectItem>)}</SelectContent></Select><Input placeholder="Catatan (opsional)" value={doc.notes} onChange={e => setValues(v => ({ ...v, legalDocuments: v.legalDocuments.map((d, n) => n === i ? { ...d, notes: e.target.value } : d) }))} /></div>)}</div>{select("businessShariaCompliant", "Kepatuhan Bisnis *", [["yes", "Ya, Sepenuhnya"], ["partial", "Sebagian"], ["no", "Tidak"]])}<Field name="shariaComplianceNotes" label="Catatan (Opsional)" values={values} setValues={setValues} rows={3} />{select("governanceQuality", "Tata Kelola *", [["excellent", "Sangat Baik"], ["good", "Baik"], ["fair", "Cukup"], ["poor", "Kurang"]])}
+            {isFastTrack ? (
+              <details className="rounded-lg border border-slate-200 bg-slate-50 p-4"><summary className="cursor-pointer text-sm font-medium">Isian tambahan ESG (opsional untuk jalur ringkas)</summary><div className="mt-3 space-y-4"><Field name="environmentalPractices" label="Praktik Lingkungan (Opsional)" values={values} setValues={setValues} rows={2} /><Field name="socialImpact" label="Dampak Sosial (Opsional)" values={values} setValues={setValues} rows={2} /></div></details>
+            ) : <><Field name="environmentalPractices" label="Praktik Lingkungan (Opsional)" values={values} setValues={setValues} rows={2} /><Field name="socialImpact" label="Dampak Sosial (Opsional)" values={values} setValues={setValues} rows={2} /></>}
+          </>}
+          {step === 3 && <ReviewSummary values={values} isFastTrack={isFastTrack} onEdit={setStep} />}
+             </CardContent></Card><div className="mt-6 flex gap-3">{step > 0 && <Button type="button" variant="outline" onClick={() => setStep(s => s - 1)}>Kembali</Button>}{step < steps.length - 1 ? <Button key="next" type="button" className="ml-auto" onClick={next}>Lanjutkan</Button> : <Button key="submit" type="submit" className="ml-auto" disabled={createMutation.isPending}>{createMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Kirim Aplikasi</Button>}</div></form>
     </main></div>;
+}
+
+type FinanceMethod = "manual" | "harian" | "dokumen" | "csv";
+
+const FINANCE_METHODS: Array<{ key: FinanceMethod; title: string; detail: string }> = [
+  { key: "manual", title: "Isi langsung", detail: "Ada laporan keuangan atau angka sudah diketahui" },
+  { key: "harian", title: "Dari omzet harian", detail: "Usaha mikro tanpa laporan keuangan" },
+  { key: "dokumen", title: "Baca dokumen (AI)", detail: "Slip gaji, mutasi rekening, NIB, NPWP" },
+  { key: "csv", title: "Import CSV", detail: "Data bulanan dari spreadsheet" },
+];
+
+/** Satu pilihan sumber angka; hanya alat yang dipilih yang ditampilkan. */
+function FinanceSourceChooser({ method, setMethod }: { method: FinanceMethod; setMethod: (m: FinanceMethod) => void }) {
+  return (
+    <div className="space-y-2">
+      <Label>Dari mana angka keuangan diperoleh?</Label>
+      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+        {FINANCE_METHODS.map(option => (
+          <button
+            key={option.key}
+            type="button"
+            onClick={() => setMethod(option.key)}
+            className={`rounded-lg border p-3 text-left transition ${method === option.key ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-slate-200 bg-white hover:border-slate-300"}`}
+          >
+            <div className="text-sm font-medium text-gray-900">{option.title}</div>
+            <div className="text-xs text-muted-foreground">{option.detail}</div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+type ProfileSelect = { key: keyof BprsProfile; label: string; options: readonly string[] };
+
+/**
+ * Isian profil yang dipakai format Excel BPRS, ditanyakan sekali di formulir
+ * sehingga tidak perlu diisi ulang di halaman detail.
+ */
+function ProfileQuickFields({ values, setValues }: { values: Values; setValues: React.Dispatch<React.SetStateAction<Values>> }) {
+  const profile = (values.bprsProfile ?? {}) as BprsProfile;
+  const fixed = values.incomeSourceType === "fixed";
+  const set = (key: keyof BprsProfile, value: unknown) =>
+    setValues(v => ({ ...v, bprsProfile: { ...(v.bprsProfile ?? {}), [key]: value === "" ? undefined : value } }));
+  const selects: ProfileSelect[] = [
+    { key: "jenisKelamin", label: "Jenis kelamin", options: BPRS_OPTIONS.jenisKelamin },
+    { key: "statusPerkawinan", label: "Status perkawinan", options: BPRS_OPTIONS.statusPerkawinan },
+    { key: "tanggungan", label: "Jumlah tanggungan", options: BPRS_OPTIONS.tanggungan },
+    fixed
+      ? { key: "pendidikanFix", label: "Pendidikan terakhir", options: BPRS_OPTIONS.pendidikanFix }
+      : { key: "pendidikan", label: "Pendidikan terakhir", options: BPRS_OPTIONS.pendidikan },
+    { key: "statusTempatTinggal", label: "Status tempat tinggal", options: BPRS_OPTIONS.statusTempatTinggal },
+    ...(fixed
+      ? [{ key: "statusKaryawan" as const, label: "Status karyawan", options: BPRS_OPTIONS.statusKaryawan }]
+      : [{ key: "lamaMenetap" as const, label: "Lama menetap", options: BPRS_OPTIONS.lamaMenetap }]),
+  ];
+  return (
+    <div className="space-y-3">
+      <p className="text-xs text-muted-foreground">
+        Dipakai untuk mengisi otomatis Excel "{BPRS_TEMPLATE_LABELS[fixed ? "fix_income" : "fluktuatif"]}". Isian lain (reputasi, SLIK, rekening koran, rincian agunan) dilengkapi di tab Format Excel BPRS.
+      </p>
+      <div className="grid gap-4 md:grid-cols-3">
+        <div className="space-y-2">
+          <Label htmlFor="profile-tanggalLahir">Tanggal lahir</Label>
+          <Input id="profile-tanggalLahir" type="date" value={profile.tanggalLahir ?? ""} onChange={e => set("tanggalLahir", e.target.value)} />
+        </div>
+        {selects.map(field => (
+          <div key={field.key} className="space-y-2">
+            <Label htmlFor={`profile-${field.key}`}>{field.label}</Label>
+            <Select value={(profile[field.key] as string | undefined) ?? ""} onValueChange={value => set(field.key, value)}>
+              <SelectTrigger id={`profile-${field.key}`}><SelectValue placeholder="Pilih" /></SelectTrigger>
+              <SelectContent>{field.options.map(option => <SelectItem key={option} value={option}>{option.trim()}</SelectItem>)}</SelectContent>
+            </Select>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function compactProfile(profile: unknown): BprsProfile | undefined {
+  if (!profile || typeof profile !== "object") return undefined;
+  const entries = Object.entries(profile as Record<string, unknown>).filter(([, v]) => v !== undefined && v !== null && v !== "");
+  return entries.length ? (Object.fromEntries(entries) as BprsProfile) : undefined;
+}
+
+const rupiah = (value: unknown) => {
+  const n = Number(value);
+  return Number.isFinite(n) && String(value ?? "") !== "" ? `Rp ${n.toLocaleString("id-ID")}` : "-";
+};
+
+/** Ringkasan sebelum kirim, dengan tautan kembali ke langkah terkait. */
+function ReviewSummary({ values, isFastTrack, onEdit }: { values: Values; isFastTrack: boolean; onEdit: (step: number) => void }) {
+  const groups: Array<{ step: number; title: string; rows: Array<[string, string]> }> = [
+    {
+      step: 0,
+      title: "Nasabah & usaha",
+      rows: [
+        ["Nama", values.customerName || "-"],
+        ["NIK", values.customerId ? `${String(values.customerId).slice(0, 4)}********${String(values.customerId).slice(-4)}` : "-"],
+        ["Telepon", values.phone || "-"],
+        ["Usaha", `${values.businessName || "-"} (${values.businessType || "-"}), ${values.businessAge || "-"} bulan`],
+        ["Profil format BPRS", `${Object.keys(compactProfile(values.bprsProfile) ?? {}).length} isian terisi`],
+      ],
+    },
+    {
+      step: 1,
+      title: "Keuangan & akad",
+      rows: [
+        ["Pendapatan / pengeluaran per bulan", `${rupiah(values.monthlyRevenue)} / ${rupiah(values.monthlyExpenses)}`],
+        ["Angsuran existing per bulan", rupiah(values.existingDebt)],
+        ["Plafon, tenor, margin", `${rupiah(values.requestedAmount)}, ${values.financingTenor || "-"} bulan, ${values.marginRate || "-"}%`],
+        ["Agunan", rupiah(values.collateralValue)],
+        ["Akad", String(values.financingAkad || "-")],
+      ],
+    },
+    {
+      step: 2,
+      title: "Dokumen & syariah",
+      rows: [
+        ["Dokumen wajib", (values.legalDocuments ?? []).map((d: Document) => d.type).join(", ") || "-"],
+        ["Kepatuhan syariah usaha", values.businessShariaCompliant === "yes" ? "Ya, sepenuhnya" : values.businessShariaCompliant === "partial" ? "Sebagian" : values.businessShariaCompliant === "no" ? "Tidak" : "-"],
+      ],
+    },
+  ];
+  return (
+    <div className="space-y-4">
+      <div className={`rounded-lg border p-3 text-sm ${isFastTrack ? "border-emerald-200 bg-emerald-50 text-emerald-900" : "border-[#cfd8e8] bg-[#eef2f8] text-navy-900"}`}>
+        {isFastTrack
+          ? "Jalur ringkas: setelah dikirim cukup unggah dan verifikasi KTP sebelum diputuskan."
+          : "Jalur lengkap: setelah dikirim unggah KTP, NPWP, NIB, dan minimal 1 foto survei sebelum diputuskan."}
+      </div>
+      {groups.map(group => (
+        <div key={group.step} className="rounded-lg border border-slate-200 p-4">
+          <div className="mb-2 flex items-center justify-between">
+            <h3 className="font-medium text-navy-900">{group.title}</h3>
+            <Button type="button" variant="ghost" size="sm" onClick={() => onEdit(group.step)}>Ubah</Button>
+          </div>
+          <dl className="grid gap-x-6 gap-y-1 text-sm sm:grid-cols-[minmax(0,220px)_1fr]">
+            {group.rows.map(([label, value]) => (
+              <div key={label} className="contents">
+                <dt className="text-muted-foreground">{label}</dt>
+                <dd className="text-navy-900">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      ))}
+      <p className="text-xs text-muted-foreground">Draft tersimpan otomatis di perangkat ini sampai pengajuan dikirim.</p>
+    </div>
+  );
 }

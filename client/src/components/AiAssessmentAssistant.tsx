@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { trpc } from "@/lib/trpc";
 import { AlertTriangle, BookOpenCheck, CheckCircle2, HelpCircle, Loader2, ScanSearch, Sparkles, ThumbsDown, ThumbsUp, Users } from "lucide-react";
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 const severityTone: Record<string, string> = {
   tinggi: "bg-rose-50 text-rose-800 border-rose-200",
@@ -50,10 +50,27 @@ function BulletBlock({ title, items, Icon, tone }: { title: string; items: strin
   );
 }
 
-export function AiAssessmentAssistant({ applicationId }: { applicationId: number }) {
+/**
+ * autoRun: jalankan ketiga pemeriksaan sekali saat panel tampil (misalnya setelah
+ * penilaian), sehingga analis tidak perlu menekan tombol satu per satu.
+ */
+export function AiAssessmentAssistant({ applicationId, autoRun = false }: { applicationId: number; autoRun?: boolean }) {
   const consistency = trpc.aiAssist.checkConsistency.useMutation();
   const sharia = trpc.aiAssist.checkSharia.useMutation();
   const brief = trpc.aiAssist.committeeBrief.useMutation();
+  const started = useRef(false);
+  const running = consistency.isPending || sharia.isPending || brief.isPending;
+  const runAll = () => {
+    consistency.mutate({ applicationId });
+    sharia.mutate({ applicationId });
+    brief.mutate({ applicationId });
+  };
+  useEffect(() => {
+    if (!autoRun || started.current) return;
+    started.current = true;
+    runAll();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoRun]);
 
   return (
     <Card>
@@ -62,8 +79,11 @@ export function AiAssessmentAssistant({ applicationId }: { applicationId: number
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-gold-300"><Sparkles className="h-5 w-5" /></span>
           <div>
             <CardTitle className="text-xl">Asisten AI Penilaian</CardTitle>
-            <CardDescription>Alat bantu analis dan komite. AI tidak mengubah skor SSCI dan tidak mengambil keputusan pembiayaan.</CardDescription>
+            <CardDescription>Konsistensi data, kesesuaian syariah, dan ringkasan komite dalam satu kali jalan. AI tidak mengubah skor SSCI dan tidak mengambil keputusan pembiayaan.</CardDescription>
           </div>
+          <Button type="button" variant="outline" className="ml-auto shrink-0" onClick={runAll} disabled={running}>
+            {running ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}Jalankan semua
+          </Button>
         </div>
       </CardHeader>
       <CardContent>

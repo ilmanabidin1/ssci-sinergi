@@ -1517,3 +1517,19 @@ export async function updateBprsProfile(applicationId: number, organizationId: n
     .set({ bprsProfile: profile })
     .where(and(eq(applications.id, applicationId), eq(applications.organizationId, organizationId)));
 }
+
+export async function updateLegalDocuments(applicationId: number, organizationId: number, legalDocuments: Array<{ type: string; status: string; notes?: string }>) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(applications)
+    .set({ legalDocuments, updatedAt: new Date() })
+    .where(and(eq(applications.id, applicationId), eq(applications.organizationId, organizationId)));
+}
+
+export async function updateCollateralValue(applicationId: number, organizationId: number, collateralValue: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(applications)
+    .set({ collateralValue: collateralValue.toFixed(2), updatedAt: new Date() })
+    .where(and(eq(applications.id, applicationId), eq(applications.organizationId, organizationId)));
+}

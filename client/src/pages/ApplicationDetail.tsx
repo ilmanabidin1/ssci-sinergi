@@ -3,6 +3,8 @@ import { ExitGatePanel, OverridePanel, SensitivityPanel } from "@/components/Hum
 import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChecks";
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
 import { BprsWorkbookPanel } from "@/components/BprsWorkbookPanel";
+import { WorkflowStatus, type DetailTab } from "@/components/WorkflowStatus";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -14,7 +16,7 @@ import { trpc } from "@/lib/trpc";
 import { Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload, Camera, Sparkles, Trash2 } from "lucide-react";
 import { useParams } from "wouter";
 import { toast } from "sonner";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ApplicationDetail() {
   const { id } = useParams<{ id: string }>();
@@ -49,6 +51,18 @@ export default function ApplicationDetail() {
     { enabled: !!applicationId }
   );
 
+  const [tab, setTab] = useState<DetailTab>("ringkasan");
+  const [tabChosen, setTabChosen] = useState(false);
+  const [justAssessed, setJustAssessed] = useState(false);
+  const chooseTab = (next: DetailTab) => {
+    setTab(next);
+    setTabChosen(true);
+  };
+  // Pengajuan yang belum dinilai dibuka langsung di tab dokumen, karena itu langkah berikutnya.
+  useEffect(() => {
+    if (tabChosen || !data?.application) return;
+    setTab(!data.assessment && data.application.status === "pending" ? "data" : "ringkasan");
+  }, [data, tabChosen]);
   const [commentText, setCommentText] = useState("");
   const [surveyCaption, setSurveyCaption] = useState("");
   const [analyzingPhotoId, setAnalyzingPhotoId] = useState<number | null>(null);
@@ -57,6 +71,7 @@ export default function ApplicationDetail() {
     onSuccess: async () => {
       setSurveyCaption("");
       await surveyPhotosQuery.refetch();
+      await utils.applications.workflow.invalidate({ applicationId });
       toast.success("Foto survey berhasil diunggah");
     },
     onError: error => toast.error(`Gagal mengunggah foto: ${error.message}`),
@@ -75,6 +90,7 @@ export default function ApplicationDetail() {
   const deletePhotoMutation = trpc.survey.deletePhoto.useMutation({
     onSuccess: async () => {
       await surveyPhotosQuery.refetch();
+      await utils.applications.workflow.invalidate({ applicationId });
       toast.success("Foto survey berhasil dihapus");
     },
     onError: error => toast.error(`Gagal menghapus foto: ${error.message}`),
@@ -132,6 +148,7 @@ export default function ApplicationDetail() {
   const uploadMutation = trpc.documents.uploadDocument.useMutation({
     onSuccess: async () => {
       await documentsQuery.refetch();
+      await utils.applications.workflow.invalidate({ applicationId });
       toast.success("Dokumen berhasil diunggah");
     },
     onError: error => toast.error(`Gagal mengunggah dokumen: ${error.message}`),
@@ -140,6 +157,7 @@ export default function ApplicationDetail() {
   const verifyMutation = trpc.documents.verifyDocument.useMutation({
     onSuccess: async () => {
       await documentsQuery.refetch();
+      await utils.applications.workflow.invalidate({ applicationId });
       toast.success("Status dokumen berhasil diperbarui");
     },
     onError: error => toast.error(`Gagal memperbarui dokumen: ${error.message}`),
@@ -181,6 +199,9 @@ export default function ApplicationDetail() {
     onSuccess: async data => {
       await utils.assessments.getWithApplication.invalidate({ applicationId });
       await utils.aiAssist.ruleCheck.invalidate({ applicationId });
+      await utils.applications.workflow.invalidate({ applicationId });
+      setJustAssessed(true);
+      setTab("ringkasan");
       if (data.result.recommendationStatus === "rule_fallback") {
         toast.warning("Skor selesai. Narasi AI tidak tersedia; rekomendasi aturan digunakan.");
       } else {
@@ -195,6 +216,7 @@ export default function ApplicationDetail() {
   const decideMutation = trpc.applications.decide.useMutation({
     onSuccess: async () => {
       await utils.assessments.getWithApplication.invalidate({ applicationId });
+      await utils.applications.workflow.invalidate({ applicationId });
       toast.success("Keputusan checker berhasil disimpan");
     },
     onError: error => toast.error(`Gagal menyimpan keputusan: ${error.message}`),
@@ -341,9 +363,41 @@ export default function ApplicationDetail() {
           </div>
         </div>
 
+        <WorkflowStatus
+          applicationId={application.id}
+          status={application.status}
+          role={user?.role}
+          isOwnWork={isOwnWork}
+          onNavigate={chooseTab}
+        />
+
+        <Tabs value={tab} onValueChange={value => chooseTab(value as DetailTab)}>
+          <TabsList className="mb-6 flex h-auto w-full flex-wrap justify-start">
+            <TabsTrigger value="ringkasan">Ringkasan</TabsTrigger>
+            <TabsTrigger value="data">Data & Dokumen</TabsTrigger>
+            <TabsTrigger value="penilaian">Analisis lanjutan</TabsTrigger>
+            <TabsTrigger value="bprs">Format Excel BPRS</TabsTrigger>
+            <TabsTrigger value="riwayat">Riwayat</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="ringkasan">
         <div className="mb-6 empty:hidden">
           <CustomerRequestsPanel applicationId={application.id} />
         </div>
+
+           {(application.status === "approved" || application.status === "rejected") && (
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle>Keputusan Checker</CardTitle>
+                <CardDescription>
+                  Status: {application.status === "approved" ? "Disetujui" : "Ditolak"}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm">{application.decisionNotes}</CardContent>
+            </Card>
+          )}
+
+        {application.status === "assessed" && <div className="mb-6"><ExitGatePanel applicationId={application.id} /></div>}
 
         {assessment && (
           <Card className="mb-6 border-2 border-primary">
@@ -551,39 +605,23 @@ export default function ApplicationDetail() {
           </Card>
         )}
 
-        {assessment && (
-          <div className="mb-6 grid gap-6">
-            {application.status === "assessed" && <ExitGatePanel applicationId={application.id} />}
-            <OverridePanel
-              applicationId={application.id}
-              assessment={assessment}
-              canReview={application.status === "assessed" && (user?.role === "checker" || user?.role === "admin") && !isOwnWork}
-              blockedReason={
-                application.status !== "assessed"
-                  ? "Peninjauan hanya dapat dilakukan setelah penilaian dan sebelum keputusan."
-                  : isOwnWork
-                    ? "Anda membuat atau menilai pengajuan ini, sehingga peninjauan harus dilakukan checker lain."
-                    : user?.role === "maker"
-                      ? "Peninjauan dilakukan oleh checker atau admin."
-                      : undefined
-              }
-            />
-            <SensitivityPanel applicationId={application.id} />
-          </div>
+        {!assessment && (
+          <Card className="mb-6">
+            <CardHeader>
+              <CardTitle>Belum dinilai</CardTitle>
+              <CardDescription>Skor SSCI, ringkasan komite, dan pemeriksaan AI muncul di sini setelah penilaian. Lengkapi dokumen di tab Data & Dokumen, lalu tekan "Lakukan Penilaian SSCI".</CardDescription>
+            </CardHeader>
+          </Card>
         )}
 
-        <div className="mb-6">
-          <AiAssessmentAssistant applicationId={application.id} />
-        </div>
+        {assessment && (
+          <div className="mb-6">
+            <AiAssessmentAssistant applicationId={application.id} autoRun={justAssessed} />
+          </div>
+        )}
+          </TabsContent>
 
-        <div className="mb-6">
-          <BprsWorkbookPanel
-            applicationId={application.id}
-            canEdit={user?.role === "maker" || user?.role === "admin"}
-            ssciScore={assessment ? { totalScore: Number(assessment.totalScore), classification: assessment.overrideClassification ?? assessment.classification } : null}
-          />
-        </div>
-
+          <TabsContent value="data">
          <div className="grid md:grid-cols-2 gap-6">
            <Card className="md:col-span-2">
              <CardHeader>
@@ -715,17 +753,6 @@ export default function ApplicationDetail() {
                )}
              </CardContent>
            </Card>
-           {(application.status === "approved" || application.status === "rejected") && (
-            <Card className="md:col-span-2">
-              <CardHeader>
-                <CardTitle>Keputusan Checker</CardTitle>
-                <CardDescription>
-                  Status: {application.status === "approved" ? "Disetujui" : "Ditolak"}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm">{application.decisionNotes}</CardContent>
-            </Card>
-          )}
           <Card>
             <CardHeader>
               <CardTitle>Informasi Nasabah</CardTitle>
@@ -801,7 +828,48 @@ export default function ApplicationDetail() {
             </CardContent>
           </Card>
         </div>
+          </TabsContent>
 
+          <TabsContent value="penilaian">
+        {assessment ? (
+          <div className="mb-6 grid gap-6">
+            <OverridePanel
+              applicationId={application.id}
+              assessment={assessment}
+              canReview={application.status === "assessed" && (user?.role === "checker" || user?.role === "admin") && !isOwnWork}
+              blockedReason={
+                application.status !== "assessed"
+                  ? "Peninjauan hanya dapat dilakukan setelah penilaian dan sebelum keputusan."
+                  : isOwnWork
+                    ? "Anda membuat atau menilai pengajuan ini, sehingga peninjauan harus dilakukan checker lain."
+                    : user?.role === "maker"
+                      ? "Peninjauan dilakukan oleh checker atau admin."
+                      : undefined
+              }
+            />
+            <SensitivityPanel applicationId={application.id} />
+          </div>
+        ) : (
+          <p className="mb-6 text-sm text-muted-foreground">Peninjauan klasifikasi dan uji sensitivitas tersedia setelah penilaian SSCI.</p>
+        )}
+        {!assessment && (
+          <div className="mb-6">
+            <AiAssessmentAssistant applicationId={application.id} />
+          </div>
+        )}
+          </TabsContent>
+
+          <TabsContent value="bprs">
+        <div className="mb-6">
+          <BprsWorkbookPanel
+            applicationId={application.id}
+            canEdit={user?.role === "maker" || user?.role === "admin"}
+            ssciScore={assessment ? { totalScore: Number(assessment.totalScore), classification: assessment.overrideClassification ?? assessment.classification } : null}
+          />
+        </div>
+          </TabsContent>
+
+          <TabsContent value="riwayat">
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="md:col-span-2">
             <CardHeader>
@@ -880,6 +948,8 @@ export default function ApplicationDetail() {
             </CardContent>
           </Card>
         </div>
+          </TabsContent>
+        </Tabs>
       </main>
     </div>
   );
