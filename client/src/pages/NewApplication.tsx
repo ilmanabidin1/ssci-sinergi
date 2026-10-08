@@ -1,5 +1,5 @@
 import { DailySalesCalculator, ReviewTrackHint } from "@/components/DailySalesCalculator";
-import { demoBusiness, demoCustomer, demoMurabahahObject } from "@shared/demoData";
+import { buildDemoScenario, demoAkadFields, type DemoScenario } from "@shared/demoData";
 import { AiDocumentReader } from "@/components/AiDocumentReader";
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -32,8 +32,7 @@ const STEP_DESCRIPTIONS = [
   "Kelengkapan dokumen, kepatuhan syariah, dan tata kelola",
   "Periksa ringkasan sebelum mengirim",
 ];
-/** Langkah formulir baru dipetakan ke contoh data lama (0 segmen, 1 nasabah, 2 usaha, 3 akad, 4 legal, 5 ESG). */
-const DEMO_STEPS: Record<number, number[]> = { 0: [0, 1], 1: [2, 3], 2: [4, 5], 3: [] };
+const DEMO_STEPS: Record<number, boolean> = { 0: true, 1: true, 2: true, 3: false };
 type Document = { type: string; status: "pending" | "complete" | "verified" | "missing"; notes: string };
 type Values = Record<string, any> & { legalDocuments: Document[]; productSegment: BprsProductSegment };
 type ExtractKtpResult = { customerName?: string | null; customerId?: string | null; address?: string | null };
@@ -111,138 +110,6 @@ const initial: Values = {
     { type: "NIB", status: "pending", notes: "" },
   ],
 };
-
-const demoShariaNotes = ["Usaha tidak mengandung unsur riba, gharar, atau maysir dan sesuai fatwa DSN-MUI.", "Seluruh transaksi dicatat secara syariah tanpa bunga dan telah dikaji oleh pihak internal."];
-const demoEnvironmental = ["Menggunakan kemasan ramah lingkungan dan mengurangi limbah kemasan.", "Menerapkan pengelolaan limbah dan hemat energi pada operasional harian."];
-const demoSocial = ["Mempekerjakan tenaga kerja dari sekitar lingkungan usaha.", "Memberdayakan masyarakat lokal melalui kemitraan usaha dan pemasok lokal."];
-
-const pick = <T,>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
-const demoProfile = (incomeSourceType?: string): BprsProfile => {
-  const year = new Date().getFullYear() - (25 + Math.floor(Math.random() * 25));
-  const fixed = incomeSourceType === "fixed";
-  return {
-    tanggalLahir: `${year}-0${1 + Math.floor(Math.random() * 9)}-1${Math.floor(Math.random() * 9)}`,
-    jenisKelamin: pick(["Pria", "Wanita"]),
-    statusPerkawinan: pick(["Menikah", "Menikah", "Lajang"]),
-    tanggungan: pick([" 1 - 2 Orang", "3 - 5 Orang", "Tidak Mempunyai Tanggungan"]),
-    ...(fixed ? { pendidikanFix: pick(["SMA", "S1"]), statusKaryawan: "Tetap Swasta" } : { pendidikan: pick(["SMA", "Dip./S1-S3"]), lamaMenetap: pick(["> 5 - 8 tahun", "> 8 tahun"]) }),
-    statusTempatTinggal: pick(["Milik sendiri", "Sewa"]),
-  };
-};
-const randInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
-const roundTo = (value: number, step = 100000) => Math.round(value / step) * step;
-
-const demoMurabahah = (businessName?: string, requestedAmount?: string): Partial<Values> => {
-  const type = pick(["standard", "standard", "ultra_mikro", "personal"] as const);
-  const requested = Number(requestedAmount) || 0;
-  const price = requested > 0 ? roundTo(requested * randInt(110, 125) / 100, 100000) : roundTo(randInt(10, 50) * 1000000, 100000);
-  return {
-    murabahahType: type,
-    murabahahSupplierName: pick(["PT Sinar Niaga Sejahtera", "UD Berkah Abadi", "PT Maju Bersama"]),
-    murabahahObject: demoMurabahahObject(businessName),
-    murabahahPriceKnown: "yes",
-    murabahahMarginDisclosed: "yes",
-    murabahahDpsReviewed: "yes",
-    murabahahAcquisitionPrice: String(price),
-    murabahahDirectCost: String(roundTo(price * randInt(2, 8) / 100, 10000)),
-    murabahahSupplierDiscount: String(roundTo(price * randInt(3, 10) / 100, 10000)),
-    murabahahDownPaymentAmount: String(roundTo(price * randInt(10, 25) / 100, 10000)),
-    murabahahWakalah: type === "personal" ? "no" : "yes",
-    murabahahWakalahConfirmedAt: "2026-01-15",
-    murabahahInvoiceNumber: `INV-${randInt(1000, 9999)}`,
-    murabahahQabdhVerifiedAt: "2026-01-20",
-    murabahahSignedAt: "2026-01-25",
-    murabahahTaazirToWelfare: "yes",
-    murabahahNotes: pick(["Pengadaan telah disetujui oleh DPS.", "Pemasok telah diidentifikasi dan margin telah dihitung."]),
-  };
-};
-const demoMudharabah = (): Partial<Values> => {
-  const capital = roundTo(randInt(20, 120) * 1000000, 100000);
-  const bankNisbah = pick([50, 55, 60, 65]);
-  return {
-    mudharabahType: pick(["muthlaqah", "muthlaqah", "muqayyadah"] as const),
-    mudharabahCapitalForm: pick(["uang", "uang", "aset", "kombinasi"] as const),
-    mudharabahCapitalValue: String(capital),
-    mudharabahBusinessPurpose: pick(["Modal kerja untuk pengembangan usaha produksi.", "Pembiayaan penambahan stok dan kebutuhan operasional."]),
-    mudharabahProfitSharingMethod: pick(["profit_sharing", "net_revenue"] as const),
-    mudharabahBankNisbah: String(bankNisbah),
-    mudharabahCustomerNisbah: String(100 - bankNisbah),
-    mudharabahPbh: String(roundTo(capital * randInt(1, 2) / 100, 10000)),
-    mudharabahRbh: String(roundTo(capital * randInt(5, 12) / 100, 10000)),
-    mudharabahCollateral: pick(["no", "no", "yes"] as const),
-    mudharabahGuarantor: pick(["no", "yes"] as const),
-    mudharabahTaazirToWelfare: "yes",
-    mudharabahSignedAt: "2026-01-25",
-    mudharabahNotes: pick(["Proyeksi bagi hasil telah disepakati kedua belah pihak.", "Nisbah disepakati secara proporsional sesuai kemampuan usaha."]),
-  };
-};
-const demoQardh = (): Partial<Values> => ({
-  qardhPurpose: pick([
-    "Dana talangan biaya pendaftaran porsi haji reguler.",
-    "Dana talangan uang kuliah tunggal (UKT) semester berjalan.",
-    "Talangan modal darurat operasional mikro.",
-  ]),
-  qardhAdminFee: String(pick([150000, 250000, 350000, 500000])),
-  marginRate: "0",
-});
-
-const demoMultijasa = (): Partial<Values> => {
-  const category = pick([
-    "pendidikan",
-    "umrah_haji",
-    "kesehatan",
-    "tenaga_kerja_renovasi",
-  ] as const);
-  const cost = roundTo(randInt(15, 60) * 1000000, 500000);
-  const dp = roundTo(cost * pick([0, 10, 20]) / 100, 100000);
-  const ujrah = roundTo((cost - dp) * randInt(8, 14) / 100, 50000);
-
-  const providerMap: Record<typeof category, { provider: string; object: string }> = {
-    pendidikan: {
-      provider: "Universitas Islam Bandung (Unisba)",
-      object: "Biaya Pendidikan & SPP Semester 1 s.d. 4 Fakultas Tarbiyah",
-    },
-    umrah_haji: {
-      provider: "PT Al-Firdaus Tour & Travel Umrah",
-      object: "Paket Perjalanan Ibadah Umrah Reguler 12 Hari Quad Room",
-    },
-    kesehatan: {
-      provider: "RS Syariah Al-Islam Bandung",
-      object: "Biaya Tindakan Medis Operasi & Perawatan Rawat Inap",
-    },
-    tenaga_kerja_renovasi: {
-      provider: "CV Karya Bersama Konstruksi",
-      object: "Jasa Pemborong & Tenaga Kerja Renovasi Tempat Usaha",
-    },
-  };
-
-  const sample = providerMap[category];
-
-  return {
-    multijasaAkadType: "ijarah",
-    multijasaServiceCategory: category,
-    multijasaServiceProvider: sample.provider,
-    multijasaSourceObject: sample.object,
-    multijasaServiceCost: String(cost),
-    multijasaDownPayment: String(dp),
-    multijasaUjrahAmount: String(ujrah),
-    multijasaWakalah: pick(["yes", "no"] as const),
-    multijasaDpsReviewed: "yes",
-    multijasaTaazirToWelfare: "yes",
-    multijasaNotes: "Objek jasa telah dikonfirmasi ke lembaga penyedia dan memenuhi ketentuan syariah.",
-  };
-};
-
-const demoLegal = (): Partial<Values> => ({
-  legalDocuments: initial.legalDocuments.map(doc => ({ ...doc, status: pick(["complete", "verified", "verified"]) as Document["status"] })),
-  businessShariaCompliant: pick(["yes", "yes", "partial"]) as "yes" | "partial",
-  shariaComplianceNotes: pick(demoShariaNotes),
-});
-const demoEsg = (): Partial<Values> => ({
-  environmentalPractices: pick(demoEnvironmental),
-  socialImpact: pick(demoSocial),
-  governanceQuality: pick(["excellent", "good", "good", "fair"]) as "excellent" | "good" | "fair",
-});
 
 function Field({ name, label, values, setValues, ...props }: { name: string; label: string; values: Values; setValues: React.Dispatch<React.SetStateAction<Values>>; [key: string]: unknown }) {
   const Component = props.rows ? Textarea : Input;
@@ -374,40 +241,40 @@ export default function NewApplication() {
   useEffect(() => { try { localStorage.setItem(DRAFT_KEY, JSON.stringify({ version: DRAFT_VERSION, values, step })); } catch {} }, [values, step]);
   const restore = () => { try { const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || ""); if (saved.version === DRAFT_VERSION) { setValues({ ...initial, ...saved.values }); setStep(Math.min(saved.step || 0, steps.length - 1)); setHasDraft(false); } else { toast.error("Draft dari versi formulir lama tidak dapat dipulihkan"); } } catch { toast.error("Draft tidak dapat dipulihkan"); } };
   const reset = () => { localStorage.removeItem(DRAFT_KEY); setValues(initial); setStep(0); setHasDraft(false); };
-  const getAkadDemo = (akad?: string, businessName?: string, requestedAmount?: string) => {
-    if (akad === "mudharabah") return demoMudharabah();
-    if (akad === "qardh") return demoQardh();
-    if (akad === "multijasa") return demoMultijasa();
-    return demoMurabahah(businessName, requestedAmount);
+  // Satu skenario dipakai bersama oleh tombol contoh di setiap langkah, sehingga
+  // identitas, usaha, keuangan, dan akad saling konsisten.
+  const scenarioRef = useRef<DemoScenario | null>(null);
+  const scenarioFor = (current: Values, fresh = false) => {
+    if (fresh || !scenarioRef.current) {
+      scenarioRef.current = buildDemoScenario({ segment: current.productSegment, incomeSourceType: current.incomeSourceType });
+    }
+    return scenarioRef.current;
   };
-
-  const fillDemo = (demoStep: number) =>
-    setValues(current => ({
-      ...current,
-      ...(demoStep === 0
-        ? { productSegment: "umkm" }
-        : demoStep === 1
-        ? { ...demoCustomer(), bprsProfile: demoProfile(current.incomeSourceType) }
-        : demoStep === 2
-        ? demoBusiness()
-        : demoStep === 3
-        ? getAkadDemo(current.financingAkad, current.businessName, current.requestedAmount)
-        : demoStep === 4
-        ? demoLegal()
-        : demoEsg()),
-    } as Values));
+  const demoSlice = (scenario: DemoScenario, current: Values, part: "nasabah" | "keuangan" | "dokumen"): Partial<Values> => {
+    if (part === "nasabah") {
+      return { ...scenario.customer, ...scenario.business, incomeSourceType: scenario.incomeSourceType, isRelatedParty: "no", bprsProfile: scenario.profile };
+    }
+    if (part === "keuangan") {
+      return { ...scenario.finance, ...demoAkadFields(scenario, current.financingAkad) };
+    }
+    return {
+      ...scenario.legal,
+      ...scenario.esg,
+      legalDocuments: current.legalDocuments.map(doc => ({ ...doc, status: "complete" as const, notes: "" })),
+    };
+  };
+  const fillDemo = (step: number) => {
+    setValues(current => {
+      const scenario = scenarioFor(current, step === 0);
+      const part = step === 0 ? "nasabah" : step === 1 ? "keuangan" : "dokumen";
+      return { ...current, ...demoSlice(scenario, current, part) } as Values;
+    });
+  };
   const fillAllDemo = () =>
     setValues(current => {
-      const business = demoBusiness();
-      return {
-      ...current,
-      ...demoCustomer(),
-      bprsProfile: demoProfile(current.incomeSourceType),
-      ...business,
-      ...getAkadDemo(current.financingAkad, business.businessName, business.requestedAmount),
-      ...demoLegal(),
-      ...demoEsg(),
-    } as Values;
+      const scenario = scenarioFor(current, true);
+      const merged = { ...current, ...demoSlice(scenario, current, "nasabah") } as Values;
+      return { ...merged, ...demoSlice(scenario, merged, "keuangan"), ...demoSlice(scenario, merged, "dokumen") } as Values;
     });
   const selectKtpFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -755,7 +622,7 @@ export default function NewApplication() {
       <main className="container max-w-4xl py-6 sm:py-8"><div className="mb-6"><div className="flex flex-wrap items-start justify-between gap-3"><div><h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-gray-600">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan</p></div><Button type="button" variant="outline" onClick={fillAllDemo}>Isi contoh data</Button></div><p className="mt-3 text-xs text-muted-foreground">Mengisi contoh data acak untuk pengujian alur. Data tetap dapat Anda periksa sebelum dikirim.</p></div>
       {hasDraft && <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-[#cfd8e8] bg-[#eef2f8] p-3 text-sm"><span>Draft tersimpan ditemukan.</span><span className="flex gap-2"><Button type="button" size="sm" onClick={restore}>Pulihkan draft</Button><Button type="button" size="sm" variant="ghost" onClick={reset}>Mulai ulang</Button></span></div>}
       <div className="mb-8 rounded-2xl border border-border bg-white p-5 shadow-premium"><div className="mb-4 flex justify-between text-xs font-bold uppercase tracking-[.16em] text-muted-foreground"><span>Langkah {step + 1} dari {steps.length}</span><span className="text-gold-500">{steps[step]}</span></div><ol className="flex items-center">{steps.map((label, i) => <li key={label} className="flex flex-1 items-center last:flex-none" aria-label={label} aria-current={i === step ? "step" : undefined}><span title={label} className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold transition-all ${i < step ? "bg-navy-900 text-gold-300" : i === step ? "bg-gold-400 text-navy-900 ring-4 ring-gold-400/25" : "border border-border bg-ivory text-muted-foreground"}`}>{i < step ? <Check className="h-4 w-4" /> : i + 1}</span>{i < steps.length - 1 && <span className={`mx-1.5 h-0.5 flex-1 rounded-full ${i < step ? "bg-navy-900" : "bg-border"}`} />}</li>)}</ol></div>
-        <form onSubmit={submit}><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle>{steps[step]}</CardTitle>                  <CardDescription>{STEP_DESCRIPTIONS[step]}</CardDescription></div>{DEMO_STEPS[step]!.length > 0 && <Button type="button" variant="outline" size="sm" onClick={() => DEMO_STEPS[step]!.forEach(fillDemo)}>Isi contoh data</Button>}</div></CardHeader><CardContent className="space-y-4">
+        <form onSubmit={submit}><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle>{steps[step]}</CardTitle>                  <CardDescription>{STEP_DESCRIPTIONS[step]}</CardDescription></div>{DEMO_STEPS[step] && <Button type="button" variant="outline" size="sm" onClick={() => fillDemo(step)}>Isi contoh data</Button>}</div></CardHeader><CardContent className="space-y-4">
           {step === 0 && <>
             {section("Segmen produk", <>            <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-2">
