@@ -725,7 +725,7 @@ export const appRouter = router({
       .query(async ({ input, ctx }) => {
         const application = await db.getApplicationById(input.id, ctx.user.organizationId);
         if (!application) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
         }
         return application;
       }),
@@ -809,7 +809,7 @@ export const appRouter = router({
         // Get application
         const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
         if (!application) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
         }
 
         // Status dokumen legal mengikuti unggahan dan verifikasi checker.
@@ -1078,7 +1078,7 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
         if (!application) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
         }
         const id = await db.addApplicationComment({
           organizationId: ctx.user.organizationId,
@@ -1152,7 +1152,7 @@ export const appRouter = router({
         const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
         
         if (!application) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
         }
 
         const bprsEvaluation = evaluateBprsPolicy({
@@ -1186,11 +1186,11 @@ export const appRouter = router({
         const assessment = await db.getAssessmentByApplicationId(input.applicationId, ctx.user.organizationId);
         
         if (!application) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
         }
         
         if (!assessment) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Assessment not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Penilaian tidak ditemukan" });
         }
 
         const organization = await db.getOrganizationById(ctx.user.organizationId);
@@ -1212,16 +1212,16 @@ export const appRouter = router({
       let bytes: Buffer;
       try { bytes = decodeDocumentData(input.data); } catch (error) { throw new TRPCError({ code: "BAD_REQUEST", message: error instanceof Error ? error.message : "Invalid document" }); }
       const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
-      if (!application) throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+      if (!application) throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
       const storedName = await storeDocument(bytes, input.contentType);
       const id = await db.createDocumentFile({ organizationId: ctx.user.organizationId, applicationId: input.applicationId, documentType: input.documentType, originalName: sanitizeOriginalName(input.originalName), storedName, contentType: input.contentType, sizeBytes: bytes.length, uploadedBy: ctx.user.id, status: "uploaded" });
-      if (!id) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Document could not be saved" });
+      if (!id) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Dokumen gagal disimpan. Coba unggah ulang." });
       return { id, storedName };
     }),
     listDocuments: protectedProcedure.input(z.object({ applicationId: z.number().int().positive() })).query(({ input, ctx }) => db.getDocumentFiles(input.applicationId, ctx.user.organizationId)),
-    verifyDocument: checkerProcedure.input(z.object({ id: z.number().int().positive(), status: z.enum(["verified", "rejected"]), reason: z.string().trim().max(2000).optional() }).refine(value => value.status !== "rejected" || !!value.reason, { message: "Rejection reason is required" })).mutation(async ({ input, ctx }) => {
+    verifyDocument: checkerProcedure.input(z.object({ id: z.number().int().positive(), status: z.enum(["verified", "rejected"]), reason: z.string().trim().max(2000).optional() }).refine(value => value.status !== "rejected" || !!value.reason, { message: "Alasan penolakan wajib diisi" })).mutation(async ({ input, ctx }) => {
       const updated = await db.updateDocumentVerification({ id: input.id, organizationId: ctx.user.organizationId, status: input.status, verifiedBy: ctx.user.id, rejectionReason: input.reason });
-      if (!updated) throw new TRPCError({ code: "NOT_FOUND", message: "Document not found" });
+      if (!updated) throw new TRPCError({ code: "NOT_FOUND", message: "Dokumen tidak ditemukan" });
       if (input.status === "rejected") {
         try {
           const document = await db.getDocumentFileById(input.id, ctx.user.organizationId);
@@ -1254,7 +1254,7 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const application = await db.getApplicationById(input.applicationId, ctx.user.organizationId);
         if (!application) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Application not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Pengajuan tidak ditemukan" });
         }
         let bytes: Buffer;
         try {
@@ -1288,7 +1288,7 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const photo = await db.deleteSurveyPhoto(input.photoId, ctx.user.organizationId);
         if (!photo) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Survey photo not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Foto survei tidak ditemukan" });
         }
         try {
           const filePath = join(UPLOAD_DIR, photo.storedName);
@@ -1304,7 +1304,7 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const photo = await db.getSurveyPhotoById(input.photoId, ctx.user.organizationId);
         if (!photo) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Survey photo not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Foto survei tidak ditemukan" });
         }
         if (photo.status !== "uploaded") {
           throw new TRPCError({ code: "BAD_REQUEST", message: "Survey photo sudah dianalisis" });
@@ -1314,7 +1314,7 @@ export const appRouter = router({
         try {
           fileBuffer = readFileSync(filePath);
         } catch (error) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Survey photo file not found" });
+          throw new TRPCError({ code: "NOT_FOUND", message: "Berkas foto survei tidak ditemukan" });
         }
         const imageBase64 = fileBuffer.toString("base64");
         try {

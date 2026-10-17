@@ -1,6 +1,7 @@
 import { NOT_ADMIN_ERR_MSG, UNAUTHED_ERR_MSG } from '@shared/const';
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
+import { z } from "zod";
 import type { TrpcContext } from "./context";
 import { ENV } from "./env";
 
@@ -27,8 +28,34 @@ function assertTwoFactorReady(user: SessionUser, path: string) {
   }
 }
 
+// Pesan validasi zod dalam Bahasa Indonesia.
+z.config(z.locales.id());
+
+const GENERIC_SERVER_ERROR = "Terjadi kesalahan di server. Coba lagi beberapa saat; jika berulang, hubungi admin.";
+/** Pesan teknis (stack, SQL, koneksi, bahasa Inggris) tidak boleh sampai ke pengguna. */
+const TECHNICAL_MESSAGE = /(sql|econn|etimedout|database|cannot read|undefined|null|is not a function|unexpected token|duplicate entry|er_|syntax|stack|openid|not configured)/i;
+
+function friendlyZodMessage(error: z.ZodError): string {
+  const first = error.issues[0];
+  if (!first) return "Isian tidak valid.";
+  const field = first.path.length ? ` (${first.path.map(String).join(".")})` : "";
+  const more = error.issues.length > 1 ? ` dan ${error.issues.length - 1} isian lain` : "";
+  return `Isian tidak valid${field}: ${first.message}${more}.`;
+}
+
 const t = initTRPC.context<TrpcContext>().create({
   transformer: superjson,
+  errorFormatter({ shape, error }) {
+    let message = shape.message;
+    let fieldErrors: Record<string, string> | undefined;
+    if (error.cause instanceof z.ZodError) {
+      message = friendlyZodMessage(error.cause);
+      fieldErrors = Object.fromEntries(error.cause.issues.map(issue => [issue.path.map(String).join("."), issue.message]));
+    } else if (error.code === "INTERNAL_SERVER_ERROR" && (TECHNICAL_MESSAGE.test(message) || !message.trim())) {
+      message = GENERIC_SERVER_ERROR;
+    }
+    return { ...shape, message, data: { ...shape.data, stack: undefined, fieldErrors } };
+  },
 });
 
 export const router = t.router;

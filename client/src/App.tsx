@@ -4,6 +4,7 @@ import { useSessionTimeout } from "@/hooks/useSessionTimeout";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { ConfirmProvider } from "./components/ConfirmDialog";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Platform from "./pages/Platform";
@@ -54,9 +55,11 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <TwoFactorGate>
-            <Router />
-          </TwoFactorGate>
+          <ConfirmProvider>
+            <TwoFactorGate>
+              <Router />
+            </TwoFactorGate>
+          </ConfirmProvider>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
