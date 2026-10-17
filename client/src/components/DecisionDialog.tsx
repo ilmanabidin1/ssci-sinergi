@@ -77,7 +77,14 @@ export function DecisionDialog({
 
   return (
     <AlertDialog open={decision !== null} onOpenChange={open => { if (!open && !pending) onClose(); }}>
-      <AlertDialogContent className="max-h-[calc(100dvh-2rem)] overflow-y-auto sm:max-w-xl">
+      <AlertDialogContent
+        className="max-h-[calc(100dvh-2rem)] overflow-y-auto sm:max-w-xl"
+        onOpenAutoFocus={event => {
+          // Fokus langsung ke kolom catatan, bukan tombol Kembali bawaan AlertDialog.
+          event.preventDefault();
+          document.getElementById("decision-notes")?.focus();
+        }}
+      >
         <form
           className="space-y-4"
           onSubmit={event => {
@@ -159,7 +166,6 @@ export function DecisionDialog({
             <Textarea
               id="decision-notes"
               rows={5}
-              autoFocus
               value={text}
               maxLength={MAX_NOTES}
               aria-invalid={touched && empty}

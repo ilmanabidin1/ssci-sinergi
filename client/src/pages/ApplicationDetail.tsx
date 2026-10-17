@@ -974,6 +974,7 @@ export default function ApplicationDetail() {
                           <img
                             src={`/uploads/${photo.storedName}`}
                             alt={photo.caption || "Foto survei"}
+                            loading="lazy"
                             className="h-40 w-full rounded-md object-cover bg-muted"
                           />
                           <Button

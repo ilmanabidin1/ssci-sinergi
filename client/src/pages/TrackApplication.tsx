@@ -152,7 +152,7 @@ export default function TrackApplication() {
         {/* Form Cari */}
         <Card className="mb-6 border-border shadow-premium">
           <CardHeader className="pb-3">
-            <CardTitle className="text-base"><h2>Masukkan Nomor Tiket / ID Pengajuan</h2></CardTitle>
+            <CardTitle as="h2" className="text-base">Masukkan Nomor Tiket / ID Pengajuan</CardTitle>
             <CardDescription>
               Nomor tiket diberikan oleh Account Officer BPRS saat berkas pertama kali didaftarkan.
             </CardDescription>
