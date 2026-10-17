@@ -21,6 +21,7 @@ import { errorMessage } from "@/lib/errors";
 import { Loader2, Shield, FileText, TrendingUp, AlertCircle, CheckCircle, Download, Upload, Camera, Sparkles, Trash2, Eye, Ban, ChevronDown, RotateCw } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { toast } from "sonner";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { useEffect, useRef, useState } from "react";
 
 const rupiah = (value: unknown) => `Rp ${Math.round(Number(value) || 0).toLocaleString("id-ID")}`;
@@ -81,6 +82,7 @@ export default function ApplicationDetail() {
     { applicationId },
     { enabled: !!applicationId, retry: (count, err) => err.data?.code !== "NOT_FOUND" && count < 2 }
   );
+  usePageTitle(data?.application ? `${data.application.customerName} (SSCI-${String(data.application.id).padStart(5, "0")})` : "Detail pengajuan");
 
   const documentsQuery = trpc.documents.listDocuments.useQuery(
     { applicationId },

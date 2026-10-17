@@ -7,6 +7,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { errorMessage } from "@/lib/errors";
 import { AlertCircle, ChevronDown, Eye, EyeOff, FlaskConical, Loader2, ShieldCheck } from "lucide-react";
 import { useState } from "react";
+import { consumeReturnTo } from "@/hooks/useSessionTimeout";
 import { Link, useLocation } from "wouter";
 
 const demoAccounts = [
@@ -24,6 +25,7 @@ export default function Login() {
   const [showDemo, setShowDemo] = useState(false);
   const [needsOtp, setNeedsOtp] = useState(false);
   const [otp, setOtp] = useState("");
+  const sessionExpired = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("alasan") === "sesi-habis";
   const utils = trpc.useUtils();
   const login = trpc.auth.login.useMutation({
     onMutate: () => setLoginError(""),
@@ -33,7 +35,8 @@ export default function Login() {
         return;
       }
       await utils.auth.me.invalidate();
-      setLocation("/dashboard");
+      const returnTo = consumeReturnTo();
+      setLocation(returnTo && returnTo.startsWith("/") && !returnTo.startsWith("//") && !returnTo.startsWith("/login") ? returnTo : "/dashboard");
     },
     onError: error => setLoginError(errorMessage(error, "Gagal masuk. Periksa email dan password Anda.")),
   });
@@ -51,6 +54,12 @@ export default function Login() {
           login.mutate({ email, password, ...(needsOtp ? { otp } : {}) });
         }}
       >
+        {sessionExpired && !needsOtp && (
+          <p role="status" className="flex items-start gap-2 rounded-lg border border-gold-400/40 bg-gold-50 p-3 text-sm text-navy-900">
+            <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
+            Sesi Anda berakhir karena tidak ada aktivitas. Silakan masuk kembali; Anda akan diarahkan ke halaman terakhir.
+          </p>
+        )}
         {needsOtp ? (
           <div className="space-y-3">
             <div className="flex items-start gap-3 rounded-xl border border-gold-400/40 bg-gold-50 p-4 text-sm text-navy-900">
@@ -146,7 +155,7 @@ export default function Login() {
 
       <p className="mt-6 text-center text-sm text-muted-foreground">
         Belum terdaftar?{" "}
-        <Link href="/register" className="font-semibold text-navy-900 underline-offset-4 hover:underline">
+        <Link href="/register" className="inline-flex items-center font-semibold text-navy-900 underline-offset-4 hover:underline pointer-coarse:min-h-11">
           Daftarkan BPRS Anda
         </Link>
       </p>

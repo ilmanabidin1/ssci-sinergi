@@ -65,7 +65,7 @@ export function AppHeader() {
         <Link
           href="/dashboard"
           aria-label={`${displayName}: ke dashboard`}
-          className={`flex min-w-0 items-center gap-3 rounded-lg ${headerFocus}`}
+          className={`flex min-w-0 items-center gap-3 rounded-lg pointer-coarse:min-h-11 ${headerFocus}`}
         >
           <img src={orgLogo || "/logo-dark-bg.png"} alt={orgLogo ? `Logo ${displayName}` : "SSCI"} className="h-10 w-auto shrink-0" />
           <span className="max-w-[40vw] truncate font-serif text-sm sm:text-lg md:max-w-xs">{displayName}</span>

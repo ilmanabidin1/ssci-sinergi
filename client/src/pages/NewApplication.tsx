@@ -254,7 +254,15 @@ export default function NewApplication() {
   useAuth({ redirectOnUnauthenticated: true });
   const [, setLocation] = useLocation();
   const { confirm } = useConfirm();
-  const [values, setValues] = useState<Values>(initial);
+  const [values, setValues] = useState<Values>(() => {
+    // Dibuka dari Master Nasabah: nama dan usaha nasabah lama langsung terisi.
+    // NIK tidak dibawa lewat URL karena di daftar nasabah NIK ditampilkan tersamar.
+    if (typeof window === "undefined") return initial;
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get("nama")?.trim();
+    if (!nama) return initial;
+    return { ...initial, customerName: nama.slice(0, 255), businessName: (params.get("usaha") ?? "").trim().slice(0, 255) };
+  });
   const [step, setStep] = useState(0);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [errorSummary, setErrorSummary] = useState("");

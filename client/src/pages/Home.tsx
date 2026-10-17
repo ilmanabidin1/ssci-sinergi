@@ -218,7 +218,7 @@ function Landing() {
               <p className="mt-5 max-w-sm text-sm leading-6">Sustainable Sharia Creditworthiness Index. Platform pendukung penilaian pembiayaan untuk BPRS.</p>
             </div>
             <div className="grid grid-cols-2 gap-10 text-sm">
-              <div className="space-y-3"><p className="text-xs font-bold uppercase tracking-[.16em] text-gold-400">Produk</p>{navLinks.map(link => <a key={link.href} href={link.href} className="block transition-colors hover:text-white">{link.label}</a>)}</div>
+              <div className="space-y-3"><p className="text-xs font-bold uppercase tracking-[.16em] text-gold-400">Produk</p>{navLinks.map(link => <a key={link.href} href={link.href} className="block transition-colors hover:text-white pointer-coarse:py-3">{link.label}</a>)}</div>
               <div className="space-y-3"><p className="text-xs font-bold uppercase tracking-[.16em] text-gold-400">Akses</p><a href={getLoginUrl()} className="block transition-colors hover:text-white">Masuk</a><Link href="/register" className="block transition-colors hover:text-white">Daftar BPRS</Link><Link href="/track" className="block transition-colors hover:text-white">Lacak pengajuan</Link></div>
             </div>
           </div>

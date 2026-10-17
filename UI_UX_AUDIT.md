@@ -1698,3 +1698,22 @@ Diukur dengan Chromium (emulasi ponsel, `hasTouch`) pada build produksi dengan d
 ```
 
 Catatan: tombol tanpa label yang muncul di semua halaman yang memakai header adalah pemicu menu profil (`client/src/components/ProfileMenu.tsx`), selebar 64x36px tanpa nama aksesibel.
+
+## Status perbaikan (18 Oktober 2026)
+
+Seluruh 125 temuan sudah ditangani. 117 tuntas, dan 8 berikut baru sebagian:
+
+| ID | Status | Catatan |
+|---|---|---|
+| K-04 | Sebagian | Isian Format BPRS tidak lagi hilang saat pindah tab. Ada indikator perubahan belum disimpan, dan peringatan muncul saat menutup atau memuat ulang halaman. Peringatan saat pindah halaman lewat tautan di dalam aplikasi belum ada. |
+| K-09 | Sebagian | "Isi contoh data" meminta konfirmasi sebelum menimpa isian dan bisa diurungkan. Tombol bisa disembunyikan di produksi dengan `VITE_DEMO_MODE=false`, tetapi saat ini masih tampil secara bawaan. |
+| M-38 | Sebagian | Penyiapan 2FA kini punya tombol salin rahasia, tautan ke aplikasi authenticator, dan fokus otomatis. Kode cadangan belum ada karena butuh perubahan skema database. |
+| M-49 | Sebagian | Filter dashboard sudah disatukan dalam satu toolbar di atas kartu, dan ekspor mengikuti filter. Toolbar belum dibuat menempel (sticky). |
+| M-57 | Sebagian | Dari Master Nasabah, nama dan usaha sudah terisi otomatis di pengajuan baru. NIK tidak dibawa karena di daftar nasabah NIK ditampilkan tersamar. |
+| M-69 | Tuntas setelah integrasi | Peringatan sebelum sesi habis, pesan sesi habis di halaman login, dan kembali ke halaman terakhir setelah login. |
+| N-11 | Sebagian | Urutan heading sudah benar. Baru bagian kebijakan KPB yang dapat dilipat. |
+| N-29 | Sebagian | Ada `StatusBadge` bersama. Data organisasi belum membedakan "menunggu verifikasi" dan "ditangguhkan". |
+
+Keputusan desain:
+- **Hanya tema terang.** Blok token mode gelap yang tidak terpakai dihapus.
+- **Target sentuh:** ukuran minimum 44px diterapkan di primitif UI lewat varian `pointer-coarse:`, sehingga tampilan desktop tidak berubah.

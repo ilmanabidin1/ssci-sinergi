@@ -185,7 +185,7 @@ export default function Customers() {
                                 </Link>
                               </Button>
                               <Button asChild size="sm" variant="ghost">
-                                <Link href="/applications/new" aria-label={`Buat pengajuan baru untuk ${entry.customerName}`}>
+                                <Link href={`/applications/new?nama=${encodeURIComponent(entry.customerName)}&usaha=${encodeURIComponent(entry.businessName ?? "")}`} aria-label={`Buat pengajuan baru untuk ${entry.customerName}`}>
                                   <FilePlus2 className="h-4 w-4" aria-hidden="true" />
                                   Pengajuan baru
                                 </Link>
