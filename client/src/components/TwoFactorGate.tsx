@@ -1,4 +1,5 @@
 import { useAuth } from "@/_core/hooks/useAuth";
+import { usePageTitle } from "@/hooks/usePageTitle";
 import { TwoFactorSettings } from "@/components/TwoFactorSettings";
 import { Button } from "@/components/ui/button";
 import { LogOut, ShieldAlert } from "lucide-react";
@@ -10,7 +11,9 @@ const PUBLIC_PATHS = new Set(["/", "/track", "/login", "/register"]);
 export function TwoFactorGate({ children }: { children: ReactNode }) {
   const { user, logout } = useAuth();
   const [location] = useLocation();
-  if (!user?.needsTwoFactorSetup || PUBLIC_PATHS.has(location)) return <>{children}</>;
+  const gated = Boolean(user?.needsTwoFactorSetup) && !PUBLIC_PATHS.has(location);
+  usePageTitle(gated ? "Aktifkan 2FA" : null);
+  if (!user || !gated) return <>{children}</>;
 
   return (
     <main className="min-h-screen bg-ivory px-4 py-10">
@@ -22,10 +25,10 @@ export function TwoFactorGate({ children }: { children: ReactNode }) {
           </Button>
         </div>
         <div className="flex items-start gap-3 rounded-2xl border border-gold-400/50 bg-gold-50 p-5 text-navy-900">
-          <ShieldAlert className="mt-0.5 h-6 w-6 shrink-0 text-gold-500" />
+          <ShieldAlert className="mt-0.5 h-6 w-6 shrink-0 text-gold-500" aria-hidden="true" />
           <div>
             <h1 className="font-serif text-2xl">Aktifkan autentikasi dua faktor</h1>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 text-sm text-navy-800">
               Peran {user.role === "admin" ? "admin" : "checker"} memiliki wewenang menyetujui pembiayaan dan mengelola data nasabah, sehingga wajib menggunakan 2FA.
               Siapkan aplikasi authenticator di ponsel (Google Authenticator, Microsoft Authenticator, dan sejenisnya), lalu ikuti langkah di bawah.
             </p>

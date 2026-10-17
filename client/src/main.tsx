@@ -5,7 +5,7 @@ import { httpBatchLink, TRPCClientError } from "@trpc/client";
 import { createRoot } from "react-dom/client";
 import superjson from "superjson";
 import App from "./App";
-import { getLoginUrl } from "./const";
+import { rememberReturnTo, sessionExpiredLoginUrl } from "./hooks/useSessionTimeout";
 import "./index.css";
 
 const queryClient = new QueryClient();
@@ -17,8 +17,11 @@ const redirectToLoginIfUnauthorized = (error: unknown) => {
   const isUnauthorized = error.message === UNAUTHED_ERR_MSG;
 
   if (!isUnauthorized) return;
+  if (window.location.pathname === "/login") return;
 
-  window.location.href = getLoginUrl();
+  // Simpan halaman asal agar pengguna kembali ke sini setelah login ulang.
+  rememberReturnTo();
+  window.location.href = sessionExpiredLoginUrl();
 };
 
 queryClient.getQueryCache().subscribe(event => {

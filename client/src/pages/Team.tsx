@@ -1,5 +1,7 @@
 import { AppHeader } from "@/components/AppHeader";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useConfirm } from "@/components/ConfirmDialog";
+import { AccessDenied, PageSkeleton } from "@/components/RouteGuard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,12 +9,23 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
+import { usePageTitle } from "@/hooks/usePageTitle";
+import { errorMessage } from "@/lib/errors";
 import { trpc } from "@/lib/trpc";
-import { Loader2, UserPlus, Users } from "lucide-react";
+import { AlertCircle, Loader2, UserPlus, Users } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 type Role = "maker" | "checker";
+
+/** Sama dengan kebijakan ganti password di Pengaturan dan validasi server. */
+const MIN_PASSWORD_LENGTH = 8;
+const passwordIssue = (value: string) => {
+  if (value.length === 0) return null;
+  if (value.length < MIN_PASSWORD_LENGTH) return `Minimal ${MIN_PASSWORD_LENGTH} karakter.`;
+  if (!/[a-zA-Z]/.test(value) || !/\d/.test(value)) return "Harus mengandung minimal satu huruf dan satu angka.";
+  return null;
+};
 
 const roleLabel: Record<Role, string> = {
   maker: "Maker",
@@ -20,9 +33,11 @@ const roleLabel: Record<Role, string> = {
 };
 
 export default function Team() {
-  const { user } = useAuth({ redirectOnUnauthenticated: true });
+  usePageTitle("Kelola tim");
+  const { user, loading } = useAuth({ redirectOnUnauthenticated: true });
   const isAdmin = user?.role === "admin";
   const utils = trpc.useUtils();
+  const { confirm } = useConfirm();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -47,15 +62,24 @@ export default function Team() {
       setRole("maker");
       toast.success("Anggota tim berhasil ditambahkan");
     },
-    onError: error => toast.error(`Gagal menambahkan anggota: ${error.message}`),
+    onError: error => toast.error("Gagal menambahkan anggota", { description: errorMessage(error) }),
   });
 
   const setUserActive = trpc.organization.setUserActive.useMutation({
-    onSuccess: async () => {
+    onSuccess: async (_data, variables) => {
       await utils.organization.listUsers.invalidate();
-      toast.success("Status anggota tim berhasil diperbarui");
+      const target = users.find(entry => entry.id === variables.userId);
+      const name = target?.name ?? "Anggota";
+      if (variables.active) {
+        toast.success(`${name} diaktifkan kembali`);
+      } else {
+        toast.success(`${name} dinonaktifkan`, {
+          description: "Anggota tidak dapat masuk sampai diaktifkan kembali.",
+          action: { label: "Urungkan", onClick: () => setUserActive.mutate({ userId: variables.userId, active: true }) },
+        });
+      }
     },
-    onError: error => toast.error(`Gagal memperbarui status: ${error.message}`),
+    onError: error => toast.error("Gagal memperbarui status", { description: errorMessage(error) }),
   });
 
   const resetTwoFactor = trpc.organization.resetUserTwoFactor.useMutation({
@@ -63,11 +87,17 @@ export default function Team() {
       await utils.organization.listUsers.invalidate();
       toast.success("2FA anggota tim berhasil direset. Anggota perlu mengatur ulang dari halaman Pengaturan.");
     },
-    onError: error => toast.error(`Gagal mereset 2FA: ${error.message}`),
+    onError: error => toast.error("Gagal mereset 2FA", { description: errorMessage(error) }),
   });
+
+  const pwIssue = passwordIssue(password);
 
   const handleCreate = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (passwordIssue(password) || password.length === 0) {
+      toast.error("Password belum memenuhi syarat", { description: passwordIssue(password) ?? "Password wajib diisi." });
+      return;
+    }
     createUser.mutate({
       name: name.trim(),
       email: email.trim(),
@@ -78,27 +108,48 @@ export default function Team() {
     });
   };
 
-  const handleToggle = (userId: number, active: boolean) => {
-    setUserActive.mutate({ userId, active });
+  const handleToggle = async (entry: { id: number; name: string | null }, active: boolean) => {
+    if (entry.id === user?.id) return;
+    if (!active) {
+      const ok = await confirm({
+        title: `Nonaktifkan ${entry.name ?? "anggota ini"}?`,
+        description: (
+          <p>
+            Anggota tidak dapat masuk ke SSCI sampai diaktifkan kembali. Pengajuan dan penilaian yang sudah dibuat tetap
+            tersimpan, tetapi pekerjaan yang sedang berjalan perlu dilanjutkan anggota lain.
+          </p>
+        ),
+        confirmLabel: "Nonaktifkan",
+        destructive: true,
+      });
+      if (!ok) return;
+    }
+    setUserActive.mutate({ userId: entry.id, active });
   };
 
-  if (!isAdmin) {
-    return (
-      <div className="min-h-screen bg-ivory">
-        <AppHeader />
-        <main className="container max-w-3xl py-16 text-center">
-          <h1 className="font-serif text-3xl font-medium text-navy-900">Akses ditolak</h1>
-          <p className="mt-2 text-slate-600">Halaman ini hanya dapat diakses oleh admin.</p>
-        </main>
-      </div>
-    );
-  }
+  const handleResetTwoFactor = async (entry: { id: number; name: string | null }) => {
+    const ok = await confirm({
+      title: `Reset 2FA untuk ${entry.name ?? "anggota ini"}?`,
+      description: (
+        <p>
+          Gunakan hanya jika anggota kehilangan akses ke aplikasi authenticator. Setelah direset, anggota harus mengatur
+          ulang 2FA dari halaman Pengaturan sebelum dapat bekerja kembali.
+        </p>
+      ),
+      confirmLabel: "Reset 2FA",
+      destructive: true,
+    });
+    if (ok) resetTwoFactor.mutate({ userId: entry.id });
+  };
+
+  if (loading || !user) return <PageSkeleton />;
+  if (!isAdmin) return <AccessDenied />;
 
   return (
     <div className="min-h-screen bg-ivory">
       <AppHeader />
 
-      <main className="container max-w-6xl px-4 py-8 sm:px-6">
+      <main id="main-content" tabIndex={-1} className="container max-w-6xl px-4 py-8 focus:outline-none sm:px-6">
         <div className="mb-6">
           <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Kelola Tim</h1>
           <p className="mt-1 text-slate-600">
@@ -109,9 +160,9 @@ export default function Team() {
         <div className="grid gap-6 lg:grid-cols-[380px_1fr]">
           <Card className="h-fit border-border shadow-premium">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <UserPlus className="h-5 w-5 text-primary" />
-                Tambah Anggota Tim
+              <CardTitle as="h2" className="flex items-center gap-2">
+                <UserPlus className="h-5 w-5 text-primary" aria-hidden="true" />
+                Tambah anggota tim
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -138,16 +189,21 @@ export default function Team() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="password">Password (min. 6 karakter)</Label>
+                  <Label htmlFor="password">Password awal</Label>
                   <Input
                     id="password"
                     type="password"
                     value={password}
                     onChange={event => setPassword(event.target.value)}
-                    placeholder="Minimal 6 karakter"
-                    minLength={6}
+                    minLength={MIN_PASSWORD_LENGTH}
+                    autoComplete="new-password"
+                    aria-invalid={Boolean(pwIssue)}
+                    aria-describedby="password-hint"
                     required
                   />
+                  <p id="password-hint" className={`text-xs ${pwIssue ? "text-destructive" : "text-slate-600"}`}>
+                    {pwIssue ?? `Minimal ${MIN_PASSWORD_LENGTH} karakter, mengandung huruf dan angka.`}
+                  </p>
                 </div>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
@@ -171,9 +227,9 @@ export default function Team() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label>Peran</Label>
+                  <Label htmlFor="role">Peran</Label>
                   <Select value={role} onValueChange={value => setRole(value as Role)}>
-                    <SelectTrigger className="w-full">
+                    <SelectTrigger id="role" className="w-full" aria-describedby="role-hint">
                       <SelectValue placeholder="Pilih peran" />
                     </SelectTrigger>
                     <SelectContent>
@@ -181,6 +237,9 @@ export default function Team() {
                       <SelectItem value="checker">Checker</SelectItem>
                     </SelectContent>
                   </Select>
+                  <p id="role-hint" className="text-xs text-slate-600">
+                    Maker menyiapkan pengajuan dan penilaian; checker meninjau dan memutuskan.
+                  </p>
                 </div>
                 <Button type="submit" disabled={createUser.isPending} className="w-full">
                   {createUser.isPending ? (
@@ -196,23 +255,36 @@ export default function Team() {
 
           <Card className="border-border shadow-premium">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-primary" />
-                Daftar Anggota Tim
+              <CardTitle as="h2" className="flex items-center gap-2">
+                <Users className="h-5 w-5 text-primary" aria-hidden="true" />
+                Daftar anggota tim
               </CardTitle>
             </CardHeader>
             <CardContent>
               {usersQuery.isLoading ? (
-                <div className="flex items-center justify-center gap-2 py-10 text-slate-500">
-                  <Loader2 className="h-5 w-5 animate-spin" />Memuat anggota tim...
+                <div className="flex items-center justify-center gap-2 py-10 text-slate-600">
+                  <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />Memuat anggota tim...
+                </div>
+              ) : usersQuery.isError ? (
+                <div role="alert" className="flex flex-col items-center gap-3 py-10 text-center text-red-700">
+                  <AlertCircle className="h-8 w-8" aria-hidden="true" />
+                  <p>Daftar anggota tim tidak dapat dimuat. {errorMessage(usersQuery.error, "")}</p>
+                  <Button variant="outline" onClick={() => usersQuery.refetch()} disabled={usersQuery.isFetching}>
+                    Coba lagi
+                  </Button>
                 </div>
               ) : users.length === 0 ? (
-                <div className="py-10 text-center text-slate-500">
+                <div className="py-10 text-center text-slate-600">
                   Belum ada anggota tim. Tambahkan anggota pertama melalui formulir di samping.
                 </div>
               ) : (
                 <div className="space-y-3">
-                  {users.map(entry => (
+                  {users.map(entry => {
+                    const isSelf = entry.id === user?.id;
+                    const isActive = entry.active === 1;
+                    const rowPending = setUserActive.isPending && setUserActive.variables?.userId === entry.id;
+                    const switchId = `active-${entry.id}`;
+                    return (
                     <div
                       key={entry.id}
                       className="flex flex-col gap-3 rounded-lg border border-slate-200 p-4 sm:flex-row sm:items-center sm:justify-between"
@@ -220,52 +292,58 @@ export default function Team() {
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-center gap-2">
                           <p className="font-medium text-slate-900">{entry.name}</p>
+                          {isSelf && <Badge variant="outline" className="border-navy-200 text-navy-900">Akun Anda</Badge>}
                           <Badge variant={entry.role === "maker" ? "default" : "secondary"}>
-                            {roleLabel[entry.role as Role] ?? entry.role}
+                            {roleLabel[entry.role as Role] ?? (entry.role === "admin" ? "Admin" : entry.role)}
                           </Badge>
-                          {entry.active === 1 ? (
-                            <Badge className="bg-green-100 text-green-800">Aktif</Badge>
+                          {isActive ? (
+                            <Badge variant="outline" className="border-emerald-300 bg-emerald-50 text-emerald-800">Aktif</Badge>
                           ) : (
-                            <Badge variant="outline">Nonaktif</Badge>
+                            <Badge variant="outline" className="border-slate-300 bg-slate-100 text-slate-700">Nonaktif</Badge>
                           )}
                           {entry.twoFactorEnabled === 1 ? (
-                            <Badge className="bg-[#e1e8f4] text-navy-900">2FA aktif</Badge>
+                            <Badge variant="outline" className="border-navy-200 bg-navy-50 text-navy-900">2FA aktif</Badge>
                           ) : (
-                            <Badge variant="outline" className="text-amber-700">Tanpa 2FA</Badge>
+                            <Badge variant="outline" className="border-amber-300 text-amber-800">Tanpa 2FA</Badge>
                           )}
                         </div>
-                        <p className="mt-1 truncate text-sm text-slate-500">{entry.email}</p>
-                        <div className="mt-1 flex flex-wrap gap-x-4 gap-y-0.5 text-xs text-slate-500">
+                        <p className="mt-1 truncate text-sm text-slate-600">{entry.email}</p>
+                        <div className="mt-1 flex flex-wrap gap-x-4 gap-y-0.5 text-xs text-slate-600">
                           <span>{entry.position || "Jabatan tidak diisi"}</span>
                           <span>{entry.phone || "Telepon tidak diisi"}</span>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        {entry.twoFactorEnabled === 1 && entry.id !== user?.id && (
+                      <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap">
+                        {entry.twoFactorEnabled === 1 && !isSelf && (
                           <Button
                             size="sm"
                             variant="outline"
-                            disabled={resetTwoFactor.isPending}
-                            onClick={() => {
-                              if (window.confirm(`Reset 2FA untuk ${entry.name}? Gunakan hanya jika anggota kehilangan akses ke aplikasi authenticator.`)) {
-                                resetTwoFactor.mutate({ userId: entry.id });
-                              }
-                            }}
+                            disabled={resetTwoFactor.isPending && resetTwoFactor.variables?.userId === entry.id}
+                            onClick={() => void handleResetTwoFactor(entry)}
                           >
                             Reset 2FA
                           </Button>
                         )}
-                        <span className="text-sm text-slate-600">
-                          {entry.active === 1 ? "Aktif" : "Nonaktif"}
-                        </span>
-                        <Switch
-                          checked={entry.active === 1}
-                          onCheckedChange={checked => handleToggle(entry.id, checked)}
-                          disabled={setUserActive.isPending}
-                        />
+                        {isSelf ? (
+                          <span className="text-sm text-slate-600">Akun Anda tidak dapat dinonaktifkan</span>
+                        ) : (
+                          <div className="flex items-center gap-2 border-l border-slate-200 pl-3">
+                            <Label htmlFor={switchId} className="text-sm font-normal text-slate-700">
+                              {rowPending ? "Menyimpan..." : isActive ? "Aktif" : "Nonaktif"}
+                            </Label>
+                            <Switch
+                              id={switchId}
+                              checked={isActive}
+                              onCheckedChange={checked => void handleToggle(entry, checked)}
+                              disabled={rowPending}
+                              aria-label={`Status aktif ${entry.name ?? entry.email ?? "anggota"}`}
+                            />
+                          </div>
+                        )}
                       </div>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </CardContent>

@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { trpc } from "@/lib/trpc";
+import { errorMessage } from "@/lib/errors";
 import { AlertTriangle, BookOpenCheck, CheckCircle2, HelpCircle, Loader2, ScanSearch, Sparkles, ThumbsDown, ThumbsUp, Users } from "lucide-react";
 import { useEffect, useRef, type ReactNode } from "react";
 
 const severityTone: Record<string, string> = {
   tinggi: "bg-rose-50 text-rose-800 border-rose-200",
   sedang: "bg-amber-50 text-amber-900 border-amber-200",
-  rendah: "bg-[#eef2f8] text-navy-900 border-[#cfd8e8]",
+  rendah: "bg-navy-100 text-navy-900 border-navy-200",
 };
 
 const verdictTone: Record<string, { label: string; className: string }> = {
@@ -31,12 +32,15 @@ function RunPanel({ intro, running, onRun, hasResult, error, children, label }: 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="max-w-2xl text-sm text-muted-foreground">{intro}</p>
         <Button type="button" onClick={onRun} disabled={running}>
-          {running ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}
-          {hasResult ? "Jalankan ulang" : label}
+          {running ? <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" /> : <Sparkles className="mr-2 h-4 w-4" aria-hidden="true" />}
+          {running ? "Memproses..." : hasResult ? "Jalankan ulang" : label}
         </Button>
       </div>
-      {error && <p className="flex items-center gap-1.5 text-sm text-red-600"><AlertTriangle className="h-4 w-4" />{error}</p>}
-      {children}
+      {error && <p role="alert" className="flex items-start gap-1.5 text-sm text-rose-700"><AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />{error}</p>}
+      <div aria-live="polite" aria-busy={running}>
+        {running && !hasResult && <p className="flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />AI sedang memproses, biasanya kurang dari satu menit...</p>}
+        {children}
+      </div>
     </div>
   );
 }
@@ -44,7 +48,7 @@ function RunPanel({ intro, running, onRun, hasResult, error, children, label }: 
 function BulletBlock({ title, items, Icon, tone }: { title: string; items: string[]; Icon: typeof ThumbsUp; tone: string }) {
   return (
     <div className="rounded-xl border border-border bg-white p-4">
-      <p className={`mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] ${tone}`}><Icon className="h-4 w-4" />{title}</p>
+      <h4 className={`mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] ${tone}`}><Icon className="h-4 w-4" aria-hidden="true" />{title}</h4>
       {items.length ? <ul className="list-disc space-y-1 pl-5 text-sm text-navy-900">{items.map(i => <li key={i}>{i}</li>)}</ul> : <p className="text-sm text-muted-foreground">-</p>}
     </div>
   );
@@ -75,23 +79,23 @@ export function AiAssessmentAssistant({ applicationId, autoRun = false }: { appl
   return (
     <Card>
       <CardHeader>
-        <div className="flex items-start gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-gold-300"><Sparkles className="h-5 w-5" /></span>
-          <div>
-            <CardTitle className="text-xl">Asisten AI Penilaian</CardTitle>
+        <div className="flex flex-wrap items-start gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-gold-300" aria-hidden="true"><Sparkles className="h-5 w-5" /></span>
+          <div className="min-w-0 flex-1 basis-60">
+            <CardTitle as="h2" className="text-xl">Asisten AI Penilaian</CardTitle>
             <CardDescription>Konsistensi data, kesesuaian syariah, dan ringkasan komite dalam satu kali jalan. AI tidak mengubah skor SSCI dan tidak mengambil keputusan pembiayaan.</CardDescription>
           </div>
-          <Button type="button" variant="outline" className="ml-auto shrink-0" onClick={runAll} disabled={running}>
-            {running ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}Jalankan semua
+          <Button type="button" variant="outline" className="w-full shrink-0 sm:ml-auto sm:w-auto" onClick={runAll} disabled={running}>
+            {running ? <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" /> : <Sparkles className="mr-2 h-4 w-4" aria-hidden="true" />}{running ? "Memproses..." : "Jalankan semua"}
           </Button>
         </div>
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="consistency">
-          <TabsList className="flex h-auto w-full flex-wrap sm:w-fit">
-            <TabsTrigger value="consistency"><ScanSearch />Konsistensi data</TabsTrigger>
-            <TabsTrigger value="sharia"><BookOpenCheck />Kesesuaian syariah</TabsTrigger>
-            <TabsTrigger value="brief"><Users />Ringkasan komite</TabsTrigger>
+          <TabsList className="w-full justify-start sm:w-fit" aria-label="Pemeriksaan AI">
+            <TabsTrigger value="consistency" className="flex-none"><ScanSearch aria-hidden="true" />Konsistensi data</TabsTrigger>
+            <TabsTrigger value="sharia" className="flex-none"><BookOpenCheck aria-hidden="true" />Kesesuaian syariah</TabsTrigger>
+            <TabsTrigger value="brief" className="flex-none"><Users aria-hidden="true" />Ringkasan komite</TabsTrigger>
           </TabsList>
 
           <TabsContent value="consistency">
@@ -101,25 +105,25 @@ export function AiAssessmentAssistant({ applicationId, autoRun = false }: { appl
               running={consistency.isPending}
               onRun={() => consistency.mutate({ applicationId })}
               hasResult={!!consistency.data}
-              error={consistency.error?.message}
+              error={consistency.error ? errorMessage(consistency.error, "Pemeriksaan konsistensi gagal.") : undefined}
             >
               {consistency.data && (
                 <div className="space-y-3">
-                  <div className="rounded-xl bg-[#eef2f8] p-4 text-sm text-navy-900">
+                  <div className="rounded-xl bg-navy-100 p-4 text-sm text-navy-900">
                     {consistency.data.summary}
                     {consistency.data.aiStatus === "unavailable" && <span className="mt-1 block text-xs text-muted-foreground">AI tidak tersedia saat ini; hanya aturan otomatis yang dijalankan.</span>}
                   </div>
                   {consistency.data.issues.length === 0 ? (
-                    <p className="flex items-center gap-2 text-sm font-medium text-emerald-700"><CheckCircle2 className="h-4 w-4" />Tidak ditemukan ketidaksesuaian data.</p>
+                    <p className="flex items-center gap-2 text-sm font-medium text-emerald-700"><CheckCircle2 className="h-4 w-4" aria-hidden="true" />Tidak ditemukan ketidaksesuaian data.</p>
                   ) : (
                     <ul className="space-y-2">
                       {consistency.data.issues.map((issue, i) => (
-                        <li key={i} className={`flex items-start gap-3 rounded-xl border p-3 text-sm ${severityTone[issue.severity]}`}>
-                          <span className="mt-0.5 shrink-0 rounded-full border border-current/30 px-2 py-0.5 text-[10px] font-bold uppercase">{issue.severity}</span>
-                          <div className="flex-1">
+                        <li key={i} className={`flex flex-wrap items-start gap-3 rounded-xl border p-3 text-sm ${severityTone[issue.severity]}`}>
+                          <span className="mt-0.5 shrink-0 rounded-full border border-current/40 bg-white/60 px-2 py-0.5 text-xs font-semibold uppercase"><span className="sr-only">Tingkat </span>{issue.severity}</span>
+                          <div className="min-w-0 flex-1 break-words">
                             <span className="font-semibold">{issue.field}: </span>{issue.message}
                           </div>
-                          <span className="shrink-0 text-[10px] font-semibold uppercase opacity-70">{issue.source === "ai" ? "AI" : "Aturan"}</span>
+                          <span className="shrink-0 text-xs font-semibold uppercase"><span className="sr-only">Sumber: </span>{issue.source === "ai" ? "AI" : "Aturan"}</span>
                         </li>
                       ))}
                     </ul>
@@ -136,7 +140,7 @@ export function AiAssessmentAssistant({ applicationId, autoRun = false }: { appl
               running={sharia.isPending}
               onRun={() => sharia.mutate({ applicationId })}
               hasResult={!!sharia.data}
-              error={sharia.error?.message}
+              error={sharia.error ? errorMessage(sharia.error, "Pemeriksaan syariah gagal.") : undefined}
             >
               {sharia.data && (
                 <div className="space-y-3">
@@ -149,7 +153,7 @@ export function AiAssessmentAssistant({ applicationId, autoRun = false }: { appl
                       {sharia.data.findings.map((f, i) => (
                         <li key={i} className="rounded-xl border border-border bg-ivory p-3 text-sm">
                           <p className="text-navy-900">{f.point}</p>
-                          <p className="mt-1 text-xs font-semibold text-gold-500">{f.reference}</p>
+                          <p className="mt-1 text-xs font-semibold text-gold-700">{f.reference}</p>
                         </li>
                       ))}
                     </ul>
@@ -168,7 +172,7 @@ export function AiAssessmentAssistant({ applicationId, autoRun = false }: { appl
               running={brief.isPending}
               onRun={() => brief.mutate({ applicationId })}
               hasResult={!!brief.data}
-              error={brief.error?.message}
+              error={brief.error ? errorMessage(brief.error, "Ringkasan komite gagal dibuat.") : undefined}
             >
               {brief.data && (
                 <div className="space-y-3">
@@ -177,7 +181,7 @@ export function AiAssessmentAssistant({ applicationId, autoRun = false }: { appl
                     <BulletBlock title="Poin pendukung" items={brief.data.pros} Icon={ThumbsUp} tone="text-emerald-700" />
                     <BulletBlock title="Risiko & kelemahan" items={brief.data.cons} Icon={ThumbsDown} tone="text-rose-700" />
                   </div>
-                  <BulletBlock title="Pertanyaan untuk komite" items={brief.data.questions} Icon={HelpCircle} tone="text-gold-500" />
+                  <BulletBlock title="Pertanyaan untuk komite" items={brief.data.questions} Icon={HelpCircle} tone="text-gold-700" />
                 </div>
               )}
             </RunPanel>

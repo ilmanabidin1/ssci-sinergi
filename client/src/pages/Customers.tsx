@@ -4,12 +4,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { usePageTitle } from "@/hooks/usePageTitle";
+import { errorMessage } from "@/lib/errors";
 import { trpc } from "@/lib/trpc";
-import { Loader2, Search, Users } from "lucide-react";
+import { classifySSCI } from "@shared/ssciMethodology";
+import { AlertCircle, FilePlus2, History, Loader2, Search, Users } from "lucide-react";
 import { useState } from "react";
-import { toast } from "sonner";
+import { Link } from "wouter";
 
-function formatDate(iso: string) {
+function formatDate(iso: string | Date) {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return "-";
   return date.toLocaleDateString("id-ID", {
@@ -21,22 +25,30 @@ function formatDate(iso: string) {
 
 function formatScore(score: number | null) {
   if (score === null || score === undefined) return "-";
-  return score.toFixed(0);
+  return score.toLocaleString("id-ID", { maximumFractionDigits: 0 });
 }
 
+const scoreClass: Record<string, string> = {
+  "Sangat Layak": "score-excellent",
+  Layak: "score-good",
+  "Perlu Pengawasan": "score-warning",
+  "Tidak Layak": "score-poor",
+};
+
 export default function Customers() {
+  usePageTitle("Master nasabah");
   useAuth({ redirectOnUnauthenticated: true });
 
   const [search, setSearch] = useState("");
   const [debounced, setDebounced] = useState("");
 
-  const { data: customers, isLoading, isError, refetch } = trpc.applications.customerMaster.useQuery(
+  const { data: customers, isLoading, isError, error, isFetching, refetch } = trpc.applications.customerMaster.useQuery(
     debounced ? { search: debounced } : undefined
   );
 
   const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setDebounced(search);
+    setDebounced(search.trim());
   };
 
   const clearSearch = () => {
@@ -44,36 +56,12 @@ export default function Customers() {
     setDebounced("");
   };
 
-  if (isError) {
-    return (
-      <div className="min-h-screen bg-ivory">
-        <AppHeader />
-        <main className="container max-w-6xl px-4 py-16 sm:px-6">
-          <Card className="border-border shadow-premium">
-            <CardContent className="flex flex-col items-center gap-4 py-12 text-center">
-              <p className="text-slate-600">Gagal memuat data nasabah.</p>
-              <button
-                onClick={() => {
-                  void refetch();
-                  toast.error("Gagal memuat data nasabah");
-                }}
-                className="text-sm font-medium text-primary hover:underline"
-              >
-                Coba lagi
-              </button>
-            </CardContent>
-          </Card>
-        </main>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-ivory">
       <AppHeader />
-      <main className="container max-w-6xl px-4 py-8 sm:px-6">
+      <main id="main-content" tabIndex={-1} className="container max-w-6xl px-4 py-8 focus:outline-none sm:px-6">
         <div className="mb-6">
-          <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Master Nasabah</h1>
+          <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Master nasabah</h1>
           <p className="mt-1 text-slate-600">
             Ringkasan nasabah BPRS berdasarkan riwayat pengajuan pembiayaan.
           </p>
@@ -81,24 +69,30 @@ export default function Customers() {
 
         <Card className="mb-6 border-border shadow-premium">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Search className="h-5 w-5 text-primary" />
-              Cari Nasabah
+            <CardTitle as="h2" className="flex items-center gap-2">
+              <Search className="h-5 w-5 text-primary" aria-hidden="true" />
+              Cari nasabah
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSearch} className="flex flex-col gap-3 sm:flex-row">
-              <div className="relative flex-1">
-                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                <Input
-                  value={search}
-                  onChange={event => setSearch(event.target.value)}
-                  placeholder="Cari berdasarkan nama, ID nasabah, atau nama usaha..."
-                  className="pl-9"
-                />
+            <form onSubmit={handleSearch} role="search" className="flex flex-col gap-3 sm:flex-row sm:items-end">
+              <div className="flex-1 space-y-1.5">
+                <Label htmlFor="customer-search">Nama, ID nasabah, atau nama usaha</Label>
+                <div className="relative">
+                  <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" aria-hidden="true" />
+                  <Input
+                    id="customer-search"
+                    type="search"
+                    value={search}
+                    onChange={event => setSearch(event.target.value)}
+                    placeholder="Contoh: Siti Aminah"
+                    className="pl-9"
+                  />
+                </div>
               </div>
               <div className="flex gap-2">
-                <Button type="submit" className="sm:w-auto">
+                <Button type="submit" className="flex-1 sm:flex-none" disabled={isFetching && !!debounced}>
+                  {isFetching && debounced ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : null}
                   Cari
                 </Button>
                 {debounced && (
@@ -113,61 +107,94 @@ export default function Customers() {
 
         <Card className="border-border shadow-premium">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Users className="h-5 w-5 text-primary" />
-              Daftar Nasabah
-              {debounced && (
-                <Badge className="ml-2 bg-slate-100 text-slate-600">Hasil: {customers?.length ?? 0}</Badge>
+            <CardTitle as="h2" className="flex flex-wrap items-center gap-2">
+              <Users className="h-5 w-5 text-primary" aria-hidden="true" />
+              Daftar nasabah
+              {debounced && !isError && (
+                <Badge className="ml-2 bg-slate-100 text-slate-700">Hasil: {customers?.length ?? 0}</Badge>
               )}
             </CardTitle>
           </CardHeader>
           <CardContent>
             {isLoading ? (
-              <div className="flex items-center justify-center gap-2 py-10 text-slate-500">
-                <Loader2 className="h-5 w-5 animate-spin" />Memuat data nasabah...
+              <div className="flex items-center justify-center gap-2 py-10 text-slate-600">
+                <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />Memuat data nasabah...
+              </div>
+            ) : isError ? (
+              <div role="alert" className="flex flex-col items-center gap-3 py-10 text-center text-red-700">
+                <AlertCircle className="h-8 w-8" aria-hidden="true" />
+                <p>Gagal memuat data nasabah. {errorMessage(error, "")}</p>
+                <Button variant="outline" onClick={() => void refetch()} disabled={isFetching}>
+                  {isFetching && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
+                  Coba lagi
+                </Button>
               </div>
             ) : !customers || customers.length === 0 ? (
-              <div className="py-10 text-center text-slate-500">
+              <div className="py-10 text-center text-slate-600">
                 {debounced
                   ? "Tidak ada nasabah yang cocok dengan pencarian Anda."
                   : "Belum ada data nasabah."}
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-sm">
+                <table className="w-full min-w-[760px] text-left text-sm">
                   <thead>
-                    <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
-                      <th className="px-4 py-3 font-semibold">Nama Nasabah</th>
-                      <th className="px-4 py-3 font-semibold">ID Nasabah</th>
-                      <th className="px-4 py-3 font-semibold">Nama Usaha</th>
-                      <th className="px-4 py-3 font-semibold text-center">Total Pengajuan</th>
-                      <th className="px-4 py-3 font-semibold text-center">Skor Terakhir</th>
-                      <th className="px-4 py-3 font-semibold">Pengajuan Terakhir</th>
+                    <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-600">
+                      <th scope="col" className="px-4 py-3 font-semibold">Nama nasabah</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">ID nasabah</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">Nama usaha</th>
+                      <th scope="col" className="px-4 py-3 text-center font-semibold">Total pengajuan</th>
+                      <th scope="col" className="px-4 py-3 text-center font-semibold">Skor terakhir</th>
+                      <th scope="col" className="px-4 py-3 font-semibold">Pengajuan terakhir</th>
+                      <th scope="col" className="px-4 py-3 font-semibold"><span className="sr-only">Aksi</span></th>
                     </tr>
                   </thead>
                   <tbody>
-                    {customers.map(entry => (
-                      <tr
-                        key={entry.customerId}
-                        className="border-b border-slate-100 last:border-0 hover:bg-slate-50"
-                      >
-                        <td className="px-4 py-3 font-medium text-slate-900">{entry.customerName}</td>
-                        <td className="px-4 py-3 text-slate-600">{entry.customerId}</td>
-                        <td className="px-4 py-3 text-slate-600">{entry.businessName}</td>
-                        <td className="px-4 py-3 text-center text-slate-600">{entry.totalApplications}</td>
-                        <td className="px-4 py-3 text-center">
-                          {entry.latestAssessmentScore !== null &&
-                          entry.latestAssessmentScore !== undefined ? (
-                            <Badge className="bg-[#e1e8f4] text-navy-800">
-                              {formatScore(entry.latestAssessmentScore)}
-                            </Badge>
-                          ) : (
-                            <span className="text-slate-400">-</span>
-                          )}
-                        </td>
-                        <td className="px-4 py-3 text-slate-600">{formatDate(entry.lastApplicationDate)}</td>
-                      </tr>
-                    ))}
+                    {customers.map(entry => {
+                      const hasScore = entry.latestAssessmentScore !== null && entry.latestAssessmentScore !== undefined;
+                      const classification = hasScore ? classifySSCI(entry.latestAssessmentScore as number) : null;
+                      const historyHref = `/assessments?search=${encodeURIComponent(entry.customerName)}`;
+                      return (
+                        <tr
+                          key={entry.customerId}
+                          className="border-b border-slate-100 last:border-0 hover:bg-slate-50"
+                        >
+                          <td className="px-4 py-3 font-medium text-navy-900">
+                            <Link href={historyHref} className="hover:underline">{entry.customerName}</Link>
+                          </td>
+                          <td className="px-4 py-3 text-slate-600">{entry.customerId}</td>
+                          <td className="px-4 py-3 text-slate-600">{entry.businessName}</td>
+                          <td className="px-4 py-3 text-center text-slate-600">{entry.totalApplications}</td>
+                          <td className="px-4 py-3 text-center">
+                            {hasScore && classification ? (
+                              <Badge variant="outline" className={`${scoreClass[classification]} flex-col gap-0 px-2.5 py-0.5`}>
+                                <span>{formatScore(entry.latestAssessmentScore)}</span>
+                                <span className="text-[11px] font-medium">{classification}</span>
+                              </Badge>
+                            ) : (
+                              <span className="text-slate-600">Belum dinilai</span>
+                            )}
+                          </td>
+                          <td className="px-4 py-3 text-slate-600">{formatDate(entry.lastApplicationDate)}</td>
+                          <td className="px-4 py-3">
+                            <div className="flex justify-end gap-1">
+                              <Button asChild size="sm" variant="outline">
+                                <Link href={historyHref} aria-label={`Lihat pengajuan ${entry.customerName}`}>
+                                  <History className="h-4 w-4" aria-hidden="true" />
+                                  Pengajuan
+                                </Link>
+                              </Button>
+                              <Button asChild size="sm" variant="ghost">
+                                <Link href="/applications/new" aria-label={`Buat pengajuan baru untuk ${entry.customerName}`}>
+                                  <FilePlus2 className="h-4 w-4" aria-hidden="true" />
+                                  Pengajuan baru
+                                </Link>
+                              </Button>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
@@ -178,4 +205,3 @@ export default function Customers() {
     </div>
   );
 }
-

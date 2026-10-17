@@ -28,9 +28,14 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
+type CardTitleProps = React.ComponentProps<"div"> & {
+  /** Elemen heading agar judul kartu masuk ke struktur heading halaman. */
+  as?: "div" | "h2" | "h3" | "h4";
+};
+
+function CardTitle({ className, as: Comp = "div", ...props }: CardTitleProps) {
   return (
-    <div
+    <Comp
       data-slot="card-title"
       className={cn("font-serif text-lg leading-tight font-medium text-navy-900 dark:text-foreground", className)}
       {...props}

@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { errorMessage } from "@/lib/errors";
 import { trpc } from "@/lib/trpc";
 import { CheckCircle2, Clock, Lightbulb, Loader2, MessageSquareText, Scale } from "lucide-react";
 import { useState } from "react";
@@ -25,7 +26,7 @@ type CustomerRequest = {
 
 const levelTone: Record<Explanation["factors"][number]["level"], string> = {
   baik: "bg-emerald-50 text-emerald-800 border-emerald-200",
-  cukup: "bg-[#eef2f8] text-navy-900 border-[#cfd8e8]",
+  cukup: "bg-muted text-navy-900 border-border",
   "perlu diperbaiki": "bg-amber-50 text-amber-900 border-amber-200",
 };
 
@@ -38,7 +39,7 @@ export function DecisionExplanation({ explanation }: { explanation: Explanation 
   return (
     <Card className="border-border shadow-premium">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-lg"><Scale className="h-5 w-5 text-gold-500" />Penjelasan hasil penilaian</CardTitle>
+        <CardTitle className="flex items-center gap-2 text-lg"><Scale className="h-5 w-5 text-gold-500" aria-hidden="true" />Penjelasan hasil penilaian</CardTitle>
         <CardDescription>{explanation.headline}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -47,7 +48,7 @@ export function DecisionExplanation({ explanation }: { explanation: Explanation 
             <li key={f.aspect} className="flex items-start justify-between gap-3 rounded-xl border border-border bg-white p-3 text-sm">
               <div>
                 <p className="font-semibold text-navy-900">{f.aspect}</p>
-                <p className="text-xs text-muted-foreground">{f.note}</p>
+                <p className="text-sm text-muted-foreground">{f.note}</p>
               </div>
               <span className={`shrink-0 rounded-full border px-2.5 py-0.5 text-xs font-semibold capitalize ${levelTone[f.level]}`}>{f.level}</span>
             </li>
@@ -55,7 +56,7 @@ export function DecisionExplanation({ explanation }: { explanation: Explanation 
         </ul>
         {explanation.improvements.length > 0 && (
           <div className="rounded-xl border border-gold-400/40 bg-gold-50 p-4 text-sm text-navy-900">
-            <p className="mb-2 flex items-center gap-2 font-semibold"><Lightbulb className="h-4 w-4 text-gold-500" />Yang dapat Anda perbaiki</p>
+            <p className="mb-2 flex items-center gap-2 font-semibold"><Lightbulb className="h-4 w-4 text-gold-500" aria-hidden="true" />Yang dapat Anda perbaiki</p>
             <ul className="list-disc space-y-1 pl-5">{explanation.improvements.map(i => <li key={i}>{i}</li>)}</ul>
           </div>
         )}
@@ -89,7 +90,7 @@ export function CustomerRequestSection({
       toast.success("Permintaan terkirim. Petugas BPRS akan meninjau dan menghubungi Anda.");
       onSubmitted();
     },
-    onError: error => toast.error(error.message),
+    onError: error => toast.error(errorMessage(error, "Permintaan gagal dikirim. Coba lagi beberapa saat.")),
   });
 
   const type = status === "pending" ? "pembaruan_data" : status === "rejected" ? "peninjauan_keputusan" : null;
@@ -98,7 +99,7 @@ export function CustomerRequestSection({
   return (
     <Card className="border-border shadow-premium">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-lg"><MessageSquareText className="h-5 w-5 text-gold-500" />Permintaan ke BPRS</CardTitle>
+        <CardTitle className="flex items-center gap-2 text-lg"><MessageSquareText className="h-5 w-5 text-gold-500" aria-hidden="true" />Permintaan ke BPRS</CardTitle>
         <CardDescription>
           {type === "pembaruan_data" && "Pengajuan belum dinilai. Jika ada data yang perlu diperbaiki atau ditambahkan, sampaikan di sini sebelum penilaian dilakukan."}
           {type === "peninjauan_keputusan" && "Anda dapat meminta peninjauan ulang keputusan, misalnya jika ada data yang keliru atau kondisi usaha yang belum tercermin."}
@@ -138,16 +139,20 @@ export function CustomerRequestSection({
                 rows={4}
                 value={message}
                 onChange={e => setMessage(e.target.value)}
+                maxLength={2000}
+                aria-describedby="request-message-help"
                 placeholder={type === "pembaruan_data" ? "Contoh: Pendapatan bulanan yang tercatat Rp 8 juta, seharusnya Rp 12 juta karena ada cabang baru sejak Agustus." : "Contoh: Cicilan kendaraan saya sudah lunas bulan lalu, sehingga beban angsuran seharusnya lebih kecil."}
                 required
               />
-              <p className="text-xs text-muted-foreground">Minimal 20 karakter. Jangan menuliskan password atau PIN.</p>
+              <p id="request-message-help" className={`text-xs ${message.trim().length > 0 && message.trim().length < 20 ? "font-medium text-amber-800" : "text-muted-foreground"}`} aria-live="polite">
+                {message.trim().length}/20 karakter minimal{message.trim().length > 0 && message.trim().length < 20 ? ` (kurang ${20 - message.trim().length} lagi)` : ""}. Jangan menuliskan password atau PIN.
+              </p>
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="request-phone">Nomor telepon yang bisa dihubungi (opsional)</Label>
-              <Input id="request-phone" type="tel" value={phone} onChange={e => setPhone(e.target.value)} className="max-w-xs" />
+              <Input id="request-phone" type="tel" inputMode="tel" autoComplete="tel" maxLength={20} placeholder="08xxxxxxxxxx" value={phone} onChange={e => setPhone(e.target.value.replace(/[^\d+\s-]/g, ""))} className="h-11 max-w-xs" />
             </div>
-            <Button type="submit" className="rounded-full bg-navy-900 text-white hover:bg-navy-800" disabled={mutation.isPending || message.trim().length < 20}>
+            <Button type="submit" className="h-11 rounded-full bg-navy-900 text-white hover:bg-navy-800" disabled={mutation.isPending || message.trim().length < 20}>
               {mutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Kirim permintaan
             </Button>

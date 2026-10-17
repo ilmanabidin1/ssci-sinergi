@@ -1031,23 +1031,46 @@ export async function addApplicationComment(input: {
 export async function listApplicationComments(organizationId: number, applicationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
-  return db.select().from(applicationComments)
+  const rows = await db.select().from(applicationComments)
     .where(and(
       eq(applicationComments.organizationId, organizationId),
       eq(applicationComments.applicationId, applicationId)
     ))
     .orderBy(asc(applicationComments.createdAt));
+  const names = await organizationUserNames(organizationId);
+  return rows.map(row => ({ ...row, authorName: names.get(row.authorUserId) ?? null }));
+}
+
+/** Nama tampilan pengguna organisasi, agar riwayat tidak menampilkan ID mentah. */
+async function organizationUserNames(organizationId: number) {
+  const db = await getDb();
+  if (!db) return new Map<number, string>();
+  const rows = await db.select({ id: users.id, name: users.name, email: users.email })
+    .from(users)
+    .where(eq(users.organizationId, organizationId));
+  return new Map(rows.map(row => [row.id, row.name || row.email || `Pengguna #${row.id}`] as const));
 }
 
 export async function listApplicationActivity(organizationId: number, applicationId: number) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
-  return db.select().from(auditLogs)
+  // Hanya peristiwa milik pengajuan ini: entitas application dengan ID sama, atau
+  // entitas assessment yang mencatat applicationId di metadata. Sebelumnya entitas
+  // lain (user, organization) dengan ID kebetulan sama ikut tampil.
+  const rows = await db.select().from(auditLogs)
     .where(and(
       eq(auditLogs.organizationId, organizationId),
-      eq(auditLogs.entityId, applicationId)
+      or(
+        and(eq(auditLogs.entityType, "application"), eq(auditLogs.entityId, applicationId)),
+        and(
+          eq(auditLogs.entityType, "assessment"),
+          sql`JSON_UNQUOTE(JSON_EXTRACT(${auditLogs.metadata}, '$.applicationId')) = ${String(applicationId)}`
+        )
+      )
     ))
     .orderBy(desc(auditLogs.createdAt));
+  const names = await organizationUserNames(organizationId);
+  return rows.map(row => ({ ...row, actorName: names.get(row.actorUserId) ?? null }));
 }
 
 export async function listAuditLogs(organizationId: number, filters?: {
@@ -1065,11 +1088,27 @@ export async function listAuditLogs(organizationId: number, filters?: {
   if (filters?.action) conditions.push(eq(auditLogs.action, filters.action));
   if (filters?.entityId !== undefined) conditions.push(eq(auditLogs.entityId, filters.entityId));
 
-  return db.select().from(auditLogs)
+  const rows = await db.select().from(auditLogs)
     .where(and(...conditions))
     .orderBy(desc(auditLogs.createdAt))
     .limit(limit)
     .offset(offset);
+  if (rows.length === 0) return [];
+
+  // Sertakan nama aktor agar log dapat dibaca tanpa mencocokkan ID secara manual.
+  const actorIds = Array.from(new Set(rows.map(row => row.actorUserId).filter(id => id > 0)));
+  const actors = actorIds.length
+    ? await db.select({ id: users.id, name: users.name, email: users.email }).from(users)
+      .where(sql`${users.id} IN (${sql.join(actorIds.map(id => sql`${id}`), sql`, `)})`)
+    : [];
+  const actorById = new Map(actors.map(actor => [actor.id, actor]));
+  return rows.map(row => {
+    const actor = actorById.get(row.actorUserId);
+    return {
+      ...row,
+      actorName: row.actorUserId === 0 ? "Nasabah (publik)" : actor?.name || actor?.email || `Pengguna #${row.actorUserId}`,
+    };
+  });
 }
 
 // Credit policy
@@ -1177,16 +1216,20 @@ export async function countUnreadNotifications(organizationId: number, userId: n
   return Number(result[0].count);
 }
 
-export async function markNotificationsRead(organizationId: number, userId: number) {
+export async function markNotificationsRead(organizationId: number, userId: number, ids?: number[]) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
+  const conditions = [
+    eq(notifications.organizationId, organizationId),
+    eq(notifications.userId, userId),
+    eq(notifications.read, 0),
+  ];
+  if (ids && ids.length > 0) {
+    conditions.push(sql`${notifications.id} IN (${sql.join(ids.map(id => sql`${id}`), sql`, `)})`);
+  }
   await db.update(notifications)
     .set({ read: 1 })
-    .where(and(
-      eq(notifications.organizationId, organizationId),
-      eq(notifications.userId, userId),
-      eq(notifications.read, 0)
-    ));
+    .where(and(...conditions));
   return { success: true };
 }
 
@@ -1269,13 +1312,20 @@ export async function getSlaMetrics(organizationId: number) {
 }
 
 // Bulk export of applications with latest assessment
-export async function getBulkExport(organizationId: number, filters?: { fromDate?: Date; toDate?: Date }) {
+export async function getBulkExport(organizationId: number, filters?: {
+  fromDate?: Date;
+  toDate?: Date;
+  status?: "pending" | "assessed" | "approved" | "rejected" | "cancelled";
+  submittedBy?: number;
+}) {
   const db = await getDb();
   if (!db) throw new Error("Database not available");
 
   const conditions = [eq(applications.organizationId, organizationId)];
   if (filters?.fromDate) conditions.push(gte(applications.createdAt, filters.fromDate));
   if (filters?.toDate) conditions.push(lte(applications.createdAt, filters.toDate));
+  if (filters?.status) conditions.push(eq(applications.status, filters.status));
+  if (filters?.submittedBy) conditions.push(eq(applications.submittedBy, filters.submittedBy));
 
   const rows = await db.select().from(applications)
     .where(and(...conditions))

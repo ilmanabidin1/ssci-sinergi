@@ -367,7 +367,10 @@ export const appRouter = router({
       .input(z.object({
         name: z.string().trim().min(2).max(255),
         email: z.string().trim().email().max(320),
-        password: z.string().min(6).max(200),
+        password: z.string().min(8, "Password minimal 8 karakter").max(200).refine(
+          value => /[a-zA-Z]/.test(value) && /\d/.test(value),
+          { message: "Password harus mengandung minimal satu huruf dan satu angka" }
+        ),
         position: z.string().trim().max(100).optional(),
         phone: z.string().trim().max(50).optional(),
         role: z.enum(["maker", "checker"]),
@@ -462,8 +465,9 @@ export const appRouter = router({
         return db.countUnreadNotifications(ctx.user.organizationId, ctx.user.id);
       }),
     markRead: protectedProcedure
-      .mutation(async ({ ctx }) => {
-        return db.markNotificationsRead(ctx.user.organizationId, ctx.user.id);
+      .input(z.object({ ids: z.array(z.number().int().positive()).max(100).optional() }).optional())
+      .mutation(async ({ input, ctx }) => {
+        return db.markNotificationsRead(ctx.user.organizationId, ctx.user.id, input?.ids);
       }),
   }),
 
@@ -778,6 +782,8 @@ export const appRouter = router({
       .input(z.object({
         fromDate: z.date().optional(),
         toDate: z.date().optional(),
+        status: z.enum(["pending", "assessed", "approved", "rejected", "cancelled"]).optional(),
+        submittedBy: z.number().int().positive().optional(),
       }).optional())
       .query(async ({ input, ctx }) => {
         const rows = await db.getBulkExport(ctx.user.organizationId, input);
@@ -1306,8 +1312,9 @@ export const appRouter = router({
         if (!photo) {
           throw new TRPCError({ code: "NOT_FOUND", message: "Foto survei tidak ditemukan" });
         }
-        if (photo.status !== "uploaded") {
-          throw new TRPCError({ code: "BAD_REQUEST", message: "Survey photo sudah dianalisis" });
+        // Foto yang analisisnya gagal boleh dianalisis ulang.
+        if (photo.status === "analyzed") {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Foto survei sudah dianalisis" });
         }
         const filePath = join(UPLOAD_DIR, photo.storedName);
         let fileBuffer: Buffer;
@@ -1331,7 +1338,7 @@ export const appRouter = router({
               status: "failed",
               analyzedAt: new Date(),
             });
-            throw new TRPCError({ code: "BAD_GATEWAY", message: "Survey AI service unavailable" });
+            throw new TRPCError({ code: "BAD_GATEWAY", message: "Layanan analisis AI sedang tidak tersedia. Coba analisis ulang beberapa saat lagi." });
           }
           throw error;
         }

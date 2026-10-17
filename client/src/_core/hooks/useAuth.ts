@@ -1,4 +1,5 @@
 import { getLoginUrl } from "@/const";
+import { rememberReturnTo } from "@/hooks/useSessionTimeout";
 import { trpc } from "@/lib/trpc";
 import { TRPCClientError } from "@trpc/client";
 import { useCallback, useEffect, useMemo } from "react";
@@ -41,10 +42,14 @@ export function useAuth(options?: UseAuthOptions) {
   }, [logoutMutation, utils]);
 
   const state = useMemo(() => {
-    localStorage.setItem(
-      "manus-runtime-user-info",
-      JSON.stringify(meQuery.data)
-    );
+    try {
+      localStorage.setItem(
+        "manus-runtime-user-info",
+        JSON.stringify(meQuery.data)
+      );
+    } catch {
+      // localStorage tidak tersedia (mode privat); abaikan.
+    }
     return {
       user: meQuery.data ?? null,
       loading: meQuery.isLoading || logoutMutation.isPending,
@@ -67,6 +72,7 @@ export function useAuth(options?: UseAuthOptions) {
     const loginPath = redirectPath ?? getLoginUrl();
     if (window.location.pathname === loginPath) return;
 
+    rememberReturnTo();
     window.location.href = loginPath;
   }, [
     redirectOnUnauthenticated,

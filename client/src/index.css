@@ -10,10 +10,15 @@
   --color-navy-900: #14213d;
   --color-navy-800: #1d2e52;
   --color-navy-700: #2a3d66;
+  --color-navy-200: #b9c4d8;
+  --color-navy-100: #eef2f8;
+  --color-navy-50: #e1e8f4;
   --color-gold-300: #f6cf78;
   --color-gold-400: #efb84b;
   --color-gold-500: #d99e2b;
   --color-gold-50: #fdf6e7;
+  /* Emas gelap untuk teks kecil di atas latar terang (kontras >= 4.5:1). */
+  --color-gold-700: #8a5a0b;
   --color-ivory: #f7f8fb;
   --color-royal-600: #2458d6;
   --color-royal-700: #1945b0;
@@ -85,7 +90,8 @@
   --destructive-foreground: oklch(0.985 0 0);
   --border: #e1e5ec;
   --input: #dfe4ec;
-  --ring: #efb84b;
+  /* Fokus navy di latar terang (kontras >= 3:1); header gelap memakai ring emas sendiri. */
+  --ring: #14213d;
   --sidebar: #14213d;
   --sidebar-foreground: #dbe2ee;
   --sidebar-accent: #1d2e52;
@@ -94,44 +100,15 @@
   --sidebar-ring: #efb84b;
 }
 
-.dark {
-  --primary: #efb84b;
-  --primary-foreground: #14213d;
-  --sidebar-primary: #efb84b;
-  --sidebar-primary-foreground: #14213d;
-  --background: #0b1428;
-  --foreground: #e6ebf3;
-  --card: #14213d;
-  --card-foreground: #e6ebf3;
-  --popover: #14213d;
-  --popover-foreground: #e6ebf3;
-  --secondary: #1d2e52;
-  --secondary-foreground: #e6ebf3;
-  --muted: #1d2e52;
-  --muted-foreground: #9aa8c0;
-  --accent: #2a3d66;
-  --accent-foreground: #f6cf78;
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: rgb(255 255 255 / 0.1);
-  --input: rgb(255 255 255 / 0.15);
-  --ring: #efb84b;
-  --chart-1: #f6cf78;
-  --chart-2: #efb84b;
-  --chart-3: #6f93ec;
-  --chart-4: #9aa8c0;
-  --chart-5: #d99e2b;
-  --sidebar: #0b1428;
-  --sidebar-foreground: #dbe2ee;
-  --sidebar-accent: #1d2e52;
-  --sidebar-accent-foreground: #f6cf78;
-  --sidebar-border: rgb(255 255 255 / 0.08);
-  --sidebar-ring: #efb84b;
-}
+/*
+ * Keputusan tema: aplikasi hanya memakai tema terang. Tidak ada toggle tema di
+ * produk dan halaman memakai warna terang secara langsung, sehingga token
+ * dark mode sengaja tidak dipelihara. Toaster juga dipaksa ke tema terang.
+ */
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring;
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
@@ -179,11 +156,6 @@
     padding-right: 1rem;
   }
 
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
-
   @media (min-width: 640px) {
     .container {
       padding-left: 1.5rem; /* 24px - tablet padding */
@@ -205,11 +177,11 @@
   }
   
   .score-good {
-    @apply bg-[#e1e8f4] text-navy-900 border-[#cfd8e8];
+    @apply bg-navy-50 text-navy-900 border-navy-200;
   }
   
   .score-warning {
-    @apply bg-gold-50 text-[#8a5a0b] border-gold-400/50;
+    @apply bg-gold-50 text-gold-700 border-gold-400/50;
   }
   
   .score-poor {
@@ -261,6 +233,11 @@
   @media (prefers-reduced-motion: reduce) {
     .reveal {
       opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    .hover-lift,
+    .hover-lift:hover {
       transform: none;
       transition: none;
     }

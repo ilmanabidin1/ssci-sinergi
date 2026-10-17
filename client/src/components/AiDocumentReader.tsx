@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { errorMessage } from "@/lib/errors";
 import { trpc } from "@/lib/trpc";
-import { AlertTriangle, Check, FileScan, Loader2, Sparkles } from "lucide-react";
+import { AlertTriangle, Check, FileScan, Loader2, Sparkles, Undo2 } from "lucide-react";
 import { useState } from "react";
 
 type DocType = "slip_gaji" | "mutasi_rekening" | "nib" | "npwp";
@@ -25,9 +27,10 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
   const [docType, setDocType] = useState<DocType>("slip_gaji");
   const [file, setFile] = useState<File | null>(null);
   const [error, setError] = useState("");
-  const [applied, setApplied] = useState<string[]>([]);
+  // Nilai sebelum "Pakai" disimpan agar dapat dikembalikan dengan "Batalkan".
+  const [applied, setApplied] = useState<Record<string, Record<string, unknown>>>({});
   const extract = trpc.aiAssist.extractDocument.useMutation({
-    onError: e => setError(e.message),
+    onError: e => setError(errorMessage(e, "Dokumen tidak dapat dibaca. Coba lagi dengan foto yang lebih jelas.")),
   });
   const result = extract.data;
 
@@ -35,7 +38,7 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
     const f = event.target.files?.[0] ?? null;
     setError("");
     extract.reset();
-    setApplied([]);
+    setApplied({});
     if (f && !(f.type === "image/jpeg" || f.type === "image/png")) {
       setError("File harus berformat JPG atau PNG.");
       event.target.value = "";
@@ -69,7 +72,7 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
     };
     reader.onerror = () => setError("File tidak dapat dibaca.");
     setError("");
-    setApplied([]);
+    setApplied({});
     reader.readAsDataURL(file);
   };
 
@@ -78,11 +81,16 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
     if (result.monthlyIncome !== null) suggestions.push({ key: "monthlyRevenue", label: "Pendapatan bulanan", value: result.monthlyIncome, display: rp(result.monthlyIncome) });
     if (result.monthlyExpenses !== null) suggestions.push({ key: "monthlyExpenses", label: "Pengeluaran bulanan", value: result.monthlyExpenses, display: rp(result.monthlyExpenses) });
     if (result.existingInstallment !== null) suggestions.push({ key: "existingDebt", label: "Angsuran existing", value: result.existingInstallment, display: rp(result.existingInstallment) });
-    if (result.businessName && !values.businessName) suggestions.push({ key: "businessName", label: "Nama usaha", value: result.businessName, display: result.businessName });
+    if (result.businessName && (!values.businessName || applied.businessName)) suggestions.push({ key: "businessName", label: "Nama usaha", value: result.businessName, display: result.businessName });
   }
 
+  const financialKeys = ["monthlyRevenue", "monthlyExpenses", "existingDebt"];
   const apply = (key: string, value: number | string) => {
-    const financial = ["monthlyRevenue", "monthlyExpenses", "existingDebt"].includes(key);
+    const financial = financialKeys.includes(key);
+    setApplied(a => ({
+      ...a,
+      [key]: { [key]: values[key], ...(financial ? { financialDataSource: values.financialDataSource, financialDataNote: values.financialDataNote } : {}) },
+    }));
     setValues(v => ({
       ...v,
       [key]: String(value),
@@ -91,7 +99,17 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
         financialDataNote: `Angka dibaca AI dari ${DOC_OPTIONS.find(([d]) => d === docType)?.[1] ?? "dokumen"} dan diverifikasi analis.`,
       } : {}),
     }));
-    setApplied(a => [...a, key]);
+  };
+  const undo = (key: string) => {
+    const previous = applied[key];
+    if (!previous) return;
+    setValues(v => ({ ...v, ...previous }));
+    setApplied(({ [key]: _removed, ...rest }) => rest);
+  };
+  const currentDisplay = (key: string) => {
+    const current = values[key];
+    if (current === undefined || current === null || String(current).trim() === "") return "belum diisi";
+    return financialKeys.includes(key) ? rp(toNumber(current) ?? 0) : String(current);
   };
 
   return (
@@ -100,44 +118,57 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-900 text-gold-300"><FileScan className="h-4 w-4" /></span>
         <div>
           <h3 className="font-semibold text-navy-900">Baca dokumen pendukung dengan AI</h3>
-          <p className="text-sm text-muted-foreground">Unggah foto slip gaji, mutasi rekening, NIB, atau NPWP. AI mengusulkan angka dan membandingkannya dengan data yang Anda isi. Usulan hanya dipakai jika Anda menekan "Pakai".</p>
+          <p id="ai-doc-help" className="text-sm text-muted-foreground">Unggah foto slip gaji, mutasi rekening, NIB, atau NPWP (JPG/PNG, maks 5 MB). AI mengusulkan angka dan membandingkannya dengan data yang Anda isi. Usulan hanya dipakai jika Anda menekan "Pakai".</p>
         </div>
       </div>
-      <div className="flex flex-wrap items-center gap-3">
-        <Select value={docType} onValueChange={v => { setDocType(v as DocType); extract.reset(); }}>
-          <SelectTrigger className="w-44"><SelectValue /></SelectTrigger>
-          <SelectContent>{DOC_OPTIONS.map(([v, l]) => <SelectItem key={v} value={v}>{l}</SelectItem>)}</SelectContent>
-        </Select>
-        <Input type="file" accept="image/jpeg,image/png" onChange={selectFile} className="max-w-xs" />
+      <div className="grid gap-3 sm:grid-cols-[11rem_minmax(0,1fr)_auto] sm:items-end">
+        <div className="space-y-1.5">
+          <Label htmlFor="ai-doc-type">Jenis dokumen</Label>
+          <Select value={docType} onValueChange={v => { setDocType(v as DocType); extract.reset(); setApplied({}); }}>
+            <SelectTrigger id="ai-doc-type" className="w-full"><SelectValue /></SelectTrigger>
+            <SelectContent>{DOC_OPTIONS.map(([v, l]) => <SelectItem key={v} value={v}>{l}</SelectItem>)}</SelectContent>
+          </Select>
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="ai-doc-file">Foto dokumen</Label>
+          <Input id="ai-doc-file" type="file" accept="image/jpeg,image/png" onChange={selectFile} aria-describedby={`ai-doc-help${error ? " ai-doc-error" : ""}`} aria-invalid={error ? true : undefined} className="bg-white" />
+        </div>
         <Button type="button" onClick={process} disabled={extract.isPending || !file}>
           {extract.isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}
-          Baca dokumen
+          {extract.isPending ? "Membaca..." : "Baca dokumen"}
         </Button>
       </div>
-      {error && <p className="flex items-center gap-1.5 text-sm text-red-600"><AlertTriangle className="h-4 w-4" />{error}</p>}
+      {error && <p id="ai-doc-error" role="alert" className="flex items-center gap-1.5 text-sm text-destructive"><AlertTriangle className="h-4 w-4" />{error}</p>}
+      <div role="status" aria-live="polite">
       {result && (
         <div className="space-y-3 rounded-xl border border-border bg-white p-4">
           <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
-            <span>{[result.holderName && `Pemilik: ${result.holderName}`, result.documentNumber && `No. dokumen: ${result.documentNumber}`, result.periodCovered && `Periode: ${result.periodCovered}`].filter(Boolean).join("  |  ") || "Data identitas tidak terbaca"}</span>
-            <span className="rounded-full bg-[#eef2f8] px-2 py-0.5 font-semibold text-navy-900">Keyakinan {Math.round(result.confidence * 100)}%</span>
+            <span className="min-w-0 break-words">{[result.holderName && `Pemilik: ${result.holderName}`, result.documentNumber && `No. dokumen: ${result.documentNumber}`, result.periodCovered && `Periode: ${result.periodCovered}`].filter(Boolean).join("  |  ") || "Data identitas tidak terbaca"}</span>
+            <span className="rounded-full bg-muted px-2 py-0.5 font-semibold text-navy-900">Keyakinan {Math.round(result.confidence * 100)}%</span>
           </div>
           {suggestions.length > 0 ? (
             <ul className="divide-y divide-border/70">
               {suggestions.map(s => (
-                <li key={s.key} className="flex items-center justify-between gap-3 py-2 text-sm">
-                  <span className="text-muted-foreground">{s.label}</span>
+                <li key={s.key} className="flex flex-wrap items-center justify-between gap-3 py-2 text-sm">
+                  <span className="min-w-0">
+                    <span className="block text-muted-foreground">{s.label}</span>
+                    <span className="block text-xs text-muted-foreground">{applied[s.key] ? "Sebelumnya" : "Saat ini"}: {applied[s.key] ? (String(applied[s.key]![s.key] ?? "").trim() ? (financialKeys.includes(s.key) ? rp(toNumber(applied[s.key]![s.key]) ?? 0) : String(applied[s.key]![s.key])) : "belum diisi") : currentDisplay(s.key)}</span>
+                  </span>
                   <span className="flex items-center gap-3">
                     <span className="font-semibold text-navy-900">{s.display}</span>
-                    {applied.includes(s.key)
-                      ? <span className="flex items-center gap-1 text-xs font-semibold text-emerald-700"><Check className="h-3.5 w-3.5" />Dipakai</span>
-                      : <Button type="button" size="sm" variant="outline" onClick={() => apply(s.key, s.value)}>Pakai</Button>}
+                    {applied[s.key]
+                      ? <>
+                          <span className="flex items-center gap-1 text-xs font-semibold text-emerald-700"><Check className="h-3.5 w-3.5" />Dipakai</span>
+                          <Button type="button" size="sm" variant="ghost" onClick={() => undo(s.key)} aria-label={`Batalkan usulan ${s.label}`}><Undo2 className="mr-1 h-3.5 w-3.5" />Batalkan</Button>
+                        </>
+                      : <Button type="button" size="sm" variant="outline" onClick={() => apply(s.key, s.value)} aria-label={`Pakai usulan ${s.label} ${s.display}`}>Pakai</Button>}
                   </span>
                 </li>
               ))}
             </ul>
           ) : <p className="text-sm text-muted-foreground">Tidak ada angka keuangan yang terbaca dari dokumen ini.</p>}
           {result.mismatches.length > 0 && (
-            <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+            <div role="alert" className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
               <p className="mb-1 flex items-center gap-1.5 font-semibold"><AlertTriangle className="h-4 w-4" />Perbedaan dengan data yang diisi</p>
               <ul className="list-disc space-y-0.5 pl-5">{result.mismatches.map(m => <li key={m}>{m}</li>)}</ul>
             </div>
@@ -146,6 +177,7 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
           <p className="text-xs text-muted-foreground">Hasil baca AI wajib diverifikasi dengan dokumen asli sebelum pengajuan dikirim.</p>
         </div>
       )}
+      </div>
     </div>
   );
 }

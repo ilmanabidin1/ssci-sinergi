@@ -6,52 +6,74 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Skeleton } from "@/components/ui/skeleton";
+import { usePageTitle } from "@/hooks/usePageTitle";
+import { errorMessage } from "@/lib/errors";
 import { trpc } from "@/lib/trpc";
 import { AlertCircle, ImageUp, Info, Landmark, Loader2, Lock, Save, Settings2, UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 const DEFAULT_PRIMARY_COLOR = "#14213d";
+/** Sama dengan validasi server untuk password baru dan akun anggota tim. */
+const MIN_PASSWORD_LENGTH = 8;
 
-function LabelWithInfo({ label, info }: { label: string; info: string }) {
+/**
+ * Label yang terhubung ke input, ditambah tombol penjelasan yang dapat
+ * difokus keyboard dan dibuka dengan ketukan (Popover, bukan tooltip hover).
+ */
+function LabelWithInfo({ htmlFor, label, info }: { htmlFor: string; label: string; info: string }) {
   return (
-    <div className="flex items-center gap-1.5">
-      <Label>{label}</Label>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Info className="h-3.5 w-3.5 cursor-help text-slate-400" />
-          </TooltipTrigger>
-          <TooltipContent side="top" className="max-w-xs">
-            <p className="text-xs leading-relaxed">{info}</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+    <div className="flex items-center gap-1">
+      <Label htmlFor={htmlFor}>{label}</Label>
+      <Popover>
+        <PopoverTrigger asChild>
+          <button
+            type="button"
+            className="inline-flex size-7 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-900 pointer-coarse:size-11"
+            aria-label={`Penjelasan ${label}`}
+          >
+            <Info className="size-3.5" aria-hidden="true" />
+          </button>
+        </PopoverTrigger>
+        <PopoverContent side="top" className="max-w-xs">
+          <p className="text-xs leading-relaxed">{info}</p>
+        </PopoverContent>
+      </Popover>
     </div>
   );
 }
 
 export default function Settings() {
-  const { user } = useAuth({ redirectOnUnauthenticated: true });
+  usePageTitle("Pengaturan");
+  const { user, loading } = useAuth({ redirectOnUnauthenticated: true });
   const utils = trpc.useUtils();
 
   const settingsQuery = trpc.organization.getSettings.useQuery(undefined, {
     enabled: !!user && user.role === "admin",
   });
   const [primaryColor, setPrimaryColor] = useState(DEFAULT_PRIMARY_COLOR);
+  const savedPrimaryColor = settingsQuery.data?.primaryColor;
+
+  // Sinkronkan pemilih warna dengan warna tersimpan agar simpan branding tidak
+  // menimpa warna organisasi dengan nilai default.
+  useEffect(() => {
+    if (savedPrimaryColor && /^#[0-9a-fA-F]{6}$/.test(savedPrimaryColor)) setPrimaryColor(savedPrimaryColor);
+  }, [savedPrimaryColor]);
+
+  // Tautan "Pengaturan BPRS" di menu profil mengarah ke #branding.
+  useEffect(() => {
+    if (window.location.hash !== "#branding" || settingsQuery.isLoading) return;
+    document.getElementById("branding")?.scrollIntoView({ block: "start" });
+  }, [settingsQuery.isLoading]);
 
   const updateSettings = trpc.organization.updateSettings.useMutation({
     onSuccess: async () => {
       await utils.organization.getSettings.invalidate();
       toast.success("Pengaturan branding berhasil disimpan");
     },
-    onError: error => toast.error(`Gagal menyimpan pengaturan: ${error.message}`),
+    onError: error => toast.error("Gagal menyimpan pengaturan", { description: errorMessage(error) }),
   });
 
   const updateOperatorProfile = trpc.organization.updateOperatorProfile.useMutation({
@@ -59,7 +81,7 @@ export default function Settings() {
       await utils.auth.me.invalidate();
       toast.success("Profil operator berhasil disimpan");
     },
-    onError: error => toast.error(`Gagal menyimpan profil: ${error.message}`),
+    onError: error => toast.error("Gagal menyimpan profil", { description: errorMessage(error) }),
   });
 
   const uploadLogo = trpc.organization.uploadLogo.useMutation({
@@ -67,7 +89,7 @@ export default function Settings() {
       await utils.organization.getSettings.invalidate();
       toast.success("Logo BPRS berhasil diunggah");
     },
-    onError: error => toast.error(`Gagal mengunggah logo: ${error.message}`),
+    onError: error => toast.error("Gagal mengunggah logo", { description: errorMessage(error) }),
   });
   const logoInputRef = useRef<HTMLInputElement>(null);
 
@@ -95,7 +117,7 @@ export default function Settings() {
       await utils.organization.getCreditPolicy.invalidate();
       toast.success("Kebijakan kredit berhasil disimpan");
     },
-    onError: error => toast.error(`Gagal menyimpan kebijakan kredit: ${error.message}`),
+    onError: error => toast.error("Gagal menyimpan kebijakan kredit", { description: errorMessage(error) }),
   });
 
   const handleCreditPolicySubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -147,7 +169,7 @@ export default function Settings() {
       setNewPassword("");
       setConfirmPassword("");
     },
-    onError: error => toast.error(`Gagal mengubah password: ${error.message}`),
+    onError: error => toast.error("Gagal mengubah password", { description: errorMessage(error) }),
   });
 
   const handleChangePassword = (event: React.FormEvent<HTMLFormElement>) => {
@@ -156,8 +178,12 @@ export default function Settings() {
       toast.error("Password baru dan konfirmasi tidak cocok");
       return;
     }
-    if (newPassword.length < 8) {
-      toast.error("Password baru minimal 8 karakter");
+    if (newPassword.length < MIN_PASSWORD_LENGTH) {
+      toast.error(`Password baru minimal ${MIN_PASSWORD_LENGTH} karakter`);
+      return;
+    }
+    if (!/[a-zA-Z]/.test(newPassword) || !/\d/.test(newPassword)) {
+      toast.error("Password baru harus mengandung minimal satu huruf dan satu angka");
       return;
     }
     changePassword.mutate({ currentPassword, newPassword });
@@ -172,7 +198,8 @@ export default function Settings() {
       address: String(data.get("address") || "").trim() || null,
       phone: String(data.get("phone") || "").trim() || null,
       email: String(data.get("email") || "").trim() || null,
-      primaryColor,
+      // Hanya kirim warna bila data tersimpan sudah dimuat atau admin mengubahnya.
+      ...(savedPrimaryColor || primaryColor !== DEFAULT_PRIMARY_COLOR ? { primaryColor } : {}),
     });
   };
 
@@ -190,25 +217,37 @@ export default function Settings() {
     <div className="min-h-screen bg-ivory">
       <AppHeader />
 
-      <main className="container max-w-3xl py-8">
-        <div className="mb-6">
+      <main id="main-content" tabIndex={-1} className="container max-w-3xl space-y-6 py-8 focus:outline-none">
+        <div>
           <h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Pengaturan</h1>
-          <p className="mt-1 text-slate-600">Kelola branding BPRS dan profil operator Anda.</p>
+          <p className="mt-1 text-slate-600">
+            {isAdmin
+              ? "Kelola branding BPRS, kebijakan kredit, dan profil Anda."
+              : "Kelola profil, autentikasi dua faktor, dan password Anda."}
+          </p>
         </div>
 
         {isAdmin && (
-          <Card className="mb-6 border-border shadow-premium">
+          <Card id="branding" className="scroll-mt-36 border-border shadow-premium">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Settings2 className="h-5 w-5 text-primary" />
+              <CardTitle as="h2" className="flex items-center gap-2">
+                <Settings2 className="h-5 w-5 text-primary" aria-hidden="true" />
                 Branding BPRS
               </CardTitle>
               <CardDescription>Nama, identitas, dan warna yang ditampilkan pada portal SSCI.</CardDescription>
             </CardHeader>
             <CardContent>
               {isAdminLoading ? (
-                <div className="flex items-center justify-center gap-2 py-10 text-slate-500">
-                  <Loader2 className="h-5 w-5 animate-spin" />Memuat pengaturan...
+                <div className="flex items-center justify-center gap-2 py-10 text-slate-600">
+                  <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />Memuat pengaturan...
+                </div>
+              ) : settingsQuery.isError ? (
+                <div role="alert" className="flex flex-col items-center gap-3 py-10 text-center text-red-700">
+                  <AlertCircle className="h-8 w-8" aria-hidden="true" />
+                  <p>Pengaturan BPRS tidak dapat dimuat. {errorMessage(settingsQuery.error, "")}</p>
+                  <Button variant="outline" onClick={() => settingsQuery.refetch()} disabled={settingsQuery.isFetching}>
+                    Coba lagi
+                  </Button>
                 </div>
               ) : (
                 <form className="space-y-4" onSubmit={handleBrandingSubmit}>
@@ -247,12 +286,12 @@ export default function Settings() {
                         value={primaryColor}
                         onChange={event => setPrimaryColor(event.target.value)}
                       />
-                      <span className="text-sm text-slate-500">{primaryColor}</span>
+                      <span className="font-mono text-sm text-slate-600">{primaryColor}</span>
                     </div>
                   </div>
 
                   <div className="space-y-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
-                    <Label>Logo BPRS</Label>
+                    <p className="text-sm font-medium leading-none">Logo BPRS</p>
                     <div className="flex flex-wrap items-center gap-4">
                       {settingsQuery.data?.logoUrl ? (
                         <img
@@ -261,7 +300,7 @@ export default function Settings() {
                           className="h-14 w-14 rounded-lg border border-slate-200 bg-white object-contain p-1"
                         />
                       ) : (
-                        <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white text-xs text-slate-400">
+                        <div className="flex h-14 w-14 items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white text-xs text-slate-600">
                           Belum ada
                         </div>
                       )}
@@ -270,6 +309,7 @@ export default function Settings() {
                         type="file"
                         accept="image/png,image/jpeg,image/svg+xml"
                         className="hidden"
+                        aria-label="Pilih file logo BPRS"
                         onChange={event => {
                           handleLogoUpload(event.target.files?.[0]);
                           event.target.value = "";
@@ -285,7 +325,7 @@ export default function Settings() {
                         {settingsQuery.data?.logoUrl ? "Ganti logo" : "Upload logo"}
                       </Button>
                     </div>
-                    <p className="text-xs text-slate-500">PNG, JPG, atau SVG. Maksimal 2 MB. Logo tampil di portal dan laporan.</p>
+                    <p className="text-xs text-slate-600">PNG, JPG, atau SVG. Maksimal 2 MB. Logo langsung tersimpan dan tampil di portal serta laporan.</p>
                   </div>
 
                   <Button type="submit" disabled={updateSettings.isPending}>
@@ -299,24 +339,33 @@ export default function Settings() {
         )}
 
         {isAdmin && (
-          <Card className="mb-6 border-border shadow-premium">
+          <Card className="border-border shadow-premium">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Landmark className="h-5 w-5 text-primary" />
+              <CardTitle as="h2" className="flex items-center gap-2">
+                <Landmark className="h-5 w-5 text-primary" aria-hidden="true" />
                 Kebijakan Kredit
               </CardTitle>
               <CardDescription>Atur batas minimum DSCR, LTV, dan plafon pembiayaan yang diterapkan pada penilaian.</CardDescription>
             </CardHeader>
             <CardContent>
               {creditPolicyQuery.isLoading ? (
-                <div className="flex items-center justify-center gap-2 py-10 text-slate-500">
-                  <Loader2 className="h-5 w-5 animate-spin" />Memuat kebijakan kredit...
+                <div className="flex items-center justify-center gap-2 py-10 text-slate-600">
+                  <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />Memuat kebijakan kredit...
+                </div>
+              ) : creditPolicyQuery.isError ? (
+                <div role="alert" className="flex flex-col items-center gap-3 py-10 text-center text-red-700">
+                  <AlertCircle className="h-8 w-8" aria-hidden="true" />
+                  <p>Kebijakan kredit tidak dapat dimuat. {errorMessage(creditPolicyQuery.error, "")}</p>
+                  <Button variant="outline" onClick={() => creditPolicyQuery.refetch()} disabled={creditPolicyQuery.isFetching}>
+                    Coba lagi
+                  </Button>
                 </div>
               ) : (
                 <form className="space-y-4" onSubmit={handleCreditPolicySubmit}>
                   <div className="grid gap-4 sm:grid-cols-3">
                     <div className="space-y-2">
                       <LabelWithInfo
+                        htmlFor="dscrMin"
                         label="DSCR minimum"
                         info="Debt Service Coverage Ratio: perbandingan laba bersih bulanan terhadap total angsuran (existing + baru). Contoh 1.25 artinya laba bersih minimal 1.25x angsuran. Semakin tinggi semakin aman. Ini rasio risiko, bukan ketentuan syariah."
                       />
@@ -329,12 +378,14 @@ export default function Settings() {
                         max="10"
                         value={dscrMin}
                         onChange={event => setDscrMin(event.target.value)}
+                        aria-describedby="dscrMin-hint"
                         required
                       />
-                      <p className="text-xs text-slate-500">Nilai default 1.25</p>
+                      <p id="dscrMin-hint" className="text-xs text-slate-600">Laba bersih minimal sekian kali angsuran. Nilai default 1,25.</p>
                     </div>
                     <div className="space-y-2">
                       <LabelWithInfo
+                        htmlFor="ltvMax"
                         label="LTV maksimal (%)"
                         info="Loan to Value: rasio pembiayaan terhadap nilai agunan. Contoh 80 artinya pembiayaan maksimal 80% dari nilai jaminan. Menilai kecukupan agunan; sejalan dengan prinsip jaminan (rahn) dalam syariah."
                       />
@@ -347,12 +398,14 @@ export default function Settings() {
                         max="100"
                         value={ltvMax}
                         onChange={event => setLtvMax(event.target.value)}
+                        aria-describedby="ltvMax-hint"
                         required
                       />
-                      <p className="text-xs text-slate-500">Nilai default 80</p>
+                      <p id="ltvMax-hint" className="text-xs text-slate-600">Pembiayaan maksimal terhadap nilai agunan. Nilai default 80.</p>
                     </div>
                     <div className="space-y-2">
                       <LabelWithInfo
+                        htmlFor="maxPlafon"
                         label="Plafon maksimal (Rp)"
                         info="Batas atas jumlah pembiayaan yang direkomendasikan sistem. Rekomendasi otomatis tidak akan melebihi angka ini. Kosongkan jika tidak ingin ada batas."
                       />
@@ -365,8 +418,13 @@ export default function Settings() {
                         placeholder="Opsional"
                         value={maxPlafon}
                         onChange={event => setMaxPlafon(event.target.value)}
+                        aria-describedby="maxPlafon-hint"
                       />
-                      <p className="text-xs text-slate-500">Kosongkan jika tidak ada batas</p>
+                      <p id="maxPlafon-hint" className="text-xs text-slate-600">
+                        {maxPlafon.trim() !== "" && Number.isFinite(Number(maxPlafon))
+                          ? `Batas: ${new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(Number(maxPlafon))}`
+                          : "Kosongkan jika tidak ada batas"}
+                      </p>
                     </div>
                   </div>
                   <Button type="submit" disabled={updateCreditPolicy.isPending}>
@@ -381,14 +439,23 @@ export default function Settings() {
 
         <Card className="border-border shadow-premium">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <UserRound className="h-5 w-5 text-primary" />
-              Profil Operator
+            <CardTitle as="h2" className="flex items-center gap-2">
+              <UserRound className="h-5 w-5 text-primary" aria-hidden="true" />
+              Profil operator
             </CardTitle>
             <CardDescription>Perbarui nama, jabatan, dan telepon Anda.</CardDescription>
           </CardHeader>
           <CardContent>
-            <form className="space-y-4" onSubmit={handleOperatorSubmit}>
+            {loading || !user ? (
+              <div className="space-y-4" aria-busy="true" aria-label="Memuat profil">
+                <Skeleton className="h-10 w-full" />
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <Skeleton className="h-10 w-full" />
+                  <Skeleton className="h-10 w-full" />
+                </div>
+              </div>
+            ) : (
+            <form key={user.id} className="space-y-4" onSubmit={handleOperatorSubmit}>
               <div className="space-y-2">
                 <Label htmlFor="operatorName">Nama</Label>
                 <Input id="operatorName" name="operatorName" defaultValue={user?.name ?? ""} required />
@@ -408,6 +475,7 @@ export default function Settings() {
                 Simpan profil
               </Button>
             </form>
+            )}
           </CardContent>
         </Card>
 
@@ -415,9 +483,9 @@ export default function Settings() {
 
         <Card className="border-border shadow-premium">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Lock className="h-5 w-5 text-primary" />
-              Ubah Password
+            <CardTitle as="h2" className="flex items-center gap-2">
+              <Lock className="h-5 w-5 text-primary" aria-hidden="true" />
+              Ubah password
             </CardTitle>
             <CardDescription>Perbarui password akun Anda untuk keamanan.</CardDescription>
           </CardHeader>
@@ -432,7 +500,7 @@ export default function Settings() {
               passwordExpiryQuery.data &&
               passwordExpiryQuery.data.daysSinceChange > 90 && (
                 <div className="mb-4 flex items-start gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-600">
-                  <Info className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
+                  <Info className="mt-0.5 h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
                   <span>
                     Password sudah {passwordExpiryQuery.data.daysSinceChange} hari tidak diubah. Disarankan
                     memperbarui secara berkala.
@@ -460,10 +528,11 @@ export default function Settings() {
                     value={newPassword}
                     onChange={event => setNewPassword(event.target.value)}
                     required
-                    minLength={8}
+                    minLength={MIN_PASSWORD_LENGTH}
                     autoComplete="new-password"
+                    aria-describedby="newPassword-hint"
                   />
-                  <p className="text-xs text-slate-500">Minimal 8 karakter</p>
+                  <p id="newPassword-hint" className="text-xs text-slate-600">Minimal {MIN_PASSWORD_LENGTH} karakter, mengandung huruf dan angka.</p>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="confirmPassword">Konfirmasi password baru</Label>
@@ -473,11 +542,13 @@ export default function Settings() {
                     value={confirmPassword}
                     onChange={event => setConfirmPassword(event.target.value)}
                     required
-                    minLength={8}
+                    minLength={MIN_PASSWORD_LENGTH}
                     autoComplete="new-password"
+                    aria-invalid={confirmPassword !== "" && newPassword !== confirmPassword}
+                    aria-describedby="confirmPassword-hint"
                   />
                   {confirmPassword !== "" && newPassword !== confirmPassword && (
-                    <p className="text-xs text-red-600">Konfirmasi tidak cocok dengan password baru</p>
+                    <p id="confirmPassword-hint" className="text-xs text-red-700">Konfirmasi tidak cocok dengan password baru</p>
                   )}
                 </div>
               </div>

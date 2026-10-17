@@ -14,12 +14,19 @@ export function NotificationBell() {
   const count = unreadQuery.data ?? 0;
 
   return (
-    <Button variant="ghost" size="icon" className="relative" asChild aria-label="Notifikasi">
+    <Button
+      variant="ghost"
+      size="icon"
+      className="relative"
+      asChild
+      aria-label={count > 0 ? `Notifikasi, ${count} belum dibaca` : "Notifikasi"}
+    >
       <Link to="/notifikasi">
-        <Bell className="h-5 w-5 text-slate-500" />
+        <Bell className="h-5 w-5 text-slate-500" aria-hidden="true" />
         {count > 0 && (
           <Badge
             variant="destructive"
+            aria-hidden="true"
             className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-[10px]"
           >
             {count > 99 ? "99+" : count}

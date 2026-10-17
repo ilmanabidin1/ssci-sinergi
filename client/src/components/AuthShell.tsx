@@ -26,8 +26,8 @@ export function AuthShell({
         <div className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full bg-gold-400/10 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-40 -left-24 h-[420px] w-[420px] rounded-full bg-royal-600/20 blur-3xl" />
 
-        <Link href="/" className="relative z-10 inline-flex w-fit">
-          <img src="/logo-dark-bg.png" alt="SSCI" className="h-16 w-auto" />
+        <Link href="/" className="relative z-10 inline-flex w-fit rounded-md outline-none focus-visible:ring-[3px] focus-visible:ring-gold-400/60" aria-label="SSCI, ke beranda">
+          <img src="/logo-dark-bg.png" alt="" className="h-16 w-auto" />
         </Link>
 
         <div className="relative z-10 max-w-md">
@@ -37,9 +37,9 @@ export function AuthShell({
           </p>
           <ul className="mt-10 space-y-4">
             {highlights.map(({ Icon, text }) => (
-              <li key={text} className="flex items-start gap-3 text-sm text-[#b9c4d8]">
+              <li key={text} className="flex items-start gap-3 text-sm text-white/80">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold-400/30 bg-gold-400/10">
-                  <Icon className="h-4 w-4 text-gold-400" />
+                  <Icon className="h-4 w-4 text-gold-400" aria-hidden="true" />
                 </span>
                 <span className="pt-1.5">{text}</span>
               </li>
@@ -47,7 +47,7 @@ export function AuthShell({
           </ul>
         </div>
 
-        <div className="relative z-10 flex items-center gap-3 text-xs text-[#8e9cb4]">
+        <div className="relative z-10 flex items-center gap-3 text-xs text-white/70">
           <img src="/unisba-logo.png" alt="Universitas Islam Bandung" className="h-9 w-auto rounded bg-white/95 p-1" />
           <span>Dikembangkan bersama Universitas Islam Bandung</span>
         </div>
@@ -55,19 +55,19 @@ export function AuthShell({
 
       <section className="flex flex-col px-5 py-8 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between">
-          <Link href="/" className="lg:hidden">
-            <img src="/logo-light-bg.png" alt="SSCI" className="h-12 w-auto" />
+          <Link href="/" className="rounded-md outline-none focus-visible:ring-[3px] focus-visible:ring-gold-400/60 lg:hidden" aria-label="SSCI, ke beranda">
+            <img src="/logo-light-bg.png" alt="" className="h-12 w-auto" />
           </Link>
           <Link
             href="/"
-            className="ml-auto inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-navy-900"
+            className="ml-auto inline-flex min-h-11 items-center gap-1.5 rounded-md px-1 text-sm font-medium text-muted-foreground outline-none transition-colors hover:text-navy-900 focus-visible:ring-[3px] focus-visible:ring-gold-400/50"
           >
             <ArrowLeft className="h-4 w-4" /> Beranda
           </Link>
         </div>
-        <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-10">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-gold-500">{eyebrow}</p>
-          <h1 className="mt-3 font-serif text-4xl font-medium text-navy-900">{title}</h1>
+        <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-8 sm:py-10">
+          <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[.2em] text-navy-700"><span className="h-px w-8 bg-gold-400" aria-hidden="true" />{eyebrow}</p>
+          <h1 className="mt-3 font-serif text-3xl font-medium text-navy-900 sm:text-4xl">{title}</h1>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p>
           <div className="mt-8">{children}</div>
         </div>
