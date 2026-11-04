@@ -12,6 +12,26 @@ export const BPRS_PRODUCT_SEGMENTS = [
 
 export type BprsProductSegment = (typeof BPRS_PRODUCT_SEGMENTS)[number];
 
+/**
+ * Segmen yang ditawarkan di formulir pengajuan baru (masukan BPRS mitra):
+ * UMKM penghasilan fluktuatif, karyawan swasta penghasilan tetap, dan badan
+ * hukum. Guru sertifikasi/PNS tidak ditawarkan lagi, tetapi tetap dikenali
+ * untuk pengajuan lama.
+ */
+export const ACTIVE_PRODUCT_SEGMENTS = ["umkm", "karyawan_swasta", "non_perorangan"] as const satisfies readonly BprsProductSegment[];
+
+/** Sumber penghasilan bawaan per segmen. */
+export const SEGMENT_INCOME_SOURCE: Record<BprsProductSegment, "fixed" | "non_fixed"> = {
+  umkm: "non_fixed",
+  karyawan_swasta: "fixed",
+  guru_sertifikasi: "fixed",
+  non_perorangan: "non_fixed",
+};
+
+export function isBadanUsaha(segment: string | null | undefined): boolean {
+  return segment === "non_perorangan";
+}
+
 export const BPRS_SEGMENT_DETAILS: Record<
   BprsProductSegment,
   {
@@ -23,14 +43,14 @@ export const BPRS_SEGMENT_DETAILS: Record<
   }
 > = {
   umkm: {
-    label: "Usaha / Komersial UMKM",
+    label: "UMKM (Penghasilan Fluktuatif)",
     description: "Pembiayaan produktif modal kerja / investasi bagi pelaku usaha UMKM",
     defaultMaxDsr: 40,
     requiredDocuments: ["KTP", "NPWP", "NIB"],
     collateralNotes: "Tanah, bangunan, kendaraan, atau agunan usaha produktif",
   },
   karyawan_swasta: {
-    label: "Karyawan Swasta (Payroll / Jamsostek)",
+    label: "Karyawan Swasta (Penghasilan Tetap)",
     description: "Pembiayaan konsumtif/multiguna bagi pegawai swasta dengan potong gaji/ATM",
     defaultMaxDsr: 40, // s.d. 50% jika kepesertaan JHT > 4 tahun
     requiredDocuments: [
@@ -64,8 +84,8 @@ export const BPRS_SEGMENT_DETAILS: Record<
     collateralNotes: "Jaminan: Sertifikat Pendidik, Ijazah Terakhir, Akta IV, titip Kartu ATM & Buku Tabungan Sertifikasi (Tabungan blokir 4-6x angsuran)",
   },
   non_perorangan: {
-    label: "Non-Perorangan (Badan Hukum PT / CV / Koperasi)",
-    description: "Fasilitas pembiayaan untuk korporasi/badan usaha berbadan hukum",
+    label: "Badan Hukum (PT / CV / Koperasi)",
+    description: "Pembiayaan badan usaha berbadan hukum, dinilai dengan neraca, laba rugi, dan rasio keuangan",
     defaultMaxDsr: 40,
     requiredDocuments: [
       "KTP & NPWP Seluruh Pengurus / Direksi",

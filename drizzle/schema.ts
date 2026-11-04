@@ -90,6 +90,8 @@ export const applications = mysqlTable("applications", {
   isRelatedParty: mysqlEnum("isRelatedParty", ["yes", "no"]).default("no"),
   relatedPartyRelation: varchar("relatedPartyRelation", { length: 255 }),
   incomeSourceType: mysqlEnum("incomeSourceType", ["fixed", "non_fixed", "joint_income"]).default("non_fixed"),
+  // Segmen produk: menentukan isian formulir dan template Excel BPRS (lihat shared/bprsPolicy.ts)
+  productSegment: mysqlEnum("productSegment", ["umkm", "karyawan_swasta", "guru_sertifikasi", "non_perorangan"]).default("umkm"),
   qardhAdminFee: decimal("qardhAdminFee", { precision: 15, scale: 2 }),
   qardhPurpose: varchar("qardhPurpose", { length: 255 }),
 

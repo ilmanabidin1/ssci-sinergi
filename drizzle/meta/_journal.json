@@ -183,6 +183,13 @@
       "when": 1791352877075,
       "tag": "0025_breezy_switch",
       "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "5",
+      "when": 1793787697905,
+      "tag": "0026_wooden_supernaut",
+      "breakpoints": true
     }
   ]
 }

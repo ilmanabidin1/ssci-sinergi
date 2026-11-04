@@ -639,6 +639,7 @@ export const appRouter = router({
         isRelatedParty: z.enum(["yes", "no"]).optional(),
         relatedPartyRelation: z.string().trim().max(255).optional(),
         incomeSourceType: z.enum(["fixed", "non_fixed", "joint_income"]).optional(),
+        productSegment: z.enum(["umkm", "karyawan_swasta", "guru_sertifikasi", "non_perorangan"]).optional(),
         qardhAdminFee: nonNegativeMoney.nullable().optional(),
         qardhPurpose: z.string().trim().max(255).optional(),
         multijasaAkadType: z.enum(["ijarah", "kafalah_bil_ujrah"]).optional(),
