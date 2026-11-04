@@ -3,13 +3,17 @@ import { join } from "node:path";
 import {
   AKAD_TO_BPRS,
   MAX_STATEMENT_ROWS,
+  bankFacilities,
+  fixSideBusiness,
+  fluktuatifFinancials,
   lamaUsahaFromMonths,
   monthlyFlatRate,
+  type BankFacilityRow,
   type BprsApplicationData,
   type BprsProfile,
   type BprsTemplateKind,
 } from "@shared/bprsTemplate";
-import { XlsxWorkbook, type CellValue } from "./xlsxPatch";
+import { XlsxWorkbook, splitAddress, type CellValue } from "./xlsxPatch";
 
 export const FLUKTUATIF_TEMPLATE_PATH = join(process.cwd(), "templates", "bprs", "fluktuatif-umkm.xlsx");
 
@@ -19,6 +23,7 @@ export const SHEET = {
   rekening: "Rekening Koran & Aset ", // spasi di akhir memang bagian dari nama sheet
   keuangan: "Aspek Keuangan",
   usulan: "Usulan Pembiayaan",
+  keputusan: "Keputusan Pembiayaan",
   jadang: "Jadang",
 } as const;
 
@@ -82,8 +87,6 @@ export const FLUKTUATIF_INPUT_CELLS: Record<string, string[]> = {
   [SHEET.jadang]: ["A131"],
 };
 
-const WORKING_DAYS = 26;
-
 function jakartaToday(now: Date): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Jakarta" }).format(now);
 }
@@ -103,13 +106,101 @@ const nonCashShare: Record<string, number> = {
 
 export type FilledSheets = Record<string, Record<string, CellValue>>;
 
+/** Nilai kosong ("" atau undefined) ditulis sebagai sel kosong. */
+const v = <T,>(value: T | undefined | null): T | null => (value === undefined || value === "" ? null : value);
+
+/**
+ * Menambahkan sel hanya bila nilainya ada. Dipakai untuk sel yang di template
+ * sudah berisi teks bawaan BPRS (jabatan, mitigasi), agar teks bawaan tidak terhapus.
+ */
+function setIfPresent(target: Record<string, CellValue>, address: string, value: CellValue | undefined) {
+  if (value === undefined || value === null || value === "") return;
+  target[address] = value;
+}
+
+function idDateLabel(isoDate: string): string {
+  return new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${isoDate}T00:00:00Z`));
+}
+
+/** Baris tempat dan tanggal tanda tangan, misalnya "Banjaran, 7 Oktober 2026". */
+function placeAndDate(profile: BprsProfile, today: string): string | null {
+  const place = profile.kotaTandaTangan || profile.kabupaten;
+  return place ? `${place}, ${idDateLabel(today)}` : null;
+}
+
+/** Ringkasan jenis pengikatan dari rincian agunan, contoh "(SKMHT, Fidusia)". */
+function pengikatanSummary(profile: BprsProfile): string | null {
+  if (profile.cakupanPengikatan) return profile.cakupanPengikatan;
+  const kinds = new Set<string>();
+  for (const row of profile.agunanTanah ?? []) if (row.pengikatan) kinds.add(row.pengikatan);
+  if ((profile.agunanKendaraan ?? []).length > 0) kinds.add("Fidusia");
+  return kinds.size > 0 ? `(${Array.from(kinds).join(", ")})` : null;
+}
+
+/** Cakupan asuransi agunan: kebakaran untuk tanah/bangunan, TLO untuk kendaraan. */
+function asuransiAgunanSummary(profile: BprsProfile): string | null | undefined {
+  if (profile.cakupanAsuransiAgunan) return profile.cakupanAsuransiAgunan;
+  if (profile.asuransiAgunan === "Tidak Diasuransikan") return "";
+  if (profile.asuransiAgunan !== "Asuransi Kerugian Syariah") return undefined;
+  const parts: string[] = [];
+  if ((profile.agunanTanah ?? []).length > 0) parts.push("Kebakaran");
+  if ((profile.agunanKendaraan ?? []).length > 0) parts.push("TLO");
+  return parts.length > 0 ? `(${parts.join(", ")})` : undefined;
+}
+
+/** Memecah teks panjang menjadi baris untuk sel yang tidak digabung (satu baris per sel). */
+export function wrapLines(text: string, width: number, maxLines: number): string[] {
+  const lines: string[] = [];
+  for (const paragraph of text.split(/\r?\n/)) {
+    let line = "";
+    for (const word of paragraph.split(/\s+/).filter(Boolean)) {
+      if (line && line.length + 1 + word.length > width) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = line ? `${line} ${word}` : word;
+      }
+    }
+    if (line) lines.push(line);
+  }
+  if (lines.length <= maxLines) return lines;
+  // Sisa teks digabung ke baris terakhir agar tidak ada isi yang hilang.
+  return [...lines.slice(0, maxLines - 1), lines.slice(maxLines - 1).join(" ")];
+}
+
+const facilityCells = (row: BankFacilityRow): Record<string, CellValue> => ({
+  B: v(row.namaBank),
+  F: row.plafond ?? 0,
+  L: row.marginTahunan ?? 0,
+  Q: row.tanggalMulai ? { date: row.tanggalMulai } : null,
+  T: row.tanggalAkhir ? { date: row.tanggalAkhir } : null,
+  W: v(row.pangsa),
+  Y: row.jenisMargin ?? "Flat",
+  Z: row.kol ?? null,
+  AA: row.dilunasi ?? "Tidak",
+});
+
+function writeRow(target: Record<string, CellValue>, row: number, cells: Record<string, CellValue>) {
+  for (const [col, value] of Object.entries(cells)) target[`${col}${row}`] = value;
+}
+
+/** Slot aset template Fluktuatif: kolom D lalu H, tiap slot = baris jenis; tahun dan nilai di dua baris berikutnya. */
+const FLUK_ASSET_SLOTS: Record<string, string[]> = {
+  "Tanah&Bangunan": ["D87", "D90", "D93", "D96", "D99", "H90", "H93", "H96", "H99"],
+  Kendaraan: ["D103", "D106", "D109", "H103", "H106", "H109"],
+  Peralatan: ["D113", "H113"],
+};
+
+const PERIZINAN_FIXED_ROWS: Record<string, number> = { nib: 56, "sertifikat halal": 57, halal: 57, sku: 58 };
+
 /** Menyusun nilai sel per sheet dari data pengajuan SSCI dan profil format BPRS. */
 export function buildFluktuatifCells(app: BprsExportApplication, profile: BprsProfile, now = new Date()): FilledSheets {
   const today = jakartaToday(now);
-  const v = <T,>(value: T | undefined | null): T | null => (value === undefined || value === "" ? null : value);
+  const signLine = placeAndDate(profile, today);
+  const mengetahui = profile.mengetahuiNama || profile.kepalaCabangNama;
   const info: Record<string, CellValue> = {
     D3: v(profile.kantor),
-    D4: v(profile.nomorProposal),
+    D4: v(profile.nomorRegister ?? profile.nomorProposal),
     D5: v(profile.nomorProposal),
     D6: v(profile.namaAo),
     D7: { date: today },
@@ -125,6 +216,7 @@ export function buildFluktuatifCells(app: BprsExportApplication, profile: BprsPr
     I18: v(profile.kecamatan),
     F19: v(profile.kabupaten),
     I19: v(profile.kodePos),
+    D20: v(profile.telponRumah),
     D21: app.phone,
     D22: v(profile.statusPerkawinan),
     D23: v(profile.tanggungan),
@@ -162,19 +254,53 @@ export function buildFluktuatifCells(app: BprsExportApplication, profile: BprsPr
     D69: v(profile.jenisPenggunaan),
     D70: app.loanPurpose,
     D71: { date: isoDate(app.createdAt, today) },
+    B76: v(mengetahui),
   };
+  setIfPresent(info, "B77", profile.mengetahuiJabatan);
 
+  // Aspek Non Keuangan: narasi teknis, pemasaran, legalitas, agunan, mitigasi, verifikasi.
   const nonKeuangan: Record<string, CellValue> = {
     B5: v(profile.latarBelakang),
     K13: v(profile.pengalamanUsaha),
-    K18: app.address,
-    K41: v(profile.sistemPenjualan),
-    K42: v(profile.daerahPemasaran),
-    K52: "Perorangan (UMKM)",
+    K18: v(profile.alamatUsaha) ?? app.address,
+    K19: v(profile.gambaranDaerah),
+    K23: v(profile.saranaPrasarana),
+    K27: v(profile.bahanBaku),
+    K31: v(profile.hubunganSupplier),
+    K35: v(profile.prosesProduksi),
+    K41: v(profile.sistemPenjualanNarasi) ?? v(profile.sistemPenjualan),
+    K42: v(profile.daerahPemasaranNarasi) ?? v(profile.daerahPemasaran),
+    K44: v(profile.saluranDistribusi),
+    K46: v(profile.faktorPersaingan),
+    K52: v(profile.bentukUsaha) ?? "Perorangan (UMKM)",
     G111: v(profile.pengikatan),
     G117: v(profile.asuransiJiwa),
     G122: v(profile.asuransiAgunan),
+    H134: v(profile.verifikatorNama),
+    H136: profile.verifikatorNama ? { date: today } : null,
+    H142: v(profile.kepalaCabangNama),
+    H144: profile.kepalaCabangNama ? { date: today } : null,
   };
+  setIfPresent(nonKeuangan, "G103", profile.mitigasiRisikoUsaha);
+  setIfPresent(nonKeuangan, "G107", profile.mitigasiWanprestasi);
+  setIfPresent(nonKeuangan, "M111", pengikatanSummary(profile));
+  const asuransiText = asuransiAgunanSummary(profile);
+  if (asuransiText !== undefined) nonKeuangan.M122 = asuransiText;
+  setIfPresent(nonKeuangan, "H135", profile.verifikatorJabatan);
+
+  let extraPermitRow = 59;
+  for (const permit of (profile.perizinan ?? []).filter(p => p.jenis || p.nomor)) {
+    const fixedRow = PERIZINAN_FIXED_ROWS[(permit.jenis ?? "").trim().toLowerCase()];
+    const usedFixed = fixedRow != null && nonKeuangan[`F${fixedRow}`] == null;
+    const r = usedFixed ? fixedRow! : extraPermitRow;
+    if (r > 61) continue;
+    if (!usedFixed) {
+      nonKeuangan[`B${r}`] = v(permit.jenis);
+      extraPermitRow += 1;
+    }
+    Object.assign(nonKeuangan, { [`F${r}`]: v(permit.nomor), [`M${r}`]: v(permit.berlakuSampai), [`S${r}`]: v(permit.atasNama) });
+  }
+
   const tanah = profile.agunanTanah ?? [];
   const kendaraan = profile.agunanKendaraan ?? [];
   tanah.slice(0, 7).forEach((row, i) => {
@@ -215,25 +341,89 @@ export function buildFluktuatifCells(app: BprsExportApplication, profile: BprsPr
       month.credits.slice(0, MAX_STATEMENT_ROWS).forEach((amount, j) => { rekening[`${creditCol}${6 + j}`] = amount; });
     });
   }
+  (profile.saldoBankLain ?? []).filter(r => r.bank || r.saldo != null).slice(0, 5).forEach((row, i) => {
+    writeRow(rekening, 62 + i, { B: v(row.bank), C: v(row.nomorRekening), D: row.saldo ?? 0 });
+  });
+  const assetSlotUsed: Record<string, number> = {};
+  for (const asset of profile.aset ?? []) {
+    if (!asset.jenis || asset.nilaiTaksasi == null) continue;
+    const slots = FLUK_ASSET_SLOTS[asset.jenis]!;
+    const index = assetSlotUsed[asset.jenis] ?? 0;
+    if (index >= slots.length) continue;
+    assetSlotUsed[asset.jenis] = index + 1;
+    const { col, row } = splitAddress(slots[index]!);
+    rekening[`${col}${row + 1}`] = asset.tahunPerolehan ?? null;
+    rekening[`${col}${row + 2}`] = asset.nilaiTaksasi;
+  }
+  rekening.D133 = v(profile.verifikatorNama);
+  rekening.D135 = profile.verifikatorNama ? { date: today } : null;
+  rekening.D141 = v(profile.kepalaCabangNama);
+  rekening.D143 = profile.kepalaCabangNama ? { date: today } : null;
+  setIfPresent(rekening, "D134", profile.verifikatorJabatan);
 
-  const dailySales = app.monthlyRevenue / WORKING_DAYS;
+  const fin = fluktuatifFinancials(profile, app);
   const keuangan: Record<string, CellValue> = {
     G5: v(profile.kas),
+    E26: v(profile.keteranganPiutang),
+    E39: v(profile.keteranganPersediaan),
+    E50: v(profile.keteranganHutang),
+    E63: v(profile.keteranganBank),
     E65: v(profile.namaPasangan),
+    E74: v(profile.keteranganBankPasangan),
     P80: 0,
     P81: 0,
     L88: profile.sistemPenjualan ? nonCashShare[profile.sistemPenjualan] ?? null : null,
-    C92: app.businessName || app.businessType,
-    H92: WORKING_DAYS, I92: dailySales,
-    O92: WORKING_DAYS, P92: dailySales,
-    V92: WORKING_DAYS, W92: dailySales,
-    O100: 0,
-    C123: "Biaya usaha per bulan (data SSCI)",
-    M123: app.monthlyExpenses,
-    M133: v(profile.biayaRumahTangga),
-    J145: app.existingDebt > 0 ? "Angsuran pembiayaan existing (data SSCI)" : null,
-    T145: app.existingDebt > 0 ? app.existingDebt : null,
+    M116: profile.tenagaKerjaJumlah ?? null,
+    M117: profile.tenagaKerjaUpah ?? null,
+    J145: fin.biayaLainRow ? v(fin.biayaLainRow.nama) : null,
+    T145: fin.biayaLainRow ? fin.biayaLainRow.nominal : null,
+    H164: v(profile.verifikatorNama),
+    H166: profile.verifikatorNama ? { date: today } : null,
+    H172: v(profile.kepalaCabangNama),
+    H174: profile.kepalaCabangNama ? { date: today } : null,
   };
+  setIfPresent(keuangan, "H165", profile.verifikatorJabatan);
+
+  // Penjualan: baris 92 berumus, baris 93 berisi angka 0 di template sehingga omzet/bulan ditulis langsung.
+  const salesColumns: Array<[string, string, string]> = [["H", "I", "L"], ["O", "P", "S"], ["V", "W", "Z"]];
+  fin.sales.forEach((line, i) => {
+    const r = 92 + i;
+    keuangan[`C${r}`] = v(line.nama);
+    line.months.forEach((month, j) => {
+      const [dayCol, dailyCol, monthCol] = salesColumns[j]!;
+      keuangan[`${dayCol}${r}`] = month.hari;
+      keuangan[`${dailyCol}${r}`] = month.omzetHarian;
+      if (r === 93) keuangan[`${monthCol}${r}`] = month.omzetBulan;
+    });
+    keuangan[`O${100 + i}`] = line.hppPersen;
+  });
+  fin.biayaUsahaRows.forEach((row, i) => writeRow(keuangan, 123 + i, { C: v(row.nama), M: row.nominal }));
+  if (fin.rumahTanggaRows) {
+    const rt = fin.rumahTanggaRows;
+    Object.assign(keuangan, { M133: rt.belanja, M134: rt.pendidikan, M135: rt.listrikAir, M136: rt.telepon });
+    rt.lainnya.forEach((row, i) => writeRow(keuangan, 137 + i, { C: v(row.nama), M: row.nominal }));
+  } else {
+    keuangan.M133 = v(profile.biayaRumahTangga);
+  }
+  fin.pendapatanLainRows.forEach((row, i) => writeRow(keuangan, 150 + i, { J: v(row.nama), T: row.nominal }));
+
+  // Piutang (rumus total hanya ada di baris pertama), persediaan, hutang usaha.
+  (profile.piutang ?? []).slice(0, 5).forEach((row, i) => {
+    const r = 19 + i;
+    writeRow(keuangan, r, { B: v(row.nama), H: row.jumlah ?? null, K: row.harga ?? null, T: v(row.keterangan) });
+    if (r > 19) keuangan[`O${r}`] = (row.jumlah ?? 0) * (row.harga ?? 0);
+  });
+  (profile.persediaan ?? []).slice(0, 5).forEach((row, i) => {
+    writeRow(keuangan, 32 + i, { B: v(row.nama), H: row.jumlah ?? null, K: v(row.satuan), N: row.harga ?? null });
+  });
+  (profile.hutangUsaha ?? []).slice(0, 3).forEach((row, i) => {
+    writeRow(keuangan, 45 + i, { B: v(row.nama), H: row.jumlah ?? null, K: row.harga ?? null, T: v(row.keterangan) });
+  });
+
+  // Hubungan bank: baris nasabah 56-60, pasangan 67-71 (semua berumus lengkap).
+  const bank = bankFacilities("fluktuatif", profile);
+  bank.nasabah.forEach((row, i) => writeRow(keuangan, 56 + i, facilityCells(row)));
+  bank.pasangan.forEach((row, i) => writeRow(keuangan, 67 + i, facilityCells(row)));
 
   const usulan: Record<string, CellValue> = {
     N36: Number(profile.rpcPersen ?? "0.7"),
@@ -244,6 +434,15 @@ export function buildFluktuatifCells(app: BprsExportApplication, profile: BprsPr
     J82: monthlyFlatRate(app),
     M82: profile.jenisMargin ?? "Flat",
   };
+  setIfPresent(usulan, "B127", profile.verifikatorNama);
+  setIfPresent(usulan, "B136", profile.kepalaCabangNama);
+
+  const keputusan: Record<string, CellValue> = {};
+  setIfPresent(keputusan, "A85", signLine);
+  setIfPresent(keputusan, "B90", profile.kepalaCabangNama);
+  setIfPresent(keputusan, "K90", profile.verifikatorNama);
+
+  const jadang: Record<string, CellValue> = { A131: signLine };
 
   return {
     [SHEET.info]: info,
@@ -251,6 +450,8 @@ export function buildFluktuatifCells(app: BprsExportApplication, profile: BprsPr
     [SHEET.rekening]: rekening,
     [SHEET.keuangan]: keuangan,
     [SHEET.usulan]: usulan,
+    [SHEET.keputusan]: keputusan,
+    [SHEET.jadang]: jadang,
   };
 }
 
@@ -293,6 +494,7 @@ export const FIX_SHEET = {
   rekomendasi: "Rekomendasi AO",
   keputusan: "Keputusan Pembiayaan",
   komite: "Komite Kredit",
+  jadang: "Jadang",
 } as const;
 
 /** Baris tabel yang rumusnya lengkap di template (baris 35 dan 46 tidak punya rumus nilai bank). */
@@ -338,25 +540,32 @@ function addMonths(isoDate: string, months: number): string {
   return date.toISOString().slice(0, 10);
 }
 
-function idDateLabel(isoDate: string): string {
-  return new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${isoDate}T00:00:00Z`));
-}
+/** Latar belakang template Fix Income ditulis satu baris per sel B5..B14 (sel tidak digabung). */
+const FIX_BACKGROUND_FIRST_ROW = 5;
+const FIX_BACKGROUND_ROWS = 10;
+const FIX_BACKGROUND_WIDTH = 120;
+
+/** Baris tabel hubungan bank yang rumus angsurannya lengkap (76-78 dan 88-89 tidak). */
+const FIX_BANK_ROWS = { nasabah: [74, 75, 79, 80], pasangan: [90, 91, 92] };
+/** Tiga slot aset: jenis, jumlah, tahun perolehan, nilai taksasi. */
+const FIX_ASSET_SLOTS = [["H62", "H63", "H64", "H65"], ["D67", "D68", "D69", "D70"], ["H67", "H68", "H69", "H70"]] as const;
 
 /** Menyusun nilai sel template Fix Income dari data SSCI dan profil format BPRS. */
 export function buildFixIncomeCells(app: BprsExportApplication, profile: BprsProfile, now = new Date()): FilledSheets {
   const today = jakartaToday(now);
-  const v = <T,>(value: T | undefined | null): T | null => (value === undefined || value === "" ? null : value);
   const akad = app.financingAkad ? AKAD_TO_BPRS[app.financingAkad] ?? null : null;
   const rate = monthlyFlatRate(app);
   const marginType = profile.jenisMargin ?? "Flat";
+  const signLine = placeAndDate(profile, today);
 
   const info: Record<string, CellValue> = {
-    D2: v(profile.kantor), D3: v(profile.nomorProposal), D4: v(profile.nomorProposal), D5: v(profile.namaAo),
+    D2: v(profile.kantor), D3: v(profile.nomorRegister ?? profile.nomorProposal), D4: v(profile.nomorProposal), D5: v(profile.namaAo),
     D6: { date: today }, D10: v(profile.kategoriNasabah),
     H10: profile.kategoriNasabah === "Referral" ? v(profile.namaReferral) : null,
     D11: app.customerName, D12: v(profile.jenisKelamin), D13: v(profile.tempatLahir),
     I13: profile.tanggalLahir ? { date: profile.tanggalLahir } : null,
     D14: app.customerId, D15: app.address, F17: v(profile.desa), I17: v(profile.kecamatan), F18: v(profile.kabupaten), I18: v(profile.kodePos),
+    D19: v(profile.telponRumah),
     D20: app.phone, D21: v(profile.statusPerkawinan), D22: v(profile.tanggungan), D23: v(profile.pendidikanFix),
     D24: v(profile.statusTempatTinggal), D25: v(profile.statusKaryawan), D26: v(profile.bidangPekerjaan), D27: v(profile.bonafiditas),
     D29: v(profile.suratKeteranganBekerja), D30: v(profile.slipGaji), D31: v(profile.rekeningGaji),
@@ -369,10 +578,23 @@ export function buildFixIncomeCells(app: BprsExportApplication, profile: BprsPro
   };
 
   const nonKeuangan: Record<string, CellValue> = {
-    B5: v(profile.latarBelakang), K16: v(profile.pengalamanUsaha), K19: v(profile.alamatInstansi),
+    K16: v(profile.pengalamanUsaha), K19: v(profile.alamatInstansi),
     N24: v(profile.namaInstansi), N25: v(profile.nomorSk), N26: v(profile.tanggalSk), N27: profile.nomorSk ? app.customerName : null,
     F77: v(profile.pengikatan), F83: v(profile.asuransiJiwa), F88: v(profile.asuransiAgunan),
+    L96: v(profile.mengetahuiNama),
+    H100: v(profile.verifikatorNama), H102: profile.verifikatorNama ? { date: today } : null,
+    H108: v(profile.kepalaCabangNama), H110: profile.kepalaCabangNama ? { date: today } : null,
   };
+  const background = profile.latarBelakang ? wrapLines(profile.latarBelakang, FIX_BACKGROUND_WIDTH, FIX_BACKGROUND_ROWS) : [];
+  for (let i = 0; i < FIX_BACKGROUND_ROWS; i++) nonKeuangan[`B${FIX_BACKGROUND_FIRST_ROW + i}`] = background[i] ?? null;
+  setIfPresent(nonKeuangan, "F68", profile.mitigasiRisikoUsaha);
+  setIfPresent(nonKeuangan, "F72", profile.mitigasiWanprestasi);
+  setIfPresent(nonKeuangan, "K77", pengikatanSummary(profile));
+  const fixAsuransiText = asuransiAgunanSummary(profile);
+  if (fixAsuransiText !== undefined) nonKeuangan.K88 = fixAsuransiText;
+  setIfPresent(nonKeuangan, "L97", profile.mengetahuiJabatan);
+  setIfPresent(nonKeuangan, "H101", profile.verifikatorJabatan);
+
   const tanah = (profile.agunanTanah ?? []).slice(0, FIX_LAND_ROWS.length);
   const kendaraan = (profile.agunanKendaraan ?? []).slice(0, FIX_VEHICLE_ROWS.length);
   tanah.forEach((row, i) => {
@@ -401,13 +623,41 @@ export function buildFixIncomeCells(app: BprsExportApplication, profile: BprsPro
     M10: Number(profile.potonganGaji ?? "0.4"),
     M67: Number(profile.rpcPersen ?? "0.7"),
     F72: app.customerName,
+    E83: v(profile.keteranganBank),
     E86: v(profile.namaPasangan),
     P100: 0,
     P101: 0,
+    M111: v(profile.mengetahuiNama),
+    H115: v(profile.verifikatorNama), H117: profile.verifikatorNama ? { date: today } : null,
+    H123: v(profile.kepalaCabangNama), H125: profile.kepalaCabangNama ? { date: today } : null,
   };
-  if (app.existingDebt > 0) {
-    // Angsuran existing SSCI ditulis sebagai satu fasilitas 12 bulan tanpa margin (efektif),
-    // sehingga rumus PMT di template menghasilkan angsuran yang sama.
+  setIfPresent(keuangan, "E95", profile.keteranganBankPasangan);
+  setIfPresent(keuangan, "M112", profile.mengetahuiJabatan);
+  setIfPresent(keuangan, "H116", profile.verifikatorJabatan);
+
+  // Pendapatan tidak tetap (usaha sampingan): penjualan, HPP, tenaga kerja bulanan, biaya usaha.
+  const side = fixSideBusiness(profile);
+  const salesColumns: Array<[string, string]> = [["H", "I"], ["O", "P"], ["W", "X"]];
+  side.sales.forEach((line, i) => {
+    const r = 20 + i;
+    keuangan[`C${r}`] = v(line.nama);
+    line.months.forEach((month, j) => {
+      const [dayCol, dailyCol] = salesColumns[j]!;
+      keuangan[`${dayCol}${r}`] = month.hari;
+      keuangan[`${dailyCol}${r}`] = month.omzetHarian;
+    });
+    keuangan[`O${28 + i}`] = line.hppPersen;
+  });
+  if (profile.tenagaKerjaJumlah != null) keuangan.M42 = profile.tenagaKerjaJumlah;
+  if (profile.tenagaKerjaUpah != null) keuangan.M43 = profile.tenagaKerjaUpah;
+  side.biayaUsahaRows.forEach((row, i) => writeRow(keuangan, 49 + i, { C: v(row.nama), M: row.nominal }));
+
+  const bank = bankFacilities("fix_income", profile);
+  bank.nasabah.forEach((row, i) => writeRow(keuangan, FIX_BANK_ROWS.nasabah[i]!, facilityCells(row)));
+  bank.pasangan.forEach((row, i) => writeRow(keuangan, FIX_BANK_ROWS.pasangan[i]!, facilityCells(row)));
+  if (!bank.hasRows && app.existingDebt > 0) {
+    // Tabel hubungan bank kosong: angsuran existing SSCI ditulis sebagai satu fasilitas
+    // 12 bulan tanpa margin (efektif), sehingga rumus PMT di template menghasilkan angsuran yang sama.
     Object.assign(keuangan, {
       B74: "Angsuran existing (data SSCI)", F74: app.existingDebt * 12, L74: 0,
       Q74: { date: today }, T74: { date: addMonths(today, 12) }, W74: "Konsumtif", Y74: "Efektif", Z74: 1, AA74: "Tidak",
@@ -433,6 +683,17 @@ export function buildFixIncomeCells(app: BprsExportApplication, profile: BprsPro
       fit(month.credits).forEach((amount, j) => { rekening[`${creditCol}${FIX_STATEMENT_FIRST_ROW + j}`] = amount; });
     });
   }
+  (profile.aset ?? []).filter(a => a.jenis && a.nilaiTaksasi != null).slice(0, FIX_ASSET_SLOTS.length).forEach((asset, i) => {
+    const [jenis, jumlah, tahun, nilai] = FIX_ASSET_SLOTS[i]!;
+    Object.assign(rekening, { [jenis]: v(asset.jenis), [jumlah]: asset.jumlah ?? 1, [tahun]: asset.tahunPerolehan ?? null, [nilai]: asset.nilaiTaksasi! });
+  });
+  Object.assign(rekening, {
+    F81: v(profile.mengetahuiNama),
+    D85: v(profile.verifikatorNama), D87: profile.verifikatorNama ? { date: today } : null,
+    D93: v(profile.kepalaCabangNama), D95: profile.kepalaCabangNama ? { date: today } : null,
+  });
+  setIfPresent(rekening, "F82", profile.mengetahuiJabatan);
+  setIfPresent(rekening, "D86", profile.verifikatorJabatan);
 
   const collateralLines = [
     ...tanah.map(row => `${row.jenisSurat ?? "Sertipikat"}${row.nomor ? ` No. ${row.nomor}` : ""}${row.luasTanah ? ` luas ${row.luasTanah} m2` : ""}${row.atasNama ? ` an. ${row.atasNama}` : ""}`),
@@ -441,15 +702,35 @@ export function buildFixIncomeCells(app: BprsExportApplication, profile: BprsPro
   const usulan: Record<string, CellValue> = {
     J49: app.requestedAmount, J50: 0, J51: 0, J52: 0, J54: app.financingTenor, J55: rate, M55: marginType,
     C80: collateralLines[0] ?? null, C81: collateralLines[1] ?? null, C82: collateralLines[2] ?? null,
+    J90: v(profile.mengetahuiNama),
   };
+  setIfPresent(usulan, "J91", profile.mengetahuiJabatan);
+  setIfPresent(usulan, "B101", profile.verifikatorNama);
+  setIfPresent(usulan, "B110", profile.kepalaCabangNama);
 
-  const place = profile.kabupaten ? `${profile.kabupaten}, ` : "";
   const rekomendasi: Record<string, CellValue> = {
     D5: app.requestedAmount, D7: app.financingTenor, D8: akad, D9: app.loanPurpose,
     D10: "Terlampir", D11: "Terlampir", D15: "Terlampir", D16: "Terlampir",
-    D19: rate, D20: marginType, A23: `${place}${idDateLabel(today)}`, A28: v(profile.namaAo),
+    D19: rate, D20: marginType, A23: signLine, A28: v(profile.namaAo),
+    D28: v(profile.mengetahuiNama), G28: v(profile.kabagMarketingNama),
   };
-  const keputusan: Record<string, CellValue> = { C75: v(profile.namaAo) };
+  setIfPresent(rekomendasi, "D29", profile.mengetahuiJabatan);
+  const keputusan: Record<string, CellValue> = {
+    C75: v(profile.namaAo), K75: v(profile.mengetahuiNama), R75: v(profile.kabagMarketingNama),
+  };
+  setIfPresent(keputusan, "A70", signLine);
+  setIfPresent(keputusan, "K76", profile.mengetahuiJabatan);
+
+  const jadang: Record<string, CellValue> = { H139: app.customerName };
+  setIfPresent(jadang, "A131", signLine);
+  setIfPresent(jadang, "H131", signLine);
+  if (profile.namaPasangan) Object.assign(jadang, { E139: profile.namaPasangan, L139: profile.namaPasangan });
+
+  // Sheet Komite Kredit tersembunyi; isian yang rumusnya tidak rusak (#REF!) saja.
+  const komite: Record<string, CellValue> = {
+    J7: [profile.statusKaryawan, profile.namaInstansi].filter(Boolean).join(", ") || null,
+    C19: collateralLines[0] ?? null, C20: collateralLines[1] ?? null, C21: collateralLines[2] ?? null,
+  };
 
   return {
     [FIX_SHEET.info]: info,
@@ -459,6 +740,8 @@ export function buildFixIncomeCells(app: BprsExportApplication, profile: BprsPro
     [FIX_SHEET.usulan]: usulan,
     [FIX_SHEET.rekomendasi]: rekomendasi,
     [FIX_SHEET.keputusan]: keputusan,
+    [FIX_SHEET.jadang]: jadang,
+    [FIX_SHEET.komite]: komite,
   };
 }
 

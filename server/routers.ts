@@ -1455,6 +1455,19 @@ export const appRouter = router({
         const profile = application.bprsProfile ?? {};
         const app = toBprsApplication(application);
         const template = templateFor(profile, application.incomeSourceType);
+        const { excelCompleteness } = await import("@shared/bprsTemplate");
+        // Angka pengajuan (tanpa data pribadi) agar panel dapat menghitung ulang kelengkapan saat AO mengetik.
+        const appData = {
+          businessAge: app.businessAge,
+          monthlyRevenue: app.monthlyRevenue,
+          monthlyExpenses: app.monthlyExpenses,
+          existingDebt: app.existingDebt,
+          collateralValue: app.collateralValue,
+          requestedAmount: app.requestedAmount,
+          financingTenor: app.financingTenor,
+          marginRate: app.marginRate,
+          financingAkad: app.financingAkad,
+        };
         return {
           profile,
           template,
@@ -1462,6 +1475,8 @@ export const appRouter = router({
           defaultTemplate: templateFor({}, application.incomeSourceType),
           score: scoreForTemplate(template, profile, app),
           checks: checksForTemplate(template, profile, app),
+          completeness: excelCompleteness(template, profile, app),
+          appData,
           derived: {
             lamaUsaha: lamaUsahaFromMonths(app.businessAge),
             akad: app.financingAkad ? AKAD_TO_BPRS[app.financingAkad] ?? null : null,

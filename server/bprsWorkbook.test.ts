@@ -9,10 +9,18 @@ import {
   checkFixIncomeProfile,
   computeBprsScore,
   computeFixIncomeScore,
+  datedifMonths,
+  excelCompleteness,
+  existingInstallment,
+  facilityInstallment,
+  fixSideBusiness,
+  fluktuatifFinancials,
+  scoreForTemplate,
   templateFor,
   lamaUsahaFromMonths,
   type BprsProfile,
 } from "@shared/bprsTemplate";
+import { buildDemoScenario } from "@shared/demoData";
 import { ENV } from "./_core/env";
 import { fitStatementRows, readBankStatement, ruleScoreComparison } from "./aiAssist";
 import {
@@ -24,6 +32,7 @@ import {
   buildFluktuatifCells,
   fillBprsWorkbook,
   fillFluktuatifWorkbook,
+  wrapLines,
   type BprsExportApplication,
 } from "./bprsExcel";
 import { excelDateSerial, stripFormulaCaches, writeCells } from "./xlsxPatch";
@@ -361,6 +370,200 @@ describe("Fix Income template", () => {
     for (const name of Object.keys(zip.files).filter(n => /\.(xml|rels)$/.test(n))) {
       const xml = await zip.file(name)!.async("string");
       expect(xml, name).not.toMatch(/Fitri|3204166812990002|Santi|Fengtay|Heru Sukmawan|Linda Hasanah|Hardiman|Nurahman|Syafi|Lampani|Walelang|09020299765|Zaenal/i);
+    }
+  });
+});
+
+describe("structured financials and bank facilities (verified with LibreOffice)", () => {
+  // Rincian lengkap: 2 produk, HPP, tenaga kerja, biaya usaha, rumah tangga, pendapatan/biaya lain,
+  // fasilitas bank Flat + Efektif + dilunasi + pasangan.
+  const flukStructured: BprsProfile = {
+    ...profile,
+    penjualan: [
+      { nama: "Sembako", hppPersen: 0.55, bulan: [{ hari: 26, omzetHarian: 700_000 }, { hari: 27, omzetHarian: 720_000 }, { hari: 25, omzetHarian: 690_000 }] },
+      { nama: "Minuman", hppPersen: 0.4, bulan: [{ hari: 26, omzetHarian: 300_000 }, { hari: 27, omzetHarian: 280_000 }, { hari: 25, omzetHarian: 310_000 }] },
+    ],
+    tenagaKerjaJumlah: 2,
+    tenagaKerjaUpah: 1_500_000,
+    biayaUsaha: [{ nama: "Sewa kios", nominal: 1_000_000 }, { nama: "Listrik dan air", nominal: 400_000 }, { nama: "Transportasi", nominal: 300_000 }],
+    rumahTangga: { belanja: 1_500_000, pendidikan: 500_000, listrikAir: 300_000, telepon: 150_000, lainnya: [{ nama: "Arisan", nominal: 100_000 }] },
+    pendapatanLain: [{ nama: "Gaji pasangan", nominal: 2_000_000 }],
+    biayaLain: [{ nama: "Iuran BPJS", nominal: 200_000 }],
+    fasilitasBank: [
+      { pemilik: "nasabah", namaBank: "BRI", plafond: 20_000_000, marginTahunan: 0.18, tanggalMulai: "2025-04-10", tanggalAkhir: "2027-04-10", jenisMargin: "Flat", kol: 1, dilunasi: "Tidak", pangsa: "Modal Kerja" },
+      { pemilik: "nasabah", namaBank: "Mandiri", plafond: 10_000_000, marginTahunan: 0.12, tanggalMulai: "2025-01-15", tanggalAkhir: "2028-01-15", jenisMargin: "Efektif", kol: 1, dilunasi: "Tidak" },
+      { pemilik: "nasabah", namaBank: "Koperasi", plafond: 5_000_000, marginTahunan: 0.2, tanggalMulai: "2025-06-01", tanggalAkhir: "2026-12-01", jenisMargin: "Flat", kol: 1, dilunasi: "Ya" },
+      { pemilik: "pasangan", namaBank: "BJB", plafond: 6_000_000, marginTahunan: 0.15, tanggalMulai: "2026-02-20", tanggalAkhir: "2027-02-20", jenisMargin: "Flat", kol: 1, dilunasi: "Tidak" },
+    ],
+  };
+
+  it("matches Excel for a fully itemised Fluktuatif workbook (80.025, A-, Layak)", () => {
+    // LibreOffice: Usulan B102 = 80.025, AA88 = 1.85261719716627, AA87 = 1.28901347451429,
+    // N26 = 26.000.000, N27 = 13.144.500, N35 = 5.325.225, N38 = 1.800.000, N39 = 2.040.476,43.
+    const result = computeBprsScore(flukStructured, app, now);
+    expect(result.score).toBeCloseTo(80.025, 6);
+    expect(result.rating).toBe("A-");
+    expect(result.coverageRatio).toBeCloseTo(1.85261719716627, 8);
+    expect(result.coverageThreshold).toBeCloseTo(1.28901347451429, 8);
+    expect(result.netProfit).toBeCloseTo(5_325_225, 2);
+    const fin = fluktuatifFinancials(flukStructured, app);
+    expect(fin.salesTotal).toBeCloseTo(26_000_000, 4);
+    expect(fin.hppTotal).toBeCloseTo(13_144_500, 4);
+    expect(fin.bankInstallment).toBeCloseTo(2_040_476.43146185, 4);
+  });
+
+  it("uses the template formulas for Flat, Efektif and paid-off facilities", () => {
+    const [bri, mandiri, koperasi, bjb] = flukStructured.fasilitasBank!;
+    expect(facilityInstallment(bri!)).toBeCloseTo(1_133_333.33333333, 4); // 20 jt / 24 + 20 jt x 18% / 12
+    expect(facilityInstallment(mandiri!)).toBeCloseTo(332_143.098128512, 4); // PMT(1%, 36, -10 jt)
+    expect(facilityInstallment(koperasi!)).toBe(0); // dilunasi dari pembiayaan baru
+    expect(facilityInstallment(bjb!)).toBeCloseTo(575_000, 6);
+    expect(datedifMonths("2025-01-31", "2025-02-28")).toBe(0);
+    expect(datedifMonths("2025-01-15", "2028-01-15")).toBe(36);
+  });
+
+  it("keeps the lump fallback when only part of the breakdown is given (82.025)", () => {
+    // Tanpa produk dan fasilitas: omzet SSCI satu baris, biaya SSCI dikurangi upah, angsuran existing di biaya lain-lain.
+    // LibreOffice: B102 = 82.025, AA88 = 4.81846153846154, AA87 = 1.41809290953545.
+    const partial: BprsProfile = {
+      ...profile, tenagaKerjaJumlah: 3, tenagaKerjaUpah: 1_200_000,
+      pendapatanLain: [{ nama: "Sewa kamar", nominal: 800_000 }, { nama: "Ojek", nominal: 500_000 }], biayaLain: [{ nama: "Iuran", nominal: 150_000 }],
+    };
+    const result = computeBprsScore(partial, app, now);
+    expect(result.score).toBeCloseTo(82.025, 6);
+    expect(result.coverageRatio).toBeCloseTo(4.81846153846154, 8);
+    expect(result.coverageThreshold).toBeCloseTo(1.41809290953545, 8);
+    const cells = buildFluktuatifCells(app, partial, now)[SHEET.keuangan]!;
+    expect(cells.M123).toBe(14_400_000);
+    expect(cells.T145).toBe(1_150_000);
+    expect(cells.J145).toContain("angsuran pembiayaan existing");
+  });
+
+  it("writes the itemised structure into the Fluktuatif cells the formulas read", () => {
+    const sheets = buildFluktuatifCells(app, { ...flukStructured, kotaTandaTangan: "Banjaran", kepalaCabangNama: "Kepala", verifikatorNama: "Koordinator A" }, now);
+    const keu = sheets[SHEET.keuangan]!;
+    expect(keu.C92).toBe("Sembako");
+    expect(keu.I92).toBe(700_000);
+    expect(keu.W93).toBe(310_000);
+    expect(keu.L93).toBe(26 * 300_000); // baris 2 berisi angka 0 di template, bukan rumus
+    expect(keu.O100).toBe(0.55);
+    expect(keu.M116).toBe(2);
+    expect(keu.C125).toBe("Transportasi");
+    expect(keu.M137).toBe(100_000);
+    expect(keu.T145).toBe(200_000);
+    expect(keu.B56).toBe("BRI");
+    expect(keu.Y57).toBe("Efektif");
+    expect(keu.AA58).toBe("Ya");
+    expect(keu.B67).toBe("BJB");
+    expect(keu.Q56).toEqual({ date: "2025-04-10" });
+    expect(sheets[SHEET.jadang]!.A131).toBe("Banjaran, 7 Oktober 2026");
+    expect(sheets[SHEET.keputusan]!.B90).toBe("Kepala");
+    expect(sheets[SHEET.nonKeuangan]!.H134).toBe("Koordinator A");
+    expect(sheets[SHEET.nonKeuangan]!.M111).toBe("(SKMHT)");
+  });
+
+  const fixApp: BprsExportApplication = {
+    ...app, customerName: "Contoh Karyawan", monthlyRevenue: 3_968_000, monthlyExpenses: 1_000_000, existingDebt: 900_000,
+    collateralValue: 0, requestedAmount: 45_000_000, financingTenor: 60, marginRate: 96, createdAt: "2025-05-15",
+  };
+  const fixBase: BprsProfile = {
+    tanggalLahir: "1999-12-28", statusPerkawinan: "Lajang", tanggungan: "Tidak Mempunyai Tanggungan", pendidikanFix: "SMA",
+    statusTempatTinggal: "Milik sendiri", statusKaryawan: "Tetap Swasta", reputasiFix: "Dikenal baik", suratKeteranganBekerja: "Tidak Ada",
+    slipGaji: "Ada", rekeningGaji: "Ada", hubunganBank: "Nasabah/debitur bank 1 - 3 tahun", riwayatSlik: "Tidak pernah terlambat 12 bulan terakhir",
+    pembiayaanKe: 2, potonganGaji: "0.4", gajiBulanan: 3_968_000, pengikatan: "Pengikatan Notaril", asuransiJiwa: "Asuransi Jiwa Syariah",
+    asuransiAgunan: "Tidak Diasuransikan",
+    agunanTanah: [{ jenisSurat: "Sertipikat Hak Milik", nomor: "1", atasNama: "X", luasTanah: 73, nilaiPasar: 198_142_857, persen: 0.7, pengikatan: "SKMHT" }],
+  };
+  const fixFacilities: BprsProfile["fasilitasBank"] = [
+    { pemilik: "nasabah", namaBank: "BSI", plafond: 15_000_000, marginTahunan: 0.11, tanggalMulai: "2024-08-05", tanggalAkhir: "2027-08-05", jenisMargin: "Efektif", kol: 1, dilunasi: "Tidak" },
+    { pemilik: "nasabah", namaBank: "Adira", plafond: 8_000_000, marginTahunan: 0.2, tanggalMulai: "2024-11-10", tanggalAkhir: "2026-11-10", jenisMargin: "Flat", kol: 1, dilunasi: "Tidak" },
+    { pemilik: "pasangan", namaBank: "BJB", plafond: 4_000_000, marginTahunan: 0.15, tanggalMulai: "2025-01-01", tanggalAkhir: "2026-01-01", jenisMargin: "Flat", kol: 1, dilunasi: "Tidak" },
+  ];
+  const fixNow = new Date("2025-05-15T03:00:00Z");
+
+  it("matches Excel for Fix Income bank rows instead of the SSCI installment (48.51, CCC)", () => {
+    // LibreOffice: B71 = 48.51, AA59 = 1.41155674395511, N26 = 1.341.080,76 (rows 74, 75, 90).
+    const result = computeFixIncomeScore({ ...fixBase, fasilitasBank: fixFacilities }, fixApp, fixNow);
+    expect(result.score).toBeCloseTo(48.51, 6);
+    expect(result.rating).toBe("CCC");
+    expect(result.coverageRatio).toBeCloseTo(1.41155674395511, 8);
+    expect(existingInstallment("fix_income", { fasilitasBank: fixFacilities }, fixApp)).toBeCloseTo(1_341_080.75675503, 4);
+    const keu = buildFixIncomeCells(fixApp, { ...fixBase, fasilitasBank: fixFacilities }, fixNow)[FIX_SHEET.keuangan]!;
+    expect(keu.B74).toBe("BSI");
+    expect(keu.B75).toBe("Adira");
+    expect(keu.B90).toBe("BJB");
+    expect(keu.F74).toBe(15_000_000); // bukan fasilitas sintetis 12 bulan
+  });
+
+  it("adds side-business profit to the Fix Income RPC like Excel (78.3, threshold 1.7757)", () => {
+    // LibreOffice: B71 = 78.3, AA59 = 2.5468140617434, AA58 = 1.77568169529696, AA54 = 7.159.300, M65 = 659.300.
+    const withSide: BprsProfile = {
+      ...fixBase, gajiBulanan: 6_500_000, fasilitasBank: fixFacilities,
+      penjualan: [{ nama: "Jualan online pasangan", hppPersen: 0.7, bulan: [{ hari: 20, omzetHarian: 150_000 }, { hari: 22, omzetHarian: 140_000 }, { hari: 21, omzetHarian: 160_000 }] }],
+      tenagaKerjaJumlah: 0, biayaUsaha: [{ nama: "Ongkos kirim", nominal: 150_000 }, { nama: "Kuota internet", nominal: 100_000 }],
+    };
+    expect(fixSideBusiness(withSide).netProfit).toBeCloseTo(659_300, 4);
+    const result = computeFixIncomeScore(withSide, fixApp, fixNow);
+    expect(result.score).toBeCloseTo(78.3, 6);
+    expect(result.coverageRatio).toBeCloseTo(2.5468140617434, 8);
+    expect(result.coverageThreshold).toBeCloseTo(1.77568169529696, 8);
+    expect(result.netProfit).toBeCloseTo(7_159_300, 4);
+  });
+
+  it("splits the Fix Income background into one line per row and fills the signature blocks", () => {
+    const text = Array.from({ length: 40 }, (_, i) => `kalimat${i}`).join(" ");
+    const sheets = buildFixIncomeCells(fixApp, { ...fixBase, latarBelakang: text, kotaTandaTangan: "Banjaran", namaAo: "AO", mengetahuiNama: "Koord", kabagMarketingNama: "Kabag", verifikatorNama: "MB" }, fixNow);
+    const nonKeu = sheets[FIX_SHEET.nonKeuangan]!;
+    const lines = Array.from({ length: 10 }, (_, i) => nonKeu[`B${5 + i}`]).filter(Boolean) as string[];
+    expect(lines.length).toBeGreaterThan(1);
+    expect(lines.join(" ")).toBe(text);
+    expect(lines.every(l => l.length <= 120)).toBe(true);
+    expect(wrapLines("a b c d e f", 3, 2)).toEqual(["a b", "c d e f"]);
+    expect(sheets[FIX_SHEET.rekomendasi]!.A23).toBe("Banjaran, 15 Mei 2025");
+    expect(sheets[FIX_SHEET.keputusan]).toMatchObject({ A70: "Banjaran, 15 Mei 2025", C75: "AO", K75: "Koord", R75: "Kabag" });
+    expect(sheets[FIX_SHEET.usulan]!.B101).toBe("MB");
+  });
+
+  it("reports what is still empty and reaches 100% for a demo scenario", () => {
+    const empty = excelCompleteness("fluktuatif", {}, app);
+    expect(empty.filled).toBeLessThan(empty.total);
+    expect(empty.missing.find(g => g.sheet === "Aspek Keuangan")?.items.map(i => i.key)).toContain("penjualan");
+    expect(empty.items.every(i => i.tab)).toBe(true);
+    const seeded = (seed: number) => () => {
+      seed = (seed * 1664525 + 1013904223) % 4294967296;
+      return seed / 4294967296;
+    };
+    for (const [segment, seed] of [["umkm", 7], ["karyawan_swasta", 1003]] as const) {
+      const s = buildDemoScenario({ segment, rng: seeded(seed), today: new Date(2026, 9, 8) });
+      const demoApp = {
+        businessAge: Number(s.business.businessAge), monthlyRevenue: Number(s.finance.monthlyRevenue), monthlyExpenses: Number(s.finance.monthlyExpenses),
+        existingDebt: Number(s.finance.existingDebt), collateralValue: Number(s.finance.collateralValue), requestedAmount: Number(s.finance.requestedAmount),
+        financingTenor: Number(s.finance.financingTenor), marginRate: Number(s.finance.marginRate), financingAkad: "murabahah",
+      };
+      const result = excelCompleteness(templateFor(s.profile, s.incomeSourceType), s.profile, demoApp);
+      expect(result.missing).toEqual([]);
+      expect(result.filled).toBe(result.total);
+    }
+  });
+
+  it("matches Excel for demo exports (83.125 and 81.375 Fluktuatif, 88.375 and 91.4375 Fix Income)", () => {
+    // Acuan: fillBprsWorkbook untuk skenario demo berikut, dihitung ulang dengan LibreOffice Calc.
+    const seeded = (seed: number) => () => {
+      seed = (seed * 1664525 + 1013904223) % 4294967296;
+      return seed / 4294967296;
+    };
+    const today = new Date(2026, 9, 8, 10);
+    const expected: Array<[string, number, number, number]> = [["umkm", 7, 83.125, 3.20487250086475], ["umkm", 42, 81.375, 2.72722266772981], ["karyawan_swasta", 1003, 88.375, 6.70422535211268], ["guru_sertifikasi", 5010, 91.4375, 6.57013574660634]];
+    for (const [segment, seed, score, coverage] of expected) {
+      const s = buildDemoScenario({ segment, rng: seeded(seed), today });
+      const demoApp = {
+        businessAge: Number(s.business.businessAge), monthlyRevenue: Number(s.finance.monthlyRevenue), monthlyExpenses: Number(s.finance.monthlyExpenses),
+        existingDebt: Number(s.finance.existingDebt), collateralValue: Number(s.finance.collateralValue), requestedAmount: Number(s.finance.requestedAmount),
+        financingTenor: Number(s.finance.financingTenor), marginRate: Number(s.finance.marginRate), financingAkad: "murabahah",
+      };
+      const result = scoreForTemplate(templateFor(s.profile, s.incomeSourceType), s.profile, demoApp, today);
+      expect(result.score, `${segment} ${seed}`).toBeCloseTo(score, 6);
+      expect(result.coverageRatio, `${segment} ${seed}`).toBeCloseTo(coverage, 8);
     }
   });
 });

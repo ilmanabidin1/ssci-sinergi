@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,13 +11,29 @@ import { useConfirm } from "@/components/ConfirmDialog";
 import { RupiahInput } from "@/components/RupiahInput";
 import { trpc } from "@/lib/trpc";
 import { errorMessage } from "@/lib/errors";
-import { BPRS_OPTIONS, BPRS_TEMPLATE_LABELS, MAX_STATEMENT_ROWS, type BprsOptionKey, type BprsProfile, type BprsTemplateKind } from "@shared/bprsTemplate";
-import { AlertTriangle, CheckCircle2, FileScan, FileSpreadsheet, ImagePlus, Loader2, Plus, Save, Sparkles, Trash2 } from "lucide-react";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  BANK_ROW_CAPACITY,
+  BPRS_OPTIONS,
+  BPRS_TEMPLATE_LABELS,
+  MAX_STATEMENT_ROWS,
+  WORKING_DAYS,
+  excelCompleteness,
+  facilityInstallment,
+  fixSideBusiness,
+  fluktuatifFinancials,
+  type BankFacilityRow,
+  type BprsApplicationData,
+  type BprsOptionKey,
+  type BprsPanelTab,
+  type BprsProfile,
+  type BprsTemplateKind,
+} from "@shared/bprsTemplate";
+import { AlertTriangle, CheckCircle2, ClipboardList, FileScan, FileSpreadsheet, ImagePlus, Loader2, Plus, Save, Sparkles, Trash2 } from "lucide-react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { toast } from "sonner";
 
 type SelectField = { key: keyof BprsProfile & BprsOptionKey; label: string };
-type TextField = { key: keyof BprsProfile; label: string; type?: "text" | "date" | "number" | "rupiah"; placeholder?: string };
+type TextField = { key: keyof BprsProfile; label: string; type?: "text" | "date" | "number" | "rupiah" | "textarea"; placeholder?: string; hint?: string };
 
 const IDENTITAS_SELECT: SelectField[] = [
   { key: "kantor", label: "Kantor" },
@@ -27,7 +44,8 @@ const IDENTITAS_SELECT: SelectField[] = [
   { key: "pendidikan", label: "Pendidikan terakhir" },
 ];
 const IDENTITAS_TEXT: TextField[] = [
-  { key: "nomorProposal", label: "Nomor register / proposal" },
+  { key: "nomorRegister", label: "Nomor register" },
+  { key: "nomorProposal", label: "Nomor proposal (MUP)" },
   { key: "namaAo", label: "Nama AO" },
   { key: "namaReferral", label: "Nama referral (jika Referral)" },
   { key: "tempatLahir", label: "Tempat lahir" },
@@ -36,6 +54,7 @@ const IDENTITAS_TEXT: TextField[] = [
   { key: "kecamatan", label: "Kecamatan" },
   { key: "kabupaten", label: "Kab./Kota" },
   { key: "kodePos", label: "Kode pos" },
+  { key: "telponRumah", label: "Telepon rumah", placeholder: "Isi - bila tidak ada" },
   { key: "ibuKandung", label: "Nama gadis ibu kandung" },
   { key: "namaPasangan", label: "Nama pasangan" },
   { key: "ttlPasangan", label: "Tempat/tgl lahir pasangan" },
@@ -88,6 +107,19 @@ const PEKERJAAN_TEXT: TextField[] = [
   { key: "nomorSk", label: "Nomor SK pengangkatan" },
   { key: "tanggalSk", label: "Tanggal SK" },
 ];
+/** Narasi Aspek Teknis Usaha dan Aspek Pemasaran (template Fluktuatif). */
+const NARASI_TEKNIS: TextField[] = [
+  { key: "alamatUsaha", label: "Lokasi usaha (alamat)", type: "text", placeholder: "Kosongkan bila sama dengan alamat rumah" },
+  { key: "gambaranDaerah", label: "Gambaran daerah sekitar lokasi usaha", type: "textarea" },
+  { key: "saranaPrasarana", label: "Sarana dan prasarana yang dimiliki", type: "textarea" },
+  { key: "bahanBaku", label: "Perolehan / ketersediaan bahan baku", type: "textarea" },
+  { key: "hubunganSupplier", label: "Hubungan dengan supplier", type: "textarea" },
+  { key: "prosesProduksi", label: "Gambaran singkat proses produksi / layanan", type: "textarea" },
+  { key: "sistemPenjualanNarasi", label: "Sistem penjualan (uraian)", type: "textarea", hint: "Bila kosong, Excel diisi pilihan sistem penjualan." },
+  { key: "daerahPemasaranNarasi", label: "Daerah pemasaran (uraian)", type: "textarea", hint: "Bila kosong, Excel diisi pilihan daerah pemasaran." },
+  { key: "saluranDistribusi", label: "Saluran distribusi", type: "textarea" },
+  { key: "faktorPersaingan", label: "Faktor persaingan", type: "textarea" },
+];
 const MITIGASI_SELECT: SelectField[] = [
   { key: "pengikatan", label: "Mitigasi risiko hukum" },
   { key: "asuransiJiwa", label: "Mitigasi risiko kematian" },
@@ -95,10 +127,13 @@ const MITIGASI_SELECT: SelectField[] = [
 ];
 
 const rp = (n: number) => `Rp ${Math.round(n).toLocaleString("id-ID")}`;
+const OPTION_TEXT: Partial<Record<BprsOptionKey, Record<string, string>>> = {
+  pemilikFasilitas: { nasabah: "Calon nasabah", pasangan: "Pasangan" },
+};
 const optionLabel = (key: BprsOptionKey, value: string) => {
   if (key === "rpcPersen" || key === "potonganGaji") return `${Math.round(Number(value) * 100)}%`;
   if (key === "template") return BPRS_TEMPLATE_LABELS[value as BprsTemplateKind] ?? value;
-  return value.trim();
+  return OPTION_TEXT[key]?.[value] ?? value.trim();
 };
 
 const parseAmounts = (text: string) =>
@@ -107,15 +142,34 @@ const parseAmounts = (text: string) =>
 /** Mencegah angka berubah saat roda mouse digulir di atas input number. */
 const blurOnWheel = (event: React.WheelEvent<HTMLInputElement>) => event.currentTarget.blur();
 
+const isEmptyValue = (value: unknown): boolean => {
+  if (value === undefined || value === null || value === "") return true;
+  if (Array.isArray(value)) return value.length === 0;
+  if (typeof value === "object") return Object.values(value as Record<string, unknown>).every(isEmptyValue);
+  return false;
+};
+
 function compact(profile: BprsProfile): BprsProfile {
   const out: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(profile)) {
-    if (value === undefined || value === null || value === "") continue;
-    if (Array.isArray(value) && value.length === 0) continue;
+    if (isEmptyValue(value)) continue;
     out[key] = value;
   }
   return out as BprsProfile;
 }
+
+/** Nama tab panel untuk tautan daftar kelengkapan. */
+const TAB_LABELS: Record<BprsPanelTab, { fluktuatif: string; fix_income: string }> = {
+  identitas: { fluktuatif: "Identitas", fix_income: "Identitas" },
+  usaha: { fluktuatif: "Tempat tinggal & usaha", fix_income: "Pekerjaan & gaji" },
+  keuangan: { fluktuatif: "Rincian keuangan", fix_income: "Usaha sampingan" },
+  bank: { fluktuatif: "Bank & pembiayaan", fix_income: "Bank & pembiayaan" },
+  rekening: { fluktuatif: "Rekening koran & aset", fix_income: "Rekening koran & aset" },
+  agunan: { fluktuatif: "Agunan & mitigasi", fix_income: "Agunan & mitigasi" },
+  narasi: { fluktuatif: "Narasi", fix_income: "Narasi" },
+  legalitas: { fluktuatif: "Perizinan", fix_income: "Perizinan" },
+  pejabat: { fluktuatif: "Pejabat & tanda tangan", fix_income: "Pejabat & tanda tangan" },
+};
 
 function readAsBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -168,6 +222,8 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
   const [statementText, setStatementText] = useState<Array<{ credits: string; debits: string }>>([
     { credits: "", debits: "" }, { credits: "", debits: "" }, { credits: "", debits: "" },
   ]);
+  const [tab, setTab] = useState<string>("identitas");
+  const tabsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!query.data || dirty) return;
@@ -318,10 +374,20 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
     );
   };
 
-  const renderText = ({ key, label, type = "text" }: TextField) => {
+  const renderText = ({ key, label, type = "text", placeholder, hint }: TextField) => {
     const id = `bprs-${key}`;
     const raw = profile[key] as string | number | undefined;
-    if (!editable) return <ReadOnlyField key={key} label={label} value={type === "rupiah" && raw != null && raw !== "" ? rp(Number(raw)) : raw} />;
+    if (!editable) return <ReadOnlyField key={key} label={label} value={type === "rupiah" && raw != null && raw !== "" ? rp(Number(raw)) : raw} multiline={type === "textarea"} />;
+    const hintId = hint ? `${id}-hint` : undefined;
+    if (type === "textarea") {
+      return (
+        <div key={key} className="space-y-1.5">
+          <Label htmlFor={id} className="text-xs">{label}</Label>
+          <Textarea id={id} rows={3} placeholder={placeholder} aria-describedby={hintId} value={raw ?? ""} onChange={e => update(key, (e.target.value || undefined) as never)} />
+          {hint && <p id={hintId} className="text-xs text-muted-foreground">{hint}</p>}
+        </div>
+      );
+    }
     if (type === "rupiah") {
       return (
         <div key={key} className="space-y-1.5">
@@ -338,9 +404,12 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
           type={type}
           inputMode={type === "number" ? "numeric" : undefined}
           onWheel={type === "number" ? blurOnWheel : undefined}
+          placeholder={placeholder}
+          aria-describedby={hintId}
           value={raw ?? ""}
           onChange={e => update(key, (type === "number" ? (e.target.value === "" ? undefined : Number(e.target.value)) : e.target.value || undefined) as never)}
         />
+        {hint && <p id={hintId} className="text-xs text-muted-foreground">{hint}</p>}
       </div>
     );
   };
@@ -352,6 +421,19 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
   const templateChanged = query.data != null && template !== query.data.template;
   const updateStatement = (patch: Partial<NonNullable<BprsProfile["rekeningKoran"]>>) =>
     update("rekeningKoran", { ...profile.rekeningKoran, months: profile.rekeningKoran?.months ?? [], ...patch });
+
+  // Kelengkapan dihitung ulang saat AO mengetik; angka pengajuan berasal dari server (tanpa data pribadi).
+  const appData = query.data?.appData as BprsApplicationData | undefined;
+  const liveProfile = useMemo(() => buildProfileForSave(), [profile, statementText]); // eslint-disable-line react-hooks/exhaustive-deps
+  const completeness = useMemo(
+    () => (appData ? excelCompleteness(template, liveProfile, appData) : query.data?.completeness),
+    [appData, template, liveProfile, query.data?.completeness],
+  );
+  const goToTab = (target: BprsPanelTab) => {
+    setTab(target);
+    tabsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const tabLabel = (target: BprsPanelTab) => TAB_LABELS[target][template];
 
   return (
     <Card>
@@ -449,6 +531,42 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
           <p className="flex items-center gap-2 text-sm text-emerald-800"><CheckCircle2 className="h-4 w-4" aria-hidden="true" />Tidak ada isian yang saling bertentangan.</p>
         )}
 
+        {completeness && (
+          <section aria-labelledby="bprs-kelengkapan" className="space-y-3 rounded-xl border border-border p-4">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h3 id="bprs-kelengkapan" className="flex items-center gap-2 text-sm font-semibold text-navy-900">
+                <ClipboardList className="h-4 w-4" aria-hidden="true" />
+                Kelengkapan isian Excel BPRS: {completeness.filled} dari {completeness.total} kolom terisi
+              </h3>
+              <span className="text-sm font-semibold tabular-nums text-navy-900">{completeness.total > 0 ? Math.round((completeness.filled / completeness.total) * 100) : 0}%</span>
+            </div>
+            <Progress value={completeness.total > 0 ? (completeness.filled / completeness.total) * 100 : 0} aria-label="Persentase kelengkapan isian Excel BPRS" />
+            {completeness.missing.length === 0 ? (
+              <p className="flex items-center gap-2 text-sm text-emerald-800"><CheckCircle2 className="h-4 w-4" aria-hidden="true" />Semua kolom isian format BPRS sudah terisi. File Excel akan selengkap contoh formulir BPRS.</p>
+            ) : (
+              <>
+                <p className="text-xs text-muted-foreground">Kolom berikut masih kosong di file Excel. Pilih nama kolom untuk membuka tab tempat mengisinya.{dirty && " Perubahan yang belum disimpan sudah ikut dihitung."}</p>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {completeness.missing.map(group => (
+                    <div key={group.sheet}>
+                      <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Sheet {group.sheet}</h4>
+                      <ul className="mt-1 space-y-0.5">
+                        {group.items.map(item => (
+                          <li key={item.key}>
+                            <Button variant="link" size="sm" className="h-auto min-h-8 justify-start whitespace-normal px-0 text-left text-navy-900 underline underline-offset-2" onClick={() => goToTab(item.tab)}>
+                              {item.label}<span className="ml-1 text-xs font-normal text-muted-foreground">(tab {tabLabel(item.tab)})</span>
+                            </Button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </section>
+        )}
+
         <div className="grid gap-3 rounded-xl border border-border p-4 sm:grid-cols-[minmax(0,320px)_1fr] sm:items-end">
           {renderSelect({ key: "template", label: "Template Excel BPRS" })}
           <p className="text-xs text-muted-foreground">
@@ -461,19 +579,17 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
           <p className="text-xs text-muted-foreground">
             {isFix
               ? <>Diisi otomatis dari SSCI: identitas, alamat, HP, plafon, tenor, margin, akad ({query.data.derived.akad ?? "-"}), tujuan, angsuran existing, dan gaji (dari pendapatan bulanan jika belum diisi).</>
-              : <>Diisi otomatis dari SSCI: identitas, alamat, HP, plafon, tenor, margin, akad ({query.data.derived.akad ?? "-"}), tujuan, omzet, biaya usaha, angsuran existing, dan lama usaha ({query.data.derived.lamaUsaha}).</>}
+              : <>Diisi otomatis dari SSCI: identitas, alamat, HP, plafon, tenor, margin, akad ({query.data.derived.akad ?? "-"}), tujuan, lama usaha ({query.data.derived.lamaUsaha}), serta omzet, biaya usaha, dan angsuran existing bila rinciannya belum diisi.</>}
             {!editable && " Isian hanya dapat diubah oleh maker atau admin sebelum pengajuan diputuskan."}
           </p>
         )}
 
-        <Tabs defaultValue="identitas">
+        <div ref={tabsRef} className="scroll-mt-24">
+        <Tabs value={tab} onValueChange={setTab}>
           <TabsList className="w-full justify-start" aria-label="Bagian format BPRS">
-            <TabsTrigger value="identitas" className="flex-none">Identitas</TabsTrigger>
-            <TabsTrigger value="usaha" className="flex-none">{isFix ? "Pekerjaan & gaji" : "Tempat tinggal & usaha"}</TabsTrigger>
-            <TabsTrigger value="bank" className="flex-none">Bank & pembiayaan</TabsTrigger>
-            <TabsTrigger value="rekening" className="flex-none">Rekening koran</TabsTrigger>
-            <TabsTrigger value="agunan" className="flex-none">Agunan & mitigasi</TabsTrigger>
-            <TabsTrigger value="narasi" className="flex-none">Narasi</TabsTrigger>
+            {(["identitas", "usaha", "keuangan", "bank", "rekening", "agunan", "narasi", ...(isFix ? [] : ["legalitas" as const]), "pejabat"] as BprsPanelTab[]).map(value => (
+              <TabsTrigger key={value} value={value} className="flex-none">{tabLabel(value)}</TabsTrigger>
+            ))}
             <TabsTrigger value="poin" className="flex-none">Rincian poin</TabsTrigger>
           </TabsList>
 
@@ -491,15 +607,164 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
             ) : (
               <>
                 {USAHA_SELECT.map(renderSelect)}
-                {renderText({ key: "kas", label: "Kas saat ini", type: "rupiah" })}
-                {renderText({ key: "biayaRumahTangga", label: "Biaya rumah tangga per bulan", type: "rupiah" })}
               </>
             )}
+          </TabsContent>
+
+          <TabsContent value="keuangan" className="mt-4 space-y-6">
+            <p className="text-xs text-muted-foreground">
+              {isFix
+                ? "Isi bila pemohon punya usaha sampingan. Laba bersihnya ditulis di bagian Pendapatan Tidak Tetap dan ikut dihitung pada RPC Excel (gaji + laba sampingan)."
+                : "Rincian ini mengisi sheet Aspek Keuangan seperti contoh formulir BPRS. Bila penjualan per produk kosong, omzet SSCI ditulis sebagai satu baris. Bila biaya usaha kosong, biaya SSCI (dikurangi HPP dan upah) ditulis sebagai satu baris."}
+            </p>
+            <SalesEditor rows={profile.penjualan ?? []} editable={editable} onChange={rows => update("penjualan", rows.length ? rows : undefined)} />
+            <div className="space-y-3">
+              <h3 className="text-sm font-semibold">Biaya tenaga kerja</h3>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {renderText({ key: "tenagaKerjaJumlah", label: "Jumlah tenaga kerja yang digaji bulanan", type: "number" })}
+                {renderText({ key: "tenagaKerjaUpah", label: "Upah per bulan per orang", type: "rupiah" })}
+              </div>
+            </div>
+            <RowsEditor
+              title={isFix ? "Biaya usaha sampingan per bulan" : "Biaya usaha per bulan"}
+              idPrefix="biaya-usaha"
+              rows={profile.biayaUsaha ?? []}
+              max={6}
+              editable={editable}
+              onChange={rows => update("biayaUsaha", rows)}
+              blank={{}}
+              fields={[{ key: "nama", label: "Jenis biaya", placeholder: "Contoh: sewa tempat usaha" }, { key: "nominal", label: "Nominal per bulan", rupiah: true }]}
+            />
+            {!isFix && (
+              <>
+                <div className="space-y-3">
+                  <h3 className="text-sm font-semibold">Biaya rumah tangga per bulan</h3>
+                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {([
+                      ["belanja", "Belanja keperluan rumah tangga"],
+                      ["pendidikan", "Pendidikan dan uang saku anak"],
+                      ["listrikAir", "Listrik dan air rumah"],
+                      ["telepon", "HP / telepon rumah"],
+                    ] as const).map(([key, label]) => (
+                      editable ? (
+                        <div key={key} className="space-y-1.5">
+                          <Label htmlFor={`bprs-rt-${key}`} className="text-xs">{label}</Label>
+                          <RupiahInput id={`bprs-rt-${key}`} value={profile.rumahTangga?.[key]} onValueChange={v => update("rumahTangga", { ...profile.rumahTangga, [key]: v })} />
+                        </div>
+                      ) : (
+                        <ReadOnlyField key={key} label={label} value={profile.rumahTangga?.[key] != null ? rp(profile.rumahTangga[key]!) : ""} />
+                      )
+                    ))}
+                  </div>
+                  <RowsEditor
+                    title="Biaya rumah tangga lainnya"
+                    idPrefix="rt-lain"
+                    rows={profile.rumahTangga?.lainnya ?? []}
+                    max={2}
+                    editable={editable}
+                    onChange={rows => update("rumahTangga", { ...profile.rumahTangga, lainnya: rows })}
+                    blank={{}}
+                    fields={[{ key: "nama", label: "Jenis biaya" }, { key: "nominal", label: "Nominal per bulan", rupiah: true }]}
+                  />
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {renderText({ key: "biayaRumahTangga", label: "Total biaya rumah tangga (dipakai bila rincian di atas kosong)", type: "rupiah" })}
+                    {renderText({ key: "kas", label: "Kas saat ini", type: "rupiah" })}
+                  </div>
+                </div>
+                <RowsEditor
+                  title="Pendapatan lain-lain per bulan"
+                  idPrefix="pendapatan-lain"
+                  rows={profile.pendapatanLain ?? []}
+                  max={2}
+                  editable={editable}
+                  onChange={rows => update("pendapatanLain", rows)}
+                  blank={{}}
+                  fields={[{ key: "nama", label: "Jenis pendapatan", placeholder: "Contoh: penghasilan pasangan" }, { key: "nominal", label: "Nominal per bulan", rupiah: true }]}
+                />
+                <RowsEditor
+                  title="Biaya lain-lain per bulan"
+                  idPrefix="biaya-lain"
+                  rows={profile.biayaLain ?? []}
+                  max={1}
+                  editable={editable}
+                  onChange={rows => update("biayaLain", rows)}
+                  blank={{}}
+                  fields={[{ key: "nama", label: "Jenis biaya", placeholder: "Contoh: iuran BPJS" }, { key: "nominal", label: "Nominal per bulan", rupiah: true }]}
+                  note="Template hanya menyediakan satu baris biaya lain-lain. Bila tabel hubungan bank kosong, angsuran existing SSCI ikut ditulis di baris ini."
+                />
+                <RowsEditor
+                  title="Piutang usaha"
+                  idPrefix="piutang"
+                  rows={profile.piutang ?? []}
+                  max={5}
+                  editable={editable}
+                  onChange={rows => update("piutang", rows)}
+                  blank={{ jumlah: 1 }}
+                  fields={[{ key: "nama", label: "Nama" }, { key: "jumlah", label: "Jumlah", number: true }, { key: "harga", label: "Harga / nilai", rupiah: true }, { key: "keterangan", label: "Keterangan (lama piutang)" }]}
+                />
+                {renderText({ key: "keteranganPiutang", label: "Keterangan piutang", type: "textarea", placeholder: "Contoh: tidak ada piutang, seluruh penjualan tunai" })}
+                <RowsEditor
+                  title="Persediaan"
+                  idPrefix="persediaan"
+                  rows={profile.persediaan ?? []}
+                  max={5}
+                  editable={editable}
+                  onChange={rows => update("persediaan", rows)}
+                  blank={{}}
+                  fields={[{ key: "nama", label: "Nama barang" }, { key: "jumlah", label: "Jumlah", number: true }, { key: "satuan", label: "Satuan" }, { key: "harga", label: "Harga per satuan", rupiah: true }]}
+                />
+                {renderText({ key: "keteranganPersediaan", label: "Keterangan persediaan", type: "textarea" })}
+                <RowsEditor
+                  title="Hutang usaha"
+                  idPrefix="hutang-usaha"
+                  rows={profile.hutangUsaha ?? []}
+                  max={3}
+                  editable={editable}
+                  onChange={rows => update("hutangUsaha", rows)}
+                  blank={{ jumlah: 1 }}
+                  fields={[{ key: "nama", label: "Nama pemberi hutang" }, { key: "jumlah", label: "Jumlah", number: true }, { key: "harga", label: "Harga / nilai", rupiah: true }, { key: "keterangan", label: "Keterangan" }]}
+                />
+                {renderText({ key: "keteranganHutang", label: "Keterangan hutang usaha", type: "textarea", placeholder: "Contoh: tidak ada hutang usaha" })}
+              </>
+            )}
+            {appData && <FinancialSummary kind={template} profile={liveProfile} app={appData} />}
           </TabsContent>
 
           <TabsContent value="bank" className="mt-4 grid gap-4 sm:grid-cols-2">
             {BANK_SELECT.filter(f => !(isFix && f.key === "rpcPersen")).map(renderSelect)}
             {renderText({ key: "pembiayaanKe", label: "Permohonan pembiayaan ke-", type: "number" })}
+            <div className="space-y-3 sm:col-span-2">
+              <RowsEditor
+                title="Fasilitas pembiayaan berjalan (iDeb SLIK)"
+                idPrefix="fasilitas"
+                rows={profile.fasilitasBank ?? []}
+                max={Math.min(10, BANK_ROW_CAPACITY[template].nasabah + BANK_ROW_CAPACITY[template].pasangan)}
+                editable={editable}
+                onChange={rows => update("fasilitasBank", rows)}
+                blank={{ pemilik: "nasabah", jenisMargin: "Flat", dilunasi: "Tidak", kol: 1 }}
+                fields={[
+                  { key: "pemilik", label: "Atas nama", options: BPRS_OPTIONS.pemilikFasilitas, optionKey: "pemilikFasilitas" },
+                  { key: "namaBank", label: "Nama bank / lembaga" },
+                  { key: "plafond", label: "Plafond", rupiah: true },
+                  { key: "marginTahunan", label: "Margin per tahun (%)", percent: true, step: 0.25 },
+                  { key: "jenisMargin", label: "Jenis margin", options: BPRS_OPTIONS.jenisMargin },
+                  { key: "tanggalMulai", label: "Tanggal mulai", date: true },
+                  { key: "tanggalAkhir", label: "Tanggal akhir", date: true },
+                  { key: "pangsa", label: "Pangsa / penggunaan" },
+                  { key: "kol", label: "Kolektibilitas", number: true, min: 1, max: 5 },
+                  { key: "dilunasi", label: "Dilunasi dari pembiayaan ini", options: BPRS_OPTIONS.dilunasi },
+                ]}
+                computed={row => {
+                  const value = facilityInstallment(row as BankFacilityRow);
+                  return row.dilunasi === "Ya" ? "Dilunasi, angsuran tidak dihitung" : `Angsuran per bulan (rumus Excel): ${rp(value)}`;
+                }}
+                note={`Template menampung ${BANK_ROW_CAPACITY[template].nasabah} fasilitas calon nasabah dan ${BANK_ROW_CAPACITY[template].pasangan} fasilitas pasangan. Angsuran dihitung seperti di Excel: Flat = plafond / bulan + plafond x margin / 12, Efektif = rumus PMT. Bila tabel kosong, angsuran existing SSCI${query.data ? ` (${rp(appData?.existingDebt ?? 0)})` : ""} dipakai.`}
+              />
+              <div className="grid gap-4 sm:grid-cols-2">
+                {renderText({ key: "keteranganBank", label: "Keterangan hubungan bank calon nasabah", type: "textarea" })}
+                {renderText({ key: "keteranganBankPasangan", label: "Keterangan hubungan bank pasangan", type: "textarea" })}
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="rekening" className="mt-4 space-y-4">
@@ -635,11 +900,39 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
                 </div>
               ))}
             </div>
+            {!isFix && (
+              <RowsEditor
+                title="Saldo bank lain"
+                idPrefix="saldo-bank-lain"
+                rows={profile.saldoBankLain ?? []}
+                max={5}
+                editable={editable}
+                onChange={rows => update("saldoBankLain", rows)}
+                blank={{}}
+                fields={[{ key: "bank", label: "Nama bank" }, { key: "nomorRekening", label: "Nomor rekening" }, { key: "saldo", label: "Saldo", rupiah: true }]}
+              />
+            )}
+            <RowsEditor
+              title="Aset yang dimiliki"
+              idPrefix="aset"
+              rows={profile.aset ?? []}
+              max={isFix ? 3 : 17}
+              editable={editable}
+              onChange={rows => update("aset", rows)}
+              blank={{ jumlah: 1 }}
+              fields={[
+                { key: "jenis", label: "Jenis aset", options: BPRS_OPTIONS.jenisAset },
+                { key: "jumlah", label: "Jumlah", number: true, min: 0 },
+                { key: "tahunPerolehan", label: "Tahun perolehan", number: true, min: 1900, max: 2100 },
+                { key: "nilaiTaksasi", label: "Nilai taksasi bank", rupiah: true },
+              ]}
+              note={isFix ? "Template Fix Income menyediakan 3 baris aset di samping saldo bank." : "Template menyediakan 9 baris tanah dan bangunan, 6 kendaraan, dan 2 peralatan."}
+            />
           </TabsContent>
 
           <TabsContent value="agunan" className="mt-4 space-y-5">
             <div className="grid gap-4 sm:grid-cols-3">{MITIGASI_SELECT.map(renderSelect)}</div>
-            <CollateralRows
+            <RowsEditor
               title="Agunan tanah/bangunan"
               idPrefix="agunan-tanah"
               rows={profile.agunanTanah ?? []}
@@ -659,7 +952,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
                 { key: "lokasi", label: "Lokasi" },
               ]}
             />
-            <CollateralRows
+            <RowsEditor
               title="Agunan kendaraan"
               idPrefix="agunan-kendaraan"
               rows={profile.agunanKendaraan ?? []}
@@ -679,6 +972,12 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
               ]}
             />
             <p className="text-xs text-muted-foreground">Porsi agunan adalah persentase nilai pasar yang diperhitungkan (contoh 80 untuk 80%). Jika rincian agunan dikosongkan, nilai agunan dari data SSCI dicatat di baris pertama tabel tanah/bangunan.</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {renderText({ key: "mitigasiRisikoUsaha", label: isFix ? "Mitigasi risiko kerja" : "Mitigasi risiko usaha", placeholder: "Pick-Up Angsuran/Adanya Agunan", hint: "Bila kosong, teks bawaan template BPRS dipakai." })}
+              {renderText({ key: "mitigasiWanprestasi", label: "Mitigasi risiko nasabah wanprestasi", placeholder: "Remedial (Surat Panggilan/Surat Peringatan/Somasi)/Eksekusi Agunan", hint: "Bila kosong, teks bawaan template BPRS dipakai." })}
+              {renderText({ key: "cakupanPengikatan", label: "Jenis pengikatan (keterangan)", placeholder: "Contoh: (SKMHT, Fidusia)", hint: "Bila kosong, disusun dari kolom pengikatan rincian agunan." })}
+              {renderText({ key: "cakupanAsuransiAgunan", label: "Cakupan asuransi agunan", placeholder: "Contoh: (Kebakaran, TLO)", hint: "Bila kosong: kebakaran untuk tanah/bangunan, TLO untuk kendaraan." })}
+            </div>
           </TabsContent>
 
           <TabsContent value="narasi" className="mt-4 space-y-4">
@@ -702,6 +1001,53 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
                 <ReadOnlyField key={key} label={label} value={profile[key]} multiline />
               )
             ))}
+            {!isFix && (
+              <div className="space-y-4">
+                <h3 className="text-sm font-semibold">Aspek teknis usaha dan pemasaran</h3>
+                <div className="grid gap-4 md:grid-cols-2">{NARASI_TEKNIS.map(renderText)}</div>
+              </div>
+            )}
+          </TabsContent>
+
+          {!isFix && (
+            <TabsContent value="legalitas" className="mt-4 space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {renderText({ key: "bentukUsaha", label: "Bentuk usaha", placeholder: "Perorangan (UMKM)", hint: "Bila kosong, ditulis Perorangan (UMKM)." })}
+              </div>
+              <RowsEditor
+                title="Perizinan yang dimiliki"
+                idPrefix="perizinan"
+                rows={profile.perizinan ?? []}
+                max={6}
+                editable={editable}
+                onChange={rows => update("perizinan", rows)}
+                blank={{}}
+                fields={[
+                  { key: "jenis", label: "Jenis izin", placeholder: "NIB, SKU, Sertifikat Halal, ..." },
+                  { key: "nomor", label: "Nomor" },
+                  { key: "berlakuSampai", label: "Berlaku sampai", placeholder: "Contoh: 12 Mei 2027" },
+                  { key: "atasNama", label: "Atas nama" },
+                ]}
+                note="NIB, Sertifikat Halal, dan SKU masuk ke baris yang sudah disediakan template; izin lain masuk ke tiga baris tambahan."
+              />
+            </TabsContent>
+          )}
+
+          <TabsContent value="pejabat" className="mt-4 space-y-4">
+            <p className="text-xs text-muted-foreground">
+              Nama pejabat dipakai di baris tanda tangan semua sheet ({isFix
+                ? "Aspek Non Keuangan, Aspek Keuangan, Rekening Koran, Usulan, Rekomendasi AO, Keputusan, dan Jadang"
+                : "Informasi Pokok, Aspek Non Keuangan, Aspek Keuangan, Rekening Koran, Usulan, Keputusan, dan Jadang"}). Tanggal verifikasi diisi tanggal analisa.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {renderText({ key: "kotaTandaTangan", label: "Kota tempat tanda tangan", placeholder: profile.kabupaten || "Contoh: Banjaran", hint: "Bila kosong, dipakai Kab./Kota nasabah." })}
+              {renderText({ key: "mengetahuiNama", label: isFix ? "Mengetahui: nama Koord. Marketing" : "Mengetahui: nama", hint: isFix ? undefined : "Bila kosong, dipakai nama Kepala Cabang." })}
+              {renderText({ key: "mengetahuiJabatan", label: "Mengetahui: jabatan", placeholder: isFix ? "Koord. Marketing" : "Kepala Cabang", hint: "Bila kosong, jabatan bawaan template dipakai." })}
+              {renderText({ key: "verifikatorNama", label: isFix ? "Petugas verifikasi 1: nama (Manajer Bisnis)" : "Petugas verifikasi 1: nama (Koordinator)" })}
+              {renderText({ key: "verifikatorJabatan", label: "Petugas verifikasi 1: jabatan", placeholder: isFix ? "Manajer Bisnis" : "Koordinator", hint: "Bila kosong, jabatan bawaan template dipakai." })}
+              {renderText({ key: "kepalaCabangNama", label: "Petugas verifikasi 2: nama Kepala Cabang" })}
+              {isFix && renderText({ key: "kabagMarketingNama", label: "Kabag. Marketing (Rekomendasi dan Keputusan)" })}
+            </div>
           </TabsContent>
 
           <TabsContent value="poin" className="mt-4">
@@ -736,6 +1082,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
             )}
           </TabsContent>
         </Tabs>
+        </div>
 
         {editable && dirty && (
           <div className="sticky bottom-0 z-10 -mx-6 -mb-6 flex flex-wrap items-center justify-between gap-3 rounded-b-xl border-t border-border bg-white/95 px-6 py-3 backdrop-blur supports-[backdrop-filter]:bg-white/80">
@@ -752,17 +1099,39 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
   );
 }
 
-type CollateralField = { key: string; label: string; number?: boolean; rupiah?: boolean; percent?: boolean; options?: readonly string[] };
+type RowField = {
+  key: string;
+  label: string;
+  number?: boolean;
+  rupiah?: boolean;
+  percent?: boolean;
+  date?: boolean;
+  options?: readonly string[];
+  /** Kunci BPRS_OPTIONS untuk teks opsi yang lebih jelas (misalnya "Pasangan"). */
+  optionKey?: BprsOptionKey;
+  placeholder?: string;
+  step?: number;
+  min?: number;
+  max?: number;
+};
 
-function CollateralRows<T extends Record<string, unknown>>({ title, idPrefix, rows, max, editable, onChange, fields, blank }: {
+const formatDate = (iso: string) => {
+  const date = new Date(`${iso}T00:00:00Z`);
+  return Number.isNaN(date.getTime()) ? iso : new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(date);
+};
+
+/** Editor tabel baris (agunan, fasilitas bank, biaya, aset, perizinan) yang mengikuti tabel di Excel BPRS. */
+function RowsEditor<T extends object>({ title, idPrefix, rows, max, editable, onChange, fields, blank, computed, note }: {
   title: string;
   idPrefix: string;
   rows: T[];
   max: number;
   editable: boolean;
   onChange: (rows: T[]) => void;
-  fields: CollateralField[];
+  fields: RowField[];
   blank: Partial<T>;
+  computed?: (row: T) => ReactNode;
+  note?: string;
 }) {
   const set = (index: number, key: string, value: unknown) => {
     const next = rows.map((row, i) => (i === index ? { ...row, [key]: value } : row));
@@ -775,26 +1144,30 @@ function CollateralRows<T extends Record<string, unknown>>({ title, idPrefix, ro
       action: { label: "Urungkan", onClick: () => onChange(previous) },
     });
   };
-  const display = (field: CollateralField, value: unknown) => {
+  const display = (field: RowField, value: unknown) => {
     if (value === undefined || value === null || value === "") return "";
     if (field.rupiah) return rp(Number(value));
-    if (field.percent) return `${Math.round(Number(value) * 100)}%`;
+    if (field.percent) return `${Math.round(Number(value) * 1000) / 10}%`;
+    if (field.date) return formatDate(String(value));
+    if (field.optionKey) return optionLabel(field.optionKey, String(value));
     return String(value);
   };
+  const noteId = note ? `${idPrefix}-note` : undefined;
   return (
-    <div className="space-y-3">
+    <div className="space-y-3" role="group" aria-labelledby={`${idPrefix}-title`} aria-describedby={noteId}>
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h3 className="text-sm font-semibold">{title}</h3>
+        <h3 id={`${idPrefix}-title`} className="text-sm font-semibold">{title}</h3>
         {editable && rows.length < max && (
-          <Button variant="outline" size="sm" onClick={() => onChange([...rows, { ...blank } as T])}><Plus className="mr-1 h-4 w-4" aria-hidden="true" />Tambah</Button>
+          <Button variant="outline" size="sm" onClick={() => onChange([...rows, { ...blank } as T])}><Plus className="mr-1 h-4 w-4" aria-hidden="true" />Tambah<span className="sr-only"> {title}</span></Button>
         )}
       </div>
+      {note && <p id={noteId} className="text-xs text-muted-foreground">{note}</p>}
       {rows.length === 0 && <p className="text-xs text-muted-foreground">Belum ada.</p>}
       {rows.map((row, index) => (
         <div key={index} role="group" aria-label={`${title} baris ${index + 1}`} className="grid gap-3 rounded-xl border border-border p-3 sm:grid-cols-3 lg:grid-cols-5">
           {fields.map(field => {
             const id = `${idPrefix}-${index}-${field.key}`;
-            const value = row[field.key];
+            const value = (row as Record<string, unknown>)[field.key];
             if (!editable) return <ReadOnlyField key={field.key} label={field.label} value={display(field, value)} />;
             return (
               <div key={field.key} className="space-y-1">
@@ -802,7 +1175,7 @@ function CollateralRows<T extends Record<string, unknown>>({ title, idPrefix, ro
                 {field.options ? (
                   <Select value={(value as string | undefined) ?? ""} onValueChange={v => set(index, field.key, v)}>
                     <SelectTrigger id={id} className="w-full"><SelectValue placeholder="Pilih" /></SelectTrigger>
-                    <SelectContent>{field.options.map(o => <SelectItem key={o} value={o}>{o}</SelectItem>)}</SelectContent>
+                    <SelectContent>{field.options.map(o => <SelectItem key={o} value={o}>{field.optionKey ? optionLabel(field.optionKey, o) : o}</SelectItem>)}</SelectContent>
                   </Select>
                 ) : field.rupiah ? (
                   <RupiahInput id={id} value={value as number | undefined} onValueChange={v => set(index, field.key, v)} />
@@ -811,23 +1184,27 @@ function CollateralRows<T extends Record<string, unknown>>({ title, idPrefix, ro
                   <Input
                     id={id}
                     type="number"
-                    inputMode="numeric"
+                    inputMode="decimal"
                     min={0}
                     max={100}
-                    step={5}
+                    step={field.step ?? 5}
                     onWheel={blurOnWheel}
                     value={value === undefined || value === null ? "" : Math.round(Number(value) * 1000) / 10}
                     onChange={e => {
                       if (e.target.value === "") return set(index, field.key, undefined);
                       const pct = Math.min(100, Math.max(0, Number(e.target.value)));
-                      set(index, field.key, Number.isFinite(pct) ? pct / 100 : undefined);
+                      set(index, field.key, Number.isFinite(pct) ? Math.round(pct * 100) / 10000 : undefined);
                     }}
                   />
                 ) : (
                   <Input
                     id={id}
-                    type={field.number ? "number" : "text"}
+                    type={field.date ? "date" : field.number ? "number" : "text"}
                     inputMode={field.number ? "numeric" : undefined}
+                    min={field.min}
+                    max={field.max}
+                    step={field.step}
+                    placeholder={field.placeholder}
                     onWheel={field.number ? blurOnWheel : undefined}
                     value={(value as string | number | undefined) ?? ""}
                     onChange={e => set(index, field.key, field.number ? (e.target.value === "" ? undefined : Number(e.target.value)) : e.target.value || undefined)}
@@ -836,6 +1213,7 @@ function CollateralRows<T extends Record<string, unknown>>({ title, idPrefix, ro
               </div>
             );
           })}
+          {computed && <p className="self-end text-xs font-medium text-navy-900 sm:col-span-2" aria-live="polite">{computed(row)}</p>}
           {editable && (
             <div className="flex items-end">
               <Button
@@ -851,6 +1229,146 @@ function CollateralRows<T extends Record<string, unknown>>({ title, idPrefix, ro
           )}
         </div>
       ))}
+    </div>
+  );
+}
+
+type SalesRow = NonNullable<BprsProfile["penjualan"]>[number];
+
+/** Penjualan per produk: nama, HPP, dan 3 bulan hari kerja x omzet per hari, seperti tabel Penjualan di Excel. */
+function SalesEditor({ rows, editable, onChange }: { rows: SalesRow[]; editable: boolean; onChange: (rows: SalesRow[]) => void }) {
+  const blankMonths = () => [0, 1, 2].map(() => ({ hari: WORKING_DAYS }));
+  const setRow = (index: number, patch: Partial<SalesRow>) => onChange(rows.map((row, i) => (i === index ? { ...row, ...patch } : row)));
+  const setMonth = (index: number, month: number, patch: { hari?: number; omzetHarian?: number }) => {
+    const months = [0, 1, 2].map(i => rows[index]!.bulan[i] ?? {});
+    months[month] = { ...months[month], ...patch };
+    setRow(index, { bulan: months });
+  };
+  const remove = (index: number) => {
+    const previous = rows;
+    onChange(rows.filter((_, i) => i !== index));
+    toast(`Produk ${index + 1} dihapus`, { action: { label: "Urungkan", onClick: () => onChange(previous) } });
+  };
+  return (
+    <div className="space-y-3" role="group" aria-labelledby="penjualan-title">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h3 id="penjualan-title" className="text-sm font-semibold">Penjualan per produk, 3 bulan terakhir</h3>
+        {editable && rows.length < 2 && (
+          <Button variant="outline" size="sm" onClick={() => onChange([...rows, { bulan: blankMonths() }])}><Plus className="mr-1 h-4 w-4" aria-hidden="true" />Tambah produk</Button>
+        )}
+      </div>
+      <p className="text-xs text-muted-foreground">Template menyediakan 2 baris produk. Omzet per bulan = hari x omzet per hari; Excel memakai rata-rata 3 bulan dan HPP per produk.</p>
+      {rows.length === 0 && <p className="text-xs text-muted-foreground">Belum ada. Omzet bulanan SSCI akan ditulis sebagai satu baris ({WORKING_DAYS} hari kerja, HPP 0%).</p>}
+      {rows.map((row, index) => {
+        const monthly = [0, 1, 2].map(i => (row.bulan[i]?.hari ?? 0) * (row.bulan[i]?.omzetHarian ?? 0));
+        const average = monthly.reduce((a, b) => a + b, 0) / 3;
+        const prefix = `produk-${index}`;
+        return (
+          <div key={index} role="group" aria-label={`Produk ${index + 1}`} className="space-y-3 rounded-xl border border-border p-3">
+            <div className="grid gap-3 sm:grid-cols-[1fr_160px_auto]">
+              {editable ? (
+                <>
+                  <div className="space-y-1">
+                    <Label htmlFor={`${prefix}-nama`} className="text-xs">Nama barang / produk</Label>
+                    <Input id={`${prefix}-nama`} value={row.nama ?? ""} onChange={e => setRow(index, { nama: e.target.value || undefined })} />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor={`${prefix}-hpp`} className="text-xs">HPP (% dari omzet)</Label>
+                    <Input
+                      id={`${prefix}-hpp`}
+                      type="number"
+                      inputMode="decimal"
+                      min={0}
+                      max={100}
+                      step={1}
+                      onWheel={blurOnWheel}
+                      value={row.hppPersen == null ? "" : Math.round(row.hppPersen * 1000) / 10}
+                      onChange={e => setRow(index, { hppPersen: e.target.value === "" ? undefined : Math.min(100, Math.max(0, Number(e.target.value))) / 100 })}
+                    />
+                  </div>
+                  <div className="flex items-end">
+                    <Button variant="ghost" size="sm" className="text-destructive hover:bg-destructive/10 hover:text-destructive" aria-label={`Hapus produk ${index + 1}`} onClick={() => remove(index)}>
+                      <Trash2 className="mr-1 h-4 w-4" aria-hidden="true" />Hapus
+                    </Button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <ReadOnlyField label="Nama barang / produk" value={row.nama} />
+                  <ReadOnlyField label="HPP" value={row.hppPersen != null ? `${Math.round(row.hppPersen * 1000) / 10}%` : ""} />
+                </>
+              )}
+            </div>
+            <div className="grid gap-3 md:grid-cols-3">
+              {[0, 1, 2].map(month => (
+                <div key={month} className="space-y-2 rounded-lg bg-ivory p-2">
+                  <p className="text-xs font-semibold">Bulan ke-{month + 1}</p>
+                  {editable ? (
+                    <div className="grid grid-cols-[80px_1fr] gap-2">
+                      <div className="space-y-1">
+                        <Label htmlFor={`${prefix}-${month}-hari`} className="text-xs">Hari</Label>
+                        <Input
+                          id={`${prefix}-${month}-hari`}
+                          type="number"
+                          inputMode="numeric"
+                          min={0}
+                          max={31}
+                          onWheel={blurOnWheel}
+                          value={row.bulan[month]?.hari ?? ""}
+                          onChange={e => setMonth(index, month, { hari: e.target.value === "" ? undefined : Math.min(31, Math.max(0, Math.round(Number(e.target.value)))) })}
+                        />
+                      </div>
+                      <div className="space-y-1">
+                        <Label htmlFor={`${prefix}-${month}-omzet`} className="text-xs">Omzet per hari</Label>
+                        <RupiahInput id={`${prefix}-${month}-omzet`} value={row.bulan[month]?.omzetHarian} onValueChange={v => setMonth(index, month, { omzetHarian: v })} />
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-sm">{row.bulan[month]?.hari ?? 0} hari x {rp(row.bulan[month]?.omzetHarian ?? 0)}</p>
+                  )}
+                  <p className="text-xs text-muted-foreground">Omzet bulan ini {rp(monthly[month]!)}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs font-medium text-navy-900">Rata-rata omzet per bulan {rp(average)}; HPP {rp(average * (row.hppPersen ?? 0))}.</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/** Ringkasan angka yang akan ditulis ke Excel, dihitung dengan fungsi yang sama dengan penulis Excel. */
+function FinancialSummary({ kind, profile, app }: { kind: BprsTemplateKind; profile: BprsProfile; app: BprsApplicationData }) {
+  const lines: Array<[string, number, string?]> = [];
+  if (kind === "fix_income") {
+    const side = fixSideBusiness(profile);
+    if (side.salesTotal === 0 && side.biayaUsaha === 0 && side.tenagaKerja === 0) return null;
+    lines.push(["Rata-rata penjualan", side.salesTotal], ["HPP", -side.hppTotal], ["Biaya tenaga kerja", -side.tenagaKerja], ["Biaya usaha", -side.biayaUsaha], ["Laba bersih usaha sampingan (setelah pajak 5%)", side.netProfit]);
+  } else {
+    const fin = fluktuatifFinancials(profile, app);
+    lines.push(
+      ["Rata-rata penjualan", fin.salesTotal, fin.structuredSales ? undefined : "omzet SSCI"],
+      ["HPP", -fin.hppTotal],
+      ["Biaya tenaga kerja", -fin.tenagaKerja],
+      ["Biaya usaha", -fin.biayaUsaha, fin.biayaUsahaFromSsci ? "dari biaya SSCI" : undefined],
+      ["Biaya rumah tangga", -fin.rumahTangga, fin.rumahTanggaRows ? undefined : "total"],
+      ["Laba bersih (setelah pajak 5%)", fin.netProfit],
+      ["Pendapatan lain - biaya lain", fin.pendapatanLain - fin.biayaLain, !fin.bankRows && app.existingDebt > 0 ? "termasuk angsuran existing SSCI" : undefined],
+      ["Angsuran bank existing (tabel hubungan bank)", -fin.bankInstallment],
+    );
+  }
+  return (
+    <div className="rounded-xl border border-border bg-ivory p-4">
+      <h3 className="text-sm font-semibold">Susunan yang ditulis ke Excel</h3>
+      <dl className="mt-2 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+        {lines.map(([label, value, note]) => (
+          <div key={label} className="flex justify-between gap-3 border-b border-border/60 py-1">
+            <dt className="text-muted-foreground">{label}{note && <span className="text-xs"> ({note})</span>}</dt>
+            <dd className="tabular-nums font-medium text-navy-900">{rp(value)}</dd>
+          </div>
+        ))}
+      </dl>
     </div>
   );
 }
