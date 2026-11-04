@@ -1,6 +1,7 @@
 import { isSameActor } from "@shared/privacy";
 import { buildCustomerExplanation } from "@shared/customerExplanation";
 import type { BprsProfile } from "@shared/bprsTemplate";
+import type { CompanyProfile } from "@shared/financialStatements";
 import { eq, desc, asc, and, gte, lte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, users, organizations, applications, assessments, auditLogs, documentFiles, applicationComments, creditPolicies, notifications, InsertApplication, InsertAssessment, InsertDocumentFile, InsertCreditPolicy, InsertNotification, surveyPhotos, InsertSurveyPhoto, customerRequests } from "../drizzle/schema";
@@ -1581,5 +1582,22 @@ export async function updateCollateralValue(applicationId: number, organizationI
   if (!db) throw new Error("Database not available");
   await db.update(applications)
     .set({ collateralValue: collateralValue.toFixed(2), updatedAt: new Date() })
+    .where(and(eq(applications.id, applicationId), eq(applications.organizationId, organizationId)));
+}
+
+export async function updateCompanyProfile(
+  applicationId: number,
+  organizationId: number,
+  companyProfile: CompanyProfile,
+  monthly?: { monthlyRevenue: number; monthlyExpenses: number },
+) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.update(applications)
+    .set({
+      companyProfile,
+      ...(monthly ? { monthlyRevenue: monthly.monthlyRevenue.toFixed(2), monthlyExpenses: monthly.monthlyExpenses.toFixed(2) } : {}),
+      updatedAt: new Date(),
+    })
     .where(and(eq(applications.id, applicationId), eq(applications.organizationId, organizationId)));
 }

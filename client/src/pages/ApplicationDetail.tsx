@@ -3,6 +3,10 @@ import { ExitGatePanel, OverridePanel, SensitivityPanel } from "@/components/Hum
 import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChecks";
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
 import { BprsWorkbookPanel } from "@/components/BprsWorkbookPanel";
+import { BadanUsahaPanel } from "@/components/BadanUsahaPanel";
+import { isBadanUsaha } from "@shared/bprsPolicy";
+import { BENTUK_LABELS, monthsSince } from "@shared/financialStatements";
+import { maskNik } from "@shared/privacy";
 import { WorkflowStatus, type DetailTab } from "@/components/WorkflowStatus";
 import { DecisionDialog, type CheckerDecision } from "@/components/DecisionDialog";
 import { DocumentPreviewDialog, documentUrl, type PreviewDocument } from "@/components/DocumentPreviewDialog";
@@ -492,6 +496,9 @@ export default function ApplicationDetail() {
   const activeClassification = assessment ? assessment.overrideClassification ?? assessment.classification : "";
   const previewDocument = previewId != null ? (documentsQuery.data ?? []).find(d => d.id === previewId) ?? null : null;
   const tenor = Number(application.financingTenor) || 0;
+  const badan = isBadanUsaha(application.productSegment);
+  const company = application.companyProfile ?? null;
+  const tanggalIndo = (iso: string | undefined) => (iso ? new Date(`${iso}T00:00:00`).toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" }) : "-");
 
   const getClassificationBadge = (classification: string) => {
     const badges = {
@@ -527,7 +534,9 @@ export default function ApplicationDetail() {
                 Tiket: {ticket}
               </span>
             </div>
-            <p className="mt-1 break-words text-muted-foreground">{application.businessName}</p>
+            <p className="mt-1 break-words text-muted-foreground">
+              {badan ? <>Badan hukum{company?.bentuk ? ` (${company.bentuk})` : ""}: {application.businessType}</> : application.businessName}
+            </p>
           </div>
           <div className="flex flex-col gap-2 sm:items-end">
             <div className="flex flex-wrap gap-3 sm:justify-end">
@@ -612,7 +621,7 @@ export default function ApplicationDetail() {
             <TabsTrigger value="ringkasan" className="flex-none sm:flex-1">Ringkasan</TabsTrigger>
             <TabsTrigger value="data" className="flex-none sm:flex-1">Data & Dokumen</TabsTrigger>
             <TabsTrigger value="penilaian" className="flex-none sm:flex-1">Analisis lanjutan</TabsTrigger>
-            <TabsTrigger value="bprs" className="flex-none sm:flex-1">Format Excel BPRS</TabsTrigger>
+            <TabsTrigger value="bprs" className="flex-none sm:flex-1">{badan ? "Analisa Keuangan" : "Format Excel BPRS"}</TabsTrigger>
             <TabsTrigger value="riwayat" className="flex-none sm:flex-1">Riwayat</TabsTrigger>
           </TabsList>
 
@@ -1030,50 +1039,104 @@ export default function ApplicationDetail() {
                )}
              </CardContent>
            </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle as="h2">Informasi Nasabah</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-sm">
-              <div className="flex flex-wrap items-center gap-x-2">
-                <span aria-live="polite"><span className="font-semibold">NIK:</span> {revealedNik ?? application.customerId}</span>
-                {!revealedNik && (
-                  <Button
-                    type="button"
-                    variant="link"
-                    size="sm"
-                    className="h-auto px-0 py-1 text-royal-600"
-                    disabled={revealNikMutation.isPending}
-                    onClick={() => revealNikMutation.mutate({ applicationId })}
-                  >
-                    {revealNikMutation.isPending && <Loader2 className="mr-1 h-3.5 w-3.5 animate-spin" aria-hidden="true" />}
-                    Tampilkan NIK lengkap (tercatat di audit)
-                  </Button>
-                )}
-              </div>
-              <div><span className="font-semibold">Telepon:</span> {application.phone}</div>
-              <div className="break-words"><span className="font-semibold">Email:</span> <span className="break-all">{application.email || "-"}</span></div>
-              <div className="break-words"><span className="font-semibold">Alamat:</span> {application.address}</div>
-            </CardContent>
-          </Card>
+          {badan ? (
+            <>
+              <Card>
+                <CardHeader>
+                  <CardTitle as="h2">Identitas Badan Usaha</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <dl className="grid gap-x-4 gap-y-2 text-sm sm:grid-cols-[minmax(0,160px)_1fr]">
+                    <dt className="font-semibold">Nama</dt><dd className="break-words">{application.customerName}</dd>
+                    <dt className="font-semibold">Bentuk</dt><dd>{company?.bentuk ? BENTUK_LABELS[company.bentuk] : "-"}</dd>
+                    <dt className="font-semibold">NPWP badan</dt><dd className="break-all">{application.customerId}</dd>
+                    <dt className="font-semibold">NIB</dt><dd className="break-all">{company?.nib || "-"}</dd>
+                    <dt className="font-semibold">Akta pendirian</dt><dd>{company?.aktaPendirianNomor ? `No. ${company.aktaPendirianNomor}, ${tanggalIndo(company.aktaPendirianTanggal)}` : "-"}</dd>
+                    <dt className="font-semibold">Akta perubahan</dt><dd>{company?.aktaPerubahanNomor ? `No. ${company.aktaPerubahanNomor}, ${tanggalIndo(company.aktaPerubahanTanggal)}` : "-"}</dd>
+                    <dt className="font-semibold">SK Kemenkumham</dt><dd className="break-words">{company?.skKemenkumham || "-"}</dd>
+                    <dt className="font-semibold">Telepon kantor</dt><dd>{application.phone}</dd>
+                    <dt className="font-semibold">Email</dt><dd className="break-all">{application.email || "-"}</dd>
+                    <dt className="font-semibold">Alamat kantor</dt><dd className="break-words">{application.address}</dd>
+                  </dl>
+                </CardContent>
+              </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle as="h2">Informasi Usaha</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-sm">
-              <div><span className="font-semibold">Jenis:</span> {application.businessType}</div>
-              <div><span className="font-semibold">Lama Usaha:</span> {application.businessAge} bulan</div>
-              <div><span className="font-semibold">Kepatuhan Syariah:</span> {application.businessShariaCompliant}</div>
-            </CardContent>
-          </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle as="h2">Usaha, Pengurus, dan Pemegang Saham</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <dl className="grid gap-x-4 gap-y-2 text-sm sm:grid-cols-[minmax(0,160px)_1fr]">
+                    <dt className="font-semibold">Bidang usaha</dt><dd className="break-words">{application.businessType}</dd>
+                    <dt className="font-semibold">Tanggal berdiri</dt><dd>{company?.tanggalBerdiri ? `${tanggalIndo(company.tanggalBerdiri)} (${monthsSince(company.tanggalBerdiri) ?? application.businessAge} bulan)` : `${application.businessAge} bulan`}</dd>
+                    <dt className="font-semibold">Jumlah karyawan</dt><dd>{company?.jumlahKaryawan ?? "-"}</dd>
+                    <dt className="font-semibold">Kepatuhan syariah</dt><dd>{application.businessShariaCompliant}</dd>
+                    <dt className="font-semibold">Penanggung jawab</dt><dd className="break-words">{company?.direktur?.nama ? `${company.direktur.nama}${company.direktur.jabatan ? `, ${company.direktur.jabatan}` : ""}` : "-"}</dd>
+                    <dt className="font-semibold">NIK penanggung jawab</dt><dd>{company?.direktur?.nik ? maskNik(company.direktur.nik) : "-"}</dd>
+                    <dt className="font-semibold">HP penanggung jawab</dt><dd>{company?.direktur?.hp || "-"}</dd>
+                    <dt className="font-semibold">Pemegang saham</dt>
+                    <dd>
+                      {company?.pemegangSaham?.length ? (
+                        <ul className="space-y-0.5">{company.pemegangSaham.map((row, index) => <li key={index}>{row.nama}{row.porsi !== undefined ? ` (${row.porsi.toLocaleString("id-ID")}%)` : ""}</li>)}</ul>
+                      ) : "-"}
+                    </dd>
+                  </dl>
+                </CardContent>
+              </Card>
+            </>
+          ) : (
+            <>
+            <Card>
+              <CardHeader>
+                <CardTitle as="h2">Informasi Nasabah</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm">
+                <div className="flex flex-wrap items-center gap-x-2">
+                  <span aria-live="polite"><span className="font-semibold">NIK:</span> {revealedNik ?? application.customerId}</span>
+                  {!revealedNik && (
+                    <Button
+                      type="button"
+                      variant="link"
+                      size="sm"
+                      className="h-auto px-0 py-1 text-royal-600"
+                      disabled={revealNikMutation.isPending}
+                      onClick={() => revealNikMutation.mutate({ applicationId })}
+                    >
+                      {revealNikMutation.isPending && <Loader2 className="mr-1 h-3.5 w-3.5 animate-spin" aria-hidden="true" />}
+                      Tampilkan NIK lengkap (tercatat di audit)
+                    </Button>
+                  )}
+                </div>
+                <div><span className="font-semibold">Telepon:</span> {application.phone}</div>
+                <div className="break-words"><span className="font-semibold">Email:</span> <span className="break-all">{application.email || "-"}</span></div>
+                <div className="break-words"><span className="font-semibold">Alamat:</span> {application.address}</div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle as="h2">Informasi Usaha</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2 text-sm">
+                <div><span className="font-semibold">Jenis:</span> {application.businessType}</div>
+                <div><span className="font-semibold">Lama Usaha:</span> {application.businessAge} bulan</div>
+                <div><span className="font-semibold">Kepatuhan Syariah:</span> {application.businessShariaCompliant}</div>
+              </CardContent>
+            </Card>
+            </>
+          )}
 
           <Card>
             <CardHeader>
               <CardTitle as="h2">Data Keuangan</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm">
-              {application.financialDataNote && (
+              {badan && (
+                <div className="rounded-lg bg-ivory p-2 text-xs text-muted-foreground">
+                  Pendapatan dan pengeluaran bulanan diturunkan dari laba rugi periode berjalan (setahun dibagi 12). Rincian di tab Analisa Keuangan.
+                </div>
+              )}
+              {!badan && application.financialDataNote && (
                 <div className="rounded-lg bg-ivory p-2 text-xs text-muted-foreground">
                   <span className="font-semibold text-navy-900">Sumber angka: </span>{application.financialDataNote}
                 </div>
@@ -1141,11 +1204,15 @@ export default function ApplicationDetail() {
 
           <TabsContent value="bprs" forceMount className="data-[state=inactive]:hidden">
         <div className="mb-6">
-          <BprsWorkbookPanel
-            applicationId={application.id}
-            canEdit={user?.role === "maker" || user?.role === "admin"}
-            ssciScore={assessment ? { totalScore: Number(assessment.totalScore), classification: activeClassification } : null}
-          />
+          {badan ? (
+            <BadanUsahaPanel applicationId={application.id} canEdit={user?.role === "maker" || user?.role === "admin"} />
+          ) : (
+            <BprsWorkbookPanel
+              applicationId={application.id}
+              canEdit={user?.role === "maker" || user?.role === "admin"}
+              ssciScore={assessment ? { totalScore: Number(assessment.totalScore), classification: activeClassification } : null}
+            />
+          )}
         </div>
           </TabsContent>
 

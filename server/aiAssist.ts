@@ -3,6 +3,8 @@ import { join } from "node:path";
 import { z } from "zod";
 import { ENV } from "./_core/env";
 import { MAX_STATEMENT_ROWS, type BprsProfile, type BprsScoreResult } from "@shared/bprsTemplate";
+import { isBadanUsaha } from "@shared/bprsPolicy";
+import { benchmarkText, computeRatios, financialChecks, isPeriodEmpty, isValidNpwp, type CompanyProfile } from "@shared/financialStatements";
 
 export const OPENROUTER_ASSIST_MODEL = "openai/gpt-6-luna";
 const TIMEOUT_MS = 30_000;
@@ -232,6 +234,10 @@ export type ApplicationSnapshot = {
   businessShariaCompliant: string;
   shariaComplianceNotes?: string | null;
   legalDocuments: Array<{ type: string; status: string }>;
+  /** Segmen produk; "non_perorangan" berarti badan hukum (PT/CV/Koperasi). */
+  productSegment?: string | null;
+  /** Identitas badan hukum dan laporan keuangan (hanya segmen badan hukum). */
+  companyProfile?: CompanyProfile | null;
 };
 
 function describeApplication(app: ApplicationSnapshot): string {
@@ -253,7 +259,22 @@ function describeApplication(app: ApplicationSnapshot): string {
     `Kepatuhan syariah usaha (isian analis): ${app.businessShariaCompliant}`,
     app.shariaComplianceNotes ? `Catatan syariah: ${app.shariaComplianceNotes}` : "",
     `Dokumen legal: ${app.legalDocuments.map(d => `${d.type} (${d.status})`).join(", ") || "-"}`,
+    ...describeCompany(app),
   ].filter(Boolean).join("\n");
+}
+
+/** Ringkasan badan hukum tanpa data pribadi pengurus: bentuk usaha dan rasio periode berjalan. */
+function describeCompany(app: ApplicationSnapshot): string[] {
+  if (!isBadanUsaha(app.productSegment)) return [];
+  const lines = [`Nasabah: badan hukum${app.companyProfile?.bentuk ? ` (${app.companyProfile.bentuk})` : ""}`];
+  const fs = app.companyProfile?.financials;
+  if (fs && !isPeriodEmpty(fs.current)) {
+    const ratios = computeRatios(fs.current)
+      .filter(r => r.value !== null)
+      .map(r => `${r.label} ${r.percent ? `${r.value!.toFixed(1)}%` : `${r.value!.toFixed(2)}x`}${r.benchmark ? ` (benchmark ${benchmarkText(r)})` : ""}`);
+    lines.push(`Rasio keuangan ${fs.current.label ?? "periode berjalan"}: ${ratios.join("; ")}`);
+  }
+  return lines;
 }
 
 // ---------------------------------------------------------------------------
@@ -267,7 +288,16 @@ export function ruleConsistencyIssues(app: ApplicationSnapshot): ConsistencyIssu
   const issues: ConsistencyIssue[] = [];
   const add = (severity: ConsistencyIssue["severity"], field: string, message: string) =>
     issues.push({ severity, field, message, source: "aturan" });
-  if (!/^\d{16}$/.test(app.customerId.trim())) {
+  const badan = isBadanUsaha(app.productSegment);
+  if (badan) {
+    if (!isValidNpwp(app.customerId)) add("sedang", "NPWP", "NPWP badan usaha tidak terdiri dari 15 atau 16 digit angka.");
+    const nib = app.companyProfile?.nib?.trim();
+    if (!nib) add("sedang", "NIB", "NIB badan usaha belum diisi.");
+    else if (!/^\d{13}$/.test(nib)) add("sedang", "NIB", "NIB tidak terdiri dari 13 digit angka.");
+    const nikDirektur = app.companyProfile?.direktur?.nik?.trim();
+    if (nikDirektur && !/^\d{16}$/.test(nikDirektur)) add("sedang", "NIK direktur", "NIK direktur/pengurus tidak terdiri dari 16 digit angka.");
+    for (const check of financialChecks(app.companyProfile?.financials)) add(check.severity, check.field, check.message);
+  } else if (!/^\d{16}$/.test(app.customerId.trim())) {
     add("sedang", "NIK", "NIK tidak terdiri dari 16 digit angka.");
   }
   if (app.monthlyRevenue <= 0) add("tinggi", "Pendapatan", "Pendapatan bulanan kosong atau nol.");

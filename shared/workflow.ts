@@ -34,6 +34,12 @@ export type CompletenessInput = {
   openCustomerRequests: number;
   blockingDataIssues: number;
   bprsMissingCriteria: string[];
+  /**
+   * Segmen badan hukum: kelengkapan format BPRS diganti laporan keuangan
+   * (neraca dan laba rugi dua periode) yang wajib ada sebelum penilaian.
+   */
+  badanUsaha?: boolean;
+  financialStatementsMissing?: string[];
 };
 
 export type Completeness = {
@@ -67,14 +73,23 @@ export function computeCompleteness(input: CompletenessInput): Completeness {
       tab: "ringkasan",
       beforeAssessment: false,
     },
-    {
-      key: "format_bprs",
-      label: "Isian format Excel BPRS",
-      done: input.bprsMissingCriteria.length === 0,
-      hint: input.bprsMissingCriteria.length ? `${input.bprsMissingCriteria.length} kriteria belum diisi` : undefined,
-      tab: "bprs",
-      beforeAssessment: false,
-    },
+    input.badanUsaha
+      ? {
+          key: "laporan_keuangan",
+          label: "Neraca & laba rugi badan usaha (Analisa Keuangan)",
+          done: (input.financialStatementsMissing ?? []).length === 0,
+          hint: input.financialStatementsMissing?.length ? `Belum lengkap: ${input.financialStatementsMissing.join(", ")}` : undefined,
+          tab: "bprs",
+          beforeAssessment: true,
+        }
+      : {
+          key: "format_bprs",
+          label: "Isian format Excel BPRS",
+          done: input.bprsMissingCriteria.length === 0,
+          hint: input.bprsMissingCriteria.length ? `${input.bprsMissingCriteria.length} kriteria belum diisi` : undefined,
+          tab: "bprs",
+          beforeAssessment: false,
+        },
   ];
   if (required.minSurveyPhotos > 0) {
     items.push({
@@ -151,10 +166,13 @@ export function nextAction(params: {
   }
   if (stage === "lengkapi") {
     const first = completeness.missing.find(i => i.beforeAssessment) ?? completeness.missing[0];
+    const financial = first?.key === "laporan_keuangan";
     return {
-      title: isMaker ? "Lengkapi dokumen wajib" : "Menunggu maker melengkapi dokumen",
+      title: financial
+        ? isMaker ? "Lengkapi laporan keuangan badan usaha" : "Menunggu maker melengkapi laporan keuangan"
+        : isMaker ? "Lengkapi dokumen wajib" : "Menunggu maker melengkapi dokumen",
       detail: first?.hint ?? first?.label ?? "Unggah dokumen wajib sebelum penilaian.",
-      tab: "data",
+      tab: financial ? "bprs" : "data",
     };
   }
   if (stage === "nilai") {

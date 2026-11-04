@@ -1,5 +1,6 @@
 import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, decimal, json } from "drizzle-orm/mysql-core";
 import type { BprsProfile } from "../shared/bprsTemplate";
+import type { CompanyProfile } from "../shared/financialStatements";
 
 export const organizations = mysqlTable("organizations", {
   id: int("id").autoincrement().primaryKey(),
@@ -111,6 +112,8 @@ export const applications = mysqlTable("applications", {
   financialDataNote: text("financialDataNote"),
   // Isian tambahan format Excel skoring BPRS (Fluktuatif UMKM), lihat shared/bprsTemplate.ts
   bprsProfile: json("bprsProfile").$type<BprsProfile>(),
+  // Identitas badan hukum dan laporan keuangan dua periode (segmen non_perorangan), lihat shared/financialStatements.ts
+  companyProfile: json("companyProfile").$type<CompanyProfile>(),
 
   // Murabahah Akad Checklist (OJK Pedoman Produk Murabahah & DSN-MUI compliance)
   murabahahType: mysqlEnum("murabahahType", ["standard", "ultra_mikro", "personal"]),

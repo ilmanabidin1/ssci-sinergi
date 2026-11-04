@@ -49,6 +49,10 @@ Admin dan checker **wajib** mengaktifkan autentikasi dua faktor (2FA). SuperAdmi
 
 Draft tersimpan otomatis di perangkat dan dapat dipulihkan.
 
+Segmen yang ditawarkan ada tiga: **UMKM** (penghasilan usaha, tidak tetap), **Karyawan swasta** (penghasilan tetap), dan **Badan hukum** (PT, CV, Koperasi, Yayasan, Firma). Sumber penghasilan mengikuti segmen; hanya UMKM yang dapat memilih penghasilan bersama suami-istri. Untuk **badan hukum** formulirnya berbeda:
+1. **Badan usaha**: nama badan usaha, bentuk, NPWP badan (15 atau 16 digit), NIB (13 digit), akta pendirian dan perubahan terakhir, SK Kemenkumham, tanggal berdiri (lama usaha dihitung otomatis), bidang usaha, kontak kantor, penanggung jawab (nama, jabatan, NIK 16 digit, HP), dan pemegang saham utama (opsional). Isian pribadi (KTP, status perkawinan, pasangan, dan sejenisnya) tidak ditanyakan.
+2. **Keuangan & akad**: neraca dan laba rugi dua periode (tahun lalu dan periode berjalan) seperti sheet Neraca dan LR pada Excel Analisa Keuangan. Neraca harus seimbang (total aset = kewajiban + modal). Rasio keuangan tampil langsung dengan benchmark bank. Pendapatan bulanan SSCI = penjualan periode berjalan / 12, pengeluaran bulanan = (HPP + seluruh biaya) / 12; keduanya dihitung otomatis dan tidak diketik.
+
 ### 3.2 Halaman detail pengajuan
 Bagian atas menampilkan **tahap** (Lengkapi, Nilai, Tinjau, Putuskan), **satu aksi berikutnya** sesuai peran, dan **bilah kelengkapan** yang menggabungkan semua kekurangan. Klik kekurangan untuk langsung ke tab terkait. Isi halaman dibagi menjadi tab:
 - **Ringkasan**: permintaan nasabah, syarat jalur, skor SSCI (skor utama), dan Asisten AI.
@@ -76,6 +80,15 @@ Setiap penyimpanan dan pengunduhan tercatat di log audit (`BPRS_PROFILE_UPDATED`
 Ada dua template, dipilih otomatis dari sumber penghasilan pengajuan dan dapat diganti analis:
 - **Skoring Fluktuatif Income UMKM** untuk penghasilan tidak tetap (usaha).
 - **Skoring Fix Income dengan Agunan** untuk penghasilan tetap (karyawan). Tab **Pekerjaan & gaji** berisi status karyawan, slip gaji, rekening gaji, potongan gaji, gaji bulanan, dan data instansi. Jika tenor melewati usia pensiun (55 tahun untuk non PNS), Excel memotong skor menjadi 70%; untuk PNS/TNI/POLRI Excel tidak memotong, tetapi SSCI tetap memberi peringatan.
+
+#### Badan hukum: Excel Analisa Keuangan
+Untuk pengajuan segmen badan hukum, tab ini bernama **Analisa Keuangan** dan menggantikan skoring BPRS (workbook bank hanya berisi rasio, tanpa skor):
+1. Ubah neraca dan laba rugi dua periode bila perlu, lalu **Simpan isian**. Selama pengajuan belum dinilai, pendapatan dan pengeluaran bulanan pengajuan ikut diperbarui.
+2. Tabel **Rasio keuangan** menampilkan current, quick, dan cash ratio, DER, DAR, equity multiplier, NPM, ROA, ROE, dan BOPO beserta benchmark bank (CR ≥ 150%, QR ≥ 100%, cash ratio ≥ 50%, DER < 70%, DAR < 70%, ROA > 1,45%, ROE > 23%, BOPO ≤ 83%).
+3. Bagian **Pertumbuhan** dan **Kebutuhan modal kerja** (siklus kas = hari piutang + hari persediaan - hari hutang) mengikuti sheet Pertumbuhan dan Keb Modal. Proyeksi pertumbuhan penjualan diisi ke sel E33 Keb Modal-B; bila kosong, Excel memakai pertumbuhan historis.
+4. **Unduh Excel Analisa Keuangan** mengisi sel Neraca (E5 sampai J19 dan E28 sampai J42, label periode A2 dan A25), LR (D5 sampai D17 dan D30 sampai D42), serta Keb Modal-B (E33 sebagai pecahan, misalnya 12% ditulis 0,12, dan I14 jumlah hari). Rumus rasio dihitung ulang oleh Excel saat file dibuka. Kelengkapan alur kerja badan hukum mensyaratkan neraca dan laba rugi kedua periode terisi dan seimbang sebelum penilaian.
+
+**Memasang template (untuk admin teknis).** Template belum disertakan; sampai dipasang, tombol unduh menampilkan "Template Analisa Keuangan belum tersedia, hubungi admin". Cara memasang: salin file asli bank `ANALISA_KEUANGAN_ORIGINAL.xlsx` apa adanya (seluruh angka contohnya 0, jadi tidak perlu dibersihkan) ke `templates/bprs/analisa-keuangan.xlsx`, lalu jalankan `npx vitest run server/analisaKeuangan.test.ts`. Uji "template bank" yang sebelumnya dilewati akan berjalan dan memastikan semua sel isian di atas bukan rumus. Bila bank mengubah tata letak sheet, sesuaikan peta sel di `server/analisaKeuanganExcel.ts`. Pengunduhan tercatat di log audit (`ANALISA_KEUANGAN_EXPORTED`), penyimpanan sebagai `COMPANY_PROFILE_UPDATED`.
 
 ## 4. Panduan Checker
 

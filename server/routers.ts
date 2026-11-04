@@ -7,7 +7,7 @@ import * as db from "./db";
 import { calculateRecommendedPlafon, calculateSSCI } from "./scoring";
 import { TRPCError } from "@trpc/server";
 import { generatePdfReport } from "./pdfReport";
-import { evaluateBprsPolicy } from "@shared/bprsPolicy";
+import { evaluateBprsPolicy, isBadanUsaha } from "@shared/bprsPolicy";
 import {
   SSCI_LEGAL_DOCUMENT_STATUSES,
   SSCI_METHODOLOGY_VERSION,
@@ -33,6 +33,8 @@ import { AKAD_TO_BPRS, BPRS_TEMPLATE_LABELS, bprsProfileSchema, checksForTemplat
 import { fillBprsWorkbook, type BprsExportApplication } from "./bprsExcel";
 import { readFileSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
+import { companyProfileSchema, financialStatementsSchema, computeGrowth, computeRatios, computeWorkingCapital, financialChecks, isValidNpwp, missingFinancialItems, monthlyFiguresFromStatements, type CompanyProfile } from "@shared/financialStatements";
+import { AnalisaKeuanganTemplateMissingError, analisaKeuanganFilename, analisaKeuanganTemplateAvailable, ANALISA_KEUANGAN_TEMPLATE_MISSING, fillAnalisaKeuanganWorkbook } from "./analisaKeuanganExcel";
 
 const UPLOAD_DIR = process.env.UPLOAD_DIR || "/data/uploads";
 
@@ -78,6 +80,8 @@ function toSnapshot(application: ApplicationRecord): ApplicationSnapshot {
     businessShariaCompliant: application.businessShariaCompliant,
     shariaComplianceNotes: application.shariaComplianceNotes,
     legalDocuments: Array.isArray(application.legalDocuments) ? application.legalDocuments.map(d => ({ type: d.type, status: d.status })) : [],
+    productSegment: application.productSegment ?? null,
+    companyProfile: application.companyProfile ?? null,
   };
 }
 
@@ -92,7 +96,8 @@ function policyFor(application: ApplicationRecord) {
     marginRate: Number(application.marginRate),
     isRelatedParty: application.isRelatedParty === "yes",
     relatedPartyRelation: application.relatedPartyRelation || undefined,
-    isNonIndividual: application.businessType?.toLowerCase().includes("pt") ||
+    isNonIndividual: isBadanUsaha(application.productSegment) ||
+      application.businessType?.toLowerCase().includes("pt") ||
       application.businessType?.toLowerCase().includes("cv") ||
       application.businessType?.toLowerCase().includes("badan"),
   });
@@ -156,6 +161,50 @@ function toBprsApplication(application: ApplicationRecord): BprsExportApplicatio
 }
 
 const BPRS_LOCKED_STATUSES = new Set(["approved", "rejected", "cancelled"]);
+
+/**
+ * Menyimpan data badan hukum. Selama pengajuan belum dinilai, pendapatan dan
+ * pengeluaran bulanan ikut diturunkan ulang dari laba rugi periode berjalan.
+ */
+async function saveCompanyProfile(application: ApplicationRecord, companyProfile: CompanyProfile, user: { id: number; organizationId: number }) {
+  if (!isBadanUsaha(application.productSegment)) {
+    throw new TRPCError({ code: "BAD_REQUEST", message: "Data badan usaha hanya untuk pengajuan segmen badan hukum" });
+  }
+  if (BPRS_LOCKED_STATUSES.has(application.status)) {
+    throw new TRPCError({ code: "BAD_REQUEST", message: "Pengajuan sudah diputuskan atau dibatalkan, data badan usaha tidak dapat diubah" });
+  }
+  const derived = companyProfile.financials ? monthlyFiguresFromStatements(companyProfile.financials) : null;
+  const updateMonthly = application.status === "pending" && !!derived && derived.monthlyRevenue > 0;
+  await db.updateCompanyProfile(application.id, user.organizationId, companyProfile, updateMonthly ? derived! : undefined);
+  await db.recordAuditEvent({
+    organizationId: user.organizationId,
+    actorUserId: user.id,
+    action: "COMPANY_PROFILE_UPDATED",
+    entityType: "application",
+    entityId: application.id,
+    metadata: { monthlyUpdated: updateMonthly },
+  });
+  return { monthlyUpdated: updateMonthly, monthly: updateMonthly ? derived : null };
+}
+
+function analisaKeuanganView(application: ApplicationRecord) {
+  const profile = application.companyProfile ?? {};
+  const fs = profile.financials ?? null;
+  return {
+    companyProfile: profile,
+    financials: fs,
+    ratios: fs ? { previous: computeRatios(fs.previous), current: computeRatios(fs.current) } : null,
+    growth: fs ? computeGrowth(fs) : null,
+    workingCapital: fs ? computeWorkingCapital(fs) : null,
+    monthly: fs ? monthlyFiguresFromStatements(fs) : null,
+    checks: financialChecks(fs),
+    missing: missingFinancialItems(fs),
+    requestedAmount: Number(application.requestedAmount),
+    editable: !BPRS_LOCKED_STATUSES.has(application.status),
+    templateAvailable: analisaKeuanganTemplateAvailable(),
+    templateMessage: analisaKeuanganTemplateAvailable() ? null : ANALISA_KEUANGAN_TEMPLATE_MISSING,
+  };
+}
 
 export const appRouter = router({
   system: systemRouter,
@@ -673,11 +722,26 @@ export const appRouter = router({
         financialDataSource: z.enum(["laporan_keuangan", "omzet_harian", "mutasi_rekening", "dokumen_ai"]).optional(),
         financialDataNote: z.string().trim().max(1000).optional(),
         bprsProfile: bprsProfileSchema.optional(),
+        companyProfile: companyProfileSchema.optional(),
+      }).superRefine((value, ctx) => {
+        // Badan hukum: identitas utama NPWP badan (bukan NIK) dan data badan usaha wajib ada.
+        if (!isBadanUsaha(value.productSegment)) return;
+        if (!isValidNpwp(value.customerId)) {
+          ctx.addIssue({ code: "custom", path: ["customerId"], message: "NPWP badan harus 15 atau 16 digit angka." });
+        }
+        if (!value.companyProfile) {
+          ctx.addIssue({ code: "custom", path: ["companyProfile"], message: "Data badan usaha wajib diisi untuk segmen badan hukum." });
+        }
       }))
       .mutation(async ({ input, ctx }) => {
         const moneyOrNull = (value: string | null | undefined) => (!value || value === "" ? null : value.toString());
+        const badan = isBadanUsaha(input.productSegment);
+        // Angka bulanan badan hukum selalu diturunkan dari laba rugi periode berjalan.
+        const derived = badan && input.companyProfile?.financials ? monthlyFiguresFromStatements(input.companyProfile.financials) : null;
         const applicationId = await db.createApplication({
           ...input,
+          ...(badan ? { customerId: input.customerId.replace(/\D/g, "") } : { companyProfile: undefined }),
+          ...(derived && derived.monthlyRevenue > 0 ? { monthlyRevenue: derived.monthlyRevenue.toFixed(2), monthlyExpenses: derived.monthlyExpenses.toFixed(2) } : {}),
           marginRate: input.marginRate.toString(),
           murabahahAcquisitionPrice: moneyOrNull(input.murabahahAcquisitionPrice),
           murabahahDirectCost: moneyOrNull(input.murabahahDirectCost),
@@ -712,6 +776,13 @@ export const appRouter = router({
           console.warn("[Notification] Failed to notify admins:", error);
         }
         return { id: applicationId };
+      }),
+
+    updateCompanyProfile: makerProcedure
+      .input(z.object({ applicationId: z.number().int().positive(), companyProfile: companyProfileSchema }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        return saveCompanyProfile(application, input.companyProfile, ctx.user);
       }),
 
     murabahahPreview: protectedProcedure
@@ -1001,6 +1072,7 @@ export const appRouter = router({
           db.getAssessmentByApplicationId(application.id, ctx.user.organizationId),
         ]);
         const profile = application.bprsProfile ?? {};
+        const badan = isBadanUsaha(application.productSegment);
         const track = determineReviewTrack(application);
         const completeness = computeCompleteness({
           status: application.status,
@@ -1010,7 +1082,9 @@ export const appRouter = router({
           surveyPhotoCount: photos.length,
           openCustomerRequests: requests.filter(r => r.status === "open").length,
           blockingDataIssues: blockingIssues(ruleConsistencyIssues(toSnapshot(application))).length,
-          bprsMissingCriteria: scoreForTemplate(templateFor(profile, application.incomeSourceType), profile, toBprsApplication(application)).missing,
+          bprsMissingCriteria: badan ? [] : scoreForTemplate(templateFor(profile, application.incomeSourceType), profile, toBprsApplication(application)).missing,
+          badanUsaha: badan,
+          financialStatementsMissing: badan ? missingFinancialItems(application.companyProfile?.financials) : undefined,
         });
         return { track, completeness };
       }),
@@ -1484,6 +1558,61 @@ export const appRouter = router({
           ssci: assessment ? { totalScore: Number(assessment.totalScore), classification: assessment.classification } : null,
           bprs,
         });
+      }),
+  }),
+
+  analisaKeuangan: router({
+    get: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .query(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        if (!isBadanUsaha(application.productSegment)) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Analisa keuangan hanya untuk pengajuan segmen badan hukum" });
+        }
+        return analisaKeuanganView(application);
+      }),
+
+    save: makerProcedure
+      .input(z.object({ applicationId: z.number().int().positive(), financials: financialStatementsSchema }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const companyProfile: CompanyProfile = { ...(application.companyProfile ?? {}), financials: input.financials };
+        const saved = await saveCompanyProfile(application, companyProfile, ctx.user);
+        application.companyProfile = companyProfile;
+        if (saved.monthly) {
+          application.monthlyRevenue = saved.monthly.monthlyRevenue.toFixed(2);
+          application.monthlyExpenses = saved.monthly.monthlyExpenses.toFixed(2);
+        }
+        return { ...analisaKeuanganView(application), monthlyUpdated: saved.monthlyUpdated };
+      }),
+
+    exportExcel: protectedProcedure
+      .input(z.object({ applicationId: z.number().int().positive() }))
+      .mutation(async ({ input, ctx }) => {
+        const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+        const financials = application.companyProfile?.financials;
+        if (!isBadanUsaha(application.productSegment) || !financials) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Isi dan simpan neraca serta laba rugi terlebih dahulu" });
+        }
+        let result: Awaited<ReturnType<typeof fillAnalisaKeuanganWorkbook>>;
+        try {
+          result = await fillAnalisaKeuanganWorkbook(financials);
+        } catch (error) {
+          if (error instanceof AnalisaKeuanganTemplateMissingError) {
+            throw new TRPCError({ code: "PRECONDITION_FAILED", message: ANALISA_KEUANGAN_TEMPLATE_MISSING });
+          }
+          console.error("[analisaKeuangan] export failed", error);
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "File Excel Analisa Keuangan gagal dibuat" });
+        }
+        if (result.skippedFormula.length) console.warn("[analisaKeuangan] input cells hold formulas, skipped:", result.skippedFormula.join(", "));
+        await db.recordAuditEvent({
+          organizationId: ctx.user.organizationId,
+          actorUserId: ctx.user.id,
+          action: "ANALISA_KEUANGAN_EXPORTED",
+          entityType: "application",
+          entityId: application.id,
+        });
+        return { filename: analisaKeuanganFilename(application.id), base64: result.buffer.toString("base64") };
       }),
   }),
 

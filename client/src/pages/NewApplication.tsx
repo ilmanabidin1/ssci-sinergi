@@ -17,17 +17,34 @@ import { Textarea } from "@/components/ui/textarea";
 import { Popover, PopoverAnchor, PopoverContent } from "@/components/ui/popover";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { trpc } from "@/lib/trpc";
-import { AlertCircle, Check, CheckCircle2, Download, HelpCircle, Loader2 } from "lucide-react";
+import { AlertCircle, Check, CheckCircle2, Download, HelpCircle, Loader2, Plus, Trash2 } from "lucide-react";
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import { useLocation } from "wouter";
 import { toast } from "sonner";
 import { determineReviewTrack, TRACK_REQUIREMENTS } from "@shared/reviewTrack";
 import { BPRS_OPTIONS, BPRS_TEMPLATE_LABELS, type BprsProfile } from "@shared/bprsTemplate";
 import {
-  BPRS_PRODUCT_SEGMENTS,
+  ACTIVE_PRODUCT_SEGMENTS,
   BPRS_SEGMENT_DETAILS,
+  SEGMENT_INCOME_SOURCE,
+  isBadanUsaha,
   type BprsProductSegment,
 } from "@shared/bprsPolicy";
+import {
+  BENTUK_BADAN_USAHA,
+  BENTUK_LABELS,
+  computeRatios,
+  emptyStatements,
+  isPeriodEmpty,
+  isValidNpwp,
+  monthlyFiguresFromStatements,
+  monthsSince,
+  periodTotals,
+  type CompanyProfile,
+  type FinancialStatements,
+} from "@shared/financialStatements";
+import { buildDemoBadanScenario, type DemoBadanScenario } from "@shared/demoBadan";
+import { FinancialStatementsEditor, RatioTable, fsBalanceId, fsFieldId, ratioText, rupiahText } from "@/components/FinancialStatementsEditor";
 
 const DRAFT_KEY = "ssci-new-application-draft-v4";
 const DRAFT_VERSION = 4;
@@ -57,7 +74,8 @@ const HISTORY_STATUS_LABELS: Record<string, { label: string; tone: string }> = {
   cancelled: { label: "Dibatalkan", tone: "bg-slate-100 text-slate-700" },
 };
 type Document = { type: string; status: "pending" | "complete" | "verified" | "missing"; notes: string };
-type Values = Record<string, any> & { legalDocuments: Document[]; productSegment: BprsProductSegment };
+type Shareholder = { nama: string; porsi: string };
+type Values = Record<string, any> & { legalDocuments: Document[]; productSegment: BprsProductSegment; financials: FinancialStatements; companyShareholders: Shareholder[] };
 type SavedDraft = { version: number; values: Values; step: number; savedAt?: number };
 type ExtractKtpResult = { customerName?: string | null; customerId?: string | null; address?: string | null };
 type ExtractKtpMutation = {
@@ -135,12 +153,105 @@ const initial: Values = {
   socialImpact: "",
   governanceQuality: "",
   bprsProfile: {},
+  // Segmen badan hukum (lihat shared/financialStatements.ts)
+  companyBentuk: "",
+  companyNib: "",
+  companyAktaNomor: "",
+  companyAktaTanggal: "",
+  companyAktaPerubahanNomor: "",
+  companyAktaPerubahanTanggal: "",
+  companySkKemenkumham: "",
+  companyTanggalBerdiri: "",
+  companyJumlahKaryawan: "",
+  directorNama: "",
+  directorJabatan: "",
+  directorNik: "",
+  directorHp: "",
+  companyShareholders: [],
+  financials: emptyStatements(),
   legalDocuments: [
     { type: "KTP", status: "pending", notes: "" },
     { type: "NPWP", status: "pending", notes: "" },
     { type: "NIB", status: "pending", notes: "" },
   ],
 };
+
+/** Isian badan hukum yang disimpan di kolom companyProfile. */
+const COMPANY_FIELD_KEYS = ["companyBentuk", "companyNib", "companyAktaNomor", "companyAktaTanggal", "companyAktaPerubahanNomor", "companyAktaPerubahanTanggal", "companySkKemenkumham", "companyTanggalBerdiri", "companyJumlahKaryawan", "directorNama", "directorJabatan", "directorNik", "directorHp", "companyShareholders"];
+/** Pesan error server (path companyProfile.x) ke kolom formulir. */
+const COMPANY_ERROR_KEYS: Record<string, string> = {
+  "companyProfile.bentuk": "companyBentuk",
+  "companyProfile.nib": "companyNib",
+  "companyProfile.aktaPendirianNomor": "companyAktaNomor",
+  "companyProfile.aktaPendirianTanggal": "companyAktaTanggal",
+  "companyProfile.aktaPerubahanNomor": "companyAktaPerubahanNomor",
+  "companyProfile.aktaPerubahanTanggal": "companyAktaPerubahanTanggal",
+  "companyProfile.skKemenkumham": "companySkKemenkumham",
+  "companyProfile.tanggalBerdiri": "companyTanggalBerdiri",
+  "companyProfile.jumlahKaryawan": "companyJumlahKaryawan",
+  "companyProfile.direktur.nama": "directorNama",
+  "companyProfile.direktur.jabatan": "directorJabatan",
+  "companyProfile.direktur.nik": "directorNik",
+  "companyProfile.direktur.hp": "directorHp",
+};
+
+const optionalText = (value: unknown) => {
+  const text = String(value ?? "").trim();
+  return text ? text : undefined;
+};
+
+/** Menyusun companyProfile dari isian formulir badan hukum. */
+function buildCompanyProfile(v: Values): CompanyProfile {
+  const shareholders = (v.companyShareholders ?? [])
+    .filter(s => s.nama.trim())
+    .map(s => ({ nama: s.nama.trim(), ...(s.porsi !== "" && Number.isFinite(Number(s.porsi)) ? { porsi: Number(s.porsi) } : {}) }));
+  const employees = String(v.companyJumlahKaryawan ?? "").trim();
+  return {
+    bentuk: (BENTUK_BADAN_USAHA as readonly string[]).includes(v.companyBentuk) ? v.companyBentuk : undefined,
+    nib: optionalText(v.companyNib),
+    aktaPendirianNomor: optionalText(v.companyAktaNomor),
+    aktaPendirianTanggal: optionalText(v.companyAktaTanggal),
+    aktaPerubahanNomor: optionalText(v.companyAktaPerubahanNomor),
+    aktaPerubahanTanggal: optionalText(v.companyAktaPerubahanTanggal),
+    skKemenkumham: optionalText(v.companySkKemenkumham),
+    tanggalBerdiri: optionalText(v.companyTanggalBerdiri),
+    jumlahKaryawan: employees ? Number(employees) : undefined,
+    direktur: {
+      nama: optionalText(v.directorNama),
+      jabatan: optionalText(v.directorJabatan),
+      nik: optionalText(v.directorNik),
+      hp: optionalText(v.directorHp),
+    },
+    pemegangSaham: shareholders.length ? shareholders : undefined,
+    financials: cleanStatements(v.financials),
+  };
+}
+
+/** Membuang -0 (tanda minus tanpa angka) dan nilai kosong sebelum dikirim. */
+function cleanStatements(fs: FinancialStatements): FinancialStatements {
+  const clean = (record: Record<string, number | undefined> | undefined) =>
+    Object.fromEntries(Object.entries(record ?? {}).filter(([, n]) => n !== undefined && Number.isFinite(n)).map(([k, n]) => [k, Object.is(n, -0) ? 0 : n]));
+  const period = (p: FinancialStatements["previous"] | undefined) => ({ label: optionalText(p?.label), neraca: clean(p?.neraca), labaRugi: clean(p?.labaRugi) });
+  return {
+    previous: period(fs?.previous),
+    current: period(fs?.current),
+    ...(Number.isFinite(fs?.expectedSalesGrowth) ? { expectedSalesGrowth: fs.expectedSalesGrowth } : {}),
+    periodDays: fs?.periodDays ?? 365,
+  };
+}
+
+/** Pendapatan dan pengeluaran bulanan SSCI diturunkan dari laba rugi periode berjalan. */
+function withDerivedMonthly(v: Values, financials: FinancialStatements): Values {
+  const monthly = monthlyFiguresFromStatements(financials);
+  return {
+    ...v,
+    financials,
+    monthlyRevenue: monthly.monthlyRevenue > 0 ? String(monthly.monthlyRevenue) : "",
+    monthlyExpenses: monthly.monthlyRevenue > 0 ? String(monthly.monthlyExpenses) : "",
+    financialDataSource: "laporan_keuangan",
+    financialDataNote: `Diturunkan dari laba rugi ${financials.current?.label?.trim() || "periode berjalan"}: penjualan dan seluruh biaya setahun dibagi 12.`,
+  };
+}
 
 type ErrorsApi = { errors: Record<string, string>; clearError: (name: string) => void };
 const ErrorsContext = createContext<ErrorsApi>({ errors: {}, clearError: () => {} });
@@ -245,6 +356,8 @@ function isUserFilled(key: string, current: Values): boolean {
   const value = current[key];
   if (key === "legalDocuments") return (value as Document[] | undefined)?.some(d => d.status !== "pending" || d.notes.trim()) ?? false;
   if (key === "bprsProfile") return Object.keys(compactProfile(value) ?? {}).length > 0;
+  if (key === "financials") return !isPeriodEmpty((value as FinancialStatements | undefined)?.previous) || !isPeriodEmpty((value as FinancialStatements | undefined)?.current);
+  if (key === "companyShareholders") return ((value as Shareholder[] | undefined) ?? []).some(s => s.nama.trim());
   if (!hasValue(value)) return false;
   return String(value) !== String(initial[key] ?? "");
 }
@@ -278,6 +391,9 @@ export default function NewApplication() {
   const [financialFile, setFinancialFile] = useState<File | null>(null);
   const [financialError, setFinancialError] = useState("");
   const financialInputRef = useRef<HTMLInputElement | null>(null);
+  const badan = isBadanUsaha(values.productSegment);
+  const stepLabels = badan ? ["Badan usaha", ...steps.slice(1)] : steps;
+  const stepDescriptions = badan ? ["Segmen produk, identitas badan usaha, legalitas, dan pengurus", "Neraca, laba rugi, rasio keuangan, kebutuhan pembiayaan, dan akad", ...STEP_DESCRIPTIONS.slice(2)] : STEP_DESCRIPTIONS;
 
   const clearError = (name: string) => setErrors(current => {
     if (!current[name]) return current;
@@ -308,7 +424,7 @@ export default function NewApplication() {
       setLocation(`/applications/${data.id}`);
     },
     onError: error => {
-      const serverErrors = fieldErrors(error);
+      const serverErrors = Object.fromEntries(Object.entries(fieldErrors(error)).map(([key, message]) => [COMPANY_ERROR_KEYS[key] ?? (key.startsWith("companyProfile.financials") ? fsBalanceId("current") : key), message]));
       const keys = Object.keys(serverErrors);
       if (keys.length) {
         setErrors(serverErrors);
@@ -388,7 +504,9 @@ export default function NewApplication() {
     setHistoryVisible(false);
     const ok = await confirm({
       title: "Isi dari riwayat nasabah?",
-      description: `${item.customerName} - ${item.businessName}. Nama, NIK, dan nama usaha akan diisi dari pengajuan sebelumnya.`,
+      description: badan
+        ? `${item.customerName}. Nama badan usaha dan NPWP akan diisi dari pengajuan sebelumnya.`
+        : `${item.customerName} - ${item.businessName}. Nama, NIK, dan nama usaha akan diisi dari pengajuan sebelumnya.`,
       confirmLabel: "Ya, isi data",
     });
     if (!ok) return;
@@ -445,7 +563,10 @@ export default function NewApplication() {
       toast.error("Draft tidak dapat dipulihkan");
       return;
     }
-    setValues({ ...initial, ...saved.values });
+    const restored = { ...initial, ...saved.values } as Values;
+    // Segmen guru/PNS tidak ditawarkan lagi: draft lama dialihkan ke karyawan swasta.
+    if (!(ACTIVE_PRODUCT_SEGMENTS as readonly string[]).includes(restored.productSegment)) restored.productSegment = "karyawan_swasta";
+    setValues(restored);
     setStep(Math.min(saved.step || 0, steps.length - 1));
     setErrors({});
     setErrorSummary("");
@@ -473,11 +594,54 @@ export default function NewApplication() {
   // Satu skenario dipakai bersama oleh tombol contoh di setiap langkah, sehingga
   // identitas, usaha, keuangan, dan akad saling konsisten.
   const scenarioRef = useRef<DemoScenario | null>(null);
+  const badanScenarioRef = useRef<DemoBadanScenario | null>(null);
   const scenarioFor = (current: Values, fresh = false) => {
     if (fresh || !scenarioRef.current) {
       scenarioRef.current = buildDemoScenario({ segment: current.productSegment, incomeSourceType: current.incomeSourceType });
     }
     return scenarioRef.current;
+  };
+  const badanScenarioFor = (fresh = false) => {
+    if (fresh || !badanScenarioRef.current) badanScenarioRef.current = buildDemoBadanScenario();
+    return badanScenarioRef.current;
+  };
+  /** Contoh badan hukum: identitas badan, neraca & laba rugi seimbang, dan akad yang selaras dengan plafon. */
+  const demoBadanSlice = (scenario: DemoBadanScenario, current: Values, part: "nasabah" | "keuangan" | "dokumen"): Partial<Values> => {
+    if (part === "nasabah") {
+      const c = scenario.company;
+      return {
+        ...scenario.customer,
+        ...scenario.business,
+        incomeSourceType: SEGMENT_INCOME_SOURCE.non_perorangan,
+        isRelatedParty: "no",
+        companyBentuk: c.bentuk ?? "",
+        companyNib: c.nib ?? "",
+        companyAktaNomor: c.aktaPendirianNomor ?? "",
+        companyAktaTanggal: c.aktaPendirianTanggal ?? "",
+        companyAktaPerubahanNomor: c.aktaPerubahanNomor ?? "",
+        companyAktaPerubahanTanggal: c.aktaPerubahanTanggal ?? "",
+        companySkKemenkumham: c.skKemenkumham ?? "",
+        companyTanggalBerdiri: c.tanggalBerdiri ?? "",
+        companyJumlahKaryawan: c.jumlahKaryawan !== undefined ? String(c.jumlahKaryawan) : "",
+        directorNama: c.direktur?.nama ?? "",
+        directorJabatan: c.direktur?.jabatan ?? "",
+        directorNik: c.direktur?.nik ?? "",
+        directorHp: c.direktur?.hp ?? "",
+        companyShareholders: (c.pemegangSaham ?? []).map(s => ({ nama: s.nama, porsi: s.porsi !== undefined ? String(s.porsi) : "" })),
+      };
+    }
+    if (part === "keuangan") {
+      const { monthlyRevenue: _r, monthlyExpenses: _e, ...finance } = scenario.finance;
+      return {
+        ...withDerivedMonthly({ ...current, ...finance }, scenario.financials),
+        ...demoAkadFields(scenario as unknown as DemoScenario, current.financingAkad),
+      };
+    }
+    return {
+      ...scenario.legal,
+      ...scenario.esg,
+      legalDocuments: current.legalDocuments.map(doc => ({ ...doc, status: "complete" as const, notes: "" })),
+    };
   };
   const demoSlice = (scenario: DemoScenario, current: Values, part: "nasabah" | "keuangan" | "dokumen"): Partial<Values> => {
     if (part === "nasabah") {
@@ -511,15 +675,19 @@ export default function NewApplication() {
     setErrorSummary("");
     toast.success("Data contoh diisi", { action: { label: "Urungkan", onClick: () => setValues(previous) } });
   };
+  // Badan hukum memakai contoh tersendiri (shared/demoBadan.ts); segmen lain memakai shared/demoData.ts.
+  const sliceFor = (current: Values, part: "nasabah" | "keuangan" | "dokumen", fresh: boolean): Partial<Values> =>
+    isBadanUsaha(current.productSegment)
+      ? demoBadanSlice(badanScenarioFor(fresh), current, part)
+      : demoSlice(scenarioFor(current, fresh), current, part);
   const fillDemo = (target: number) => applyDemo(current => {
-    const scenario = scenarioFor(current, target === 0);
     const part = target === 0 ? "nasabah" : target === 1 ? "keuangan" : "dokumen";
-    return { ...current, ...demoSlice(scenario, current, part) } as Values;
+    return { ...current, ...sliceFor(current, part, target === 0) } as Values;
   });
   const fillAllDemo = () => applyDemo(current => {
-    const scenario = scenarioFor(current, true);
-    const merged = { ...current, ...demoSlice(scenario, current, "nasabah") } as Values;
-    return { ...merged, ...demoSlice(scenario, merged, "keuangan"), ...demoSlice(scenario, merged, "dokumen") } as Values;
+    const merged = { ...current, ...sliceFor(current, "nasabah", true) } as Values;
+    const withFinance = { ...merged, ...sliceFor(merged, "keuangan", false) } as Values;
+    return { ...withFinance, ...sliceFor(withFinance, "dokumen", false) } as Values;
   });
   const selectKtpFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -595,9 +763,16 @@ export default function NewApplication() {
 
   /** Daftar kolom wajib per langkah, mengikuti akad dan status pihak terkait yang dipilih (urutan sesuai tampilan). */
   function requiredFor(i: number, v: Values = values): string[] {
+    const isBadan = isBadanUsaha(v.productSegment);
+    if (i === 0 && isBadan) return [
+      "customerName", "companyBentuk", "customerId", "companyNib", "companyAktaNomor", "companyAktaTanggal", "companyTanggalBerdiri",
+      "businessType", "address", "phone", "directorNama", "directorJabatan", "directorNik", "directorHp",
+      ...(v.isRelatedParty === "yes" ? ["relatedPartyRelation"] : []),
+    ];
     if (i === 0) return ["customerName", "customerId", "phone", ...(v.isRelatedParty === "yes" ? ["relatedPartyRelation"] : []), "address", "businessName", "businessType", "businessAge"];
     if (i === 1) return [
-      "monthlyRevenue", "monthlyExpenses", "existingDebt", "collateralValue", "requestedAmount", "financingTenor", "marginRate", "loanPurpose",
+      // Badan hukum: angka bulanan diturunkan dari laba rugi, diperiksa terpisah.
+      ...(isBadan ? [] : ["monthlyRevenue", "monthlyExpenses"]), "existingDebt", "collateralValue", "requestedAmount", "financingTenor", "marginRate", "loanPurpose",
       ...(v.financingAkad === "qardh" ? ["qardhPurpose"] : []),
       ...(v.financingAkad === "multijasa" ? ["multijasaServiceCategory", "multijasaAkadType", "multijasaServiceProvider", "multijasaSourceObject", "multijasaServiceCost", "multijasaUjrahAmount"] : []),
     ];
@@ -608,11 +783,34 @@ export default function NewApplication() {
     const found: Record<string, string> = {};
     for (const key of requiredFor(i, v)) if (!hasValue(v[key])) found[key] = "Wajib diisi.";
     const filled = (key: string) => !found[key] && hasValue(v[key]);
+    const isBadan = isBadanUsaha(v.productSegment);
+    if (i === 0 && isBadan) {
+      if (filled("customerId") && !isValidNpwp(v.customerId)) found.customerId = "NPWP badan harus 15 atau 16 digit angka.";
+      if (filled("companyNib") && !/^\d{13}$/.test(String(v.companyNib).trim())) found.companyNib = "NIB harus 13 digit angka.";
+      if (filled("directorNik") && !/^\d{16}$/.test(String(v.directorNik).trim())) found.directorNik = "NIK direktur harus 16 digit angka.";
+      if (filled("directorHp") && !/^\+?\d{9,15}$/.test(String(v.directorHp).replace(/[\s-]/g, ""))) found.directorHp = "Nomor HP tidak valid. Contoh: 081234567890.";
+      for (const key of ["companyTanggalBerdiri", "companyAktaTanggal", "companyAktaPerubahanTanggal"]) {
+        if (hasValue(v[key]) && !found[key] && String(v[key]) > new Date().toISOString().slice(0, 10)) found[key] = "Tanggal tidak boleh di masa depan.";
+      }
+      if (hasValue(v.companyJumlahKaryawan) && !(Number.isInteger(Number(v.companyJumlahKaryawan)) && Number(v.companyJumlahKaryawan) >= 0)) found.companyJumlahKaryawan = "Isi jumlah karyawan dengan angka bulat.";
+      const totalShare = (v.companyShareholders ?? []).reduce((sum, row) => sum + (Number(row.porsi) || 0), 0);
+      if (totalShare > 100) found.companyShareholders = `Total porsi saham ${totalShare}%, tidak boleh lebih dari 100%.`;
+    }
     if (i === 0) {
-      if (filled("customerId") && !/^\d{16}$/.test(String(v.customerId).trim())) found.customerId = "NIK harus 16 digit angka.";
+      if (!isBadan && filled("customerId") && !/^\d{16}$/.test(String(v.customerId).trim())) found.customerId = "NIK harus 16 digit angka.";
       if (filled("phone") && !/^\+?\d{9,15}$/.test(String(v.phone).replace(/[\s-]/g, ""))) found.phone = "Nomor telepon tidak valid. Contoh: 081234567890.";
       if (hasValue(v.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v.email).trim())) found.email = "Format email tidak valid. Contoh: nama@contoh.com.";
       if (filled("businessAge") && !(Number.isInteger(Number(v.businessAge)) && Number(v.businessAge) >= 1)) found.businessAge = "Lama usaha minimal 1 bulan.";
+    }
+    if (i === 1 && isBadan) {
+      const fs = v.financials;
+      for (const [period, label] of [["previous", "tahun lalu"], ["current", "periode berjalan"]] as const) {
+        const penjualanId = fsFieldId(period, "labaRugi", "penjualan");
+        if (!(Number(fs?.[period]?.labaRugi?.penjualan) > 0)) found[penjualanId] = `Isi penjualan ${label}.`;
+        const selisih = periodTotals(fs?.[period]).selisih;
+        if (isPeriodEmpty(fs?.[period])) found[fsBalanceId(period)] = `Neraca ${label} belum diisi.`;
+        else if (Math.abs(selisih) > 1_000) found[fsBalanceId(period)] = `Neraca ${label} belum seimbang (selisih ${rupiahText(selisih)}).`;
+      }
     }
     if (i === 1) {
       if (filled("requestedAmount") && !(Number(v.requestedAmount) > 0)) found.requestedAmount = "Jumlah pembiayaan harus lebih dari 0.";
@@ -647,19 +845,23 @@ export default function NewApplication() {
       const found = validateStep(i);
       if (Object.keys(found).length) {
         reportErrors(found);
-        toast.error(`Masih ada isian yang perlu diperbaiki di langkah "${steps[i]}"`);
+        toast.error(`Masih ada isian yang perlu diperbaiki di langkah "${stepLabels[i]}"`);
         goTo(i, false);
         window.setTimeout(() => focusFirstInvalid(Object.keys(found)), 80);
         return;
       }
     }
-    const bprsProfile = compactProfile(values.bprsProfile);
+    // Badan hukum tidak memakai profil perorangan format BPRS.
+    const bprsProfile = badan ? undefined : compactProfile(values.bprsProfile);
+    const segment = values.productSegment;
     createMutation.mutate({
+      productSegment: segment,
+      companyProfile: badan ? buildCompanyProfile(values) : undefined,
       customerName: values.customerName,
-      customerId: values.customerId,
-      businessName: values.businessName,
+      customerId: badan ? String(values.customerId).replace(/\D/g, "") : values.customerId,
+      businessName: badan ? values.customerName : values.businessName,
       businessType: values.businessType,
-      businessAge: parseInt(values.businessAge),
+      businessAge: badan ? (monthsSince(values.companyTanggalBerdiri) ?? 1) : parseInt(values.businessAge),
       address: values.address,
       phone: values.phone,
       email: values.email || undefined,
@@ -680,7 +882,8 @@ export default function NewApplication() {
       bprsProfile,
       isRelatedParty: values.isRelatedParty as "yes" | "no",
       relatedPartyRelation: values.relatedPartyRelation || undefined,
-      incomeSourceType: values.incomeSourceType as "fixed" | "non_fixed" | "joint_income",
+      // Sumber penghasilan mengikuti segmen; hanya UMKM yang dapat memilih penghasilan bersama.
+      incomeSourceType: segment === "umkm" && values.incomeSourceType === "joint_income" ? "joint_income" : SEGMENT_INCOME_SOURCE[segment],
       qardhAdminFee: values.qardhAdminFee ? String(values.qardhAdminFee) : undefined,
       qardhPurpose: values.qardhPurpose || undefined,
       multijasaAkadType: values.multijasaAkadType || undefined,
@@ -738,8 +941,15 @@ export default function NewApplication() {
     const seg = BPRS_SEGMENT_DETAILS[segKey];
     const lost = values.legalDocuments.filter(d => !seg.requiredDocuments.includes(d.type) && (d.status !== "pending" || d.notes.trim()));
     setValues(v => ({
-      ...v,
+      // Angka bulanan badan hukum dihitung dari laba rugi; saat keluar dari badan hukum dikosongkan agar diisi ulang.
+      ...(isBadanUsaha(segKey)
+        ? withDerivedMonthly(v, v.financials ?? emptyStatements())
+        : isBadanUsaha(v.productSegment)
+        ? { ...v, monthlyRevenue: "", monthlyExpenses: "", financialDataSource: undefined, financialDataNote: undefined }
+        : v),
       productSegment: segKey,
+      // Sumber penghasilan ditentukan segmen: karyawan tetap, UMKM dan badan hukum tidak tetap.
+      incomeSourceType: segKey === "umkm" && v.incomeSourceType === "joint_income" ? "joint_income" : SEGMENT_INCOME_SOURCE[segKey],
       // Status dan catatan dokumen yang jenisnya sama tetap dipertahankan.
       legalDocuments: seg.requiredDocuments.map(type => v.legalDocuments.find(d => d.type === type) ?? { type, status: "pending" as const, notes: "" }),
     }));
@@ -950,6 +1160,145 @@ export default function NewApplication() {
       ? multijasaStep
       : murabahahStep}
   </>;
+  /** Nama dan nomor identitas dengan saran riwayat pengajuan nasabah. */
+  const historyCombo = (nameField: ReactNode, idField: ReactNode) => <>
+    <Popover open={historyOpen} onOpenChange={setHistoryVisible}>
+      <PopoverAnchor asChild>
+        <div ref={historyAnchorRef} className="grid gap-4 md:col-span-2 md:grid-cols-2">
+          {nameField}
+          {idField}
+        </div>
+      </PopoverAnchor>
+      <PopoverContent
+        align="start"
+        className="w-(--radix-popover-trigger-width) max-w-[calc(100vw-2rem)] p-0"
+        onOpenAutoFocus={e => e.preventDefault()}
+        onCloseAutoFocus={e => e.preventDefault()}
+        onEscapeKeyDown={() => historyInputRef.current?.focus()}
+        onInteractOutside={e => { if (historyAnchorRef.current?.contains(e.target as Node)) e.preventDefault(); }}
+      >
+        <div className="flex items-center justify-between gap-2 border-b border-border p-2 text-xs font-medium text-muted-foreground"><span>Riwayat pengajuan nasabah</span><span>Panah bawah untuk memilih, Esc untuk menutup</span></div>
+        <ul id="history-list" aria-label="Riwayat pengajuan nasabah" className="max-h-64 overflow-y-auto" onKeyDown={historyListKeyDown}>
+          {historyItems.map(item => {
+            const status = HISTORY_STATUS_LABELS[item.status] ?? HISTORY_STATUS_LABELS.pending!;
+            return <li key={item.customerId + String(item.date)}><button type="button" className="flex w-full items-center gap-3 border-t border-border px-3 py-2 text-left outline-none first:border-t-0 hover:bg-muted focus-visible:bg-muted focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-400" onClick={() => void chooseHistory(item)}><span className="min-w-0 flex-1"><span className="block truncate text-sm font-medium text-navy-900">{item.customerName}</span><span className="block truncate text-xs text-muted-foreground">{item.businessName}</span></span><span className="text-right"><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${status.tone}`}>{status.label}</span>{item.latestAssessmentScore !== null && <span className="mt-0.5 block text-xs text-muted-foreground">Skor: {item.latestAssessmentScore} {item.latestAssessmentClassification ? `(${item.latestAssessmentClassification})` : ""}</span>}</span></button></li>;
+          })}
+        </ul>
+        {historyQuery.isFetching && <div className="border-t border-border p-2 text-center text-xs text-muted-foreground"><Loader2 className="mr-1 inline h-3 w-3 animate-spin" />Mencari...</div>}
+      </PopoverContent>
+    </Popover>
+    <p className="text-xs text-muted-foreground md:col-span-2" aria-live="polite">
+      {debouncedQuery && historyQuery.isFetching ? "Mencari riwayat nasabah..." : debouncedQuery && historyQuery.isSuccess && historyItems.length === 0 ? "Belum ada riwayat pengajuan untuk nasabah ini." : debouncedQuery && historyItems.length > 0 && !historyVisible ? `${historyItems.length} riwayat pengajuan ditemukan.` : ""}
+      {debouncedQuery && historyItems.length > 0 && !historyVisible && <button type="button" className="ml-2 font-semibold text-navy-900 underline underline-offset-4" onClick={() => setHistoryVisible(true)}>Lihat riwayat</button>}
+    </p>
+  </>;
+  const relatedPartyBlock = (
+    <div className="space-y-3 rounded-lg border border-amber-200 bg-amber-50 p-4">
+      <div className="text-sm font-semibold text-amber-950">Status Keterkaitan dengan BPRS (Pihak Terkait)</div>
+      <div className="grid gap-4 md:grid-cols-2">
+        {yesNo("isRelatedParty", "Apakah Nasabah Termasuk Pihak Terkait BPRS?")}
+        {values.isRelatedParty === "yes" && (
+          <Field name="relatedPartyRelation" label="Hubungan / Jabatan Pihak Terkait *" values={values} setValues={setValues} placeholder="Contoh: Direksi / Komisaris / Anak Kandung Pemegang Saham" />
+        )}
+      </div>
+      {values.isRelatedParty === "yes" && (
+        <p className="text-xs text-amber-900">
+          Sesuai KPB BPRS, pembiayaan pihak terkait wajib memperoleh persetujuan Direktur Bisnis dan minimal 1 orang Dewan Komisaris serta diperhitungkan dalam BMPD Pihak Terkait (maksimal 10% modal).
+        </p>
+      )}
+    </div>
+  );
+  const shareholders: Shareholder[] = values.companyShareholders ?? [];
+  const setShareholders = (next: Shareholder[]) => {
+    setValues(v => ({ ...v, companyShareholders: next }));
+    clearError("companyShareholders");
+  };
+  const lamaBerdiri = monthsSince(values.companyTanggalBerdiri);
+  const npwpDigits = String(values.customerId ?? "").length;
+  const badanIdentityStep = <>
+    {section("Badan usaha", <div className="grid gap-4 md:grid-cols-2">
+      {historyCombo(
+        <Field name="customerName" label="Nama Badan Usaha *" values={values} setValues={setValues} autoComplete="off" placeholder="cth: CV Sinar Busana Mandiri" {...historyFieldProps} />,
+        <Field name="customerId" label="NPWP Badan *" values={values} setValues={setValues} inputMode="numeric" maxLength={16} autoComplete="off" placeholder="15 atau 16 digit angka" sanitize={(v: string) => v.replace(/\D/g, "").slice(0, 16)} help={`${npwpDigits}/16 digit (NPWP lama 15 digit juga diterima)`} {...historyFieldProps} />,
+      )}
+      <SelectField name="companyBentuk" label="Bentuk Badan Usaha *" value={values.companyBentuk} onChange={setField("companyBentuk")} placeholder="Pilih bentuk" options={BENTUK_BADAN_USAHA.map(b => [b, BENTUK_LABELS[b]])} />
+      <Field name="companyNib" label="NIB (Nomor Induk Berusaha) *" values={values} setValues={setValues} inputMode="numeric" maxLength={13} autoComplete="off" placeholder="13 digit angka" sanitize={(v: string) => v.replace(/\D/g, "").slice(0, 13)} help={`${String(values.companyNib ?? "").length}/13 digit`} />
+      <Field name="businessType" label="Bidang / Jenis Usaha *" values={values} setValues={setValues} placeholder="cth: Konveksi seragam sekolah" />
+      <Field name="companyTanggalBerdiri" label="Tanggal Berdiri *" values={values} setValues={setValues} type="date" max={new Date().toISOString().slice(0, 10)} help={lamaBerdiri ? `Lama berdiri ${lamaBerdiri} bulan (sekitar ${Math.floor(lamaBerdiri / 12)} tahun), dipakai sebagai lama usaha.` : "Dipakai untuk menghitung lama usaha."} />
+      <Field name="companyJumlahKaryawan" label="Jumlah Karyawan (Opsional)" values={values} setValues={setValues} inputMode="numeric" sanitize={(v: string) => v.replace(/\D/g, "").slice(0, 6)} placeholder="cth: 25" />
+    </div>)}
+    {section("Legalitas", <div className="grid gap-4 md:grid-cols-2">
+      <Field name="companyAktaNomor" label="Nomor Akta Pendirian *" values={values} setValues={setValues} placeholder="cth: 12" />
+      <Field name="companyAktaTanggal" label="Tanggal Akta Pendirian *" values={values} setValues={setValues} type="date" max={new Date().toISOString().slice(0, 10)} />
+      <Field name="companyAktaPerubahanNomor" label="Nomor Akta Perubahan Terakhir (Opsional)" values={values} setValues={setValues} />
+      <Field name="companyAktaPerubahanTanggal" label="Tanggal Akta Perubahan Terakhir (Opsional)" values={values} setValues={setValues} type="date" max={new Date().toISOString().slice(0, 10)} />
+      <div className="md:col-span-2"><Field name="companySkKemenkumham" label="Nomor SK / Pendaftaran Kemenkumham (Opsional)" values={values} setValues={setValues} placeholder="cth: AHU-0012345.AH.01.01.Tahun 2018" /></div>
+    </div>)}
+    {section("Kantor", <>
+      <div className="grid gap-4 md:grid-cols-2">
+        <Field name="phone" label="Telepon Kantor *" values={values} setValues={setValues} type="tel" inputMode="tel" autoComplete="off" maxLength={20} placeholder="022xxxxxxx" />
+        <Field name="email" label="Email Kantor (Opsional)" values={values} setValues={setValues} type="email" inputMode="email" autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder="admin@perusahaan.co.id" />
+      </div>
+      <Field name="address" label="Alamat Kantor *" values={values} setValues={setValues} rows={3} autoComplete="off" />
+      {relatedPartyBlock}
+    </>)}
+    {section("Penanggung jawab (direktur / pengurus)", <div className="grid gap-4 md:grid-cols-2">
+      <Field name="directorNama" label="Nama Direktur / Pengurus *" values={values} setValues={setValues} autoComplete="off" />
+      <Field name="directorJabatan" label="Jabatan *" values={values} setValues={setValues} placeholder="cth: Direktur Utama" />
+      <Field name="directorNik" label="NIK Direktur *" values={values} setValues={setValues} inputMode="numeric" maxLength={16} autoComplete="off" placeholder="16 digit angka" sanitize={(v: string) => v.replace(/\D/g, "").slice(0, 16)} help={`${String(values.directorNik ?? "").length}/16 digit`} />
+      <Field name="directorHp" label="Nomor HP Direktur *" values={values} setValues={setValues} type="tel" inputMode="tel" autoComplete="off" maxLength={20} placeholder="08xxxxxxxxxx" />
+    </div>)}
+    {section("Pemegang saham utama (opsional)", <div className="space-y-3">
+      {shareholders.length === 0 && <p className="text-sm text-muted-foreground">Belum ada pemegang saham dicatat.</p>}
+      {shareholders.map((row, index) => (
+        <div key={index} className="grid items-end gap-3 sm:grid-cols-[minmax(0,1fr)_140px_auto]">
+          <div className="space-y-2">
+            <Label htmlFor={`shareholder-${index}-nama`}>Nama pemegang saham {index + 1}</Label>
+            <Input id={`shareholder-${index}-nama`} value={row.nama} maxLength={255} onChange={e => setShareholders(shareholders.map((r, i) => i === index ? { ...r, nama: e.target.value } : r))} />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor={`shareholder-${index}-porsi`}>Porsi (%)</Label>
+            <Input id={`shareholder-${index}-porsi`} inputMode="decimal" value={row.porsi} placeholder="cth: 60" onChange={e => setShareholders(shareholders.map((r, i) => i === index ? { ...r, porsi: e.target.value.replace(/[^\d.]/g, "").slice(0, 6) } : r))} />
+          </div>
+          <Button type="button" variant="ghost" className="h-9 text-destructive hover:bg-destructive/10 hover:text-destructive" aria-label={`Hapus pemegang saham ${index + 1}`} onClick={() => setShareholders(shareholders.filter((_, i) => i !== index))}><Trash2 className="h-4 w-4" aria-hidden="true" /></Button>
+        </div>
+      ))}
+      <div id="companyShareholders" tabIndex={-1} className="outline-none">
+        {shareholders.length < 5 && <Button type="button" variant="outline" size="sm" onClick={() => setShareholders([...shareholders, { nama: "", porsi: "" }])}><Plus className="mr-2 h-4 w-4" aria-hidden="true" />Tambah pemegang saham</Button>}
+        <FieldHint name="companyShareholders" error={errors.companyShareholders} />
+      </div>
+    </div>)}
+  </>;
+  const setFinancials = (next: FinancialStatements) => setValues(v => withDerivedMonthly(v, next));
+  const currentTotals = periodTotals(values.financials?.current);
+  const currentRatios = computeRatios(values.financials?.current);
+  const keyRatios = currentRatios.filter(r => ["currentRatio", "der", "roa", "bopo"].includes(r.key));
+  const badanFinanceBlock = <>
+    <Alert className={INFO_PANEL}><HelpCircle className="h-4 w-4" /><AlertTitle>Format Analisa Keuangan BPRS</AlertTitle><AlertDescription className="text-navy-900">Isi neraca dan laba rugi dua periode (tahun lalu dan periode berjalan) seperti sheet Neraca dan LR pada Excel Analisa Keuangan. Rasio keuangan dihitung otomatis dengan benchmark bank, dan dapat dilengkapi lagi di tab Format Excel BPRS setelah pengajuan dikirim.</AlertDescription></Alert>
+    {section("Neraca dan laba rugi", <FinancialStatementsEditor value={values.financials ?? emptyStatements()} onChange={setFinancials} errors={errors} onFieldEdit={clearError} />)}
+    {section("Rasio keuangan", <>
+      <div className="grid gap-2 sm:grid-cols-4" aria-live="polite">
+        {keyRatios.map(r => (
+          <div key={r.key} className={`rounded-lg border p-3 ${r.status === "tidak_memenuhi" ? "border-red-200 bg-red-50" : r.status === "memenuhi" ? "border-emerald-200 bg-emerald-50" : "border-border bg-white"}`}>
+            <div className="text-xs text-muted-foreground">{r.label}</div>
+            <div className="text-lg font-semibold tabular-nums text-navy-900">{ratioText(r)}</div>
+          </div>
+        ))}
+      </div>
+      <details className="rounded-lg border border-border bg-white p-3">
+        <summary className="cursor-pointer text-sm font-medium text-navy-900">Lihat semua rasio dan benchmark bank</summary>
+        <div className="mt-3"><RatioTable value={values.financials ?? emptyStatements()} /></div>
+      </details>
+    </>)}
+    <div role="status" aria-live="polite" className="space-y-2 rounded-lg border border-border bg-muted p-4 text-sm">
+      <div className="font-medium text-navy-900">Angka bulanan untuk penilaian SSCI (dihitung otomatis)</div>
+      <dl className="grid gap-2 sm:grid-cols-2">
+        <div><dt className="text-muted-foreground">Pendapatan bulanan</dt><dd className="font-semibold tabular-nums text-navy-900">{rupiahText(Number(values.monthlyRevenue) || 0)}</dd></div>
+        <div><dt className="text-muted-foreground">Pengeluaran bulanan</dt><dd className="font-semibold tabular-nums text-navy-900">{rupiahText(Number(values.monthlyExpenses) || 0)}</dd></div>
+      </dl>
+      <p className="text-xs text-muted-foreground">Pendapatan = penjualan periode berjalan / 12. Pengeluaran = (HPP + biaya penjualan + operasional + bank + pajak + lainnya) / 12, yaitu {rupiahText(currentTotals.totalBeban)} / 12. Ubah angka laba rugi di atas untuk mengubahnya.</p>
+    </div>
+  </>;
   const segmentDetail = BPRS_SEGMENT_DETAILS[values.productSegment];
   const incomeHelp = values.incomeSourceType === "fixed"
     ? "Wajib slip gaji & rekening koran. Batas angsuran maksimal 40% dari take home pay, diverifikasi melalui slip gaji & mutasi bank."
@@ -967,8 +1316,8 @@ export default function NewApplication() {
           {SHOW_DEMO && <p className="mt-3 text-xs text-muted-foreground">Untuk uji coba: mengisi data contoh acak (fiktif). Isian yang sudah ada hanya ditimpa setelah Anda konfirmasi, dan dapat diurungkan.</p>}
         </div>
       {hasDraft && <div role="region" aria-label="Draft tersimpan" className={`mb-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border p-3 text-sm ${INFO_PANEL}`}><span><strong>Draft tersimpan ditemukan{draftSavedAt ? ` (${draftSavedAt})` : ""}.</strong> Pulihkan untuk melanjutkan, atau buang untuk mulai dari awal. Isian baru belum disimpan otomatis sampai Anda memilih.</span><span className="flex flex-wrap gap-3"><Button type="button" className="h-11" onClick={restore}>Pulihkan draft</Button><Button type="button" variant="ghost" className="h-11 text-destructive hover:bg-destructive/10 hover:text-destructive" onClick={() => void discardDraft()}>Buang draft</Button></span></div>}
-      <nav aria-label="Langkah pengisian" className="mb-8 rounded-2xl border border-border bg-white p-5 shadow-premium"><div className="mb-4 flex flex-wrap justify-between gap-2 text-xs font-bold uppercase tracking-[.16em] text-muted-foreground"><span>Langkah {step + 1} dari {steps.length}</span><span className="text-navy-900">{steps[step]}</span></div><ol className="flex items-center">{steps.map((label, i) => <li key={label} className="flex flex-1 items-center last:flex-none" aria-current={i === step ? "step" : undefined}><button type="button" disabled={i >= step} onClick={() => goTo(i)} title={label} className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold outline-none transition-all focus-visible:ring-[3px] focus-visible:ring-gold-400/60 pointer-coarse:h-11 pointer-coarse:w-11 disabled:cursor-default ${i < step ? "bg-navy-900 text-gold-300 hover:bg-navy-800" : i === step ? "bg-gold-400 text-navy-900 ring-4 ring-gold-400/25" : "border border-border bg-ivory text-muted-foreground"}`}><span aria-hidden="true">{i < step ? <Check className="h-4 w-4" /> : i + 1}</span><span className="sr-only">Langkah {i + 1}: {label}{i < step ? " (selesai, buka untuk mengubah)" : i === step ? " (sedang diisi)" : " (belum)"}</span></button>{i < steps.length - 1 && <span aria-hidden="true" className={`mx-1.5 h-0.5 flex-1 rounded-full ${i < step ? "bg-navy-900" : "bg-border"}`} />}</li>)}</ol></nav>
-        <form onSubmit={submit} noValidate><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle as="h2">{steps[step]}</CardTitle><CardDescription>{STEP_DESCRIPTIONS[step]}</CardDescription></div>{SHOW_DEMO && DEMO_STEPS[step] && <Button type="button" variant="outline" size="sm" onClick={() => void fillDemo(step)}>Isi contoh langkah ini</Button>}</div></CardHeader><CardContent className="space-y-4">
+      <nav aria-label="Langkah pengisian" className="mb-8 rounded-2xl border border-border bg-white p-5 shadow-premium"><div className="mb-4 flex flex-wrap justify-between gap-2 text-xs font-bold uppercase tracking-[.16em] text-muted-foreground"><span>Langkah {step + 1} dari {steps.length}</span><span className="text-navy-900">{stepLabels[step]}</span></div><ol className="flex items-center">{stepLabels.map((label, i) => <li key={label} className="flex flex-1 items-center last:flex-none" aria-current={i === step ? "step" : undefined}><button type="button" disabled={i >= step} onClick={() => goTo(i)} title={label} className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold outline-none transition-all focus-visible:ring-[3px] focus-visible:ring-gold-400/60 pointer-coarse:h-11 pointer-coarse:w-11 disabled:cursor-default ${i < step ? "bg-navy-900 text-gold-300 hover:bg-navy-800" : i === step ? "bg-gold-400 text-navy-900 ring-4 ring-gold-400/25" : "border border-border bg-ivory text-muted-foreground"}`}><span aria-hidden="true">{i < step ? <Check className="h-4 w-4" /> : i + 1}</span><span className="sr-only">Langkah {i + 1}: {label}{i < step ? " (selesai, buka untuk mengubah)" : i === step ? " (sedang diisi)" : " (belum)"}</span></button>{i < steps.length - 1 && <span aria-hidden="true" className={`mx-1.5 h-0.5 flex-1 rounded-full ${i < step ? "bg-navy-900" : "bg-border"}`} />}</li>)}</ol></nav>
+        <form onSubmit={submit} noValidate><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle as="h2">{stepLabels[step]}</CardTitle><CardDescription>{stepDescriptions[step]}</CardDescription></div>{SHOW_DEMO && DEMO_STEPS[step] && <Button type="button" variant="outline" size="sm" onClick={() => void fillDemo(step)}>Isi contoh langkah ini</Button>}</div></CardHeader><CardContent className="space-y-4">
           {errorSummary && <div role="alert" className="flex items-start gap-2 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm font-medium text-destructive"><AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />{errorSummary}</div>}
           {step === 0 && <>
             {section("Segmen produk", <div className="space-y-4">
@@ -976,8 +1325,8 @@ export default function NewApplication() {
                 label="Segmen produk"
                 value={values.productSegment}
                 onChange={selectSegment}
-                className="grid gap-3 sm:grid-cols-2"
-                options={BPRS_PRODUCT_SEGMENTS.map(segKey => {
+                className="grid gap-3 sm:grid-cols-3"
+                options={ACTIVE_PRODUCT_SEGMENTS.map(segKey => {
                   const seg = BPRS_SEGMENT_DETAILS[segKey];
                   return {
                     value: segKey,
@@ -992,54 +1341,18 @@ export default function NewApplication() {
                 <p>{segmentDetail?.collateralNotes}</p>
               </div>
             </div>)}
+            {badan && badanIdentityStep}
+            {!badan && <>
             {section("Identitas nasabah", <>
               <div className="grid gap-4 md:grid-cols-2">
-                <Popover open={historyOpen} onOpenChange={setHistoryVisible}>
-                  <PopoverAnchor asChild>
-                    <div ref={historyAnchorRef} className="grid gap-4 md:col-span-2 md:grid-cols-2">
-                      <Field name="customerName" label="Nama Lengkap *" values={values} setValues={setValues} autoComplete="off" {...historyFieldProps} />
-                      <Field name="customerId" label="NIK *" values={values} setValues={setValues} inputMode="numeric" maxLength={16} pattern="\d{16}" autoComplete="off" placeholder="16 digit angka" sanitize={(v: string) => v.replace(/\D/g, "").slice(0, 16)} help={`${String(values.customerId ?? "").length}/16 digit`} {...historyFieldProps} />
-                    </div>
-                  </PopoverAnchor>
-                  <PopoverContent
-                    align="start"
-                    className="w-(--radix-popover-trigger-width) max-w-[calc(100vw-2rem)] p-0"
-                    onOpenAutoFocus={e => e.preventDefault()}
-                    onCloseAutoFocus={e => e.preventDefault()}
-                    onEscapeKeyDown={() => historyInputRef.current?.focus()}
-                    onInteractOutside={e => { if (historyAnchorRef.current?.contains(e.target as Node)) e.preventDefault(); }}
-                  >
-                    <div className="flex items-center justify-between gap-2 border-b border-border p-2 text-xs font-medium text-muted-foreground"><span>Riwayat pengajuan nasabah</span><span>Panah bawah untuk memilih, Esc untuk menutup</span></div>
-                    <ul id="history-list" aria-label="Riwayat pengajuan nasabah" className="max-h-64 overflow-y-auto" onKeyDown={historyListKeyDown}>
-                      {historyItems.map(item => {
-                        const status = HISTORY_STATUS_LABELS[item.status] ?? HISTORY_STATUS_LABELS.pending!;
-                        return <li key={item.customerId + String(item.date)}><button type="button" className="flex w-full items-center gap-3 border-t border-border px-3 py-2 text-left outline-none first:border-t-0 hover:bg-muted focus-visible:bg-muted focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-400" onClick={() => void chooseHistory(item)}><span className="min-w-0 flex-1"><span className="block truncate text-sm font-medium text-navy-900">{item.customerName}</span><span className="block truncate text-xs text-muted-foreground">{item.businessName}</span></span><span className="text-right"><span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${status.tone}`}>{status.label}</span>{item.latestAssessmentScore !== null && <span className="mt-0.5 block text-xs text-muted-foreground">Skor: {item.latestAssessmentScore} {item.latestAssessmentClassification ? `(${item.latestAssessmentClassification})` : ""}</span>}</span></button></li>;
-                      })}
-                    </ul>
-                    {historyQuery.isFetching && <div className="border-t border-border p-2 text-center text-xs text-muted-foreground"><Loader2 className="mr-1 inline h-3 w-3 animate-spin" />Mencari...</div>}
-                  </PopoverContent>
-                </Popover>
-                <p className="text-xs text-muted-foreground md:col-span-2" aria-live="polite">
-                  {debouncedQuery && historyQuery.isFetching ? "Mencari riwayat nasabah..." : debouncedQuery && historyQuery.isSuccess && historyItems.length === 0 ? "Belum ada riwayat pengajuan untuk nasabah ini." : debouncedQuery && historyItems.length > 0 && !historyVisible ? `${historyItems.length} riwayat pengajuan ditemukan.` : ""}
-                  {debouncedQuery && historyItems.length > 0 && !historyVisible && <button type="button" className="ml-2 font-semibold text-navy-900 underline underline-offset-4" onClick={() => setHistoryVisible(true)}>Lihat riwayat</button>}
-                </p>
+                {historyCombo(
+                  <Field name="customerName" label="Nama Lengkap *" values={values} setValues={setValues} autoComplete="off" {...historyFieldProps} />,
+                  <Field name="customerId" label="NIK *" values={values} setValues={setValues} inputMode="numeric" maxLength={16} pattern="\d{16}" autoComplete="off" placeholder="16 digit angka" sanitize={(v: string) => v.replace(/\D/g, "").slice(0, 16)} help={`${String(values.customerId ?? "").length}/16 digit`} {...historyFieldProps} />,
+                )}
                 <Field name="phone" label="Nomor Telepon *" values={values} setValues={setValues} type="tel" inputMode="tel" autoComplete="off" maxLength={20} placeholder="08xxxxxxxxxx" />
                 <Field name="email" label="Email (Opsional)" values={values} setValues={setValues} type="email" inputMode="email" autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder="nama@contoh.com" />
               </div>
-              <div className="space-y-3 rounded-lg border border-amber-200 bg-amber-50 p-4">
-                <div className="text-sm font-semibold text-amber-950">Status Keterkaitan dengan BPRS (Pihak Terkait)</div>
-                <div className="grid gap-4 md:grid-cols-2">
-                  {yesNo("isRelatedParty", "Apakah Nasabah Termasuk Pihak Terkait BPRS?")}
-                  {values.isRelatedParty === "yes" && (
-                    <Field name="relatedPartyRelation" label="Hubungan / Jabatan Pihak Terkait *" values={values} setValues={setValues} placeholder="Contoh: Direksi / Komisaris / Anak Kandung Pemegang Saham" />
-                  )}
-                </div>
-                {values.isRelatedParty === "yes" && (
-                  <p className="text-xs text-amber-900">
-                    Sesuai KPB BPRS, pembiayaan pihak terkait wajib memperoleh persetujuan Direktur Bisnis dan minimal 1 orang Dewan Komisaris serta diperhitungkan dalam BMPD Pihak Terkait (maksimal 10% modal).
-                  </p>
-                )}
-              </div>
+              {relatedPartyBlock}
               <Field name="address" label="Alamat Lengkap *" values={values} setValues={setValues} rows={3} autoComplete="off" />
               <div className="space-y-3 rounded-lg border border-border bg-ivory p-4">
                 <div><h3 className="font-medium text-navy-900">Isi data dari foto KTP</h3><p id="ktp-help" className="text-sm text-muted-foreground">JPG atau PNG, maksimal 5 MB. File hanya dikirim saat Anda menekan tombol proses dan tidak disimpan dalam draft.</p></div>
@@ -1059,26 +1372,35 @@ export default function NewApplication() {
                 <Field name="businessType" label="Jenis Usaha *" values={values} setValues={setValues} />
                 <Field name="businessAge" label="Lama Usaha (bulan) *" values={values} setValues={setValues} inputMode="numeric" sanitize={(v: string) => v.replace(/\D/g, "").slice(0, 4)} placeholder="cth: 24" />
               </div>
-              <SelectField
-                name="incomeSourceType"
-                label="Sumber Pembayaran Utama (Analisa Kapasitas KPB BPRS) *"
-                value={values.incomeSourceType}
-                placeholder="Pilih sumber pembayaran"
-                onChange={setField("incomeSourceType")}
-                options={[["fixed", "Penghasilan tetap (gaji)"], ["non_fixed", "Penghasilan tidak tetap (usaha)"], ["joint_income", "Penghasilan bersama (suami-istri)"]]}
-                help={incomeHelp}
-              />
+              {values.productSegment === "umkm" ? (
+                <SelectField
+                  name="incomeSourceType"
+                  label="Sumber Pembayaran Utama (Analisa Kapasitas KPB BPRS) *"
+                  value={values.incomeSourceType === "joint_income" ? "joint_income" : "non_fixed"}
+                  onChange={setField("incomeSourceType")}
+                  options={[["non_fixed", "Penghasilan usaha (tidak tetap)"], ["joint_income", "Penghasilan bersama suami-istri (usaha)"]]}
+                  help={incomeHelp}
+                />
+              ) : (
+                <p className={`rounded-lg border p-3 text-sm ${INFO_PANEL}`}><strong>Sumber pembayaran: penghasilan tetap (gaji).</strong> {incomeHelp}</p>
+              )}
             </>)}
             {section("Profil nasabah untuk format BPRS (opsional, dapat dilengkapi nanti)", <ProfileQuickFields values={values} setValues={setValues} />)}
+            </>}
           </>}
           {step === 1 && <>
+            {badan && badanFinanceBlock}
+            {!badan && <>
             <FinanceSourceChooser method={financeMethod} setMethod={setFinanceMethod} />
             {financeMethod === "harian" && <DailySalesCalculator setValues={setValues} defaultOpen />}
             {financeMethod === "dokumen" && <AiDocumentReader values={values} setValues={setValues} />}
             {financeMethod === "csv" && <div className="space-y-3 rounded-lg border border-border bg-ivory p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><h3 className="font-medium text-navy-900">Import data keuangan dari CSV</h3><p id="financial-help" className="text-sm text-muted-foreground">Gunakan 1 sampai 12 baris bulanan dengan kolom month, revenue, expenses, existingInstallment. Maksimal 1 MB.</p></div><Button type="button" variant="ghost" size="sm" onClick={downloadFinancialTemplate}><Download className="mr-2 h-4 w-4" />Unduh template CSV</Button></div><div className="flex flex-wrap items-center gap-3"><Label htmlFor="financial-file" className="sr-only">File CSV data keuangan bulanan</Label><Input ref={financialInputRef} id="financial-file" type="file" accept=".csv,text/csv" onChange={selectFinancialFile} aria-describedby={`financial-help${financialError ? " financial-error" : ""}`} aria-invalid={financialError ? true : undefined} className="max-w-md bg-white" /><Button type="button" variant="outline" onClick={importFinancialFile} disabled={importFinancialMutation.isPending || !financialFile}>{importFinancialMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Import data CSV</Button></div>{financialFile && <p className="text-xs text-muted-foreground">File dipilih: {financialFile.name}</p>}{financialError && <p id="financial-error" role="alert" className="text-sm text-destructive">{financialError}</p>}</div>}
+            </>}
             <div className="grid gap-4 md:grid-cols-2">
-              <CurrencyField name="monthlyRevenue" label="Pendapatan Bulanan *" values={values} setValues={setValues} />
-              <CurrencyField name="monthlyExpenses" label="Pengeluaran Bulanan *" values={values} setValues={setValues} />
+              {!badan && <>
+                <CurrencyField name="monthlyRevenue" label="Pendapatan Bulanan *" values={values} setValues={setValues} />
+                <CurrencyField name="monthlyExpenses" label="Pengeluaran Bulanan *" values={values} setValues={setValues} />
+              </>}
               <CurrencyField name="existingDebt" label="Total Angsuran Existing per Bulan *" values={values} setValues={setValues} help="Isi 0 jika nasabah tidak punya angsuran lain." />
               <CurrencyField name="collateralValue" label="Nilai Agunan *" values={values} setValues={setValues} help="Isi 0 jika tanpa agunan." />
               <CurrencyField name="requestedAmount" label="Jumlah Pembiayaan *" values={values} setValues={setValues} />
@@ -1087,7 +1409,7 @@ export default function NewApplication() {
             </div>
             <Field name="loanPurpose" label="Tujuan Pembiayaan *" values={values} setValues={setValues} rows={3} />
             <ReviewTrackHint requestedAmount={values.requestedAmount} isRelatedParty={values.isRelatedParty} />
-            {values.financialDataNote && <p className="rounded-lg bg-ivory p-3 text-xs text-muted-foreground"><strong className="text-navy-900">Sumber angka keuangan:</strong> {values.financialDataNote}</p>}
+            {!badan && values.financialDataNote && <p className="rounded-lg bg-ivory p-3 text-xs text-muted-foreground"><strong className="text-navy-900">Sumber angka keuangan:</strong> {values.financialDataNote}</p>}
             <div className="space-y-4 border-t border-border pt-4"><h3 className="font-medium text-navy-900">Akad pembiayaan</h3>{akadStep}</div>
           </>}
           {step === 2 && <>
@@ -1126,8 +1448,8 @@ export default function NewApplication() {
 
 /** Kolom opsional per langkah, dipakai untuk memetakan error dari server ke langkah yang tepat. */
 const OPTIONAL_KEYS: Record<number, string[]> = {
-  0: ["email", "relatedPartyRelation", "incomeSourceType", "bprsProfile"],
-  1: ["qardhPurpose", "qardhAdminFee", "mudharabahBankNisbah", "mudharabahCustomerNisbah", "multijasaServiceCategory", "multijasaAkadType", "multijasaServiceProvider", "multijasaSourceObject", "multijasaServiceCost", "multijasaUjrahAmount", "murabahahAcquisitionPrice", "murabahahDirectCost", "murabahahSupplierDiscount", "murabahahDownPaymentAmount"],
+  0: ["email", "relatedPartyRelation", "incomeSourceType", "bprsProfile", "companyProfile", ...COMPANY_FIELD_KEYS],
+  1: ["fs-current-balance", "fs-previous-balance", "monthlyRevenue", "monthlyExpenses", "qardhPurpose", "qardhAdminFee", "mudharabahBankNisbah", "mudharabahCustomerNisbah", "multijasaServiceCategory", "multijasaAkadType", "multijasaServiceProvider", "multijasaSourceObject", "multijasaServiceCost", "multijasaUjrahAmount", "murabahahAcquisitionPrice", "murabahahDirectCost", "murabahahSupplierDiscount", "murabahahDownPaymentAmount"],
   2: ["legalDocuments", "shariaComplianceNotes", "environmentalPractices", "socialImpact"],
 };
 
@@ -1257,15 +1579,37 @@ function akadRows(values: Values): Array<[string, string]> {
 /** Ringkasan sebelum kirim, dengan tautan kembali ke langkah terkait. */
 function ReviewSummary({ values, isFastTrack, onEdit }: { values: Values; isFastTrack: boolean; onEdit: (step: number) => void }) {
   const nik = String(values.customerId ?? "");
+  const masked = (id: string) => (id.length >= 8 ? `${id.slice(0, 4)}${"*".repeat(id.length - 8)}${id.slice(-4)}` : id || "-");
   const track = TRACK_REQUIREMENTS[isFastTrack ? "ringkas" : "lengkap"];
+  const badan = isBadanUsaha(values.productSegment);
+  const fs = values.financials;
+  const curTotals = periodTotals(fs?.current);
+  const ratios = computeRatios(fs?.current);
+  const ratioSummary = ratios.filter(r => ["currentRatio", "der", "roa"].includes(r.key)).map(r => `${r.label.replace(/ \(.*\)$/, "")} ${ratioText(r)}`).join(", ");
+  const lama = monthsSince(values.companyTanggalBerdiri);
   const groups: Array<{ step: number; title: string; rows: Array<[string, string]> }> = [
-    {
+    badan ? {
+      step: 0,
+      title: "Badan usaha",
+      rows: [
+        ["Segmen produk", BPRS_SEGMENT_DETAILS[values.productSegment]?.label ?? "-"],
+        ["Nama badan usaha", `${values.customerName || "-"}${values.companyBentuk ? ` (${values.companyBentuk})` : ""}`],
+        ["NPWP badan", masked(nik)],
+        ["NIB", values.companyNib || "-"],
+        ["Akta pendirian", values.companyAktaNomor ? `No. ${values.companyAktaNomor}, ${values.companyAktaTanggal || "-"}` : "-"],
+        ["Bidang usaha", `${values.businessType || "-"}${lama ? `, berdiri ${lama} bulan` : ""}`],
+        ["Telepon kantor", values.phone || "-"],
+        ["Penanggung jawab", values.directorNama ? `${values.directorNama} (${values.directorJabatan || "-"})` : "-"],
+        ["Pemegang saham", (values.companyShareholders ?? []).filter((r: Shareholder) => r.nama.trim()).map((r: Shareholder) => `${r.nama}${r.porsi ? ` ${r.porsi}%` : ""}`).join(", ") || "-"],
+        ["Pihak terkait", values.isRelatedParty === "yes" ? `Ya (${values.relatedPartyRelation || "-"})` : "Tidak"],
+      ],
+    } : {
       step: 0,
       title: "Nasabah & usaha",
       rows: [
         ["Segmen produk", BPRS_SEGMENT_DETAILS[values.productSegment]?.label ?? "-"],
         ["Nama", values.customerName || "-"],
-        ["NIK", nik.length >= 8 ? `${nik.slice(0, 4)}${"*".repeat(nik.length - 8)}${nik.slice(-4)}` : nik || "-"],
+        ["NIK", masked(nik)],
         ["Telepon", values.phone || "-"],
         ["Pihak terkait", values.isRelatedParty === "yes" ? `Ya (${values.relatedPartyRelation || "-"})` : "Tidak"],
         ["Usaha", `${values.businessName || "-"} (${values.businessType || "-"}), ${values.businessAge || "-"} bulan`],
@@ -1277,7 +1621,13 @@ function ReviewSummary({ values, isFastTrack, onEdit }: { values: Values; isFast
       step: 1,
       title: "Keuangan & akad",
       rows: [
-        ["Pendapatan / pengeluaran per bulan", `${rupiah(values.monthlyRevenue)} / ${rupiah(values.monthlyExpenses)}`],
+        ...(badan ? [
+          ["Penjualan setahun (periode berjalan)", rupiahText(Number(fs?.current?.labaRugi?.penjualan) || 0)],
+          ["Laba bersih periode berjalan", rupiahText(curTotals.labaBersih)],
+          ["Total aset / modal", `${rupiahText(curTotals.totalAset)} / ${rupiahText(curTotals.modal)}`],
+          ["Rasio utama", ratioSummary || "-"],
+        ] as Array<[string, string]> : []),
+        [badan ? "Pendapatan / pengeluaran per bulan (dihitung)" : "Pendapatan / pengeluaran per bulan", `${rupiah(values.monthlyRevenue)} / ${rupiah(values.monthlyExpenses)}`],
         ["Angsuran existing per bulan", rupiah(values.existingDebt)],
         ["Plafon, tenor, margin", `${rupiah(values.requestedAmount)}, ${values.financingTenor || "-"} bulan, ${values.marginRate || "-"}%`],
         ["Agunan", rupiah(values.collateralValue)],
