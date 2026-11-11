@@ -10,6 +10,9 @@ import { useState } from "react";
 import { consumeReturnTo } from "@/hooks/useSessionTimeout";
 import { Link, useLocation } from "wouter";
 
+/** Panel akun demo ikut sakelar VITE_DEMO_MODE yang sama dengan tombol "Isi contoh data". */
+const SHOW_DEMO_ACCOUNTS = import.meta.env.VITE_DEMO_MODE !== "false";
+
 const demoAccounts = [
   { email: "analis@bprs.id", role: "Analis / Account Officer", desc: "Input pengajuan dan hitung kelayakan", tag: "Maker" },
   { email: "komite@bprs.id", role: "Komite Pembiayaan", desc: "Persetujuan dan keputusan komite", tag: "Checker" },
@@ -160,7 +163,7 @@ export default function Login() {
         </Link>
       </p>
 
-      <div className="mt-8 border-t border-border pt-5">
+      {SHOW_DEMO_ACCOUNTS && <div className="mt-8 border-t border-border pt-5">
         <button
           type="button"
           onClick={() => setShowDemo(v => !v)}
@@ -197,7 +200,7 @@ export default function Login() {
             ))}
           </div>
         )}
-      </div>
+      </div>}
     </AuthShell>
   );
 }

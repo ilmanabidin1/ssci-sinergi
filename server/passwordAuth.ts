@@ -19,6 +19,11 @@ export async function verifyPassword(password: string, encodedHash: string) {
   return storedKey.length === derivedKey.length && timingSafeEqual(storedKey, derivedKey);
 }
 
+/** Akun demo (analis, komite, admin) hanya dibuat bila SEED_DEMO_USERS=true. */
+export function shouldSeedDemoUsers(env: NodeJS.ProcessEnv = process.env): boolean {
+  return env.SEED_DEMO_USERS?.trim().toLowerCase() === "true";
+}
+
 export async function ensurePilotAdmin() {
   // 1. Akun bawaan demo pemisahan fungsi (Four-Eyes Principle / KPB BPRS)
   const defaultDemoUsers: Array<{
@@ -51,7 +56,8 @@ export async function ensurePilotAdmin() {
     },
   ];
 
-  for (const demo of defaultDemoUsers) {
+  // Password akun demo tertulis di kode sumber yang publik, jadi hanya dibuat bila sengaja diaktifkan.
+  for (const demo of shouldSeedDemoUsers() ? defaultDemoUsers : []) {
     const existing = await db.getUserByEmail(demo.email);
     if (!existing) {
       await db.createTeamUser({
