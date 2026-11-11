@@ -379,6 +379,19 @@ export default function NewApplication() {
   const [step, setStep] = useState(0);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [errorSummary, setErrorSummary] = useState("");
+  const [errorItems, setErrorItems] = useState<Array<{ key: string; text: string }>>([]);
+  // Daftar isian bermasalah untuk ringkasan error; label diambil dari halaman setelah langkahnya tampil.
+  useEffect(() => {
+    const items = Object.entries(errors)
+      .map(([key, message]) => ({ key, message, element: document.getElementById(key) }))
+      .filter((item): item is { key: string; message: string; element: HTMLElement } => !!item.element)
+      .sort((a, b) => (a.element.compareDocumentPosition(b.element) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1))
+      .map(({ key, message }) => {
+        const label = document.querySelector(`label[for="${CSS.escape(key)}"]`)?.textContent?.replace(/\s*\*\s*$/, "").trim();
+        return { key, text: label ? `${label}: ${message}` : message };
+      });
+    setErrorItems(items);
+  }, [errors, step]);
   const [financeMethod, setFinanceMethod] = useState<FinanceMethod>("manual");
   const isFastTrack = determineReviewTrack({ requestedAmount: values.requestedAmount || 0, isRelatedParty: values.isRelatedParty }) === "ringkas";
   const [hasDraft, setHasDraft] = useState(false);
@@ -420,7 +433,7 @@ export default function NewApplication() {
   const createMutation = trpc.applications.create.useMutation({
     onSuccess: data => {
       try { localStorage.removeItem(DRAFT_KEY); } catch {}
-      toast.success("Aplikasi pembiayaan berhasil dibuat");
+      toast.success("Pengajuan pembiayaan berhasil dibuat");
       setLocation(`/applications/${data.id}`);
     },
     onError: error => {
@@ -435,7 +448,7 @@ export default function NewApplication() {
           window.setTimeout(() => focusFirstInvalid(keys), 80);
         }
       }
-      toast.error(errorMessage(error, "Gagal membuat aplikasi. Coba lagi beberapa saat."));
+      toast.error(errorMessage(error, "Gagal membuat pengajuan. Coba lagi beberapa saat."));
     },
   });
   const extractKtpMutation = (trpc.applications as unknown as { extractKtp: ExtractKtpMutation }).extractKtp.useMutation({
@@ -825,7 +838,7 @@ export default function NewApplication() {
   const reportErrors = (found: Record<string, string>) => {
     const count = Object.keys(found).length;
     setErrors(found);
-    setErrorSummary(`Ada ${count} kolom yang perlu dilengkapi atau diperbaiki. Kolom tersebut ditandai merah di bawah.`);
+    setErrorSummary(`Ada ${count} isian yang perlu dilengkapi atau diperbaiki. Pilih salah satu untuk langsung menuju isiannya.`);
   };
   const next = () => {
     const found = validateStep(step);
@@ -1274,7 +1287,7 @@ export default function NewApplication() {
   const currentRatios = computeRatios(values.financials?.current);
   const keyRatios = currentRatios.filter(r => ["currentRatio", "der", "roa", "bopo"].includes(r.key));
   const badanFinanceBlock = <>
-    <Alert className={INFO_PANEL}><HelpCircle className="h-4 w-4" /><AlertTitle>Format Analisa Keuangan BPRS</AlertTitle><AlertDescription className="text-navy-900">Isi neraca dan laba rugi dua periode (tahun lalu dan periode berjalan) seperti sheet Neraca dan LR pada Excel Analisa Keuangan. Rasio keuangan dihitung otomatis dengan benchmark bank, dan dapat dilengkapi lagi di tab Format Excel BPRS setelah pengajuan dikirim.</AlertDescription></Alert>
+    <Alert className={INFO_PANEL}><HelpCircle className="h-4 w-4" /><AlertTitle>Format Analisa Keuangan BPRS</AlertTitle><AlertDescription className="text-navy-900">Isi neraca dan laba rugi dua periode (tahun lalu dan periode berjalan) seperti sheet Neraca dan LR pada Excel Analisa Keuangan. Rasio keuangan dihitung otomatis dengan benchmark bank, dan dapat dilengkapi lagi di tab Analisa Keuangan setelah pengajuan dikirim.</AlertDescription></Alert>
     {section("Neraca dan laba rugi", <FinancialStatementsEditor value={values.financials ?? emptyStatements()} onChange={setFinancials} errors={errors} onFieldEdit={clearError} />)}
     {section("Rasio keuangan", <>
       <div className="grid gap-2 sm:grid-cols-4" aria-live="polite">
@@ -1310,7 +1323,7 @@ export default function NewApplication() {
       <main className="container max-w-4xl py-6 sm:py-8">
         <div className="mb-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
-            <div><h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Aplikasi Pembiayaan Baru</h1><p className="mt-2 text-muted-foreground">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan. Kolom bertanda * wajib diisi.</p></div>
+            <div><h1 className="font-serif text-3xl font-medium text-navy-900 sm:text-4xl">Pengajuan Pembiayaan Baru</h1><p className="mt-2 text-muted-foreground">Lengkapi data nasabah untuk penilaian kelayakan pembiayaan. Kolom bertanda * wajib diisi.</p></div>
             {SHOW_DEMO && <Button type="button" variant="outline" onClick={() => void fillAllDemo()}>Isi contoh data</Button>}
           </div>
           {SHOW_DEMO && <p className="mt-3 text-xs text-muted-foreground">Untuk uji coba: mengisi data contoh acak (fiktif). Isian yang sudah ada hanya ditimpa setelah Anda konfirmasi, dan dapat diurungkan.</p>}
@@ -1318,7 +1331,26 @@ export default function NewApplication() {
       {hasDraft && <div role="region" aria-label="Draft tersimpan" className={`mb-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border p-3 text-sm ${INFO_PANEL}`}><span><strong>Draft tersimpan ditemukan{draftSavedAt ? ` (${draftSavedAt})` : ""}.</strong> Pulihkan untuk melanjutkan, atau buang untuk mulai dari awal. Isian baru belum disimpan otomatis sampai Anda memilih.</span><span className="flex flex-wrap gap-3"><Button type="button" className="h-11" onClick={restore}>Pulihkan draft</Button><Button type="button" variant="ghost" className="h-11 text-destructive hover:bg-destructive/10 hover:text-destructive" onClick={() => void discardDraft()}>Buang draft</Button></span></div>}
       <nav aria-label="Langkah pengisian" className="mb-8 rounded-2xl border border-border bg-white p-5 shadow-premium"><div className="mb-4 flex flex-wrap justify-between gap-2 text-xs font-bold uppercase tracking-[.16em] text-muted-foreground"><span>Langkah {step + 1} dari {steps.length}</span><span className="text-navy-900">{stepLabels[step]}</span></div><ol className="flex items-center">{stepLabels.map((label, i) => <li key={label} className="flex flex-1 items-center last:flex-none" aria-current={i === step ? "step" : undefined}><button type="button" disabled={i >= step} onClick={() => goTo(i)} title={label} className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold outline-none transition-all focus-visible:ring-[3px] focus-visible:ring-gold-400/60 pointer-coarse:h-11 pointer-coarse:w-11 disabled:cursor-default ${i < step ? "bg-navy-900 text-gold-300 hover:bg-navy-800" : i === step ? "bg-gold-400 text-navy-900 ring-4 ring-gold-400/25" : "border border-border bg-ivory text-muted-foreground"}`}><span aria-hidden="true">{i < step ? <Check className="h-4 w-4" /> : i + 1}</span><span className="sr-only">Langkah {i + 1}: {label}{i < step ? " (selesai, buka untuk mengubah)" : i === step ? " (sedang diisi)" : " (belum)"}</span></button>{i < steps.length - 1 && <span aria-hidden="true" className={`mx-1.5 h-0.5 flex-1 rounded-full ${i < step ? "bg-navy-900" : "bg-border"}`} />}</li>)}</ol></nav>
         <form onSubmit={submit} noValidate><Card><CardHeader><div className="flex flex-wrap items-start justify-between gap-3"><div><CardTitle as="h2">{stepLabels[step]}</CardTitle><CardDescription>{stepDescriptions[step]}</CardDescription></div>{SHOW_DEMO && DEMO_STEPS[step] && <Button type="button" variant="outline" size="sm" onClick={() => void fillDemo(step)}>Isi contoh langkah ini</Button>}</div></CardHeader><CardContent className="space-y-4">
-          {errorSummary && <div role="alert" className="flex items-start gap-2 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm font-medium text-destructive"><AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />{errorSummary}</div>}
+          {errorSummary && (
+            <div role="alert" className="flex items-start gap-2 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm font-medium text-destructive">
+              <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+              <div className="min-w-0">
+                <p>{errorSummary}</p>
+                {errorItems.length > 0 && (
+                  <ul className="mt-1.5 space-y-0.5 font-normal">
+                    {errorItems.slice(0, 8).map(item => (
+                      <li key={item.key}>
+                        <button type="button" className="inline-flex min-h-6 items-center rounded text-left underline underline-offset-2 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 pointer-coarse:min-h-11" onClick={() => focusFirstInvalid([item.key])}>
+                          {item.text}
+                        </button>
+                      </li>
+                    ))}
+                    {errorItems.length > 8 && <li>dan {errorItems.length - 8} isian lainnya.</li>}
+                  </ul>
+                )}
+              </div>
+            </div>
+          )}
           {step === 0 && <>
             {section("Segmen produk", <div className="space-y-4">
               <ChoiceCards
@@ -1332,7 +1364,7 @@ export default function NewApplication() {
                     value: segKey,
                     title: seg.label,
                     description: seg.description,
-                    extra: <span className="mt-3 flex flex-wrap gap-2 text-xs"><span className="rounded bg-muted px-2 py-0.5 font-medium text-navy-900">Maks DSR: {seg.defaultMaxDsr}%</span><span className="rounded bg-muted px-2 py-0.5 font-medium text-navy-900">{seg.requiredDocuments.length} Dokumen Wajib</span></span>,
+                    extra: <span className="mt-3 flex flex-wrap gap-2 text-xs"><span className="rounded bg-muted px-2 py-0.5 font-medium text-navy-900">Maks DSR: {seg.defaultMaxDsr}%</span><span className="rounded bg-muted px-2 py-0.5 font-medium text-navy-900">{seg.requiredDocuments.length} dokumen persyaratan</span></span>,
                   };
                 })}
               />
@@ -1441,7 +1473,7 @@ export default function NewApplication() {
           {step > 0 && <Button type="button" variant="outline" className="h-11 min-w-11 px-5" onClick={() => goTo(step - 1)}>Kembali</Button>}
           {step < steps.length - 1
             ? <Button key="next" type="button" className="ml-auto h-11 px-6" onClick={next}>Lanjutkan</Button>
-            : <Button key="submit" type="submit" className="ml-auto h-11 px-6" disabled={createMutation.isPending}>{createMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Kirim Aplikasi</Button>}
+            : <Button key="submit" type="submit" className="ml-auto h-11 px-6" disabled={createMutation.isPending}>{createMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Kirim pengajuan</Button>}
         </div></form>
     </main></div></ErrorsContext.Provider>;
 }

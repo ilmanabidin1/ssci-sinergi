@@ -162,8 +162,12 @@ export function buildDemoBadanScenario(options: { rng?: Rng; today?: Date } = {}
   let saldoLabaCur = saldoLabaPrev + retained;
   let bankCur = sum(lCur) + modalDisetor + modalLainPrev + saldoLabaCur + labaCur - sum(aCur);
   if (bankCur < minBankCur) {
-    // Kurang kas: anggap pembagian laba lebih besar.
-    saldoLabaCur -= minBankCur - bankCur;
+    // Kurang kas: laba tahun lalu ditahan lebih banyak, sisanya ditutup hutang jangka pendek.
+    // Setiap tambahan bank diimbangi tambahan pasiva yang sama agar neraca tetap seimbang.
+    const shortfall = minBankCur - bankCur;
+    const extraRetained = Math.min(shortfall, Math.max(0, labaPrev - retained));
+    saldoLabaCur += extraRetained;
+    lCur.hutangJangkaPendek += shortfall - extraRetained;
     bankCur = minBankCur;
   }
 

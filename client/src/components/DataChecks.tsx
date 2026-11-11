@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { errorMessage } from "@/lib/errors";
 import { AlertTriangle, CheckCircle2, ClipboardCheck, Loader2, RotateCw } from "lucide-react";
 import { useState } from "react";
+import { formatDateTime } from "@/lib/format";
 
 type Finding = { severity: "tinggi" | "sedang" | "rendah"; field: string; message: string };
 
@@ -66,10 +67,13 @@ export function AssessButtonWithDataCheck({
   applicationId,
   pending,
   onAssess,
+  blockedReason,
 }: {
   applicationId: number;
   pending: boolean;
   onAssess: (acknowledgement?: string) => void;
+  /** Alasan penilaian belum boleh dijalankan (syarat sebelum penilaian belum terpenuhi). */
+  blockedReason?: string;
 }) {
   const check = trpc.aiAssist.ruleCheck.useQuery({ applicationId });
   const [open, setOpen] = useState(false);
@@ -80,7 +84,7 @@ export function AssessButtonWithDataCheck({
   const noteLength = note.trim().length;
 
   const start = () => {
-    if (pending) return;
+    if (pending || blockedReason) return;
     // Jika pemeriksaan otomatis gagal, jangan diam-diam menilai tanpa pemeriksaan.
     if (blocking.length > 0 || checkFailed) setOpen(true);
     else onAssess();
@@ -88,7 +92,12 @@ export function AssessButtonWithDataCheck({
 
   return (
     <>
-      <Button onClick={start} disabled={pending || check.isLoading} aria-busy={pending || check.isLoading}>
+      <Button
+        onClick={start}
+        disabled={pending || check.isLoading || !!blockedReason}
+        aria-busy={pending || check.isLoading}
+        aria-describedby={blockedReason ? "assess-hint" : undefined}
+      >
         {(pending || check.isLoading) && <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />}
         {pending ? "Menilai... (sekitar 30 detik)" : check.isLoading ? "Memeriksa data..." : "Lakukan Penilaian SSCI"}
       </Button>
@@ -168,7 +177,7 @@ export function DataChecksPanel({ dataChecks }: { dataChecks: DataChecks | null 
           <h3>Pemeriksaan data</h3>
         </div>
         <span className="text-xs text-muted-foreground">
-          {new Date(dataChecks.checkedAt).toLocaleString("id-ID")}
+          {formatDateTime(dataChecks.checkedAt)}
           {dataChecks.aiStatus === "unavailable" && " · AI tidak tersedia, hanya aturan otomatis"}
         </span>
       </div>

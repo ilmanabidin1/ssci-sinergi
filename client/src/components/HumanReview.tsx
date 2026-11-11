@@ -9,12 +9,13 @@ import { errorMessage } from "@/lib/errors";
 import { Activity, AlertTriangle, CheckCircle2, Gavel, Loader2, RotateCw, UserCheck } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { formatDateTime, formatDecimal } from "@/lib/format";
 
 const CLASSIFICATIONS = ["Sangat Layak", "Layak", "Perlu Pengawasan", "Tidak Layak"] as const;
 type Classification = (typeof CLASSIFICATIONS)[number];
 
 const fmtPct = (n: number) => `${n > 0 ? "+" : ""}${n}%`;
-const fmtDelta = (n: number) => (n === 0 ? "0" : `${n > 0 ? "+" : ""}${n.toFixed(1)}`);
+const fmtDelta = (n: number) => (n === 0 ? "0" : `${n > 0 ? "+" : ""}${formatDecimal(n, 1)}`);
 
 function deltaTone(delta: number, flipped: boolean) {
   if (flipped) return "bg-rose-100 text-rose-800 font-semibold ring-1 ring-rose-300";
@@ -60,7 +61,7 @@ export function SensitivityPanel({ applicationId }: { applicationId: number }) {
                       ? `Klasifikasi "${data.base.classification}" stabil pada semua skenario ±20% dan pergeseran bobot.`
                       : `Klasifikasi "${data.base.classification}" dapat berubah pada sebagian skenario. Sel bertanda segitiga peringatan (latar merah) mengubah klasifikasi; klasifikasi barunya tertulis di bawah angka.`}
                   </p>
-                  <p className="mt-0.5">Skor dasar {data.base.totalScore.toFixed(1)}.{data.mostSensitive ? ` Input paling berpengaruh: ${data.mostSensitive}.` : ""}</p>
+                  <p className="mt-0.5">Skor dasar {formatDecimal(data.base.totalScore, 1)}.{data.mostSensitive ? ` Input paling berpengaruh: ${data.mostSensitive}.` : ""}</p>
                 </div>
               </div>
 
@@ -110,7 +111,7 @@ export function SensitivityPanel({ applicationId }: { applicationId: number }) {
                     return (
                       <div key={w.label} className={`rounded-lg border px-3 py-2 text-sm ${flipped ? "border-rose-300 bg-rose-50" : "border-border bg-white"}`}>
                         <p className="text-xs text-muted-foreground">{w.label} ({w.weights.sustainableFinance}/{w.weights.sharia}/{w.weights.legal})</p>
-                        <p className="font-semibold text-navy-900">{w.totalScore.toFixed(1)} <span className="text-xs font-normal text-muted-foreground">({fmtDelta(w.delta)}) {w.classification}</span></p>
+                        <p className="font-semibold text-navy-900">{formatDecimal(w.totalScore, 1)} <span className="text-xs font-normal text-muted-foreground">({fmtDelta(w.delta)}) {w.classification}</span></p>
                         {flipped && <p className="mt-0.5 flex items-center gap-1 text-xs font-semibold text-rose-800"><AlertTriangle className="h-3 w-3 shrink-0" aria-hidden="true" />Klasifikasi berubah</p>}
                       </div>
                     );
@@ -195,10 +196,10 @@ export function OverridePanel({
             <p className="flex flex-wrap items-center gap-2 font-semibold">
               <UserCheck className="h-4 w-4 text-navy-900" aria-hidden="true" />
               Klasifikasi hasil peninjauan: {assessment.overrideClassification}
-              <span className="font-normal text-muted-foreground">(sistem: {assessment.classification}, skor {Number(assessment.totalScore).toFixed(1)})</span>
+              <span className="font-normal text-muted-foreground">(sistem: {assessment.classification}, skor {formatDecimal(Number(assessment.totalScore), 1)})</span>
             </p>
             <p className="mt-2"><span className="font-semibold">Alasan: </span>{assessment.overrideReason}</p>
-            {assessment.overriddenAt && <p className="mt-1 text-xs text-muted-foreground">Ditinjau {new Date(assessment.overriddenAt).toLocaleString("id-ID")}</p>}
+            {assessment.overriddenAt && <p className="mt-1 text-xs text-muted-foreground">Ditinjau {formatDateTime(assessment.overriddenAt)}</p>}
           </div>
         ) : (
           <p className="text-sm text-muted-foreground">Belum ada peninjauan. Klasifikasi yang berlaku adalah hasil sistem: <span className="font-semibold text-navy-900">{assessment.classification}</span>.</p>

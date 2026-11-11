@@ -48,6 +48,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { formatDate } from "@/lib/format";
 
 type Status = "all" | ApplicationStatus;
 
@@ -368,7 +369,7 @@ export default function Dashboard() {
             <Button asChild className="rounded-full bg-navy-900 text-white shadow-premium hover:bg-navy-800">
               <Link to="/applications/new">
                 <FileText className="mr-2 h-4 w-4" aria-hidden="true" />
-                Mulai penilaian baru
+                Buat pengajuan
               </Link>
             </Button>
             <Button asChild variant="outline">
@@ -756,7 +757,7 @@ export default function Dashboard() {
                               )}
                             </td>
                             <td className="whitespace-nowrap px-6 py-4 text-slate-600">
-                              {new Date(item.createdAt).toLocaleDateString("id-ID")}
+                              {formatDate(item.createdAt)}
                             </td>
                             <td className="px-6 py-4">
                               <div className="flex items-center justify-end gap-1">

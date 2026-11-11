@@ -160,6 +160,32 @@ function toBprsApplication(application: ApplicationRecord): BprsExportApplicatio
   };
 }
 
+/** Jalur tinjauan dan kelengkapan satu pengajuan; dipakai tampilan tahap dan kunci penilaian. */
+async function loadWorkflow(application: ApplicationRecord, organizationId: number) {
+  const [documents, photos, requests, assessment] = await Promise.all([
+    db.getDocumentFiles(application.id, organizationId),
+    db.listSurveyPhotos(organizationId, application.id),
+    db.listCustomerRequests(application.id, organizationId),
+    db.getAssessmentByApplicationId(application.id, organizationId),
+  ]);
+  const profile = application.bprsProfile ?? {};
+  const badan = isBadanUsaha(application.productSegment);
+  const track = determineReviewTrack(application);
+  const completeness = computeCompleteness({
+    status: application.status,
+    track,
+    hasAssessment: !!assessment,
+    documents,
+    surveyPhotoCount: photos.length,
+    openCustomerRequests: requests.filter(r => r.status === "open").length,
+    blockingDataIssues: blockingIssues(ruleConsistencyIssues(toSnapshot(application))).length,
+    bprsMissingCriteria: badan ? [] : scoreForTemplate(templateFor(profile, application.incomeSourceType), profile, toBprsApplication(application)).missing,
+    badanUsaha: badan,
+    financialStatementsMissing: badan ? missingFinancialItems(application.companyProfile?.financials) : undefined,
+  });
+  return { track, completeness };
+}
+
 const BPRS_LOCKED_STATUSES = new Set(["approved", "rejected", "cancelled"]);
 
 /**
@@ -898,6 +924,16 @@ export const appRouter = router({
           application.legalDocuments = syncedDocuments;
         }
 
+        // Syarat sebelum penilaian (dokumen wajib, laporan keuangan badan hukum) harus terpenuhi.
+        const { completeness } = await loadWorkflow(application, ctx.user.organizationId);
+        const notReady = completeness.missing.filter(item => item.beforeAssessment);
+        if (notReady.length > 0) {
+          throw new TRPCError({
+            code: "PRECONDITION_FAILED",
+            message: `Penilaian belum dapat dijalankan. ${notReady.map(item => item.hint ?? item.label).join("; ")}.`,
+          });
+        }
+
         const snapshot = toSnapshot(application);
         const ruleIssues = ruleConsistencyIssues(snapshot);
         const blocking = blockingIssues(ruleIssues);
@@ -1065,28 +1101,7 @@ export const appRouter = router({
       .input(z.object({ applicationId: z.number().int().positive() }))
       .query(async ({ input, ctx }) => {
         const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
-        const [documents, photos, requests, assessment] = await Promise.all([
-          db.getDocumentFiles(application.id, ctx.user.organizationId),
-          db.listSurveyPhotos(ctx.user.organizationId, application.id),
-          db.listCustomerRequests(application.id, ctx.user.organizationId),
-          db.getAssessmentByApplicationId(application.id, ctx.user.organizationId),
-        ]);
-        const profile = application.bprsProfile ?? {};
-        const badan = isBadanUsaha(application.productSegment);
-        const track = determineReviewTrack(application);
-        const completeness = computeCompleteness({
-          status: application.status,
-          track,
-          hasAssessment: !!assessment,
-          documents,
-          surveyPhotoCount: photos.length,
-          openCustomerRequests: requests.filter(r => r.status === "open").length,
-          blockingDataIssues: blockingIssues(ruleConsistencyIssues(toSnapshot(application))).length,
-          bprsMissingCriteria: badan ? [] : scoreForTemplate(templateFor(profile, application.incomeSourceType), profile, toBprsApplication(application)).missing,
-          badanUsaha: badan,
-          financialStatementsMissing: badan ? missingFinancialItems(application.companyProfile?.financials) : undefined,
-        });
-        return { track, completeness };
+        return loadWorkflow(application, ctx.user.organizationId);
       }),
 
     exitGate: protectedProcedure

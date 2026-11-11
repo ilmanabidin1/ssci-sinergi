@@ -171,3 +171,26 @@ Tingkat: **Tinggi** berarti bisa menghasilkan keputusan atau data yang salah, **
 ## 7. Catatan di luar lingkup UX
 
 Saat menyiapkan lingkungan uji, terlihat bahwa `server/passwordAuth.ts` selalu membuat tiga akun demo (`analis@bprs.id`, `komite@bprs.id`, `admin@bprs.id`) dengan password yang tertulis di kode sumber, tanpa syarat lingkungan. Jika berlaku juga di produksi, siapa pun yang membaca repositori bisa masuk sebagai admin organisasi pertama. Ini perlu diperiksa terpisah dari audit UX.
+
+## 8. Status perbaikan (11 November 2026)
+
+Keempat belas perbaikan cepat di bagian 6 sudah dikerjakan dan diverifikasi di aplikasi yang berjalan. Uji WCAG otomatis diulang pada 11 layar, termasuk semua layar yang sebelumnya gagal kontras: hasilnya 0 pelanggaran.
+
+| Urutan | Perbaikan | Status | Catatan |
+|---|---|---|---|
+| 1 | Kunci tombol penilaian | Selesai | Tombol mati dengan alasan di bawahnya. Server menolak dengan pesan yang sama. |
+| 2 | Data contoh badan hukum | Selesai | Penyebabnya: saat kas kurang, penyeimbang neraca dihitung ke arah yang salah. Tes diperluas dari 60 menjadi 2.000 variasi dan terbukti gagal pada kode lama. Di aplikasi, 15 dari 15 percobaan lolos. |
+| 3 | Label "Tolak pengajuan" dan "Tolak dokumen" | Selesai | |
+| 4 | Error neraca | Selesai | Ringkasan error kini berupa daftar yang bisa diklik dan menyebut masalahnya, misalnya "Neraca periode berjalan belum seimbang". Berlaku untuk semua langkah formulir. |
+| 5 | Satu istilah "Pengajuan" | Selesai | |
+| 6 | Format angka dan tanggal | Selesai | Fungsi bersama di `client/src/lib/format.ts`. Kolom pilih tanggal bawaan browser belum diganti (masuk perbaikan sedang). |
+| 7 | Nilai mentah | Selesai | Juga di laporan PDF. |
+| 8 | Satu angka kelengkapan | Selesai | Angka di kaki kartu skor dinamai "Keyakinan skor". |
+| 9 | Kontras warna | Selesai | |
+| 10 | Peran `Alert` | Selesai | |
+| 11 | Perbaikan teks | Selesai | Untuk badan hukum, dokumen ditulis "KTP penanggung jawab" dan "NPWP badan". |
+| 12 | Toast dan petunjuk catatan | Selesai dengan penyesuaian | Toast dipindah ke bawah tengah, bukan atas tengah. Saat diuji, posisi atas tengah menutupi nomor tiket dan tombol penilaian. |
+| 13 | Kartu Riwayat | Selesai | Menampilkan skor, klasifikasi, nomor tiket, dan segmen. |
+| 14 | Tag analitik dan `data-loc` | Selesai | Analitik hanya dimuat bila variabel lingkungannya diisi. |
+
+Perbaikan sedang di bagian 6 dan temuan di bagian 7 belum dikerjakan.

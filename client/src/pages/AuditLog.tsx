@@ -13,6 +13,7 @@ import { keepPreviousData } from "@tanstack/react-query";
 import { AlertCircle, ChevronLeft, ChevronRight, Loader2, ScrollText } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
+import { formatDateTime } from "@/lib/format";
 
 const PAGE_SIZE = 50;
 
@@ -119,7 +120,7 @@ export default function AuditLog() {
                         return (
                           <tr key={entry.id} className="hover:bg-slate-50">
                             <td className="whitespace-nowrap px-6 py-4 text-slate-600">
-                              {new Date(entry.createdAt).toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" })}
+                              {formatDateTime(entry.createdAt)}
                             </td>
                             <td className="px-6 py-4">
                               <Badge variant="outline" className={TONE_CLASS[meta?.tone ?? "neutral"]} title={entry.action}>

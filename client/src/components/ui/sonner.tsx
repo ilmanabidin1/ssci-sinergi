@@ -8,6 +8,10 @@ const Toaster = ({ ...props }: ToasterProps) => {
   return (
     <Sonner
       theme="light"
+      // Di bawah tengah: tombol aksi halaman ada di kanan (bawah dan atas), jadi posisi ini tidak menutupinya.
+      position="bottom-center"
+      // Di ponsel, naik sedikit agar tidak menutupi bilah tombol Kembali/Lanjutkan yang menempel di bawah.
+      mobileOffset={{ bottom: 88 }}
       className="toaster group"
       style={
         {

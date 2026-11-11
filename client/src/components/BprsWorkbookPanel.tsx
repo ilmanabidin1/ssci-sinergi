@@ -31,6 +31,7 @@ import {
 import { AlertTriangle, CheckCircle2, ClipboardList, FileScan, FileSpreadsheet, ImagePlus, Loader2, Plus, Save, Sparkles, Trash2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { toast } from "sonner";
+import { formatDecimal } from "@/lib/format";
 
 type SelectField = { key: keyof BprsProfile & BprsOptionKey; label: string };
 type TextField = { key: keyof BprsProfile; label: string; type?: "text" | "date" | "number" | "rupiah" | "textarea"; placeholder?: string; hint?: string };
@@ -479,12 +480,12 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
             <div className="rounded-xl border border-border p-4">
               <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Estimasi skor format BPRS</h3>
               <div className="mt-1 flex flex-wrap items-baseline gap-2">
-                <span className="text-3xl font-semibold text-navy-900">{score.score.toFixed(2)}</span>
+                <span className="text-3xl font-semibold text-navy-900">{formatDecimal(score.score, 2)}</span>
                 <Badge variant="secondary">{score.rating} · {score.ratingLabel}</Badge>
                 <Badge variant={score.status === "Layak" ? "default" : "destructive"}>{score.status}</Badge>
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
-                Dihitung dengan bobot sheet Parameter. Kemampuan bayar {score.rpcAdequate ? "memadai" : "belum memadai (skor dikali 70%)"}: rasio {score.coverageRatio.toFixed(2)} terhadap batas {score.coverageThreshold.toFixed(2)}.
+                Dihitung dengan bobot sheet Parameter. Kemampuan bayar {score.rpcAdequate ? "memadai" : "belum memadai (skor dikali 70%)"}: rasio {formatDecimal(score.coverageRatio, 2)} terhadap batas {formatDecimal(score.coverageThreshold, 2)}.
                 {" "}Angka ini pembanding untuk staf yang terbiasa dengan Excel BPRS. Skor utama untuk keputusan tetap skor SSCI.
               </p>
               {score.missing.length > 0 && (
@@ -495,7 +496,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
               <h3 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Skor SSCI</h3>
               {ssciScore ? (
                 <div className="mt-1 flex flex-wrap items-baseline gap-2">
-                  <span className="text-3xl font-semibold text-navy-900">{ssciScore.totalScore.toFixed(2)}</span>
+                  <span className="text-3xl font-semibold text-navy-900">{formatDecimal(ssciScore.totalScore, 1)}</span>
                   <Badge variant="secondary">{ssciScore.classification}</Badge>
                 </div>
               ) : <p className="mt-1 text-sm text-muted-foreground">Belum dinilai.</p>}
@@ -1063,13 +1064,13 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
                       <tr key={c.key} className="border-t border-border">
                         <td className="p-2">{c.label}</td>
                         <td className="p-2 text-muted-foreground">{c.answer?.trim() ?? <span className="text-amber-800">belum diisi</span>}</td>
-                        <td className="p-2 text-right tabular-nums">{c.points.toFixed(2)}</td>
+                        <td className="p-2 text-right tabular-nums">{formatDecimal(c.points, 2)}</td>
                         <td className="p-2 text-right tabular-nums text-muted-foreground">{c.maxPoints}</td>
                       </tr>
                     ))}
                     <tr className="border-t border-border font-semibold">
                       <td className="p-2" colSpan={2}>Jumlah{score.rpcAdequate ? "" : " (sebelum dikali 70%)"}</td>
-                      <td className="p-2 text-right tabular-nums">{score.subtotal.toFixed(2)}</td>
+                      <td className="p-2 text-right tabular-nums">{formatDecimal(score.subtotal, 2)}</td>
                       <td className="p-2" />
                     </tr>
                   </tbody>

@@ -7,7 +7,8 @@ import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+// Atribut data-loc (path berkas sumber) hanya dipasang di server pengembangan, tidak ikut ke build produksi.
+const plugins = [react(), tailwindcss(), { ...jsxLocPlugin(), apply: "serve" as const }, vitePluginManusRuntime()];
 
 export default defineConfig({
   plugins,

@@ -27,7 +27,8 @@ function Alert({
   return (
     <div
       data-slot="alert"
-      role="alert"
+      // Hanya varian error yang diumumkan sebagai peringatan; panel informasi biasa tidak.
+      role={variant === "destructive" ? "alert" : undefined}
       className={cn(alertVariants({ variant }), className)}
       {...props}
     />

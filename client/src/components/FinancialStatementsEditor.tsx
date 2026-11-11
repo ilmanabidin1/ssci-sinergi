@@ -142,7 +142,7 @@ export function FinancialStatementsEditor({
         <p className="text-sm text-muted-foreground">Isi dari laporan keuangan nasabah (nominal setahun). Kolom kosong dihitung 0.</p>
         {PERIODS.map(period => (
           <div key={period.key} className="space-y-1">
-            <Label htmlFor={fsLabelId(period.key)}>Periode {period.title.toLowerCase()}</Label>
+            <Label htmlFor={fsLabelId(period.key)}>Nama periode: {period.title.toLowerCase()}</Label>
             <Input
               id={fsLabelId(period.key)}
               value={value[period.key]?.label ?? ""}

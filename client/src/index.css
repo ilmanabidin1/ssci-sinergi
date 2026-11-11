@@ -83,10 +83,12 @@
   --secondary: #eef2f8;
   --secondary-foreground: #14213d;
   --muted: #eef2f8;
-  --muted-foreground: #60708c;
+  /* Digelapkan dari #60708c agar kontras minimal 4,5:1 juga di atas latar berwarna (WCAG 1.4.3). */
+  --muted-foreground: #55647f;
   --accent: #fdf6e7;
   --accent-foreground: #14213d;
-  --destructive: oklch(0.577 0.245 27.325);
+  /* Digelapkan dari #e7000b agar teks error kontras minimal 4,5:1 di atas latar merah muda (WCAG 1.4.3). */
+  --destructive: #d1000a;
   --destructive-foreground: oklch(0.985 0 0);
   --border: #e1e5ec;
   --input: #dfe4ec;

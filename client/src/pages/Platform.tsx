@@ -15,6 +15,7 @@ import { trpc } from "@/lib/trpc";
 import { AlertCircle, Building2, Loader2, ScrollText } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { formatDate, formatDateTime } from "@/lib/format";
 
 export default function Platform() {
   usePageTitle("Konsol SuperAdmin");
@@ -106,7 +107,7 @@ export default function Platform() {
                             ? <Badge variant="outline" className="border-emerald-300 bg-emerald-50 text-emerald-800">Aktif</Badge>
                             : <Badge variant="outline" className="border-amber-300 bg-amber-50 text-amber-900">Belum aktif (menunggu verifikasi atau ditangguhkan)</Badge>}
                         </div>
-                        <p className="break-words text-xs text-muted-foreground">{org.legalName} · {org.slug} · terdaftar {new Date(org.createdAt).toLocaleDateString("id-ID")}</p>
+                        <p className="break-words text-xs text-muted-foreground">{org.legalName} · {org.slug} · terdaftar {formatDate(org.createdAt)}</p>
                         <p className="mt-1 break-words text-xs text-muted-foreground">
                           Admin: {org.admins.map(a => `${a.name ?? "-"} (${a.email ?? "-"})`).join(", ") || "-"} · {org.userCount} pengguna · {org.applicationCount} pengajuan
                         </p>
@@ -166,7 +167,7 @@ export default function Platform() {
                           const meta = ACTION_META[log.action];
                           return (
                           <TableRow key={log.id}>
-                            <TableCell className="text-xs">{new Date(log.createdAt).toLocaleString("id-ID", { dateStyle: "medium", timeStyle: "short" })}</TableCell>
+                            <TableCell className="text-xs">{formatDateTime(log.createdAt)}</TableCell>
                             <TableCell className="min-w-40 whitespace-normal">{log.organizationName}</TableCell>
                             <TableCell className="min-w-32 whitespace-normal">{log.actorName}</TableCell>
                             <TableCell>

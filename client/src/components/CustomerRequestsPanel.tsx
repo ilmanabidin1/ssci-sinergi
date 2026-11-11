@@ -7,6 +7,7 @@ import { trpc } from "@/lib/trpc";
 import { CheckCircle2, Loader2, MessageSquareText, Phone } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { formatDateTime } from "@/lib/format";
 
 const typeLabel = {
   pembaruan_data: "Pembaruan data",
@@ -94,7 +95,7 @@ export function CustomerRequestsPanel({ applicationId }: { applicationId: number
           <div key={r.id} className={`rounded-xl border p-4 text-sm ${r.status === "open" ? "border-gold-400/50 bg-gold-50" : "border-border bg-white"}`}>
             <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="font-semibold text-navy-900">{typeLabel[r.type]}</span>
-              <span className="text-xs text-muted-foreground">{new Date(r.createdAt).toLocaleString("id-ID")}</span>
+              <span className="text-xs text-muted-foreground">{formatDateTime(r.createdAt)}</span>
             </div>
             <p className="mt-2 whitespace-pre-line break-words text-navy-900">{r.message}</p>
             {r.contactPhone && (

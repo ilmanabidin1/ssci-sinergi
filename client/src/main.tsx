@@ -8,6 +8,17 @@ import App from "./App";
 import { rememberReturnTo, sessionExpiredLoginUrl } from "./hooks/useSessionTimeout";
 import "./index.css";
 
+// Analitik (umami) hanya dimuat bila kedua variabel lingkungannya diisi saat build.
+const analyticsEndpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT as string | undefined;
+const analyticsWebsiteId = import.meta.env.VITE_ANALYTICS_WEBSITE_ID as string | undefined;
+if (analyticsEndpoint && analyticsWebsiteId) {
+  const script = document.createElement("script");
+  script.defer = true;
+  script.src = `${analyticsEndpoint.replace(/\/$/, "")}/umami`;
+  script.dataset.websiteId = analyticsWebsiteId;
+  document.head.appendChild(script);
+}
+
 const queryClient = new QueryClient();
 
 const redirectToLoginIfUnauthorized = (error: unknown) => {

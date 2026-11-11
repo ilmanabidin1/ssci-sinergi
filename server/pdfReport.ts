@@ -307,7 +307,7 @@ export async function generatePdfReport(data: PdfReportData): Promise<Buffer> {
       ["ID penilaian", String(assessment.id)],
       ["ID pengajuan", String(application.id)],
       ["Versi model", escapeText(assessment.modelVersion)],
-      ["Model rekomendasi", escapeText(assessment.recommendationModel || "Fallback aturan")],
+      ["Model rekomendasi", escapeText(assessment.recommendationModel || "Tanpa AI (aturan otomatis)")],
       ["Tanggal penilaian", formatIdDate(assessment.assessedAt)],
     ], ensureSpace);
 

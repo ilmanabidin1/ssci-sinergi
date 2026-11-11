@@ -50,18 +50,28 @@ export type Completeness = {
   stage: WorkflowStage;
 };
 
+/** Nama dokumen untuk tampilan. Pada badan hukum, KTP berarti KTP penanggung jawab dan NPWP berarti NPWP badan. */
+export function documentLabel(type: string, badanUsaha = false): string {
+  if (!badanUsaha) return type;
+  const upper = type.toUpperCase();
+  if (upper === "KTP") return "KTP penanggung jawab";
+  if (upper === "NPWP") return "NPWP badan";
+  return type;
+}
+
 export function computeCompleteness(input: CompletenessInput): Completeness {
   const required = TRACK_REQUIREMENTS[input.track];
   const byType = new Map(input.documents.map(d => [d.documentType.toUpperCase(), d.status]));
   const notUploaded = required.verifiedDocuments.filter(t => !byType.has(t) || byType.get(t) === "rejected");
   const notVerified = required.verifiedDocuments.filter(t => byType.get(t) !== "verified");
+  const names = (types: string[]) => types.map(t => documentLabel(t, input.badanUsaha)).join(", ");
 
   const items: CompletenessItem[] = [
     {
       key: "dokumen_unggah",
-      label: `Dokumen wajib diunggah (${required.verifiedDocuments.join(", ")})`,
+      label: `Dokumen wajib diunggah (${names(required.verifiedDocuments)})`,
       done: notUploaded.length === 0,
-      hint: notUploaded.length ? `Belum ada: ${notUploaded.join(", ")}` : undefined,
+      hint: notUploaded.length ? `Belum ada: ${names(notUploaded)}` : undefined,
       tab: "data",
       beforeAssessment: true,
     },
@@ -112,7 +122,7 @@ export function computeCompleteness(input: CompletenessInput): Completeness {
       key: "verifikasi",
       label: "Dokumen wajib diverifikasi checker",
       done: notVerified.length === 0,
-      hint: notVerified.length ? `Belum terverifikasi: ${notVerified.join(", ")}` : undefined,
+      hint: notVerified.length ? `Belum terverifikasi: ${names(notVerified)}` : undefined,
       tab: "data",
       beforeAssessment: false,
     },

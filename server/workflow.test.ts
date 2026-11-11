@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeCompleteness, nextAction, stageFor, syncLegalDocuments } from "@shared/workflow";
+import { computeCompleteness, documentLabel, nextAction, stageFor, syncLegalDocuments } from "@shared/workflow";
 
 const base = {
   status: "pending",
@@ -91,5 +91,33 @@ describe("syncLegalDocuments", () => {
       { type: "NPWP", status: "complete" },
       { type: "NIB", status: "complete", notes: "menyusul" },
     ]);
+  });
+});
+
+describe("nama dokumen pada badan hukum", () => {
+  const base = {
+    status: "pending",
+    track: "lengkap" as const,
+    hasAssessment: false,
+    documents: [],
+    surveyPhotoCount: 0,
+    openCustomerRequests: 0,
+    blockingDataIssues: 0,
+    bprsMissingCriteria: [],
+  };
+
+  it("menyebut KTP penanggung jawab dan NPWP badan, dan tetap mengunci penilaian", () => {
+    const badan = computeCompleteness({ ...base, badanUsaha: true, financialStatementsMissing: [] });
+    const upload = badan.items.find(i => i.key === "dokumen_unggah")!;
+    expect(upload.hint).toBe("Belum ada: KTP penanggung jawab, NPWP badan, NIB");
+    expect(upload.beforeAssessment).toBe(true);
+    expect(badan.readyToAssess).toBe(false);
+  });
+
+  it("tidak mengubah nama dokumen untuk nasabah perorangan", () => {
+    const perorangan = computeCompleteness(base);
+    expect(perorangan.items.find(i => i.key === "dokumen_unggah")!.hint).toBe("Belum ada: KTP, NPWP, NIB");
+    expect(documentLabel("KTP")).toBe("KTP");
+    expect(documentLabel("ktp", true)).toBe("KTP penanggung jawab");
   });
 });

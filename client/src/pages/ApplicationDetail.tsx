@@ -27,7 +27,11 @@ import { Link, useParams } from "wouter";
 import { toast } from "sonner";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useEffect, useRef, useState } from "react";
+import { formatDateTime } from "@/lib/format";
+import { documentLabel } from "@shared/workflow";
 
+const SHARIA_COMPLIANCE_LABELS: Record<string, string> = { yes: "Ya, sepenuhnya", partial: "Sebagian", no: "Tidak" };
+const AKAD_LABELS: Record<string, string> = { murabahah: "Murabahah", mudharabah: "Mudharabah", qardh: "Al-Qardh", multijasa: "Ijarah Multijasa" };
 const rupiah = (value: unknown) => `Rp ${Math.round(Number(value) || 0).toLocaleString("id-ID")}`;
 const decimal = (value: unknown, digits: number) =>
   (Number(value) || 0).toLocaleString("id-ID", { minimumFractionDigits: digits, maximumFractionDigits: digits });
@@ -113,6 +117,9 @@ export default function ApplicationDetail() {
     { applicationId },
     { enabled: !!applicationId && data?.application?.status === "assessed" }
   );
+
+  // Kelengkapan (kunci sama dengan WorkflowStatus, jadi tidak menambah permintaan) untuk mengunci tombol penilaian.
+  const workflowQuery = trpc.applications.workflow.useQuery({ applicationId }, { enabled: !!applicationId });
 
   const [tab, setTab] = useState<DetailTab>("ringkasan");
   const [tabChosen, setTabChosen] = useState(false);
@@ -488,6 +495,10 @@ export default function ApplicationDetail() {
   const canDecide = !!assessment && application.status === "assessed" && isChecker && !isOwnWork;
   const gate = gateQuery.data;
   const approveBlocked = !gate?.passed;
+  const assessBlockedReason = workflowQuery.data?.completeness.missing
+    .filter(item => item.beforeAssessment)
+    .map(item => item.hint ?? item.label)
+    .join("; ") || undefined;
   const appLegalDocs = Array.isArray(data?.application?.legalDocuments)
     ? (data.application.legalDocuments as Array<{ type: string }>).map(d => d.type)
     : [];
@@ -557,7 +568,7 @@ export default function ApplicationDetail() {
                     disabled={decideMutation.isPending}
                     onClick={() => openDecision("rejected")}
                   >
-                    Tolak
+                    Tolak pengajuan
                   </Button>
                   <Button
                     disabled={decideMutation.isPending || approveBlocked}
@@ -573,6 +584,7 @@ export default function ApplicationDetail() {
                 <AssessButtonWithDataCheck
                   applicationId={applicationId}
                   pending={assessMutation.isPending}
+                  blockedReason={assessBlockedReason}
                   onAssess={acknowledgement => {
                     if (assessMutation.isPending) return;
                     assessMutation.mutate({ applicationId, dataCheckAcknowledgement: acknowledgement });
@@ -591,6 +603,11 @@ export default function ApplicationDetail() {
                 </Button>
               )}
             </div>
+            {!assessment && assessBlockedReason && (
+              <p id="assess-hint" className="max-w-md text-xs text-amber-800 sm:text-right" aria-live="polite">
+                Penilaian belum bisa dijalankan. {assessBlockedReason}.
+              </p>
+            )}
             {canDecide && (
               <p id="gate-hint" className="max-w-md text-xs sm:text-right" aria-live="polite">
                 {gateQuery.isLoading ? (
@@ -872,12 +889,12 @@ export default function ApplicationDetail() {
               <div className="mt-4 border-t pt-4 text-xs text-muted-foreground flex flex-wrap gap-x-6 gap-y-1">
                 <span>Versi aturan: {assessment.modelVersion}</span>
                 <span>
-                  Model narasi: {assessment.recommendationModel || "Fallback aturan"}
+                  Narasi: {assessment.recommendationModel ? `dibantu AI (${assessment.recommendationModel})` : "tanpa AI (aturan otomatis)"}
                 </span>
                 <span>
-                  Dinilai: {new Date(assessment.assessedAt).toLocaleString("id-ID")}
+                  Dinilai: {formatDateTime(assessment.assessedAt)}
                 </span>
-                <span>Kelengkapan data: {decimal(assessment.confidence, 0)}%</span>
+                <span title="Turun bila email atau data lingkungan dan sosial tidak diisi saat penilaian.">Keyakinan skor: {decimal(assessment.confidence, 0)}%</span>
               </div>
             </CardContent>
           </Card>
@@ -919,6 +936,7 @@ export default function ApplicationDetail() {
                    <DocumentRow
                      key={documentType}
                      documentType={documentType}
+                     title={documentLabel(documentType, badan)}
                      doc={doc}
                      canUpload={canUpload}
                      canVerify={canVerifyDocuments}
@@ -1002,7 +1020,7 @@ export default function ApplicationDetail() {
                         </div>
                         {photo.caption && <p className="break-words text-sm text-navy-900">{photo.caption}</p>}
                         <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
-                          <span>{new Date(photo.createdAt).toLocaleString("id-ID")}</span>
+                          <span>{formatDateTime(photo.createdAt)}</span>
                           <Badge variant={photo.status === "failed" ? "destructive" : photo.status === "analyzed" ? "default" : "secondary"}>
                             {photo.status === "uploaded" ? "Belum dianalisis" : photo.status === "analyzed" ? "Dianalisis AI" : "Analisis gagal"}
                           </Badge>
@@ -1120,7 +1138,7 @@ export default function ApplicationDetail() {
               <CardContent className="space-y-2 text-sm">
                 <div><span className="font-semibold">Jenis:</span> {application.businessType}</div>
                 <div><span className="font-semibold">Lama Usaha:</span> {application.businessAge} bulan</div>
-                <div><span className="font-semibold">Kepatuhan Syariah:</span> {application.businessShariaCompliant}</div>
+                <div><span className="font-semibold">Kepatuhan Syariah:</span> {SHARIA_COMPLIANCE_LABELS[application.businessShariaCompliant ?? ""] ?? "-"}</div>
               </CardContent>
             </Card>
             </>
@@ -1148,7 +1166,7 @@ export default function ApplicationDetail() {
                <div><span className="font-semibold">Pembiayaan Diajukan:</span> {rupiah(application.requestedAmount)}</div>
                <div><span className="font-semibold">Tenor:</span> {application.financingTenor} bulan</div>
                <div><span className="font-semibold">Total margin / ujrah:</span> {decimal(application.marginRate, 2)}%</div>
-               <div><span className="font-semibold">Skema Akad:</span> <span className="uppercase font-medium text-primary">{application.financingAkad || "murabahah"}</span></div>
+               <div><span className="font-semibold">Skema Akad:</span> <span className="font-medium text-primary">{AKAD_LABELS[application.financingAkad || "murabahah"] ?? application.financingAkad}</span></div>
                {application.financingAkad === "multijasa" && (
                  <div className="mt-2 space-y-1 rounded border border-navy-50 bg-navy-100 p-2.5 text-xs">
                    <div className="font-semibold text-navy-900">Rincian Ijarah Multijasa:</div>
@@ -1270,7 +1288,7 @@ export default function ApplicationDetail() {
                     <li key={comment.id} className="rounded-lg border p-3">
                       <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
                         <span className="font-semibold text-navy-900">{comment.authorName ?? `Pengguna #${comment.authorUserId}`}</span>
-                        <span>{new Date(comment.createdAt).toLocaleString("id-ID")}</span>
+                        <span>{formatDateTime(comment.createdAt)}</span>
                       </div>
                       <p className="mt-1 whitespace-pre-wrap break-words text-sm text-navy-900">{comment.content}</p>
                     </li>
@@ -1310,7 +1328,7 @@ export default function ApplicationDetail() {
                         </span>
                       </span>
                       <span className="whitespace-nowrap text-xs text-muted-foreground">
-                        {new Date(activity.createdAt).toLocaleString("id-ID")}
+                        {formatDateTime(activity.createdAt)}
                       </span>
                     </li>
                   ))}
@@ -1387,6 +1405,7 @@ type DocumentRowDoc = {
 
 function DocumentRow({
   documentType,
+  title,
   doc,
   canUpload,
   canVerify,
@@ -1399,6 +1418,8 @@ function DocumentRow({
   onReject,
 }: {
   documentType: string;
+  /** Nama tampilan, misalnya "KTP penanggung jawab" untuk badan hukum. */
+  title?: string;
   doc: DocumentRowDoc | undefined;
   canUpload: boolean;
   canVerify: boolean;
@@ -1415,7 +1436,7 @@ function DocumentRow({
   return (
     <div className="flex flex-col gap-3 rounded-lg border p-4 sm:flex-row sm:items-center sm:justify-between">
       <div className="min-w-0">
-        <h3 className="font-semibold text-navy-900">{documentType}</h3>
+        <h3 className="font-semibold text-navy-900">{title ?? documentType}</h3>
         {doc ? (
           <div className="text-sm text-muted-foreground">
             <div className="flex flex-wrap items-center gap-2">
@@ -1480,7 +1501,7 @@ function DocumentRow({
             {doc.status !== "rejected" && (
               <Button variant="ghost" className="text-destructive hover:bg-destructive/10 hover:text-destructive" disabled={busy} onClick={onReject} aria-label={`Tolak dokumen ${documentType}`}>
                 {rejecting && <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />}
-                Tolak
+                Tolak dokumen
               </Button>
             )}
           </>

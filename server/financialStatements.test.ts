@@ -152,7 +152,7 @@ function seeded(seed: number) {
 
 describe("data contoh badan hukum", () => {
   it("selalu konsisten: neraca seimbang, laba sama dengan laba rugi, tumbuh wajar, lolos schema", () => {
-    for (let seed = 1; seed <= 60; seed++) {
+    for (let seed = 1; seed <= 2000; seed++) {
       const demo = buildDemoBadanScenario({ rng: seeded(seed), today: new Date(2026, 10, 4) });
       const fs = demo.financials;
       for (const period of [fs.previous, fs.current]) {

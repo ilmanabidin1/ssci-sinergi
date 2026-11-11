@@ -243,7 +243,30 @@ export async function getAllApplications(filters: {
     query = query.where(and(...conditions)!) as any;
   }
   
-  return query.orderBy(desc(applications.createdAt));
+  const rows = await query.orderBy(desc(applications.createdAt));
+  if (rows.length === 0) return [];
+
+  // Skor penilaian terakhir ikut dikirim supaya daftar riwayat bisa dipindai tanpa membuka detail.
+  const applicationIds = rows.map(application => application.id);
+  const assessmentRows = await db.select({
+    applicationId: assessments.applicationId,
+    totalScore: assessments.totalScore,
+    classification: assessments.classification,
+  }).from(assessments)
+    .where(and(
+      eq(assessments.organizationId, filters.organizationId),
+      sql`${assessments.applicationId} IN (${sql.join(applicationIds.map(id => sql`${id}`), sql`, `)})`,
+    ))
+    .orderBy(desc(assessments.assessedAt));
+  const latest = new Map<number, typeof assessmentRows[number]>();
+  for (const assessment of assessmentRows) {
+    if (!latest.has(assessment.applicationId)) latest.set(assessment.applicationId, assessment);
+  }
+  return rows.map(application => ({
+    ...application,
+    latestAssessmentScore: latest.has(application.id) ? Number(latest.get(application.id)!.totalScore) : null,
+    latestAssessmentClassification: latest.get(application.id)?.classification ?? null,
+  }));
 }
 
 export async function getApplicationQueue(filters: {

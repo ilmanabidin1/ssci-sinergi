@@ -51,7 +51,7 @@ export function generateAssessmentPDF(data: PDFData): string {
     recommendations: escapeHtml(assessment.recommendations),
     modelVersion: escapeHtml(assessment.modelVersion),
     recommendationModel: escapeHtml(
-      assessment.recommendationModel || "Fallback aturan"
+      assessment.recommendationModel || "Tanpa AI (aturan otomatis)"
     ),
     orgName: escapeHtml(data.organization?.name || "SSCI BPRS"),
     orgLegalName: escapeHtml(data.organization?.legalName || data.organization?.name || ""),

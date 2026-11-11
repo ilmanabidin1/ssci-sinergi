@@ -176,7 +176,7 @@ export function DecisionDialog({
               onChange={event => setNotes(prev => ({ ...prev, [current]: event.target.value }))}
             />
             <p id="decision-notes-hint" className={`text-xs ${touched && empty ? "text-destructive" : "text-muted-foreground"}`}>
-              {touched && empty ? "Wajib diisi. " : ""}{text.trim().length}/{MAX_NOTES} karakter. Catatan dicantumkan di riwayat dan laporan.
+              {empty ? "Catatan wajib diisi sebelum keputusan disimpan. " : ""}{text.trim().length}/{MAX_NOTES} karakter. Catatan dicantumkan di riwayat dan laporan.
             </p>
           </div>
 

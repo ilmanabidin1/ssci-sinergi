@@ -13,8 +13,14 @@ import { keepPreviousData } from "@tanstack/react-query";
 import { AlertCircle, Loader2, Search } from "lucide-react";
 import { Link, useSearch } from "wouter";
 import { useEffect, useState } from "react";
+import { formatDate, formatDecimal } from "@/lib/format";
+import { BPRS_SEGMENT_DETAILS, type BprsProductSegment } from "@shared/bprsPolicy";
 
 type StatusFilter = "all" | ApplicationStatus;
+
+/** Nama pendek segmen, misalnya "UMKM" dari "UMKM (Penghasilan Fluktuatif)". */
+const segmentLabel = (segment: string | null | undefined) =>
+  BPRS_SEGMENT_DETAILS[(segment ?? "umkm") as BprsProductSegment]?.label.split(" (")[0] ?? "UMKM";
 
 const moneyFormatter = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 });
 
@@ -122,9 +128,13 @@ export default function AssessmentHistory() {
                         <p className="mb-1 text-sm text-slate-600">{app.businessName} · {app.businessType}</p>
                         <p className="text-sm text-slate-600">
                           Pembiayaan: {moneyFormatter.format(Number(app.requestedAmount) || 0)}
+                          {" · "}
+                          {app.latestAssessmentScore !== null
+                            ? <>Skor SSCI: <span className="font-semibold text-navy-900">{formatDecimal(app.latestAssessmentScore, 1)}</span>{app.latestAssessmentClassification ? ` (${app.latestAssessmentClassification})` : ""}</>
+                            : "Belum dinilai"}
                         </p>
                         <p className="mt-2 text-xs text-slate-600">
-                          Diajukan: {new Date(app.createdAt).toLocaleDateString("id-ID")}
+                          Tiket SSCI-{String(app.id).padStart(5, "0")} · {segmentLabel(app.productSegment)} · Diajukan: {formatDate(app.createdAt)}
                         </p>
                       </div>
                       <Button asChild variant="outline" className="w-full sm:w-auto">
