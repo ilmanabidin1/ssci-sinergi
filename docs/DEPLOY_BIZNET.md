@@ -109,8 +109,8 @@ Lakukan di luar jam kerja dan umumkan jeda layanan sekitar 30 menit.
    mysqldump --single-transaction --routines --no-tablespaces -h <host> -P <port> -u <user> -p <database> | gzip > railway.sql.gz
    scp -i ssci-admin.pem railway.sql.gz ubuntu@<ip-server>:/tmp/ && ssh -i ssci-admin.pem ubuntu@<ip-server> "sudo mv /tmp/railway.sql.gz /opt/ssci/"
    ssh -i ssci-admin.pem ubuntu@<ip-server>
-   cd /opt/ssci && docker compose stop app
-   gunzip -c railway.sql.gz | docker compose exec -T db sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" exec mysql -u root ssci'
+   cd /opt/ssci && sudo docker compose stop app
+   sudo gunzip -c railway.sql.gz | sudo docker compose exec -T db sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" exec mysql -u root ssci'
    ```
 
 3. Salin isi volume unggahan Railway (`/data/uploads`) ke server baru, lalu masukkan ke volume aplikasi:
