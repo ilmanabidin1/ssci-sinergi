@@ -6,7 +6,7 @@ Panduan ini melengkapi `docs/RENCANA_MIGRASI_HOSTING.md`. Semua berkas yang dise
 
 | Berkas | Fungsi |
 |---|---|
-| `Dockerfile` | Membangun image aplikasi (API dan halaman web dalam satu layanan). Aplikasi berjalan sebagai pengguna non-root. |
+| `deploy/Dockerfile` | Membangun image aplikasi (API dan halaman web dalam satu layanan). Aplikasi berjalan sebagai pengguna non-root. |
 | `deploy/docker-compose.yml` | Menjalankan tiga layanan: aplikasi, MySQL 8, dan Caddy (HTTPS otomatis). Database tidak dibuka ke internet. |
 | `deploy/Caddyfile` | Proxy HTTPS dengan sertifikat Let's Encrypt otomatis. |
 | `deploy/.env.example` | Daftar variabel yang harus diisi di server. |

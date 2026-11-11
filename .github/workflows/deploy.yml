@@ -44,7 +44,7 @@ jobs:
         run: |
           docker build \
             --build-arg VITE_DEMO_MODE="${{ vars.VITE_DEMO_MODE || 'false' }}" \
-            -t "ssci-sinergi:${GITHUB_SHA::12}" -t ssci-sinergi:latest .
+            -f deploy/Dockerfile -t "ssci-sinergi:${GITHUB_SHA::12}" -t ssci-sinergi:latest .
           docker save "ssci-sinergi:${GITHUB_SHA::12}" ssci-sinergi:latest | gzip > ssci-image.tar.gz
           ls -lh ssci-image.tar.gz
 

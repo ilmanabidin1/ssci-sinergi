@@ -1,3 +1,5 @@
+# Dibangun dari akar repositori: docker build -f deploy/Dockerfile .
+# Sengaja tidak di akar supaya Railway tetap memakai builder Railpack.
 # Image produksi SSCI: satu layanan Node yang menyajikan API dan halaman web.
 # Tahap 1 membangun client (Vite) dan server (esbuild); tahap 2 hanya membawa hasilnya.
 
