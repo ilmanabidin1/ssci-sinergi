@@ -64,7 +64,7 @@ jobs:
         run: |
           SSH="ssh -i ~/.ssh/id_deploy -o StrictHostKeyChecking=yes"
           scp -i ~/.ssh/id_deploy -o StrictHostKeyChecking=yes \
-            deploy/docker-compose.yml deploy/Caddyfile deploy/backup.sh deploy/restore.sh "$TARGET:/opt/ssci/"
+            deploy/docker-compose.yml deploy/Caddyfile deploy/backup.sh deploy/restore.sh deploy/migrate-from-railway.sh "$TARGET:/opt/ssci/"
           $SSH "$TARGET" 'gunzip | docker load' < ssci-image.tar.gz
           $SSH "$TARGET" "cd /opt/ssci && \
             export SSCI_IMAGE=ssci-sinergi:${GITHUB_SHA::12} && \
