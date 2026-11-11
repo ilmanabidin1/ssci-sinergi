@@ -10,7 +10,7 @@ Panduan ini melengkapi `docs/RENCANA_MIGRASI_HOSTING.md`. Semua berkas yang dise
 | `deploy/docker-compose.yml` | Menjalankan tiga layanan: aplikasi, MySQL 8, dan Caddy (HTTPS otomatis). Database tidak dibuka ke internet. |
 | `deploy/Caddyfile` | Proxy HTTPS dengan sertifikat Let's Encrypt otomatis. |
 | `deploy/.env.example` | Daftar variabel yang harus diisi di server. |
-| `deploy/setup-server.sh` | Menyiapkan server baru: Docker, pengguna `deploy`, firewall, SSH hanya dengan kunci, pembaruan keamanan otomatis. |
+| `deploy/setup-server.sh` | Menyiapkan server baru: Docker, pengguna `deploy` dan kuncinya, firewall, SSH hanya dengan kunci, pembaruan keamanan otomatis, serta `.env` berisi rahasia acak. |
 | `deploy/backup.sh` | Backup harian database dan berkas unggahan, dienkripsi, lalu disalin ke object storage. |
 | `deploy/restore.sh` | Memulihkan dari berkas backup. |
 | `.github/workflows/deploy.yml` | Deploy otomatis setiap push ke `main`. Tidak aktif sampai dinyalakan (lihat langkah 6). |
@@ -24,7 +24,7 @@ Sudah diuji di lingkungan pengembangan dengan Docker:
 - Pemulihan dengan kata sandi yang salah berhenti tanpa mengubah apa pun.
 
 Belum diuji, karena butuh server dan akun sungguhan:
-- `setup-server.sh` di server Ubuntu nyata (baru diperiksa sintaksnya).
+- `setup-server.sh` di server Ubuntu nyata. Bagian pengguna, kunci, `.env`, isian GitHub, dan konfigurasi SSH sudah diuji di container Ubuntu 24.04, termasuk dijalankan dua kali tanpa menimpa rahasia. Pemasangan paket (apt dan Docker) belum, karena server cermin Ubuntu tidak bisa dijangkau dari lingkungan pengujian.
 - Alur GitHub Actions dari awal sampai akhir.
 - Sertifikat Let's Encrypt untuk domain nyata (uji lokal memakai sertifikat internal Caddy).
 - NEO Object Storage milik Biznet Gio (uji memakai server S3 lokal).
@@ -36,44 +36,41 @@ Belum diuji, karena butuh server dan akun sungguhan:
 
 Biznet Gio, Ubuntu 24.04, minimal 2 vCPU dan 4 GB RAM. Catat alamat IP-nya. Buat juga satu bucket NEO Object Storage di lokasi yang berbeda dari server, berikut access key dan secret key-nya.
 
-### 2. Buat kunci SSH untuk deploy
+### 2. Masuk ke server
 
-Di komputer sendiri:
+Pakai berkas kunci SSH yang diunduh saat memesan server (misalnya `ssci-admin.pem`).
 
-```bash
-ssh-keygen -t ed25519 -f ssci-deploy -C "ssci-deploy" -N ""
-```
+- Mac: buka Terminal, lalu `chmod 600 ~/Downloads/ssci-admin.pem` dan `ssh -i ~/Downloads/ssci-admin.pem ubuntu@<ip-server>`.
+- Windows 10/11: buka PowerShell, lalu `ssh -i $HOME\Downloads\ssci-admin.pem ubuntu@<ip-server>`.
 
-`ssci-deploy.pub` dipasang di server. `ssci-deploy` (kunci privat) nanti disimpan sebagai secret GitHub dan tidak ditaruh di tempat lain.
+Bila `ubuntu` ditolak, coba `root`. Saat pertama kali, ketik `yes` untuk mempercayai server.
 
-### 3. Siapkan server
+### 3. Jalankan skrip penyiapan
 
-Masuk sebagai root, salin `deploy/setup-server.sh` ke server, lalu:
-
-```bash
-bash setup-server.sh "$(cat ssci-deploy.pub)"
-```
-
-Sebelum menutup sesi root, pastikan `ssh -i ssci-deploy deploy@<ip-server>` berhasil. Setelah skrip ini, login root dan login dengan password dimatikan.
-
-### 4. Isi konfigurasi
-
-Sebagai pengguna `deploy`:
+Di dalam server:
 
 ```bash
-cd /opt/ssci
-# salin deploy/.env.example dari repositori menjadi .env di sini, lalu:
-nano .env
-chmod 600 .env
+curl -fsSL https://raw.githubusercontent.com/ilmanabidin1/ssci-sinergi/main/deploy/setup-server.sh -o setup-server.sh
+sudo SERVER_IP=<ip-server> bash setup-server.sh
 ```
 
-Catatan pengisian:
-- `MYSQL_PASSWORD` dan `MYSQL_ROOT_PASSWORD`: huruf dan angka saja, misalnya hasil `openssl rand -hex 24`.
-- `JWT_SECRET`: `openssl rand -hex 32`. Bila memakai nilai dari Railway, sesi pengguna yang sedang login tetap berlaku.
-- `OPENROUTER_API_KEY`: kosongkan bila fitur AI dimatikan agar tidak ada data yang dikirim ke luar negeri.
-- `BACKUP_PASSPHRASE`: simpan salinannya di luar server. Tanpa kata sandi ini backup tidak bisa dibuka.
+Skrip menanyakan email administrator awal, lalu:
+- memasang Docker, firewall, dan pembaruan keamanan otomatis, serta mematikan login SSH dengan password;
+- membuat pengguna `deploy` beserta kunci SSH khusus untuk GitHub Actions;
+- membuat `/opt/ssci/.env` berisi password database, `JWT_SECRET`, kata sandi backup, dan password admin awal, semuanya acak;
+- menampilkan alamat aplikasi dan password admin awal, serta menyimpan isian GitHub di `/root/ssci-setup/github-secrets.txt`.
 
-### 5. Arahkan domain
+Selama domain sendiri belum siap, alamat aplikasi memakai `<ip-dengan-strip>.sslip.io`, misalnya `139-190-104-30.sslip.io`, yang otomatis menunjuk ke IP server. Untuk memakai domain sendiri, ubah `SSCI_DOMAIN` di `/opt/ssci/.env` lalu jalankan `docker compose up -d` di `/opt/ssci`.
+
+Simpan dua hal di luar server: password admin awal dan `BACKUP_PASSPHRASE` dari `/opt/ssci/.env`. Tanpa `BACKUP_PASSPHRASE`, backup tidak bisa dibuka.
+
+Isian object storage (`BACKUP_S3_*`) dibiarkan kosong dulu dan diisi setelah bucket dibuat.
+
+### 4. Pindahkan isian ke GitHub
+
+`sudo cat /root/ssci-setup/github-secrets.txt` menampilkan empat isian untuk langkah 6. Setelah semuanya tersimpan di GitHub, hapus berkas itu: `sudo rm /root/ssci-setup/github-secrets.txt /root/ssci-setup/deploy_key`.
+
+### 5. Arahkan domain (bila memakai domain sendiri)
 
 Buat record A untuk domain di `SSCI_DOMAIN` ke IP server. Turunkan TTL ke 300 detik beberapa hari sebelum pindah supaya peralihan cepat.
 
@@ -85,10 +82,10 @@ Secrets:
 
 | Nama | Isi |
 |---|---|
-| `DEPLOY_HOST` | IP atau nama server |
-| `DEPLOY_USER` | `deploy` |
-| `DEPLOY_SSH_KEY` | Isi berkas `ssci-deploy` |
-| `DEPLOY_KNOWN_HOSTS` | Keluaran `ssh-keyscan -t ed25519 <ip-server>` |
+| `DEPLOY_HOST` | Dari `github-secrets.txt` |
+| `DEPLOY_USER` | Dari `github-secrets.txt` (`deploy`) |
+| `DEPLOY_SSH_KEY` | Dari `github-secrets.txt`, semua baris termasuk `BEGIN` dan `END` |
+| `DEPLOY_KNOWN_HOSTS` | Dari `github-secrets.txt` |
 
 Variables:
 
@@ -110,8 +107,8 @@ Lakukan di luar jam kerja dan umumkan jeda layanan sekitar 30 menit.
 
    ```bash
    mysqldump --single-transaction --routines --no-tablespaces -h <host> -P <port> -u <user> -p <database> | gzip > railway.sql.gz
-   scp -i ssci-deploy railway.sql.gz deploy@<ip-server>:/opt/ssci/
-   ssh -i ssci-deploy deploy@<ip-server>
+   scp -i ssci-admin.pem railway.sql.gz ubuntu@<ip-server>:/tmp/ && ssh -i ssci-admin.pem ubuntu@<ip-server> "sudo mv /tmp/railway.sql.gz /opt/ssci/"
+   ssh -i ssci-admin.pem ubuntu@<ip-server>
    cd /opt/ssci && docker compose stop app
    gunzip -c railway.sql.gz | docker compose exec -T db sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" exec mysql -u root ssci'
    ```
