@@ -40,10 +40,10 @@ Biznet Gio, Ubuntu 24.04, minimal 2 vCPU dan 4 GB RAM. Catat alamat IP-nya. Buat
 
 Pakai berkas kunci SSH yang diunduh saat memesan server (misalnya `ssci-admin.pem`).
 
-- Mac: buka Terminal, lalu `chmod 600 ~/Downloads/ssci-admin.pem` dan `ssh -i ~/Downloads/ssci-admin.pem ubuntu@<ip-server>`.
-- Windows 10/11: buka PowerShell, lalu `ssh -i $HOME\Downloads\ssci-admin.pem ubuntu@<ip-server>`.
+- Mac: buka Terminal, lalu `chmod 600 ~/Downloads/ssci-admin.pem` dan `ssh -i ~/Downloads/ssci-admin.pem sscisinergi@<ip-server>`.
+- Windows 10/11: buka PowerShell, lalu `ssh -i $HOME\Downloads\ssci-admin.pem sscisinergi@<ip-server>`.
 
-Bila `ubuntu` ditolak, coba `root`. Saat pertama kali, ketik `yes` untuk mempercayai server.
+Biznet Gio memakai nama layanan sebagai nama pengguna (untuk server SSCI: `sscisinergi`); `ubuntu` dan `root` ditolak. Saat pertama kali, ketik `yes` untuk mempercayai server.
 
 ### 3. Jalankan skrip penyiapan
 
@@ -107,8 +107,8 @@ Lakukan di luar jam kerja dan umumkan jeda layanan sekitar 30 menit.
 
    ```bash
    mysqldump --single-transaction --routines --no-tablespaces -h <host> -P <port> -u <user> -p <database> | gzip > railway.sql.gz
-   scp -i ssci-admin.pem railway.sql.gz ubuntu@<ip-server>:/tmp/ && ssh -i ssci-admin.pem ubuntu@<ip-server> "sudo mv /tmp/railway.sql.gz /opt/ssci/"
-   ssh -i ssci-admin.pem ubuntu@<ip-server>
+   scp -i ssci-admin.pem railway.sql.gz sscisinergi@<ip-server>:/tmp/ && ssh -i ssci-admin.pem sscisinergi@<ip-server> "sudo mv /tmp/railway.sql.gz /opt/ssci/"
+   ssh -i ssci-admin.pem sscisinergi@<ip-server>
    cd /opt/ssci && sudo docker compose stop app
    sudo gunzip -c railway.sql.gz | sudo docker compose exec -T db sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" exec mysql -u root ssci'
    ```
@@ -125,26 +125,35 @@ Lakukan di luar jam kerja dan umumkan jeda layanan sekitar 30 menit.
 4. Hapus `railway.sql.gz` dan `uploads.tar.gz` dari server dan komputer setelah impor selesai.
 5. Arahkan DNS ke server baru, lalu periksa: login, daftar pengajuan, membuka dokumen lama, unduh Excel dan PDF.
 
+### Catatan NEO Object Storage
+
+- Endpoint yang dipakai: `https://nos.wjv-1.neo.id` (Primary). Paket Multi Region 2 menyalin isi bucket ke `https://nos.jkt-1.neo.id`.
+- Bucket `ssci-backup` dengan ACL Private.
+- Access key dan secret key diisi langsung di `/opt/ssci/.env` lewat `read -s`, tidak lewat chat atau berkas lain. Bila backup gagal dengan `InvalidAccessKeyId`, periksa bahwa access key dan secret key tidak tertukar.
+
 ### 8. Setelah pindah
 
 - Pasang backup harian pukul 01.15 WIB:
 
   ```bash
-  (crontab -l 2>/dev/null; echo '15 1 * * * /opt/ssci/backup.sh >> /opt/ssci/backups/backup.log 2>&1') | crontab -
+  echo '15 1 * * * /opt/ssci/backup.sh >> /opt/ssci/backups/backup.log 2>&1' | sudo crontab -u deploy -
   ```
 
-- Jalankan `./backup.sh` sekali dengan tangan dan pastikan berkasnya muncul di bucket.
+- Jalankan `sudo -u deploy /opt/ssci/backup.sh` sekali dengan tangan dan pastikan berkasnya muncul di bucket.
 - Uji pemulihan sekali di server percobaan sebelum mengandalkannya.
 - Setelah satu sampai dua minggu stabil, putuskan sambungan repositori di Railway dan hapus database, volume, serta variabelnya, supaya tidak ada salinan data di Singapura.
 
 ## Operasional sehari-hari
 
-| Kebutuhan | Perintah (di `/opt/ssci`) |
+Folder `/opt/ssci` milik pengguna `deploy`. Dari akun admin (`sscisinergi`), jalankan perintah sebagai `deploy`, misalnya `sudo -u deploy bash -c 'cd /opt/ssci && docker compose ps'`, atau masuk dulu dengan `sudo -iu deploy` lalu `cd /opt/ssci`.
+
+| Kebutuhan | Perintah (sebagai `deploy`, di `/opt/ssci`) |
 |---|---|
 | Status layanan | `docker compose ps` |
 | Log aplikasi | `docker compose logs -f --tail 100 app` |
 | Mulai ulang aplikasi | `docker compose restart app` |
 | Backup sekarang | `./backup.sh` |
+| Log backup harian | `tail -n 30 backups/backup.log` |
 | Pulihkan | `./restore.sh backups/db-<tanggal>.sql.gz.gpg backups/uploads-<tanggal>.tar.gz.gpg` |
 | Kembali ke versi sebelumnya | `SSCI_IMAGE=ssci-sinergi:<12 huruf commit> docker compose up -d app` |
 
