@@ -1,0 +1,71 @@
+# SSCI di satu server: aplikasi, MySQL, dan proxy HTTPS.
+# Dijalankan dari /opt/ssci di server; nilai rahasia ada di berkas .env di folder yang sama.
+name: ssci
+
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ssci
+      MYSQL_USER: ssci
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?isi MYSQL_PASSWORD di .env}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?isi MYSQL_ROOT_PASSWORD di .env}
+      TZ: Asia/Jakarta
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    # Tidak ada "ports": database hanya bisa dijangkau dari dalam jaringan compose.
+
+  app:
+    image: ${SSCI_IMAGE:-ssci-sinergi:latest}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      DATABASE_URL: mysql://ssci:${MYSQL_PASSWORD}@db:3306/ssci
+      PORT: "8080"
+      UPLOAD_DIR: /data/uploads
+      TZ: Asia/Jakarta
+    volumes:
+      - uploads:/data/uploads
+
+  # Migrasi database; dijalankan sekali per deploy: docker compose run --rm migrate
+  migrate:
+    image: ${SSCI_IMAGE:-ssci-sinergi:latest}
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://ssci:${MYSQL_PASSWORD}@db:3306/ssci
+    command: ["node_modules/.bin/drizzle-kit", "migrate"]
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SSCI_DOMAIN: ${SSCI_DOMAIN:?isi SSCI_DOMAIN di .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  db_data:
+  uploads:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,15 @@
+node_modules
+**/node_modules
+dist
+.git
+.github
+.env
+.env.*
+!.env.example
+deploy/.env
+docs
+mobile
+*.pdf
+*.docx
+UI_UX_AUDIT.md
+todo.md

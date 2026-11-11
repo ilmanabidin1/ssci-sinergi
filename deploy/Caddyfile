@@ -1,0 +1,11 @@
+# Sertifikat HTTPS diurus otomatis oleh Caddy (Let's Encrypt) untuk domain di SSCI_DOMAIN.
+{$SSCI_DOMAIN} {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+	reverse_proxy app:8080
+}

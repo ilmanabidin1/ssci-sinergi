@@ -9,7 +9,7 @@ export const ENV = {
   forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
   openRouterApiKey: process.env.OPENROUTER_API_KEY ?? "",
   openRouterBaseUrl:
-    process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1",
+    process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1",
   pilotAdminEmail: process.env.PILOT_ADMIN_EMAIL ?? "",
   pilotAdminPassword: process.env.PILOT_ADMIN_PASSWORD ?? "",
   enforceTwoFactor: process.env.ENFORCE_TWO_FACTOR !== "false",
