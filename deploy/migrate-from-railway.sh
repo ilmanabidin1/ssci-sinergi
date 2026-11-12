@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Menyalin data SSCI dari Railway ke server ini: database lengkap dan berkas unggahan.
 # Jalankan dari akun admin server:
-#   sudo -u deploy /opt/ssci/migrate-from-railway.sh https://ssci-sinergi-production.up.railway.app
+#   sudo -u deploy /opt/ssci/migrate-from-railway.sh https://ssci-sinergi-production.up.railway.app viaduct.proxy.rlwy.net:31140
+# Argumen kedua (alamat publik database) boleh dikosongkan bila yang ditempel sudah MYSQL_PUBLIC_URL.
 #
 # Ditanyakan saat berjalan (tidak disimpan dan tidak tampil di layar):
 #   - MYSQL_PUBLIC_URL dari layanan MySQL di Railway (tab Variables)
@@ -20,6 +21,9 @@ umask 077
 
 APP_URL="${1:?Sebutkan alamat aplikasi Railway, misalnya https://ssci-sinergi-production.up.railway.app}"
 APP_URL="${APP_URL%/}"
+# Opsional: alamat publik database Railway (host:port dari TCP proxy). Bila diisi, alamat
+# internal (mysql.railway.internal:3306) dari MYSQL_URL atau DATABASE_URL otomatis diganti.
+DB_PROXY="${2:-}"
 
 read -rsp "MYSQL_PUBLIC_URL dari Railway: " DB_URL; echo
 read -rsp "JWT_SECRET dari Railway: " RAILWAY_JWT; echo
@@ -30,6 +34,17 @@ DB_URL="$(clean "$DB_URL")"
 RAILWAY_JWT="$(clean "$RAILWAY_JWT")"
 RAILWAY_JWT="${RAILWAY_JWT#JWT_SECRET=}"
 
+if [[ "$DB_URL" == *railway.internal* ]]; then
+  if [[ "$DB_PROXY" =~ ^[A-Za-z0-9.-]+:[0-9]+$ ]]; then
+    DB_URL="$(printf '%s' "$DB_URL" | sed -E "s#@[^/@]*railway\.internal(:[0-9]+)?#@$DB_PROXY#")"
+    echo "Alamat internal Railway diganti dengan alamat publik $DB_PROXY."
+  else
+    echo "Ini alamat internal Railway. Jalankan ulang dengan alamat publiknya sebagai argumen kedua," >&2
+    echo "misalnya: $0 $APP_URL viaduct.proxy.rlwy.net:31140" >&2
+    exit 1
+  fi
+fi
+
 if [[ ! "$DB_URL" =~ ^mysql://([^:]+):([^@]+)@([^:/]+):([0-9]+)(/([^?]*))?$ ]] && [[ ! "$DB_URL" =~ ^mysql://([^:]+):([^@]+)@([^:/]+):([0-9]+)(/([^?]*))?\? ]]; then
   echo "Alamat tidak dikenali. Bentuknya harus mysql://pengguna:password@host:port/database" >&2
   if [ -z "$DB_URL" ]; then
@@ -39,10 +54,6 @@ if [[ ! "$DB_URL" =~ ^mysql://([^:]+):([^@]+)@([^:/]+):([0-9]+)(/([^?]*))?$ ]] &
     shape="$(printf '%s' "$DB_URL" | sed -E 's#(://[^:]*:)[^@]*@#\1***@#' | sed -E 's/[A-Za-z]/a/g; s/[0-9]/9/g')"
     echo "Bentuk yang tertempel (${#DB_URL} karakter): $shape" >&2
   fi
-  exit 1
-fi
-if [[ "$DB_URL" == *railway.internal* ]]; then
-  echo "Ini alamat internal Railway. Pakai MYSQL_PUBLIC_URL (berisi proxy.rlwy.net)." >&2
   exit 1
 fi
 R_USER="${BASH_REMATCH[1]}"; R_PASS="${BASH_REMATCH[2]}"; R_HOST="${BASH_REMATCH[3]}"
