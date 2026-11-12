@@ -8,7 +8,7 @@ Aplikasi web **full-stack TypeScript** dengan dua bagian:
 - **Frontend:** React 19 + Vite + Tailwind CSS v4 + shadcn/ui.
 - **Backend:** Express + tRPC v11, database MySQL lewat Drizzle ORM, AI lewat OpenRouter.
 
-Aplikasi di-deploy ke **Railway** (region Singapura) sebagai satu service yang menyajikan API sekaligus halaman web.
+Aplikasi berjalan di **server sendiri di Biznet Gio (Jawa Barat, Indonesia)** dengan Docker: satu layanan yang menyajikan API sekaligus halaman web, MySQL, dan Caddy untuk HTTPS. Sampai November 2026 aplikasi berjalan di Railway (Singapura); layanan Railway kini hanya mengalihkan pengunjung ke alamat baru.
 
 ## Arsitektur
 
@@ -18,7 +18,7 @@ Browser (React SPA)
    ▼
 Express server (Node.js, ESM)
    ├── /api/trpc/*        → router tRPC (server/routers.ts)
-   ├── /api/health        → health check Railway
+   ├── /api/health        → pemeriksaan kesehatan (deploy dan Docker)
    ├── /uploads/*         → berkas unggahan (volume /data/uploads)
    └── static client      → hasil build Vite
    │
@@ -109,13 +109,15 @@ AI hanya alat bantu. Skor SSCI dan skor format BPRS dihitung dengan aturan deter
 
 | Area | Detail |
 |---|---|
-| Hosting | Railway, region Singapura (`asia-southeast1`), builder Railpack |
-| Build | `pnpm build` (Vite untuk client, esbuild untuk server) |
-| Pra-deploy | `pnpm db:migrate` (migrasi Drizzle) |
-| Start | `pnpm start` (`NODE_ENV=production node dist/index.js`) |
+| Hosting | Biznet Gio NEO Lite MS 4.2 (2 vCPU, 4 GB), region West Java, Ubuntu 24.04 |
+| Kemasan | Docker Compose: aplikasi, MySQL 8, Caddy (HTTPS otomatis); berkas di `deploy/` |
+| Build | `pnpm build` di dalam `deploy/Dockerfile` (Vite untuk client, esbuild untuk server) |
+| Migrasi | `drizzle-kit migrate`, dijalankan setiap deploy sebelum aplikasi dinyalakan |
 | Health check | `GET /api/health` |
 | Package manager | pnpm 10 |
-| Alur rilis | push ke `main`, lalu Railway build dan deploy otomatis |
+| Alur rilis | push ke `main`, lalu GitHub Actions menjalankan typecheck dan tes, membangun image, mengirimnya ke server lewat SSH, dan menyalakannya |
+| Backup | Harian pukul 01.15 WIB, terenkripsi (gpg), disalin ke NEO Object Storage Multi Region (West Java dan Jakarta) |
+| Panduan | `docs/DEPLOY_BIZNET.md` |
 
 ### Variabel lingkungan utama
 
