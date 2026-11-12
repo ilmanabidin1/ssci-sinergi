@@ -171,5 +171,5 @@ Backup disimpan 7 hari di server dan 30 hari di object storage; keduanya bisa di
 
 - **Akun demo:** saat pertama kali dijalankan, aplikasi membuat tiga akun demo (`analis@bprs.id`, `komite@bprs.id`, `admin@bprs.id`) dengan password yang tertulis di kode sumber. Di server produksi baru, akun ini harus dinonaktifkan atau diganti passwordnya, atau pembuatannya dimatikan di kode sebelum pindah.
 - **Berkas unggahan dapat dibuka tanpa login** bila alamatnya diketahui (`/uploads/...`). Ini masalah yang sudah ada sebelumnya dan tidak berubah dengan pindah hosting.
-- **Pemantauan belum ada.** Bila server mati, tidak ada yang memberi tahu. Pasang pemantau uptime ke `https://<domain>/api/health`.
+- **Pemantauan:** `.github/workflows/monitor.yml` memeriksa `https://ssci-sinergi.id/api/health` dan masa berlaku sertifikat setiap 10 menit, serta kontainer, disk, memori, backup harian, dan kebutuhan restart setiap pukul 07.20 WIB. Masalah dilaporkan sebagai issue berlabel `monitor` di GitHub (dikirim juga ke email) dan issue ditutup otomatis saat normal kembali. Jadwal GitHub bisa terlambat beberapa menit, dan GitHub menghentikan jadwal pada repositori yang tidak ada aktivitas selama 60 hari.
 - **Pembaruan MySQL dan Caddy** tidak otomatis: jalankan `docker compose pull && docker compose up -d` secara berkala.

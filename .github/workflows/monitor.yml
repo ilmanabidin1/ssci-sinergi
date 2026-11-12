@@ -1,0 +1,152 @@
+# Pemantauan SSCI produksi.
+# - Setiap 10 menit: https://ssci-sinergi.id/api/health harus menjawab, sertifikat HTTPS masih berlaku > 14 hari.
+# - Setiap hari 07.20 WIB: lewat SSH, periksa kontainer, sisa disk, memori, backup harian, dan kebutuhan restart.
+# Bila ada yang gagal, workflow membuka issue berlabel "monitor" (atau menambah komentar pada issue yang
+# masih terbuka). GitHub mengirim email untuk issue baru dan untuk workflow terjadwal yang gagal.
+# Issue ditutup otomatis saat pemeriksaan berikutnya kembali normal.
+name: Monitor
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+    inputs:
+      daily:
+        description: "Jalankan juga pemeriksaan harian (SSH)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  SITE: https://ssci-sinergi.id
+
+jobs:
+  uptime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Periksa aplikasi dan sertifikat
+        id: check
+        run: |
+          problems=""
+          ok=0
+          for i in 1 2 3; do
+            if curl -fsS --max-time 15 "$SITE/api/health" | grep -q '"ok":true'; then ok=1; break; fi
+            sleep 20
+          done
+          [ "$ok" = 1 ] || problems="${problems}- Aplikasi tidak menjawab di $SITE/api/health (3 kali percobaan, jeda 20 detik).\n"
+          host="${SITE#https://}"
+          end=$(echo | openssl s_client -connect "$host:443" -servername "$host" 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | cut -d= -f2)
+          if [ -z "$end" ]; then
+            problems="${problems}- Sertifikat HTTPS tidak bisa dibaca.\n"
+          else
+            days=$(( ( $(date -d "$end" +%s) - $(date +%s) ) / 86400 ))
+            echo "Sertifikat berlaku $days hari lagi."
+            [ "$days" -ge 14 ] || problems="${problems}- Sertifikat HTTPS tinggal $days hari (seharusnya diperbarui otomatis oleh Caddy).\n"
+          fi
+          printf '%b' "$problems" > problems.txt
+          [ -s problems.txt ] && { cat problems.txt; echo "failed=1" >> "$GITHUB_OUTPUT"; } || echo "Semua normal."
+      - name: Laporkan
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAILED: ${{ steps.check.outputs.failed }}
+          TITLE: "Pemantauan: ssci-sinergi.id tidak sehat"
+        run: |
+          gh label create monitor --color B60205 --description "Laporan otomatis pemantauan server" -R "$GITHUB_REPOSITORY" 2>/dev/null || true
+          open=$(gh issue list -R "$GITHUB_REPOSITORY" --label monitor --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number')
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          if [ "$FAILED" = 1 ]; then
+            body="$(printf 'Waktu: %s WIB\n\n%s\nRincian: %s' "$(TZ=Asia/Jakarta date '+%d-%m-%Y %H:%M')" "$(cat problems.txt 2>/dev/null)" "$run_url")"
+            if [ -n "$open" ]; then gh issue comment "$open" -R "$GITHUB_REPOSITORY" --body "$body"
+            else gh issue create -R "$GITHUB_REPOSITORY" --label monitor --title "$TITLE" --body "$body"; fi
+            exit 1
+          elif [ -n "$open" ]; then
+            gh issue close "$open" -R "$GITHUB_REPOSITORY" --comment "Kembali normal pada $(TZ=Asia/Jakarta date '+%d-%m-%Y %H:%M') WIB."
+          fi
+
+  daily:
+    if: github.event.schedule == '20 0 * * *' || (github.event_name == 'workflow_dispatch' && inputs.daily)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Siapkan SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+      - name: Periksa server
+        id: check
+        env:
+          TARGET: ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}
+        run: |
+          : > problems.txt
+          set +e
+          ssh -i ~/.ssh/id_deploy -o StrictHostKeyChecking=yes -o ConnectTimeout=20 "$TARGET" 'bash -s' > report.txt 2>&1 <<'REMOTE'
+          set -u
+          cd /opt/ssci
+          p() { echo "- $*" >> /tmp/ssci-problems.txt; }
+          : > /tmp/ssci-problems.txt
+          for svc in app db caddy; do
+            state=$(docker compose ps --format '{{.Service}} {{.State}} {{.Health}}' | awk -v s="$svc" '$1==s{print $2, $3}')
+            case "$state" in running*unhealthy*) p "Layanan $svc berjalan tetapi tidak sehat.";; running*) ;; *) p "Layanan $svc tidak berjalan (${state:-tidak ada}).";; esac
+          done
+          disk=$(df --output=pcent / | tail -1 | tr -dc 0-9)
+          echo "Disk terpakai: $disk%"
+          [ "$disk" -lt 85 ] || p "Disk terpakai $disk%. Hapus image lama: docker image prune -a, atau tambah kapasitas."
+          mem=$(free | awk '/Mem:/{printf "%d", ($2-$7)*100/$2}')
+          echo "Memori terpakai: $mem%"
+          [ "$mem" -lt 90 ] || p "Memori terpakai $mem%."
+          newest=$(ls -t backups/db-*.gpg 2>/dev/null | head -1)
+          if [ -z "$newest" ]; then p "Tidak ada berkas backup database.";
+          else
+            age=$(( ( $(date +%s) - $(stat -c %Y "$newest") ) / 3600 ))
+            echo "Backup terbaru: $newest ($age jam lalu)"
+            [ "$age" -le 26 ] || p "Backup terakhir $age jam lalu; backup harian tidak berjalan."
+          fi
+          last=$(tail -n 1 backups/backup.log 2>/dev/null || true)
+          case "$last" in *Selesai*) ;; *) p "Baris terakhir log backup bukan 'Selesai': ${last:-log kosong}";; esac
+          if [ -f /var/run/reboot-required ]; then
+            echo "Server perlu restart untuk pembaruan keamanan."
+            since=$(( ( $(date +%s) - $(stat -c %Y /var/run/reboot-required) ) / 86400 ))
+            [ "$since" -lt 7 ] || p "Server menunggu restart untuk pembaruan keamanan sejak $since hari. Jalankan: sudo reboot"
+          fi
+          cat /tmp/ssci-problems.txt >&2
+          exit 0
+          REMOTE
+          rc=$?
+          set -e
+          cat report.txt
+          [ "$rc" -eq 0 ] || echo "- Tidak bisa menjalankan pemeriksaan di server lewat SSH (kode $rc)." >> problems.txt
+          grep '^- ' report.txt >> problems.txt 2>/dev/null || true
+          if [ -s problems.txt ]; then echo "failed=1" >> "$GITHUB_OUTPUT"; else echo "Semua normal."; fi
+      - name: Laporkan
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAILED: ${{ steps.check.outputs.failed }}
+          TITLE: "Pemantauan harian: server SSCI perlu perhatian"
+        run: |
+          gh label create monitor --color B60205 --description "Laporan otomatis pemantauan server" -R "$GITHUB_REPOSITORY" 2>/dev/null || true
+          open=$(gh issue list -R "$GITHUB_REPOSITORY" --label monitor --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number')
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          if [ "$FAILED" = 1 ]; then
+            body="$(printf 'Waktu: %s WIB\n\n%s\n\nRincian: %s' "$(TZ=Asia/Jakarta date '+%d-%m-%Y %H:%M')" "$(sort -u problems.txt)" "$run_url")"
+            if [ -n "$open" ]; then gh issue comment "$open" -R "$GITHUB_REPOSITORY" --body "$body"
+            else gh issue create -R "$GITHUB_REPOSITORY" --label monitor --title "$TITLE" --body "$body"; fi
+            exit 1
+          elif [ -n "$open" ]; then
+            gh issue close "$open" -R "$GITHUB_REPOSITORY" --comment "Kembali normal pada $(TZ=Asia/Jakarta date '+%d-%m-%Y %H:%M') WIB."
+          fi
