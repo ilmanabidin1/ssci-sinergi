@@ -7,7 +7,7 @@ const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const target = (process.env.SSCI_NEW_URL || "https://139-190-104-30.sslip.io").replace(/\/$/, "");
+const target = (process.env.SSCI_NEW_URL || "https://ssci-sinergi.id").replace(/\/$/, "");
 const uploadDir = process.env.UPLOAD_DIR || "/data/uploads";
 const port = Number(process.env.PORT) || 8080;
 

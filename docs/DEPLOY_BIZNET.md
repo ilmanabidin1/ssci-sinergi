@@ -131,6 +131,14 @@ Lakukan di luar jam kerja dan umumkan jeda layanan sekitar 30 menit.
 - Bucket `ssci-backup` dengan ACL Private.
 - Access key dan secret key diisi langsung di `/opt/ssci/.env` lewat `read -s`, tidak lewat chat atau berkas lain. Bila backup gagal dengan `InvalidAccessKeyId`, periksa bahwa access key dan secret key tidak tertukar.
 
+### Domain
+
+- Alamat produksi: `https://ssci-sinergi.id` (juga `www.ssci-sinergi.id`). Alamat `139-190-104-30.sslip.io` tetap dilayani selama masa peralihan.
+- Domain dibeli di Biznet Gio. DNS Biznet (NEO DNS) menolak query untuk domain ini, jadi nameserver dipindah ke Cloudflare (`julian.ns.cloudflare.com`, `haley.ns.cloudflare.com`).
+- Record A `@` dan `www` ke IP server, dengan Proxy status **DNS only**. Jangan nyalakan proxy (awan oranye): lalu lintas, termasuk data nasabah, akan didekripsi di server Cloudflare di luar negeri.
+- Daftar nama yang dilayani diatur di `SSCI_DOMAIN` pada `/opt/ssci/.env` (dipisah koma). Setelah diubah: `docker compose up -d` sebagai `deploy`.
+- Layanan Railway lama mengalihkan semua halaman ke alamat di variabel `SSCI_NEW_URL`.
+
 ### 8. Setelah pindah
 
 - Pasang backup harian pukul 01.15 WIB:

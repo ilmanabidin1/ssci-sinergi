@@ -110,6 +110,7 @@ AI hanya alat bantu. Skor SSCI dan skor format BPRS dihitung dengan aturan deter
 | Area | Detail |
 |---|---|
 | Hosting | Biznet Gio NEO Lite MS 4.2 (2 vCPU, 4 GB), region West Java, Ubuntu 24.04 |
+| Alamat | https://ssci-sinergi.id (domain di Biznet Gio, DNS di Cloudflare tanpa proxy) |
 | Kemasan | Docker Compose: aplikasi, MySQL 8, Caddy (HTTPS otomatis); berkas di `deploy/` |
 | Build | `pnpm build` di dalam `deploy/Dockerfile` (Vite untuk client, esbuild untuk server) |
 | Migrasi | `drizzle-kit migrate`, dijalankan setiap deploy sebelum aplikasi dinyalakan |
