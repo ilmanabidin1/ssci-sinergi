@@ -1,10 +1,12 @@
+# SSCI sudah pindah ke server di Indonesia (lihat docs/DEPLOY_BIZNET.md).
+# Layanan Railway kini hanya mengalihkan pengunjung ke alamat baru dan melayani /uploads
+# untuk penyalinan berkas terakhir. Database Railway tidak lagi dipakai aplikasi.
 [build]
 builder = "RAILPACK"
-buildCommand = "pnpm build"
+buildCommand = "true"
 
 [deploy]
-preDeployCommand = ["pnpm db:migrate"]
-startCommand = "pnpm start"
+startCommand = "node deploy/railway-moved.cjs"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 120
 restartPolicyType = "ON_FAILURE"
