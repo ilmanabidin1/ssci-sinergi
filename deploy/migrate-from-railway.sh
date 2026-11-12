@@ -24,12 +24,29 @@ APP_URL="${APP_URL%/}"
 read -rsp "MYSQL_PUBLIC_URL dari Railway: " DB_URL; echo
 read -rsp "JWT_SECRET dari Railway: " RAILWAY_JWT; echo
 
-if [[ ! "$DB_URL" =~ ^mysql://([^:]+):([^@]+)@([^:/]+):([0-9]+)/([^?]+) ]]; then
+# Bersihkan sisa salinan: spasi, baris baru Windows, tanda kutip, dan awalan "MYSQL_PUBLIC_URL=".
+clean() { local v="$1"; v="${v//$'\r'/}"; v="${v#"${v%%[![:space:]]*}"}"; v="${v%"${v##*[![:space:]]}"}"; v="${v#*_URL=}"; v="${v#[\"\']}"; v="${v%[\"\']}"; printf '%s' "$v"; }
+DB_URL="$(clean "$DB_URL")"
+RAILWAY_JWT="$(clean "$RAILWAY_JWT")"
+RAILWAY_JWT="${RAILWAY_JWT#JWT_SECRET=}"
+
+if [[ ! "$DB_URL" =~ ^mysql://([^:]+):([^@]+)@([^:/]+):([0-9]+)(/([^?]*))?$ ]] && [[ ! "$DB_URL" =~ ^mysql://([^:]+):([^@]+)@([^:/]+):([0-9]+)(/([^?]*))?\? ]]; then
   echo "Alamat tidak dikenali. Bentuknya harus mysql://pengguna:password@host:port/database" >&2
+  if [ -z "$DB_URL" ]; then
+    echo "Yang tertempel kosong. Salin ulang nilai MYSQL_PUBLIC_URL, lalu tempel dengan Cmd+V." >&2
+  else
+    # Tampilkan bentuknya saja: huruf menjadi a, angka menjadi 9, password disembunyikan.
+    shape="$(printf '%s' "$DB_URL" | sed -E 's#(://[^:]*:)[^@]*@#\1***@#' | sed -E 's/[A-Za-z]/a/g; s/[0-9]/9/g')"
+    echo "Bentuk yang tertempel (${#DB_URL} karakter): $shape" >&2
+  fi
+  exit 1
+fi
+if [[ "$DB_URL" == *railway.internal* ]]; then
+  echo "Ini alamat internal Railway. Pakai MYSQL_PUBLIC_URL (berisi proxy.rlwy.net)." >&2
   exit 1
 fi
 R_USER="${BASH_REMATCH[1]}"; R_PASS="${BASH_REMATCH[2]}"; R_HOST="${BASH_REMATCH[3]}"
-R_PORT="${BASH_REMATCH[4]}"; R_DB="${BASH_REMATCH[5]}"
+R_PORT="${BASH_REMATCH[4]}"; R_DB="${BASH_REMATCH[6]:-railway}"
 if [ "${#RAILWAY_JWT}" -lt 32 ]; then
   echo "JWT_SECRET terlalu pendek atau kosong (minimal 32 karakter)." >&2
   exit 1
