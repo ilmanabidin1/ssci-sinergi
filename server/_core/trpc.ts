@@ -118,7 +118,8 @@ export const superAdminProcedure = t.procedure.use(
     const { ctx, next } = opts;
     if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED", message: UNAUTHED_ERR_MSG });
     if (!isSuperAdmin(ctx.user)) throw new TRPCError({ code: "FORBIDDEN", message: "Khusus SuperAdmin platform" });
-    if (!ctx.user.twoFactorEnabled) {
+    // Mengikuti sakelar yang sama dengan admin dan checker: ENFORCE_TWO_FACTOR=false mematikan kewajiban 2FA.
+    if (ENV.enforceTwoFactor && !ctx.user.twoFactorEnabled) {
       throw new TRPCError({ code: "FORBIDDEN", message: "TWO_FACTOR_REQUIRED: SuperAdmin wajib mengaktifkan autentikasi dua faktor." });
     }
     return next({ ctx: { ...ctx, user: ctx.user } });
