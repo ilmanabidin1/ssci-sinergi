@@ -21,7 +21,7 @@ export function ProfileMenu() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="gap-2 px-2" aria-label={`Menu akun ${user?.name ?? ""}`.trim()}>
           <CircleUserRound className="h-5 w-5 text-slate-500" aria-hidden="true" />
-          <span className="hidden max-w-40 truncate text-sm text-slate-700 sm:inline">{user?.name || "Akun"}</span>
+          <span className="hidden max-w-40 truncate text-sm text-slate-700 sm:inline lg:hidden xl:inline">{user?.name || "Akun"}</span>
           <ChevronDown className="h-4 w-4 text-slate-500" aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>

@@ -21,6 +21,7 @@ const baseLinks: NavLink[] = [
   { href: "/nasabah", label: "Nasabah", Icon: Users, match: path => path.startsWith("/nasabah") },
 ];
 
+// Juga tersedia di menu profil, jadi di bilah atas desktop hanya tampil bila layar cukup lebar.
 const adminLinks: NavLink[] = [
   { href: "/tim", label: "Tim", Icon: UsersRound, match: path => path.startsWith("/tim") },
   { href: "/audit", label: "Log audit", Icon: ScrollText, match: path => path.startsWith("/audit") },
@@ -54,7 +55,8 @@ export function AppHeader() {
   const orgQuery = trpc.organization.getSettings.useQuery(undefined, { retry: false, enabled: !!user });
   const orgName = orgQuery.data?.name;
   const orgLogo = orgQuery.data?.logoUrl;
-  const links = user?.role === "admin" ? [...baseLinks, ...adminLinks] : baseLinks;
+  const isAdmin = user?.role === "admin";
+  const links = isAdmin ? [...baseLinks, ...adminLinks] : baseLinks;
   const displayName = orgName || "SSCI BPRS";
 
   return (
@@ -65,20 +67,23 @@ export function AppHeader() {
         <Link
           href="/dashboard"
           aria-label={`${displayName}: ke dashboard`}
+          title={displayName}
           className={`flex min-w-0 items-center gap-3 rounded-lg pointer-coarse:min-h-11 ${headerFocus}`}
         >
           <img src={orgLogo || "/logo-dark-bg.png"} alt={orgLogo ? `Logo ${displayName}` : "SSCI"} className="h-10 w-auto shrink-0" />
-          <span className="max-w-[40vw] truncate font-serif text-sm sm:text-lg md:max-w-xs">{displayName}</span>
+          {/* Nama organisasi boleh dua baris agar nama panjang tidak terpotong di tengah kata. */}
+          <span className="line-clamp-2 max-w-[44vw] font-serif text-sm leading-tight sm:text-base lg:max-w-[12rem] xl:max-w-[16rem]">{displayName}</span>
         </Link>
-        <nav aria-label="Navigasi utama" className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Navigasi utama" className="hidden min-w-0 items-center gap-0.5 lg:flex">
           {links.map(({ href, label, Icon, match }) => {
             const active = match(location);
+            const adminOnly = adminLinks.some(link => link.href === href);
             return (
               <Link
                 key={href}
                 href={href}
                 aria-current={active ? "page" : undefined}
-                className={`relative flex items-center gap-2 rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${headerFocus} ${active ? "bg-white/10 text-gold-300" : "text-navy-200 hover:bg-white/5 hover:text-white"}`}
+                className={`relative items-center gap-2 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors ${adminOnly ? "hidden 2xl:flex" : "flex"} ${headerFocus} ${active ? "bg-white/10 text-gold-300" : "text-navy-200 hover:bg-white/5 hover:text-white"}`}
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />
                 {label}
@@ -99,7 +104,7 @@ export function AppHeader() {
               key={href}
               href={href}
               aria-current={active ? "page" : undefined}
-              className={`flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-medium ${headerFocus} ${active ? "bg-white/10 text-gold-300" : "text-navy-200"}`}
+              className={`flex min-h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium ${headerFocus} ${active ? "bg-white/10 text-gold-300" : "text-navy-200"}`}
             >
               <Icon className="h-4 w-4" aria-hidden="true" />
               {label}
