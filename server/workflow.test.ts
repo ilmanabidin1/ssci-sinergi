@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeCompleteness, documentLabel, nextAction, stageFor, syncLegalDocuments } from "@shared/workflow";
+import { computeCompleteness, documentLabel, latestStatusByType, nextAction, stageFor, syncLegalDocuments } from "@shared/workflow";
 
 const base = {
   status: "pending",
@@ -119,5 +119,21 @@ describe("nama dokumen pada badan hukum", () => {
     expect(perorangan.items.find(i => i.key === "dokumen_unggah")!.hint).toBe("Belum ada: KTP, NPWP, NIB");
     expect(documentLabel("KTP")).toBe("KTP");
     expect(documentLabel("ktp", true)).toBe("KTP penanggung jawab");
+  });
+});
+
+describe("status dokumen terbaru", () => {
+  it("memakai unggahan terbaru, jadi unggahan ulang menggantikan yang ditolak", () => {
+    const docs = [
+      { documentType: "KTP", status: "verified" },
+      { documentType: "ktp", status: "rejected" },
+      { documentType: "NPWP", status: "uploaded" },
+    ];
+    const map = latestStatusByType(docs);
+    expect(map.get("KTP")).toBe("verified");
+    expect(map.get("NPWP")).toBe("uploaded");
+    const result = computeCompleteness({ ...base, track: "ringkas", documents: docs });
+    expect(result.readyToAssess).toBe(true);
+    expect(result.items.find(i => i.key === "verifikasi")!.done).toBe(true);
   });
 });

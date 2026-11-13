@@ -21,7 +21,8 @@ import { ENV } from "./_core/env";
 import { CONTENT_TYPES, DOCUMENT_TYPES, decodeDocumentData, sanitizeOriginalName, storeDocument } from "./documentUpload";
 import { isSameActor, maskNik } from "@shared/privacy";
 import { runSensitivity } from "./sensitivity";
-import { determineReviewTrack, evaluateExitGate } from "@shared/reviewTrack";
+import { determineReviewTrack, evaluateExitGate, TRACK_REQUIREMENTS } from "@shared/reviewTrack";
+import { DEMO_DOCUMENT_PREFIX, makeSampleDocumentPdf, makeSampleSurveyPng } from "./demoDocuments";
 import { computeCompleteness, syncLegalDocuments } from "@shared/workflow";
 import { buildEnrollment, clearLoginFailures, decryptSecret, encryptSecret, generateTotpSecret, isLoginLocked, recordLoginFailure, verifyTotp } from "./twoFactor";
 import { AiInputError, AiProviderError, blockingIssues, checkApplicationConsistency, mergeFallbackRecommendation, mergeRiskFactors, ruleConsistencyIssues, checkShariaConformity, documentExtractionInputSchema, extractSupportingDocument, generateCommitteeBrief, type ApplicationSnapshot, bankStatementInputSchema, readBankStatement, draftBprsNarrative, explainScoreComparison } from "./aiAssist";
@@ -240,6 +241,7 @@ export const appRouter = router({
       return {
         ...toSafeUser(ctx.user),
         needsTwoFactorSetup: needsTwoFactorSetup(ctx.user),
+        demoTools: ENV.demoTools,
         isSuperAdmin: isSuperAdmin(ctx.user),
       };
     }),
@@ -1313,6 +1315,71 @@ export const appRouter = router({
       const id = await db.createDocumentFile({ organizationId: ctx.user.organizationId, applicationId: input.applicationId, documentType: input.documentType, originalName: sanitizeOriginalName(input.originalName), storedName, contentType: input.contentType, sizeBytes: bytes.length, uploadedBy: ctx.user.id, status: "uploaded" });
       if (!id) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Dokumen gagal disimpan. Coba unggah ulang." });
       return { id, storedName };
+    }),
+    /**
+     * Uji coba dan demo: melengkapi dokumen wajib dan foto survei dengan berkas contoh yang sudah
+     * terverifikasi. Berkas bertanda "CONTOH" dan setiap pemakaian tercatat di log audit.
+     */
+    fillDemo: makerProcedure.input(z.object({ applicationId: z.number().int().positive() })).mutation(async ({ input, ctx }) => {
+      if (!ENV.demoTools) throw new TRPCError({ code: "FORBIDDEN", message: "Fitur isi contoh dimatikan di server ini." });
+      const application = await loadApplicationOrThrow(input.applicationId, ctx.user.organizationId);
+      if (BPRS_LOCKED_STATUSES.has(application.status)) {
+        throw new TRPCError({ code: "BAD_REQUEST", message: "Pengajuan sudah diputuskan atau dibatalkan." });
+      }
+      const requirements = TRACK_REQUIREMENTS[determineReviewTrack(application)];
+      const badan = isBadanUsaha(application.productSegment);
+      const [documents, photos] = await Promise.all([
+        db.getDocumentFiles(application.id, ctx.user.organizationId),
+        db.listSurveyPhotos(ctx.user.organizationId, application.id),
+      ]);
+      let uploaded = 0;
+      let verified = 0;
+      for (const type of requirements.verifiedDocuments) {
+        const latest = documents.find(d => d.documentType.toUpperCase() === type);
+        if (latest?.status === "verified") continue;
+        let documentId = latest?.status === "uploaded" ? latest.id : null;
+        if (!documentId) {
+          const bytes = await makeSampleDocumentPdf(type, badan);
+          const storedName = await storeDocument(bytes, "application/pdf");
+          documentId = (await db.createDocumentFile({
+            organizationId: ctx.user.organizationId,
+            applicationId: application.id,
+            documentType: type as (typeof DOCUMENT_TYPES)[number],
+            originalName: `${DEMO_DOCUMENT_PREFIX}${type}.pdf`,
+            storedName,
+            contentType: "application/pdf",
+            sizeBytes: bytes.length,
+            uploadedBy: ctx.user.id,
+            status: "uploaded",
+          })) ?? null;
+          if (!documentId) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Dokumen contoh gagal disimpan." });
+          uploaded++;
+        }
+        await db.updateDocumentVerification({ id: documentId, organizationId: ctx.user.organizationId, status: "verified", verifiedBy: ctx.user.id });
+        verified++;
+      }
+      let photosAdded = 0;
+      for (let i = photos.length; i < requirements.minSurveyPhotos; i++) {
+        const storedName = await storeSurveyImage(makeSampleSurveyPng(), "image/png");
+        await db.createSurveyPhoto({
+          organizationId: ctx.user.organizationId,
+          applicationId: application.id,
+          uploadedBy: ctx.user.id,
+          storedName,
+          contentType: "image/png",
+          caption: "Foto survei contoh (bukan foto lapangan asli)",
+        });
+        photosAdded++;
+      }
+      await db.recordAuditEvent({
+        organizationId: ctx.user.organizationId,
+        actorUserId: ctx.user.id,
+        action: "DEMO_DOCUMENTS_FILLED",
+        entityType: "application",
+        entityId: application.id,
+        metadata: { uploaded, verified, photosAdded },
+      });
+      return { uploaded, verified, photosAdded };
     }),
     listDocuments: protectedProcedure.input(z.object({ applicationId: z.number().int().positive() })).query(({ input, ctx }) => db.getDocumentFiles(input.applicationId, ctx.user.organizationId)),
     verifyDocument: checkerProcedure.input(z.object({ id: z.number().int().positive(), status: z.enum(["verified", "rejected"]), reason: z.string().trim().max(2000).optional() }).refine(value => value.status !== "rejected" || !!value.reason, { message: "Alasan penolakan wajib diisi" })).mutation(async ({ input, ctx }) => {

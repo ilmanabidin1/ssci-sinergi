@@ -22,6 +22,7 @@ export const ACTION_META: Record<string, { label: string; tone: AuditTone }> = {
   TWO_FACTOR_ENABLED: { label: "2FA diaktifkan", tone: "positive" },
   TWO_FACTOR_DISABLED: { label: "2FA dinonaktifkan", tone: "negative" },
   TWO_FACTOR_RESET: { label: "2FA direset admin", tone: "warning" },
+  DEMO_DOCUMENTS_FILLED: { label: "Dokumen contoh diisi (uji coba)", tone: "warning" },
   PILOT_ADMIN_RECOVERED: { label: "Akun admin dipulihkan", tone: "warning" },
   ORGANIZATION_APPROVED: { label: "BPRS disetujui platform", tone: "positive" },
   ORGANIZATION_SUSPENDED: { label: "BPRS ditangguhkan platform", tone: "negative" },

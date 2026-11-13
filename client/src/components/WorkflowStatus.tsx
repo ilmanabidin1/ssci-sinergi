@@ -1,7 +1,10 @@
 import { trpc } from "@/lib/trpc";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { errorMessage } from "@/lib/errors";
+import { toast } from "sonner";
 import { STAGES, nextAction, type CompletenessItem } from "@shared/workflow";
 import { TRACK_LABELS } from "@shared/reviewTrack";
-import { ArrowRight, Check, CircleDashed } from "lucide-react";
+import { ArrowRight, Check, CircleDashed, FlaskConical, Loader2 } from "lucide-react";
 
 export type DetailTab = CompletenessItem["tab"] | "riwayat";
 
@@ -17,6 +20,21 @@ export function WorkflowStatus({ applicationId, status, role, isOwnWork, onNavig
 }) {
   const query = trpc.applications.workflow.useQuery({ applicationId });
   const data = query.data;
+  const { user } = useAuth();
+  const utils = trpc.useUtils();
+  const fillDemo = trpc.documents.fillDemo.useMutation({
+    onSuccess: async result => {
+      await Promise.all([
+        utils.applications.workflow.invalidate({ applicationId }),
+        utils.applications.exitGate.invalidate({ applicationId }),
+        utils.applications.listActivity.invalidate({ applicationId }),
+        utils.documents.listDocuments.invalidate({ applicationId }),
+        utils.survey.list.invalidate({ applicationId }),
+      ]);
+      toast.success(`Dokumen contoh diisi: ${result.uploaded} berkas baru, ${result.verified} diverifikasi, ${result.photosAdded} foto survei.`);
+    },
+    onError: error => toast.error(errorMessage(error, "Dokumen contoh gagal diisi.")),
+  });
 
   if (status === "cancelled") return null;
 
@@ -84,6 +102,27 @@ export function WorkflowStatus({ applicationId, status, role, isOwnWork, onNavig
           >
             <div className={`h-full rounded-full transition-all ${completeness.percent === 100 ? "bg-emerald-600" : "bg-gold-400"}`} style={{ width: `${completeness.percent}%` }} />
           </div>
+          {(() => {
+            const demoTargets = ["dokumen_unggah", "verifikasi", "survei"];
+            const canFill = Boolean((user as { demoTools?: boolean } | null)?.demoTools)
+              && (role === "maker" || role === "admin")
+              && !finished
+              && completeness.missing.some(item => demoTargets.includes(item.key));
+            if (!canFill) return null;
+            return (
+              <button
+                type="button"
+                onClick={() => fillDemo.mutate({ applicationId })}
+                disabled={fillDemo.isPending}
+                aria-busy={fillDemo.isPending}
+                title="Uji coba: unggah dokumen wajib dan foto survei contoh, lalu tandai terverifikasi. Tercatat di log audit."
+                className={`mt-2 inline-flex items-center gap-1.5 rounded-full border border-gold-400/70 bg-gold-50 px-3 py-1.5 text-xs font-semibold text-navy-900 hover:bg-gold-100 disabled:opacity-60 pointer-coarse:min-h-11 ${focusRing}`}
+              >
+                {fillDemo.isPending ? <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden="true" /> : <FlaskConical className="h-3.5 w-3.5" aria-hidden="true" />}
+                {fillDemo.isPending ? "Mengisi contoh..." : "Isi contoh dokumen"}
+              </button>
+            );
+          })()}
           {completeness.missing.length > 0 && !finished && (
             <ul className="mt-2 space-y-1" aria-label="Yang masih kurang">
               {completeness.missing.slice(0, 4).map(item => (

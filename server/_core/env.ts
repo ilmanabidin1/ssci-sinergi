@@ -13,6 +13,8 @@ export const ENV = {
   pilotAdminEmail: process.env.PILOT_ADMIN_EMAIL ?? "",
   pilotAdminPassword: process.env.PILOT_ADMIN_PASSWORD ?? "",
   enforceTwoFactor: process.env.ENFORCE_TWO_FACTOR !== "false",
+  // Tombol "Isi contoh dokumen" (uji coba dan demo). Matikan dengan DEMO_TOOLS=false.
+  demoTools: process.env.DEMO_TOOLS !== "false",
   resetPilotAdminPassword: process.env.RESET_PILOT_ADMIN_PASSWORD === "true",
   resetPilotAdminTwoFactor: process.env.RESET_PILOT_ADMIN_2FA === "true",
   superAdminEmails: (process.env.SUPERADMIN_EMAILS || process.env.PILOT_ADMIN_EMAIL || "")

@@ -50,6 +50,20 @@ export type Completeness = {
   stage: WorkflowStage;
 };
 
+/**
+ * Status unggahan terbaru per jenis dokumen. Daftar dokumen diurutkan dari yang terbaru
+ * (seperti db.getDocumentFiles), jadi kemunculan pertama yang dipakai: unggahan ulang setelah
+ * ditolak menggantikan status "ditolak" yang lama.
+ */
+export function latestStatusByType(documents: Array<{ documentType: string; status: string }>): Map<string, string> {
+  const map = new Map<string, string>();
+  for (const d of documents) {
+    const type = d.documentType.toUpperCase();
+    if (!map.has(type)) map.set(type, d.status);
+  }
+  return map;
+}
+
 /** Nama dokumen untuk tampilan. Pada badan hukum, KTP berarti KTP penanggung jawab dan NPWP berarti NPWP badan. */
 export function documentLabel(type: string, badanUsaha = false): string {
   if (!badanUsaha) return type;
@@ -61,7 +75,7 @@ export function documentLabel(type: string, badanUsaha = false): string {
 
 export function computeCompleteness(input: CompletenessInput): Completeness {
   const required = TRACK_REQUIREMENTS[input.track];
-  const byType = new Map(input.documents.map(d => [d.documentType.toUpperCase(), d.status]));
+  const byType = latestStatusByType(input.documents);
   const notUploaded = required.verifiedDocuments.filter(t => !byType.has(t) || byType.get(t) === "rejected");
   const notVerified = required.verifiedDocuments.filter(t => byType.get(t) !== "verified");
   const names = (types: string[]) => types.map(t => documentLabel(t, input.badanUsaha)).join(", ");
@@ -220,7 +234,7 @@ const UPLOAD_TO_LEGAL_STATUS: Record<string, string> = {
  * yang diisi analis, tetapi tidak bisa "terverifikasi" tanpa berkas.
  */
 export function syncLegalDocuments(legalDocuments: LegalDocument[], uploads: Array<{ documentType: string; status: string }>): LegalDocument[] {
-  const uploadStatus = new Map(uploads.map(u => [u.documentType.toUpperCase(), u.status]));
+  const uploadStatus = latestStatusByType(uploads);
   return legalDocuments.map(doc => {
     const uploaded = uploadStatus.get(doc.type.toUpperCase());
     if (uploaded) return { ...doc, status: UPLOAD_TO_LEGAL_STATUS[uploaded] ?? doc.status };
