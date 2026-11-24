@@ -2,6 +2,7 @@
 
 import unittest
 
+import build_dataset as dataset
 import common
 import scrape_dsn_fatwa as dsn
 import scrape_ojk_regulasi as ojk
@@ -114,6 +115,55 @@ class Helpers(unittest.TestCase):
         done = {"status": "ok", "text_quality": "embedded_ocr"}
         self.assertTrue(common.reusable(done, common.REPO_ROOT / "package.json", False))
         self.assertFalse(common.reusable(done, common.REPO_ROOT / "package.json", True))
+
+
+class DatasetParsing(unittest.TestCase):
+    def test_fatwa_sections(self):
+        text = (
+            "Mengingat\nPertama, firman Allah\nMEMUTUSKAN\nMenetapkan\n: FATWA TENTANG X\n"
+            "Pertama\n: Ketentuan Umum:\n1. Bank dan nasabah harus\nberakad.\n2. Barang halal.\n"
+            "04 Murabahah\n3\nKedua : Ketentuan Penutup\nJika ada sengketa.\nDitetapkan di Jakarta\n"
+        )
+        sections = dataset.split_fatwa(text, 4)
+        self.assertEqual([s["ordinal"] for s in sections], ["Pertama", "Kedua"])
+        self.assertEqual(sections[0]["title"], "Ketentuan Umum")
+        self.assertEqual(sections[0]["body"], "1. Bank dan nasabah harus berakad.\n2. Barang halal.")
+
+    def test_fatwa_without_ordinals(self):
+        sections = dataset.split_fatwa("MEMUTUSKAN\nMenetapkan\n: FATWA TENTANG X\n1. Satu.\n2. Dua.\n", 8)
+        self.assertEqual(sections, [{"ordinal": "", "title": "", "body": "1. Satu.\n2. Dua."}])
+
+    def test_articles(self):
+        text = (
+            "BAB I\nKETENTUAN UMUM\nPasal 1\nDalam peraturan ini:\n1. Bank adalah badan usaha yang\n"
+            "menghimpun dana dari masyarakat luas.\nBAB II\nKUALITAS ASET BPRS\nPasal 2\n"
+            "(1) BPRS wajib\n-3-\nmenilai sesuai Pasal 1.\nPasal 5\nbukan pasal.\nDitetapkan di Jakarta\nPasal 3\n"
+        )
+        articles = dataset.split_articles(text)
+        self.assertEqual([a["number"] for a in articles], [1, 2])
+        self.assertEqual(articles[1]["chapter"], "Kualitas Aset BPRS")
+        self.assertIn("(1) BPRS wajib menilai sesuai Pasal 1.", articles[1]["body"])
+        term, sentence = dataset.definitions(articles[0]["body"])[0]
+        self.assertEqual(term, "Bank")
+        self.assertTrue(sentence.startswith("Bank adalah badan usaha"))
+
+    def test_faq_numbered(self):
+        text = (
+            "A. UMUM\n1. Apa latar belakang\nPOJK ini?\nKarena perlu:\n1. satu;\n2. dua.\n"
+            "2. Kapan berlaku?\nSejak diundangkan.\nB. LAIN\n1. Siapa yang wajib?\nSemua BPRS.\n"
+        )
+        pairs = dataset.split_faq(text)
+        self.assertEqual([q for q, _ in pairs], ["Apa latar belakang POJK ini?", "Kapan berlaku?", "Siapa yang wajib?"])
+        self.assertEqual(pairs[0][1], "Karena perlu:\n1. satu;\n2. dua.")
+        self.assertEqual(pairs[1][1], "Sejak diundangkan.")
+
+    def test_faq_markers(self):
+        pairs = dataset.split_faq("Q:\nApakah boleh?\nA:\nBoleh, dengan syarat.\nQ:\nBerapa lama?\nA:\nTiga hari.\n")
+        self.assertEqual(pairs, [("Apakah boleh?", "Boleh, dengan syarat."), ("Berapa lama?", "Tiga hari.")])
+
+    def test_regulation_ref(self):
+        entry = {"number": "24 Tahun 2024", "type": "Peraturan OJK", "title": "POJK tentang Kualitas Aset"}
+        self.assertEqual(dataset.regulation_ref(entry), "POJK Nomor 24 Tahun 2024 tentang Kualitas Aset")
 
 
 if __name__ == "__main__":
