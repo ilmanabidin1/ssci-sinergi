@@ -196,6 +196,35 @@ def ocr_available() -> bool:
 OCR_LANGUAGE = "eng"
 
 
+# Tesseract still reads the italic "q" of fiqh terms as "g". None of the
+# misread forms is an Indonesian word, so putting the "q" back is safe.
+OCR_TERM_FIXES = {
+    "gardh": "qardh",
+    "figh": "fiqh",
+    "bagarah": "baqarah",
+    "mutanagishah": "mutanaqishah",
+    "mugaradhah": "muqaradhah",
+    "mugashshah": "muqashshah",
+    "gabdh": "qabdh",
+    "gabul": "qabul",
+    "gimar": "qimar",
+}
+_OCR_TERM_PATTERN = re.compile(r"\b(" + "|".join(OCR_TERM_FIXES) + ")", re.I)
+
+
+def fix_ocr_terms(text: str) -> str:
+    """Restore the "q" in fiqh terms that OCR read as "g", keeping the case."""
+
+    def repair(match: re.Match) -> str:
+        found = match.group(1)
+        fixed = OCR_TERM_FIXES[found.lower()]
+        if found.isupper():
+            return fixed.upper()
+        return fixed.capitalize() if found[0].isupper() else fixed
+
+    return _OCR_TERM_PATTERN.sub(repair, text)
+
+
 def ocr_pdf(path: Path) -> str:
     """Render each page at 300 dpi and read it with Tesseract."""
     language = OCR_LANGUAGE
@@ -243,7 +272,7 @@ def pdf_to_text(path: Path, ocr: bool = False) -> dict:
     if scanned or not has_text:
         quality = "embedded_ocr" if has_text else "needs_ocr"
         if ocr and ocr_available():
-            text = ocr_pdf(path)
+            text = fix_ocr_terms(ocr_pdf(path))
             quality = "ocr"
     return {"text": clean_text(text), "pages": pages, "quality": quality}
 

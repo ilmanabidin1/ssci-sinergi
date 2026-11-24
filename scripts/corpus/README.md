@@ -60,6 +60,7 @@ Kolom penting di manifest:
 
 - **Teks OCR tidak sempurna.** Fatwa nomor 110 ke atas adalah hasil scan. Angka romawi dan huruf mirip kadang tertukar, misalnya `III` terbaca `I11`. Untuk kutipan resmi, cek ke PDF aslinya.
 - **OCR memakai model bahasa Inggris, dengan sengaja.** Model bahasa Indonesia bawaan Tesseract tidak pernah menghasilkan huruf "q", sehingga qardh, fiqh, dan Q.S. terbaca gardh, figh, dan O.S. Model Inggris membaca teks Latin yang sama tanpa cacat itu.
+- **Istilah fikih diperbaiki setelah OCR.** Huruf "q" miring masih sering terbaca "g". Daftar `OCR_TERM_FIXES` di `common.py` mengembalikan istilah yang paling sering muncul, misalnya gardh menjadi qardh dan mutanagishah menjadi mutanaqishah. Istilah lain di luar daftar itu masih bisa salah.
 - **Teks Arab tidak terbaca.** Dalil berbahasa Arab muncul sebagai karakter acak, baik di PDF digital maupun hasil OCR. Terjemahan Indonesianya tetap utuh.
 - **Status berlaku regulasi OJK tidak tercatat.** Situs OJK tidak menandai regulasi yang sudah dicabut atau diganti, jadi regulasi lama ikut terunduh. Contoh: POJK 3/POJK.03/2016 tentang BPRS sudah diganti aturan yang lebih baru. Tim perlu menandainya sebelum dipakai sebagai rujukan.
 - **Dokumen kembar.** Situs OJK kadang memuat regulasi yang sama di dua halaman. Kenali lewat `sha256`.

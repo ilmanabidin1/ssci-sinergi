@@ -105,6 +105,10 @@ class Helpers(unittest.TestCase):
     def test_clean_text(self):
         self.assertEqual(common.clean_text("a  \n\n\n\n\fb\n"), "a\n\nb\n")
 
+    def test_fix_ocr_terms(self):
+        fixed = common.fix_ocr_terms("Akad gardh, Figh, MUTANAGISHAH, al-Bagarah; figur dan gardu tetap.")
+        self.assertEqual(fixed, "Akad qardh, Fiqh, MUTANAQISHAH, al-Baqarah; figur dan gardu tetap.")
+
     def test_reusable(self):
         self.assertFalse(common.reusable({}, common.REPO_ROOT / "package.json", False))
         done = {"status": "ok", "text_quality": "embedded_ocr"}
