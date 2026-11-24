@@ -111,3 +111,6 @@ temp/
 corpus/raw/
 __pycache__/
 *.pyc
+
+# AI model comparison: model list, test documents and results stay on this machine
+/ai-eval/

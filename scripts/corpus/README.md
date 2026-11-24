@@ -1,12 +1,11 @@
 # Pengumpul korpus SSCI
 
-Skrip di folder ini mengunduh sumber rujukan untuk model AI lokal SSCI dan mengubahnya menjadi teks. Hasilnya dipakai untuk dua hal: rujukan yang disisipkan ke prompt (RAG) dan bahan menyusun contoh fine-tune.
+Skrip di folder ini mengunduh sumber rujukan untuk model AI lokal SSCI dan mengubahnya menjadi teks. Hasilnya dipakai sebagai rujukan yang disisipkan ke prompt (RAG) dan sebagai arsip rujukan tim.
 
 | Skrip | Sumber | Hasil |
 |---|---|---|
 | `scrape_dsn_fatwa.py` | Daftar fatwa di dsnmui.or.id (PDF di Google Drive) | `corpus/dsn-mui/` |
 | `scrape_ojk_regulasi.py` | Pencarian regulasi di ojk.go.id | `corpus/ojk/` |
-| `build_dataset.py` | Teks di `corpus/dsn-mui/` dan `corpus/ojk/` | `corpus/dataset/` |
 
 ## Menjalankan
 
@@ -42,9 +41,6 @@ corpus/
   ojk/
     manifest.jsonl               satu baris per regulasi, berisi daftar berkasnya
     pojk-24-tahun-2024-kualitas-aset-.../01-....txt
-  dataset/
-    train.jsonl                  pasangan tanya jawab untuk fine-tune
-    val.jsonl
   raw/                           PDF asli, tidak masuk git
 ```
 
@@ -71,33 +67,6 @@ Kolom penting di manifest:
 - **Lampiran non-PDF dilewati.** Berkas zip, xlsx, dan docx hanya dicatat di manifest dengan status `skipped_not_pdf`.
 - **Firewall OJK.** Situs OJK sesekali menolak permintaan. Skrip menunggu dan mencoba lagi sampai lima kali, jadi satu kali jalan bisa memakan waktu lama.
 - **Sumber wajib dicantumkan.** DSN-MUI mengizinkan pengutipan dengan mencantumkan sumber. Kepala setiap berkas teks sudah memuatnya.
-
-## Dataset fine-tune
-
-```bash
-python3 scripts/corpus/build_dataset.py
-```
-
-Skrip ini menyusun pasangan tanya jawab dari korpus tanpa memakai model bahasa. Setiap jawaban adalah teks yang diambil dari dokumen sumber, dan setiap pertanyaan diturunkan dari susunan dokumen itu. Jadi tidak ada isi yang dikarang.
-
-| Jenis (`meta.kind`) | Isi |
-|---|---|
-| `article` | Satu pasangan per pasal regulasi |
-| `definition` | Butir "X adalah ..." dari ketentuan umum fatwa dan Pasal 1 regulasi |
-| `faq` | Daftar tanya jawab yang diterbitkan OJK dan BI bersama regulasinya |
-| `fatwa_section` | Satu pasangan per bagian diktum fatwa (Pertama, Kedua, dan seterusnya) |
-| `fatwa_overview` | Fatwa mana yang mengatur suatu akad dan apa saja isinya |
-
-Hasilnya `train.jsonl` dan `val.jsonl` (5 persen). Setiap baris berisi `messages` (system, user, assistant) yang bisa langsung dipakai pelatih berformat chat, dan `meta` (`source_id`, `ref`, `year`, `relevance`, `text_quality`) untuk menyaring.
-
-Yang perlu diketahui:
-
-- **Dataset ini melatih hafalan sumber, bukan penalaran.** Model belajar isi fatwa dan pasal beserta nomornya. Kemampuan menilai kasus pembiayaan tetap harus datang dari contoh yang ditulis atau dikoreksi ahli.
-- **Regulasi yang sudah dicabut ikut masuk.** Saring lewat `meta.year` atau `meta.source_id` setelah tim menandai regulasi yang tidak berlaku.
-- **Yang tidak masuk:** fatwa berlabel `other` dan yang sudah tidak berlaku, surat edaran yang tidak bersusun pasal (hanya FAQ-nya yang diambil), lampiran, abstrak, dan PAPSI.
-- **FAQ tidak terambil semua.** Tanya jawab yang susunannya tidak terbaca dibuang daripada berisiko tergabung dengan butir lain.
-- **Sebagian jawaban berasal dari OCR** (`meta.text_quality` bernilai `ocr`), jadi bisa memuat salah baca.
-- **Jawaban panjang dipecah** menjadi beberapa bagian, masing-masing paling banyak sekitar 4.000 karakter.
 
 ## Mengubah cakupan
 

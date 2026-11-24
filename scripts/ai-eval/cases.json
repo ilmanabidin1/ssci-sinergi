@@ -1,0 +1,346 @@
+[
+  {
+    "id": "warung-murabahah-sehat",
+    "note": "Pengajuan wajar: beli stok dengan murabahah.",
+    "application": {
+      "customerName": "Ahmad Fauzan",
+      "customerId": "3200000000000001",
+      "businessName": "Toko Sembako Berkah",
+      "businessType": "Perdagangan sembako eceran",
+      "businessAge": 72,
+      "address": "Jl. Contoh No. 1, Kec. Cibiru, Kota Bandung, Jawa Barat",
+      "monthlyRevenue": 45000000,
+      "monthlyExpenses": 36000000,
+      "existingDebt": 0,
+      "collateralValue": 120000000,
+      "requestedAmount": 60000000,
+      "financingTenor": 24,
+      "marginRate": 12,
+      "financingAkad": "murabahah",
+      "loanPurpose": "Pembelian stok beras, minyak goreng, dan gula dari distributor",
+      "businessShariaCompliant": "yes",
+      "shariaComplianceNotes": null,
+      "legalDocuments": [
+        {
+          "type": "KTP",
+          "status": "verified"
+        },
+        {
+          "type": "NIB",
+          "status": "verified"
+        },
+        {
+          "type": "NPWP",
+          "status": "verified"
+        }
+      ]
+    },
+    "assessment": {
+      "totalScore": 82.5,
+      "classification": "Layak",
+      "sustainableFinanceScore": 44,
+      "shariaScore": 22,
+      "legalScore": 16.5,
+      "strengths": "Arus kas stabil; usaha berjalan 6 tahun; agunan menutup dua kali plafon",
+      "riskFactors": "Ketergantungan pada satu distributor"
+    },
+    "policy": {
+      "dsrRatio": 31,
+      "isDsrCompliant": true,
+      "approvalAuthority": "Komite Cabang",
+      "appraisal": "Nilai likuidasi Rp 96.000.000"
+    },
+    "profile": {
+      "statusPerkawinan": "Menikah",
+      "tanggungan": "3 - 5 Orang",
+      "statusTempatTinggal": "Milik sendiri",
+      "lamaMenetap": "> 8 tahun",
+      "reputasi": "Dikenal memiliki reputasi baik",
+      "sistemPenjualan": "Tunai",
+      "kepemilikanTempatUsaha": "Milik sendiri",
+      "lokasiUsaha": "Menetap/Permanen",
+      "hubunganBank": "Nasabah/debitur bank 1 - 3 tahun"
+    },
+    "bprsScore": {
+      "criteria": [
+        {
+          "key": "reputasi",
+          "label": "Reputasi",
+          "answer": "Dikenal memiliki reputasi baik",
+          "points": 5,
+          "maxPoints": 5,
+          "source": "profil"
+        },
+        {
+          "key": "lamaMenetap",
+          "label": "Lama menetap",
+          "answer": "> 8 tahun",
+          "points": 4,
+          "maxPoints": 4,
+          "source": "profil"
+        },
+        {
+          "key": "riwayatSlik",
+          "label": "Riwayat SLIK",
+          "answer": null,
+          "points": 0,
+          "maxPoints": 10,
+          "source": "belum_diisi"
+        },
+        {
+          "key": "pengelolaanKeuangan",
+          "label": "Pengelolaan keuangan",
+          "answer": null,
+          "points": 0,
+          "maxPoints": 6,
+          "source": "belum_diisi"
+        },
+        {
+          "key": "hubunganBank",
+          "label": "Hubungan dengan bank",
+          "answer": "Nasabah/debitur bank 1 - 3 tahun",
+          "points": 3,
+          "maxPoints": 5,
+          "source": "profil"
+        }
+      ],
+      "subtotal": 71,
+      "rpcAdequate": true,
+      "coverageRatio": 1.6,
+      "coverageThreshold": 1.25,
+      "score": 71,
+      "rating": "B",
+      "ratingLabel": "Cukup",
+      "status": "Layak",
+      "missing": [
+        "Riwayat SLIK",
+        "Pengelolaan keuangan"
+      ],
+      "netProfit": 9000000
+    },
+    "expect": {
+      "syariah": {
+        "verdict": [
+          "sesuai"
+        ]
+      }
+    }
+  },
+  {
+    "id": "murabahah-modal-tunai",
+    "note": "Murabahah diminta untuk uang tunai tanpa barang; seharusnya dipertanyakan.",
+    "application": {
+      "customerName": "Ahmad Fauzan",
+      "customerId": "3200000000000001",
+      "businessName": "Konveksi Rapi Jaya",
+      "businessType": "Konveksi pakaian",
+      "businessAge": 30,
+      "address": "Jl. Contoh No. 1, Kec. Cibiru, Kota Bandung, Jawa Barat",
+      "monthlyRevenue": 28000000,
+      "monthlyExpenses": 21000000,
+      "existingDebt": 1500000,
+      "collateralValue": 70000000,
+      "requestedAmount": 50000000,
+      "financingTenor": 24,
+      "marginRate": 12,
+      "financingAkad": "murabahah",
+      "loanPurpose": "Tambahan modal kerja tunai untuk membayar gaji karyawan dan melunasi utang ke pemasok",
+      "businessShariaCompliant": "yes",
+      "shariaComplianceNotes": null,
+      "legalDocuments": [
+        {
+          "type": "KTP",
+          "status": "verified"
+        },
+        {
+          "type": "NIB",
+          "status": "verified"
+        },
+        {
+          "type": "NPWP",
+          "status": "verified"
+        }
+      ]
+    },
+    "assessment": {
+      "totalScore": 64,
+      "classification": "Perlu Pengawasan",
+      "sustainableFinanceScore": 36,
+      "shariaScore": 14,
+      "legalScore": 14,
+      "strengths": "Usaha berjalan 2,5 tahun dengan pesanan rutin",
+      "riskFactors": "Tujuan pembiayaan tidak berupa pembelian barang; ada angsuran existing"
+    },
+    "policy": {
+      "dsrRatio": 38,
+      "isDsrCompliant": true,
+      "approvalAuthority": "Komite Cabang",
+      "appraisal": "Nilai likuidasi Rp 56.000.000"
+    },
+    "expect": {
+      "syariah": {
+        "verdict": [
+          "perlu_klarifikasi",
+          "tidak_sesuai"
+        ]
+      }
+    }
+  },
+  {
+    "id": "usaha-tidak-halal",
+    "note": "Objek usaha tidak halal; seharusnya tidak sesuai.",
+    "application": {
+      "customerName": "Ahmad Fauzan",
+      "customerId": "3200000000000001",
+      "businessName": "Kedai Minuman Malam",
+      "businessType": "Penjualan minuman beralkohol eceran",
+      "businessAge": 36,
+      "address": "Jl. Contoh No. 1, Kec. Cibiru, Kota Bandung, Jawa Barat",
+      "monthlyRevenue": 40000000,
+      "monthlyExpenses": 30000000,
+      "existingDebt": 0,
+      "collateralValue": 90000000,
+      "requestedAmount": 40000000,
+      "financingTenor": 24,
+      "marginRate": 12,
+      "financingAkad": "murabahah",
+      "loanPurpose": "Pembelian stok minuman beralkohol",
+      "businessShariaCompliant": "yes",
+      "shariaComplianceNotes": null,
+      "legalDocuments": [
+        {
+          "type": "KTP",
+          "status": "verified"
+        },
+        {
+          "type": "NIB",
+          "status": "verified"
+        },
+        {
+          "type": "NPWP",
+          "status": "verified"
+        }
+      ]
+    },
+    "expect": {
+      "syariah": {
+        "verdict": [
+          "tidak_sesuai"
+        ]
+      },
+      "konsistensi": {
+        "adaTemuan": true
+      }
+    }
+  },
+  {
+    "id": "data-janggal",
+    "note": "Nama usaha, jenis usaha, omzet, dan alamat saling bertentangan.",
+    "application": {
+      "customerName": "Ahmad Fauzan",
+      "customerId": "3200000000000001",
+      "businessName": "Bengkel Motor Maju",
+      "businessType": "Budidaya ikan lele",
+      "businessAge": 8,
+      "address": "Jl. Contoh No. 5, Kec. Cibiru, Kota Surabaya, Jawa Barat",
+      "monthlyRevenue": 900000000,
+      "monthlyExpenses": 100000000,
+      "existingDebt": 0,
+      "collateralValue": 50000000,
+      "requestedAmount": 30000000,
+      "financingTenor": 24,
+      "marginRate": 12,
+      "financingAkad": "murabahah",
+      "loanPurpose": "Renovasi rumah tinggal",
+      "businessShariaCompliant": "yes",
+      "shariaComplianceNotes": null,
+      "legalDocuments": [
+        {
+          "type": "KTP",
+          "status": "verified"
+        },
+        {
+          "type": "NIB",
+          "status": "verified"
+        },
+        {
+          "type": "NPWP",
+          "status": "verified"
+        }
+      ]
+    },
+    "expect": {
+      "konsistensi": {
+        "adaTemuan": true
+      }
+    }
+  },
+  {
+    "id": "mudharabah-bagi-hasil",
+    "note": "Modal usaha dengan bagi hasil; wajar.",
+    "application": {
+      "customerName": "Ahmad Fauzan",
+      "customerId": "3200000000000001",
+      "businessName": "Tani Makmur Sejahtera",
+      "businessType": "Pertanian padi",
+      "businessAge": 120,
+      "address": "Desa Contoh RT 02 RW 05, Kec. Ciparay, Kab. Bandung, Jawa Barat",
+      "monthlyRevenue": 18000000,
+      "monthlyExpenses": 11000000,
+      "existingDebt": 0,
+      "collateralValue": 150000000,
+      "requestedAmount": 40000000,
+      "financingTenor": 12,
+      "marginRate": 0,
+      "financingAkad": "mudharabah",
+      "loanPurpose": "Modal tanam padi satu musim: benih, pupuk, dan upah tanam, dengan bagi hasil panen",
+      "businessShariaCompliant": "yes",
+      "shariaComplianceNotes": null,
+      "legalDocuments": [
+        {
+          "type": "KTP",
+          "status": "verified"
+        },
+        {
+          "type": "NIB",
+          "status": "verified"
+        },
+        {
+          "type": "NPWP",
+          "status": "verified"
+        }
+      ]
+    },
+    "assessment": {
+      "totalScore": 78,
+      "classification": "Layak",
+      "sustainableFinanceScore": 41,
+      "shariaScore": 22,
+      "legalScore": 15,
+      "strengths": "Pengalaman bertani 10 tahun; agunan kuat",
+      "riskFactors": "Pendapatan musiman dan bergantung cuaca"
+    },
+    "policy": {
+      "dsrRatio": 24,
+      "isDsrCompliant": true,
+      "approvalAuthority": "Kepala Cabang",
+      "appraisal": "Nilai likuidasi Rp 120.000.000"
+    },
+    "profile": {
+      "statusPerkawinan": "Menikah",
+      "statusTempatTinggal": "Milik sendiri",
+      "lamaMenetap": "> 8 tahun",
+      "sistemPenjualan": "Non Tunai & Tunai",
+      "lokasiUsaha": "Menetap/Permanen",
+      "hubunganBank": "Belum Pernah"
+    },
+    "expect": {
+      "syariah": {
+        "verdict": [
+          "sesuai",
+          "perlu_klarifikasi"
+        ]
+      }
+    }
+  }
+]
