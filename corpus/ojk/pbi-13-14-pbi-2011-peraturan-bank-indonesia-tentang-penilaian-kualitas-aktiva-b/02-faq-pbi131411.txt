@@ -1,0 +1,114 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 13/14/PBI/2011
+Tentang: Peraturan Bank Indonesia tentang Penilaian Kualitas Aktiva bagi Bank Pembiayaan Rakyat Syariah
+Berkas: faq_pbi131411.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Penilaian-Kualitas-Aktiva-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+Frequently Asked Question
+Q
+
+: Apakah latar belakang dikeluarkannya Peraturan Bank Indonesia No.13/
+/PBI/2011 tentang Penilaian Kualitas Aktiva bagi Bank Pembiayaan Rakyat
+Syariah?
+
+A
+
+: Latar belakang dikeluarkannya PBI ini adalah untuk penyesuaian terhadap
+Undang-Undang Nomor 21 Tahun 2008 tentang Perbankan Syariah, untuk
+lebih mendukung pertumbuhan dan perkembangan industri perbankan
+syariah dengan tetap memperhatikan prinsip kehati-hatian dan prinsip
+syariah, serta untuk harmonisasi dengan ketentuan–ketentuan Bank
+Indonesia lainnya yang berlaku.
+
+Q
+
+: Materi pengaturan apa saja yang berubah dari PBI sebelumnya?
+
+A
+
+: Beberapa materi pengaturan PBI yang berubah, antara lain:
+− Penghilangan instrumen aktiva produktif dalam bentuk SWBI/SBIS pada
+BPRS karena SBIS hanya dapat dibeli oleh bank umum syariah atau bank
+umum konvensional atau Unit Usaha Syariah, dan tidak dapat
+diperjualbelikan di pasar sekunder.
+− Perubahan istilah Proyeksi Pendapatan (PP) menjadi Proyeksi Bagi Hasil
+(PBH) dan Realisasi Pendapatan (RP) menjadi Realisasi Bagi Hasil (RBH),
+yang menjadi dasar dalam penetapan penggolongan kualitas Pembiayaan
+Mudharabah dan Pembiayaan Musyarakah.
+− Penghilangan pembatasan jumlah revisi PP/PBH untuk Pembiayaan
+Mudharabah dan Pembiayaan Musyarakah.
+− Penghapusan kewajiban pembayaran angsuran pokok secara berkala
+untuk Pembiayaan Mudharabah di atas 1 (satu) tahun.
+− Penegasan bahwa AYDA hanya dapat dilakukan untuk penyelesaian
+Pembiayaan yang telah tergolong Macet.
+− Perubahan penetapan penggolongan kualitas AYDA dari 4 (empat)
+golongan yaitu Lancar, Kurang Lancar, Diragukan, dan Macet menjadi 2
+(dua) golongan yaitu Lancar apabilia dimiliki kurang dari atau sama
+dengan 1 (satu) tahun dan Macet apabilia dimiliki lebih dari 1 (satu) tahun.
+
+− Pelarangan penempatan dana BPRS pada bank konvensional kecuali
+dalam bentuk giro dan/atau tabungan pada bank umum konvensional
+untuk kepentingan transfer dana bagi BPRS dan nasabah BPRS.
+− Penetapan jenis dan nilai agunan nasabah BPRS yang dapat digunakan
+sebagai faktor pengurang dalam perhitungan Penyisihan Penghapusan
+Aktiva (PPA).
+
+Q
+
+: Dalam PBI yang baru, BPRS tidak lagi diwajibkan untuk menetapkan adanya
+angsuran pokok Pembiayaan Mudharabah.
+
+Apakah BPRS masih dapat
+
+menetapkan adanya pembayaran angsuran pokok secara berkala dalam
+Pembiayaan Mudharabah?
+A
+
+: BPRS masih dapat menetapkan adanya pembayaran angsuran pokok secara
+berkala untuk Pembiayaan Mudharabah.
+
+Q
+
+: Apa yang menjadi pertimbangan perubahan golongan kualitas AYDA dalam
+PBI yang baru ini?
+
+A
+
+: Berdasarkan Undang-Undang Perbankan Syariah, AYDA wajib dicairkan
+dalam kurun waktu 1 (satu) tahun. Oleh karena itu, untuk mendorong BPRS
+agar mencairkan AYDA dalam kurun waktu tersebut maka diatur bahwa
+AYDA yang dimiliki BPRS lebih dari 1 (satu) tahun akan digolongkan menjadi
+Macet dan BPRS wajib membuat cadangan Penyisihan Penghapusan Aktiva
+(PPA) sebesar 100% dari nilai AYDA.
+
+Q
+
+: Bagaimana status penetapan penggolongan kualitas AYDA yang dimiliki
+BPRS sebelum berlakunya PBI ini?
+
+A
+
+: Penggolongan kualitas AYDA yang telah dimiliki BPRS sebelum berlakunya
+PBI ini tetap mengacu pada PBI yang lama yaitu Lancar apabila dimiliki
+kurang dari atau sama dengan 1 (satu) tahun), Kurang Lancar apabila dimiliki
+lebih dari 1 (satu) tahun namun belum melebihi 2 (dua) tahun, Diragukan
+apabila dimiliki lebih dari 2 (dua) tahun namun belum melebihi 3 (tiga)
+tahun, dan Macet apabila dimiliki lebih dari 3 (tiga) tahun.
+
+Q
+
+: Dalam PBI baru ini, BPRS hanya diperkenankan menempatkan dana dalam
+bentuk giro dan tabungan pada bank umum konvensional. Bagaimana
+dengan penempatan yang telah dilakukan BPRS pada Bank Perkreditan
+Rakyat sebelum berlakunya PBI ini?
+
+A
+
+: Penempatan dana BPRS pada Bank Perkreditan Rakyat yang dilakukan
+sebelum berlakunya PBI ini, wajib dicairkan paling lama 3 (tiga) bulan
+terhitung sejak berlakunya PBI ini.
+
+DPbS

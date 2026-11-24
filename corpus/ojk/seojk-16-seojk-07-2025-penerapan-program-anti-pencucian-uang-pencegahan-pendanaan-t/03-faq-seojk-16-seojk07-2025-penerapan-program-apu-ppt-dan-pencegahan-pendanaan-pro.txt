@@ -1,0 +1,225 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 16/SEOJK.07/2025
+Tentang: Penerapan Program Anti Pencucian Uang, Pencegahan Pendanaan Terorisme, dan Pencegahan Pendanaan Proliferasi Senjata Pemusnah Massal bagi Pedagang Aset Keuangan Digital
+Berkas: FAQ SEOJK 16-SEOJK07-2025 Penerapan Program APU PPT dan Pencegahan Pendanaan Proliferasi Senjata Pemusnah Massal bagi Pedagang AKD.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-16-SEOJK07-2025-Penerapan-Program-APU-PPT-dan-Pencegahan-Pendanaan-Proliferasi-Senjata-Pemusnah-Massal-Pedagang-AKD.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/ FREQUENTLY ASKED QUESTIONS (FAQ)
+SURAT EDARAN OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA
+NOMOR 16/SEOJK.07/2025
+TENTANG
+PENERAPAN PROGRAM ANTI PENCUCIAN UANG, PENCEGAHAN
+PENDANAAN TERORISME, DAN PENCEGAHAN PENDANAAN
+PROLIFERASI SENJATA PEMUSNAH MASSAL BAGI
+PEDAGANG ASET KEUANGAN DIGITAL
+1.
+
+Apa latar belakang penerbitan Surat Edaran Otoritas Jasa Keuangan
+(SEOJK) ini?
+Dengan berlakunya Peraturan Otoritas Jasa Keuangan Nomor 27 Tahun
+2024 tentang Penyelenggaraan Perdagangan Aset Keuangan Digital
+Termasuk Aset Kripto (Lembaran Negara Republik Indonesia Tahun 2024
+Nomor 38/OJK, Tambahan Lembaran Negara Republik Indonesia Nomor
+108/OJK) dan untuk melaksanakan ketentuan Peraturan Otoritas Jasa
+Keuangan Nomor 8 Tahun 2023 tentang Penerapan Program Anti Pencucian
+Uang, Pencegahan Pendanaan Terorisme, Dan Pencegahan Pendanaan
+Proliferasi Senjata Pemusnah Massal Di Sektor Jasa Keuangan (Lembaran
+Negara Republik Indonesia Tahun 2023 Nomor 11/OJK, Tambahan
+Lembaran Negara Republik Indonesia Nomor 36/OJK), perlu untuk
+mengatur lebih lanjut mengenai ketentuan pelaksanaan terkait tata cara,
+pelaporan dan mekanisme penerapan program anti pencucian uang,
+pencegahan pendanaan terorisme, dan pencegahan pendanaan proliferasi
+senjata pemusnah massal bagi Pedagang Aset Keuangan Digital dalam Surat
+Edaran Otoritas Jasa Keuangan.
+
+2.
+
+Apa saja hal-hal substansial yang diatur dalam SEOJK ini?
+Secara garis besar, hal-hal yang diatur dalam SEOJK ini antara lain:
+a. Ketentuan Umum;
+b. Penerapan Program APU, PPT, PPPSPM Berbasis Risiko (Risk Based
+Approach);
+c. Pengawasan Aktif Direksi dan Dewan Komisaris;
+d. Kebijakan dan Prosedur;
+e. Pengendalian Intern;
+f. Sistem Informasi Manajemen;
+g. Sumber Daya Manusia dan Pelatihan;
+h. Pelaporan;
+i. Rencana Tindak Serta Kebijakan dan Prosedur;
+j. Ketentuan Lain-Lain; dan
+k. Penutup
+
+3. Faktor risiko apa saja yang perlu diperhatikan Pedagang Aset Keuangan
+Digital dalam penerapan program APU PPT PPPSPM berbasis risiko (risk
+based approach)?
+a. Risiko Bawaan (Inherent Risk): Risiko melekat sebelum tindakan
+pengendalian, yaitu:
+i.
+Nasabah: Meliputi PEP, penggunaan VPN, transaksi tidak sesuai
+profil, informasi minim/fiktif, penyalahgunaan jasa profesional,
+
+Page 1 of 3
+
+https://jdih.ojk.go.id
+
+struktur kepemilikan korporasi kompleks, penggunaan identitas
+palsu.
+ii.
+Negara/Area Geografis/Yurisdiksi: Penerbit/asal dana dari
+negara berisiko tinggi (misalnya, tidak memadai implementasi
+FATF, tax haven, korupsi tinggi, pusat narkoba, sanksi PBB).
+iii.
+Produk/Jasa/Layanan (Termasuk Transaksi): Produk yang
+meningkatkan anonimitas (mixer, tumbler, privacy wallets), terkait
+aktivitas terlarang (darknet marketplace, ransomware), atau
+transaksi dari dompet yang dicurigai afiliasi kejahatan.
+iv.
+Jaringan Distribusi (Delivery Channels): Proses tanpa pertemuan
+langsung (non-face to face), risiko borderless, potensi mengaburkan
+identitas, aplikasi daring yang tidak teruji keandalannya.
+b. Risiko Residu (Residual Risk): Tingkat risiko yang tersisa setelah
+mitigasi. Ini harus sesuai dengan toleransi risiko yang ditetapkan.
+4. Apa saja yang perlu diperhatikan Pedagang Aset Keuangan Digital dalam
+kebijakan prosedur penerapan program APU PPT PPPSPM?
+a.
+
+Identifikasi dan Verifikasi Nasabah & Beneficial Owner (BO):
+i.
+Identifikasi dan Verifikasi (CDD) dilakukan dengan mekanisme
+Pasal 25, Pasal 26, Pasal 27, Pasal 28, dan Pasal 29 Peraturan
+Otoritas Jasa Keuangan Nomor 20 Tahun 2023 tentang Program
+APU, PPT, dan PPPSPM di sektor jasa keuangan.
+ii.
+Wajib klasifikasi Nasabah (perorangan, korporasi, perikatan).
+iii.
+Meminta
+informasi/bukti
+identitas,
+penelitian
+kebenaran
+dokumen, wawancara jika perlu.
+iv.
+Identifikasi BO secara berjenjang untuk korporasi. Jika meragukan
+identitas BO, wajib menolak hubungan usaha.
+v.
+Larangan akun anonim/fiktif.
+vi.
+Dapat dilakukan secara elektronik.
+b. Enhanced Due Diligence (EDD) wajib untuk Nasabah berisiko tinggi atau
+Politically Exposed Person (PEP), mencakup informasi tambahan (profil,
+pekerjaan, sumber dana/kekayaan), persetujuan Pejabat Senior, dan
+pemantauan lebih ketat.
+c. Simplified CDD dapat diterapkan untuk nasabah berisiko rendah dengan
+kriteria jelas dan konsisten, serta pemberitahuan kepada OJK.
+d. Pedagang dapat menggunakan hasil CDD dari pihak ketiga, namun
+tanggung jawab tetap pada Pedagang.
+e. Travel Rule:
+i.
+Wajib diterapkan untuk transfer Aset Keuangan Digital.
+ii.
+Transfer AKD dengan nilai USD1.000 atau lebih: informasi lengkap
+pengirim dan penerima (nama, alamat wallet, alamat, dokumen
+identitas).
+iii.
+Transfer AKD dengan nilai kurang dari USD1.000: nama pengirim
+dan alamat wallet pengirim, nama penerima dan alamat wallet
+penerima.
+f. Penolakan/Pembekuan/Penutupan Hubungan Usaha:
+i.
+Wajib memiliki sistem pengenalan dan pemantauan transaksi Aset
+Keuangan Digital berbasis regulatory technology (KYT) untuk
+mendeteksi
+TKM
+(indikasi
+risiko
+tinggi,
+terkait
+TPPU/TPPT/PPPSPM, red flag FATF, metode peningkatan
+anonimitas).
+ii.
+Jika terindikasi TKM, wajib menolak transfer, membekukan akun,
+dan/atau menutup hubungan usaha.
+
+Page 2 of 3
+
+https://jdih.ojk.go.id
+
+iii.
+
+Wajib menolak/menutup hubungan usaha jika nasabah tidak
+bersedia/diragukan
+informasi/dokumennya,
+rekening
+penampungan
+tindak
+pidana,
+atau
+tercatat
+dalam
+DTTOT/DPPSPM.
+iv.
+Wajib memberitahukan penutupan secara tertulis dan melaporkan
+sebagai TKM kepada PPATK.
+g. Tindak Lanjut DTTOT dan/atau DPPSPM:
+i.
+Pedagang dilarang menyediakan dana kepada pihak yang
+tercantum dalam DTTOT/DPPSPM.
+ii.
+Jika ada kesesuaian identitas, wajib melakukan pemblokiran
+secara serta merta tanpa penundaan dan tanpa pemberitahuan
+sebelumnya.
+iii.
+Wajib melaporkan pemblokiran ke Kepolisian (DTTOT) atau PPATK
+(DPPSPM) dengan tembusan OJK.
+h. Pemantauan Nasabah dan Transaksi: Berkesinambungan untuk
+mengidentifikasi kesesuaian transaksi dengan profil risiko Nasabah,
+memperhatikan anti-tipping off. Dapat menggunakan regulatory
+technology.
+i. Rekam Jejak Transaksi: Pedagang harus memiliki rekam jejak kegiatan
+transaksi dan penerimaan Nasabah (log transaksi, notifikasi, fungsi jejak
+audit).
+j. Pelaporan: Berjenjang kepada Pejabat Senior, Direksi, dan Dewan
+Komisaris, serta kepada PPATK dan Kepolisian (TKM, DTTOT/DPPSPM).
+5. Dalam penerapan program APU PPT PPPSPM laporan apa saja yang perlu
+disampaikan Pedagang Aset Keuangan Digital kepada Otoritas Jasa
+Keuangan?
+a.
+Kepada OJK:
+i. Individual Risk Assessment (IRA): Pertama kali paling lambat 12
+bulan setelah SEOJK diterbitkan, pengkinian setiap tahun paling
+lambat akhir Juni.
+ii. Laporan rencana dan realisasi pengkinian data (tahunan).
+iii. Tembusan
+laporan
+pemblokiran
+serta
+merta
+terkait
+DTTOT/DPPSPM.
+iv. Tembusan laporan nihil terkait DTTOT/DPPSPM.
+b.
+Kepada PPATK: Laporan Transaksi Keuangan Mencurigakan (TKM)
+dan laporan terkait DPPSPM.
+c.
+Kepada Kepolisian: Laporan pemblokiran/nihil DTTOT.
+6.
+
+Kapan rencana tindak serta kebijakan prosedur disampaikan?
+Rencana tindak serta kebijakan dan prosedur penerapan program APU, PPT,
+PPPSPM harus diusulkan Direksi dan disetujui Dewan Komisaris,
+disampaikan satu kali paling lambat 9 Juli 2025.
+
+7.
+
+Kapan pengaturan dalam SEOJK berlaku?
+SEOJK APU PPT PPPSPM bagi Pedagang Aset Keuangan Digital mulai
+berlaku pada tanggal ditetapkan, yaitu 3 Juli 2025.
+.
+
+Page 3 of 3
+
+https://jdih.ojk.go.id

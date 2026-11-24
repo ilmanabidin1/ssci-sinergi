@@ -1,0 +1,241 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 34 Tahun 2025
+Tentang: Penyelenggaraan Teknologi Informasi oleh Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah
+Berkas: FAQ POJK 34 Tahun 2025 Penyelenggaraan Teknologi Informasi oleh Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/POJK-34-Tahun-2025-Penyelenggaraan-Teknologi-Informasi-oleh-Bank-Perekonomian-Rakyat-dan-Bank-Perekonomian-Rakyat-Syariah.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/FREQUENTLY ASKED QUESTION (FAQ)
+PERATURAN OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA
+NOMOR 34 TAHUN 2025
+TENTANG
+PENYELENGGARAAN TEKNOLOGI INFORMASI
+OLEH BANK PEREKONOMIAN RAKYAT DAN
+BANK PEREKONOMIAN RAKYAT SYARIAH
+1. Apa latar belakang penerbitan POJK ini?
+Penyusunan POJK tentang Penyelenggaraan Teknologi Informasi oleh
+Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah
+(POJK PTI BPR/S) ini dilatarbelakangi antara lain oleh:
+a. kebutuhan penguatan terhadap aspek penyelenggaraan TI, antara
+lain tata kelola TI, arsitektur TI dan pengelolaan data, seiring dengan
+peningkatan pemanfaatan TI untuk mendukung proses bisnis dalam
+aktivitas operasional BPR dan BPR Syariah guna meningkatkan
+layanan perbankan kepada masyarakat;
+b. peningkatan akses dan konektivitas dalam penggunaan TI oleh BPR
+dan BPR Syariah yang menyebabkan penyelenggaraan TI menjadi
+rentan terhadap serangan siber sehingga perlu pengaturan terkait
+ketahanan dan keamanan siber; dan
+c. tindaklanjut atas pilar 2 Roadmap Pengembangan dan Penguatan
+Industri BPR dan BPR Syariah 2024-2027 (akselerasi digitalisasi BPR
+dan BPR Syariah).
+2. Apa saja hal-hal yang diatur dalam POJK ini?
+POJK ini mengatur beberapa hal yang terkait dengan penyelenggaraan TI
+pada BPR dan BPR Syariah, antara lain pengaturan mengenai:
+a. tata kelola TI antara lain penetapan wewenang dan tanggung jawab
+Direksi, Dewan Komisaris dan satuan kerja dalam penyelenggaraan
+TI;
+b. manajemen risiko dalam penyelenggaraan TI antara lain terkait
+pengamanan informasi;
+c. penempatan sistem elektronik BPR dan BPR Syariah pada Pusat Data
+dan Pusat Pemulihan Bencana di wilayah Indonesia;
+d. arsitektur TI bagi BPR dan BPR Syariah yang memiliki layanan
+digital; dan
+e. ketahanan dan keamanan siber.
+3. Apa yang dimaksud dengan layanan digital?
+Layanan digital adalah produk dalam bentuk layanan yang diberikan oleh
+BPR dan BPR Syariah dengan pemanfaatan TI melalui media elektronik
+
+1 of 4
+
+untuk memberikan akses bagi nasabah dan/atau calon nasabah terkait
+produk BPR dan BPR Syariah maupun produk dan/atau layanan dari
+mitra BPR dan BPR Syariah, serta dapat dilakukan secara mandiri oleh
+nasabah dan/atau calon nasabah.
+Contoh layanan digital antara lain mobile banking dan internet banking.
+POJK ini hanya mengatur hal yang perlu dipenuhi dari aspek TI oleh BPR
+dan BPR Syariah yang menyelenggarakan layanan digital. Namun
+demikian, POJK ini tidak mengatur penyelenggaraan layanan digital
+secara spesifik. Adapun BPR dan BPR Syariah dapat mengacu pada POJK
+mengenai penyelenggaraan produk BPR dan BPR Syariah untuk proses
+perizinan dan hal lainnya terkait penyelenggaraan produk.
+4. Apa yang dimaksud dengan arsitektur TI dan bagaimana
+penyusunannya?
+Arsitektur TI adalah dokumentasi BPR dan BPR Syariah yang
+menggambarkan topologi jaringan dan aplikasi yang dimiliki dan/atau
+dikelola oleh BPR dan BPR Syariah.
+Dalam
+menyusun
+arsitektur
+TI,
+BPR
+dan
+BPR
+Syariah
+mempertimbangkan rencana bisnis BPR dan BPR Syariah. Penyusunan
+arsitektur TI dapat dilakukan oleh BPR dan BPR Syariah secara mandiri
+dan/atau bekerja sama dengan pihak ketiga.
+5. Apakah BPR dan BPR Syariah dapat menggunakan layanan cloud
+computing?
+Ya, BPR dan BPR Syariah dapat menggunakan layanan cloud computing
+dalam penyelenggaraan TI BPR dan BPR Syariah. Dalam hal BPR dan BPR
+Syariah menggunakan layanan cloud computing, maka penyedia jasa cloud
+computing bertindak sebagai pihak penyedia jasa TI sebagaimana diatur
+dalam POJK ini.
+6. Apakah BPR dan BPR Syariah dapat menyediakan jasa TI kepada BPR
+atau BPR Syariah lain?
+Tidak, BPR dan BPR Syariah dilarang melakukan kegiatan penyediaan
+jasa TI kepada pihak lain, kecuali terkait dengan produk dan layanan yang
+disediakan oleh BPR dan BPR Syariah.
+
+2 of 4
+
+7. Apa saja kewajiban pelaporan yang diatur dalam POJK PTI BPR/S ini?
+a. Laporan Berkala
+No.
+1.
+
+Laporan
+
+Waktu Penyampaian
+
+Laporan pelaksanaan
+audit intern terhadap
+penyelenggaraan TI
+[Pasal 40 dan Pasal 43]
+
+paling sedikit 1 (satu) kali dalam
+jangka waktu 1 (satu) tahun
+sesuai dengan POJK mengenai
+penerapan tata kelola bagi BPR
+dan BPR Syariah
+
+b. Laporan Insidental
+No.
+
+Laporan
+
+Waktu Penyampaian
+
+1.
+
+Laporan kondisi terkini
+penyelenggaraan TI BPR
+dan BPR Syariah
+
+paling lambat 10 (sepuluh) hari
+kerja
+sejak
+perubahan
+mendasar
+dalam
+penyelenggaraan TI.
+
+[Pasal 44]
+2.
+
+Laporan realisasi
+penggunaan pihak
+penyedia jasa TI
+
+paling lambat 10 (sepuluh) hari
+kerja sejak penyelenggaraan TI
+BPR dan BPR Syariah oleh
+penyedia
+jasa
+TI
+efektif
+beroperasi.
+
+[Pasal 45]
+3.
+
+Notifikasi awal insiden TI
+[Pasal 46]
+
+4.
+
+Laporan insiden TI
+
+paling lama 7 (tujuh) hari kerja
+setelah insiden TI diketahui.
+
+[Pasal 46]
+5.
+
+paling lama 24 (dua puluh
+empat) jam setelah insiden TI
+diketahui
+
+Laporan tindakan tertentu
+BPR dan BPR Syariah
+dalam hal terdapat
+kondisi tertentu yang
+menyebabkan
+terganggunya atau
+terhentinya penyediaan
+jasa TI dari pihak
+penyedia jasa TI kepada
+BPR dan BPR Syariah
+
+paling lama 3 (tiga) hari kerja
+setelah kondisi tertentu
+diketahui oleh BPR dan BPR
+Syariah.
+
+[Pasal 28 ayat (1)]
+6.
+
+Laporan penghentian
+penggunaan pihak
+penyedia jasa TI
+[Pasal 28 ayat (4)]
+
+3 of 4
+
+paling lama 10 (sepuluh) hari
+kerja setelah BPR dan BPR
+Syariah menghentikan
+penggunaan pihak penyedia jasa
+
+No.
+
+Laporan
+
+Waktu Penyampaian
+TI sebelum berakhirnya jangka
+waktu perjanjian.
+
+Laporan disampaikan secara daring melalui sistem pelaporan Otoritas
+Jasa Keuangan.
+8. Bagaimana pelaporan insiden TI dalam hal terdapat otoritas lain yang
+juga mewajibkan pelaporan dimaksud?
+Sesuai dengan POJK ini, dalam hal terdapat insiden TI maka BPR dan
+BPR Syariah wajib menyampaikan notifikasi awal paling lama 24 (dua
+puluh empat) jam dan laporan insiden TI kepada OJK paling lama 7
+(tujuh) hari kerja, setelah insiden TI diketahui. Apabila terdapat otoritas
+lain yang juga mewajibkan BPR dan BPR Syariah untuk menyampaikan
+notifikasi awal dan/atau laporan insiden TI (termasuk dalam hal ini
+insiden siber) maka BPR dan BPR Syariah menyampaikannya kepada OJK
+dan otoritas lain tersebut. Dalam hal jangka waktu yang diberikan oleh
+otoritas lain lebih singkat daripada jangka waktu yang diberikan OJK
+maka BPR dan BPR Syariah wajib menyampaikan notifikasi awal insiden
+TI kepada OJK pada saat yang bersamaan dengan waktu penyampaian
+kepada otoritas lain dimaksud.
+9. Bagaimana perlakuan terhadap kerja sama BPR dan BPR Syariah yang
+telah menggunakan pihak penyedia jasa TI setelah POJK PTI BPR/S
+ini berlaku?
+BPR dan BPR Syariah yang telah menggunakan pihak penyedia jasa TI
+sebelum berlakunya POJK ini, harus menyesuaikan dengan ketentuan
+dalam POJK ini setelah berakhirnya jangka waktu perjanjian kerja sama
+antara BPR dan BPR Syariah dengan pihak penyedia jasa TI, termasuk
+dalam hal BPR dan BPR Syariah akan melakukan perpanjangan
+perjanjian kerja sama dengan pihak penyedia jasa TI.
+10. Kapan pengaturan dalam POJK berlaku?
+Pengaturan dalam POJK ini mulai berlaku setelah 1 (satu) tahun terhitung
+sejak tanggal diundangkan.
+---o---
+
+4 of 4

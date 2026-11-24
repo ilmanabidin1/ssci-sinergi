@@ -1,0 +1,2075 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 12/ 20/PBI/2010
+Tentang: Peraturan Bank Indonesia tentang Penerapan Program Anti Pencucian Uang dan Pencegahan Terorisme bagi Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah
+Berkas: 106.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Penerapan-Program-Anti-Pencucian-Uang-dan-Pencegahan-Pendanaan-Terorisme-bagi-BPR-dan-Bank-Pembiayaan.aspx
+
+---
+
+PERATURAN BANK INDONESIA
+NOMOR: 12/ 20 /PBI/2010
+
+TENTANG
+PENERAPAN PROGRAM ANTI PENCUCIAN UANG
+DAN PENCEGAHAN PENDANAAN TERORISME
+BAGI BANK PERKREDITAN RAKYAT
+DAN BANK PEMBIAYAAN RAKYAT SYARIAH
+
+DENGAN RAHMAT TUHAN YANG MAHA ESA,
+GUBERNUR BANK INDONESIA,
+
+Menimbang:
+
+a.
+
+bahwa semakin berkembangnya industri Bank Perkreditan
+Rakyat dan Bank Pembiayaan Rakyat Syariah disertai
+dengan perkembangan produk serta pelayanan terutama
+yang berbasis teknologi informasi maka risiko pemanfaatan
+Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat
+Syariah dalam pencucian uang dan pendanaan teroris
+semakin tinggi.
+
+b.
+
+bahwa ketentuan tentang Penerapan Prinsip Mengenal
+Nasabah (Know Your Customer Principles) bagi Bank
+Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah
+yang berlaku selama ini perlu untuk disempurnakan dengan
+mengacu pada prinsip-prinsip umum yang berlaku secara
+
+internasional …
+
+-2-
+
+internasional dalam mendukung upaya pencegahan tindak
+pidana pencucian uang dan pencegahan pendanaan
+terorisme.
+c.
+
+bahwa berdasarkan pertimbangan sebagaimana dimaksud
+dalam huruf a dan huruf b, perlu untuk menetapkan
+pengaturan tentang penerapan program anti pencucian uang
+dan
+
+pencegahan
+
+pendanaan
+
+terorisme
+
+bagi
+
+Bank
+
+Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah
+dalam suatu Peraturan Bank Indonesia.
+
+Mengingat:
+
+1.
+
+Undang-Undang Nomor 7 Tahun 1992 tentang Perbankan
+(Lembaran Negara Republik Indonesia Tahun 1992 Nomor
+31, Tambahan Lembaran Negara Republik Indonesia
+Nomor 3472) sebagaimana telah diubah dengan UndangUndang Nomor 10 Tahun 1998 (Lembaran Negara
+Republik Indonesia Tahun 1998 Nomor 182, Tambahan
+Lembaran Negara Republik Indonesia Nomor 3790);
+
+2.
+
+Undang-Undang Nomor 23 Tahun 1999 tentang Bank
+Indonesia (Lembaran Negara Republik Indonesia Tahun
+1999 Nomor 66, Tambahan Lembaran Negara Republik
+Indonesia Nomor 3843) sebagaimana telah diubah terakhir
+dengan Undang-Undang Nomor 6 Tahun 2009 tentang
+Penetapan
+
+Peraturan
+
+Pemerintah
+
+Pengganti Undang-
+
+Undang Nomor 2 tahun 2008 tentang Perubahan Kedua
+
+atas …
+
+-3-
+
+atas Undang-Undang Nomor 23 Tahun 1999 tentang Bank
+Indonesia Menjadi Undang-Undang (Lembaran Negara
+Republik Indonesia Tahun 2009 Nomor 7, Tambahan
+Lembaran Negara Republik Indonesia Nomor 4962);
+3.
+
+Undang-Undang Nomor 15 Tahun 2002 tentang Tindak
+Pidana Pencucian Uang (Lembaran Negara Republik
+Indonesia Tahun 2002 Nomor 30, Tambahan Lembaran
+Negara Nomor 4191) sebagaimana telah diubah dengan
+Undang-Undang Nomor 25 Tahun 2003 Nomor 108
+(Lembaran Negara Republik Indonesia Tahun 2003 Nomor
+108, Tambahan Lembaran Negara Nomor 4324);
+
+4.
+
+Undang-Undang Nomor 15 Tahun 2003 tentang Penetapan
+Peraturan Pemerintah Pengganti Undang-Undang Nomor 1
+Tahun 2002 tentang Pemberantasan Tindak Pidana
+Terorisme menjadi Undang-Undang (Lembaran Negara
+Republik Indonesia Tahun 2003 Nomor 45 dan Tambahan
+Lembaran Negara Republik Indonesia Nomor 4284);
+
+5.
+
+Undang-Undang Nomor 21 Tahun 2008 tentang Perbankan
+Syariah (Lembaran Negara Republik Indonesia Tahun 2008
+Nomor
+
+94,
+
+Tambahan
+
+Lembaran
+
+Negara
+
+Republik
+
+Indonesia Nomor 4867);
+
+MEMUTUSKAN …
+
+-4-
+
+MEMUTUSKAN
+
+Menetapkan:
+
+PERATURAN BANK INDONESIA TENTANG PENERAPAN
+PROGRAM ANTI PENCUCIAN UANG DAN PENCEGAHAN
+PENDANAAN TERORISME BAGI BANK PERKREDITAN
+RAKYAT DAN BANK PEMBIAYAAN RAKYAT SYARIAH.
+
+BAB I
+KETENTUAN UMUM
+Pasal 1
+Dalam Peraturan Bank Indonesia ini yang dimaksud dengan :
+1.
+
+Bank adalah Bank sebagaimana dimaksud dalam Undang-Undang Nomor 7
+Tahun 1992 tentang Perbankan sebagaimana telah diubah dengan UndangUndang Nomor 10 Tahun 1998 dan Undang-Undang Nomor 21 Tahun 2008
+tentang Perbankan Syariah.
+
+2.
+
+Bank Umum adalah Bank Umum sebagaimana dimaksud dalam UndangUndang Nomor 7 Tahun 1992 tentang Perbankan sebagaimana telah diubah
+dengan Undang-Undang Nomor 10 Tahun 1998 dan Bank Umum Syariah
+sebagaimana dimaksud dalam Undang-Undang Nomor 21 Tahun 2008
+tentang Perbankan Syariah.
+
+3.
+
+Bank Perkreditan Rakyat yang selanjutnya disebut BPR adalah BPR
+sebagaimana dimaksud dalam Undang-Undang Nomor 7 Tahun 1992
+tentang Perbankan sebagaimana telah diubah dengan Undang-Undang
+Nomor 10 Tahun 1998.
+
+4. Bank …
+
+-5-
+
+4.
+
+Bank Pembiayaan Rakyat Syariah yang selanjutnya disebut BPRS adalah
+BPRS sebagaimana dimaksud dalam Undang-Undang Nomor 21 Tahun
+2008 tentang Perbankan Syariah.
+
+5.
+
+Direksi :
+a. bagi BPR dan BPRS berbentuk hukum Perseroan Terbatas, adalah
+Direksi sebagaimana dimaksud dalam Pasal 1 angka 5 Undang-Undang
+Nomor 40 Tahun 2007 tentang Perseroan Terbatas.
+b. bagi BPR berbentuk hukum Perusahaan Daerah, adalah Direksi
+sebagaimana dimaksud dalam Pasal 11 Undang-Undang Nomor 5
+Tahun 1962 tentang Perusahaan Daerah.
+c. bagi BPR berbentuk hukum Koperasi, adalah Pengurus sebagaimana
+dimaksud dalam Pasal 29 Undang-Undang Nomor 25 Tahun 1992
+tentang Perkoperasian.
+
+6.
+
+Komisaris :
+a. bagi BPR dan BPRS berbentuk hukum Perseroan Terbatas, adalah
+Komisaris sebagaimana dimaksud dalam Pasal 1 angka 6 UndangUndang Nomor 40 Tahun 2007 tentang Perseroan Terbatas.
+b. bagi BPR berbentuk hukum Perusahaan Daerah, adalah Pengawas
+sebagaimana dimaksud dalam Pasal 19 Undang-Undang Nomor 5
+Tahun 1962 tentang Perusahaan Daerah.
+c. bagi BPR berbentuk hukum Koperasi, adalah Pengawas sebagaimana
+dimaksud dalam Pasal 38 Undang-Undang Nomor 25 Tahun 1992
+tentang Perkoperasian.
+
+7. Pencucian …
+
+-6-
+
+7.
+
+Pencucian Uang adalah pencucian uang sebagaimana dimaksud dalam
+Undang-Undang yang mengatur mengenai Tindak Pidana Pencucian Uang.
+
+8.
+
+Pendanaan Terorisme adalah penggunaan harta kekayaan secara langsung
+atau tidak langsung untuk kegiatan terorisme sebagaimana dimaksud dalam
+Undang-Undang yang mengatur mengenai Tindak Pidana Pencucian Uang.
+
+9.
+
+Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme yang
+selanjutnya disebut sebagai APU dan PPT adalah upaya pencegahan dan
+pemberantasan tindak pidana pencucian uang dan pendanaan terorisme.
+
+10. Transaksi Keuangan Mencurigakan (Suspicious Transaction) adalah
+transaksi keuangan mencurigakan sebagaimana dimaksud dalam UndangUndang yang mengatur mengenai Tindak Pidana Pencucian Uang.
+11. Nasabah adalah pihak yang menggunakan jasa BPR/BPRS dan memiliki
+rekening pada BPR/BPRS tersebut.
+12. Walk in Customer yang selanjutnya disebut sebagai WIC adalah pengguna
+jasa BPR/BPRS yang tidak memiliki rekening pada BPR/BPRS tersebut,
+tidak termasuk pihak yang mendapatkan perintah atau penugasan dari
+Nasabah untuk melakukan transaksi atas kepentingan Nasabah tersebut.
+13. Beneficial Owner adalah setiap orang yang memiliki dana, yang
+mengendalikan transaksi nasabah atau WIC, yang memberikan kuasa atas
+terjadinya suatu transaksi dan/atau yang melakukan pengendalian melalui
+badan hukum atau perjanjian.
+14. Politically Exposed Person yang selanjutnya disebut sebagai PEP adalah
+orang yang mendapatkan kepercayaan untuk memiliki kewenangan publik
+diantaranya adalah Penyelenggara Negara sebagaimana dimaksud dalam
+
+peraturan …
+
+-7-
+
+peraturan perundang-undangan yang mengatur mengenai Penyelenggara
+Negara, dan/atau orang yang tercatat sebagai anggota partai politik yang
+memiliki pengaruh terhadap kebijakan dan operasional partai politik.
+15. Customer Due Dilligence yang selanjutnya disebut sebagai CDD adalah
+kegiatan berupa identifikasi, verifikasi, dan pemantauan yang dilakukan
+BPR dan BPRS untuk memastikan bahwa transaksi dilakukan sesuai
+dengan profil pengguna jasa bank.
+16. Enhanced Due Dilligence yang selanjutnya disebut sebagai EDD adalah
+CDD dan kegiatan lain yang dilakukan oleh BPR dan BPRS
+
+untuk
+
+mendalami profil calon Nasabah, Nasabah atau Beneficial Owner yang
+tergolong berisiko tinggi termasuk PEP terhadap kemungkinan pencucian
+uang dan pendanaan terorisme.
+17. Pusat Pelaporan dan Analisis Transaksi Keuangan yang selanjutnya disebut
+sebagai PPATK adalah PPATK sebagaimana dimaksud dalam UndangUndang yang mengatur mengenai Tindak Pidana Pencucian Uang.
+18. Rekomendasi Financial Action Task Force yang selanjutnya disebut
+sebagai Rekomendasi FATF adalah rekomendasi standar pencegahan dan
+pemberantasan pencucian uang dan pendanaan terorisme yang dikeluarkan
+oleh FATF.
+19. Lembaga Negara/Pemerintah adalah lembaga yang memiliki kewenangan
+di bidang eksekutif, yudikatif, dan legislatif.
+20. BPR/BPRS Pengirim adalah BPR/BPRS yang mengirimkan perintah
+pemindahan dana.
+21. BPR/BPRS Penerima adalah BPR/BPRS yang menerima perintah
+pemindahan dana.
+Pasal 2 …
+
+-8-
+
+Pasal 2
+(1)
+
+BPR dan BPRS wajib menerapkan program APU dan PPT.
+
+(2)
+
+Dalam
+
+penerapan
+
+program
+
+APU
+
+dan
+
+PPT,
+
+BPR
+
+dan
+
+BPRS
+
+wajib berpedoman pada ketentuan yang ditetapkan dalam Peraturan Bank
+Indonesia ini.
+
+Pasal 3
+(1)
+
+Program APU dan PPT pada BPR dan BPRS merupakan bagian dari
+pengelolaan risiko BPR dan BPRS secara keseluruhan.
+
+(2)
+
+Penerapan program APU dan PPT sebagaimana dimaksud pada Pasal 2 ayat
+(1) paling kurang mencakup:
+a.
+
+pengawasan aktif Direksi dan Dewan Komisaris;
+
+b.
+
+kebijakan dan prosedur;
+
+c.
+
+pengendalian intern; dan
+
+d.
+
+Sumber Daya Manusia (SDM) dan pelatihan.
+
+BAB II
+PENGAWASAN AKTIF DIREKSI DAN DEWAN KOMISARIS SERTA
+MEKANISME PERTANGGUNGJAWABAN
+Pasal 4
+Pengawasan aktif Direksi BPR dan BPRS paling kurang mencakup hal-hal
+sebagai berikut:
+a.
+
+memastikan BPR dan BPRS memiliki kebijakan dan prosedur program
+APU dan PPT;
+
+b. mengusulkan …
+
+-9-
+
+b.
+
+mengusulkan kebijakan dan prosedur tertulis program APU dan PPT
+kepada Dewan Komisaris;
+
+c.
+
+memastikan penerapan program APU dan PPT dilaksanakan sesuai dengan
+kebijakan dan prosedur tertulis yang telah ditetapkan;
+
+d.
+
+membentuk unit kerja khusus dan/atau menunjuk pegawai yang
+bertanggungjawab terhadap program APU dan PPT di Kantor Pusat;
+
+e.
+
+memastikan bahwa unit kerja/pegawai yang melaksanakan kebijakan dan
+prosedur program APU dan PPT terpisah dari unit kerja/pegawai yang
+mengawasi penerapannya;
+
+f.
+
+pengawasan atas kepatuhan unit kerja/pegawai dalam menerapkan program
+APU dan PPT;
+
+g.
+
+memastikan bahwa kantor cabang BPR dan BPRS memiliki pegawai yang
+bertanggungjawab terhadap program APU dan PPT;
+
+h.
+
+memastikan bahwa kebijakan dan prosedur tertulis mengenai program APU
+dan PPT sejalan dengan perubahan dan pengembangan produk, jasa, dan
+teknologi BPR dan BPRS serta sesuai dengan perkembangan modus
+pencucian uang atau pendanaan terorisme; dan
+
+i.
+
+memastikan bahwa seluruh pegawai, khususnya pegawai terkait dan
+pegawai baru, telah mendapatkan pengetahuan yang berkaitan dengan
+program APU dan PPT secara berkala.
+
+Pasal 5
+Pengawasan aktif yang dilakukan oleh Dewan Komisaris BPR dan BPRS paling
+kurang mencakup hal-hal sebagai berikut:
+
+a.persetujuan …
+
+- 10 -
+
+a.
+
+persetujuan atas kebijakan dan prosedur penerapan program APU dan PPT;
+dan
+
+b.
+
+pengawasan atas pelaksanaan tanggung jawab Direksi terhadap penerapan
+program APU dan PPT.
+
+Pasal 6
+(1)
+
+BPR dan BPRS wajib membentuk unit kerja khusus dan/atau menunjuk
+pegawai BPR dan BPRS yang bertanggungjawab atas penerapan program
+APU dan PPT.
+
+(2)
+
+Unit kerja khusus atau pegawai BPR dan BPRS sebagaimana dimaksud
+pada ayat (1) bertanggungjawab kepada Direktur.
+
+(3)
+
+BPR dan BPRS memastikan bahwa pegawai di unit kerja khusus atau
+pegawai yang bertanggungjawab atas penerapan program APU dan PPT
+sebagaimana dimaksud pada ayat (1), memiliki kemampuan yang memadai
+dan memiliki kewenangan untuk mengakses seluruh data Nasabah dan
+informasi lainnya yang terkait.
+
+(4)
+
+Dalam hal BPR dan BPRS tidak dapat membentuk unit kerja khusus atau
+menunjuk pegawai yang bertanggungjawab atas penerapan program APU
+dan PPT sebagaimana dimaksud pada ayat (1) maka fungsi dimaksud
+dilaksanakan oleh salah satu anggota Direksi.
+Pasal 7
+
+Unit kerja khusus atau pegawai BPR dan BPRS yang bertanggungjawab terhadap
+program APU dan PPT sebagaimana dimaksud dalam Pasal 6 ayat (1) wajib:
+
+a. memantau …
+
+- 11 -
+
+a.
+
+memantau adanya sistem yang mendukung program APU dan PPT;
+
+b.
+
+memantau pengkinian profil Nasabah dan profil transaksi Nasabah;
+
+c.
+
+melakukan koordinasi dan pemantauan terhadap pelaksanaan kebijakan
+program APU dan PPT dengan unit kerja/pegawai terkait yang
+berhubungan dengan Nasabah;
+
+d.
+
+memastikan
+
+bahwa
+
+kebijakan
+
+dan
+
+prosedur
+
+telah
+
+sesuai
+
+dengan
+
+perkembangan program APU dan PPT yang terkini, risiko produk BPR dan
+BPRS, kegiatan dan kompleksitas usaha BPR dan BPRS, dan volume
+transaksi BPR dan BPRS;
+e.
+
+menerima laporan transaksi keuangan yang berpotensi mencurigakan dari
+unit kerja atau pegawai terkait yang berhubungan dengan Nasabah dan
+melakukan analisis atas laporan tersebut;
+
+f.
+
+menyusun laporan Transaksi Keuangan Mencurigakan dan laporan lainnya
+sebagaimana diatur dalam Undang-Undang yang mengatur mengenai
+Tindak Pidana Pencucian Uang untuk disampaikan kepada PPATK
+berdasarkan persetujuan Direktur;
+
+g.
+
+memantau bahwa:
+1)
+
+terdapat mekanisme komunikasi yang baik dari setiap unit kerja atau
+pegawai terkait kepada unit kerja khusus atau pegawai yang
+bertanggungjawab terhadap penerapan program APU dan PPT dengan
+menjaga kerahasiaan informasi;
+
+2)
+
+unit kerja atau pegawai terkait mempersiapkan laporan mengenai
+dugaan
+
+Transaksi
+
+Keuangan
+
+Mencurigakan
+
+sebelum
+
+menyampaikannya kepada unit kerja khusus atau pegawai yang
+
+ditunjuk …
+
+- 12 -
+
+ditunjuk yang bertanggungjawab terhadap penerapan program APU
+dan PPT;
+3)
+
+area yang berisiko tinggi, terkait dengan APU dan PPT dengan
+mengacu pada ketentuan yang berlaku dan sumber informasi yang
+memadai.
+
+BAB III
+KEBIJAKAN DAN PROSEDUR
+Pasal 8
+(1)
+
+Dalam menerapkan program APU dan PPT, BPR dan BPRS wajib memiliki
+kebijakan dan prosedur tertulis yang paling kurang mencakup hal-hal
+sebagai berikut:
+a.
+
+pelaksanaan CDD, yang terdiri dari:
+1) permintaan informasi dan dokumen;
+2) verifikasi dokumen; dan
+3) pengkinian dan pemantauan.
+
+(2)
+
+b.
+
+penatausahaan dokumen;
+
+c.
+
+pemindahan dana;
+
+d.
+
+penutupan hubungan dan penolakan transaksi;
+
+e.
+
+ketentuan mengenai Beneficial Owner;
+
+f.
+
+ketentuan mengenai area berisiko tinggi dan PEP;
+
+g.
+
+pelaksanaan CDD yang lebih sederhana; dan
+
+h.
+
+pelaksanaan CDD oleh pihak ketiga.
+
+Kebijakan dan prosedur sebagaimana dimaksud pada ayat (1) wajib:
+
+a. dituangkan …
+
+- 13 -
+
+(3)
+
+a.
+
+dituangkan ke dalam Pedoman Pelaksanaan Program APU dan PPT;
+
+b.
+
+mendapat persetujuan dari Dewan Komisaris; dan
+
+c.
+
+diterapkan secara konsisten dan berkesinambungan.
+
+Kebijakan dan prosedur sebagaimana dimaksud pada ayat (1), harus
+mempertimbangkan
+
+faktor
+
+teknologi
+
+informasi
+
+yang
+
+berpotensi
+
+disalahgunakan oleh pelaku pencucian uang atau pendanaan terorisme.
+
+Pasal 9
+(1)
+
+BPR dan BPRS wajib melakukan CDD pada saat:
+a. melakukan hubungan usaha dengan calon Nasabah;
+b. melakukan hubungan usaha dengan WIC;
+
+(2)
+
+BPR dan BPRS juga wajib melakukan CDD dalam hal:
+a.
+
+terdapat keraguan atas kebenaran informasi yang diberikan oleh
+Nasabah, penerima kuasa, dan/atau Beneficial Owner; atau
+
+b.
+
+terdapat transaksi keuangan yang tidak wajar yang diduga terkait
+dengan pencucian uang dan/atau pendanaan terorisme.
+
+(3)
+
+Terhadap Nasabah yang telah ada sebelum peraturan ini berlaku, BPR dan
+BPRS wajib melakukan CDD sesuai dengan pendekatan berdasarkan
+materialitas dan risiko dalam hal:
+a. terdapat transaksi dalam jumlah yang signifikan;
+b. terdapat perubahan standar dokumentasi yang mendasar;
+c. terdapat perubahan pola transaksi yang signifikan;
+d. BPR dan BPRS mengetahui adanya kekurangan informasi dan/atau
+dokumen yang diperlukan; dan/atau
+
+e. menggunakan…
+
+- 14 -
+
+e. menggunakan rekening anonim atau rekening yang diindikasikan
+menggunakan nama fiktif.
+Pasal 10
+(1)
+
+Dalam
+
+melakukan
+
+penerimaan
+
+Nasabah,
+
+BPR
+
+dan
+
+BPRS
+
+wajib
+
+menggunakan pendekatan berdasarkan risiko dengan mengelompokkan
+Nasabah berdasarkan tingkat risiko terjadinya pencucian uang atau
+pendanaan terorisme.
+(2)
+
+Pengelompokan Nasabah berdasarkan tingkat risiko sebagaimana dimaksud
+pada ayat (1) paling kurang dilakukan dengan melakukan analisis terhadap:
+a.
+
+identitas Nasabah;
+
+b.
+
+lokasi usaha Nasabah;
+
+c.
+
+profil Nasabah;
+
+d.
+
+nilai transaksi;
+
+e.
+
+kegiatan usaha Nasabah;
+
+f.
+
+struktur kepemilikan bagi Nasabah perusahaan; dan
+
+g.
+
+informasi lainnya yang dapat digunakan untuk mengukur tingkat
+risiko Nasabah.
+
+(3)
+
+Ketentuan mengenai pengkategorian tingkat risiko pencucian uang atau
+pendanaan terorisme sebagaimana dimaksud pada ayat (1) akan diatur lebih
+lanjut dalam Surat Edaran Bank Indonesia.
+
+Pasal 11 …
+
+- 15 -
+
+Pasal 11
+(1) BPR dan BPRS wajib :
+a. meminta informasi calon Nasabah dan WIC sebelum melakukan
+hubungan usaha, termasuk identitas calon Nasabah yang dibuktikan
+dengan keberadaan dokumen pendukung;
+b. meneliti kebenaran dokumen pendukung identitas calon Nasabah; dan
+c. melakukan pertemuan langsung/tatap muka dengan calon Nasabah pada
+awal melakukan hubungan usaha dalam rangka meyakini kebenaran
+identitas calon Nasabah.
+(2) Dalam hal pertemuan langsung/tatap muka dengan calon Nasabah
+sebagaimana dimaksud pada ayat (1) huruf c tidak dapat dilakukan pada
+awal hubungan usaha, maka pertemuan dapat dilakukan di kemudian hari
+sepanjang memenuhi ketentuan sebagai berikut:
+a. calon Nasabah tergolong berisiko rendah; atau
+b. dokumen pendukung yang memuat identitas telah dilegalisir oleh pihak
+yang berwenang.
+(3) BPR dan BPRS dilarang untuk membuka atau memelihara rekening anonim
+atau rekening yang menggunakan nama fiktif.
+(4) BPR dan BPRS memberikan perhatian khusus terhadap transaksi atau
+hubungan usaha dengan Nasabah yang kegiatan usahanya terkait dengan
+negara yang belum memadai dalam melaksanakan rekomendasi FATF.
+
+Bagian…
+
+- 16 -
+
+Bagian Kesatu
+CUSTOMER DUE DILIGENCE (CDD)
+Paragraf 1
+PERMINTAAN INFORMASI DAN DOKUMEN
+Pasal 12
+BPR dan BPRS wajib mengidentifikasi dan mengklasifikasikan calon Nasabah,
+Nasabah dan Beneficial Owner ke dalam kelompok perorangan, perusahaan atau
+lainnya.
+Pasal 13
+(1)
+
+Informasi sebagaimana dimaksud dalam Pasal 11 ayat (1) bagi calon
+Nasabah perorangan paling kurang mencakup :
+a. identitas calon Nasabah yang memuat :
+1) Nama lengkap termasuk alias apabila ada;
+2) Nomor dokumen identitas yang dibuktikan dengan menunjukkan
+dokumen dimaksud;
+3) Alamat tempat tinggal yang tercantum pada kartu identitas;
+4) Alamat tempat tinggal terkini termasuk nomor telepon apabila ada;
+5) Tempat dan tanggal lahir;
+6) Kewarganegaraan;
+7) Pekerjaan;
+8) Jenis kelamin;
+9) Status perkawinan.
+b. identitas Beneficial Owner, apabila calon Nasabah mewakili Beneficial
+Owner;
+c. sumber…
+
+- 17 -
+
+Owner;
+c. sumber dana;
+d. rata-rata penghasilan; dan
+e. maksud dan tujuan hubungan usaha atau transaksi yang akan dilakukan
+calon Nasabah dengan BPR/BPRS.
+(2)
+
+Informasi sebagaimana dimaksud pada ayat (1) huruf a wajib didukung
+dengan dokumen identitas calon Nasabah dan spesimen tanda tangan.
+
+Pasal 14
+(1)
+
+Informasi sebagaimana dimaksud dalam Pasal 11 ayat (1) bagi calon
+Nasabah perusahaan selain Bank paling kurang mencakup:
+a.
+
+nama perusahaan;
+
+b.
+
+nomor izin usaha dari instansi berwenang;
+
+c.
+
+alamat kedudukan perusahaan;
+
+d.
+
+tempat dan tanggal pendirian perusahaan;
+
+e.
+
+bentuk badan hukum perusahaan;
+
+f.
+
+identitas Beneficial Owner, apabila calon Nasabah mewakili
+Beneficial Owner;
+
+g.
+
+sumber dana; dan
+
+h.
+
+maksud dan tujuan hubungan usaha atau transaksi yang akan
+dilakukan calon Nasabah dengan BPR/BPRS.
+
+(2) Informasi …
+
+- 18 -
+
+(2)
+
+Informasi sebagaimana dimaksud pada ayat (1) huruf a sampai e wajib
+didukung dengan dokumen identitas perusahaan berupa izin usaha dari
+instansi berwenang.
+
+(3)
+
+Untuk Nasabah perusahaan yang tergolong usaha mikro dan usaha kecil,
+dokumen sebagaimana dimaksud pada ayat (2) ditambah dengan:
+a.
+
+spesimen tanda tangan dan kuasa kepada pihak-pihak yang ditunjuk
+mempunyai wewenang bertindak untuk dan atas nama perusahaan
+dalam melakukan hubungan usaha dengan BPR/BPRS;
+
+b.
+
+kartu Nomor Pokok Wajib Pajak (NPWP) bagi Nasabah yang
+diwajibkan untuk memiliki NPWP sesuai dengan ketentuan yang
+berlaku; dan
+
+c.
+
+Surat Izin Tempat Usaha (SITU) atau dokumen lain yang
+dipersyaratkan oleh instansi yang berwenang.
+
+(4)
+
+Untuk Nasabah perusahaan yang tidak tergolong usaha mikro dan usaha
+kecil selain disertai dokumen sebagaimana dimaksud pada ayat (2) dan
+ayat (3), ditambah dengan:
+a.
+
+laporan keuangan atau deskripsi kegiatan usaha perusahaan;
+
+b.
+
+struktur manajemen perusahaan;
+
+c.
+
+struktur kepemilikan perusahaan; dan
+
+d.
+
+dokumen identitas anggota Direksi yang berwenang mewakili
+perusahaan untuk melakukan hubungan usaha dengan BPR/BPRS.
+
+Pasal 15 …
+
+- 19 -
+
+Pasal 15
+(1)
+
+Informasi sebagaimana dimaksud dalam Pasal 11 ayat (1) bagi calon
+Nasabah perusahaan berupa Bank paling kurang mencakup:
+
+(2)
+
+a.
+
+nama Bank;
+
+b.
+
+nomor izin usaha dari Bank Indonesia;
+
+c.
+
+alamat kedudukan Bank;
+
+d.
+
+tempat dan tanggal pendirian Bank; dan
+
+e.
+
+bentuk badan hukum Bank;
+
+Informasi sebagaimana dimaksud pada ayat (1) huruf a sampai e wajib
+didukung dengan dokumen identitas Bank berupa:
+a.
+
+izin usaha dari Bank Indonesia; dan
+
+b.
+
+spesimen tanda tangan dan surat kuasa kepada pihak-pihak yang
+ditunjuk mempunyai wewenang bertindak untuk dan atas nama Bank
+dalam melakukan hubungan usaha dengan BPR/BPRS.
+
+Pasal 16
+(1)
+
+Untuk calon Nasabah berupa yayasan dan perkumpulan, BPR dan BPRS
+wajib meminta informasi paling kurang sebagai berikut:
+a.
+
+nama yayasan/perkumpulan;
+
+b.
+
+nomor izin pendirian dari instansi berwenang;
+
+c.
+
+alamat kedudukan yayasan/perkumpulan;
+
+d.
+
+tempat dan tanggal pendirian yayasan/perkumpulan;
+
+e.
+
+bentuk badan hukum;
+
+f.
+
+identitas Beneficial Owner, apabila calon Nasabah mewakili
+Beneficial Owner;
+g. sumber …
+
+- 20 -
+
+g.
+
+sumber dana; dan
+
+h.
+
+maksud dan tujuan hubungan usaha atau transaksi yang akan
+dilakukan calon Nasabah dengan BPR/BPRS.
+
+(2)
+
+Untuk calon Nasabah berupa yayasan, informasi sebagaimana dimaksud
+pada ayat (1) wajib didukung dengan dokumen yang memuat informasi
+paling kurang berupa:
+a.
+
+izin bidang kegiatan/tujuan yayasan;
+
+b.
+
+deskripsi kegiatan yayasan;
+
+c.
+
+struktur pengurus yayasan; dan
+
+d.
+
+identitas anggota pengurus yang berwenang mewakili yayasan untuk
+melakukan hubungan usaha dengan BPR/BPRS.
+
+(3)
+
+Untuk calon Nasabah berupa perkumpulan, informasi sebagaimana
+dimaksud pada ayat (1) wajib didukung dengan dokumen yang memuat
+informasi paling kurang berupa:
+a.
+
+bukti pendaftaran pada instansi yang berwenang;
+
+b.
+
+nama penyelenggara; dan
+
+c.
+
+identitas pihak yang berwenang mewakili perkumpulan dalam
+melakukan hubungan usaha dengan BPR/BPRS.
+
+Pasal 17
+(1)
+
+Terhadap calon Nasabah berupa Lembaga Negara/Pemerintah, BPR dan
+BPRS wajib meminta informasi mengenai nama dan alamat kedudukan
+Lembaga Negara/Pemerintah.
+
+(2)
+
+Informasi sebagaimana dimaksud pada ayat (1) wajib didukung dengan
+dokumen berupa:
+a. surat …
+
+- 21 -
+
+a.
+
+surat penunjukan bagi pihak-pihak yang berwenang mewakili
+Lembaga Negara/Pemerintah dalam melakukan hubungan usaha
+dengan BPR/BPRS; dan
+
+b.
+
+spesimen tanda tangan.
+
+Pasal 18
+(1)
+
+Informasi yang wajib diminta oleh BPR dan BPRS kepada WIC sebelum
+melakukan transaksi :
+a.
+
+Untuk transaksi kurang dari Rp100.000.000,00 (seratus juta rupiah)
+adalah informasi sebagaimana dimaksud dalam Pasal 13 ayat (1) huruf
+a angka 1) sampai angka 3) bagi WIC perorangan, dan Pasal 14 ayat
+(1) huruf a dan huruf c bagi WIC perusahaan.
+
+b.
+
+Untuk transaksi sebesar Rp100.000.000,00 (seratus juta rupiah) atau
+lebih, baik yang dilakukan dalam 1 (satu) kali maupun beberapa kali
+transaksi dalam 1 (satu) hari kerja adalah seluruh informasi
+sebagaimana dimaksud dalam Pasal 13 ayat (1) bagi WIC perorangan
+dan Pasal 14 ayat (1) bagi WIC perusahaan.
+
+(2)
+
+Informasi sebagaimana dimaksud dalam ayat (1) huruf b wajib didukung
+dengan dokumen berupa:
+a.
+
+Bagi WIC perorangan adalah dokumen identitas.
+
+b.
+
+Bagi WIC perusahaan adalah:
+1) Izin usaha dari instansi berwenang;
+2) Surat kuasa kepada pihak-pihak yang ditunjuk mempunyai
+wewenang bertindak untuk dan atas nama perusahaan dalam
+melakukan hubungan usaha dengan BPR/BPRS; dan
+3) Kartu…
+
+- 22 -
+
+3) Kartu NPWP bagi Nasabah yang diwajibkan untuk memiliki
+NPWP sesuai dengan ketentuan yang berlaku.
+
+Paragraf 2
+VERIFIKASI DOKUMEN
+Pasal 19
+(1)
+
+BPR dan BPRS wajib melakukan verifikasi terhadap dokumen pendukung
+yang memuat informasi sebagaimana dimaksud dalam Pasal 13 ayat (1),
+Pasal 14 ayat (1), Pasal 15 ayat (1), Pasal 16 ayat (1) dan Pasal 17 ayat (1)
+serta memastikan bahwa data tersebut adalah data yang benar dan terkini.
+
+(2)
+
+BPR dan BPRS dapat melakukan wawancara dengan calon Nasabah untuk
+meneliti dan meyakini kebenaran dokumen sebagaimana dimaksud pada
+ayat (1).
+
+(3)
+
+Dalam hal terdapat keraguan, BPR dan BPRS wajib meminta kepada calon
+Nasabah untuk memberikan dokumen identitas lainnya atau dokumen
+pendukung yang dikeluarkan oleh pihak yang berwenang, untuk
+memastikan kebenaran identitas calon Nasabah.
+
+(4)
+
+BPR dan BPRS wajib menyelesaikan proses verifikasi identitas terhadap:
+a.
+
+calon Nasabah dan Beneficial Owner sebelum melakukan hubungan
+usaha dengan calon Nasabah.
+
+b.
+(5)
+
+WIC dan Beneficial Owner sebelum melakukan transaksi.
+
+Dalam kondisi tertentu BPR/BPRS dapat melakukan hubungan usaha
+sebelum proses verifikasi selesai sebagaimana dimaksud pada ayat (4) huruf
+a selesai.
+
+(6) Proses …
+
+- 23 -
+
+(6)
+
+Proses verifikasi sebagaimana dimaksud pada ayat (5) wajib diselesaikan
+paling lambat:
+a.
+
+untuk Nasabah perorangan, 14 (empat belas) hari kerja setelah
+dilakukannya hubungan usaha.
+
+b.
+
+untuk Nasabah perusahaan, 90 (sembilan puluh) hari kerja setelah
+dilakukannya hubungan usaha.
+
+Paragraf 3
+PENGKINIAN DAN PEMANTAUAN
+Pasal 20
+(1)
+
+BPR dan BPRS wajib melakukan pengkinian data terhadap informasi dan
+dokumen Nasabah sebagaimana dimaksud dalam Pasal 13, Pasal 14, Pasal
+15, Pasal 16 dan Pasal 17 serta menatausahakannya.
+
+(2)
+
+Pengkinian data terhadap informasi dan dokumen Nasabah sebagaimana
+dimaksud dalam ayat (1) termasuk didalamnya adalah pengkinian data
+terhadap nasabah yang telah melakukan hubungan usaha sebelum PBI ini
+diterbitkan.
+
+Pasal 21
+BPR dan BPRS wajib :
+a.
+
+memelihara Daftar Teroris berdasarkan data yang diterima dari Bank
+Indonesia setiap 6 (enam) bulan berdasarkan data yang dipublikasikan oleh
+Perserikatan Bangsa-Bangsa (PBB);
+
+b. memastikan …
+
+- 24 -
+
+b.
+
+memastikan secara berkala nama-nama Nasabah BPR dan BPRS yang
+memiliki kesamaan atau kemiripan dengan nama yang tercantum dalam
+Daftar Teroris;
+
+c.
+
+memastikan kesesuaian identitas Nasabah tersebut dengan informasi lain
+yang terkait dalam hal terdapat kemiripan nama Nasabah dengan nama
+yang tercantum dalam Daftar Teroris; dan
+
+d.
+
+melaporkan Nasabah tersebut dalam laporan Transaksi Keuangan
+Mencurigakan dalam hal terdapat kesamaan nama Nasabah dan kesamaan
+informasi lainnya dengan nama yang tercantum dalam Daftar Teroris.
+
+Pasal 22
+(1)
+
+BPR dan BPRS wajib melakukan :
+a.
+
+pemantauan
+
+secara
+
+berkesinambungan
+
+untuk
+
+mengidentifikasi
+
+kesesuaian antara transaksi Nasabah dengan profil Nasabah dan
+menatausahakan dokumen sebagaimana dimaksud dalam Pasal 24.
+b.
+
+analisis terhadap seluruh transaksi yang tidak sesuai dengan profil
+Nasabah.
+
+(2)
+
+BPR dan BPRS dapat meminta informasi tentang latar belakang dan tujuan
+transaksi terhadap transaksi yang tidak sesuai dengan profil Nasabah,
+dengan memperhatikan ketentuan anti tipping-off sebagaimana dimaksud
+dalam Undang-Undang yang mengatur mengenai Tindak Pidana Pencucian
+Uang.
+
+Pasal 23 …
+
+- 25 -
+
+Pasal 23
+(1)
+
+BPR
+
+dan
+
+BPRS
+
+wajib
+
+memiliki sistem
+
+pencatatan
+
+yang
+
+dapat
+
+mengidentifikasi, menganalisa, memantau dan menyediakan laporan secara
+efektif mengenai karakteristik transaksi yang dilakukan oleh Nasabah.
+(2)
+
+BPR dan BPRS wajib memelihara profil Nasabah paling kurang meliputi
+informasi mengenai:
+a.
+
+pekerjaan atau bidang usaha;
+
+b.
+
+jumlah penghasilan;
+
+c.
+
+rekening lain yang dimiliki, apabila ada;
+
+d.
+
+aktivitas transaksi normal; dan
+
+e.
+
+tujuan pembukaan rekening.
+
+Bagian Kedua
+PENATAUSAHAAN DOKUMEN
+Pasal 24
+(1)
+
+BPR dan BPRS wajib menatausahakan:
+a.
+
+dokumen yang terkait dengan data Nasabah atau WIC dengan jangka
+waktu paling kurang 5 (lima) tahun sejak:
+1)
+
+berakhirnya hubungan usaha atau transaksi dengan Nasabah atau
+WIC; atau
+
+2)
+
+ditemukannya ketidaksesuaian transaksi dengan tujuan ekonomis
+dan/atau tujuan usaha.
+
+b.
+
+dokumen Nasabah atau WIC yang terkait dengan transaksi keuangan
+dengan jangka waktu sebagaimana diatur dalam Undang-Undang yang
+mengatur mengenai Dokumen Perusahaan.
+(2) Dokumen ...
+
+- 26 -
+
+(2)
+
+Dokumen yang terkait sebagaimana yang dimaksud pada ayat (1) paling
+kurang mencakup:
+a.
+
+identitas Nasabah atau WIC; dan
+
+b.
+
+informasi transaksi yang antara lain meliputi jenis mata uang dan
+jumlah uang yang digunakan, tanggal perintah transaksi, asal dan
+tujuan transaksi, serta nomor rekening yang terkait dengan transaksi.
+
+(3)
+
+BPR dan BPRS wajib memberikan informasi dan/atau dokumen
+sebagaimana dimaksud pada ayat (1) kepada Bank Indonesia dan/atau
+otoritas lain yang berwenang sebagaimana diatur dalam peraturan
+perundang-undangan yang berlaku.
+
+Bagian Ketiga
+PEMINDAHAN DANA
+Pasal 25
+Dalam melakukan kegiatan pemindahan dana untuk kepentingan Nasabah atau
+WIC melalui rekening BPR/BPRS yang ada di Bank Umum dan/atau Unit Usaha
+Syariah :
+a.
+
+BPR dan BPRS Pengirim wajib:
+1)
+
+memperoleh informasi dan melakukan identifikasi serta verifikasi
+terhadap Nasabah pengirim atau WIC pengirim, paling kurang
+meliputi:
+a)
+
+nomor rekening dan identitas Nasabah pengirim atau identitas
+WIC pengirim; dan
+
+b)
+
+tanggal transaksi dan nominal.
+
+2) mendokumentasikan …
+
+- 27 -
+
+2)
+b.
+
+mendokumentasikan seluruh transaksi pemindahan dana.
+
+BPR dan BPRS Penerima wajib memastikan kelengkapan informasi
+Nasabah pengirim dan WIC pengirim sebagaimana dimaksud pada huruf a.
+
+Pasal 26
+Dalam hal informasi sebagaimana dimaksud dalam Pasal 25 tidak dipenuhi, BPR
+dan BPRS dengan menggunakan pendekatan berdasarkan risiko dapat:
+a.
+
+menolak untuk melaksanakan pemindahan dana;
+
+b.
+
+membatalkan transaksi pemindahan dana; dan/atau
+
+c.
+
+mengakhiri hubungan usaha dengan Nasabah.
+
+Pasal 27
+Dalam hal terdapat pemindahan dana yang memenuhi kriteria mencurigakan
+sebagaimana dimaksud dalam Undang-Undang yang mengatur mengenai Tindak
+Pidana Pencucian Uang, BPR dan BPRS wajib melaporkan pemindahan dana
+tersebut sebagai laporan Transaksi Keuangan Mencurigakan kepada PPATK.
+
+Bagian Keempat
+PENUTUPAN HUBUNGAN USAHA ATAU PENOLAKAN TRANSAKSI
+Pasal 28
+(1)
+
+BPR dan BPRS wajib menolak melakukan hubungan usaha dengan calon
+Nasabah dan/atau melaksanakan transaksi dengan WIC, dalam hal calon
+Nasabah atau WIC:
+
+a.tidak …
+
+- 28 -
+
+a.
+
+tidak memenuhi ketentuan sebagaimana dimaksud dalam Pasal 13,
+Pasal 14, Pasal 15, Pasal 16, dan Pasal 17; atau
+
+b.
+
+diketahui menggunakan identitas dan/atau memberikan informasi
+yang tidak benar.
+
+(2)
+
+BPR dan BPRS dapat menolak transaksi, membatalkan transaksi, dan/atau
+menutup hubungan usaha dengan Nasabah dalam hal :
+
+(3)
+
+a.
+
+kriteria sebagaimana dimaksud pada ayat (1) terpenuhi;
+
+b.
+
+BPR dan BPRS ragu terhadap kebenaran informasi Nasabah; atau
+
+c.
+
+penggunaan rekening tidak sesuai dengan profil Nasabah.
+
+BPR dan BPRS wajib :
+a.
+
+mendokumentasikan data calon Nasabah, WIC, atau Nasabah yang
+memenuhi kriteria sebagaimana dimaksud pada ayat (1) dan ayat (2).
+
+b.
+
+melaporkan calon Nasabah, WIC, atau Nasabah sebagaimana
+dimaksud pada ayat (1) dan ayat (2) dalam laporan Transaksi
+Keuangan Mencurigakan kepada PPATK apabila transaksinya tidak
+wajar atau mencurigakan.
+
+Bagian Kelima
+BENEFICIAL OWNER
+Pasal 29
+(1)
+
+BPR dan BPRS wajib memastikan apakah calon Nasabah atau WIC
+mewakili Beneficial Owner untuk membuka hubungan usaha atau
+melakukan transaksi.
+
+(2)
+
+Dalam hal calon Nasabah atau WIC mewakili Beneficial Owner untuk
+membuka hubungan usaha atau melakukan transaksi, BPR dan BPRS wajib
+melakukan …
+
+- 29 -
+
+melakukan prosedur CDD terhadap Beneficial Owner sebagaimana
+dilakukan terhadap calon Nasabah atau WIC.
+
+Pasal 30
+(1)
+
+BPR dan BPRS wajib memperoleh bukti atas identitas dan/atau informasi
+lainnya mengenai Beneficial Owner, antara lain berupa:
+a.
+
+bagi Beneficial Owner perorangan:
+1)
+
+dokumen identitas sebagaimana dimaksud dalam Pasal 13 ayat
+(2);
+
+2)
+
+hubungan hukum antara calon Nasabah atau WIC dengan
+Beneficial Owner yang ditunjukkan dengan surat penugasan,
+surat perjanjian, surat kuasa atau bentuk lainnya; dan
+
+3)
+
+pernyataan dari calon Nasabah atau WIC mengenai kebenaran
+identitas maupun sumber dana dari Beneficial Owner.
+
+b.
+
+bagi Beneficial Owner perusahaan, yayasan atau perkumpulan:
+1)
+
+dokumen sebagaimana dimaksud dalam Pasal 14 ayat (2), ayat
+(3) dan ayat (4), pasal 16 ayat (2) dan ayat (3);
+
+2)
+
+informasi dan dokumen identitas pemilik atau pengendali akhir
+perusahaan, yayasan, atau perkumpulan; dan
+
+3)
+
+pernyataan dari calon Nasabah atau WIC mengenai kebenaran
+identitas maupun sumber dana dari Beneficial Owner.
+
+(2)
+
+Dalam hal calon Nasabah merupakan Bank lain yang mewakili Beneficial
+Owner, maka dokumen mengenai Beneficial Owner berupa pernyataan
+
+tertulis …
+
+- 30 -
+
+tertulis dari Bank dimaksud bahwa identitas Beneficial Owner telah
+dilakukan verifikasi oleh Bank lain di dalam negeri tersebut.
+(3)
+
+Dalam hal BPR dan BPRS meragukan atau tidak dapat meyakini identitas
+Beneficial Owner, BPR dan BPRS wajib menolak untuk melakukan
+hubungan usaha atau transaksi dengan calon Nasabah atau WIC.
+
+Pasal 31
+Kewajiban penyampaian dokumen dan/atau informasi identitas pemilik atau
+pengendali akhir Beneficial Owner sebagaimana dimaksud dalam Pasal 30 ayat
+(1) huruf b angka 2) tidak berlaku bagi Beneficial Owner berupa:
+(1)
+
+Lembaga Negara/Pemerintah; atau
+
+(2)
+
+perusahaan yang terdaftar di Bursa Efek.
+
+Bagian Keenam
+POLITICALLY EXPOSED PERSON DAN AREA BERISIKO TINGGI
+Pasal 32
+(1)
+
+BPR dan BPRS wajib meneliti adanya calon Nasabah, Nasabah dan
+Beneficial Owner yang memenuhi kriteria berisiko tinggi atau PEP.
+
+(2)
+
+Dalam hal calon Nasabah diketahui tergolong PEP maka BPR dan BPRS
+wajib melakukan EDD pada awal melakukan hubungan usaha dengan BPR
+dan BPRS.
+
+(3)
+
+Nasabah dan Beneficial Owner yang memenuhi kriteria berisiko tinggi atau
+PEP dibuat dalam daftar tersendiri.
+
+(4) Kewajiban …
+
+- 31 -
+
+(4)
+
+Kewajiban BPR dan BPRS sebagaimana dimaksud pada ayat (3)
+diberlakukan pula terhadap Nasabah atau WIC yang menerima kiriman
+uang dari dan/atau melakukan transaksi lainnya dengan pihak yang berasal
+dari negara berisiko tinggi melalui rekening BPR/BPRS yang ada di Bank
+Umum dan/atau Unit Usaha Syariah dalam negeri.
+
+(5)
+
+Dalam hal BPR dan BPRS akan melakukan hubungan usaha dengan calon
+Nasabah yang tergolong PEP, Direksi BPR/BPRS atau Pejabat Eksekutif
+bertanggung jawab atas pelaksanaan hubungan usaha dengan calon
+Nasabah tersebut.
+
+(6)
+
+Direksi atau Pejabat Eksekutif sebagaimana dimaksud pada ayat (5)
+berwenang untuk :
+a.
+
+memberikan persetujuan atau penolakan terhadap calon Nasabah yang
+tergolong berisiko tinggi atau PEP; dan
+
+b.
+
+membuat keputusan untuk meneruskan atau menghentikan hubungan
+usaha dengan Nasabah atau Beneficial Owner yang tergolong PEP.
+
+Pasal 33
+BPR dan BPRS wajib melakukan EDD sebagaimana dimaksud dalam Pasal 32
+dengan cara melakukan CDD sebagaimana dimaksud dalam Pasal 8 ayat (1)
+huruf a serta melakukan kegiatan-kegiatan sebagai berikut:
+a.
+
+Bagi calon Nasabah:
+1)
+
+meminta informasi tambahan yang diperlukan untuk memastikan
+kebenaran profil calon Nasabah; dan/atau
+
+2)
+
+meminta dokumen pendukung tambahan untuk meyakini kebenaran
+informasi mengenai identitas dan sumber dana.
+b. Bagi …
+
+- 32 -
+
+b.
+
+Bagi Nasabah atau Beneficial Owner:
+1)
+
+melakukan kegiatan seperti yang dilakukan terhadap calon Nasabah
+sebagaimana dimaksud pada huruf a;
+
+2)
+
+melakukan analisa secara berkala paling kurang terhadap informasi
+mengenai sumber dana, tujuan transaksi, dan hubungan usaha dengan
+pihak-pihak yang terkait; dan
+
+3)
+
+memantau lebih ketat pola transaksi nasabah untuk kepentingan
+pengkinian profil Nasabah atau Beneficial Owner.
+
+Bagian Ketujuh
+CDD YANG LEBIH SEDERHANA
+Pasal 34
+(1)
+
+BPR dan BPRS dapat menerapkan prosedur CDD yang lebih sederhana
+dari prosedur CDD sebagaimana dimaksud dalam Pasal 13, Pasal 14, Pasal
+15, dan Pasal 16 terhadap calon Nasabah yang tingkat risiko terjadinya
+pencucian uang atau pendanaan terorisme tergolong rendah dan memenuhi
+kriteria sebagai berikut:
+a. tujuan pembukaan rekening untuk pembayaran gaji karyawan;
+b. rekening
+
+berupa
+
+tabungan
+
+wajib
+
+terkait
+
+dengan
+
+pemberian
+
+kredit/pembiayaan dari BPR/BPRS yang sama;
+c. calon Nasabah berupa perusahaan publik yang tunduk pada peraturan
+tentang kewajiban untuk mengungkapkan kinerjanya; atau
+d. nilai transaksi awal pembukaan rekening dibawah Rp1.000.000,00 (satu
+juta rupiah).
+
+(2) Dalam …
+
+- 33 -
+
+(2)
+
+Dalam hal terhadap nilai transaksi awal rekening sebagaimana dimaksud
+pada ayat (1) huruf d ditemukan indikasi transaksi keuangan yang tidak
+wajar yang diduga terkait dengan pencucian uang dan/atau pendanaan
+terorisme, Bank wajib melakukan CDD sebagaimana dimaksud dalam
+Pasal 9.
+
+(3)
+
+BPR dan BPRS wajib membuat dan menyimpan daftar Nasabah yang
+mendapat perlakuan CDD yang lebih sederhana.
+
+(4)
+
+Bagi calon Nasabah perorangan yang memenuhi ketentuan sebagaimana
+dimaksud pada ayat (1), BPR dan BPRS wajib meminta informasi
+sebagaimana dimaksud dalam Pasal 13 ayat (1) huruf a angka 1) sampai
+angka 5) dengan disertai dokumen pendukung sebagaimana dimaksud pada
+Pasal 13 ayat (2).
+
+(5)
+
+Bagi calon Nasabah perusahaan yang memenuhi ketentuan sebagaimana
+dimaksud pada ayat (1), BPR dan BPRS wajib meminta:
+a.
+
+informasi sebagaimana dimaksud dalam Pasal 14 ayat (1) huruf a dan
+huruf c; dan
+
+b.
+
+dokumen sebagaimana dimaksud dalam Pasal 14 ayat (3) huruf a
+untuk perusahaan yang tergolong usaha mikro dan usaha kecil, dan
+Pasal 14 ayat (4) huruf d untuk perusahaan yang tidak tergolong usaha
+mikro dan usaha kecil.
+
+(6)
+
+Prosedur CDD yang lebih sederhana sebagaimana dimaksud pada ayat (1)
+tidak berlaku apabila terdapat dugaan terjadi transaksi Pencucian Uang
+dan/atau Pendanaan Terorisme dan berlaku ketentuan CDD sebagaimana
+dimaksud dalam Pasal 9.
+
+Bagian…
+
+- 34 -
+
+Bagian Kedelapan
+PELAKSANAAN CDD OLEH PIHAK KETIGA
+Pasal 35
+(1)
+
+BPR dan BPRS dapat menggunakan hasil CDD yang telah dilakukan oleh
+pihak ketiga terhadap calon Nasabahnya yang telah menjadi nasabah pada
+pihak ketiga tersebut.
+
+(2)
+
+Hasil CDD sebagaimana dimaksud pada ayat (1) dapat digunakan oleh
+BPR/BPRS apabila pihak ketiga :
+a.
+
+memiliki prosedur CDD sesuai dengan ketentuan yang berlaku;
+
+b.
+
+memiliki kerja sama dengan BPR/BPRS dalam bentuk kesepakatan
+tertulis;
+
+c.
+
+tunduk pada pengawasan dari otoritas berwenang sesuai dengan
+ketentuan yang berlaku; dan
+
+d.
+
+bersedia memenuhi permintaan informasi dan salinan dokumen
+pendukung apabila sewaktu-waktu dibutuhkan oleh BPR/BPRS dalam
+rangka pelaksanaan program APU dan PPT.
+
+(3)
+
+BPR dan BPRS wajib memastikan kecukupan identifikasi dan verifikasi
+atas hasil CDD yang telah dilakukan oleh pihak ketiga sebagaimana
+dimaksud pada ayat (1).
+
+(4)
+
+BPR dan BPRS yang menggunakan hasil CDD dari pihak ketiga
+sebagaimana
+
+dimaksud
+
+pada
+
+ayat
+
+(1)
+
+bertanggung
+
+jawab
+
+untuk
+
+melaksanakan penatausahaan dokumen sebagaimana dimaksud dalam Pasal
+24.
+
+BAB IV …
+
+- 35 -
+
+BAB IV
+PENGENDALIAN INTERN
+Pasal 36
+(1)
+
+BPR dan BPRS wajib memiliki sistem pengendalian intern yang efektif.
+
+(2)
+
+Pelaksanaan sistem pengendalian intern yang efektif antara lain dibuktikan
+dengan:
+a.
+
+adanya batasan wewenang dan tanggung jawab yang jelas untuk unit
+kerja atau pegawai yang terkait dengan penerapan program APU dan
+PPT;
+
+b.
+
+adanya pemisahan fungsi antara pelaksana penerapan program APU
+dan PPT dengan pegawai yang ditunjuk untuk mengawasi efektivitas
+penerapan program tersebut; dan
+
+c.
+
+dilakukannya pemantauan terhadap efektivitas pelaksanaan program
+APU dan PPT oleh satuan kerja audit intern/pegawai yang ditunjuk
+untuk melakukan fungsi pengawasan sebagaimana disebutkan pada
+huruf b.
+
+BAB V
+SUMBER DAYA MANUSIA DAN PELATIHAN
+Pasal 37
+BPR dan BPRS wajib melakukan prosedur penyaringan (screening) dalam
+rangka penerimaan pegawai baru, untuk mencegah digunakannya BPR dan
+BPRS sebagai media atau tujuan pencucian uang atau pendanaan terorisme yang
+melibatkan pihak intern BPR/BPRS.
+
+Pasal 38…
+
+- 36 -
+
+Pasal 38
+(1)
+
+BPR dan BPRS wajib menyelenggarakan pelatihan mengenai program APU
+dan PPT.
+
+(2)
+
+Pelatihan sebagaimana dimaksud dalam ayat (1) dapat dilakukan dengan
+cara antara lain:
+a.
+
+menyelenggarakan in house training;
+
+b.
+
+mengikutsertakan pegawai dalam pelatihan yang diselenggarakan oleh
+pihak lain;
+
+c.
+
+menyelenggarakan
+
+forum
+
+tukar-menukar
+
+informasi
+
+(knowledge
+
+sharing); dan/atau
+d.
+
+melakukan pembelajaran dengan menggunakan sarana elektronik (elearning).
+
+BAB VI
+PELAPORAN
+Pasal 39
+(1)
+
+Dalam rangka menerapkan program APU dan PPT, BPR dan BPRS wajib
+menyampaikan:
+a.
+
+Pedoman Pelaksanaan Program APU dan PPT sebagaimana dimaksud
+dalam Pasal 8 ayat (2) paling lambat 12 (dua belas) bulan sejak
+diberlakukannya Peraturan Bank Indonesia ini;
+
+b.
+
+Setiap perubahan Pedoman Pelaksanaan Program APU dan PPT
+sebagaimana dimaksud dalam Pasal 8 ayat (2) paling lambat 30 (tiga
+puluh) hari sejak perubahan tersebut kepada Bank Indonesia.
+
+c. Dalam …
+
+- 37 -
+
+c.
+
+Dalam hal batas akhir laporan sebagaimana dimaksud pada huruf a
+dan b jatuh pada hari Sabtu atau hari libur, maka batas akhir laporan
+adalah hari kerja berikutnya.
+
+(2)
+
+Pelaporan sebagaimana dimaksud pada ayat (1) huruf a dan perubahan
+sebagaimana ayat (1) huruf b disampaikan kepada:
+a.
+
+Direktorat Kredit, BPR dan UMKM (DKBU), Bank Indonesia, Jl.
+M.H. Thamrin No.2 Jakarta 10350, bagi BPR yang berkantor pusat di
+wilayah kerja Kantor Pusat Bank Indonesia;
+
+b.
+
+Direktorat Perbankan Syariah (DPbS), Bank Indonesia, Jl. M.H.
+Thamrin No.2 Jakarta 10350, bagi BPRS yang berkantor pusat di
+wilayah kerja Kantor Pusat Bank Indonesia;
+
+c.
+
+Kantor Bank Indonesia setempat, bagi BPR/BPRS yang berkantor
+pusat di luar wilayah kerja Kantor Pusat Bank Indonesia.
+
+Pasal 40
+(1)
+
+BPR dan BPRS wajib menyampaikan laporan Transaksi Keuangan
+Mencurigakan, laporan transaksi keuangan tunai, dan laporan lain kepada
+PPATK sebagaimana diatur dalam Undang-Undang yang mengatur
+mengenai Tindak Pidana Pencucian Uang.
+
+(2)
+
+Kewajiban BPR dan BPRS untuk melaporkan Transaksi Keuangan
+Mencurigakan sebagaimana dimaksud pada ayat (1), juga berlaku untuk
+transaksi yang diduga terkait dengan kegiatan terorisme atau pendanaan
+terorisme.
+
+(3)
+
+BPR dan BPRS wajib menyampaikan laporan Transaksi Keuangan
+Mencurigakan sebagaimana dimaksud pada ayat (1) kepada PPATK paling
+lambat …
+
+- 38 -
+
+lambat 3 (tiga) hari kerja setelah BPR dan BPRS mengetahui adanya unsur
+Transaksi Keuangan Mencurigakan.
+(4)
+
+Penyampaian laporan sebagaimana dimaksud pada ayat (1) dilakukan
+dengan berpedoman pada ketentuan yang dikeluarkan oleh PPATK.
+
+BAB VII
+KETENTUAN LAIN-LAIN
+Pasal 41
+BPR dan BPRS harus melakukan tindakan yang diperlukan untuk mencegah
+penyalahgunaan teknologi dalam pengembangan modus pencucian uang atau
+skema pendanaan terorisme.
+
+Pasal 42
+BPR dan BPRS wajib bekerja sama dengan penegak hukum dan otoritas yang
+berwenang dalam rangka memberantas pencucian uang dan/atau pendanaan
+terorisme.
+
+BAB VIII
+SANKSI
+Pasal 43
+(1)
+
+BPR dan BPRS yang terlambat menyampaikan Pedoman Program APU dan
+PPT dan/atau perubahannya sebagaimana dimaksud dalam Pasal 39 ayat (1)
+dikenakan sanksi kewajiban membayar sebesar Rp50.000,00 (lima puluh
+ribu rupiah) per hari keterlambatan per laporan dan paling banyak sebesar
+Rp1.000.000,00 (satu juta rupiah).
+(2) BPR …
+
+- 39 -
+
+(2)
+
+BPR dan BPRS yang terlambat menyampaikan Laporan Transaksi
+Keuangan Mencurigakan sebagaimana dimaksud dalam Pasal 40 ayat (3)
+dikenakan sanksi kewajiban membayar sebesar Rp50.000,00 (lima puluh
+ribu rupiah) per hari keterlambatan per laporan dan paling banyak sebesar
+Rp1.000.000,00 (satu juta rupiah).
+
+(3)
+
+BPR dan BPRS yang belum menyampaikan Pedoman Program APU dan
+PPT dan/atau perubahannya sebagaimana dimaksud pada ayat (1) dalam
+waktu lebih 1 (satu) bulan sejak batas akhir waktu penyampaian dikenakan
+sanksi berupa teguran tertulis dan kewajiban membayar sebesar
+Rp3.000.000,00 (tiga juta rupiah).
+
+(4)
+
+BPR dan BPRS yang belum menyampaikan Laporan Transaksi Keuangan
+Mencurigakan sebagaimana dimaksud pada ayat (1) dalam waktu lebih 1
+(satu) bulan sejak ditemukan pada saat pemeriksaaan dikenakan sanksi
+berupa teguran tertulis dan kewajiban membayar sebesar Rp3.000.000,00
+(tiga juta rupiah).
+
+(5)
+
+BPR dan BPRS yang tidak melaksanakan ketentuan sebagaimana dimaksud
+dalam Pasal 2, Pasal 6 ayat (1), Pasal 7, Pasal 8, Pasal 9, Pasal 11, Pasal 12,
+Pasal 13, Pasal 14, Pasal 15, Pasal 16, Pasal 17, Pasal 18, Pasal 19 ayat (1),
+ayat (4), ayat (6), Pasal 20, Pasal 21, Pasal 22 ayat (1), Pasal 23, Pasal 24,
+Pasal 25, Pasal 27, Pasal 28 ayat (1), ayat (3), Pasal 29, Pasal 30, Pasal
+32, Pasal 33, Pasal 34 ayat (3), Pasal 35 ayat (3), Pasal 36, Pasal 37, Pasal
+38, Pasal 39, Pasal 40, Pasal 42 dan/atau Pasal 44 Peraturan Bank Indonesia
+ini dan ketentuan pelaksanaan terkait lainnya dapat dikenakan sanksi
+
+administratif …
+
+- 40 -
+
+administratif sebagaimana dimaksud dalam Pasal 52 Undang-Undang
+Nomor 7 Tahun 1992 tentang Perbankan sebagaimana telah diubah dengan
+Undang-Undang Nomor 10 Tahun 1998 dan Pasal 58 Undang-Undang
+Nomor 21 Tahun 2008 tentang Perbankan Syariah, antara lain berupa:
+a.
+
+teguran tertulis;
+
+b.
+
+penurunan tingkat kesehatan Bank;
+
+c.
+
+pembekuan kegiatan usaha tertentu;
+
+d.
+
+pemberhentian pengurus Bank; dan/atau
+
+e.
+
+pencantuman anggota pengurus, pegawai Bank, dan/atau pemegang
+saham dalam daftar pihak-pihak yang mendapat predikat tidak lulus
+dalam penilaian kemampuan dan kepatutan atau dalam catatan
+administrasi Bank Indonesia sebagaimana diatur dalam ketentuan
+Bank Indonesia yang berlaku.
+
+BAB IX
+KETENTUAN PERALIHAN
+Pasal 44
+BPR dan BPRS yang telah memiliki kebijakan dan prosedur yang mengacu pada
+PBI No.5/23/PBI/2003 tanggal 23 Oktober 2003 wajib menyesuaikan dan
+menyempurnakan menjadi Pedoman Pelaksanaan Program APU dan PPT paling
+lambat 12 (dua belas) bulan sejak diberlakukannya Peraturan Bank Indonesia ini.
+
+BAB X …
+
+- 41 -
+
+BAB X
+KETENTUAN PENUTUP
+Pasal 45
+Ketentuan dalam Peraturan Bank Indonesia ini tidak berlaku bagi Badan Kredit
+Desa yang didirikan berdasarkan Staatsblad Tahun 1929 Nomor 357 dan
+Rijksblad Tahun 1937 Nomor 9.
+
+Pasal 46
+Ketentuan lebih lanjut mengenai Penerapan Program Anti Pencucian Uang dan
+Pendanaan Terorisme bagi BPR dan BPRS diatur dalam Surat Edaran Bank
+Indonesia.
+
+Pasal 47
+(1)
+
+Dengan berlakunya Peraturan Bank Indonesia ini maka Peraturan Bank
+Indonesia Nomor
+
+5/23/PBI/2003
+
+tentang Penerapan Prinsip Mengenal
+
+Nasabah (Know Your Customer Principles) bagi Bank Perkreditan Rakyat
+(Lembaran Negara Republik Indonesia tahun 2003 nomor 116, Tambahan
+Lembaran Negara Republik Indonesia Nomor 4528) dicabut dan dinyatakan
+tidak berlaku.
+(2)
+
+Seluruh ketentuan Bank Indonesia yang mengacu kepada ketentuan
+mengenai Penerapan Prinsip Mengenal Nasabah (Know Your Customer
+Principles) selanjutnya mengacu kepada Peraturan Bank Indonesia ini,
+kecuali diatur tersendiri.
+
+Pasal 48 …
+
+- 42 -
+
+Pasal 48
+Peraturan Bank Indonesia ini mulai berlaku pada tanggal 1 Desember 2010.
+Agar
+
+setiap
+
+orang
+
+mengetahuinya,
+
+memerintahkan
+
+pengundangan
+
+Peraturan Bank Indonesia ini dengan penempatannya dalam Lembaran Negara
+Republik Indonesia.
+
+Ditetapkan di Jakarta
+Pada tanggal 4 Oktober 2010
+GUBERNUR BANK INDONESIA
+
+DARMIN NASUTION
+
+Diundangkan di Jakarta
+Pada tanggal 4 Oktober 2010
+MENTERI HUKUM DAN HAK ASASI MANUSIA
+REPUBLIK INDONESIA
+
+PATRIALIS AKBAR
+LEMBARAN NEGARA REPUBLIK INDONESIA TAHUN 2010 NOMOR 116
+DKBU/DPbS

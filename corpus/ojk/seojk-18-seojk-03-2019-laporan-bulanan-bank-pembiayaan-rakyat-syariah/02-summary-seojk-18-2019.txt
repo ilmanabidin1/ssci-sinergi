@@ -1,0 +1,163 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 18/SEOJK.03/2019
+Tentang: Laporan Bulanan Bank Pembiayaan Rakyat Syariah
+Berkas: summary seojk 18-2019.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Laporan-Bulanan-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+Ringkasan Eksekutif
+SEOJK tentang Laporan Bulanan
+Bank Pembiayaan Rakyat Syariah
+(SEOJK Laporan Bulanan BPRS)
+1.
+
+Latar belakang disusunnya SEOJK ini adalah sebagai ketentuan pelaksanaan dari
+Peraturan Otoritas Jasa Keuangan Nomor 13/POJK.03/2019 tentang Pelaporan Bank
+Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah Melalui Sistem Pelaporan
+Otoritas Jasa Keuangan (POJK Pelaporan BPR dan BPRS). SEOJK ini bertujuan untuk
+memberikan pedoman bagi BPRS dalam menyusun Laporan Bulanan BPRS melalui
+sistem pelaporan Otoritas Jasa Keuangan.
+
+2.
+
+Laporan Bulanan BPRS memuat data dan informasi yang meliputi:
+a. data pokok;
+b.
+
+laporan posisi keuangan;
+
+c.
+
+rekening administratif;
+
+d.
+
+laba rugi;
+
+e.
+
+daftar rincian dari pos tertentu laporan posisi keuangan;
+
+f.
+
+laporan mingguan cash ratio;
+
+g.
+
+informasi terkait pelanggaran atau pelampauan batas maksimum penyaluran
+dana;
+
+h.
+
+rasio keuangan triwulanan;
+
+i.
+
+daftar rincian restrukturisasi pembiayaan;
+
+j.
+
+daftar rincian sumber dan penyaluran dana zakat dan wakaf;
+
+k.
+
+daftar rincian sumber dan penggunaan dana kebajikan; dan
+
+l.
+
+daftar rincian distribusi bagi hasil.
+
+3.
+
+Format dan tata cara penyusunan Laporan Bulanan BPRS mengacu pada Pedoman
+Penyusunan Laporan Bulanan BPRS sebagaimana dimaksud dalam Lampiran SEOJK
+ini.
+
+4.
+
+Prosedur pengoperasian aplikasi untuk penyusunan dan penyampaian Laporan
+Bulanan BPRS dilakukan sesuai dengan Petunjuk Teknis Aplikasi Laporan Bulanan
+BPRS pada situs web Sistem Pelaporan Otoritas Jasa Keuangan.
+
+5.
+
+BPRS menyampaikan Laporan Bulanan BPRS kepada Otoritas Jasa Keuangan paling
+lambat tanggal 10 pada bulan berikutnya setelah bulan laporan yang bersangkutan.
+Dalam hal terdapat koreksi, BPRS menyampaikan koreksi atas Laporan Bulanan
+BPRS kepada Otoritas Jasa Keuangan paling lambat tanggal 15 pada bulan
+berikutnya setelah bulan laporan yang bersangkutan.
+
+6.
+
+Dalam hal BPRS menyampaikan Laporan Bulanan BPRS dan/atau koreksi atas
+Laporan Bulanan BPRS secara luring sebagaimana dimaksud dalam Pasal 3 dan Pasal
+9 POJK Pelaporan BPR dan BPRS, Laporan Bulanan BPRS disampaikan dalam bentuk
+file kirim yang telah divalidasi, dienkripsi, dan dikompresi oleh aplikasi client
+
+sebagaimana dimaksud dalam Petunjuk Teknis Aplikasi Laporan Bulanan, dengan
+menggunakan sarana rekaman data antara lain berupa diska lepas (flashdisk) atau
+cakram digital (compact disk), yang disampaikan kepada Otoritas Jasa Keuangan u.p.
+Kantor Regional atau Kantor Otoritas Jasa Keuangan yang mewilayahi kantor pusat
+BPRS.
+7.
+
+Sesuai Pasal 7 POJK Pelaporan BPR dan BPRS, BPRS menyampaikan:
+a.
+
+nama penanggung jawab Laporan Bulanan BPRS untuk pertama kali; dan/atau
+
+b.
+
+setiap perubahan nama penanggung jawab Laporan Bulanan BPRS,
+
+kepada Departemen Perizinan dan Informasi Perbankan
+8.
+
+Ketentuan mengenai penyampaian Laporan Bulanan BPRS dan koreksi atas Laporan
+Bulanan BPRS sebagaimana dimaksud dalam Surat Edaran Bank Indonesia Nomor
+13/15/DPbS tanggal 30 Mei 2011 perihal Laporan Bulanan Bank Pembiayaan Rakyat
+Syariah dinyatakan masih tetap berlaku terhadap pelanggaran pada Laporan Bulanan
+BPRS sampai dengan posisi laporan bulan November 2019 yang ditemukan sampai
+dengan tanggal 31 Desember 2020.
+
+9.
+
+Sesuai Pasal 27 POJK Pelaporan BPR dan BPRS, pengenaan sanksi terhadap
+pelanggaran pada Laporan Bulanan BPRS sampai dengan posisi laporan bulan
+November 2019 yang ditemukan sampai dengan tanggal 31 Desember 2020 mengacu
+pada Peraturan Bank Indonesia Nomor 7/9/PBI/2005 tentang Laporan Bulanan Bank
+Perkreditan Rakyat Syariah.
+
+10.
+
+Pada saat SEOJK ini berlaku, maka Surat Edaran Bank Indonesia Nomor
+13/15/DPbS tanggal 30 Mei 2011 perihal Laporan Bulanan Bank Pembiayaan Rakyat
+Syariah dicabut dan dinyatakan tidak berlaku sejak tanggal 1 Januari 2020.
+
+11.
+
+Pada saat SEOJK ini mulai berlaku:
+a.
+
+Surat Edaran Bank Indonesia Nomor 13/17/DPbS/2011 tentang Batas
+Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah;
+
+b.
+
+Surat Edaran Bank Indonesia Nomor 10/35/DPbS/2008 tentang Restrukturisasi
+Pembiayaan bagi Bank Pembiayaan Rakyat Syariah;
+
+c.
+
+Surat Edaran Bank Indonesia Nomor 13/16/DPbS/2011 tentang Perubahan
+atas Surat Edaran Bank Indonesia Nomor 10/35/DPbS/2008 tentang
+Restrukturisasi Pembiayaan bagi Bank Pembiayaan Rakyat Syariah;
+
+d.
+
+Surat Edaran Bank Indonesia Nomor 7/52/DPbS/2005 tentang Laporan
+Tahunan dan Laporan Keuangan Publikasi Bank Perkreditan Rakyat Syariah;
+
+dinyatakan tetap berlaku sepanjang tidak bertentangan dengan SEOJK ini.

@@ -1,0 +1,103 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 34 Tahun 2025
+Tentang: Penyelenggaraan Teknologi Informasi oleh Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah
+Berkas: Abstrak POJK 34 Tahun 2025 Penyelenggaraan Teknologi Informasi oleh Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/POJK-34-Tahun-2025-Penyelenggaraan-Teknologi-Informasi-oleh-Bank-Perekonomian-Rakyat-dan-Bank-Perekonomian-Rakyat-Syariah.aspx
+
+---
+
+PERBANKAN – PENYELENGGARAAN TEKNOLOGI INFORMASI BPR DAN BPR SYARIAH
+2025
+POJK NO.34, LN 2025/NO. 46/OJK, TLN NO. 175/OJK, 21 HLM.
+PERATURAN OTORITAS JASA KEUANGAN TENTANG PENYELENGGARAAN TEKNOLOGI INFORMASI
+OLEH BANK PEREKONOMIAN RAKYAT DAN BANK PEREKONOMIAN RAKYAT SYARIAH
+ABSTRAK : - Dalam rangka meningkatkan layanan perbankan kepada masyarakat, dibutuhkan
+peningkatan pemanfaatan teknologi informasi (TI) untuk mendukung proses
+bisnis dalam aktivitas operasional BPR dan BPR Syariah.
+- Untuk mengurangi potensi risiko terkait pemanfaatan TI, diperlukan penguatan
+pengaturan aspek tata kelola, manajemen risiko, serta ketahanan dan keamanan
+siber dalam penyelenggaraan TI sehingga Peraturan Otoritas Jasa Keuangan
+Nomor 75/POJK.03/2016 tentang Standar Penyelenggaraan Teknologi Informasi
+Bagi Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah perlu diganti.
+- Dasar hukum Peraturan Otoritas Jasa Keuangan ini adalah: UU No. 7 Tahun 1992
+sebagaimana telah beberapa kali diubah terakhir dengan UU No. 4 Tahun 2023;
+UU No. 21 Tahun 2008 sebagaimana telah beberapa kali diubah terakhir dengan
+UU No. 4 Tahun 2023; dan UU No. 21 Tahun 2011 sebagaimana telah diubah
+dengan UU No. 4 Tahun 2023.
+- Dalam POJK ini mengatur antara lain:
+a. Kewajiban penerapan tata kelola TI yang baik dalam penyelenggaraan TI,
+diantaranya:
+1) menetapkan wewenang dan tanggung jawab yang jelas bagi:
+a) Direksi;
+b) Dewan Komisaris; dan
+c) pejabat eksekutif atau pegawai yang menangani penyelenggaraan
+TI,
+terkait dengan penerapan tata kelola TI.
+2) memiliki dan menerapkan kebijakan dan prosedur penyelenggaraan TI.
+3) menunjuk satuan kerja atau fungsi yang bertanggung jawab atas
+penyelenggaraan TI.
+b. Kewajiban BPR dan BPR Syariah yang menyediakan layanan digital untuk
+memiliki arsitektur TI. Penyusunan arsitektur TI dapat dilakukan oleh BPR dan
+BPR Syariah secara mandiri dan/atau bekerja sama dengan pihak ketiga,
+dengan mempertimbangkan rencana bisnis BPR dan BPR Syariah.
+c. Kewajiban penerapan manajemen risiko secara efektif dalam
+penyelenggaraan TI, diantaranya:
+1) memastikan pengamanan informasi dilaksanakan secara efektif dan
+efisien dengan menerapkan prinsip kerahasiaan, integritas, dan
+ketersediaan.
+2) memiliki Rencana Pemulihan Bencana dan memastikan Rencana
+Pemulihan Bencana dapat dilaksanakan secara efektif.
+3) menyediakan Pusat Pemulihan Bencana.
+4) memastikan:
+a) ketersediaan Aplikasi Inti Perbankan; dan
+b) rekam cadang data,
+
+1 of 2
+
+dalam penyelenggaraan TI secara mandiri dan/atau bekerja sama
+dengan pihak penyedia jasa TI.
+5) melakukan pencatatan seluruh transaksi dalam pembukuan BPR dan
+BPR Syariah pada akhir hari yang sama.
+d. Kewajiban BPR dan BPR Syariah menjaga ketahanan dan keamanan siber.
+e. Kewajiban BPR dan BPR Syariah dalam penggunaan pihak penyedia jasa TI,
+diantaranya:
+1) muatan perjanjian kerja sama BPR dan BPR Syariah dengan pihak
+penyedia jasa TI.
+2) tindakan tertentu BPR dan BPR Syariah, dalam hal terdapat kondisi
+tertentu yang menyebabkan terganggunya atau terhentinya
+penyediaan jasa TI dari pihak penyedia jasa TI
+f. Kewajiban penempatan Sistem Elektronik pada Pusat Data dan Pusat
+Pemulihan Bencana di wilayah Indonesia.
+g. Kewajiban pengelolaan data secara efektif dalam pemrosesan data BPR dan
+BPR Syariah untuk mendukung pencapaian tujuan bisnis BPR dan BPR
+Syariah.
+h. Kewajiban pelaksanaan prinsip pelindungan data pribadi dalam melakukan
+pemrosesan data pribadi sesuai dengan ketentuan peraturan perundangundangan.
+i. Kewajiban pelaksanaan sistem pengendalian intern secara efektif dalam
+penyelenggaraan TI.
+j. Kewajiban pelaksanaan audit intern terhadap penyelenggaraan TI sesuai
+dengan ketentuan peraturan perundang-undangan.
+k. Kewajiban laporan berkala dan laporan insidental, serta tata cara
+penyampaian laporan.
+CATATAN :
+
+- Ketentuan mengenai Penyelenggaraan Teknologi Informasi oleh Bank
+Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah mulai berlaku
+setelah 1 (satu) tahun terhitung sejak tanggal diundangkan, yaitu 18 Desember
+2026.
+- Peraturan Otoritas Jasa Keuangan ini diundangkan pada tanggal 17 Desember
+2025 dan ditetapkan pada tanggal 16 Desember 2025.
+- BPR dan BPR Syariah yang telah menggunakan pihak penyedia jasa TI sebelum
+berlakunya Peraturan Otoritas Jasa Keuangan ini, harus menyesuaikan dengan
+ketentuan dalam Peraturan Otoritas Jasa Keuangan ini setelah berakhirnya jangka
+waktu perjanjian kerja sama antara BPR dan BPR Syariah dengan pihak penyedia
+jasa TI.
+- Peraturan Otoritas Jasa Keuangan ini berlaku bagi BPR dan BPR Syariah.
+- Pada saat Peraturan Otoritas Jasa Keuangan ini mulai berlaku, Peraturan Otoritas
+Jasa Keuangan Nomor 75/POJK.03/2016 tentang Standar Penyelenggaraan
+Teknologi Informasi bagi Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat
+Syariah, dicabut dan dinyatakan tidak berlaku.
+- Penjelasan : 14 hlm.
+
+2 of 2

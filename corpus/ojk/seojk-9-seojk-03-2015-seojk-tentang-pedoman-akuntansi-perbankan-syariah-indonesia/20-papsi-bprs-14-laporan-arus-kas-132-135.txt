@@ -1,0 +1,400 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 14 Laporan Arus Kas (132-135).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 132 -
+
+BAGIAN XIV
+A.
+
+LAPORAN ARUS KAS
+
+Definisi
+1.
+
+Laporan arus kas merupakan laporan yang menunjukkan penerimaan
+dan pengeluaran kas Bank selama periode tertentu yang dikelompokkan
+dalam aktivitas operasi, investasi, dan pendanaan.
+
+2.
+
+Aktivitas
+
+operasi
+
+(operating)
+
+adalah
+
+aktivitas
+
+penghasil
+
+utama
+
+pendapatan Bank (principal revenue-producing activities) dan aktivitas
+lain yang bukan merupakan aktivitas investasi dan pendanaan.
+3.
+
+Aktivitas investasi (investing) adalah perolehan dan pelepasan aset
+jangka panjang serta investasi lain yang tidak termasuk setara kas.
+
+4.
+
+Aktivitas pendanaan (financing) adalah aktivitas yang mengakibatkan
+perubahan dalam jumlah serta komposisi modal dan pinjaman Bank.
+
+5.
+
+Kas adalah saldo kas dan rekening giro di Bank Umum.
+
+6.
+
+Setara kas adalah penempatan dana dalam jangka waktu paling lama 3
+(tiga) bulan dan sangat likuid yang dimiliki Bank untuk memenuhi
+komitmen kas jangka pendek.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+SAK lain yang relevan.
+
+Penjelasan
+1.
+
+2.
+
+Kas terdiri atas:
+a.
+
+Kas dan kas dalam valuta asing;
+
+b.
+
+Giro pada bank lain;
+
+c.
+
+Tabungan pada bank lain.
+
+Setara kas, antara lain deposito dengan jangka waktu paling lama 3
+(tiga) bulan.
+
+3.
+
+Informasi tentang arus kas berguna bagi para pengguna Laporan
+Keuangan sebagai dasar untuk menilai kemampuan Bank dalam
+menghasilkan kas dan setara kas serta menilai kebutuhan penggunaan
+arus kas tersebut.
+
+4.
+
+Dalam
+
+mengambil
+
+keputusan
+
+ekonomi,
+
+para
+
+pengguna
+
+Laporan
+
+Keuangan perlu melakukan evaluasi terhadap kemampuan Bank dalam
+menghasilkan kas dan setara kas serta kepastian perolehannya.
+Evaluasi tersebut untuk mengetahui bagaimana Bank menghasilkan
+dan ...
+
+- 133 -
+
+dan menggunakan kas dan setara kas, serta kebutuhan kas dan setara
+kas untuk melaksanakan usaha, melunasi kewajiban, dan membagikan
+bagi hasil kepada pemilik dana/deposan dan membagikan dividen
+kepada pemegang saham.
+5.
+
+Laporan Arus Kas memberikan informasi historis mengenai perubahan
+kas dan setara kas dengan mengklasifikasikan arus kas berdasarkan
+aktivitas operasi, investasi, dan pendanaan selama suatu periode
+akuntansi.
+
+6.
+
+Bank menyajikan arus kas dari aktivitas operasi dengan menggunakan
+metode tidak langsung.
+
+7.
+
+Suatu transaksi tertentu dapat meliputi arus kas yang diklasifikasikan
+ke dalam lebih dari satu aktivitas, sebagai contoh:
+a.
+
+Pelunasan atas pembiayaan yang diterima oleh Bank meliputi
+pokok pembiayaan dan bagi hasil. Bagi hasil merupakan unsur
+yang dapat diklasifikasikan sebagai aktivitas operasi dan pokok
+pembiayaan merupakan unsur yang diklasifikasikan sebagai
+aktivitas pendanaan.
+
+b.
+
+Pinjaman Qardh yang diterima oleh Bank meliputi pokok pinjaman
+dan imbalan yang diberikan (jika ada dan tidak diperjanjikan di
+muka). Imbalan merupakan unsur yang dapat diklasifikasikan
+sebagai aktivitas operasi dan pokok pinjaman merupakan unsur
+yang diklasifikasikan sebagai aktivitas pendanaan.
+
+8.
+
+Arus kas dari aktivitas operasi
+a.
+
+Aktivitas operasi adalah aktivitas penghasil utama pendapatan dan
+aktivitas lain yang bukan merupakan aktivitas investasi dan
+aktivitas pendanaan.
+
+b.
+
+Arus kas dari aktivitas operasi terutama diperoleh dari aktivitas
+penghasil utama pendapatan. Oleh karena itu, arus kas tersebut
+pada umumnya berasal dari transaksi dan peristiwa lain yang
+mempengaruhi laba atau rugi.
+
+c.
+
+Beberapa contoh arus kas dari aktivitas operasi adalah:
+1)
+
+penerimaan angsuran/pelunasan pembiayaan dari nasabah.
+
+2)
+
+pencairan pembiayaan kepada nasabah.
+
+3)
+
+penerimaan kas dari penabung/deposan.
+
+4)
+
+pembayaran kas kepada penabung/deposan.
+
+5)
+
+pembayaran kas kepada dan untuk kepentingan karyawan.
+
+6)
+
+pembayaran kas kepada dan penerimaan kas dari pemasok.
+7) pembayaran ...
+
+- 134 -
+
+7)
+
+pembayaran kas atau restitusi pajak penghasilan, kecuali jika
+dapat diidentifikasikan secara spesifik sebagai bagian dari
+aktivitas pendanaan dan investasi.
+
+9.
+
+Arus kas aktivitas investasi
+a.
+
+Aktivitas investasi adalah aktivitas perolehan dan pelepasan aset
+jangka panjang serta investasi lain yang tidak termasuk setara kas.
+
+b.
+
+Arus kas dari aktivitas investasi mencerminkan pengeluaran kas
+yang telah terjadi untuk sumber daya yang dimaksudkan untuk
+menghasilkan pendapatan dan arus kas masa depan.
+
+c.
+
+Beberapa contoh arus kas dari aktivitas investasi adalah:
+1)
+
+Pembayaran kas untuk membeli aset tetap, aset tak berwujud,
+dan aset tidak lancar lain.
+
+2)
+
+Penerimaan kas dari penjualan aset tetap, aset tak berwujud,
+dan aset tidak lancar lain.
+
+10. Arus kas aktivitas pendanaan
+a.
+
+Aktivitas
+
+pendanaan
+
+perubahan
+
+dalam
+
+adalah
+
+jumlah
+
+aktivitas
+
+komposisi
+
+yang
+
+mengakibatkan
+
+kontribusi
+
+modal
+
+dan
+
+pinjaman.
+b.
+
+Beberapa contoh arus kas yang berasal dari aktivitas pendanaan
+adalah:
+1)
+
+penerimaan kas dari penerbitan saham.
+
+2)
+
+pembayaran kas kepada pemilik untuk menarik atau menebus
+saham.
+
+c.
+
+3)
+
+penerimaan kas dari penerbitan, pinjaman, dan utang lain.
+
+4)
+
+pembayaran kas untuk melunasi, pinjaman, dan utang lain.
+
+Dividen yang dibayar dapat diklasifikasikan sebagai arus kas
+pendanaan karena merupakan biaya sumber daya keuangan.
+Sebagai alternatif, dividen yang dibayar dapat diklasifikasikan
+sebagai arus kas dari aktivitas operasi dengan maksud untuk
+membantu para pengguna laporan arus kas dalam menilai
+kemampuan Bank membayar dividen dari arus kas operasi.
+
+11. Pajak penghasilan
+a.
+
+Pajak
+
+penghasilan
+
+diklasifikasikan
+
+atas
+
+sebagai
+
+pendapatan
+aktivitas
+
+yang
+
+diterima
+
+dapat
+
+operasi,
+
+investasi,
+
+atau
+
+pendanaan.
+b.
+
+Pajak penghasilan biasanya diklasifikasikan sebagai arus kas dari
+aktivitas operasi.
+c. Apabila ...
+
+- 135 -
+
+c.
+
+Apabila arus kas pajak dialokasikan pada lebih satu jenis aktivitas,
+maka jumlah keseluruhan pajak yang dibayar harus diungkapkan.
+
+12. Transaksi non kas
+a.
+
+Bank mengeluarkan transaksi investasi dan pendanaan yang tidak
+memerlukan penggunaan kas atau setara kas dari Laporan Arus
+Kas. Bank mengungkapkan transaksi tersebut dalam Laporan
+Keuangan sehingga memberikan semua informasi yang relevan
+mengenai aktivitas investasi dan pendanaan tersebut.
+
+b.
+
+Banyak aktivitas investasi dan pendanaan yang tidak mempunyai
+dampak
+
+langsung
+
+mempengaruhi
+
+terhadap
+
+struktur
+
+arus
+
+aset
+
+kas
+
+dan
+
+saat
+modal
+
+ini
+
+meskipun
+
+Bank.
+
+Tidak
+
+dimasukkannya transaksi non kas dalam Laporan Arus Kas adalah
+konsisten dengan tujuan Laporan Arus Kas sebab transaksi
+tersebut tidak mempengaruhi arus kas dalam periode berjalan.
+c.
+
+Contoh transaksi non kas adalah:
+1)
+
+perolehan aset secara utang atau melalui sewa pembiayaan.
+
+2)
+
+akuisisi suatu entitas melalui emisi saham.
+
+3)
+
+konversi utang menjadi modal.

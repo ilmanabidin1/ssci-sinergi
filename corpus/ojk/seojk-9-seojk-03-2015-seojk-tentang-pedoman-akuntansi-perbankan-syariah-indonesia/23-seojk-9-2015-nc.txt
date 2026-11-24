@@ -1,0 +1,9988 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: seojk 9-2015 NC.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+Yth.
+Bank Pembiayaan Rakyat Syariah
+di tempat.
+SALINAN
+SURAT EDARAN OTORITAS JASA KEUANGAN
+NOMOR 9/SEOJK.03/2015
+TENTANG
+PEDOMAN AKUNTANSI PERBANKAN SYARIAH INDONESIA
+BAGI BANK PEMBIAYAAN RAKYAT SYARIAH
+
+Sehubungan dengan Peraturan Bank Indonesia Nomor 7/47/PBI/2005
+tentang Transparansi Kondisi Keuangan Bank Perkreditan Rakyat Syariah
+(Lembaran Negara Republik Indonesia Tahun 2005 Nomor 125, Tambahan
+Lembaran Negara Republik Indonesia Tahun 2005 Nomor 4564),
+
+yang antara
+
+lain mengatur mengenai kewajiban Bank Perkreditan Rakyat Syariah untuk
+melakukan pencatatan atas kegiatan usahanya berdasarkan Pernyataan Standar
+Akuntansi Keuangan dan Pedoman Akuntansi Perbankan Syariah Indonesia yang
+berlaku bagi Perbankan Syariah maka dipandang perlu untuk mengatur
+pelaksanaan
+
+penggunaan
+
+standar
+
+akuntansi
+
+keuangan
+
+dan
+
+ketentuan
+
+pelaksanaan mengenai pedoman akuntansi perbankan syariah Indonesia bagi
+Bank Pembiayaan Rakyat Syariah dalam Surat Edaran Otoritas Jasa Keuangan
+sebagai berikut:
+I.
+
+KETENTUAN UMUM
+1.
+
+Dalam rangka peningkatan transparansi kondisi keuangan dari Bank
+Pembiayaan Rakyat Syariah yang selanjutnya disebut BPRS dan
+penyusunan laporan keuangan yang relevan, komprehensif, andal, dan
+dapat diperbandingkan, BPRS wajib menyusun dan menyajikan
+laporan keuangan berdasarkan standar akuntansi keuangan yang
+relevan bagi BPRS.
+
+2.
+
+Standar akuntansi keuangan yang berlaku bagi BPRS selama ini
+adalah Pernyataan Standar Akuntansi Keuangan yang selanjutnya
+disebut PSAK yaitu PSAK No.31 tentang Akuntansi Perbankan dan
+PSAK Syariah. Dengan diberlakukannya PSAK No.50 (Revisi 2010)
+tentang Instrumen Keuangan: Penyajian, PSAK No.55 (Revisi 2011)
+
+tentang ...
+
+-2-
+
+tentang Instrumen Keuangan: Pengakuan dan Pengukuran, dan PSAK
+No.60 tentang Instrumen Keuangan: Pengungkapan yang menggantikan
+PSAK No.31, maka PSAK No.31 menjadi tidak berlaku.
+3.
+
+Penerapan PSAK No.50 (Revisi 2010), PSAK No.55 (Revisi 2011), dan
+PSAK No.60 bagi BPRS selain tidak sesuai dengan karakteristik
+operasional BPRS juga memerlukan biaya yang besar dibandingkan
+dengan manfaat yang akan diperoleh, sehingga diperlukan standar
+akuntansi keuangan yang sesuai bagi BPRS.
+
+4.
+
+Dewan Standar Akuntasi Keuangan - Ikatan Akuntan Indonesia yang
+selanjutnya disebut DSAK-IAI selain mengeluarkan PSAK No.50 (Revisi
+2010), PSAK No.55 (Revisi 2011), dan PSAK No.60, juga menerbitkan
+Standar Akuntansi Keuangan Entitas Tanpa Akuntabilitas Publik yang
+selanjutnya disebut SAK ETAP.
+
+5.
+
+DSAK-IAI dalam SAK ETAP menyatakan bahwa SAK ETAP dapat
+diberlakukan bagi entitas yang memiliki akuntabilitas publik signifikan
+termasuk BPRS, sepanjang otoritas berwenang mengatur penggunaan
+SAK ETAP dimaksud. Berdasarkan pertimbangan tersebut di atas,
+maka standar akuntansi keuangan bagi BPRS menggunakan SAK
+ETAP, PSAK Syariah, dan ketentuan lain yang ditetapkan oleh Otoritas
+Jasa Keuangan.
+
+6.
+
+Pedoman
+
+Akuntansi
+
+Perbankan
+
+Syariah
+
+Indonesia
+
+BPRS
+
+yang
+
+selanjutnya disebut PAPSI BPRS merupakan petunjuk pelaksanaan
+yang berisi penjabaran lebih lanjut dari SAK ETAP, PSAK Syariah, dan
+ketentuan lain yang ditetapkan oleh Otoritas Jasa Keuangan dan
+menjadi pedoman dalam penyusunan dan penyajian laporan keuangan
+BPRS.
+7.
+
+Dalam hal terdapat ketentuan yang belum diatur dalam PAPSI BPRS
+untuk menyusun dan menyajikan laporan keuangan, BPRS tetap
+berpedoman kepada SAK ETAP beserta pedoman pelaksanaannya
+sepanjang tidak bertentangan dengan Prinsip Syariah.
+
+II.
+
+PENGAKUAN PENDAPATAN DALAM TRANSAKSI JUAL BELI
+1.
+
+Sesuai dengan Fatwa Dewan Syariah Nasional Nomor: 84/DSNMUI/XII/2012 tanggal 21 Desember 2012 tentang Metode Pengakuan
+Keuntungan Al-Tamwil Bi Al-Murabahah (Pembiayaan Murabahah) di
+Lembaga Keuangan Syariah, pengakuan keuntungan Pembiayaan
+Murabahah
+
+untuk
+
+Bank
+
+Syariah
+
+dapat
+
+dilakukan
+
+dengan
+
+menggunakan ...
+
+-3-
+
+menggunakan metode anuitas atau metode proporsional.
+2.
+
+Pengakuan pendapatan dengan menggunakan metode anuitas atau
+metode
+
+proporsional
+
+hanya
+
+dapat
+
+digunakan
+
+untuk
+
+pengakuan
+
+pendapatan pembiayaan atas dasar jual beli.
+3.
+
+Dalam hal BPRS menggunakan metode anuitas, pencatatan transaksi
+Murabahah wajib menggunakan SAK ETAP. Sedangkan untuk BPRS
+yang
+
+menggunakan
+
+metode
+
+proporsional,
+
+pencatatan
+
+transaksi
+
+Murabahah wajib menggunakan PSAK No.102 (Revisi 2013) tentang
+Akuntansi Murabahah.
+4.
+
+Metode pengakuan pendapatan yang dipilih oleh BPRS wajib diterapkan
+untuk
+
+seluruh
+
+jenis
+
+portofolio
+
+pembiayaan
+
+Murabahah
+
+dan
+
+diungkapkan dalam kebijakan akuntansi serta dilakukan secara
+konsisten.
+III. PENDAPATAN DAN BEBAN TERKAIT DENGAN TRANSAKSI MURABAHAH
+1.
+
+Dalam praktik penyaluran pembiayaan Murabahah, BPRS dapat:
+a.
+
+menerima
+
+pendapatan
+
+di
+
+luar
+
+marjin
+
+keuntungan
+
+seperti
+
+pendapatan administrasi; dan/atau
+b.
+
+mengeluarkan biaya yang terkait langsung dengan transaksi
+Murabahah seperti biaya komisi, biaya survei, dan biaya lain.
+
+2.
+
+Pengakuan pendapatan dan biaya sebagaimana dimaksud pada angka
+1, baik yang menggunakan metode anuitas maupun proporsional
+diakui secara proporsional selama masa akad.
+
+3.
+
+Pendapatan dan biaya sebagaimana dimaksud pada angka 1 menjadi
+bagian
+
+yang
+
+Murabahah
+
+tidak
+
+sehingga
+
+terpisahkan
+wajib
+
+dari
+
+pendapatan
+
+dibagihasilkan
+
+kepada
+
+pembiayaan
+pemilik
+
+dana
+
+(shahibul maal).
+IV. LAIN-LAIN
+PAPSI BPRS diatur lebih lanjut dalam pedoman sebagaimana lampiran yang
+merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Surat
+Edaran Otoritas Jasa Keuangan ini.
+V.
+
+PENUTUP
+Dengan berlakunya Surat Edaran Otoritas Jasa Keuangan ini, Surat Edaran
+Bank Indonesia No.5/26/BPS tanggal 27 Oktober 2003 perihal Pelaksanaan
+Pedoman Akuntansi Perbankan Syariah Indonesia dicabut dan dinyatakan
+tidak ...
+
+-4-
+
+tidak berlaku bagi BPRS.
+Ketentuan dalam Surat Edaran Otoritas Jasa Keuangan ini mulai berlaku
+pada tanggal ditetapkan.
+Agar setiap orang mengetahuinya, memerintahkan pengumuman Surat
+Edaran Otoritas Jasa Keuangan ini dengan penempatannya dalam Berita
+Negara Republik Indonesia.
+
+Ditetapkan di Jakarta
+Pada tanggal 26 Maret 2015
+KEPALA EKSEKUTIF PENGAWAS PERBANKAN
+OTORITAS JASA KEUANGAN,
+Ttd.
+NELSON TAMPUBOLON
+
+-5-
+
+Salinan sesuai dengan aslinya
+Direktur Hukum I
+Departemen Hukum,
+Ttd..
+Ttd.td.
+Sudarmaji
+
+BERITA NEGARA REPUBLIK INDONESIA TAHUN 2015 NOMOR 30 TANGGAL 14
+APRIL 2015
+
+LAMPIRAN
+SURAT EDARAN OTORITAS JASA KEUANGAN
+NOMOR 9/SEOJK.03/2015
+TENTANG
+PEDOMAN
+
+AKUNTANSI
+
+PERBANKAN
+
+PEMBIAYAAN RAKYAT SYARIAH
+
+SYARIAH
+
+INDONESIA
+
+BAGI
+
+BANK
+
+-1-
+
+DAFTAR ISI
+Halaman
+BAGIAN I
+
+PENDAHULUAN .......................................................................
+
+3
+
+I.1. LATAR BELAKANG ...........................................................
+
+3
+
+I.2. ASAS DAN KARAKTERISTIK TRANSAKSI SYARIAH ..........
+
+4
+
+I.3. TUJUAN DAN RUANG LINGKUP .......................................
+
+9
+
+I.4. ACUAN PENYUSUNAN ..................................................... 10
+I.5. KETENTUAN LAIN ............................................................ 11
+BAGIAN II
+
+LAPORAN KEUANGAN BANK SYARIAH .................................. 12
+II.1. KETENTUAN UMUM ........................................................ 12
+II.2. KETERBATASAN LAPORAN KEUANGAN .......................... 18
+
+BAGIAN III
+
+AKAD JUAL BELI .................................................................... 19
+III.1. MURABAHAH .................................................................. 19
+III.2. ISTISHNA ........................................................................ 32
+III.3. SALAM ............................................................................ 38
+III.4. PERSEDIAAN .................................................................. 42
+
+BAGIAN IV
+
+AKAD BAGI HASIL .................................................................. 45
+IV.1. PEMBIAYAAN MUDHARABAH ......................................... 45
+IV.2. PEMBIAYAAN MUSYARAKAH .......................................... 50
+IV.3. DANA SYIRKAH TEMPORER ............................................ 54
+
+BAGIAN V
+
+AKAD SEWA ............................................................................ 58
+V.1. IJARAH ATAS ASET BERWUJUD ..................................... 58
+V.2. IJARAH ATAS JASA ......................................................... 64
+
+BAGIAN VI
+
+AKAD PINJAMAN QARDH ....................................................... 67
+VI.1. PINJAMAN QARDH YANG DIBERIKAN ............................ 67
+VI.2. PINJAMAN QARDH YANG DITERIMA .............................. 70
+
+BAGIAN VII
+
+KAS ......................................................................................... 72
+VII.1. KAS ............................................................................... 72
+VII.2. KAS DALAM VALUTA ASING .......................................... 74
+
+BAGIAN VIII
+
+ANTAR BANK .......................................................................... 76
+VIII.1. PENEMPATAN PADA BANK LAIN .................................. 76
+VIII.2. SIMPANAN DARI BANK LAIN ........................................ 79
+
+BAGIAN IX
+
+ASET ....................................................................................... 81
+IX.1. ASET TETAP ................................................................... 81
+
+-2-
+
+IX.2. ASET TIDAK BERWUJUD ................................................ 88
+IX.3. ASET YANG DIAMBIL ALIH ............................................. 92
+IX.4. ASET LAIN-LAIN .............................................................. 96
+BAGIAN X
+
+KEWAJIBAN LAIN ................................................................... 98
+X.1. SIMPANAN ....................................................................... 98
+X.2. KEWAJIBAN SEGERA ...................................................... 100
+X.3. KEWAJIBAN LAINNYA ...................................................... 103
+X.4. UTANG PAJAK .................................................................. 105
+X.5. PINJAMAN SUBORDINASI ............................................... 107
+X.6. KEWAJIBAN IMBALAN KERJA ......................................... 110
+
+BAGIAN XI
+
+EKUITAS ................................................................................. 114
+XI.1. PENDAHULUAN ............................................................... 114
+XI.2. MODAL ........................................................................... 115
+XI.3. DANA SETORAN MODAL-EKUITAS ................................. 119
+XI.4. SURPLUS REVALUASI ASET TETAP ................................. 121
+XI.5. SALDO LABA .................................................................. 124
+
+BAGIAN XII
+
+LAPORAN LABA RUGI ............................................................. 127
+XII.1. PENGERTIAN .................................................................. 127
+XII.2. KOMPONEN LABA RUGI ................................................ 128
+
+BAGIAN XIII
+
+LAPORAN PERUBAHAN EKUITAS .......................................... 131
+
+BAGIAN XIV
+
+LAPORAN ARUS KAS .............................................................. 132
+
+BAGIAN XV
+
+LAPORAN REKONSILIASI PENDAPATAN DAN BAGI HASIL ... 136
+
+BAGIAN XVI
+
+LAPORAN SUMBER DAN PENYALURAN ZAKAT ..................... 139
+
+BAGIAN XVII LAPORAN SUMBER DAN PENGGUNAAN DANA KEBAJIKAN .. 141
+BAGIAN XVIII CATATAN ATAS LAPORAN KEUANGAN .................................. 144
+
+-3-
+
+BAGIAN I
+
+PENDAHULUAN
+
+I.1. LATAR BELAKANG
+A.
+
+Tujuan Laporan Keuangan entitas Bank Pembiayaan Rakyat Syariah,
+untuk selanjutnya disebut Bank, adalah untuk menyediakan informasi
+yang menyangkut posisi keuangan, kinerja keuangan, dan arus kas dari
+aktivitas
+
+Bank
+
+yang
+
+bermanfaat
+
+dalam
+
+pengambilan
+
+keputusan
+
+ekonomi oleh siapapun yang tidak dalam posisi dapat meminta Laporan
+Keuangan untuk memenuhi kebutuhan informasi tertentu. Dalam
+memenuhi tujuannya, Laporan Keuangan juga menunjukkan apa yang
+telah dilakukan manajemen (stewardship) atau pertanggungjawaban
+manajemen atas sumber daya yang dipercayakan kepadanya.
+B.
+
+Suatu Laporan Keuangan bermanfaat apabila informasi yang disajikan
+dalam Laporan Keuangan tersebut dapat dipahami, relevan, andal, dan
+dapat diperbandingkan. Akan tetapi, perlu disadari pula bahwa Laporan
+Keuangan
+
+tidak
+
+menyediakan
+
+semua
+
+informasi
+
+yang
+
+mungkin
+
+dibutuhkan oleh pihak-pihak yang berkepentingan dengan Bank,
+karena secara umum Laporan Keuangan hanya menggambarkan
+pengaruh keuangan dari kejadian masa lalu. Namun dalam beberapa
+hal, Bank perlu menyediakan informasi yang mempunyai pengaruh
+keuangan masa depan.
+C.
+
+Bank memiliki fungsi sebagai:
+1.
+
+Manajer investasi
+Bank dapat mengelola investasi atas dana nasabah dengan
+menggunakan akad mudharabah dan wadiah.
+
+2.
+
+Agen investasi
+Bank dapat mengelola investasi atas dana nasabah dengan
+menggunakan akad wakalah.
+
+3.
+
+Investor
+Bank dapat menginvestasikan dana yang dimilikinya dan dana
+nasabah
+
+yang
+
+dipercayakan
+
+kepadanya
+
+dengan
+
+melakukan
+
+penempatan yang sesuai dengan Prinsip Syariah. Keuntungan yang
+diperoleh dibagihasilkan sesuai nisbah yang disepakati antara
+Bank dan nasabah.
+
+4. Penyedia ...
+
+-4-
+
+4.
+
+Penyedia jasa keuangan
+Bank dapat melakukan kegiatan jasa-jasa layanan Perbankan
+Syariah dengan mengacu kepada Undang-Undang Nomor 21
+Tahun 2008 tentang Perbankan Syariah.
+
+5.
+
+Pengemban fungsi sosial
+Berdasarkan Pasal 4 ayat (2) dan ayat (3) Undang-Undang Nomor
+21 Tahun 2008 tentang Perbankan Syariah, Bank mengemban
+fungsi sosial sebagai berikut:
+a.
+
+Bank dapat menjalankan fungsi sosial dalam bentuk lembaga
+baitul maal yaitu menerima dana yang berasal dari zakat,
+infak,
+
+sedekah,
+
+hibah,
+
+atau
+
+dana
+
+sosial
+
+lainnya
+
+dan
+
+menyalurkannya kepada organisasi pengelola zakat; dan
+b.
+
+Bank dapat menghimpun dana sosial yang berasal dari wakaf
+uang dan menyalurkannya kepada pengelola wakaf (nazhir)
+sesuai dengan kehendak pemberi wakaf (wakif).
+
+D.
+
+Bank sebagai investor pada dasarnya melakukan fungsi intermediasi
+penyaluran dana dalam bentuk pembiayaan yang meliputi, antara lain
+transaksi investasi untuk mendapatkan bagi hasil, transaksi atas dasar
+jual beli aset untuk mendapatkan keuntungan, dan atau pemberian
+layanan jasa untuk mendapatkan imbalan.
+
+I.2. ASAS DAN KARAKTERISTIK TRANSAKSI SYARIAH
+A.
+
+Asas Transaksi Syariah
+1.
+
+Transaksi
+(ukhuwah),
+
+syariah
+
+berasaskan
+
+keadilan
+
+pada
+
+(‘adalah),
+
+prinsip
+
+kemaslahatan
+
+persaudaraan
+(maslahah),
+
+keseimbangan (tawazun), dan universalisme (syumuliyah).
+2.
+
+Prinsip
+
+persaudaraan
+
+universal
+
+yang
+
+(ukhuwah)
+
+menata
+
+esensinya
+
+interaksi
+
+sosial
+
+merupakan
+dan
+
+nilai
+
+harmonisasi
+
+kepentingan para pihak untuk kemanfaatan secara umum dengan
+semangat saling menolong. Transaksi Syariah menjunjung tinggi
+nilai kebersamaan dalam memperoleh manfaat (sharing economics)
+sehingga seseorang tidak boleh mendapat keuntungan di atas
+kerugian
+
+orang
+
+lain.
+
+Ukhuwah
+
+dalam
+
+transaksi
+
+Syariah
+
+berdasarkan prinsip saling mengenal (ta’aruf), saling memahami
+(tafahum), saling menolong (ta’awun), saling menjamin (takaful),
+saling bersinergi dan beraliansi (tahaluf).
+3. Prinsip ...
+
+-5-
+
+3.
+
+Prinsip keadilan (‘adalah) esensinya menempatkan sesuatu hanya
+pada tempatnya dan memberikan sesuatu hanya pada yang
+berhak serta memperlakukan sesuatu hanya sesuai posisinya.
+Implementasi keadilan dalam kegiatan usaha berupa aturan
+prinsip muamalah yang melarang adanya unsur sebagai berikut:
+a.
+
+Unsur bunga dalam segala bentuk dan jenisnya, baik riba
+nasiah maupun riba fadhl (riba). Esensi riba adalah setiap
+tambahan pada jumlah piutang yang dipersyaratkan dalam
+transaksi pinjam-meminjam uang serta derivasinya dan
+transaksi tidak tunai lainnya, seperti murabahah tangguh;
+dan setiap tambahan yang dipersyaratkan dalam transaksi
+pertukaran antar barang ribawi termasuk pertukaran uang
+(money exchange) yang sejenis secara tunai maupun tangguh
+dan yang tidak sejenis secara tidak tunai;
+
+b.
+
+Unsur yang merugikan diri sendiri, orang lain, maupun
+lingkungan (zalim). Esensi zalim (dzulm) adalah menempatkan
+sesuatu tidak pada tempatnya, memberikan sesuatu tidak
+sesuai ukuran, kualitas dan temponya, mengambil sesuatu
+yang bukan haknya dan memperlakukan sesuatu tidak sesuai
+posisinya. Kezaliman dapat menimbulkan kemudharatan bagi
+masyarakat secara keseluruhan, bukan hanya sebagian atau
+membawa kemudharatan bagi salah satu pihak atau pihakpihak yang melakukan transaksi;
+
+c.
+
+Unsur judi dan sikap spekulatif (maysir). Esensi maysir
+adalah setiap transaksi yang bersifat spekulatif dan tidak
+berkaitan
+
+dengan
+
+produktivitas
+
+serta
+
+bersifat
+
+perjudian
+
+(gambling);
+d.
+
+Unsur ketidakjelasan (gharar). Esensi gharar adalah setiap
+transaksi yang berpotensi merugikan salah satu pihak karena
+mengandung
+
+unsur
+
+eksploitasi
+
+informasi
+
+ketidakjelasan,
+
+manipulasi,
+
+serta
+
+adanya
+
+tidak
+
+dan
+
+kepastian
+
+pelaksanaan akad. Bentuk-bentuk gharar antara lain:
+1) tidak adanya kepastian penjual untuk menyerahkan obyek
+akad pada waktu terjadi akad, baik obyek akad itu sudah
+ada maupun belum ada;
+2) menjual sesuatu yang belum berada di bawah penguasaan
+penjual;
+3) tidak ...
+
+-6-
+
+3) tidak adanya kepastian kriteria kualitas dan kuantitas
+barang/jasa;
+4) tidak adanya kepastian jumlah harga yang harus dibayar
+dan alat pembayaran;
+5) tidak adanya ketegasan jenis dan obyek akad;
+6) kondisi obyek akad tidak dapat dijamin kesesuaiannya
+dengan yang ditentukan dalam transaksi;
+7) adanya
+
+unsur
+
+informasi
+
+eksploitasi
+
+salah
+
+satu
+
+kurang
+
+atau
+
+dimanipulasi
+
+yang
+
+pihak
+
+karena
+dan
+
+ketidaktahuan atau ketidakpahaman yang ditransaksikan.
+e.
+
+Unsur haram baik dalam barang maupun jasa serta aktivitas
+operasional yang terkait. Esensi haram adalah segala unsur
+yang dilarang secara tegas dalam Al Quran dan As-Sunah.
+
+4.
+
+Prinsip kemaslahatan (mashlahah) esensinya merupakan segala
+bentuk kebaikan dan manfaat yang berdimensi duniawi dan
+ukhrawi, material dan spiritual, serta individual dan kolektif.
+Kemaslahatan yang diakui harus memenuhi dua unsur yakni
+kepatuhan
+
+syariah
+
+(halal)
+
+serta
+
+bermanfaat
+
+dan
+
+membawa
+
+kebaikan (thayib) dalam semua aspek yang tidak menimbulkan
+kemudharatan. Transaksi syariah yang dianggap bermaslahat
+harus memenuhi secara keseluruhan unsur-unsur yang menjadi
+tujuan
+
+ketetapan
+
+syariah
+
+(maqasid
+
+syariah)
+
+yaitu
+
+berupa
+
+pemeliharaan terhadap:
+
+5.
+
+a.
+
+akidah, keimanan dan ketakwaan (dien);
+
+b.
+
+akal (‘aql);
+
+c.
+
+keturunan (nasl);
+
+d.
+
+jiwa dan keselamatan (nafs); dan
+
+e.
+
+harta benda (mal).
+
+Prinsip keseimbangan (tawazun) esensinya meliputi keseimbangan
+aspek material dan spiritual, aspek privat dan publik, sektor
+keuangan dan sektor riil, bisnis dan sosial, dan keseimbangan
+aspek pemanfaatan dan pelestarian. Transaksi syariah tidak hanya
+menekankan pada maksimalisasi keuntungan perusahaan semata
+untuk kepentingan pemilik (shareholder), sehingga manfaat yang
+diperoleh tidak hanya difokuskan pada pemegang saham, tetapi
+juga untuk semua pihak yang dapat merasakan manfaat adanya
+suatu kegiatan ekonomi.
+6. Prinsip ...
+
+-7-
+
+6.
+
+Prinsip universalisme (syumuliyah) esensinya dapat dilakukan
+oleh, dengan, dan untuk semua pihak yang berkepentingan
+(stakeholders) tanpa membedakan suku, agama, ras dan golongan,
+sesuai dengan semangat kerahmatan semesta (rahmatan lil
+alamin).
+
+7.
+
+Transaksi syariah terikat dengan nilai-nilai etis meliputi aktivitas
+sektor keuangan dan sektor riil yang dilakukan secara koheren
+tanpa dikotomi, sehingga keberadaan dan nilai uang merupakan
+cerminan aktivitas investasi dan perdagangan.
+
+B.
+
+Karakteristik Transaksi Syariah
+1.
+
+Implementasi transaksi yang sesuai dengan paradigma dan asas
+transaksi syariah harus memenuhi karakteristik dan persyaratan
+sebagai berikut:
+a.
+
+Dilakukan berdasarkan prinsip saling paham dan saling
+ridha;
+
+b.
+
+Prinsip kebebasan bertransaksi diakui sepanjang objeknya
+halal dan baik (thayib);
+
+c.
+
+Uang
+
+hanya
+
+berfungsi
+
+sebagai
+
+alat
+
+tukar
+
+dan
+
+satuan
+
+pengukur nilai, bukan sebagai komoditas;
+d.
+
+Tidak mengandung unsur riba;
+
+e.
+
+Tidak mengandung unsur kezaliman;
+
+f.
+
+Tidak mengandung unsur maysir;
+
+g.
+
+Tidak mengandung unsur gharar;
+
+h.
+
+Tidak mengandung unsur haram;
+
+i.
+
+Tidak menganut prinsip nilai waktu dari uang (time value of
+money) karena keuntungan yang didapat dalam kegiatan
+usaha terkait dengan risiko yang melekat pada kegiatan usaha
+tersebut sesuai dengan prinsip al-ghunmu bil ghurmi (no gain
+without accompanying risk);
+
+j.
+
+Dilakukan berdasarkan suatu perjanjian yang jelas dan benar
+serta untuk keuntungan semua pihak tanpa merugikan pihak
+lain, sehingga tidak diperkenankan menggunakan standar
+ganda harga dalam satu akad serta tidak menggunakan dua
+transaksi bersamaan yang berkaitan (ta’alluq) dalam satu
+akad;
+
+k. Tidak ...
+
+-8-
+
+k.
+
+Tidak
+
+ada
+
+distorsi
+
+harga
+
+melalui
+
+rekayasa
+
+permintaan
+
+(najasy), maupun melalui rekayasa penawaran (ihtikar); dan
+l.
+
+Tidak mengandung unsur kolusi dengan suap menyuap
+(risywah).
+
+2.
+
+Transaksi syariah dapat berupa aktivitas bisnis yang bersifat
+komersial maupun aktivitas sosial yang bersifat non komersial.
+Transaksi syariah komersial dilakukan, antara lain, berupa
+investasi untuk mendapatkan bagi hasil, jual beli barang untuk
+mendapatkan laba, dan/atau pemberian layanan jasa untuk
+mendapatkan imbalan.
+
+3.
+
+Transaksi syariah nonkomersial dilakukan, antara lain, berupa
+pemberian
+
+dana
+
+pinjaman
+
+atau
+
+talangan
+
+(qardh)
+
+serta
+
+penghimpunan dan penyaluran dana sosial seperti zakat, infak,
+sedekah, wakaf, dan hibah.
+
+I.3. TUJUAN ...
+
+-9-
+
+I.3. TUJUAN DAN RUANG LlNGKUP
+A.
+
+Tujuan
+Tujuan dari penyusunan Pedoman Akuntansi Perbankan Syariah
+Indonesia bagi Bank Pembiayaan Rakyat Syariah (BPRS), untuk
+selanjutnya disebut “Pedoman” antara lain:
+1.
+
+membantu Bank menyusun Laporan Keuangan supaya sesuai
+dengan tujuan Laporan Keuangan, yaitu menyediakan informasi
+posisi keuangan, kinerja keuangan, dan laporan arus kas suatu
+entitas yang bermanfaat bagi sejumlah besar pengguna dalam
+pengambilan keputusan ekonomi oleh siapapun yang tidak dalam
+posisi dapat meminta laporan keuangan khusus untuk memenuhi
+kebutuhan
+
+informasi
+
+tertentu.
+
+Dalam
+
+memenuhi
+
+tujuannya,
+
+laporan keuangan juga menunjukkan apa yang telah dilakukan
+manajemen (stewardship) atau pertanggungjawaban manajemen
+atas sumberdaya yang dipercayakan kepadanya;
+2.
+
+menciptakan keseragaman penerapan perlakuan akuntansi dan
+penyajian
+
+Laporan
+
+Keuangan,
+
+sehingga
+
+meningkatkan
+
+daya
+
+banding antara Laporan Keuangan Bank;
+3.
+
+menjadi acuan minimum yang harus dipenuhi oleh Bank dalam
+menyusun Laporan Keuangan. Namun, keseragaman penyajian
+sebagaimana diatur dalam Pedoman ini tidak menghalangi masingmasing Bank untuk memberikan informasi yang relevan bagi
+pengguna laporan sesuai kondisi masing-masing Bank.
+
+B.
+
+Ruang Lingkup
+Pedoman ini berlaku bagi Bank dalam menyusun Laporan Keuangan.
+
+I.4. ACUAN ...
+
+- 10 -
+
+I.4. ACUAN PENYUSUNAN
+A.
+
+Referensi yang digunakan dalam menyusun Pedoman ini adalah:
+1.
+
+Standar Akuntansi Keuangan Entitas Tanpa Akuntabilitas Publik
+yang
+
+selanjutnya
+
+disingkat
+
+SAK
+
+ETAP
+
+sepanjang
+
+tidak
+
+bertentangan dengan Prinsip Syariah;
+2.
+
+Kerangka Dasar Penyusunan dan Penyajian Laporan Keuangan
+Syariah dan Pernyataan Standar Akuntansi Keuangan Syariah;
+
+3.
+
+Ketentuan yang dikeluarkan oleh Otoritas Jasa Keuangan;
+
+4.
+
+Fatwa yang dikeluarkan oleh Dewan Syariah Nasional - Majelis
+Ulama Indonesia;
+
+5.
+
+Peraturan perundang-undangan yang relevan dengan Laporan
+Keuangan; dan
+
+6.
+
+Praktik-praktik akuntansi yang berlaku umum sepanjang tidak
+bertentangan dengan Prinsip Syariah.
+
+B.
+
+Berdasarkan referensi di atas ketentuan yang relevan dan sesuai
+dengan kondisi lingkungan usaha berdasarkan Prinsip Syariah di
+Indonesia yang kemudian dikodifikasi dalam Pedoman ini. Selanjutnya,
+sebagai
+
+dasar
+
+penyusunan
+
+Laporan
+
+Keuangan
+
+Bank
+
+digunakan
+
+ketentuan dalam Pedoman ini.
+
+I.5. KETENTUAN ...
+
+- 11 -
+
+I.5. KETENTUAN LAIN
+A.
+
+Jurnal yang digunakan dalam Pedoman ini hanya merupakan ilustrasi
+dan tidak bersifat mengikat. Bank dapat mengembangkan metode
+pencatatan dan pengakuan sesuai sistem masing-masing sepanjang
+memberikan
+
+hasil
+
+dicantumkan
+
+dalam
+
+yang
+
+tidak
+
+Pedoman
+
+berbeda.
+ini
+
+Ilustrasi
+
+menggambarkan
+
+jurnal
+
+yang
+
+pencatatan
+
+akuntansi secara manual.
+B.
+
+Transaksi yang dicantumkan pada Pedoman ini diprioritaskan pada
+transaksi yang umum terjadi pada Bank.
+
+C.
+
+Pedoman ini secara periodik akan dievaluasi dan disesuaikan dengan
+perkembangan
+
+bisnis
+
+dan
+
+produk
+
+pada
+
+Bank,
+
+ketentuan
+
+SAK,
+
+ketentuan Otoritas Jasa Keuangan, dan ketentuan lainnya yang terkait
+dengan industri Bank.
+
+- 12 -
+
+BAGIAN II LAPORAN KEUANGAN BANK SYARIAH
+II.1. KETENTUAN UMUM
+A.
+
+Tujuan Laporan Keuangan
+Laporan Keuangan disajikan untuk:
+1.
+
+memberikan informasi mengenai posisi keuangan, kinerja keuangan,
+perubahan ekuitas, arus kas dan informasi lainnya yang bermanfaat
+bagi pengguna Laporan Keuangan dalam rangka membuat keputusan
+ekonomi serta menunjukkan pertanggungjawaban manajemen atas
+penggunaan sumber daya yang dipercayakan kepada manajemen;
+
+2.
+
+meningkatkan kepatuhan terhadap pemenuhan Prinsip Syariah dalam
+semua transaksi dan kegiatan usaha;
+
+3.
+
+memberikan
+
+informasi
+
+kepatuhan
+
+terhadap
+
+pemenuhan
+
+Prinsip
+
+Syariah, serta informasi aset, kewajiban, pendapatan dan beban yang
+tidak sesuai dengan Prinsip Syariah, bila ada, dan bagaimana perolehan
+dan penggunaannya;
+4.
+
+memberikan
+
+informasi
+
+mengenai
+
+pemenuhan
+
+tanggung
+
+jawab
+
+manajemen
+
+terhadap
+
+amanah
+
+dalam
+
+mengamankan
+
+dana,
+
+menginvestasikannya pada tingkat keuntungan yang layak;
+5.
+
+memberikan informasi tingkat keuntungan investasi yang diperoleh
+penanam modal dan pemilik dana syirkah temporer; dan
+
+6.
+
+memberikan informasi pemenuhan kewajiban fungsi sosial, termasuk
+penerimaan
+
+dan penyaluran dana zakat, dan juga pengelolaan dana
+
+infak, sedekah, dan wakaf.
+B.
+
+Tanggung Jawab atas Laporan Keuangan
+Direksi Bank bertanggung jawab atas penyusunan dan penyajian Laporan
+Keuangan.
+
+C.
+
+Komponen LaporanKeuangan
+Komponen Laporan Keuangan terdiri dari:
+1.
+
+Neraca;
+
+2.
+
+Laporan Laba Rugi;
+
+3.
+
+Laporan Perubahan Ekuitas;
+
+4.
+
+Laporan Arus Kas;
+5. Laporan ...
+
+- 13 -
+
+D.
+
+5.
+
+Laporan Rekonsiliasi Pendapatan dan Bagi Hasil;
+
+6.
+
+Laporan Sumber dan Penyaluran Dana Zakat;
+
+7.
+
+Laporan Sumber dan Penggunaan Dana Kebajikan; dan
+
+8.
+
+Catatan atas Laporan Keuangan
+
+Bahasa Laporan Keuangan
+Laporan Keuangan harus disusun dalam Bahasa Indonesia.
+
+E.
+
+Mata Uang Pelaporan
+1.
+
+Mata
+
+uang
+
+pelaporan
+
+adalah
+
+Rupiah.
+
+Apabila
+
+transaksi
+
+Bank
+
+menggunakan mata uang selain Rupiah, maka nilai mata uang dalam
+pelaporan
+
+harus
+
+dikonversi
+
+dalam
+
+mata
+
+uang
+
+Rupiah
+
+dengan
+
+menggunakan kurs yang ditetapkan oleh Bank Indonesia.
+2.
+
+Keuntungan atau kerugian dalam periode berjalan yang terkait dengan
+transaksi dalam mata uang selain Rupiah dinilai dengan menggunakan
+kurs yang ditetapkan oleh Bank Indonesia.
+
+F.
+
+Kebijakan Akuntansi
+1.
+
+Kebijakan akuntansi Bank harus mencerminkan prinsip kehati-hatian
+dan mencakup semua hal yang material serta sesuai dengan ketentuan
+dalam SAK ETAP dan PSAK Syariah.
+
+2.
+
+Dalam hal SAK ETAP dan PSAK Syariah belum mengatur masalah
+pengakuan, pengukuran, penyajian atau pengungkapan dari suatu
+transaksi
+
+atau
+
+peristiwa,
+
+maka
+
+manajemen
+
+harus
+
+menetapkan
+
+kebijakan untuk memastikan bahwa Laporan Keuangan menyajikan
+informasi yang:
+a.
+
+relevan terhadap kebutuhan pengguna laporan dalam pengambilan
+keputusan;
+
+b.
+
+dapat diandalkan, yang:
+1) mencerminkan
+
+kejujuran
+
+penyajian
+
+kinerja
+
+dan
+
+posisi
+
+keuangan Bank;
+2) menggambarkan substansi ekonomi dari suatu kejadian atau
+transaksi dan tidak semata-mata bentuk hukumnya;
+3) netral, yaitu bebas dari keberpihakan;
+4) mencerminkan kehati-hatian; dan
+5) mencakup semua hal yang material.
+3. Dalam ...
+
+- 14 -
+
+3.
+
+Dalam menetapkan kebijakan akuntansi harus mempertimbangkan:
+a.
+
+persyaratan dan panduan dalam SAK ETAP dan PSAK Syariah
+yang berhubungan dengan hal yang serupa dan terkait;
+
+b.
+
+definisi,
+
+kriteria
+
+pengakuan
+
+kewajiban,
+
+pendapatan,
+
+(mempunyai
+
+dampak
+
+dan
+
+konsep
+
+pengukuran
+
+aset,
+
+dan
+
+beban
+
+dalam
+
+prinsip
+
+pervasif
+
+manfaat
+
+luas
+
+bagi
+
+pihak-pihak
+
+yang
+
+SAK
+
+non-ETAP
+
+yang
+
+berkepentingan) dari SAK ETAP; dan
+c.
+
+persyaratan
+
+serta
+
+panduan
+
+dalam
+
+berhubungan dengan hal yang serupa dan terkait.
+G.
+
+Penyajian
+1.
+
+Laporan Keuangan harus menyajikan secara wajar posisi keuangan,
+kinerja
+
+keuangan,
+
+dan
+
+perubahan
+
+posisi
+
+keuangan
+
+disertai
+
+pengungkapan yang diharuskan sesuai dengan ketentuan yang berlaku.
+2.
+
+Aset disajikan berdasarkan karakteristiknya menurut urutan likuiditas,
+kewajiban disajikan menurut urutan jatuh temponya, dana syirkah
+temporer disajikan dalam unsur tersendiri.
+
+3.
+
+Saldo transaksi sehubungan dengan kegiatan operasi normal Bank
+disajikan dan diungkapkan secara terpisah antara pihak-pihak berelasi
+dan pihak-pihak tidak berelasi. Termasuk pihak berelasi antara lain
+pihak terkait sebagaimana dimaksud dalam ketentuan yang berlaku
+mengenai batas maksimum penyaluran dana.
+
+4.
+
+Laporan laba rugi menggambarkan pendapatan dan beban menurut
+karakteristiknya yang dikelompokkan secara berjenjang (multiple step)
+dari kegiatan utama Bank dan kegiatan lainnya.
+
+5.
+
+Catatan atas laporan keuangan harus disajikan secara sistematis
+dengan urutan penyajian sesuai komponen utamanya yang merupakan
+bagian yang tidak terpisahkan dari Laporan Keuangan. Informasi dalam
+catatan atas Laporan Keuangan berkaitan dengan pos-pos dalam
+Neraca, Laporan Laba Rugi, Laporan Perubahan Ekuitas dan Laporan
+Arus Kas yang sifatnya memberikan penjelasan, baik yang bersifat
+kualitatif maupun kuantitatif, termasuk komitmen dan kontinjensi
+serta transaksi-transaksi lainnya.
+
+6.
+
+Dalam
+
+catatan
+
+atas
+
+Laporan
+
+Keuangan
+
+tidak
+
+diperkenankan
+
+menggunakan ekspresi kualitatif seperti kata “sebagian besar” untuk
+menggambarkan bagian dari suatu jumlah tetapi harus dinyatakan
+dalam ...
+
+- 15 -
+
+dalam jumlah nominal atau persentase.
+7.
+
+Pada setiap lembar Neraca, Laporan Laba Rugi, Laporan Perubahan
+Ekuitas, dan Laporan Arus Kas harus diberi pernyataan bahwa “catatan
+atas Laporan Keuangan merupakan bagian tak terpisahkan dari
+Laporan Keuangan”.
+
+8.
+
+Selain hal-hal tersebut di atas, penyajian Laporan Keuangan wajib
+mengikuti ketentuan yang berlaku.
+
+H.
+
+Perubahan Akuntansi
+1.
+
+Perubahan estimasi akuntansi
+a.
+
+Estimasi akuntansi dapat diubah apabila terdapat perubahan
+jumlah tercatat aset dan kewajiban atau jumlah pemanfaatan
+periodik aset yang berasal dari pengujian status saat ini dan
+ekspektasi manfaat akan datang dari aset dan kewajiban.
+
+b.
+2.
+
+Perubahan estimasi akuntansi diterapkan secara prospektif.
+
+Perubahan kebijakan akuntansi
+a.
+
+Kebijakan akuntansi dapat diubah apabila:
+1) dipersyaratkan oleh SAK ETAP, yaitu:
+a) dampak perubahan kebijakan akuntansi harus mengikuti
+ketentuan transisi dalam SAK ETAP.
+b) dalam hal tidak diatur ketentuan transisi dalam SAK ETAP,
+maka dampak perubahan kebijakan akuntansi diterapkan
+secara retrospektif; atau
+2) akan menghasilkan informasi yang lebih relevan dan andal
+sebagai dampak perubahan kebijakan akuntansi diterapkan
+secara retrospektif.
+
+b.
+
+Dampak retrospektif perubahan kebijakan akuntansi dilakukan
+dengan menyajikan ulang seluruh periode sajian dan melaporkan
+dampaknya terhadap masa sebelum periode sajian. Periode sajian
+adalah periode yang wajib disajikan dalam penyusunan Laporan
+Keuangan yang umumnya meliputi 2 (dua) periode laporan
+keuangan terakhir secara komparatif.
+
+c.
+
+Dalam hal perlakuan secara retrospektif tidak praktis, setelah
+melakukan semua usaha yang wajar/rasional, maka perubahan
+kebijakan akuntansi tersebut diterapkan pada tanggal kebijakan
+tersebut dimungkinkan dapat diberlakukan.
+3. Kesalahan ...
+
+- 16 -
+
+3.
+
+Kesalahan periode lalu
+Koreksi kesalahan periode lalu dilakukan secara retrospektif dengan
+melakukan penyajian ulang seluruh periode sajian dan melaporkan
+dampaknya terhadap masa sebelum periode sajian.
+
+I.
+
+Konsistensi Penyajian
+1.
+
+Penyajian dan klasifikasi pos-pos dalam Laporan Keuangan antar
+periode harus konsisten, kecuali apabila:
+a.
+
+terjadi perubahan yang signifikan terhadap sifat operasi Bank,
+sepanjang dimungkinkan oleh ketentuan yang berlaku;
+
+b.
+
+terjadi perubahan yang bertujuan menghasilkan penyajian yang
+lebih baik sesuai kriteria pemilihan dan penerapan kebijakan
+akuntansi; atau
+
+c.
+2.
+
+dipersyaratkan oleh SAK ETAP.
+
+Apabila penyajian atau klasifikasi pos-pos dalam Laporan Keuangan
+diubah, maka penyajian periode sebelumnya perlu direklasifikasi untuk
+memastikan daya banding. Selain itu, alasan reklasifikasi tersebut juga
+harus diungkapkan. Dalam hal reklasifikasi dianggap tidak praktis
+maka cukup diungkapkan alasannya.
+
+J.
+
+Materialitas dan Agregasi
+1.
+
+Penyajian Laporan Keuangan didasarkan pada konsep materialitas.
+
+2.
+
+Pos-pos yang jumlahnya material disajikan tersendiri dalam Laporan
+Keuangan,
+
+sedangkan
+
+yang
+
+jumlahnya
+
+tidak
+
+material
+
+dapat
+
+digabungkan sepanjang memiliki sifat atau fungsi yang sejenis.
+3.
+
+Informasi dianggap material apabila kelalaian untuk mencantumkan
+(ommission) atau kesalahan dalam mencatat (misstatement) informasi
+tersebut dapat mempengaruhi keputusan yang diambil.
+
+K.
+
+Saling Hapus
+1.
+
+Jumlah aset dan kewajiban yang disajikan pada Neraca tidak boleh
+disalinghapuskan dengan kewajiban atau aset lain kecuali secara
+hukum dibenarkan dan saling hapus tersebut mencerminkan prakiraan
+realisasi atau penyelesaian aset atau kewajiban.
+
+2.
+
+Pos-pos pendapatan dan beban tidak boleh disalinghapuskan, kecuali
+apabila
+
+menyangkut
+
+aset
+
+dan
+
+kewajiban
+
+yang
+
+disalinghapuskan
+sebagaimana ...
+
+- 17 -
+
+sebagaimana dimaksud di atas.
+L.
+
+Periode Pelaporan
+1.
+
+Laporan Keuangan wajib disajikan secara tahunan berdasarkan tahun
+takwim.
+
+2.
+
+Dalam hal Bank baru berdiri, Laporan Keuangan dapat disajikan untuk
+periode yang lebih pendek dari satu tahun takwim. Selain itu, untuk
+kepentingan pihak lainnya, Bank dapat membuat dua laporan yaitu
+dalam tahun takwim dan periode efektif dengan mencantumkan:
+a.
+
+alasan penggunaan periode pelaporan selain periode satu tahunan;
+
+b.
+
+fakta bahwa jumlah yang tercantum dalam Neraca, Laporan Laba
+Rugi, Laporan Perubahan Ekuitas, Laporan Arus Kas, Laporan
+Rekonsiliasi Pendapatan dan Bagi Hasil, Laporan Sumber dan
+Penyaluran Dana Zakat, Laporan Sumber dan Penggunaan Dana
+Kebajikan, dan Catatan atas Laporan Keuangan tidak dapat
+dibandingkan.
+
+M. Informasi Komparatif
+1.
+
+Laporan Keuangan tahunan harus disajikan secara komparatif dengan
+periode sebelumnya.
+
+2.
+
+Informasi komparatif yang bersifat naratif dan deskriptif dari Laporan
+Keuangan periode sebelumnya wajib diungkapkan kembali apabila
+relevan untuk pemahaman Laporan Keuangan periode berjalan.
+
+II.2. KETERBATASAN ...
+...
+
+- 18 -
+
+II.2. KETERBATASAN LAPORAN KEUANGAN
+Laporan Keuangan memiliki keterbatasan, antara lain:
+1.
+
+bersifat historis yang menunjukkan transaksi dan peristiwa yang telah
+lampau;
+
+2.
+
+bersifat umum, baik dari sisi informasi maupun manfaat bagi pihak
+pengguna. Biasanya informasi khusus yang dibutuhkan oleh pihak
+tertentu tidak dapat secara langsung dipenuhi semata-mata dari
+Laporan Keuangan saja;
+
+3.
+
+tidak luput dari penggunaan berbagai pertimbangan dan taksiran;
+
+4.
+
+menggunakan pertimbangan materialitas;
+
+5.
+
+lebih menekankan pada penyajian suatu peristiwa atau transaksi
+sesuai substansi dan realitas ekonomi daripada bentuk hukumnya
+(formalitas); dan
+
+6.
+
+adanya berbagai alternatif metode akuntansi yang dapat digunakan
+sehingga
+
+menimbulkan
+
+variasi
+
+dalam
+
+pengukuran
+
+ekonomi dan tingkat kesuksesan antar bank.
+
+sumber
+
+daya
+
+- 19 -
+
+BAGIAN III AKAD JUAL BELI
+III.1. MURABAHAH
+A.
+
+Definisi
+1.
+
+Murabahah adalah akad jual beli barang dengan harga jual sebesar
+beban perolehan
+
+ditambah keuntungan yang disepakati dan penjual
+
+harus mengungkapkan beban perolehan barang tersebut kepada
+pembeli.
+2.
+
+Pembiayaan Murabahah adalah penyediaan dana dari Bank kepada
+nasabah untuk membeli barang dengan menegaskan harga belinya
+kepada pembeli (nasabah) dan pembeli (nasabah) membayarnya dengan
+harga yang lebih sebagai keuntungan Bank yang disepakati.
+
+3.
+
+Aset Murabahah adalah aset yang diperoleh dengan tujuan untuk dijual
+kembali dengan menggunakan akad Murabahah.
+
+4.
+
+Diskon harga beli adalah pengurangan harga atau penerimaan dalam
+bentuk apapun yang diperoleh pihak pembeli (nasabah) dari pemasok.
+
+5.
+
+Harga perolehan adalah harga beli barang oleh Bank sebelum dikurangi
+uang muka dari nasabah.
+
+6.
+
+Potongan piutang Murabahah adalah pengurangan kewajiban pembeli
+(nasabah) yang diberikan oleh pihak penjual (Bank).
+
+7.
+
+Uang muka (urbun) adalah jumlah yang dibayar oleh pembeli (nasabah)
+kepada penjual sebagai bukti komitmen untuk membeli barang dari
+penjual.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.102 tentang Akuntansi Murabahah.
+
+Penjelasan Umum
+1.
+
+Aset yang akan dijual Bank dalam transaksi Murabahah pada
+prinsipnya harus dimiliki Bank sebelum akad Murabahah disepakati.
+Cara memperoleh aset Murabahah dapat dilakukan secara langsung
+oleh Bank atau diwakilkan kepada pihak lain termasuk nasabah.
+
+2.
+
+Dalam hal Bank diwakilkan kepada pihak lain (akad Wakalah), pihak
+yang mewakili hanya sebatas pada pencarian informasi barang sesuai
+spesifikasi ...
+
+- 20 -
+
+spesifikasi yang diinginkan nasabah. Sedangkan penentuan atas
+pembelian aset dari pemasok menjadi kewenangan Bank. Akad
+Wakalah dilakukan sebelum akad Murabahah.
+3.
+
+Harga perolehan aset Murabahah harus diberitahukan Bank kepada
+nasabah.
+
+4.
+
+Harga jual Murabahah adalah harga perolehan aset Murabahah sebelum
+dikurangi uang muka ditambah dengan marjin yang disepakati.
+
+5.
+
+Murabahah yang dilakukan oleh Bank harus berdasarkan pesanan
+nasabah yang bersifat mengikat.
+
+6.
+
+Pendapatan yang diterima Bank selain marjin keuntungan seperti
+pendapatan administrasi dan beban lain yang terkait langsung dengan
+pembiayaan Murabahah seperti beban komisi, beban survei, dan beban
+lain kepada pihak lain yang ditunjuk oleh Bank yang tidak dapat
+diukur secara andal perolehannya diakui sepanjang masa pembiayaan
+Murabahah. Sedangkan pendapatan administrasi yang dapat diukur
+secara
+
+andal
+
+perolehannya
+
+dapat
+
+diakui
+
+pada
+
+saat
+
+penyaluran
+
+pembiayaan.
+7.
+
+Pengakuan
+
+pendapatan
+
+Murabahah
+
+secara
+
+non
+
+tunai
+
+dapat
+
+menggunakan metode anuitas (efektif) atau metode proporsional (flat).
+a. Metode anuitas (efektif)
+Penggunaan metode anuitas (efektif) didasarkan pada asumsi
+bahwa substansi pembiayaan Murabahah merupakan pembiayaan
+(financing) sehingga pencatatan akuntansi Murabahah mengacu
+pada SAK ETAP. Dalam metode anuitas (efektif), pendapatan
+pembiayaan
+
+Murabahah
+
+dialokasikan
+
+sepanjang
+
+masa
+
+akad
+
+berdasarkan saldo pokok pembiayaan Murabahah.
+b. Metode proporsional (flat)
+Penggunaan metode proporsional (flat) didasarkan pada asumsi
+bahwa substansi pembiayaan Murabahah merupakan jual beli
+sehingga pencatatan akuntansi Murabahah mengacu pada PSAK
+No.102 tentang Akuntansi Murabahah. Dalam metode proporsional
+(flat), pendapatan pembiayaan Murabahah dialokasikan sepanjang
+masa akad berdasarkan proporsi antara saldo pokok dan marjin
+pembiayaan Murabahah.
+8.
+
+Ilustrasi pengakuan pendapatan Murabahah:
+Bank melakukan transaksi Murabahah dengan nasabah atas aset
+Murabahah seharga Rp1.000 (seribu rupiah) dan marjin keuntungan
+yang ...
+
+- 21 -
+
+yang disepakati sebesar Rp200 (dua ratus rupiah). Pendapatan
+administrasi yang nilai perolehannya tidak dapat diukur secara andal
+sebesar Rp12 (dua belas rupiah).
+a. Metode anuitas:
+1) Pendapatan administrasi yang nilai perolehannya tidak dapat
+diukur
+
+secara
+
+andal
+
+diamortisasi
+
+selama
+
+jangka
+
+waktu
+
+pembiayaan dengan menggunakan metode garis lurus.
+2) Pendapatan
+
+marjin
+
+Murabahah
+
+yang
+
+telah
+
+disepakati
+
+dialokasikan berdasarkan saldo pokok pembiayaan Murabahah
+selama
+
+jangka
+
+waktu
+
+pembiayaan
+
+dan
+
+jumlah
+
+marjin
+
+pendapatan yang diakui tidak boleh melebihi marjin Murabahah
+yang disepakati.
+
+Periode
+
+Angsuran
+
+Awal
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+
+Porsi
+Pokok
+Margin
+71
+73
+75
+77
+79
+82
+84
+87
+89
+92
+94
+97
+
+29
+27
+25
+23
+21
+18
+16
+13
+11
+8
+6
+3
+
+Saldo
+Pokok
+Margin
+1000
+200
+929
+171
+856
+144
+781
+119
+704
+96
+625
+75
+543
+57
+459
+41
+372
+28
+283
+17
+191
+9
+97
+3
+0
+0
+
+Amortisasi
+Pendapatan
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+b. Metode proporsional:
+1) Pendapatan administrasi yang nilai perolehannya tidak dapat
+diukur
+
+secara
+
+andal
+
+diamortisasi
+
+selama
+
+jangka
+
+waktu
+
+pembiayaan dengan menggunakan metode garis lurus.
+2) Pendapatan
+
+marjin
+
+Murabahah
+
+yang
+
+telah
+
+disepakati
+
+dialokasikan berdasarkan proporsi antara pokok dan marjin
+pembiayaan Murabahah selama jangka waktu pembiayaan dan
+jumlah marjin pendapatan yang diakui tidak boleh melebihi
+marjin Murabahah yang disepakati.
+
+Periode ...
+
+- 22 -
+
+9.
+
+Periode
+
+Angsuran
+
+Awal
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+
+Porsi
+Pokok
+Margin
+83
+83
+83
+83
+83
+83
+83
+83
+83
+83
+83
+83
+
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+
+Saldo
+Pokok
+Margin
+1000
+200
+917
+183
+833
+167
+750
+150
+667
+133
+583
+117
+500
+100
+417
+83
+333
+67
+250
+50
+167
+33
+83
+17
+0
+0
+
+Amortisasi
+Pendapatan
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+Akad Murabahah memperkenankan penawaran harga yang berbeda
+untuk cara pembayaran yang berbeda sebelum akad Murabahah
+dilakukan. Namun jika akad tersebut telah disepakati, maka hanya ada
+satu harga (harga dalam akad) yang digunakan. Sedangkan besarnya
+angsuran dapat disesuaikan berdasarkan kesepakatan Bank dengan
+nasabah.
+
+10. Dalam hal pembayaran angsuran oleh nasabah lebih kecil dari
+besarnya angsuran yang tercantum pada jadwal angsuran yang telah
+ditetapkan,
+
+maka
+
+pembayaran
+
+angsuran
+
+berikutnya dialokasikan
+
+terlebih dahulu untuk pemenuhan jadwal angsuran yang belum
+terpenuhi pembayarannya.
+Diskon harga beli
+11. Apabila setelah akad Murabahah pemasok memberikan diskon harga
+atas
+
+barang
+
+yang
+
+dibeli,
+
+maka
+
+diskon
+
+harga
+
+tersebut
+
+dibagi
+
+berdasarkan perjanjian atau persetujuan yang dimuat dalam akad.
+Oleh karena itu, klausul pembagian diskon harga tersebut harus
+diperjanjikan dalam akad. Apabila tidak diatur dalam akad, maka
+diskon tersebut menjadi hak Bank dan diakui sebagai pendapatan
+operasi lainnya.
+12. Diskon yang terkait dengan pembelian barang, antara lain:
+a.
+
+diskon dalam bentuk apapun dari pemasok atas pembelian barang;
+
+b.
+
+diskon beban asuransi dari perusahaan asuransi dalam rangka
+pembelian barang;
+
+c.
+
+komisi dalam bentuk apapun yang diterima terkait dengan
+pembelian barang.
+Uang ...
+
+- 23 -
+
+Uang muka
+13. Bank dapat meminta uang muka kepada nasabah sebagai bukti
+komitmen pembelian aset Murabahah sebelum akad disepakati dengan
+ketentuan:
+a.
+
+apabila akad Murabahah disepakati, maka uang muka menjadi
+bagian pelunasan piutang Murabahah;
+
+b.
+
+apabila akad Murabahah batal, maka uang muka dikembalikan
+kepada nasabah setelah dikurangi kerugian riil yang ditanggung
+oleh Bank;
+
+c.
+
+apabila uang muka itu lebih kecil dari kerugian, maka Bank dapat
+meminta tambahan dari nasabah.
+
+14. Keuntungan Murabahah yang diterima Bank dihitung berdasarkan
+harga perolehan aset Murabahah setelah memperhitungkan uang muka
+yang diserahkan oleh nasabah.
+Potongan piutang Murabahah
+15. Bank dapat memberikan potongan pada saat pelunasan piutang
+Murabahah, apabila:
+a.
+
+nasabah melakukan pelunasan pembayaran secara tepat waktu;
+atau
+
+b.
+
+nasabah melakukan pelunasan pembayaran lebih cepat dari waktu
+yang telah disepakati,
+
+dengan syarat potongan tidak diperjanjikan dalam akad dan besarnya
+potongan diserahkan pada kebijakan Bank.
+16. Pemberian potongan pelunasan piutang Murabahah dapat dilakukan
+dengan menggunakan salah satu metode berikut:
+a.
+
+diberikan pada saat pelunasan, yaitu Bank mengurangi piutang
+Murabahah dan keuntungan Murabahah, sehingga nasabah hanya
+membayar
+
+sebesar
+
+selisih
+
+antara
+
+piutang
+
+dengan
+
+potongan
+
+pelunasan; atau
+b.
+
+diberikan setelah pelunasan, yaitu Bank menerima pelunasan
+piutang dari nasabah dan kemudian membayarkan potongan
+pelunasannya kepada nasabah.
+
+17. Bank dapat memberikan potongan dari total piutang Murabahah yang
+belum dilunasi apabila:
+a.
+
+nasabah melakukan pembayaran angsuran tepat waktu; dan/atau
+
+b. nasabah ...
+
+- 24 -
+
+b.
+
+nasabah mengalami penurunan kemampuan pembayaran dengan
+syarat potongan tidak diperjanjikan dalam akad dan besarnya
+potongan diserahkan pada kebijakan Bank.
+
+18. Bank harus memiliki kebijakan dan kriteria mengenai nasabah yang
+membayar angsuran tepat waktu.
+19. Pemberian potongan pembayaran angsuran harus dapat dibuktikan
+dengan adanya penurunan kemampuan membayar dari nasabah.
+20. Kriteria penurunan kemampuan membayar nasabah antara lain adalah
+menurunnya kondisi keuangan nasabah untuk melakukan kewajiban
+pembayaran angsuran, baik yang disebabkan karena faktor mikro,
+misalnya persaingan industri nasabah maupun faktor makro, misalnya
+krisis keuangan.
+21. Dalam hal nasabah mengalami tunggakan pembayaran angsuran, Bank
+wajib membentuk Penyisihan Penghapusan Aset untuk pembiayaan
+Murabahah sesuai dengan ketentuan yang mengatur mengenai kualitas
+aset.
+Denda
+22. Bank dapat mengenakan denda kepada nasabah yang tidak dapat
+melakukan pembayaran angsuran piutang Murabahah, dengan indikasi
+antara lain:
+a.
+
+adanya unsur kesengajaan, yaitu nasabah mempunyai dana tetapi
+tidak melakukan pembayaran piutang Murabahah; dan
+
+b.
+
+adanya unsur penyalahgunaan dana, yaitu nasabah mempunyai
+dana tetapi digunakan terlebih dahulu untuk hal lain.
+
+23. Denda tidak dapat dikenakan kepada nasabah yang tidak/belum
+mampu melunasi disebabkan oleh force majeur, jika dapat dibuktikan.
+24. Denda kepada nasabah didasarkan pada pendekatan ta’zir, yaitu untuk
+membuat nasabah lebih disiplin terhadap kewajibannya.
+25. Denda yang dikenakan atas nasabah yang lalai merupakan sumber
+dana kebajikan.
+D.
+
+Perlakuan Akuntansi
+
+D.1. Pengakuan dan Pengukuran
+1.
+
+Uang muka
+a.
+
+Uang muka yang diterima Bank dari nasabah diakui sebagai uang
+muka Murabahah dari pembeli sebesar jumlah yang diterima Bank.
+b. Jika ...
+
+- 25 -
+
+b.
+
+Jika
+
+transaksi
+
+tersebut
+
+diakui
+
+Murabahah
+sebagai
+
+dilaksanakan,
+bagian
+
+dari
+
+maka
+
+uang
+
+pembayaran
+
+muka
+piutang
+
+Murabahah (merupakan bagian pokok).
+c.
+
+Jika transaksi Murabahah tidak dilaksanakan, maka :
+1) uang muka dikembalikan kepada nasabah sebesar selisih
+antara uang muka dengan beban riil dan kerugian atas
+pembatalan barang tersebut, apabila uang muka nasabah lebih
+besar dari beban-beban riil yang telah dikeluarkan Bank dan
+kerugian atas pembatalan, jika ada; atau
+2) Bank mengakui tagihan kepada nasabah sebesar selisih antara
+beban riil dengan uang muka dan kerugian atas pembatalan
+barang tersebut, apabila uang muka nasabah lebih kecil dari
+beban-beban riil yang telah dikeluarkan Bank dan kerugian
+atas pembatalan, jika ada.
+
+2.
+
+Diskon harga beli dari pemasok dan pihak lain
+a.
+
+Sebelum akad Murabahah ditandatangani maka diskon harga beli
+tersebut
+
+diakui
+
+sebagai
+
+pengurang
+
+harga
+
+perolehan
+
+aset
+
+Murabahah;
+b.
+
+Setelah akad Murabahah ditandatangani dan diskon harga beli:
+1) diperjanjikan dalam akad, maka bagian diskon harga beli yang
+menjadi
+
+hak
+
+nasabah
+
+diakui
+
+sebagai
+
+kewajiban
+
+kepada
+
+nasabah dan bagian diskon yang menjadi hak Bank diakui
+sebagai tambahan keuntungan Murabahah.
+2) tidak
+
+diperjanjikan
+
+dalam
+
+akad,
+
+maka
+
+diakui
+
+sebagai
+
+pendapatan operasi lain.
+3.
+
+Piutang Murabahah diakui pada saat akad transaksi Murabahah,
+sebesar harga perolehan ditambah keuntungan (marjin) yang disepakati.
+Dalam hal Bank menggunakan metode anuitas, piutang Murabahah
+yang diakui termasuk pendapatan dan beban yang belum diamortisasi.
+
+4.
+
+Pendapatan dan beban yang terkait langsung dengan transaksi
+Murabahah baik dengan menggunakan metode anuitas dan metode
+proporsional diamortisasi dengan menggunakan metode garis lurus
+sepanjang masa akad.
+
+5.
+
+Dalam hal transaksi Murabahah dilakukan secara tunai, pendapatan
+Murabahah diakui pada saat penyerahan aset Murabahah kepada
+nasabah.
+
+6.
+
+Potongan piutang Murabahah
+a. Potongan ...
+
+- 26 -
+
+a.
+
+Potongan pelunasan piutang Murabahah diakui sebagai pengurang
+pendapatan Murabahah pada saat pelunasan sebesar jumlah yang
+diberikan.
+
+b.
+
+Jika
+
+potongan
+
+pembayaran
+
+angsuran
+
+piutang
+
+Murabahah
+
+diberikan kepada nasabah karena:
+1) membayar angsuran tepat waktu, maka potongan pembayaran
+diakui sebagai pengurang pendapatan Murabahah; dan/atau
+2) adanya penurunan kemampuan pembayaran oleh nasabah,
+maka potongan pembayaran diakui sebagai beban Bank.
+7.
+
+Denda (ta’zir) atas nasabah yang lalai diakui sebagai sumber dana
+kebajikan sebesar dana yang diterima Bank.
+
+D.2. Penyajian
+1.
+
+Uang muka Murabahah dari pembeli disajikan sebagai kewajiban
+lainnya.
+
+2.
+
+Tagihan kepada nasabah atas pembatalan transaksi Murabahah dimana
+uang muka nasabah lebih kecil dari beban riil yang dikeluarkan
+nasabah disajikan sebagai piutang Qardh.
+
+3.
+
+Piutang Murabahah disajikan sebesar saldo pembiayaan Murabahah
+nasabah kepada Bank.
+
+4.
+
+Marjin Murabahah ditangguhkan disajikan sebagai pos lawan piutang
+Murabahah.
+
+5.
+
+Beban potongan pelunasan/angsuran Murabahah sebagai pos lawan
+(contra account) pendapatan marjin Murabahah.
+
+6.
+
+Pendapatan dan beban yang terkait langsung yang belum diamortisasi
+disajikan sebagai bagian dari pembiayaan Murabahah.
+
+7.
+
+Pendapatan marjin Murabahah yang akan diterima disajikan sebagai
+bagian dari aset lainnya pada saat nasabah tergolong performing.
+Sedangkan, apabila nasabah tergolong non-performing maka pendapatan
+marjin
+
+Murabahah
+
+yang
+
+akan
+
+diterima
+
+disajikan
+
+pada
+
+rekening
+
+administratif.
+8.
+
+Penyisihan Penghapusan Aset untuk Pembiayaan Murabahah disajikan
+sebagai pos lawan (contra account) piutang Murabahah.
+
+9.
+E.
+
+Denda (ta’zir) disajikan sebagai komponen dari sumber dana kebajikan.
+
+Ilustrasi Jurnal
+1.
+
+Penerimaan uang muka dari nasabah:
+Db. Kas/rekening …
+Kr. Kewajiban ...
+
+- 27 -
+
+Kr. Kewajiban lainnya - uang muka Murabahah dari pembeli.
+2.
+
+Pada saat timbul beban lain yang dikeluarkan oleh Bank:
+Db. Beban lain yang terkait.
+Kr. Kas/rekening …
+
+3.
+
+Pada saat perolehan Aset Murabahah:
+Db. Persediaan/Aset Murabahah.
+Kr. Kas/rekening pemasok/kliring.
+
+4.
+
+Pada
+
+saat
+
+penyaluran
+
+pembiayaan
+
+Murabahah
+
+kepada
+
+nasabah
+
+langsung
+
+dengan
+
+(pembayaran secara non-tunai):
+a.
+
+Metode Anuitas
+1) Transaksi penjualan
+Db.
+
+Piutang Murabahah.
+
+Kr.
+
+Marjin Murabahah ditangguhkan.
+
+Kr.
+
+Persediaan/Aset Murabahah.
+
+2) Pengakuan
+
+pendapatan
+
+yang
+
+terkait
+
+transaksi Murabahah
+Db.
+
+Kas.
+
+Kr.
+
+Piutang Murabahah - pendapatan yang terkait langsung.
+
+3) Pengakuan beban yang terkait langsung dengan transaksi
+Murabahah
+Db.
+
+Piutang Murabahah - beban yang terkait langsung.
+
+Kr.
+
+Kas.
+
+4) Uang muka nasabah diakui sebagai pembayaran piutang
+
+b.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Piutang Murabahah – porsi pokok.
+
+Metode Proporsional
+1) Transaksi penjualan
+Db.
+
+Piutang Murabahah.
+
+Kr.
+
+Marjin Murabahah ditangguhkan.
+
+Kr.
+
+Persediaan/Aset Murabahah.
+
+2) Pengakuan
+
+pendapatan
+
+yang
+
+terkait
+
+langsung
+
+dengan
+
+transaksi Murabahah
+Db.
+
+Kas.
+
+Kr.
+
+Liabilitas lainnya – Pendapatan yang ditangguhkan.
+
+3) Pengakuan beban yang terkait langsung dengan transaksi
+Murabahah
+Db.
+
+Aset lainnya – Beban yang ditangguhkan.
+Kr. Kas ...
+
+- 28 -
+
+Kr.
+
+Kas.
+
+4) Uang muka nasabah diakui sebagai pembayaran piutang
+
+5.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Piutang Murabahah – porsi pokok.
+
+Apabila pesanan nasabah dibatalkan:
+a.
+
+Uang muka lebih besar daripada kerugian dan beban lain yang
+dikeluarkan oleh Bank
+
+b.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Kerugian penjualan barang pesanan.
+
+Kr.
+
+Beban lain yang terkait.
+
+Kr.
+
+Kas/Rekening …
+
+Uang
+
+muka
+
+sama
+
+dengan
+
+kerugian
+
+dan
+
+beban
+
+lain
+
+yang
+
+dikeluarkan oleh Bank
+
+c.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Kerugian penjualan barang pesanan.
+
+Kr.
+
+Beban lain yang terkait.
+
+Apabila uang muka lebih kecil daripada kerugian dan beban lain
+yang dikeluarkan oleh Bank
+
+6.
+
+Db.
+
+Tagihan kepada nasabah.
+
+Db.
+
+Liabilitas lainnya – uang muka Murabahah dari pembeli.
+
+Kr.
+
+Kerugian penjualan barang pesanan.
+
+Kr.
+
+Beban lain yang terkait.
+
+Pada saat pengakuan pendapatan di akhir periode pelaporan (akru):
+a.
+
+Metode Anuitas
+Db.
+
+Pendapatan marjin Murabahah yang akan diterima.
+
+Db/Kr. Piutang Murabahah.
+Kr.
+b.
+
+Pendapatan marjin Murabahah.
+
+Metode Proporsional
+1) Pengakuan pendapatan marjin Murabahah
+Db.
+
+Pendapatan marjin Murabahah yang akan diterima.
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pengakuan
+
+pendapatan
+
+yang
+
+terkait
+
+langsung
+
+dengan
+
+transaksi Murabahah
+Db.
+
+Liabilitas lainnya - Pendapatan yang ditangguhkan.
+
+Kr.
+
+Pendapatan.
+
+3) Pengakuan beban yang terkait langsung dengan transaksi
+Murabahah
+Db. Beban ...
+
+- 29 -
+
+7.
+
+Db.
+
+Beban.
+
+Kr.
+
+Aset lainnya - Beban yang ditangguhkan.
+
+Pada saat penerimaan angsuran dari nasabah (pokok dan marjin):
+a.
+
+Metode Anuitas
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah yang ditangguhkan.
+
+Db/Kr. Piutang Murabahah.
+Kr.
+b.
+
+8.
+
+Pendapatan marjin Murabahah.
+
+Metode Proporsional
+Db.
+
+Kas/rekening nasabah
+
+Kr.
+
+Piutang Murabahah
+
+Db.
+
+Marjin Murabahah yang ditangguhkan
+
+Kr.
+
+Pendapatan marjin Murabahah
+
+Pemberian potongan angsuran piutang Murabahah:
+a.
+
+Angsuran tepat waktu
+1) Pada saat penerimaan angsuran
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan. (jika masih ada)
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pada saat pemberian potongan angsuran
+
+b.
+
+Db.
+
+Beban potongan angsuran Murabahah.
+
+Kr.
+
+Kas/rekening nasabah.
+
+Penurunan kemampuan pembayaran
+1) Pada saat penerimaan angsuran
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan(jika masih ada).
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pada saat pemberian potongan angsuran
+
+9.
+
+Db.
+
+Beban operasional.
+
+Kr.
+
+Kas/rekening nasabah.
+
+Pemberian potongan pelunasan dini:
+a.
+
+Jika pada saat penyelesaian
+Bank ...
+
+- 30 -
+
+Bank
+
+mengurangi
+
+piutang
+
+Murabahah
+
+dan
+
+keuntungan
+
+Murabahah:
+1) Pada saat pemberian potongan pelunasan:
+Db.
+
+Beban potongan angsuran Murabahah.
+
+Kr.
+
+Piutang Murabahah.
+
+2) Pada saat penerimaan pelunasan:
+
+b.
+
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan (jika masih ada).
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+Jika setelah penyelesaian
+Bank terlebih dulu menerima pelunasan piutang Murabahah dari
+nasabah, kemudian Bank membayar potongan pelunasan dini
+Murabahah kepada nasabah dengan mengurangi pendapatan
+Murabahah:
+1) Pada saat penerimaan pelunasan:
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan.
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pada saat memberi potongan pelunasan
+Db.
+
+Beban potongan pelunasan.
+
+Kr.
+
+Kas/rekening nasabah.
+
+10. Pada saat penyelesaian piutang Murabahah melalui eksekusi agunan
+a.
+
+b.
+
+Pada saat eksekusi agunan
+Db.
+
+Aset Yang Diambil Alih.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah yang ditangguhkan.
+
+Kr.
+
+Pendapatan yang ditangguhkan.
+
+Pada saat penjualan agunan
+1) Apabila hasil penjualan agunan lebih besar dari kewajiban
+nasabah
+Db.
+
+Kas/rekening …
+
+Kr.
+
+Aset Yang Diambil Alih.
+Kr. Rekening ...
+
+- 31 -
+
+Kr.
+
+Rekening nasabah.
+
+Db.
+
+Pendapatan yang ditangguhkan.
+
+Kr.
+
+Pendapatan Murabahah.
+
+2) Apabila hasil penjualan agunan lebih kecil dari kewajiban
+nasabah
+Db.
+
+Kas/rekening …
+
+Db.
+
+Tagihan kepada nasabah.
+
+Kr.
+
+Aset Yang Diambil Alih.
+
+Db.
+
+Pendapatan yang ditangguhkan.
+
+Kr.
+
+Pendapatan Murabahah.
+
+11. Penerimaan denda dari nasabah:
+Db. Kas/rekening …
+Kr.
+F.
+
+Rekening Dana Kebajikan.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+rincian piutang Murabahah berdasarkan jumlah, jangka waktu, jenis
+valuta, kualitas piutang, jenis penggunaan, sektor ekonomi, dan
+Penyisihan Penghapusan Aset;
+
+2.
+
+jumlah piutang Murabahah yang diberikan kepada pihak yang berelasi;
+
+3.
+
+kebijakan dan metode akuntansi untuk pengakuan pendapatan,
+Penyisihan Penghapusan Aset Produktif, penghapusan dan penanganan
+piutang Murabahah yang bermasalah;
+
+4.
+
+besarnya piutang Murabahah baik yang dibebani sendiri oleh Bank
+maupun secara bersama-sama dengan pihak lain sebesar bagian
+pembiayaan Bank.
+
+III.2. ISTISHNA ...
+
+- 32 -
+
+III.2. ISTISHNA
+A.
+
+Definisi
+1.
+
+Istishna adalah akad jual beli dalam bentuk pemesanan pembuatan
+barang
+
+tertentu
+
+disepakati
+
+dengan
+
+antara
+
+kriteria
+
+pemesan
+
+dan
+
+persyaratan
+
+tertentu
+
+(pembeli/mustashni')
+
+dan
+
+yang
+
+penjual
+
+(pembuat/shani').
+2.
+
+Istishna paralel adalah suatu bentuk akad Istishna antara pemesan
+(pembeli/mustashni’)
+
+dengan
+
+untuk
+
+kewajibannya
+
+memenuhi
+
+penjual
+
+(pembuat/shani’),
+
+kepada
+
+mustashni’,
+
+kemudian
+penjual
+
+memerlukan pihak lain sebagai shani’.
+3.
+
+Pembiayaan Istishna adalah penyediaan dana dari Bank kepada
+nasabah untuk membeli barang sesuai dengan pesanan nasabah yang
+menegaskan harga belinya kepada pembeli (nasabah) dan pembeli
+(nasabah) membayarnya dengan harga yang lebih sebagai keuntungan
+Bank yang disepakati.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.104 tentang Akuntansi Istishna.
+
+Penjelasan
+1.
+
+Spesifikasi dan harga barang pesanan dalam Istishna disepakati oleh
+pembeli dan penjual pada awal akad. Pada dasarnya harga barang tidak
+dapat berubah selama jangka waktu akad, kecuali disepakati oleh
+kedua belah pihak.
+
+2.
+
+Barang pesanan harus diketahui karakteristiknya secara umum yang
+meliputi: jenis, macam, kualitas, dan kuantitasnya. Barang pesanan
+harus sesuai dengan karakteristik yang telah disepakati antara pembeli
+dan penjual. Jika barang pesanan yang dikirimkan salah atau cacat
+maka penjual harus bertanggung jawab atas kelalaiannya.
+
+3.
+
+Jika nasabah dalam akad Istishna tidak mewajibkan Bank untuk
+membuat sendiri barang pesanan, maka untuk memenuhi kewajiban
+pada akad pertama, Bank dapat mengadakan akad Istishna kedua
+dengan pihak ketiga (supplier). Akad Istishna kedua ini disebut Istishna
+paralel. Dalam konteks Bank, piutang Istishna timbul dari Istishna
+paralel.
+4. Pada ...
+
+- 33 -
+
+4.
+
+Pada dasarnya akad Istishna tidak dapat dibatalkan, kecuali memenuhi
+kondisi:
+a.
+
+kedua belah pihak setuju untuk menghentikannya; dan
+
+b.
+
+akad batal demi hukum karena timbul kondisi hukum yang dapat
+menghalangi pelaksanaan atau penyelesaian akad.
+
+5.
+
+Mekanisme pembayaran Istishna harus disepakati dalam akad dan
+dapat dilakukan dengan cara:
+a.
+
+Pembayaran dimuka secara keseluruhan atau sebagian setelah
+akad namun sebelum pembuatan barang.
+
+b.
+
+Pembayaran saat penyerahan barang atau selama dalam proses
+pembuatan barang. Cara pembayaran ini dimungkinkan adanya
+pembayaran termin sesuai dengan progres pembuatan aset
+Istishna.
+
+6.
+
+c.
+
+Pembayaran ditangguhkan setelah penyerahan barang.
+
+d.
+
+Kombinasi dari cara pembayaran di atas.
+
+Metode pengakuan pendapatan Istishna dapat dilakukan dengan
+menggunakan metode persentase penyelesaian dan metode akad selesai.
+Pada
+
+metode
+
+persentase
+
+penyelesaian,
+
+Bank
+
+dapat
+
+mengakui
+
+pendapatan Istishna sebesar proporsi penyelesaian barang pesanan.
+Sedangkan,
+
+pada
+
+metode
+
+akad
+
+selesai,
+
+Bank
+
+akan
+
+mengakui
+
+pendapatan Istishna pada saat barang telah diserahkan kepada
+nasabah.
+7.
+
+Jika estimasi penyelesaian akad dan biaya untuk penyelesaiannya tidak
+dapat ditentukan secara rasional pada akhir periode Laporan Keuangan,
+maka digunakan metode akad selesai dengan ketentuan sebagai berikut:
+a.
+
+tidak ada pendapatan Istishna yang diakui sampai dengan
+pekerjaan tersebut selesai;
+
+b.
+
+tidak ada harga pokok Istishna yang diakui sampai dengan
+pekerjaan tersebut selesai;
+
+c.
+
+tidak ada bagian keuntungan yang diakui dalam Aset Istishna
+Dalam Penyelesaian sampai dengan pekerjaan tersebut selesai; dan
+
+d.
+
+pengakuan pendapatan
+
+Istishna, harga pokok
+
+Istishna, dan
+
+keuntungan dilakukan hanya pada saat penyelesaian pekerjaan.
+8.
+
+Pada pembiayaan Istishna, Bank melakukan pesanan barang kepada
+supplier atas pesanan dari nasabah. Pendapatan yang diperoleh Bank
+lebih disebabkan karena aktivitas penyediaan fasilitas pendanaan
+kepada nasabah, bukan dari aktivitas pembuatan barang pesanan.
+9. Nasabah ...
+
+- 34 -
+
+9.
+
+Nasabah dapat membayar uang muka barang pesanan kepada Bank
+sebelum barang diserahkan kepada nasabah dan Bank juga dapat
+membayar uang muka barang pesanan kepada supplier.
+
+10. Bank dapat menagih kepada nasabah atas barang pesanan yang telah
+diserahkan dan supplier dapat menagih kepada Bank atas barang
+pesanan yang telah diserahkan.
+11. Selama barang pesanan masih dibuat, Bank akan menggunakan
+rekening
+
+Aset
+
+Istishna
+
+Dalam
+
+Penyelesaian
+
+ketika
+
+melakukan
+
+pembayaran kepada supplier dan menggunakan rekening Termin
+Istishna ketika melakukan penagihan kepada nasabah.
+12. Pengakuan pendapatan untuk transaksi Istishna menggunakan metode
+sebagaimana pengakuan pendapatan pada transaksi murabahah.
+13. Dalam hal nasabah mengalami tunggakan pembayaran angsuran, Bank
+wajib membentuk Penyisihan Penghapusan Aset untuk piutang Istishna
+sesuai dengan ketentuan yang berlaku mengenai kualitas aset.
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Uang muka pesanan nasabah yang diterima Bank diakui sebagai uang
+muka Istishna sebesar uang yang diterima.
+
+2.
+
+Uang muka yang dibayarkan Bank kepada supplier diakui sebagai uang
+muka kepada supplier sebesar uang yang diberikan dan diakui sebagai
+Aset Istishna Dalam Penyelesaian pada saat barang diserahkan oleh
+supplier.
+
+3.
+
+Tagihan Bank kepada nasabah atas sebagian barang pesanan yang telah
+diserahkan diakui sebagai piutang Istishna sebesar persentase harga
+jual yang telah diselesaikan dan diakui sebagai Termin Istishna sebesar
+persentase harga pokok yang telah diselesaikan.
+
+4.
+
+Tagihan supplier kepada Bank atas sebagian barang pesanan yang telah
+diselesaikan diakui sebagai Aset Istishna Dalam Penyelesaian dan utang
+Istishna sebesar tagihan supplier.
+
+5.
+
+Dalam hal Bank menggunakan metode persentase penyelesaian maka
+Bank dapat mengakui pendapatan Istishna atas pembayaran yang telah
+dilakukan nasabah sebesar persentase penyelesaian.
+
+6.
+
+Pada saat barang pesanan telah diserahkan kepada nasabah, Bank
+melakukan jurnal balik atas rekening Aset Istishna Dalam Penyelesaian
+dan Termin Istishna.
+7. Utang ...
+
+- 35 -
+
+7.
+
+Utang Istishna yang berasal dari transaksi Istishna yang pembayarannya
+bersamaan dengan proses pembuatan aset Istishna:
+a.
+
+diakui pada saat diterima tagihan dari supplier kepada Bank
+sebesar nilai tagihan.
+
+b.
+
+dihentikan pengakuannya dari Laporan Keuangan pada saat
+dilakukan pembayaran sebesar jumlah yang dibayar.
+
+8.
+
+Uang muka
+
+Istishna yang berasal
+
+dari transaksi
+
+Istishna yang
+
+pembayarannya dilakukan di muka secara penuh:
+a.
+
+diakui pada saat pembayaran harga barang diterima dari nasabah
+sebesar jumlah yang diterima.
+
+b.
+
+dihentikan pengakuannya dari Laporan Keuangan pada saat
+dilakukan penyerahan barang kepada nasabah sebesar nilai
+kontrak.
+
+9.
+
+Jika nasabah membayar uang muka kepada Bank dalam proses
+pembuatan aset Istishna, penerimaan uang muka tersebut diperlakukan
+sebagai
+
+pembayaran
+
+termin
+
+sebesar
+
+jumlah
+
+uang
+
+muka
+
+yang
+
+dibayarkan.
+D2. Penyajian
+1.
+
+Uang muka Istishna disajikan sebagai kewajiban lainnya.
+
+2.
+
+Uang muka kepada supplier disajikan sebagai aset lainnya.
+
+3.
+
+Utang Istishna disajikan sebesar tagihan dari supplier yang belum
+dilunasi.
+
+4.
+
+Aset
+
+Istishna
+
+Dalam
+
+Penyelesaian
+
+disajikan
+
+sebesar
+
+dana
+
+yang
+
+dibayarkan Bank kepada supplier.
+5.
+
+Termin Istishna disajikan sebesar jumlah tagihan termin Bank kepada
+nasabah.
+
+6.
+
+Piutang Istishna disajikan sebesar jumlah yang belum dilunasi oleh
+pembeli akhir.
+
+7.
+
+Marjin Istishna Ditangguhkan disajikan sebagai pos lawan piutang
+Istishna.
+
+8.
+
+Pendapatan marjin Istishna yang akan diterima disajikan sebagai bagian
+dari aset lainnya pada saat nasabah tergolong performing. Sedangkan,
+apabila nasabah tergolong non-performing, pendapatan marjin Istishna
+yang akan diterima disajikan pada rekening administratif.
+
+9.
+
+Penyisihan Penghapusan Aset Produktif piutang Istishna disajikan
+sebagai pos lawan (contra account) piutang Istishna.
+
+E. Ilustrasi ...
+
+- 36 -
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Penerimaan uang muka pesanan dari nasabah:
+Db. Kas/rekening …
+Kr. Kewajiban lainnya – Uang muka Istishna.
+
+2.
+
+Penerimaan barang dari supplier:
+a.
+
+Mekanisme uang muka
+1) Pemberian uang muka
+Db. Aset lainnya – Uang muka kepada supplier
+Kr. Kas/rekening …
+2) Penerimaan sebagian barang pesanan dari supplier
+Db. Aset Istishna Dalam Penyelesaian.
+Kr. Aset lainnya – Uang Muka kepada supplier.
+
+b.
+
+Mekanisme tagihan dari supplier
+1) Menerima tagihan dari supplier
+Db. Aset Istishna Dalam Penyelesaian.
+Kr. Kewajiban lainnya – Utang Istishna.
+2) Pembayaran kepada supplier
+Db. Kewajiban lainnya – Utang Istishna.
+Kr. Kas/rekening …
+
+3.
+
+Penagihan termin kepada nasabah:
+Db. Piutang Istishna.
+Kr. Marjin Istishna ditangguhkan.
+Kr. Termin Istishna.
+
+4.
+
+Pembayaran oleh nasabah:
+Db. Kas.
+Kr. Piutang Istishna.
+Db. Marjin Istishna ditangguhkan.
+Kr. Pendapatan Istishna.
+
+5.
+
+Penyerahan barang kepada nasabah:
+Db. Termin Istishna.
+Kr. Aset Istishna Dalam Penyelesaian.
+
+6.
+
+Pada saat pengakuan pendapatan diakhir periode pelaporan (akru):
+Db.Pendapatan marjin Istishna yang akan diterima.
+Kr. Pendapatan marjin Istishna.
+
+7.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset Produktif atas
+piutang Istishna:
+
+Db. Beban ...
+
+- 37 -
+
+Db. Beban kerugian penghapusan aset produktif – piutang Istishna.
+Kr. Penyisihan Penghapusan Aset – piutang Istishna.
+8.
+
+Pada saat dilakukan koreksi Penyisihan Penghapusan Aset atas piutang
+Istishna:
+Db. Penyisihan Penghapusan Aset – piutang Istishna.
+Kr. Beban
+
+kerugian
+
+penghapusan
+
+aset
+
+produktif–piutang
+
+Istishna/Koreksi Penyisihan Penghapusan Aset Produktif –Piutang
+Istishna.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian piutang Istishna berdasarkan jumlah, jangka waktu, jenis
+valuta, kualitas piutang dan Penyisihan Penghapusan Aset piutang
+Istishna.
+
+2.
+
+Jumlah piutang Istishna yang diberikan kepada pihak yang berelasi.
+
+3.
+
+Kebijakan akuntansi yang digunakan dalam pengakuan pendapatan
+Penyisihan Penghapusan Aset, penghapusan dan penanganan piutang
+Istishna yang bermasalah.
+
+4.
+
+Besarnya piutang Istishna baik yang dibiayai sendiri oleh Bank maupun
+secara bersama-sama dengan pihak lain sebesar bagian pembiayaan
+Bank, jika ada.
+
+5.
+
+Jumlah akumulasi biaya atas kontrak berjalan serta pendapatan dan
+keuntungan sampai dengan akhir periode berjalan.
+
+6.
+
+Jumlah sisa kontrak yang belum selesai menurut spesifikasi dan syarat
+kontrak.
+
+7.
+
+Nilai kontrak Istishna paralel yang sedang berjalan serta rentang periode
+pelaksanaannya.
+
+8.
+
+Nilai kontrak Istishna yang telah ditandatangani Bank selama periode
+berjalan
+
+tetapi
+
+belum
+
+dilaksanakan
+
+dan
+
+rentang
+
+periode
+
+pelaksanaannya.
+9.
+
+Rincian utang Istishna berdasarkan jumlah, tujuan (supplier atau
+nasabah), jangka waktu, dan jenis mata uang.
+
+10. Utang Istishna kepada nasabah yang merupakan pihak berelasi.
+11. Jenis dan kuantitas barang pesanan.
+
+III.3.SALAM ...
+
+- 38 -
+
+III.3. SALAM
+A.
+
+Definisi
+Salam adalah akad jual beli barang pesanan (muslam fiih) dengan
+pengiriman barang di kemudian hari oleh penjual (muslam illaihi) dan
+pelunasannya dilakukan oleh pembeli pada saat akad disepakati sesuai
+dengan syarat-syarat tertentu.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.103 tentang Akuntansi Salam.
+
+Penjelasan
+1.
+
+Bank dapat bertindak sebagai pembeli dan/atau penjual dalam suatu
+transaksi Salam. Jika Bank bertindak sebagai pembeli, maka Bank
+melakukan transaksi Salam. Jika Bank bertindak sebagai penjual,
+maka Bank akan memesan kepada pihak lain untuk menyediakan
+barang pesanan dalam Salam paralel.
+
+2.
+
+Salam paralel dapat dilakukan dengan syarat:
+a.
+
+Akad kedua antara Bank dan pemasok terpisah dari akad pertama
+antara Bank dan pembeli akhir; dan
+
+b.
+3.
+
+Akad kedua dilakukan setelah akad pertama sah.
+
+Dalam hal Bank bertindak sebagai pembeli, Bank dapat meminta
+jaminan kepada pemasok untuk menghindari risiko yang merugikan
+Bank.
+
+4.
+
+Piutang Salam merupakan tagihan Bank kepada pemasok yang harus
+diselesaikan dalam bentuk penyerahan barang, bukan penerimaan
+dalam bentuk uang tunai. Piutang Salam timbul dari penyerahan uang
+kepada pemasok senilai barang yang dipesan.
+
+5.
+
+Utang Salam merupakan kewajiban Bank yang harus diselesaikan
+dalam bentuk penyerahan barang bukan pembayaran dalam bentuk
+uang tunai kepada nasabah.
+
+6.
+
+Spesifikasi dan harga barang pesanan disepakati di awal akad oleh
+nasabah dan Bank pada akad pertama atau Bank dengan pemasok
+pada akad kedua. Ketentuan harga barang pesanan tidak dapat
+berubah selama jangka waktu akad.
+7. Barang ...
+
+- 39 -
+
+7.
+
+Barang pesanan harus diketahui karakteristiknya secara umum yang
+meliputi: jenis, macam, kualitas dan kuantitasnya.
+
+8.
+
+Barang
+
+pesanan
+
+harus
+
+sesuai
+
+dengan
+
+karakteristik
+
+yang
+
+telah
+
+disepakati antara nasabah dan Bank atau Bank dan pemasok. Jika
+barang pesanan yang dikirim salah atau cacat maka Bank atau
+pemasok harus bertanggung jawab atas kelalaiannya.
+9.
+
+Jika Bank tidak menerima sebagian atau seluruh barang pesanan pada
+tanggal jatuh tempo pengiriman, maka:
+
+10.
+
+a.
+
+Tanggal jatuh tempo pengiriman dapat diperpanjang;
+
+b.
+
+Akad Salam dapat dibatalkan sebagian atau seluruhnya; atau
+
+c.
+
+Jaminan atas barang pesanan dapat dieksekusi.
+
+Bank dapat mengenakan denda kepada pemasok. Denda hanya boleh
+dikenakan kepada pemasok yang mampu menyelesaikan kewajibannya,
+tetapi sengaja tidak melakukannya. Hal ini tidak berlaku bagi pemasok
+yang tidak mampu menunaikan kewajibannya karena force majeur.
+Denda dikenakan jika pemasok lalai dalam melakukan kewajibannya
+sesuai dengan akad, dan denda yang diterima diakui sebagai bagian
+dana kebajikan.
+
+11.
+
+Pendapatan Salam diperoleh dari selisih harga jual kepada nasabah
+dan harga beli dari pemasok.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Piutang Salam diakui pada saat penyerahan uang kepada pemasok
+sebesar jumlah yang dibayarkan.
+
+2.
+
+Utang Salam diakui pada saat penerimaan uang dari nasabah sebesar
+jumlah yang diterima.
+
+3.
+
+Dalam hal dilakukan perpanjangan jangka waktu pengiriman maka
+nilai tercatat piutang Salam dicatat sebesar bagian yang belum
+dipenuhi sesuai dengan nilai yang tercantum dalam akad.
+
+4.
+
+Dalam hal dilakukan pembatalan sebagian atau seluruh akad Salam,
+maka piutang Salam berubah menjadi piutang Qardh kepada pemasok
+sebesar bagian yang tidak dapat dipenuhi.
+
+5.
+
+Dalam hal dilakukan eksekusi jaminan, selisih antara nilai tercatat
+piutang Salam dan hasil penjualan jaminan tersebut diakui sebagai
+piutang kepada pemasok. Sebaliknya, jika hasil penjualan jaminan
+tersebut ...
+
+- 40 -
+
+tersebut lebih besar dari nilai tercatat piutang Salam, selisihnya
+menjadi hak pemasok.
+6.
+
+Pendapatan Salam diakui pada saat barang diserahkan kepada
+nasabah sebesar selisih antara harga jual kepada nasabah dengan
+harga beli dari pemasok.
+
+D2. Penyajian
+1.
+
+Piutang Salam disajikan sebesar jumlah tercatat.
+
+2.
+
+Piutang Salam yang tidak dapat dipenuhi oleh pemasok dan pemasok
+menyatakan tidak dapat memenuhi kewajibannya disajikan sebagai
+piutang Qardh.
+
+3.
+E.
+
+Utang Salam disajikan sebesar jumlah tercatat.
+
+Ilustrasi Jurnal
+
+E1. Bank Sebagai Pembeli
+1.
+
+Pada saat Bank menyerahkan uang kepada pemasok:
+Db. Piutang Salam.
+Kr. Kas/Rekening pemasok.
+
+2.
+
+Pada saat Bank menerima barang dari pemasok:
+Db. Persediaan/aset Salam.
+Kr. Piutang Salam.
+
+3.
+
+Pada saat pemasok tidak memenuhi kewajibannya:
+Db. Piutang Qardh (pemasok).
+Kr. Piutang Salam.
+
+4.
+
+Jika Bank mengeksekusi jaminan atas akad Salam:
+a.
+
+Penjualan jaminan dengan hasil lebih kecil dari piutang Salam
+Db. Kas/kliring.
+Db. Piutang Qardh (pemasok).
+Kr. Piutang Salam.
+
+b.
+
+Penjualan jaminan dengan hasil lebih besar dari piutang Salam
+Db. Kas/kliring.
+Kr. Rekening pemasok.
+Kr. Piutang Salam.
+
+5.
+
+Pada saat pengenaan denda kepada pemasok:
+Db. Kas/Rekening ...
+Kr. Rekening Dana Kebajikan.
+
+c. Bank ...
+
+- 41 -
+
+E2. Bank Sebagai Penjual
+1.
+
+Pada saat Bank menerima uang dari nasabah
+Db. Kas/rekening nasabah.
+Kr. Utang Salam.
+
+2.
+
+Pada saat Bank menyerahkan barang kepada nasabah
+Db. Utang Salam.
+Kr. Persediaan/aset Salam.
+Kr. Pendapatan Salam.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan, antara lain:
+1.
+
+Rincian piutang Salam dan utang Salam berdasarkan jumlah, jangka
+waktu, jenis valuta, jenis dan kuantitas barang pesanan.
+
+2.
+
+Piutang Salam dari pemasok dan utang Salam kepada nasabah yang
+merupakan pihak berelasi.
+
+III.4. PERSEDIAAN ...
+
+- 45 -
+
+BAGIAN IV AKAD BAGI HASIL
+IV.1. PEMBIAYAAN MUDHARABAH
+A.
+
+Definisi
+1.
+
+Mudharabah adalah akad kerjasama usaha antara dua pihak dimana
+pihak pertama (pemilik dana) menyediakan seluruh dana, sedangkan
+pihak
+
+kedua
+
+(pengelola
+
+dana)
+
+bertindak
+
+selaku
+
+pengelola,
+
+dan
+
+keuntungan dibagi di antara mereka sesuai kesepakatan sedangkan
+kerugian finansial hanya ditanggung oleh pemilik dana.
+2.
+
+Mudharabah Muthlaqah adalah Mudharabah dimana pemilik dana
+memberikan kebebasan kepada pengelola dana dalam pengelolaan
+investasinya.
+
+3.
+
+Mudharabah Muqayyadah adalah Mudharabah dimana pemilik dana
+memberikan batasan kepada pengelola dana, antara lain mengenai
+tempat, cara dan/atau obyek investasi.
+
+4.
+
+Mudharabah
+
+Musytarakah
+
+adalah
+
+bentuk
+
+Mudharabah
+
+dimana
+
+pengelola dana menyertakan modal atau dananya dalam kerjasama
+investasi.
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.105 tentang Akuntansi Mudharabah.
+
+Penjelasan
+1.
+
+Mudharabah terdiri dari dua jenis, yaitu Mudharabah Muthlaqah dan
+Mudharabah Muqayyadah. Bagian ini membahas Bank sebagai shahibul
+maal (pemilik dana) dalam pembiayaan Mudharabah baik bersifat
+mutlaqah maupun Muqayyadah.
+
+2.
+
+Investasi Mudharabah yang dilakukan oleh Bank disebut pembiayaan
+Mudharabah. Pada umumnya pembiayaan Mudharabah yang dilakukan
+oleh Bank diberikan dalam bentuk kas yang dilakukan secara bertahap
+atau sekaligus.
+
+3.
+
+Pengembalian pembiayaan Mudharabah dapat dilakukan bersamaan
+dengan
+
+distribusi
+
+bagi
+
+hasil
+
+atau
+
+pada
+
+saat
+
+diakhirinya
+
+akad
+
+Mudharabah.
+4. Bagi ...
+
+- 46 -
+
+4.
+
+Bagi hasil Mudharabah dapat dilakukan dengan menggunakan dua
+metode, yaitu bagi laba (profit sharing) atau bagi hasil (gross profit
+margin atau dalam fatwa disebut net revenue sharing). Bagi laba
+dihitung dari pendapatan setelah dikurangi dengan harga pokok dan
+beban
+
+yang
+
+Sedangkan
+
+berkaitan
+bagi
+
+dengan
+
+hasil,
+
+pengelolaan
+
+dihitung
+
+dana
+
+Mudharabah.
+
+dari
+
+pendapatan
+
+pengelolaan
+
+profit
+
+margin/net
+
+revenue
+
+Mudharabah dikurangi harga pokok.
+Sebagai ilustrasi:
+Penjualan
+
+xxx
+
+Beban pokok
+
+(xxx)
+
+penjualan
+Pendapatan
+
+xxx
+
+(gross
+sharing)
+
+5.
+
+Beban pengelolaan
+
+(xxx)
+
+Laba
+
+xxx
+
+(profit sharing)
+
+Dalam hal terjadi kerugian dalam usaha nasabah (pengelola dana),
+Bank
+
+sebagai pemilik dana akan menanggung semua kerugian
+
+sepanjang kerugian tersebut bukan disebabkan oleh kelalaian atau
+kesalahan nasabah (pengelola dana).
+6.
+
+Kelalaian atau kesalahan pengelola dana antara lain ditunjukkan oleh:
+a.
+
+Tidak dipenuhinya persyaratan yang ditentukan di dalam akad;
+
+b.
+
+Tidak terdapat kondisi di luar kemampuan (force majeur) yang
+lazim dan/atau yang telah ditentukan di dalam akad; atau
+
+c.
+7.
+
+Hasil putusan dari badan arbitrase atau pengadilan.
+
+Pada prinsipnya, dalam pembiayaan Mudharabah tidak dipersyaratkan
+adanya jaminan, namun agar tidak terjadi moral hazard berupa penyimpangan oleh pengelola dana, pemilik dana dapat meminta jaminan dari
+pengelola dana atau pihak ketiga. Jaminan ini hanya dapat dicairkan
+apabila pengelola dana terbukti melakukan pelanggaran terhadap halhal yang telah disepakati bersama dalam akad.
+
+8.
+
+Pengakuan penghasilan usaha Mudharabah dalam praktik dapat
+diketahui berdasarkan laporan bagi hasil atas penghasilan usaha dari
+pengelola dana. Tidak diperkenankan mengakui pendapatan dari
+proyeksi hasil usaha.
+
+9.
+
+Bank membentuk Penyisihan Penghapusan Aset Produktif untuk
+pembiayaan Mudharabah sesuai dengan ketentuan yang diatur oleh
+Otoritas Jasa Keuangan.
+D. Perlakuan ...
+
+- 47 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Pembiayaan Mudharabah dalam bentuk kas diakui pada saat pencairan
+sebesar jumlah uang yang diberikan Bank kepada pengelola dana
+(nasabah).
+
+2.
+
+Pembiayaan Mudharabah yang diberikan secara bertahap diakui pada
+setiap tahap pembayaran.
+
+3.
+
+Pembayaran kembali pembiayaan Mudharabah oleh pengelola dana
+(nasabah) akan mengurangi pembiayaan Mudharabah.
+
+4.
+
+Keuntungan yang dihasilkan dari pembiayaan Mudharabah diakui pada
+periode terjadinya hak bagi hasil berdasarkan laporan hasil usaha yang
+disampaikan nasabah sesuai dengan nisbah yang disepakati.
+
+5.
+
+Keuntungan pembiayaan Mudharabah yang telah menjadi hak Bank
+dan belum dibayarkan oleh nasabah diakui sebagai piutang bagi hasil.
+
+6.
+
+Pembiayaan Mudharabah yang diakhiri sebelum jatuh tempo atau
+sudah berakhir dan belum diselesaikan oleh nasabah maka saldo
+pembiayaan Mudharabah tetap diakui sebagai pembiayaan Mudharabah
+yang wajib diselesaikan oleh mudharib.
+
+D2. Penyajian
+1.
+
+Pembiayaan
+
+Mudharabah
+
+disajikan
+
+sebesar
+
+saldo
+
+pembiayaan
+
+Mudharabah nasabah kepada Bank.
+2.
+
+Piutang bagi hasil disajikan sebagai bagian dari aset lainnya pada saat
+nasabah tergolong performing. Sedangkan, apabila nasabah tergolong
+non-performing maka piutang bagi hasil disajikan pada rekening
+administratif.
+
+3.
+
+Penyisihan
+
+Penghapusan
+
+Aset
+
+untuk
+
+pembiayaan
+
+Mudharabah
+
+disajikan sebagai pos lawan (contra account) pembiayaan Mudharabah.
+4.
+
+Pembiayaan Mudharabah yang diakhiri sebelum jatuh tempo atau
+sudah berakhir dan belum diselesaikan oleh nasabah tetap disajikan
+sebagai bagian dari pembiayaan Mudharabah.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat pemberian pembiayaan Mudharabah kepada mudharib:
+Db. Pembiayaan Mudharabah.
+Kr. Kas/rekening …/kliring.
+
+2.
+
+Pada saat pengakuan keuntungan Mudharabah
+Db. Piutang bagi hasil.
+Kr. Pendapatan ...
+
+- 48 -
+
+Kr.
+3.
+
+Pendapatan Mudharabah.
+
+Pada saat penerimaan keuntungan Mudharabah
+Db. Kas/rekening …/kliring.
+Kr.
+
+4.
+
+Pada
+
+Piutang bagi hasil.
+saat
+
+pembentukan
+
+Penyisihan
+
+Penghapusan
+
+Aset
+
+untuk
+
+pembiayaan Mudharabah:
+Db. Beban penghapusan aset pembiayaan Mudharabah.
+Kr. Penyisihan Penghapusan Aset - pembiayaan Mudharabah.
+5.
+
+Pada saat koreksi Penyisihan Penghapusan Aset untuk pembiayaan
+Mudharabah:
+Db. Penyisihan Penghapusan Aset - pembiayaan Mudharabah.
+Kr. Beban
+
+Penghapusan
+
+Aset
+
+pembiayaan
+
+Mudharabah/Koreksi
+
+Penyisihan Penghapusan Aset - pembiayaan Mudharabah.
+6.
+
+Pada
+
+saat
+
+pembayaran
+
+angsuran
+
+pokok/pelunasan
+
+pembiayaan
+
+Mudharabah:
+Db. Kas/rekening …/kliring.
+Kr. Pembiayaan Mudharabah.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian jumlah pembiayaan Mudharabah berdasarkan sifat akad
+(Mudharabah
+
+Mutlaqah
+
+atau
+
+Mudharabah
+
+Muqayyadah),
+
+jenis
+
+penggunaan dan sektor ekonomi.
+2.
+
+Klasifikasi pembiayaan Mudharabah menurut jangka waktu (masa
+akad), kualitas pembiayaan, valuta, Penyisihan Penghapusan Aset dan
+tingkat bagi hasil rata-rata.
+
+3.
+
+Jumlah dan persentase pembiayaan Mudharabah yang diberikan
+kepada pihak-pihak berelasi.
+
+4.
+
+Jumlah pembiayaan Mudharabah yang telah direstrukturisasi dan
+informasi lain tentang pembiayaan Mudharabah yang direstrukturisasi
+selama periode berjalan.
+
+5.
+
+Besarnya
+
+pembiayaan
+
+Mudharabah
+
+bermasalah
+
+dan
+
+Penyisihan
+
+Penghapusan Aset untuk setiap sektor ekonomi.
+6.
+
+Kebijakan
+
+dan
+
+metode
+
+yang
+
+dipergunakan
+
+dalam
+
+penanganan
+
+Mudharabah bermasalah.
+7.
+
+Ikhtisar
+
+pembiayaan
+
+menunjukkan
+
+saldo
+
+Mudharabah
+awal,
+
+yang
+
+penghapusan
+
+dihapus
+selama
+
+buku
+
+yang
+
+tahun berjalan,
+penerimaan ...
+
+- 49 -
+
+penerimaan atas pembiayaan Mudharabah yang telah dihapusbukukan
+dan pembiayaan Mudharabah yang telah dihapustagih dan saldo akhir
+pembiayaan Mudharabah yang dihapus buku.
+
+IV.2.PEMBIAYAAN ...
+
+- 50 -
+
+IV.2. PEMBIAYAAN MUSYARAKAH
+A.
+
+Definisi
+1.
+
+Musyarakah adalah akad kerjasama antara dua pihak atau lebih untuk
+suatu usaha tertentu, dimana masing-masing pihak memberikan
+kontribusi
+
+dana
+
+dengan
+
+ketentuan
+
+bahwa
+
+keuntungan
+
+dibagi
+
+berdasarkan kesepakatan sedangkan kerugian berdasarkan porsi
+kontribusi dana berupa kas maupun aset non-kas yang diperkenankan
+oleh Syariah.
+2.
+
+Musyarakah permanen adalah Musyarakah dengan ketentuan bagian
+dana setiap mitra ditentukan sesuai akad dan jumlahnya tetap hingga
+akhir masa akad.
+
+3.
+
+Musyarakah menurun (Musyarakah Mutanaqisah) adalah Musyarakah
+dengan ketentuan bagian dana pihak pertama akan dialihkan secara
+bertahap kepada pihak kedua sehingga bagian dana pihak pertama
+akan menurun dan pada akhir masa akad pihak kedua tersebut akan
+menjadi pemilik penuh usaha tersebut.
+
+4.
+
+Mitra aktif adalah mitra yang mengelola usaha Musyarakah, baik
+mengelola sendiri atau menunjuk pihak lain atas nama mitra tersebut.
+
+5.
+B.
+
+C.
+
+Mitra pasif adalah mitra yang tidak ikut mengelola usaha Musyarakah.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.106 tentang Akuntansi Musyarakah.
+
+Penjelasan
+1.
+
+Musyarakah dapat berupa Musyarakah permanen dan Musyarakah
+menurun (Musyarakah Mutanaqisah).
+
+2.
+
+Bank
+
+dapat bertindak sebagai mitra aktif dan mitra pasif. Untuk
+
+pembahasan ini Bank masih berperan sebagai mitra pasif.
+3.
+
+Pada umumnya pembiayaan Musyarakah yang diberikan oleh Bank
+dalam bentuk kas yang dilakukan secara bertahap atau sekaligus.
+
+4.
+
+Keuntungan atau pendapatan Musyarakah dibagi di antara mitra
+berdasarkan nisbah yang disepakati, sedangkan kerugian Musyarakah
+dibagi diantara mitra secara proporsional dengan modal yang disetor.
+
+5.
+
+Pengakuan penghasilan usaha Musyarakah dalam praktik dapat
+diketahui berdasarkan laporan bagi hasil atas penghasilan usaha dari
+mitra ...
+
+- 51 -
+
+mitra aktif. Tidak diperkenankan mengakui pendapatan dari proyeksi
+hasil usaha.
+6.
+
+Dalam pembiayaan Musyarakah setiap mitra tidak dapat menjamin
+modal mitra lain, namun setiap mitra dapat meminta mitra lain untuk
+menyediakan jaminan atas kelalaian atau kesalahan yang disengaja.
+
+7.
+
+Kelalaian atau kesalahan pengelola dana antara lain ditunjukkan oleh:
+a.
+
+tidak dipenuhinya persyaratan yang ditentukan di dalam akad.
+
+b.
+
+tidak terdapat kondisi di luar kemampuan (force majeur) yang lazim
+dan/atau yang telah ditentukan di dalam akad.
+
+c.
+8.
+
+hasil putusan dari badan arbitrase atau pengadilan.
+
+Dalam pembiayaan Musyarakah Mutanaqisah, mitra dapat menyewa
+aset yang menjadi dasar (underlying) pembiayaan Musyarakah. Hasil
+sewa dari aset tersebut dibagihasilkan di antara mitra berdasarkan
+nisbah yang disepakati.
+
+9.
+
+Bank membentuk Penyisihan Penghapusan Aset untuk pembiayaan
+Musyarakah sesuai dengan ketentuan yang berlaku mengenai kualitas
+aset.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Pembiayaan Musyarakah dalam bentuk kas diakui pada saat pencairan
+sebesar jumlah uang yang diberikan Bank.
+
+2.
+
+Pembiayaan Musyarakah yang diberikan secara bertahap diakui pada
+setiap tahap pembayaran.
+
+3.
+
+Keuntungan pembiayaan Musyarakah diakui pada periode terjadinya
+hak bagi hasil berdasarkan laporan hasil usaha yang disampaikan
+nasabah sesuai dengan nisbah yang disepakati.
+
+4.
+
+Keuntungan pembiayaan Musyarakah yang telah menjadi hak Bank
+dan belum dibayarkan oleh nasabah diakui sebagai piutang bagi hasil.
+
+5.
+
+Apabila terjadi kerugian dalam Musyarakah akibat kelalaian atau
+penyimpangan mitra Musyarakah, mitra yang melakukan kelalaian
+tersebut menanggung beban kerugian. Kerugian Bank yang diakibatkan
+kelalaian atau penyimpangan mitra aktif (nasabah) tetap diakui sebagai
+pembiayaan Musyarakah.
+
+6.
+
+Pembiayaan Musyarakah yang sudah berakhir dan belum diselesaikan
+oleh mitra aktif (nasabah) maka saldo pembiayaan Musyarakah tetap
+
+diakui ...
+
+- 52 -
+
+diakui sebagai pembiayaan Musyarakah yang wajib diselesaikan oleh
+mitra aktif.
+D2. Penyajian
+1.
+
+Pembiayaan
+
+Musyarakah
+
+disajikan
+
+sebesar
+
+saldo
+
+pembiayaan
+
+Musyarakah nasabah kepada Bank.
+2.
+
+Piutang bagi hasil disajikan sebagai bagian dari aset lainnya pada saat
+nasabah tergolong lancar (performing). Sedangkan, apabila nasabah
+tergolong non lancar (non-performing) maka piutang bagi hasil disajikan
+pada rekening administratif.
+
+3.
+
+Penyisihan
+
+Penghapusan
+
+Aset
+
+pembiayaan
+
+Musyarakah
+
+disajikan
+
+sebagai pos lawan (contra account) pembiayaan Musyarakah.
+4.
+
+Pembiayaan Musyarakah yang diakhiri sebelum jatuh tempo atau
+sudah berakhir dan belum diselesaikan oleh nasabah tetap disajikan
+sebagai bagian dari pembiayaan Musyarakah.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat Bank membayarkan modal tunai kepada mitra (nasabah)
+Db. Pembiayaan Musyarakah.
+Kr. Kas/rekening …/kliring.
+
+2.
+
+Pada saat pengakuan keuntungan Musyarakah
+Db. Piutang bagi hasil.
+Kr. Pendapatan Musyarakah.
+
+3.
+
+Pada saat penerimaan keuntungan Musyarakah
+Db. Kas/rekening …/kliring.
+Kr.
+
+4.
+
+Piutang bagi hasil.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset pembiayaan
+Musyarakah
+Db. Beban penghapusan aset pembiayaan Musyarakah.
+Kr. Penyisihan Penghapusan Aset–pembiayaan Musyarakah.
+
+5.
+
+Pada saat koreksi Penyisihan Penghapusan Aset untuk pembiayaan
+Mudharabah
+Db. Penyisihan Penghapusan Aset-pembiayaan Mudharabah.
+Kr. Beban penghapusan aset produktif pembiayaan.
+Mudharabah/Koreksi
+
+Penyisihan
+
+Penghapusan
+
+Aset-pembiayaan
+
+Mudharabah.
+6.
+
+Pada
+
+saat
+
+pembayaran
+
+angsuran
+
+pokok
+
+untuk
+
+Musyarakah
+
+Mutanaqisah/pengalihan modal kepada mitra aktif (nasabah)
+Db.Kas ...
+
+- 53 -
+
+Db. Kas/rekening …/kliring.
+Kr. Pembiayaan Musyarakah.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian jumlah pembiayaan Musyarakah berdasarkan modal mitra,
+jenis valuta, jenis penggunaan, sektor ekonomi, status bank dalam
+pembiayaan Musyarakah (mitra pasif), dan mitra aktif (jika mitra aktif
+bukan berasal dari salah satu mitra Musyarakah).
+
+2.
+
+Klasifikasi pembiayaan Musyarakah menurut jangka waktu akad
+pembiayaan, kualitas pembiayaan, dan tingkat bagi hasil rata-rata.
+
+3.
+
+Jumlah dan persentase pembiayaan Musyarakah yang diberikan
+kepada pihak-pihak berelasi.
+
+4.
+
+Jumlah
+
+dan
+
+persentase
+
+pembiayaan
+
+Musyarakah
+
+yang
+
+telah
+
+direstrukturisasi dan informasi lain tentang pembiayaan Musyarakah
+yang direstrukturisasi selama periode berjalan.
+5.
+
+Kebijakan
+
+manajemen
+
+dalam
+
+pelaksanaan
+
+pengendalian
+
+risiko
+
+portofolio pembiayaan Musyarakah.
+6.
+
+Besarnya
+
+pembiayaan
+
+Musyarakah
+
+bermasalah
+
+dan
+
+Penyisihan
+
+Penghapusan Aset untuk setiap sektor ekonomi.
+7.
+
+Kebijakan dan metode yang digunakan dalam penanganan Musyarakah
+bermasalah.
+
+8.
+
+Ikhtisar
+
+pembiayaan
+
+menunjukkan
+
+saldo
+
+Musyarakah
+awal,
+
+yang
+
+penghapusan
+
+dihapus
+selama
+
+buku
+
+tahun
+
+yang
+
+berjalan,
+
+penerimaan atas pembiayaan Musyarakah yang telah dihapus buku
+dan pembiayaan Musyarakah yang telah dihapustagih dan saldo akhir
+pembiayaan Musyarakah yang dihapus buku.
+
+IV.3.DANA ...
+
+- 54 -
+
+IV.3 DANA SYIRKAH TEMPORER
+A.
+
+Definisi
+Dana syirkah temporer adalah dana yang diterima sebagai investasi dengan
+jangka waktu tertentu dari individu dan pihak lain dimana Bank
+mempunyai hak untuk mengelola dan menginvestasikan dana tersebut
+dengan pembagian hasil investasi berdasarkan kesepakatan.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.105 tentang Akuntansi Mudharabah.
+
+3.
+
+PSAK No.106 tentang Akuntansi Musyarakah.
+
+Penjelasan
+1.
+
+Dana syirkah temporer adalah dana yang diterima oleh Bank dimana
+Bank mempunyai hak untuk mengelola dan menginvestasikan dana,
+baik sesuai dengan kebijakan Bank atau kebijakan pembatasan dari
+pemilik
+
+dana,
+
+dengan
+
+keuntungan
+
+dibagikan
+
+sesuai
+
+dengan
+
+kesepakatan. Dalam hal dana syirkah temporer berkurang disebabkan
+kerugian normal yang bukan akibat dari unsur kesalahan yang
+disengaja, kelalaian, atau pelanggaran kesepakatan, maka Bank tidak
+berkewajiban atau menutup kerugian atau kekurangan dana tersebut.
+2.
+
+Contoh dari dana syirkah temporer adalah penerimaan dana dari
+investasi
+
+Mudharabah
+
+Muthlaqah,
+
+Mudharabah
+
+Muqayyadah,
+
+Musyarakah, dan akun lain yang sejenis.
+3.
+
+Hubungan antara Bank dan pemilik dana merupakan hubungan
+kemitraan berdasarkan akad Mudharabah Muthlaqah, Mudharabah
+Muqayyadah atau Musyarakah. Bank mempunyai hak untuk mengelola
+dan menginvestasikan dana yang diterima dengan atau tanpa batasan
+seperti mengenai tempat, cara, atau obyek investasi.
+
+4.
+
+Pemilik dana memperoleh bagian atas keuntungan sesuai kesepakatan
+dan menerima kerugian berdasarkan jumlah dana dari masing-masing
+pihak. Pembagian hasil dana syirkah temporer dapat dilakukan dengan:
+a.
+
+Konsep bagi laba (profit sharing), atau
+
+b.
+
+Konsep bagi hasil (gross profit margin atau dalam fatwa disebut net
+revenue sharing).
+
+5. Untuk ...
+
+- 55 -
+
+5.
+
+Untuk Bank yang menggunakan metode bagi laba (profit sharing) dalam
+akad Mudharabah, jika usaha Bank atas pengelolaan dana nasabah
+(pemilik dana, shahibul maal) mengalami kerugian maka seluruh
+kerugian ditanggung oleh nasabah (pemilik dana, shahibul maal),
+kecuali jika ditemukan adanya kelalaian atau kesalahan Bank sebagai
+pengelola dana (mudharib).
+
+6.
+
+Untuk Bank yang menggunakan metode bagi hasil (gross profit margin
+atau dalam fatwa disebut netrevenue sharing), maka nasabah (pemilik
+dana, shahibul maal) tidak akan kehilangan nilai awal investasinya,
+kecuali Bank dilikuidasi dengan kondisi realisasi aset lebih kecil dari
+liabilitas.
+
+7.
+
+Kelalaian atau kesalahan Bank sebagai pengelola dana, antara lain,
+ditunjukkan oleh:
+a.
+
+Tidak dipenuhinya persyaratan yang ditentukan di dalam akad;
+
+b.
+
+Tidak terdapat kondisi di luar kemampuan (force majeur) yang
+lazim dan/atau yang telah ditentukan di dalam akad; atau
+
+c.
+8.
+
+Hasil putusan dari badan arbitrase atau pengadilan.
+
+Dana syirkah temporer terdiri dari dana Mudharabah dalam hal Bank
+sebagai pengelola dana (mudharib) dan Musyarakah dalam hal Bank
+sebagai mitra aktif.
+
+9.
+
+Mudharabah
+
+dibedakan berdasarkan pembatasan penggunaan dana
+
+menjadi Mudharabah Mutlaqah danMudharabah Muqayyadah.
+10. Jenis produk penghimpunan dana Mudharabah atau Musyarakah,
+antara lain:
+a.
+
+Tabungan Mudharabah adalah dana Mudharabah pada Bank yang
+penarikannya hanya dapat dilakukan menurut syarat tertentu
+yang disepakati.
+
+b.
+
+Deposito Mudharabah adalah dana Mudharabah pada Bank yang
+penarikannya hanya dapat dilakukan pada waktu tertentu dengan
+pembagian hasil sesuai dengan nisbah yang telah disepakati di
+muka antara nasabah (pemilik dana, shahibul maal) dengan Bank
+yang bersangkutan.
+
+c.
+
+Pinjaman/Pembiayaan
+
+Diterima
+
+yang
+
+menggunakan
+
+akad
+
+Mudharabah dan akad Musyarakah yang berasal baik dari pihak
+ketiga maupun dari bank lain.
+
+D. Perlakuan ...
+
+- 56 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Dana Mudharabah dari pemilik dana diakui pada saat diterima sebesar
+jumlah yang diterima.
+
+2.
+
+Bagi hasil dana Mudharabah diberikan sesuai nisbah yang disepakati
+pada awal akad.
+
+3.
+
+Dana Musyarakah dari nasabah (mitra pasif) diakui pada saat diterima
+sebesar jumlah yang diterima.
+
+4.
+
+Bagi hasil dana Musyarakahdiberikan sesuai nisbah yang disepakati
+pada awal akad.
+
+D2. Penyajian
+1.
+
+Dana Mudharabah
+
+disajikan sebagai dana syirkah temporer dengan
+
+memisahkan antara:
+
+2.
+
+a.
+
+dana Mudharabah yang berasal dari Bank;
+
+b.
+
+dana Mudharabahyangberasal dari pihak ketiga bukan Bank.
+
+Bagi hasil dana Mudharabah
+
+yang sudah diperhitungkan dan telah
+
+jatuh tempo tetapi belum diserahkan kepada nasabah disajikan dalam
+pos kewajiban segera.
+3.
+
+Bagi hasil dana Mudharabah yang sudah diperhitungkan pada akhir
+periode tetapi belum jatuh tempo disajikan dalam pos bagi hasil yang
+belum dibagikan.
+
+4.
+
+Dana Musyarakah disajikan sebagai dana syirkahtemporerdalam neraca
+dengan memisahkan antara:
+
+5.
+
+a.
+
+dana Musyarakah yang berasal dari Bank;
+
+b.
+
+dana Musyarakah yang berasal dari pihak ketiga bukan Bank.
+
+Bagi hasil dana Musyarakah yang sudah diperhitungkan dan telah
+jatuh tempo tetapi belum diserahkan kepada nasabah disajikan dalam
+pos kewajiban segera.
+
+6.
+
+Bagi hasil dana Musyarakah yang sudah diperhitungkan pada akhir
+periode tetapi belum jatuh tempo disajikan dalam pos bagi hasil yang
+belum dibagikan.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat penerimaan setoran:
+Db. Kas/kliring.
+Kr. Dana syirkah temporer-tabungan/deposito Mudharabah.
+
+2.
+
+Pada saat dilakukan perhitungan bagi hasil:
+Db. Bagian ...
+
+- 57 -
+
+Db. Bagian pihak ketiga atas pendapatan.
+Kr. Bagi hasil yang belum dibagikan.
+3.
+
+Pada saat pembayaran bagi hasil:
+Db. Bagi hasil yang belum dibagikan.
+Kr. Kas/rekening…/kliring.
+
+4.
+
+Pada saat penarikan tabungan/deposito Mudharabah jatuh tempo:
+Db. Dana syirkah temporer-tabungan/deposito Mudharabah.
+Kr. Kas/rekening…/kliring.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Jumlah dan jenis simpanan berdasarkan akad.
+
+2.
+
+Jumlah berdasarkan pemilik dana, termasuk dari pihak-pihak yang
+berelasi.
+
+3.
+
+Jumlah dana syirkah temporer yang diblokir untuk tujuan tertentu.
+
+- 58 -
+
+BAGIAN V AKAD SEWA
+V.1. IJARAH ATAS ASET BERWUJUD
+A.
+
+Definisi
+1.
+
+Ijarah adalah akad pemindahan hak guna/manfaat atas suatu aset
+dalam waktu tertentu dengan pembayaran sewa (ujrah) tanpa diikuti
+dengan pemindahan kepemilikan aset itu sendiri.
+
+2.
+
+Ijarah Muntahiyah Bittamlik adalah Ijarah dengan wa’ad perpindahan
+kepemilikan obyek Ijarah pada saat tertentu.
+
+3.
+
+Obyek Ijarah adalah manfaat dari penggunaan aset berwujud atau aset
+tidak berwujud.
+
+4.
+
+Umur manfaat adalah suatu periode dimana aset diharapkan akan
+digunakan atau jumlah produksi/unit serupa yang diharapkan akan
+diperoleh dari aset.
+
+5.
+
+Wa’ad
+
+adalah janji dari satu pihak kepada pihak lain untuk
+
+melaksanakan suatu transaksi.
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.107 tentang Akuntansi Ijarah.
+
+Penjelasan
+1.
+
+Ijarah merupakan akad sewa-menyewa suatu aset Ijarah tanpa adanya
+perpindahan risiko dan manfaat yang signifikan terkait kepemilikan
+aset tersebut, dengan atau tanpa adanya opsi untuk memindahkan
+kepemilikan dari pemilik (Bank) kepada penyewa/nasabah pada saat
+tertentu.
+
+2.
+
+Pada umumnya transaksi Ijarah Muntahiyah Bittamlik muncul karena
+adanya kebutuhan untuk memiliki aset tertentu, dimana pemenuhan
+kebutuhan atas aset tersebut dipenuhi melalui akad Ijarah.
+
+3.
+
+Bank dapat meminta penyewa/nasabah untuk menyerahkan jaminan
+atas Ijarah untuk menghindari risiko kerugian.
+
+4.
+
+Jumlah, ukuran, dan jenis aset Ijarah harus jelas diketahui dan
+tercantum dalam akad.
+
+5. Biaya...
+
+- 59 -
+
+5.
+
+Biaya perbaikan aset Ijarah merupakan tanggungan pemilik. Perbaikan
+tersebut dapat dilakukan oleh pemilik secara langsung atau dilakukan
+oleh penyewa atas persetujuan pemilik.
+
+6.
+
+Dalam transaksi Ijarah Muntahiyah Bittamlik, perpindahan kepemilikan
+suatu aset dari Bank kepada nasabah dapat dilakukan jika aktivitas
+penyewaan telah berakhir atau diakhiri dan aset Ijarah telah diserahkan
+kepada nasabah dengan membuat akad terpisah secara:
+a.
+
+hibah;
+
+b.
+
+penjualan sebelum akad berakhir;
+
+c.
+
+penjualan pada akhir masa Ijarah;
+
+d.
+
+penjualan secara bertahap apabila objeknya bisa dipindahkan
+secara bertahap.
+
+7.
+
+Dalam transaksi jual dan Ijarah-balik (sale and lease back) harus
+merupakan transaksi yang terpisah dan tidak saling bergantung
+(ta’alluq) sehingga harga jual harus dilakukan pada nilai wajar.
+
+8.
+
+Dalam transaksi Ijarah dan Ijarah-lanjut (lease and sub lease),
+pembayaran untuk sewa dimuka merupakan aset Ijarah.
+
+9.
+
+Biaya perolehan aset Ijarah mengacu pada ketentuan biaya perolehan
+aset tetap di SAK ETAP Bab 15 tentang Aset Tetap.
+
+10. Metode penyusutan, umur manfaat, dan nilai residu dari aset Ijarah
+mengacu pada penyusutan aset tetap yang serupa sebagaimana diatur
+di SAK ETAP Bab 15 tentang Aset Tetap. Umur manfaat aset Ijarah pada
+Ijarah Muntahiyah Bittamlik sesuai dengan masa akad Ijarah.
+11. Kebijakan
+
+penyusutan
+
+atau
+
+amortisasi
+
+yang
+
+dipilih
+
+harus
+
+mencerminkan pola konsumsi yang diharapkan dari manfaat ekonomi
+di masa depan dari obyek Ijarah. Umur ekonomis dapat berbeda dengan
+umur teknis. Misalnya, mobil yang dapat dipakai selama 10 tahun
+diijarahkan dengan akad Ijarah Muntahiyah Bittamlik selama 5 tahun.
+Dengan demikian umur ekonomisnya adalah 5 tahun.
+12. Bank harus melakukan uji penurunan nilai atas aset Ijarah yang
+dimiliki secara periodik berdasarkan nilai wajar. Dalam hal terjadi
+penurunan nilai, maka Bank wajib membentuk cadangan kerugian nilai
+atas aset Ijarah.
+13. Apabila terdapat pemulihan nilai atas aset Ijarah yang telah mengalami
+penurunan nilai, maka Bank dapat memulihkan aset Ijarah pada nilai
+bukunya atau nilai yang dapat diperoleh kembali (recoverable amount),
+yaitu jumlah yang dapat diperoleh dari penjualan aset dalam transaksi
+antar ...
+
+- 60 -
+
+antar pihak yang bebas (arm’s length transaction), setelah dikurangi
+biaya yang terkait (net selling price).
+14. Bank membentuk Penyisihan Penghapusan Aset atas piutang sewa
+yang berasal dari porsi pokok piutang sewa, sesuai dengan ketentuan
+yang diatur oleh Otoritas Jasa Keuangan.
+15. Dalam bagian ini hanya mencakup Bank sebagai pemilik obyek sewa
+(lessor) dalam transaksi beli dan Ijarah, beli dan Ijarah-balik, dan Ijarah
+dan Ijarah-lanjut.
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Aset Ijarah diakui pada saat diperoleh sebesar biaya perolehan.
+
+2.
+
+Pendapatan sewa diakui selama masa akad Bank dengan nasabah.
+
+3.
+
+Aset Ijarah disusutkan sesuai kebijakan penyusutan aset sejenis
+sedangkan aset Ijarah dalam Ijarah Muntahiyah Bittamlik disusutkan
+sesuai masa sewa.
+
+4.
+
+Biaya perbaikan aset Ijarah, baik yang dilakukan oleh pemilik maupun
+yang dilakukan oleh nasabah dengan persetujuan pemilik dan biaya
+tersebut dibebankan kepada pemilik, diakui sebagai beban Ijarah.
+
+5.
+
+Biaya perbaikan aset Ijarah Muntahiyah Bittamlik melalui penjualan
+secara bertahap sebanding dengan bagian kepemilikan masing-masing.
+
+6.
+
+Pada saat terjadi penurunan nilai aset Ijarah, Bank mengakui sebagai
+kerugian penurunan nilai aset sebesar selisih antara nilai buku dengan
+nilai wajar aset Ijarah.
+
+7.
+
+Jika berdasarkan evaluasi secara periodik diketahui bahwa jumlah
+penurunan nilai berkurang, maka Bank dapat memulihkan kerugian
+penurunan nilai yang telah diakui, paling tinggi sebesar Penyisihan
+Kerugian Penurunan Nilai yang telah dibentuk.
+
+8.
+
+Perpindahan kepemilikan aset Ijarah dari Bank kepada nasabah, dalam
+Ijarah Muntahiyah Bittamlik dengan cara:
+a.
+
+hibah, maka jumlah tercatat aset Ijarah yang dihibahkan diakui
+sebagai beban.
+
+b.
+
+penjualan sebelum berakhirnya masa Ijarah, maka selisih antara
+harga jual dan jumlah tercatat aset
+
+Ijarah diakui sebagai
+
+keuntungan atau kerugian.
+
+c. penjualan ...
+
+- 61 -
+
+c.
+
+penjualan setelah selesainya masa Ijarah, maka selisih antara
+harga jual dan jumlah tercatat Ijarah diakui sebagai keuntungan
+atau kerugian.
+
+d.
+
+Penjualan secara bertahap, maka:
+1) Selisih antara harga jual dan jumlah tercatat sebagian objek
+Ijarah yang telah dijual diakui sebagai keuntungan atau
+kerugian; sedangkan
+2) Bagian objek Ijarah yang tidak dibeli penyewa diakui sebagai
+aset tidak lancar atau aset lancar sesuai dengan tujuan
+penggunaan aset tersebut.
+
+9.
+
+Dalam hal Bank melakukan transaksi Ijarah-lanjut, maka aset Ijarah
+diamortisasi selama masa Ijarah antara Bank dengan pemilik aset.
+
+10. Bank membentuk Penyisihan Penghapusan Aset piutang sewa sesuai
+dengan ketentuan yang diatur oleh Otoritas Jasa Keuangan.
+D2. Penyajian
+1.
+
+Objek sewa yang diperoleh Bank disajikan sebagai aset Ijarah.
+
+2.
+
+Akumulasi penyusutan/amortisasi dan Cadangan Kerugian Penurunan
+Nilai dari aset Ijarah disajikan sebagai pos lawan aset Ijarah.
+
+3.
+
+Porsi pokok atas pendapatan sewa yang belum dibayar disajikan
+sebagai piutang sewa.
+
+4.
+
+Porsi ujrah atas pendapatan sewa yang belum dibayar disajikan sebagai
+pendapatan sewa yang akan diterima yang merupakan bagian dari aset
+lainnya pada saat nasabah tergolong lancar (performing). Sedangkan,
+apabila
+
+nasabah
+
+pendapatan
+
+sewa
+
+tergolong
+
+non-lancar
+
+yang
+
+diterima
+
+akan
+
+(non-performing)
+disajikan
+
+pada
+
+maka
+
+rekening
+
+administratif.
+5.
+
+Penyisihan Penghapusan Aset atas piutang sewa disajikan sebagai pos
+lawan (contra account) piutang sewa.
+
+6.
+
+Beban penyusutan/amortisasi aset Ijarah disajikan sebagai pengurang
+pendapatan Ijarah pada Laporan Laba Rugi.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat perolehan aset Ijarah:
+Db. Aset Ijarah.
+Kr. Kas/rekening …
+
+2.
+
+Pada saat pengakuan pendapatan Ijarah pada tanggal laporan:
+Db. Piutang ...
+
+- 62 -
+
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+3.
+
+Pada saat pengakuan penyusutan/amortisasi pada tanggal laporan:
+Db. Beban penyusutan.
+Kr. Akumulasi penyusutan.
+
+4.
+
+Pada saat penerimaan sewa dari nasabah:
+Dr. Kas/rekening …
+Kr. Piutangsewa (porsi pokok).
+Kr. Piutang pendapatan sewa (porsi ujrah).
+
+5.
+
+Pada saat terjadi biaya perbaikan:
+Db. Beban perbaikan.
+Kr. Kas/rekening …
+
+6.
+
+Pada saat terjadi tunggakan pembayaran sewa:
+a.
+
+Nasabah masih tergolong performing
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+
+b.
+
+Nasabah tergolong non-performing
+1)
+
+Dilakukan jurnal balik pendapatan sewa.
+Db. Pendapatan Ijarah.
+Kr. Piutang pendapatan sewa (porsi ujrah).
+
+2)
+
+Pengakuan atas porsi pokok sewa
+Db. Piutang sewa (porsi pokok).
+Kr. Pendapatan Ijarah.
+
+7.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset atas piutang
+sewa:
+Db. Beban kerugian penurunan nilai aset keuangan–piutang sewa.
+Kr.
+
+8.
+
+Penyisihan Penghapusan Aset–piutang sewa.
+
+Pada saat pemulihan Penyisihan Penghapusan Aset atas piutang sewa:
+Db. Penyisihan Penghapusan Aset–piutang sewa.
+Kr.
+
+Beban kerugian Penghapusan Aset–piutang sewa/Keuntungan
+pemulihan nilai–piutang sewa.
+
+9.
+
+Pada saat terjadi penurunan nilai aset Ijarah:
+Db. Beban kerugian penurunan nilai aset Ijarah.
+Kr. Cadangan Kerugian Penurunan Nilai aset Ijarah.
+10. Pada ...
+
+- 63 -
+
+10. Pada saat terjadi pemulihan nilai aset Ijarah:
+Db. Cadangan Kerugian Penurunan Nilai aset Ijarah.
+Kr. Beban
+
+kerugian
+
+penurunan
+
+nilai
+
+aset
+
+Ijarah/Keuntungan
+
+pemulihan nilai aset Ijarah.
+11. Pada saat pengalihan aset Ijarah:
+a.
+
+Melalui hibah
+Db. Akumulasi penyusutan/amortisasi.
+Db. Penyisihan Kerugian Penurunan Nilai aset Ijarah.
+Db. Beban kerugian.
+Kr. Aset Ijarah.
+
+b.
+
+Melalui penjualan
+Db. Kas/rekening …
+Db. Akumulasi penyusutan/amortisasi.
+Db. Penyisihan Kerugian Penurunan Nilai aset Ijarah.
+Db/Kr.Kerugian/keuntungan.
+Kr. Aset Ijarah.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Sumber dana yang digunakan dalam pembiayaan Ijarah.
+
+2.
+
+Jumlah obyek sewa berdasarkan jenis transaksi (Ijarah dan Ijarah
+Muntahiyah Bittamlik), jenis aset dan akumulasi penyusutannya serta
+Cadangan Kerugian Penurunan Nilai, jika ada, apabila Bank sebagai
+pemilik obyek sewa.
+
+3.
+
+Komitmen yang berhubungan dengan perjanjian Ijarah Muntahiyah
+Bittamlik
+
+yang
+
+berlaku
+
+efektif
+
+pada
+
+periode
+
+Laporan
+
+Keuangan
+
+berikutnya.
+4.
+
+Kebijakan akuntansi yang digunakan atas transaksi Ijarah dan Ijarah
+Muntahiyyah Bittamlik.
+
+5.
+
+Transaksi dan saldo yang meliputi aset ijarah, akumulasi penyusutan,
+Cadangan Kerugian Penurunan Nilai, piutang sewa dan Penyisihan
+Penghapusan Aset piutang sewa dengan pihak-pihak yang berelasi.
+
+V.2. IJARAH ...
+
+- 64 -
+
+V.2. IJARAH ATAS JASA
+A.
+
+Definisi
+Ijarah atas jasa adalah Ijarah dimana obyek Ijarah adalah manfaat yang
+bukan berasal dari aset berwujud.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.107 tentang Akuntansi Ijarah.
+
+Penjelasan
+1.
+
+Transaksi Ijarah atas jasa dikenal dengan istilah pembiayaan multijasa.
+
+2.
+
+Manfaat (jasa) yang bisa di-Ijarah-kan, antara lain, jasa pendidikan,
+jasa kesehatan, dan jasa pariwisata rohani.
+
+3.
+
+Dalam melakukan transaksi multijasa, Bank melakukan akad Ijarah
+dengan pihak pemasok dan kemudian melakukan akad Ijarah lebih
+lanjut dengan nasabah.
+
+4.
+
+Perolehan aset Ijarah atas jasa diamortisasi sesuai dengan jangka
+waktu akad Ijarah Bank dengan pemasok.
+
+5.
+
+Perlakuan akuntansi transaksi multijasa mengikuti akuntansi untuk
+Ijarah dengan skema sewa dan sewa-lanjut.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Perolehan aset Ijarah atas jasa diakui sebagai aset Ijarah pada saat
+perolehan hak atas jasa sebesar biaya yang terjadi.
+
+2.
+
+Pendapatan Ijarah diakui selama masa akad Bank dengan nasabah.
+
+3.
+
+Amortisasi atas perolehan aset Ijarah diakui sebagai beban Ijarah.
+
+4.
+
+Bank wajib membentuk Penyisihan Penghapusan Aset untuk piutang
+multijasa sebesar porsi pokok sewa yang tertunda sesuai dengan
+ketentuan yang diatur dalam PSAK yang terkait.
+
+D2. Penyajian
+1.
+
+Perolehan atas jasa disajikan sebagai bagian aset Ijarah dan disajikan
+terpisah dari aset Ijarah lain.
+
+2.
+
+Amortisasi atas perolehan aset Ijarah disajikan sebagai pos lawan dari
+aset Ijarah.
+
+3. Porsi ...
+
+- 65 -
+
+3.
+
+Porsi pokok atas piutang multijasa yang belum dibayar disajikan
+sebagai piutang sewa.
+
+4.
+
+Porsi ujrah atas pendapatan sewa multijasa yang belum dibayar
+disajikan sebagai pendapatan sewa multijasa yang akan diterima yang
+merupakan bagian dari aset lainnya pada saat nasabah tergolong lancar
+(performing). Sedangkan, apabila nasabah tergolong non-lancar (nonperforming) maka pendapatan sewa multijasa yang akan diterima
+disajikan pada rekening administratif.
+
+5.
+
+Penyisihan Penghapusan Aset atas piutang sewa disajikan sebagai pos
+lawan (contra account) piutang sewa.
+
+6.
+
+Beban amortisasi aset Ijarah disajikan sebagai pengurang pendapatan
+Ijarah pada Laporan Laba Rugi.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat perolehan jasa
+Db. Aset Ijarah.
+Kr. Kas/rekening …
+
+2.
+
+Pada saat pengakuan pendapatan Ijarah pada tanggal laporan
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa multijasa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+
+3.
+
+Pada saat pengakuan amortisasi pada tanggal laporan
+Db. Beban amortisasi.
+Kr. Akumulasi amortisasi.
+
+4.
+
+Pada saat penerimaan sewa dari nasabah
+Dr. Kas/rekening …
+Kr. Piutang sewa (porsi pokok).
+Kr. Piutang pendapatan sewa multijasa (porsi ujrah).
+
+5.
+
+Pada saat terjadi tunggakan pembayaran sewa
+a.
+
+nasabah masih tergolong lancar (performing)
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa multijasa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+
+b.
+
+nasabah tergolong non-lancar (non-performing)
+1)
+
+dilakukan jurnal balik pendapatan sewa
+Db. Pendapatan Ijarah.
+Kr. Piutang pendapatan sewa multijasa (porsi ujrah).
+2) pengakuan ...
+
+- 66 -
+
+2)
+
+pengakuan atas porsi pokok sewa
+Db.
+
+Piutang sewa (porsi pokok).
+
+Kr. Pendapatan Ijarah.
+6.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset atas piutang
+sewa
+Db. Beban Penyisihan Penghapusan Aset–piutang sewa.
+Kr. Penyisihan Penghapusan Aset–piutang sewa.
+
+7.
+
+Pada saat pemulihan Penyisihan Penghapusan Aset atas piutang sewa
+Db. Penyisihan Penghapusan Aset-piutang sewa.
+Kr. Beban Penyisihan Penghapusan Aset–piutang sewa /Keuntungan
+pemulihan nilai–piutang sewa.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Sumber dana yang digunakan dalam pembiayaan Ijarah.
+
+2.
+
+Rincian perolehan atas jasa berdasarkan jenis.
+
+3.
+
+Jumlah piutang cicilan Ijarah yang akan jatuh tempo hingga dua tahun
+terakhir.
+
+4.
+
+Transaksi dan saldo dengan pihak-pihak yang berelasi.
+
+- 72 -
+
+BAGIAN VII
+
+KAS
+
+VII.1. KAS
+A.
+
+Definisi
+Kas adalah mata uang kertas dan logam baik Rupiah maupun valuta asing
+yang masih berlaku sebagai alat pembayaran yang sah.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+1.
+
+Dalam pengertian kas termasuk kas besar, kas kecil, kas dalam mesin
+Anjungan Tunai Mandiri dan kas dalam perjalanan.
+
+2.
+
+Mata uang rupiah yang telah dicabut dan ditarik dari peredaran tidak
+berlaku sebagai alat pembayaran yang sah sebagaimana ditetapkan
+oleh ketentuan yang berlaku. Mata uang dimaksud tidak termasuk
+dalam pengertian kas dan disajikan dalam aset lain-lain.
+
+3.
+
+Tidak termasuk dalam pengertian kas adalah emas batangan, uang
+logam
+
+yang
+
+diterbitkan
+
+untuk
+
+memperingati
+
+peristiwa
+
+nasional
+
+(commemorative coins/notes) dan mata uang emas.
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+Transaksi kas diakui sebesar nilai nominal.
+D2. Penyajian
+Kas disajikan pada urutan pertama dalam aset.
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat penerimaan setoran:
+Db. Kas.
+Kr. Rekening yang dituju.
+
+2.
+
+Pada saat penarikan setoran:
+Db. Rekening yang ditarik.
+Kr. Kas.
+
+3.
+
+Pada saat mata uang rupiah dicabut dan ditarik dari peredaran:
+Db. Aset ...
+
+- 73 -
+
+Db. Aset lain-lain.
+Kr. Kas.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian jumlah kas.
+
+2.
+
+Jumlah kas pada mesin ATM.
+
+VII.2. KAS...
+
+- 74 -
+
+VII.2. KAS DALAM VALUTA ASING
+A.
+
+Definisi
+Kas dalam Valuta Asing adalah mata uang kertas asing, uang logam asing
+dan travellers cheque yang masih berlaku yang dimiliki Bank dalam kegiatan
+penukaran sebagai pedagang valuta asing.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+1.
+
+Kas dalam valuta asing yang dapat dimiliki oleh Bank sesuai dengan
+peraturan yang berlaku.
+
+2.
+
+Bank dapat memiliki kas dalam valuta asing hanya dalam rangka
+melakukan kegiatan usaha sebagai pedagang valuta asing yang telah
+mendapat persetujuan dari Bank Indonesia.
+
+3.
+
+Saldo mata uang kertas dan logam asing yang sudah tidak dapat
+digunakan sebagai alat tukar namun masih dapat ditukarkan ke bank
+sentral negara penerbit disajikan dalam pos Aset Lain-lain sebesar nilai
+nominal dikurangi dengan taksiran biaya repatriasi.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Mata uang asing diakui sebesar kurs transaksi yang berlaku pada
+tanggal perolehan.
+
+2.
+
+Pada setiap tanggal pelaporan mata uang asing harus dilaporkan sesuai
+dengan kurs tengah Bank Indonesia yang berlaku pada tanggal
+pelaporan. Kurs tengah adalah kurs transaksi jual ditambah kurs
+transaksi beli mata uang asing Bank Indonesia dibagi dua. Dalam hal
+kurs mata uang asing tidak tersedia di Bank Indonesia, digunakan kurs
+tengah di Bank yang bersangkutan pada tanggal pelaporan.
+
+3.
+
+Selisih antara nilai tercatat mata uang asing berdasarkan kurs tengah
+Bank
+
+Indonesia
+
+sebelumnya
+
+pada
+
+diakui
+
+tanggal
+
+sebagai
+
+pelaporan
+
+keuntungan
+
+dengan
+atau
+
+nilai
+
+tercatat
+
+kerugian
+
+(non-
+
+operasional) dalam Laporan Laba Rugi periode berjalan.
+D2. Penyajian
+Kas dalam Valuta Asing disajikan dalam pos tersendiri.
+E. Ilustrasi ...
+
+- 75 -
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+2.
+
+Pada saat perolehan:
+Db.
+
+Kas dalam Valuta Asing.
+
+Kr.
+
+Kas (rupiah).
+
+Pada saat penjualan kas dalam valuta asing:
+Db.
+
+Kas (rupiah).
+
+Kr.
+
+Kas dalam Valuta Asing.
+
+Db/Kr. Pendapatan/beban
+
+operasional
+
+–
+
+Keuntungan/kerugian
+
+transaksi valuta asing.
+3.
+
+Pada saat penilaian akhir periode pelaporan:
+Db.
+
+Kas dalam Valuta Asing.
+
+Kr.
+
+Pendapatan non-operasional – Keuntungan selisih kurs valuta
+asing.
+
+atau
+
+4.
+
+F.
+
+Db.
+
+Beban non-operasional – Kerugian selisih kurs valuta asing.
+
+Kr.
+
+Kas dalam Valuta Asing.
+
+Pada saat Kas dalam valuta asing dicabut dan ditarik dari peredaran:
+Db.
+
+Aset lain-lain.
+
+Kr.
+
+Kas dalam Valuta Asing.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian mata uang asing.
+
+2.
+
+Jumlah nominal masing-masing mata uang asing.
+
+3.
+
+Jumlah selisih kurs pada akhir periode yang diakui dalam Laporan
+Laba Rugi.
+
+- 81 -
+
+BAGIAN IX ASET
+IX.1
+A.
+
+ASET TETAP
+Definisi
+Aset tetap adalah aset berwujud yang:
+1. dimiliki untuk digunakan dalam penyediaan jasa atau untuk tujuan
+administratif; dan
+2. diharapkan akan digunakan lebih dari satu periode.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+1.
+
+Aset tetap, antara lain:
+a. tanah;
+b. bangunan;
+c. inventaris (peralatan, perlengkapan dan kendaraan).
+
+2.
+
+Pengakuan awal
+a. Biaya perolehan aset tetap terdiri dari:
+1)
+
+Harga beli, termasuk biaya hukum dan broker, bea impor dan
+pajak
+
+pembelian
+
+yang
+
+tidak
+
+boleh
+
+dikreditkan,
+
+setelah
+
+dikurangi diskon pembelian dan potongan lainnya.
+2)
+
+Biaya-biaya
+
+yang
+
+dapat
+
+diatribusikan
+
+langsung
+
+untuk
+
+membawa aset ke lokasi dan kondisi yang diinginkan agar aset
+siap digunakan sesuai dengan maksud manajemen. Misalnya,
+biaya penyiapan lahan, biaya penanganan dan penyerahan
+awal, biaya instalasi dan perakitan dan biaya pengujian
+fungsionalitas.
+3)
+
+Estimasi awal biaya pembongkaran aset, biaya pemindahan
+aset dan biaya restorasi lokasi, jika ada.
+
+b.
+
+Dalam hal aset tetap diperoleh melalui pembelian secara tidak
+tunai, maka biaya perolehan aset tetap adalah setara dengan nilai
+tunai pada saat tanggal pengakuan.
+
+c.
+
+Aset tetap yang diperoleh dari sumbangan pemilik diakui sebagai
+bagian modal sumbangan. Aset tetap yang diperoleh bukan dari
+sumbangan pemilik diakui sebagai pendapatan non-operasional.
+d. Aset ...
+
+- 82 -
+
+d.
+
+Aset tetap yang diperoleh dari undian berhadiah diakui sebagai
+pendapatan non-operasional.
+
+e.
+
+Pertukaran aset tetap
+1)
+
+Aset tetap yang diperoleh melalui pertukaran dengan aset nonmoneter lain, atau kombinasi aset moneter dan aset nonmoneter diukur sebesar:
+a)
+
+Nilai wajar aset yang diterima atau nilai wajar aset yang
+diserahkan,
+
+jika
+
+pertukaran
+
+mempunyai
+
+substansi
+
+komersial.
+b)
+
+Nilai tercatat aset yang diserahkan, jika nilai wajar aset
+yang diterima atau aset yang diserahkan tidak dapat
+diukur secara andal, atau pertukaran tidak mempunyai
+substansi komersial.
+
+2)
+
+Substansi komersial dapat terjadi ketika nilai wajar aset yang
+diserahkan berbeda secara signifikan dengan nilai wajar aset
+yang diterima.
+Untuk aset tetap yang diperoleh melalui pertukaran, biaya
+perolehan dari suatu aset tetap diukur pada nilai wajar,
+kecuali:
+a)
+
+transaksi pertukaran tidak memiliki substansi komersial;
+atau
+
+b)
+
+nilai wajar dari aset yang diterima dan diserahkan tidak
+dapat diukur secara andal.
+
+Jika nilai wajar aset tetap yang diperoleh tidak dapat diukur
+secara andal, maka biaya perolehan diukur dengan jumlah
+tercatat dari aset yang diserahkan. Jika pertukaran memiliki
+substansi komersial yang signifikan maka selisih antara nilai
+wajar
+
+aset
+
+yang
+
+dipertukarkan
+
+diakui
+
+sebagai
+
+pendapatan/beban.
+f.
+
+Perolehan melalui sewa pembiayaan
+1)
+
+Aset tetap yang diperoleh melalui sewa jika sewa tersebut
+merupakan sewa pembiayaan.
+
+2)
+
+Suatu sewa diklasifikasikan sebagai sewa pembiayaan jika
+memenuhi salah satu syarat berikut ini:
+a)
+
+Perjanjian sewa mengalihkan kepemilikan aset kepada
+Bank pada akhir masa sewa.
+
+b) Bank ...
+
+- 83 -
+
+b)
+
+Bank mempunyai opsi untuk membeli aset pada harga
+yang cukup rendah dibandingkan nilai wajar pada tanggal
+opsi mulai dapat dilaksanakan, sehingga pada awal sewa
+dapat dipastikan bahwa opsi memang akan dilaksanakan.
+
+c)
+
+Masa sewa adalah untuk sebagian besar umur ekonomis
+aset meskipun hak milik tidak dialihkan yaitu masa sewa
+sama atau lebih dari 75% (tujuh puluh lima perseratus)
+umur ekonomis aset sewaan.
+
+d)
+
+Pada awal sewa, nilai kini dari jumlah pembayaran sewa
+minimum secara substansial mendekati nilai wajar aset
+sewaan yaitu pembayaran sewa minimum sama atau lebih
+dari 90% (sembilan puluh perseratus) nilai wajar aset
+sewaan.
+
+e)
+
+Aset sewaan bersifat khusus dan dimana hanya Bank yang
+dapat menggunakannya tanpa perlu modifikasi secara
+material.
+
+3)
+
+Biaya perolehan aset tetap yang diperoleh melalui sewa adalah
+nilai tunai dari seluruh pembayaran sewa ditambah nilai
+residu (harga opsi) yang harus dibayar pada akhir masa sewa.
+
+3.
+
+Pengeluaran setelah pengakuan awal
+a.
+
+Pengeluaran setelah perolehan (pengakuan awal) suatu aset tetap
+yang memperpanjang umur manfaat atau yang kemungkinan besar
+memberi manfaat ekonomi di masa yang akan datang dalam
+bentuk peningkatan standar kinerja, harus ditambahkan pada
+jumlah tercatat aset tetap tersebut.
+
+b.
+
+Biaya pemeliharaan dan reparasi sehari-hari (cost of day-to-day
+servicing) dari aset tetap diakui sebagai beban dalam laporan laba
+rugi pada periode terjadinya.
+
+4.
+
+Penyusutan
+a.
+
+Aset tetap disusutkan secara sistematis selama umur manfaatnya.
+
+b.
+
+Penyusutan dimulai ketika suatu aset tersedia untuk digunakan,
+misalnya aset berada di lokasi dan kondisi yang diperlukan
+sehingga mampu beroperasi sebagaimana maksud manajemen.
+
+c.
+5.
+
+Penyusutan dihentikan ketika aset dihentikan pengakuannya.
+
+Penurunan dan pemulihan nilai
+a.
+
+Indikasi penurunan nilai
+1) Sumber informasi eksternal
+a) Selama ...
+
+- 84 -
+
+a) Selama periode tertentu, nilai pasar aset menurun secara
+signifikan lebih dari yang diekspektasikan akibat berlalunya
+waktu atau penggunaan normal.
+b) Terjadi perubahan yang signifikan dengan pengaruh negatif
+dalam periode tertentu atau dalam waktu dekat dalam
+bidang lingkungan teknologi, pasar, ekonomi,
+
+hukum
+
+dimana Bank beroperasi, atau dalam pasar dimana aset
+tersebut diperuntukkan.
+2)
+
+Sumber informasi internal
+a) Tersedianya bukti keusangan atau kerusakan fisik dari
+aset.
+b) Terjadi perubahan yang signifikan dengan pengaruh negatif
+pada periode tertentu atau dalam waktu dekat atas cara
+dan bagaimana aset digunakan atau diharapkan akan
+digunakan.
+c) Tersedianya
+
+bukti
+
+mengindikasikan
+
+dari
+
+bahwa
+
+pelaporan
+kinerja
+
+internal
+
+ekonomis
+
+yang
+
+dari
+
+aset
+
+memburuk atau akan memburuk dari yang diharapkan.
+b.
+
+Pengujian penurunan nilai dilakukan setelah terdapat indikasi
+penurunan nilai.
+
+c.
+
+Jika aset tetap mengalami penurunan nilai, maka pada setiap
+tanggal pelaporan Bank harus menilai apakah terdapat indikasi
+bahwa kerugian penurunan nilai yang telah diakui pada periode
+sebelumnya untuk aset masih ada atau berkurang. Jika terdapat
+indikasi tersebut, maka Bank harus mengestimasi nilai wajar
+dikurangi biaya untuk menjual aset tersebut.
+
+d.
+
+Indikasi pemulihan nilai secara umum merupakan kebalikan atas
+indikasi yang disebutkan pada huruf a.
+
+e.
+6.
+
+Kompensasi penurunan nilai diakui ketika menjadi terutang.
+
+Revaluasi aset tetap
+a.
+
+Revaluasi aset tetap pada umumnya tidak diperkenankan.
+
+b.
+
+Revaluasi aset tetap dapat dilakukan jika berdasarkan ketentuan
+pemerintah.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Perlakuan dan Pengukuran
+1.
+
+Pada awal perolehan, aset tetap diakui sebesar biaya perolehan.
+2. Biaya ...
+
+- 85 -
+
+2.
+
+Biaya perolehan aset tetap melalui pertukaran adalah sebesar:
+a.
+
+nilai wajar aset yang diserahkan, jika pertukaran memiliki
+substansi komersial.
+
+b.
+
+nilai wajar aset yang diterima, jika pertukaran memiliki substansi
+komersial dan nilai wajar aset yang diserahkan tidak dapat diukur
+secara
+
+andal
+
+(nilai
+
+wajar
+
+aset
+
+yang
+
+diterima
+
+lebih
+
+andal
+
+dibandingkan nilai wajar aset yang diserahkan).
+c.
+
+nilai tercatat aset yang diserahkan, jika pertukaran tidak memiliki
+substansi
+
+komersial
+
+atau
+
+nilai
+
+wajar
+
+aset
+
+yang
+
+diterima/diserahkan tidak dapat diukur secara andal.
+3.
+
+Penyusutan untuk setiap periode diakui sebagai beban untuk periode
+yang bersangkutan.
+
+4.
+
+Penurunan nilai aset tetap diakui sebagai kerugian pada periode
+terjadinya penurunan nilai sebesar selisih nilai tercatat dengan nilai
+wajar dikurangi biaya untuk menjual. Sedangkan pemulihan nilai
+diakui sebagai keuntungan.
+
+5.
+
+Selisih antara nilai aset tetap setelah revaluasi dengan nilai tercatat
+diakui sebagai “surplus revaluasi aset tetap” dalam ekuitas. Surplus
+revaluasi aset tetap tersebut direklasifikasi ke saldo laba (melalui
+laporan
+
+perubahan
+
+ekuitas)
+
+pada
+
+saat
+
+aset
+
+tetap
+
+dihentikan
+
+pengakuannya.
+6.
+
+Keuntungan atau kerugian diakui ketika aset tetap dihentikan
+pengakuannya.
+
+D2. Penyajian
+1.
+
+Aset tetap disajikan berdasarkan nilai perolehan dikurangi akumulasi
+penyusutan dan rugi penurunan nilai, jika ada.
+
+2.
+
+Surplus revaluasi aset tetap disajikan sebagai pos tersendiri dalam
+ekuitas.
+
+3.
+
+Aset tetap yang berasal dari sewa pembiayaan disajikan tersendiri
+dalam pos aset tetap.
+
+4.
+E.
+
+Kewajiban sewa pembiayaan disajikan dalam pinjaman yang diterima.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat perolehan aset tetap:
+a.
+
+Pembelian
+Db. Aset tetap.
+Kr. Kas/Rekening …
+b. Sewa ...
+
+- 86 -
+
+b.
+
+Sewa pembiayaan
+Db. Aset tetap – sewa pembiayaan.
+Kr. Pinjaman yang diterima – sewa pembiayaan.
+
+c.
+
+Sumbangan
+Db. Aset tetap.
+Kr. Modal sumbangan/pendapatan non-operasional.
+
+d.
+
+Undian
+Db. Aset tetap.
+Kr. Pendapatan non-operasional.
+
+2.
+
+Pada saat pembebanan penyusutan:
+Db. Beban penyusutan.
+Kr. Akumulasi penyusutan.
+
+3.
+
+Pada saat penurunan nilai:
+a.
+
+Pada saat pengakuan kerugian penurunan nilai
+Db. Kerugian penurunan nilai.
+Kr. Cadangan kerugian penurunan nilai.
+
+b.
+
+Pada saat kompensasi atas kerugian penurunan nilai menjadi
+piutang, jika ada:
+Db. Piutang terkait.
+Kr. Pendapatan penggantian atas kerugian penurunan nilai.
+
+Catatan:
+-
+
+Piutang terkait dengan penggantian dan akumulasi kerugian
+penurunan nilai tidak dapat disajikan secara neto (saling hapus)
+dalam neraca.
+
+-
+
+Pendapatan penggantian dan kerugian penurunan nilai dapat
+disajikan secara neto (saling hapus) dalam laporan laporan laba
+rugi.
+
+c.
+
+Pada saat menerima penggantian:
+Db. Kas/rekening….
+Kr. Piutang terkait.
+
+4.
+
+Pada saat pertukaran aset:
+Db.
+
+Aset tetap (baru).
+
+Db.
+
+Akumulasi penyusutan.
+
+Db.
+
+Akumulasi kerugian penurunan nilai, jika ada.
+
+Db/Kr. Kerugian/Keuntungan.
+Kr.
+5.
+
+Aset tetap (lama).
+
+Pada saat penghentian pengakuan (misalnya dijual):
+Db. Kas ...
+
+- 87 -
+
+Db.
+
+Kas/rekening …
+
+Db.
+
+Akumulasi penyusutan.
+
+Db.
+
+Akumulasi kerugian penurunan nilai, jika ada.
+
+Db/Kr. Kerugian/Keuntungan.
+Kr.
+6.
+
+7.
+
+F.
+
+Aset tetap.
+
+Pada saat revaluasi aset tetap:
+Db.
+
+Aset tetap/Akumulasi penyusutan.
+
+Kr.
+
+Surplus revaluasi aset tetap (ekuitas).
+
+Pada saat aset yang telah direvaluasi dihentikan pengakuannya:
+Db.
+
+Surplus revaluasi aset tetap.
+
+Kr.
+
+Saldo laba.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Untuk setiap kelompok aset tetap:
+a.
+
+Dasar pengukuran yang digunakan untuk menentukan jumlah
+bruto aset tetap.
+
+b.
+
+Metode penyusutan yang digunakan.
+
+c.
+
+Umur manfaat atau tarif penyusutan yang digunakan.
+
+d.
+
+Jumlah bruto aset tetap dan akumulasi penyusutan (agregat
+dengan akumulasi rugi penurunan nilai) pada awal dan akhir
+periode.
+
+e.
+
+Rekonsiliasi jumlah tercatat pada awal dan akhir periode yang
+menunjukkan:
+1)
+
+penambahan;
+
+2)
+
+pelepasan (disposal);
+
+3)
+
+rugi penurunan nilai yang diakui atau dipulihkan dalam
+Laporan Laba Rugi;
+
+2.
+
+4)
+
+penyusutan; dan/atau
+
+5)
+
+perubahan lainnya.
+
+Keberadaan dan jumlah pembatasan atas hak milik dan aset tetap yang
+dijaminkan untuk utang, jika ada.
+
+3.
+
+Jumlah komitmen kontrak untuk memperoleh aset tetap, jika ada.
+
+4.
+
+Pertimbangan yang digunakan dalam melakukan pertukaran aset tetap
+dalam menentukan substansi komersial.
+
+IX.2. ASET ...
+
+- 92 -
+
+IX.3
+
+ASET YANG DIAMBIL ALIH
+
+A.
+
+Definisi
+1. Aset yang diambil alih (AYDA) adalah aset yang diperoleh Bank, baik
+melalui
+
+pelelangan
+
+maupun
+
+di
+
+luar
+
+pelelangan
+
+berdasarkan
+
+penyerahan secara sukarela oleh pemilik agunan atau berdasarkan
+kuasa untuk menjual di luar lelang dari pemilik agunan dalam hal
+debitur tidak memenuhi kewajibannya kepada Bank.
+2. Biaya untuk menjual adalah biaya tambahan yang secara langsung
+dapat diatribusikan kepada pelepasan aset atau kelompok lepasan.
+3. Nilai wajar adalah suatu jumlah dimana aset dipertukarkan atau
+kewajiban diselesaikan, antara pihak yang paham dan berkeinginan
+dalam suatu transaksi yang wajar.
+4. Nilai tercatat adalah nilai yang disajikan dalam neraca setelah
+dikurangi Cadangan Kerugian Penurunan Nilai.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+Bank wajib melakukan upaya penyelesaian terhadap AYDA yang dimiliki
+yaitu mengupayakan penjualan dengan segera serta mendokumentasikan
+upaya penyelesaian tersebut.
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+1. Pada saat pengakuan awal, AYDA dibukukan pada nilai wajar setelah
+dikurangi
+
+biaya
+
+untuk
+
+menjualnya
+
+yaitu
+
+maksimum
+
+sebesar
+
+kewajiban debitur. Bank tidak boleh mengakui keuntungan pada saat
+pengambilalihan aset.
+2. Setelah pengakuan awal, AYDA dibukukan sebesar nilai yang lebih
+rendah antara nilai tercatat dengan nilai wajarnya setelah dikurangi
+biaya untuk menjualnya.
+3. Jika AYDA mengalami penurunan nilai, maka Bank mengakui rugi
+penurunan nilai tersebut.
+4. Jika ...
+
+- 93 -
+
+4. Jika AYDA mengalami pemulihan penurunan nilai, maka Bank
+mengakui pemulihan penurunan nilai tersebut paling banyak sebesar
+kerugian penurunan nilai yang telah diakui.
+5. AYDA tidak dilakukan penyusutan.
+6. Pada saat penjualan, selisih antara nilai tercatat AYDA dan hasil
+penjualannya diakui sebagai berikut:
+a.
+
+Apabila hasil penjualan lebih besar dari nilai tercatat AYDA,
+kelebihan
+
+hasil
+
+penjualan
+
+dikembalikan
+
+kepada
+
+nasabah
+
+pembiayaan.
+b.
+
+Apabila hasil penjualan lebih kecil dari nilai tercatat AYDA, maka
+kekurangan
+
+tersebut
+
+ditagihkan
+
+Bank
+
+kepada
+
+nasabah
+
+pembiayaan. Bank tetap membentuk Penyisihan Penghapusan
+Aset atas tagihan yang ditetapkan kepada nasabah sesuai dengan
+kualitas
+
+pembiayaan
+
+sebelum
+
+dilakukan
+
+pengambilalihan
+
+agunan.
+D2.
+
+Penyajian
+AYDA disajikan secara terpisah dari aset lainnya sebesar nilai tercatat
+atau nilai wajar setelah dikurangi biaya untuk menjual, mana yang lebih
+rendah.
+
+E.
+
+Ilustrasi Jurnal
+1. Pada saat Bank memperoleh AYDA:
+a.
+
+Jika nilai AYDA lebih besar dari nilai tercatat pembiayaan yang
+diberikan, nilai AYDA diakui paling banyak sebesar nilai tercatat
+pembiayaan yang diberikan
+
+b.
+
+Db.
+
+Aset yang diambil alih (AYDA).
+
+Kr.
+
+Pembiayaan yang diberikan.
+
+Jika nilai AYDA lebih kecil daripada nilai tercatat pembiayaan
+yang diberikan, maka Bank mengakui kerugian pada periode
+berjalan
+Db.
+
+Aset yang diambilalih (AYDA).
+
+Db.
+
+Kerugian penyelesaian pembiayaan.
+
+Kr.
+
+Pembiayaan yang diberikan.
+
+c. Dilakukan ...
+
+- 94 -
+
+c.
+
+Dilakukan koreksi atas Penyisihan Penghapusan Aset atas
+pembiayaan yang telah diselesaikan dengan pengambilalihan
+AYDA
+Db.
+
+Penyisihan Penghapusan Aset.
+
+Kr.
+
+Koreksi – Penyisihan Penghapusan Aset.
+
+2. Pada saat terjadi penurunan nilai AYDA:
+Db.
+
+Kerugian penurunan nilai.
+
+Kr.
+
+Aset yang diambil alih (AYDA).
+
+3. Pada saat terjadi pemulihan nilai AYDA setelah mengalami penurunan
+nilai, diakui sebagai pendapatan paling banyak sebesar kerugian
+penurunan nilai yang telah diakui:
+Db.
+
+Aset yang diambil alih (AYDA).
+
+Kr.
+
+Keuntungan peningkatan nilai.
+
+4. Pada saat penjualan AYDA:
+a.
+
+b.
+
+Terjadi keuntungan
+Db.
+
+Kas/rekening.
+
+Kr.
+
+Aset yang diambil alih (AYDA).
+
+Kr.
+
+Rekening nasabah / Kliring / Kewajiban segera – transfer.
+
+Terjadi kerugian
+Db.
+
+Kas/rekening.
+
+Db.
+
+Tagihan kepada nasabah.
+
+Kr.
+
+Aset yang diambil alih (AYDA).
+
+Pembentukan Penyisihan Penghapusan Aset atas tagihan kepada
+nasabah
+
+F.
+
+Db.
+
+Beban Penyisihan Penghapusan Aset.
+
+Kr.
+
+Penyisihan Penghapusan Aset.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Deskripsi mengenai AYDA.
+
+2.
+
+Nilai wajar AYDA.
+
+3.
+
+Metode dan asumsi signifikan yang diterapkan dalam menentukan
+nilai wajar AYDA, yang mencakup pernyataan apakah penentuan
+nilai wajar tersebut didukung oleh bukti pasar atau lebih banyak
+berdasarkan faktor lain (yang harus diungkapkan oleh Bank) karena
+
+sifat ...
+
+- 95 -
+
+sifat AYDA tersebut dan keterbatasan data pasar yang dapat
+diperbandingkan.
+4.
+
+Upaya penjualan yang dilakukan Bank.
+
+5.
+
+Kerugian penurunan nilai.
+
+IX.4. ASET ...
+
+- 96 -
+
+IX. 4
+A.
+
+ASET LAIN-LAIN
+Definisi
+Aset
+
+lain-lain
+
+adalah
+
+pos-pos
+
+aset
+
+yang
+
+tidak
+
+dapat
+
+secara
+
+layak
+
+digolongkan dalam kelompok pos aset yang ada dan tidak secara material
+untuk disajikan tersendiri.
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+Komponen aset lain-lain, antara lain:
+
+a.
+
+Pajak dibayar dimuka.
+
+b.
+
+Biaya dibayar dimuka, contohnya premi penjaminan simpanan.
+
+c.
+
+Mata uang kertas dan logam yang ditarik dari peredaran dan tidak
+dapat digunakan sebagai alat pembayaran yang sah.
+
+D.
+
+d.
+
+Piutang dari perusahaan asuransi.
+
+e.
+
+Lainnya, misalnya commemorative coins/notes.
+
+Perlakuan akuntansi
+
+D1. Pengakuan dan pengukuran
+1.
+
+Pada dasarnya aset lain-lain diakui pada saat terjadinya sebesar biaya
+perolehan.
+
+2.
+
+Mata uang kertas dan logam yang ditarik dari peredaran dan masih
+dalam masa tenggang diakui sebesar:
+a. Rupiah: nilai nominal
+b. Valuta asing: nilai nominal dikurangi biaya repatriasi
+
+3.
+
+Mata uang kertas dan logam yang ditarik dari peredaran dan telah
+melampaui masa tenggang serta tidak memiliki nilai dibebankan
+sekaligus sebagai kerugian.
+
+D2. Penyajian
+Aset lain-lain disajikan secara gabungan, kecuali dalam hal nilainya
+material,wajib disajikan tersendiri dalam neraca.
+
+E. Ilustrasi ...
+
+- 97 -
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pajak dibayar dimuka:
+a. Pada saat pengakuan awal
+Db.
+
+Pajak dibayar dimuka.
+
+Kr.
+
+Kas/rekening ...
+
+b. Pada saat akhir tahun
+Db.
+
+Beban pajak.
+
+Db/Kr. Utang pajak.
+Kr.
+2.
+
+Pajak dibayar dimuka.
+
+Biaya dibayar dimuka:
+a. Pada saat pengakuan awal
+Db.
+
+Biaya dibayar dimuka.
+
+Kr.
+
+Kas/rekening ...
+
+b. Pada saat amortisasi
+
+3.
+
+Db.
+
+Beban terkait.
+
+Kr.
+
+Biaya dibayar dimuka.
+
+Kas/Kas valuta asing yang ditarik dari peredaran:
+a. Pada saat reklasifikasi
+Db.
+
+Kas/Kas valuta asing yang ditarik dari peredaran.
+
+Db.
+
+Beban repatriasi.
+
+Kr.
+
+Kas/Kas valuta asing.
+
+b. Pada saat melampaui masa tenggang
+
+F.
+
+Db.
+
+Kerugian.
+
+Kr.
+
+Kas/Kas valuta asing yang ditarik dari peredaran.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan, antara lain:
+1.
+
+Rincian aset lain-lain.
+
+2.
+
+Kebijakan akuntansi.
+
+- 114 -
+
+BAGIAN XI EKUITAS
+XI.1. PENDAHULUAN
+1.
+
+Ekuitas adalah hak residual atas aset Bank setelah dikurangi semua
+kewajiban.
+
+2.
+
+Unsur ekuitas dapat disubklasifikasikan dalam neraca menjadi pospos ekuitas, misalnya modal disetor, tambahan modal disetor, saldo
+laba, cadangan umum, dan cadangan tujuan yang disajikan dalam
+pos-pos terpisah. Klasifikasi semacam itu dapat menjadi relevan
+untuk pengambilan keputusan pemakai laporan keuangan apabila
+pos tersebut mengindikasikan pembatasan hukum atau pembatasan
+lainnya terhadap kemampuan perseroan untuk membagikan atau
+menggunakan ekuitas.
+
+3.
+
+Komponen ekuitas untuk Bank antara lain terdiri atas:
+a.
+
+modal;
+
+b.
+
+dana setoran modal – ekuitas;
+
+c.
+
+surplus revaluasi aset tetap;
+
+d.
+
+saldo laba.
+
+XI.2. MODAL ...
+
+- 115 -
+
+XI.2. MODAL
+A.
+
+Definisi
+1.
+
+Modal Dasar adalah seluruh nilai nominal saham sesuai dengan
+Anggaran Dasar.
+
+2.
+
+Modal Disetor adalah modal yang telah efektif diterima bank sebesar
+nilai nominal saham.
+
+3.
+
+Tambahan Modal Disetor (Agio Saham), yaitu selisih lebih setoran
+modal yang diterima oleh Bank sebagai akibat harga saham yang
+melebihi nilai nominalnya.
+
+4.
+
+Modal Sumbangan, yaitu sumbangan yang berasal dari pemilik Bank
+dalam bentuk dana atau aset lainnya termasuk pengembalian saham
+pemilik.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+Undang-undang tentang Perseroan Terbatas.
+
+Penjelasan
+1.
+
+Modal Disetor
+a.
+
+Modal Disetor merupakan bagian dari modal ditempatkan yang
+telah disetor penuh oleh pemegang saham.
+
+b.
+
+Saham yang dikeluarkan dapat berupa saham utama (preferen)
+dan saham biasa.
+
+c.
+
+Penambahan modal disetor lazimnya dicatat berdasarkan:
+1) Jumlah uang yang diterima.
+2) Besarnya utang yang dikonversi menjadi modal.
+3) Nilai wajar aset non-kas yang diterima.
+
+2.
+
+Tambahan Modal Disetor
+a.
+
+Tambahan
+
+Modal
+
+Disetor
+
+merupakan
+
+bagian
+
+dari
+
+modal
+
+ditempatkan yang telah disetor penuh oleh pemegang saham.
+b.
+
+Pos Tambahan Modal Disetor tidak boleh didebit atau dikredit
+dengan pos laba atau rugi.
+
+3.
+
+Modal Sumbangan
+Modal Sumbangan adalah sejumlah uang atau barang modal yang
+dapat dinilai dengan uang yang diterima dari pihak lain yang bersifat
+hibah dan tidak mengikat.
+D. Perlakuan ...
+
+- 116 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+Modal Disetor
+1.
+
+Modal Disetor diakui pada saat penerimaan setoran modal baik
+berupa dana kas maupun aset non-kas.
+
+2.
+
+Modal Disetor dicatat berdasarkan:
+a.
+
+Jumlah uang yang diterima.
+
+b.
+
+Setoran saham dalam bentuk uang, sesuai transaksi nyata.
+
+c.
+
+Besarnya utang yang dikonversi menjadi modal.
+
+d.
+
+Setoran saham dalam dividen saham dilakukan dengan harga
+wajar saham, yaitu nilai wajar yang disepakati RUPS untuk
+saham.
+
+e.
+
+Nilai wajar aset non-kas yang diterima.
+Setoran saham dalam bentuk aset non-kas, menggunakan nilai
+wajar aset non-kas yang diserahkan, yaitu nilai appraisal
+tanggal transaksi yang disetujui Dewan Komisaris, atau nilai
+kesepakatan Dewan Komisaris dan penyetor aset non-kas.
+
+Pengeluaran saham dicatat sebesar nilai nominal yang bersangkutan.
+Apabila jumlah yang diterima dari pengeluaran saham tersebut lebih
+besar daripada nilai nominalnya, maka selisihnya dibukukan pada
+akun Agio Saham.
+Tambahan Modal Disetor (Agio Saham)
+1.
+
+Tambahan modal disetor diakui pada saat penerimaan setoran modal
+dari pihak ketiga baik berupa dana kas maupun aset nonkas.
+
+2.
+
+Penambahan pos Tambahan Modal Disetor diakui pada saat:
+a.
+
+dilakukan penambahan setoran kas oleh pemilik sebesar kas
+yang diterima.
+
+b.
+
+dilakukan penambahan setoran aset non-kas sebesar nilai
+wajar aset non-kas yang diterima.
+
+Modal Sumbangan
+1.
+
+Modal Sumbangan diakui pada saat diterimanya sumbangan berupa
+kas atau aset non-kas dari pemilik.
+
+2.
+
+Modal Sumbangan berupa kas dinilai sebesar kas yang diterima.
+
+3.
+
+Sumbangan berupa aset non-kas dinilai sebesar nilai wajar aset nonkas yang diterima.
+
+D2. Penyajian ...
+
+- 117 -
+
+D2.
+
+Penyajian
+1.
+
+Penyajian modal dalam neraca harus dilakukan sesuai dengan
+ketentuan pada anggaran dasar Bank dan peraturan yang berlaku
+serta menggambarkan hubungan keuangan yang ada.
+
+2.
+
+Modal dasar, modal ditempatkan, modal disetor, nilai nominal dan
+banyaknya saham untuk setiap jenis saham harus dinyatakan dalam
+neraca.
+
+3.
+
+Tambahan Modal Disetor disajikan dalam kelompok pos ekuitas.
+
+4.
+
+Modal sumbangan disajikan dalam kelompok pos ekuitas sesudah
+akun Tambahan Modal Disetor.
+
+E.
+
+Ilustrasi Jurnal
+Modal Disetor
+1.
+
+Pada saat penyetoran modal secara tunai pada nilai nominal:
+Db. Kas/Rekening….
+Kr. Modal Disetor.
+
+2.
+
+Pada saat penyetoran modal secara tunai di atas nilai nominal:
+Db. Kas/Rekening….
+Kr. Modal Disetor.
+Kr. Agio Saham.
+
+3.
+
+Pada saat penyetoran modal dalam bentuk barang (aset nonkas):
+Db. Aset yang diterima (nilai wajar).
+Kr. Modal Disetor.
+
+4.
+
+Pada saat konversi kewajiban utang menjadi modal:
+Db. Kewajiban/Utang yang terkait.
+Kr. Modal Disetor.
+
+Modal Sumbangan
+1.
+
+Pada saat menerima Modal Sumbangan dari pemilik dalam bentuk
+kas:
+Db. Kas (nilai nominal).
+Kr. Modal Sumbangan.
+
+2.
+
+Pada saat menerima Modal Sumbangan dari pemilik dalam bentuk
+aset non-kas:
+Db. Aset yang diterima (nilai wajar).
+Kr. Modal Sumbangan.
+F. Pengungkapan ...
+
+- 118 -
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Hak dan keistimewaan dari suatu golongan saham atas dividen dan
+pelunasan modal pada saat likuidasi, dalam hal terdapat lebih dari
+satu jenis saham.
+
+2.
+
+Pembatasan yang melekat pada setiap jenis saham, termasuk
+pembatasan atas dividen dan pembayaran kembali atas modal.
+
+3.
+
+Jumlah tunggakan dividen atas saham preferen dengan hak dividen
+kumulatif tiap saham dan jumlah keseluruhan dividen periode
+sebelumnya.
+
+4.
+
+Perubahan atas modal yang ditanam dalam tahun berjalan.
+
+5.
+
+Agio saham.
+
+6.
+
+Rincian modal sumbangan.
+
+7.
+
+Nama-nama penyumbang.
+
+XI.3. DANA ...
+
+- 119 -
+
+XI.3. DANA SETORAN MODAL – EKUITAS
+A.
+
+Definisi
+Dana Setoran Modal adalah dana yang telah disetor penuh untuk tujuan
+penambahan
+
+modal
+
+namun
+
+belum
+
+didukung
+
+dengan
+
+kelengkapan
+
+persyaratan untuk dapat digolongkan sebagai Modal Disetor seperti
+pelaksanaan rapat umum pemegang saham maupun pengesahan anggaran
+dasar dari instansi yang berwenang.
+B.
+
+Dasar Pengaturan
+Ekuitas sebagai bagian hak pemilik dalam entitas harus dilaporkan
+sedemikian rupa sehingga memberikan informasi mengenai sumbernya
+secara jelas dan disajikan sesuai dengan peraturan perundangan dan akta
+pendirian yang berlaku. (SAK ETAP paragraf 19.2)
+
+C.
+
+Penjelasan
+1.
+
+Dana Setoran Modal adalah dana yang secara efektif telah disetor
+penuh oleh pemegang saham atau calon pemegang saham dalam
+rangka penambahan modal, tetapi belum memenuhi aspek legalitas
+dan kelengkapan persyaratan untuk dapat digolongkan sebagai
+Modal Disetor.
+
+2.
+
+Untuk dapat diperhitungkan sebagai Dana Setoran Modal maka dana
+tersebut harus ditempatkan pada rekening khusus (escrow account)
+dan tidak boleh ditarik kembali oleh pemegang saham. Penggunaan
+dana dalam escrow account tersebut harus dengan persetujuan
+Otoritas Jasa Keuangan.
+
+3.
+
+Dalam hal Dana Setoran Modal berasal dari calon pemilik Bank
+maka jika berdasarkan penelitian Otoritas Jasa Keuangan, calon
+pemilik Bank atau dana tersebut tidak memenuhi syarat sebagai
+pemegang saham atau modal, dana tersebut tidak dapat dianggap
+sebagai komponen modal, dan dapat ditarik kembali oleh calon
+pemilik.
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+Dana Setoran Modal diakui sebesar jumlah dana yang memenuhi
+ketentuan permodalan yang berlaku.
+D.2. Penyajian ...
+
+- 120 -
+
+D2.
+
+Penyajian
+Dana Setoran Modal disajikan dalam pos tersendiri setelah pos Modal.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat Dana Setoran Modal diakui oleh otoritas:
+Db. Penempatan pada bank umum.
+Kr. Dana Setoran Modal.
+
+2.
+
+Pada saat Dana Setoran Modal telah didukung dengan kelengkapan
+dokumen
+
+sesuai
+
+dengan
+
+ketentuan
+
+perundang-undangan
+
+yang
+
+berlaku:
+Db. Dana Setoran Modal.
+Kr. Modal disetor.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian Dana Setoran Modal dan pemilik dana.
+
+2.
+
+Proses yang telah dilakukan atas dana setoran modal sampai dengan
+tanggal pelaporan.
+
+3.
+
+Dana Setoran Modal yang telah digunakan oleh Bank.
+
+XI.4. SURPLUS ...
+
+- 121 -
+
+XI.4. SURPLUS REVALUASI ASET TETAP
+A.
+
+Definisi
+Surplus Revaluasi Aset Tetap adalah selisih antara nilai revaluasi dengan
+nilai tercatat aset tetap dan inventaris sebelum dilakukan revaluasi.
+
+B.
+
+Dasar Pengaturan
+1.
+
+Penilaian kembali atau revaluasi aset tetap pada umumnya tidak
+diperkenankan
+
+karena
+
+SAK
+
+ETAP
+
+menganut
+
+penilaian
+
+aset
+
+berdasarkan biaya perolehan atau harga pertukaran. Penyimpangan
+dari ketentuan ini mungkin dilakukan berdasarkan ketentuan
+pemerintah. Dalam hal ini laporan keuangan harus menjelaskan
+mengenai penyimpangan dari konsep biaya perolehan di dalam
+penyajian aset tetap serta pengaruh dari penyimpangan tersebut
+terhadap gambaran keuangan entitas. Selisih antara nilai revaluasi
+dengan nilai tercatat aset tetap diakui dalam ekuitas dengan nama “
+Surplus Revaluasi Aset Tetap”.(SAK ETAP paragraf 15.15)
+2.
+
+Surplus Revaluasi Aset Tetap dalam ekuitas dapat dipindahkan
+langsung
+
+ke
+
+saldo
+
+laba
+
+pada
+
+saat
+
+aset
+
+tersebut
+
+dihentikan
+
+pengakuannya. Hal ini meliputi pemindahan sekaligus surplus
+revaluasi pada saat penghentian atau pelepasan aset tersebut.
+Namun, sebagian surplus revaluasi tersebut dapat dipindahkan
+sejalan dengan penggunaan aset oleh entitas. Dalam halini, surplus
+revaluasi yang dipindahkan ke saldo laba adalah sebesar perbedaan
+antara jumlah penyusutan berdasarkan nilai revaluasian aset dengan
+jumlah penyusutan berdasarkan biaya perolehan aset tersebut.
+Pemindahan surplus revaluasi ke saldo laba tidak dilakukan melalui
+laporan laba rugi. (SAK ETAP paragraf 15.16)
+C.
+
+Penjelasan
+1.
+
+Penyimpangan dan pengaruh dari penggunaan konsep selain biaya
+perolehan harus dijelaskan dalam laporan keuangan.
+
+2.
+
+Surplus Revaluasi Aset Tetap diakui sebagai penambah aset atau
+pengurang akumulasi penyusutan yang telah dibentuk.
+
+D. Perlakuan ...
+
+- 122 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+1.
+
+Dalam hal Bank melakukan penilaian kembali aset tetap dan
+inventarisnya, maka selisih antara nilai revaluasi dengan nilai
+tercatat sebelum dilakukan revaluasi dicatat pada pos Surplus
+Revaluasi Aset Tetap.
+
+2.
+
+Surplus Revaluasi Aset Tetap akan direklasifikasi ke Saldo Laba pada
+saat penghentian-pengakuan.
+
+3.
+
+Reklasifikasi Surplus Revaluasi Aset Tetap ke Saldo Laba melalui
+laporan perubahan ekuitas, bukan laporan laba rugi.
+
+D2.
+
+Penyajian
+Surplus Revaluasi Aset Tetap disajikan sebagai pos tersendiri dalam
+ekuitas.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat dilakukan revaluasi aset tetap dan inventaris:
+Db. Aset tetap dan inventaris/Akumulasi penyusutan
+Kr. Surplus Revaluasi Aset Tetap (ekuitas)
+
+2.
+
+Pada saat reklasifikasi Surplus Revaluasi Aset Tetap ke saldo laba
+(saat penghentian-pengakuan) :
+Db. Kas/Rekening….
+Db. Akumulasi penyusutan.
+Kr. Aset tetap dan inventaris.
+Dapat terjadi keuntungan atau kerugian
+Db. Surplus Revaluasi Aset Tetap.
+Kr. Saldo laba.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Kebijakan akuntansi untuk revaluasi aset tetap dan inventaris.
+
+2.
+
+Dasar yang digunakan untuk melakukan revaluasi aset tetap dan
+inventaris.
+
+3.
+
+Tanggal efektif revaluasi aset tetap dan inventaris.
+
+4.
+
+Pihak yang melakukan penilaian.
+
+5.
+
+Dasar penentuan nilai Revaluasi Aset Tetap dan inventaris.
+
+6.
+
+Jumlah tercatat setiap jenis aset tetap dan inventaris sebelum
+dilakukan revaluasi.
+7. Jumlah ...
+
+- 123 -
+
+7.
+
+Jumlah Surplus Revaluasi Aset Tetap yang direklasifikasi ke saldo
+laba.
+
+XI.5. SALDO ...
+
+- 124 -
+
+XI.5. SALDO LABA
+A.
+
+Definisi
+1.
+
+Saldo Laba (Laba Ditahan) adalah akumulasi hasil usaha periodik
+setelah memperhitungkan pembagian dividen, koreksi laba rugi
+periode lalu, dan reklasifikasi surplus revaluasi aset tetap.
+
+2.
+
+Saldo Laba dikelompokkan menjadi:
+a.
+
+Cadangan tujuan, yaitu cadangan yang dibentuk dari laba neto
+setelah pajak yang tujuan penggunaannya telah ditetapkan;
+
+b.
+
+Cadangan umum, yaitu cadangan yang dibentuk dari laba neto
+setelah pajak yang dimaksudkan untuk memperkuat modal;
+dan
+
+c.
+
+Saldo Laba yang belum ditentukan tujuannya, terdiri dari:
+1) laba
+
+rugi
+
+periode
+
+lalu
+
+yang
+
+belum
+
+ditetapkan
+
+penggunaannya; dan
+2) laba rugi periode berjalan.
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+Undang-Undang tentang Perseroan Terbatas.
+
+Penjelasan
+1.
+
+Pos Saldo Laba harus dinyatakan secara terpisah dari pos Modal.
+Seluruh Saldo Laba dianggap bebas untuk dibagikan sebagai dividen,
+kecuali jika diberikan indikasi mengenai pembatasan terhadap saldo
+laba, misalnya dicadangkan untuk tujuan tertentu, atau untuk
+memenuhi ketentuan regulasi atau ikatan tertentu.
+
+2.
+
+Saldo Laba yang tidak tersedia untuk dibagikan sebagai dividen
+karena pembatasan-pembatasan tersebut dilaporkan dalam pos
+tersendiri
+
+yang
+
+menggambarkan
+
+tujuan
+
+pencadangan
+
+yang
+
+dimaksud.
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+1.
+
+Saldo Laba tidak boleh dibebani atau dikredit dengan pos-pos yang
+seharusnya diperhitungkan pada laba rugi tahun berjalan.
+
+2.
+
+Pembagian dividen diakui sebagai pengurang saldo laba ketika
+dividen dideklarasikan.
+a. Dividen ...
+
+- 125 -
+
+a.
+
+Dividen dalam bentuk tunai diakui sebesar jumlah yang
+ditetapkan.
+
+b.
+
+Dividen dalam bentuk saham diakui sebesar nilai wajar saham
+saat dividen dideklarasikan.
+
+3.
+
+Saldo Laba yang belum ditentukan tujuannya direklasifikasi ke
+cadangan
+
+tujuan
+
+atau
+
+cadangan
+
+umum
+
+ketika
+
+dilakukan
+
+pembentukan cadangan sebesar jumlah yang ditentukan.
+D2.
+
+Penyajian
+Saldo Laba disajikan tersendiri dalam bentuk cadangan tujuan, cadangan
+umum dan saldo laba yang belum ditentukan tujuannya.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat pemindahan laba tahun berjalan ke saldo laba:
+Db. Ikhtisar laba rugi.
+Kr.Saldo Laba.
+
+2.
+
+Pada saat pemindahan rugi tahun berjalan ke saldo laba:
+Db. Saldo Laba.
+Kr. Ikhtisar laba rugi.
+
+3.
+
+Pembagian dividen tunai
+a.
+
+Pada saat ditetapkan:
+Db. Saldo Laba.
+Kr. Kewajiban Segera – Utang dividen.
+
+b.
+
+Pada saat dibayar:
+Db. Kewajiban Segera – Utang dividen
+Kr. Kas/Rekening …
+
+4.
+
+Pada saat pembagian dividen saham:
+Db. Saldo Laba.
+Kr. Modal Disetor.
+
+5.
+
+Pada saat pembentukan cadangan:
+Db. Saldo Laba.
+Kr. Cadangan tujuan.
+Kr. Cadangan umum.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Penjatahan (apropriasi) dan pemisahan Saldo Laba, penjelasan jenis
+penjatahan dan pemisahan, tujuan penjatahan dan pemisahan saldo
+laba ...
+
+- 126 -
+
+laba, serta jumlahnya, termasuk perubahan akun-akun penjatahan
+atau pemisahan Saldo Laba.
+2.
+
+Peraturan, perikatan, pembatasan dan jumlah pembatasan Saldo
+Laba.
+
+3.
+
+Koreksi masa lalu, baik bruto maupun neto setelah pajak dengan
+menjelaskan bentuk kesalahan laporan keuangan terdahulu, dampak
+koreksi terhadap laba usaha, laba neto dan nilai saham per lembar.
+
+4.
+
+Jumlah
+
+dividen
+
+dan
+
+dividen
+
+per
+
+lembar
+
+saham,
+
+termasuk
+
+keterbatasan Saldo Laba tersedia bagi dividen.
+5.
+
+Tunggakan dividen (utang dividen), baik jumlah maupun tunggakan
+per lembar saham. Pengungkapan deklarasi dividen setelah tanggal
+neraca tetapi sebelum tanggal penyelesaian laporan keuangan.
+
+- 127 -
+
+BAGIAN XII
+
+LAPORAN LABA RUGI
+
+XII.1. PENGERTIAN
+1. Laporan Laba Rugi adalah laporan yang menyajikan seluruh pos
+penghasilan dan beban yang diakui dalam suatu periode yang
+menunjukkan komponen laba rugi.
+2. Pendapatan adalah kenaikan manfaat ekonomi selama suatu periode
+pelaporan dalam bentuk arus masuk atau penambahan aset atau
+penurunan kewajiban yang mengakibatkan kenaikan ekuitas yang tidak
+berasal dari kontribusi pemegang saham.
+3. Keuntungan adalah pos pendapatan lain yang mungkin timbul atau
+mungkin tidak timbul dalam pelaksanaan aktivitas Bank.
+4. Beban adalah penurunan manfaat ekonomi selama suatu periode
+pelaporan dalam bentuk arus keluar atau penurunan aset atau
+kenaikan kewajiban yang mengakibatkan penurunan ekuitas yang tidak
+menyangkut distribusi kepada pemegang saham.
+5. Kerugian adalah pos beban lain yang mungkin timbul atau mungkin
+tidak timbul dalam pelaksanaan aktivitas Bank.
+6. Pendapatan dan beban operasional adalah pendapatan dan beban dari
+kegiatan usaha Bank.
+7. Pendapatan dan beban non-operasional adalah pendapatan dan beban
+di luar kegiatan usaha Bank.
+8. Laporan Laba Rugi menyajikan pos-pos sebagai berikut:
+a. pendapatan pengelolaan dana oleh Bank sebagai mudharib:
+1) pendapatan dari jual beli;
+2) pendapatan dari sewa;
+3) pendapatan dari bagi hasil;
+4) pendapatan usaha utama lain.
+b. hak pihak ketiga atas bagi hasil dana syirkah temporer.
+c. pendapatan usaha lain.
+d. beban usaha.
+e. laba usaha.
+f.
+
+pendapatan non usaha.
+
+g. beban non usaha.
+h. beban pajak penghasilan.
+i.
+
+laba neto.
+XII.2.
+f. pendapatan
+KOMPONEN
+... ...
+
+- 128 -
+
+XII.2. KOMPONEN LABA RUGI
+A.
+
+Definisi
+Laba Rugi adalah total pendapatan dikurangi beban.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.101 tentang Penyajian Laporan Keuangan Syariah.
+
+3.
+
+PSAK No.102 tentang Akuntansi Murabahah.
+
+4.
+
+PSAK No,103 tentang Akuntansi Salam.
+
+5.
+
+PSAK No.104 tentang Akuntansi Istishna.
+
+6.
+
+PSAK No.105 tentang Akuntansi Mudharabah.
+
+7.
+
+PSAK No.106 tentang Akuntansi Musyarakah.
+
+8.
+
+PSAK No.107 tentang Akuntansi Ijarah.
+
+Penjelasan
+1.
+
+Penyusunan Laporan Laba Rugi didasarkan pada pendapatan dan
+beban yang diakui dengan menggunakan dasar akrual, sedangkan
+perhitungan distribusi pendapatan/hasil usaha menggunakan dasar
+kas. Oleh karena itu, Bank harus mampu membedakan pendapatan
+akrual dan pendapatan kas yang sudah diterima.
+
+2.
+
+Pendapatan usaha utama (pendapatan Bank sebagai mudharib) terdiri
+dari pendapatan dari: jual beli, sewa, bagi hasil, dan pendapatan utama
+lain.
+Hak pihak ketiga atas bagi hasil merupakan bagian bagi hasil milik
+pihak ketiga (misalnya nasabah penyimpan dalam tabungan dan
+deposito yang didasarkan pada akad Mudharabah dan Musyarakah)
+atas hasil pengelolaan dana syirkah temporer oleh Bank.
+
+3.
+
+Pendapatan usaha lain antara lain terdiri atas:
+a.
+
+pendapatan penyelenggaraan jasa Perbankan Syariah berbasis
+imbalan, terdiri dari:
+1)
+
+pendapatan fee wakalah;
+
+2)
+
+pendapatan fee kafalah;
+
+3)
+
+pendapatan fee hiwalah;
+
+4)
+
+pendapatan fee dana investasi terikat;
+
+5)
+
+pendapatan administrasi;
+
+6)
+
+pendapatan lainnya.
+b. Pendapatan ...
+
+- 129 -
+
+4.
+
+5.
+
+6.
+
+D.
+
+b.
+
+pendapatan bonus giro pada Bank Syariah lain.
+
+c.
+
+keuntungan transaksi valuta asing, jika ada.
+
+Beban usaha antara lain terdiri atas:
+a.
+
+beban bonus simpanan masyarakat berdasarkan prinsip wadiah.
+
+b.
+
+beban penghapusan aset.
+
+c.
+
+beban penyusutan.
+
+d.
+
+beban amortisasi.
+
+e.
+
+beban/kerugian transaksi valuta asing, jika ada.
+
+f.
+
+beban premi dalam rangka penjaminan.
+
+g.
+
+beban sewa aset yang digunakan sendiri.
+
+h.
+
+beban promosi.
+
+i.
+
+beban personalia.
+
+j.
+
+beban administrasi dan umum.
+
+Pendapatan non usaha antara lain terdiri atas:
+a.
+
+keuntungan pelepasan aset tetap.
+
+b.
+
+pendapatan hibah.
+
+c.
+
+pendapatan lain.
+
+Beban non usaha antara lain terdiri atas:
+a.
+
+kerugian penurunan nilai aset tetap.
+
+b.
+
+kerugian pelepasan aset tetap.
+
+c.
+
+beban lain.
+
+Perlakuan Akuntansi
+1. Pendapatan margin Murabahah
+a. Untuk transaksi yang dilakukan secara non-tunai, maka keuntungan
+diakui secara proporsional sesuai angsuran yang jatuh tempo selama
+masa akad.
+b. Biaya transaksi diakui selaras dengan pengakuan keuntungan
+Murabahah.
+2. Pendapatan neto Salam paralel
+Pendapatan neto Salam paralel diakui pada saat penyerahan barang
+kepada nasabah sebesar selisih antara jumlah kas yang diserahkan
+kepada pemasok dan jumlah kas yang diterima dari nasabah.
+3. Pendapatan neto Istishna paralel
+Selisih antara nilai akad dan nilai pemesanan barang yang diakui secara
+proporsional selama masa akad, termasuk biaya transaksinya.
+4. Penghasilan ...
+
+- 130 -
+
+4. Penghasilan dari sewa
+a. Pendapatan sewa diakui selama masa akad pada saat manfaat atas
+aset telah diserahkan kepada nasabah.
+b. Keuntungan atau kerugian dari pelepasan aset Ijarah diakui pada
+saat pelepasan sebesar selisih harga jual dan nilai tercatat aset
+ijarah.
+c. Beban yang terkait dengan pengelolaan aset Ijarah, antara lain beban
+penyusutan dan amortisasi, beban pemeliharaan, dan beban sewa
+Ijarah (transaksi Ijarah-lanjut), diakui sebagai pengurang penghasilan
+dari sewa.
+5. Pendapatan dari bagi hasil
+Pendapatan bagi hasil diakui pada saat Bank menerima laporan periodik
+atas usaha yang telah dilakukan oleh nasabah, baik keuntungan
+maupun kerugian.
+6. Pendapatan usaha utama lain
+a. Pendapatan dari pinjaman Qardh diakui pada saat diterima dari
+nasabah.
+b. Pendapatan lain.
+7. Hak pihak ketiga atas bagi hasil
+Hak pihak ketiga atas bagi hasil diakui sebagai pengurang pendapatan
+yang merupakan porsi Bank sebagai mudharib.
+
+E.
+
+Ilustrasi Jurnal
+Ilustrasi jurnal mengacu pada ilustrasi jurnal di setiap pos pendapatan dan
+beban yang terkait.
+
+F.
+
+Pengungkapan
+Pengungkapan
+
+mengacu
+
+pada
+
+pengungkapan
+
+pendapatan dan beban yang terkait.
+
+di
+
+masing-masing
+
+pos
+
+- 131 -
+
+BAGIAN XIII
+A.
+
+LAPORAN PERUBAHAN EKUITAS
+
+DEFINISI
+Laporan Perubahan Ekuitas adalah laporan yang menunjukkan perubahan
+ekuitas Bank yang menggambarkan peningkatan atau penurunan aset
+bersih atau kekayaan selama periode pelaporan.
+
+B.
+
+C.
+
+DASAR PENGATURAN
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.101 tentang Penyajian Laporan Keuangan Syariah.
+
+PENJELASAN
+1. Perubahan ekuitas menggambarkan peningkatan atau penurunan aset
+bersih atau kekayaan selama periode pelaporan berdasarkan prinsip
+pengukuran tertentu yang dianut dan harus diungkapkan dalam laporan
+keuangan.
+2. Laporan Perubahan Ekuitas, kecuali perubahan yang berasal dari
+transaksi dengan pemegang saham seperti setoran modal dan
+pembayaran dividen, menggambarkan jumlah keuntungan dan kerugian
+yang berasal dari kegiatan Bank selama periode pelaporan.
+3. Laporan Perubahan Ekuitas Bank antara lain meliputi:
+a. Modal saham, misalnya penambahan modal saham;
+b. Dana Setoran Modal;
+c. Surplus Revaluasi Aset Tetap;
+d. Saldo Laba (Laba Ditahan).
+
+- 132 -
+
+BAGIAN XIV
+A.
+
+LAPORAN ARUS KAS
+
+Definisi
+1.
+
+Laporan arus kas merupakan laporan yang menunjukkan penerimaan
+dan pengeluaran kas Bank selama periode tertentu yang dikelompokkan
+dalam aktivitas operasi, investasi, dan pendanaan.
+
+2.
+
+Aktivitas
+
+operasi
+
+(operating)
+
+adalah
+
+aktivitas
+
+penghasil
+
+utama
+
+pendapatan Bank (principal revenue-producing activities) dan aktivitas
+lain yang bukan merupakan aktivitas investasi dan pendanaan.
+3.
+
+Aktivitas investasi (investing) adalah perolehan dan pelepasan aset
+jangka panjang serta investasi lain yang tidak termasuk setara kas.
+
+4.
+
+Aktivitas pendanaan (financing) adalah aktivitas yang mengakibatkan
+perubahan dalam jumlah serta komposisi modal dan pinjaman Bank.
+
+5.
+
+Kas adalah saldo kas dan rekening giro di Bank Umum.
+
+6.
+
+Setara kas adalah penempatan dana dalam jangka waktu paling lama 3
+(tiga) bulan dan sangat likuid yang dimiliki Bank untuk memenuhi
+komitmen kas jangka pendek.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+SAK lain yang relevan.
+
+Penjelasan
+1.
+
+2.
+
+Kas terdiri atas:
+a.
+
+Kas dan kas dalam valuta asing;
+
+b.
+
+Giro pada bank lain;
+
+c.
+
+Tabungan pada bank lain.
+
+Setara kas, antara lain deposito dengan jangka waktu paling lama 3
+(tiga) bulan.
+
+3.
+
+Informasi tentang arus kas berguna bagi para pengguna Laporan
+Keuangan sebagai dasar untuk menilai kemampuan Bank dalam
+menghasilkan kas dan setara kas serta menilai kebutuhan penggunaan
+arus kas tersebut.
+
+4.
+
+Dalam
+
+mengambil
+
+keputusan
+
+ekonomi,
+
+para
+
+pengguna
+
+Laporan
+
+Keuangan perlu melakukan evaluasi terhadap kemampuan Bank dalam
+menghasilkan kas dan setara kas serta kepastian perolehannya.
+Evaluasi tersebut untuk mengetahui bagaimana Bank menghasilkan
+dan ...
+
+- 133 -
+
+dan menggunakan kas dan setara kas, serta kebutuhan kas dan setara
+kas untuk melaksanakan usaha, melunasi kewajiban, dan membagikan
+bagi hasil kepada pemilik dana/deposan dan membagikan dividen
+kepada pemegang saham.
+5.
+
+Laporan Arus Kas memberikan informasi historis mengenai perubahan
+kas dan setara kas dengan mengklasifikasikan arus kas berdasarkan
+aktivitas operasi, investasi, dan pendanaan selama suatu periode
+akuntansi.
+
+6.
+
+Bank menyajikan arus kas dari aktivitas operasi dengan menggunakan
+metode tidak langsung.
+
+7.
+
+Suatu transaksi tertentu dapat meliputi arus kas yang diklasifikasikan
+ke dalam lebih dari satu aktivitas, sebagai contoh:
+a.
+
+Pelunasan atas pembiayaan yang diterima oleh Bank meliputi
+pokok pembiayaan dan bagi hasil. Bagi hasil merupakan unsur
+yang dapat diklasifikasikan sebagai aktivitas operasi dan pokok
+pembiayaan merupakan unsur yang diklasifikasikan sebagai
+aktivitas pendanaan.
+
+b.
+
+Pinjaman Qardh yang diterima oleh Bank meliputi pokok pinjaman
+dan imbalan yang diberikan (jika ada dan tidak diperjanjikan di
+muka). Imbalan merupakan unsur yang dapat diklasifikasikan
+sebagai aktivitas operasi dan pokok pinjaman merupakan unsur
+yang diklasifikasikan sebagai aktivitas pendanaan.
+
+8.
+
+Arus kas dari aktivitas operasi
+a.
+
+Aktivitas operasi adalah aktivitas penghasil utama pendapatan dan
+aktivitas lain yang bukan merupakan aktivitas investasi dan
+aktivitas pendanaan.
+
+b.
+
+Arus kas dari aktivitas operasi terutama diperoleh dari aktivitas
+penghasil utama pendapatan. Oleh karena itu, arus kas tersebut
+pada umumnya berasal dari transaksi dan peristiwa lain yang
+mempengaruhi laba atau rugi.
+
+c.
+
+Beberapa contoh arus kas dari aktivitas operasi adalah:
+1)
+
+penerimaan angsuran/pelunasan pembiayaan dari nasabah.
+
+2)
+
+pencairan pembiayaan kepada nasabah.
+
+3)
+
+penerimaan kas dari penabung/deposan.
+
+4)
+
+pembayaran kas kepada penabung/deposan.
+
+5)
+
+pembayaran kas kepada dan untuk kepentingan karyawan.
+
+6)
+
+pembayaran kas kepada dan penerimaan kas dari pemasok.
+7) pembayaran ...
+
+- 134 -
+
+7)
+
+pembayaran kas atau restitusi pajak penghasilan, kecuali jika
+dapat diidentifikasikan secara spesifik sebagai bagian dari
+aktivitas pendanaan dan investasi.
+
+9.
+
+Arus kas aktivitas investasi
+a.
+
+Aktivitas investasi adalah aktivitas perolehan dan pelepasan aset
+jangka panjang serta investasi lain yang tidak termasuk setara kas.
+
+b.
+
+Arus kas dari aktivitas investasi mencerminkan pengeluaran kas
+yang telah terjadi untuk sumber daya yang dimaksudkan untuk
+menghasilkan pendapatan dan arus kas masa depan.
+
+c.
+
+Beberapa contoh arus kas dari aktivitas investasi adalah:
+1)
+
+Pembayaran kas untuk membeli aset tetap, aset tak berwujud,
+dan aset tidak lancar lain.
+
+2)
+
+Penerimaan kas dari penjualan aset tetap, aset tak berwujud,
+dan aset tidak lancar lain.
+
+10. Arus kas aktivitas pendanaan
+a.
+
+Aktivitas
+
+pendanaan
+
+perubahan
+
+dalam
+
+adalah
+
+jumlah
+
+aktivitas
+
+komposisi
+
+yang
+
+mengakibatkan
+
+kontribusi
+
+modal
+
+dan
+
+pinjaman.
+b.
+
+Beberapa contoh arus kas yang berasal dari aktivitas pendanaan
+adalah:
+1)
+
+penerimaan kas dari penerbitan saham.
+
+2)
+
+pembayaran kas kepada pemilik untuk menarik atau menebus
+saham.
+
+c.
+
+3)
+
+penerimaan kas dari penerbitan, pinjaman, dan utang lain.
+
+4)
+
+pembayaran kas untuk melunasi, pinjaman, dan utang lain.
+
+Dividen yang dibayar dapat diklasifikasikan sebagai arus kas
+pendanaan karena merupakan biaya sumber daya keuangan.
+Sebagai alternatif, dividen yang dibayar dapat diklasifikasikan
+sebagai arus kas dari aktivitas operasi dengan maksud untuk
+membantu para pengguna laporan arus kas dalam menilai
+kemampuan Bank membayar dividen dari arus kas operasi.
+
+11. Pajak penghasilan
+a.
+
+Pajak
+
+penghasilan
+
+diklasifikasikan
+
+atas
+
+sebagai
+
+pendapatan
+aktivitas
+
+yang
+
+diterima
+
+dapat
+
+operasi,
+
+investasi,
+
+atau
+
+pendanaan.
+b.
+
+Pajak penghasilan biasanya diklasifikasikan sebagai arus kas dari
+aktivitas operasi.
+c. Apabila ...
+
+- 135 -
+
+c.
+
+Apabila arus kas pajak dialokasikan pada lebih satu jenis aktivitas,
+maka jumlah keseluruhan pajak yang dibayar harus diungkapkan.
+
+12. Transaksi non kas
+a.
+
+Bank mengeluarkan transaksi investasi dan pendanaan yang tidak
+memerlukan penggunaan kas atau setara kas dari Laporan Arus
+Kas. Bank mengungkapkan transaksi tersebut dalam Laporan
+Keuangan sehingga memberikan semua informasi yang relevan
+mengenai aktivitas investasi dan pendanaan tersebut.
+
+b.
+
+Banyak aktivitas investasi dan pendanaan yang tidak mempunyai
+dampak
+
+langsung
+
+mempengaruhi
+
+terhadap
+
+struktur
+
+arus
+
+aset
+
+kas
+
+dan
+
+saat
+modal
+
+ini
+
+meskipun
+
+Bank.
+
+Tidak
+
+dimasukkannya transaksi non kas dalam Laporan Arus Kas adalah
+konsisten dengan tujuan Laporan Arus Kas sebab transaksi
+tersebut tidak mempengaruhi arus kas dalam periode berjalan.
+c.
+
+Contoh transaksi non kas adalah:
+1)
+
+perolehan aset secara utang atau melalui sewa pembiayaan.
+
+2)
+
+akuisisi suatu entitas melalui emisi saham.
+
+3)
+
+konversi utang menjadi modal.
+
+- 144 -
+
+BAGIAN XVIII CATATAN ATAS LAPORAN KEUANGAN
+A.
+
+PENDAHULUAN
+1.
+
+Catatan atas laporan keuangan merupakan bagian tak terpisahkan dari
+laporan keuangan Bank. Catatan atas laporan keuangan memuat
+penjelasan mengenai gambaran umum Bank, ikhtisar kebijakan
+akuntansi, penjelasan pos-pos laporan keuangan, dan informasi
+penting lainnya.
+
+2.
+
+Catatan atas laporan keuangan harus disajikan secara sistematis.
+Setiap pos dalam neraca, laporan laba rugi, laporan perubahan ekuitas,
+laporan arus kas, laporan rekonsiliasi pendapatan dan bagi hasil,
+laporan sumber dan penyaluran dana zakat, dan laporan sumber dan
+penggunaan dana kebajikan harus berkaitan dengan informasi yang
+ada dalam catatan atas laporan keuangan.
+
+3.
+
+Pedoman ini mengatur hal-hal yang harus diungkapkan namun tidak
+terbatas pada unsur-unsur yang diuraikan dalam bagian ini.
+
+4.
+
+Secara umum, catatan atas laporan keuangan mengungkapkan:
+a.
+
+Informasi tentang dasar penyusunan laporan keuangan dan
+kebijakan
+
+akuntansi
+
+yang
+
+dipilih
+
+dan
+
+diterapkan
+
+terhadap
+
+peristiwa dan transaksi yang penting;
+b.
+
+Informasi yang diwajibkan dalam SAK ETAP tetapi tidak disajikan
+dalam neraca, laporan laba rugi, laporan perubahan ekuitas,
+laporan arus kas, laporan rekonsiliasi pendapatan dan bagi hasil,
+laporan sumber dan penyaluran dana zakat, dan laporan sumber
+dan penggunaan dana kebajikan, misalnya subklasifikasi pos-pos
+tertentu;
+
+c.
+
+Informasi tambahan yang tidak disajikan dalam neraca, laporan
+laba rugi, laporan perubahan ekuitas, laporan arus kas, laporan
+rekonsiliasi pendapatan dan bagi hasil, laporan sumber dan
+penyaluran dana zakat, dan laporan sumber dan penggunaan dana
+kebajikan tetapi diperlukan dalam rangka penyajian secara wajar;
+
+d.
+
+Untuk pos-pos yang nilainya material, harus dirinci dan dijelaskan
+dalam catatan atas laporan keuangan. Sedangkan untuk pos-pos
+yang bersifat khusus harus dirinci dan dijelaskan pada catatan
+atas laporan keuangan tanpa mempertimbangkan materialitasnya;
+
+e. Untuk ...
+
+- 145 -
+
+e.
+
+Untuk pos yang merupakan hasil penggabungan beberapa pos
+sejenis dirinci dan dijelaskan sifat dari unsur utamanya dalam
+catatan atas laporan keuangan.
+
+5.
+
+Catatan atas laporan keuangan yang terkait dengan pembiayaan,
+simpanan, pendapatan, dan beban harus menunjukkan secara terpisah
+jumlah dari setiap jenis transaksi dan saldo dengan direksi, pegawai,
+komisaris,
+
+pemegang
+
+saham,
+
+dan
+
+pihak-pihak
+
+yang
+
+mempunyai
+
+hubungan istimewa dengan Bank.
+6.
+
+Dalam rangka membantu pengguna laporan keuangan memahami dan
+membandingkannya dengan laporan keuangan Bank lain, catatan atas
+laporan keuangan umumnya disajikan dengan urutan sebagai berikut:
+a.
+
+pengungkapan
+
+mengenai
+
+dasar
+
+pengukuran
+
+dan
+
+kebijakan
+
+akuntansi yang diterapkan.
+b.
+
+informasi pendukung pos-pos laporan keuangan sesuai urutan
+sebagaimana pos-pos tersebut disajikan dalam laporan keuangan
+dan urutan penyajian komponen laporan keuangan.
+
+c.
+
+pengungkapan
+
+lain
+
+termasuk
+
+kontinjensi,
+
+komitmen,
+
+dan
+
+pengungkapan keuangan lain serta pengungkapan yang bersifat
+non-keuangan.
+B.
+
+C.
+
+DASAR PENGATURAN
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.101 tentang Penyajian Laporan Keuangan Syariah.
+
+PENJELASAN
+1.
+
+SAK ETAP dimaksudkan agar laporan keuangan menyajikan secara
+wajar posisi keuangan, kinerja, arus kas dan kegiatan keuangan yang
+dilakukan oleh Bank sehingga tujuan laporan keuangan tersebut dapat
+tercapai. SAK ETAP mungkin tidak mengatur pengungkapan informasi
+tertentu padahal pengungkapan informasi tersebut diperlukan guna
+menyajikan laporan keuangan secara wajar. Dalam hal tersebut maka
+Bank harus memberikan tambahan pengungkapan informasi yang
+relevan sehingga laporan keuangan dapat disajikan secara wajar.
+
+2.
+
+Pada beberapa kasus, informasi naratif yang disajikan pada laporan
+keuangan periode sebelumnya masih relevan untuk diungkapkan pada
+periode berjalan. Misalnya, rincian tentang sengketa hukum yang
+dihadapi ...
+
+- 146 -
+
+dihadapi, yang hasil akhirnya belum diketahui secara pasti pada
+periode sebelumnya dan masih dalam proses penyelesaian, perlu
+diungkapkan kembali pada periode berjalan. Pengguna laporan akan
+memperoleh manfaat dari informasi adanya ketidakpastian pada
+tanggal neraca sebelumnya dan langkah-langkah yang telah dilakukan
+pada periode berjalan untuk mengatasi ketidakpastian tersebut.
+3.
+
+Terdapat suatu keadaan ketika reklasifikasi guna menjaga daya
+banding informasi komparatif dengan informasi pada periode berjalan
+tidak praktis dilakukan, misalnya pada periode sebelumnya data
+dikumpulkan
+
+sedemikian
+
+rupa
+
+sehingga
+
+tidak
+
+memungkinkan
+
+dilakukan reklasifikasi serta tidak praktis untuk menciptakan kembali
+informasi tersebut. Dalam keadaan demikian maka sifat penyesuaian
+terhadap informasi komparatif yang seharusnya dilakukan harus
+diungkapkan.
+4.
+
+Dalam keadaan sangat luar biasa, Bank mungkin terpaksa atau
+memutuskan untuk mengubah tanggal neracanya. Dalam kasus seperti
+ini, pengguna laporan keuangan perlu mengetahui bahwa jumlah yang
+disajikan pada periode berjalan dan jumlah komparatif tidak dapat
+dibandingkan dan alasan perubahan tanggal neraca diungkapkan.
+
+5.
+
+Rincian yang tercakup dalam subklasifikasi, di neraca atau di catatan
+atas laporan keuangan, bergantung pada persyaratan dari SAK ETAP
+dan materialitas jumlah pos yang bersangkutan. Pertimbangan apakah
+pos-pos tambahan disajikan secara terpisah didasarkan atas penilaian
+dari:
+
+6.
+
+a.
+
+sifat, likuiditas dan materialitas aset;
+
+b.
+
+fungsi pos-pos tersebut;
+
+c.
+
+jumlah, sifat dan jangka waktu kewajiban.
+
+Catatan atas laporan keuangan meliputi penjelasan naratif atau rincian
+jumlah yang tertera
+
+dalam neraca, laporan laba rugi,
+
+laporan
+
+perubahan ekuitas, laporan arus kas, laporan rekonsiliasi pendapatan
+dan bagi hasil, laporan sumber dan penyaluran dana zakat, dan
+laporan sumber dan penggunaan dana kebajikan, serta informasi
+tambahan seperti kewajiban komitmen. Catatan atas laporan keuangan
+juga mencakup informasi yang diharuskan dan informasi lainnya yang
+perlu
+
+untuk
+
+diungkapkan
+
+dalam
+
+SAK
+
+serta
+
+pengungkapan-
+
+pengungkapan lain yang diperlukan untuk menghasilkan penyajian
+laporan keuangan secara wajar.
+7. Dalam ...
+
+- 147 -
+
+7.
+
+Dalam rangka membantu pengguna laporan memahami laporan
+keuangan dan membandingkannya dengan laporan keuangan Bank
+lain, catatan atas laporan keuangan umumnya disajikan dengan
+urutan sebagai berikut:
+a.
+
+pengungkapan
+
+mengenai
+
+dasar
+
+pengukuran
+
+dan
+
+kebijakan
+
+akuntansi yang diterapkan;
+b.
+
+informasi pendukung pos-pos laporan keuangan sesuai urutan
+sebagaimana pos-pos tersebut disajikan dalam laporan keuangan
+dan urutan penyajian komponen laporan keuangan;
+
+c.
+
+pengungkapan
+keuangan
+
+lain
+
+lainnya
+
+termasuk
+serta
+
+komitmen
+
+dan
+
+pengungkapan
+
+pengungkapan
+
+yang
+
+bersifat
+
+non
+
+keuangan.
+Sistematika struktur dalam catatan atas laporan keuangan agar tetap
+dipertahankan sepanjang hal tersebut praktis untuk dilaksanakan.
+8.
+
+Pengguna laporan perlu mengetahui dasar pengukuran yang digunakan
+(nilai historis, nilai pasar, nilai realisasi, nilai wajar, atau nilai
+sekarang) sebagai dasar dalam penyiapan laporan keuangan. Apabila
+lebih dari satu dasar pengukuran digunakan dalam laporan keuangan,
+maka
+
+informasi
+
+yang
+
+disajikan
+
+mengindikasikan
+
+aset
+
+dan
+
+pengukuran
+kebijakan
+
+tersebut.
+akuntansi
+
+cukup
+
+kewajiban
+
+Selanjutnya,
+tertentu
+
+memadai
+
+yang
+
+dalam
+
+harus
+
+untuk
+
+dapat
+
+menggunakan
+
+dasar
+
+menentukan
+
+diungkapkan,
+
+apakah
+
+manajemen
+
+mempertimbangkan apakah pengungkapan tersebut akan membantu
+pengguna
+
+laporan
+
+untuk
+
+memahami
+
+bagaimana
+
+transaksi
+
+dan
+
+peristiwa tercermin di laporan laba rugi dan neraca. Kebijakan
+akuntansi meliputi namun tidak terbatas pada hal-hal sebagai berikut:
+a.
+
+pengakuan pendapatan dari penyaluran pembiayaan dan distribusi
+bagi hasil;
+
+b.
+
+pengakuan agunan yang diambil alih;
+
+c.
+
+pengakuan beban termasuk metode penyusutan atau amortisasi
+aset berwujud dan aset tidak berwujud;
+
+d.
+
+sewa;
+
+e.
+
+pajak;
+
+f.
+
+penyisihan;
+
+g.
+
+imbalan kerja;
+
+h.
+
+definisi kas dan setara kas.
+D. UNSUR ...
+
+- 148 -
+
+D.
+
+UNSUR-UNSUR
+1.
+
+Gambaran Umum Bank
+Hal-hal yang harus diungkapkan antara lain:
+a.
+
+pendirian;
+
+b.
+
+riwayat ringkas;
+
+c.
+
+nomor dan tanggal akta pendirian serta perubahan terakhir,
+pengesahan Departemen Hukum dan Hak Asasi Manusia dan/atau
+nomor dan tanggal Berita Negara yang bersangkutan;
+
+d.
+
+bidang usaha utama sesuai anggaran dasar dan kegiatan utama
+pada periode pelaporan;
+
+e.
+
+tempat kedudukan dan lokasi utama kegiatan usaha;
+
+f.
+
+tanggal mulai beroperasi, apabila Bank melakukan ekspansi atau
+penciutan usaha secara signifikan pada periode laporan yang
+disajikan, harus disebutkan saat dimulainya ekspansi atau
+penciutan usaha dan kapasitas usaha;
+
+g.
+
+kepemilikan, berupa nama pemilik, besaran, dan komposisi
+kepemilikan;
+
+h.
+
+Direksi, Komisaris, Dewan Pengawas Syariah dan karyawan:
+1)
+
+Nama anggota direksi, dewan komisaris dan dewan pengawas
+syariah.
+
+2)
+
+Jumlah karyawan pada akhir periode atau rata-rata jumlah
+karyawan selama periode yang bersangkutan.
+
+2.
+
+Ikhtisar Kebijakan Akuntansi
+Dalam bagian ini harus diungkapkan hal-hal sebagai berikut:
+a.
+
+pernyataan bahwa Bank menggunakan SAK ETAP;
+
+b.
+
+dasar pengukuran dan penyusunan laporan keuangan, antara lain:
+1)
+
+dasar pengukuran laporan keuangan yaitu berdasarkan biaya
+historis, biaya kini, nilai realisasi, nilai sekarang dan nilai
+wajar;
+
+2)
+
+dasar penyusunan laporan keuangan yaitu dasar akrual
+kecuali untuk laporan arus kas dan laporan rekonsiliasi bagi
+hasil;
+
+3)
+3.
+
+kebijakan akuntansi tertentu.
+
+Kebijakan akuntansi meliputi namun tidak terbatas pada hal-hal
+berikut:
+a.
+
+konsep dasar pengukuran;
+
+b.
+
+pembiayaan yang diberikan;
+c. penyisihan ...
+
+- 149 -
+
+4.
+
+c.
+
+penyisihan kerugian pembiayaan;
+
+d.
+
+agunan yang diambil alih;
+
+e.
+
+kas dan setara kas;
+
+f.
+
+aset tetap dan inventaris serta penyusutan;
+
+g.
+
+pengakuan pendapatan penyaluran pembiayaan;
+
+h.
+
+pengakuan distribusi bagi hasil;
+
+i.
+
+Pajak penghasilan;
+
+j.
+
+Imbalan kerja.
+
+Penjelasan
+
+atas
+
+Pos-pos
+
+Laporan
+
+Keuangan
+
+disusun
+
+dengan
+
+memperhatikan urutan penyajian neraca, laporan laba rugi, laporan
+perubahan ekuitas, laporan arus kas, laporan rekonsiliasi pendapatan
+dan bagi hasil, laporan sumber dan penyaluran dana zakat, dan
+laporan sumber dan penggunaan dana kebajikan serta informasi
+tambahan sesuai dengan ketentuan pengungkapan pada setiap pos
+pada bagian yang terkait, ditambah dengan pengungkapan:
+a.
+
+Transaksi hubungan istimewa
+1)
+
+Rincian jumlah masing-masing pos aset, kewajiban, dan
+syirkah temporer, penghasilan, dan beban kepada pihak yang
+mempunyai
+
+hubungan
+
+istimewa
+
+beserta
+
+persentasenya
+
+terhadap total aset, kewajiban, dana syirkah temporer,
+penghasilan, dan beban.
+2)
+
+Penjelasan
+
+transaksi
+
+yang
+
+tidak
+
+berhubungan
+
+dengan
+
+kegiatan usaha utama dan jumlah utang/piutang sehubungan
+dengan transaksi tersebut.
+3)
+
+Sifat
+
+hubungan,
+
+jenis,
+
+dan
+
+unsur
+
+transaksi
+
+hubungan
+
+transaksi
+
+serta
+
+pernyataan
+
+istimewa.
+Kebijakan
+
+syarat
+
+apakah
+
+penerapan kebijakan syarat tersebut sama dengan kebijakan
+syarat untuk transaksi dengan pihak lain yang tidak memiliki
+hubungan istimewa.
+4)
+
+Alasan dan dasar dilakukannya pembentukan penyisihan
+kerugian piutang yang terkait dengan hubungan istimewa.
+
+b.
+
+Perubahan akuntansi dan koreksi kesalahan
+1)
+
+Perubahan estimasi akuntansi
+a) Hakikat dan alasan perubahan estimasi akuntansi.
+b) Jumlah perubahan estimasi yang mempengaruhi periode
+berjalan.
+c) Pengaruh ...
+
+- 150 -
+
+c)
+
+Pengaruh estimasi terhadap periode mendatang.
+Apabila
+
+penghitungan
+
+mendatang
+
+tidak
+
+pengaruh
+
+praktis,
+
+terhadap
+
+kenyataan
+
+periode
+
+tersebut
+
+harus
+
+diungkapkan.
+2)
+
+Perubahan kebijakan akuntansi
+a) Hakikat, alasan, dan tujuan dilakukannya perubahan.
+b) Jumlah
+
+penyesuaian
+
+perubahan
+
+kebijakan
+
+akuntansi
+
+terhadap periode berjalan dan periode sebelumnya yang
+disajikan kembali.
+c)
+
+Jumlah penyesuaian yang berhubungan dengan masa
+sebelum
+
+periode
+
+yang
+
+tercakup
+
+dalam
+
+informasi
+
+komparatif.
+d) Kenyataan bahwa informasi komparatif telah dinyatakan
+kembali
+
+atau
+
+kenyataan
+
+bahwa
+
+untuk
+
+menyatakan
+
+kembali informasi komparatif dianggap tidak praktis.
+3)
+
+Kesalahan
+a) Hakikat kesalahan.
+b) Jumlah koreksi untuk periode berjalan dan periodeperiode sebelumnya.
+c)
+
+Jumlah koreksi yang berhubungan dengan periode-periode
+sebelum
+
+periode
+
+yang
+
+tercakup
+
+dalam
+
+informasi
+
+komparatif.
+d) Kenyataan bahwa informasi komparatif telah dinyatakan
+kembali atau kenyataan bahwa informasi komparatif tidak
+praktis untuk dinyatakan kembali.
+c.
+
+Komitmen dan kontinjensi
+1.
+
+Pengungkapan komitmen
+a)
+
+Kontrak/perjanjian yang memerlukan penggunaan dana
+di
+
+masa
+
+yang
+
+akan
+
+datang,
+
+misalnya
+
+perjanjian
+
+pemberian pembiayaan dan pinjaman:
+
+b)
+
+1)
+
+pihak-pihak yang terkait dalam perjanjian.
+
+2)
+
+periode berlakunya komitmen.
+
+3)
+
+nilai keseluruhan dan bagian yang telah direalisasi.
+
+4)
+
+sanksi-sanksi.
+
+Uraian mengenai sifat, jenis, jumlah, dan batasanbatasan.
+
+2.
+
+Pengungkapan kontinjensi
+a) untuk ...
+
+- 151 -
+
+a)
+
+Untuk perkara/sengketa hukum:
+1)
+
+pihak-pihak yang terkait.
+
+2)
+
+jumlah yang diperkarakan.
+
+3)
+
+latar belakang, isi dan status perkara dan pendapat
+hukum.
+
+4)
+
+probabilitas
+
+risiko
+
+diungkapkan
+
+dari
+
+peristiwa
+
+berdasarkan
+
+kontinjensi
+
+prinsip-prinsip
+
+manajemen risiko.
+b)
+
+Untuk peraturan pemerintah yang mengikat, seperti
+masalah ketenagakerjaan, diungkapkan uraian singkat
+tentang peraturan dan dampaknya.
+
+c)
+
+Kemungkinan kewajiban pajak tambahan
+1)
+
+Jenis ketetapan/tagihan pajak, jenis pajak, tahun
+pajak serta jumlah pokok dan denda/bunganya.
+
+2)
+
+Sikap
+
+Bank
+
+terhadap
+
+ketetapan/tagihan
+
+pajak,
+
+misalnya keberatan, banding dan sebagainya.
+d)
+
+Informasi penting lainnya
+Informasi penting lainnya antara lain sifat, jenis, jumlah,
+dan dampak dari peristiwa atau keadaan tertentu yang
+mempengaruhi
+
+kinerja
+
+Bank,
+
+seperti
+
+peristiwa
+
+atau
+
+keadaan yang mempengaruhi kelangsungan hidupnya.
+e)
+
+Peristiwa setelah tanggal neraca
+1)
+
+Uraian peristiwa, misalnya tanggal terjadinya, sifat
+peristiwa.
+
+2)
+
+Jumlah moneter yang mempengaruhi akun-akun
+laporan keuangan.
+
+f)
+
+Perkembangan terakhir SAK ETAP dan peraturan lainnya
+1)
+
+Penjelasan mengenai SAK ETAP dan peraturan baru
+yang akan diterapkan dan mempengaruhi aktivitas
+Bank.
+
+2)
+
+Estimasi
+
+dampak
+
+penerapan
+
+SAK
+
+ETAP
+
+dan
+
+peraturan baru tersebut.
+g)
+
+Reklasifikasi
+Harus diungkapkan antara lain mengenai sifat, jumlah,
+dan alasan reklasifikasi untuk setiap pos dalam tahun
+buku sebelum tahun buku terakhir yang disajikan dalam
+rangka laporan keuangan komparatif.
+
+- 152 -
+
+Salinan sesuai dengalinya
+
+Ditetapkan di Jakarta
+
+Direktur Hukum 1,
+
+Pada tanggal 26 Maret 2015
+
+Ttd.
+
+KEPALA EKSEKUTIF PENGAWAS PERBANKAN
+OTORITAS JASA KEUANGAN,
+
+Sudarmaji
+
+Ttd.
+Salinan sesuai dengan aslinya
+Direktur Hukum I
+Departemen Hukum,
+
+NELSON TAMPUBOLON
+
+Ttd..
+Ttd.Ttd.
+Sudarmaji
+
+TAMBAHAN BERITA NEGARA REPUBLIK INDONESIA TAHUN 2015 NOMOR

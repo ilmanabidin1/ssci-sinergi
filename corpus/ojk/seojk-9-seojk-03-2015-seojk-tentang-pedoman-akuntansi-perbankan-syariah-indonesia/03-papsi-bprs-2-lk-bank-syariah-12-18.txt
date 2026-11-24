@@ -1,0 +1,637 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 2 LK Bank Syariah (12-18).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 12 -
+
+BAGIAN II LAPORAN KEUANGAN BANK SYARIAH
+II.1. KETENTUAN UMUM
+A.
+
+Tujuan Laporan Keuangan
+Laporan Keuangan disajikan untuk:
+1.
+
+memberikan informasi mengenai posisi keuangan, kinerja keuangan,
+perubahan ekuitas, arus kas dan informasi lainnya yang bermanfaat
+bagi pengguna Laporan Keuangan dalam rangka membuat keputusan
+ekonomi serta menunjukkan pertanggungjawaban manajemen atas
+penggunaan sumber daya yang dipercayakan kepada manajemen;
+
+2.
+
+meningkatkan kepatuhan terhadap pemenuhan Prinsip Syariah dalam
+semua transaksi dan kegiatan usaha;
+
+3.
+
+memberikan
+
+informasi
+
+kepatuhan
+
+terhadap
+
+pemenuhan
+
+Prinsip
+
+Syariah, serta informasi aset, kewajiban, pendapatan dan beban yang
+tidak sesuai dengan Prinsip Syariah, bila ada, dan bagaimana perolehan
+dan penggunaannya;
+4.
+
+memberikan
+
+informasi
+
+mengenai
+
+pemenuhan
+
+tanggung
+
+jawab
+
+manajemen
+
+terhadap
+
+amanah
+
+dalam
+
+mengamankan
+
+dana,
+
+menginvestasikannya pada tingkat keuntungan yang layak;
+5.
+
+memberikan informasi tingkat keuntungan investasi yang diperoleh
+penanam modal dan pemilik dana syirkah temporer; dan
+
+6.
+
+memberikan informasi pemenuhan kewajiban fungsi sosial, termasuk
+penerimaan
+
+dan penyaluran dana zakat, dan juga pengelolaan dana
+
+infak, sedekah, dan wakaf.
+B.
+
+Tanggung Jawab atas Laporan Keuangan
+Direksi Bank bertanggung jawab atas penyusunan dan penyajian Laporan
+Keuangan.
+
+C.
+
+Komponen LaporanKeuangan
+Komponen Laporan Keuangan terdiri dari:
+1.
+
+Neraca;
+
+2.
+
+Laporan Laba Rugi;
+
+3.
+
+Laporan Perubahan Ekuitas;
+
+4.
+
+Laporan Arus Kas;
+5. Laporan ...
+
+- 13 -
+
+D.
+
+5.
+
+Laporan Rekonsiliasi Pendapatan dan Bagi Hasil;
+
+6.
+
+Laporan Sumber dan Penyaluran Dana Zakat;
+
+7.
+
+Laporan Sumber dan Penggunaan Dana Kebajikan; dan
+
+8.
+
+Catatan atas Laporan Keuangan
+
+Bahasa Laporan Keuangan
+Laporan Keuangan harus disusun dalam Bahasa Indonesia.
+
+E.
+
+Mata Uang Pelaporan
+1.
+
+Mata
+
+uang
+
+pelaporan
+
+adalah
+
+Rupiah.
+
+Apabila
+
+transaksi
+
+Bank
+
+menggunakan mata uang selain Rupiah, maka nilai mata uang dalam
+pelaporan
+
+harus
+
+dikonversi
+
+dalam
+
+mata
+
+uang
+
+Rupiah
+
+dengan
+
+menggunakan kurs yang ditetapkan oleh Bank Indonesia.
+2.
+
+Keuntungan atau kerugian dalam periode berjalan yang terkait dengan
+transaksi dalam mata uang selain Rupiah dinilai dengan menggunakan
+kurs yang ditetapkan oleh Bank Indonesia.
+
+F.
+
+Kebijakan Akuntansi
+1.
+
+Kebijakan akuntansi Bank harus mencerminkan prinsip kehati-hatian
+dan mencakup semua hal yang material serta sesuai dengan ketentuan
+dalam SAK ETAP dan PSAK Syariah.
+
+2.
+
+Dalam hal SAK ETAP dan PSAK Syariah belum mengatur masalah
+pengakuan, pengukuran, penyajian atau pengungkapan dari suatu
+transaksi
+
+atau
+
+peristiwa,
+
+maka
+
+manajemen
+
+harus
+
+menetapkan
+
+kebijakan untuk memastikan bahwa Laporan Keuangan menyajikan
+informasi yang:
+a.
+
+relevan terhadap kebutuhan pengguna laporan dalam pengambilan
+keputusan;
+
+b.
+
+dapat diandalkan, yang:
+1) mencerminkan
+
+kejujuran
+
+penyajian
+
+kinerja
+
+dan
+
+posisi
+
+keuangan Bank;
+2) menggambarkan substansi ekonomi dari suatu kejadian atau
+transaksi dan tidak semata-mata bentuk hukumnya;
+3) netral, yaitu bebas dari keberpihakan;
+4) mencerminkan kehati-hatian; dan
+5) mencakup semua hal yang material.
+3. Dalam ...
+
+- 14 -
+
+3.
+
+Dalam menetapkan kebijakan akuntansi harus mempertimbangkan:
+a.
+
+persyaratan dan panduan dalam SAK ETAP dan PSAK Syariah
+yang berhubungan dengan hal yang serupa dan terkait;
+
+b.
+
+definisi,
+
+kriteria
+
+pengakuan
+
+kewajiban,
+
+pendapatan,
+
+(mempunyai
+
+dampak
+
+dan
+
+konsep
+
+pengukuran
+
+aset,
+
+dan
+
+beban
+
+dalam
+
+prinsip
+
+pervasif
+
+manfaat
+
+luas
+
+bagi
+
+pihak-pihak
+
+yang
+
+SAK
+
+non-ETAP
+
+yang
+
+berkepentingan) dari SAK ETAP; dan
+c.
+
+persyaratan
+
+serta
+
+panduan
+
+dalam
+
+berhubungan dengan hal yang serupa dan terkait.
+G.
+
+Penyajian
+1.
+
+Laporan Keuangan harus menyajikan secara wajar posisi keuangan,
+kinerja
+
+keuangan,
+
+dan
+
+perubahan
+
+posisi
+
+keuangan
+
+disertai
+
+pengungkapan yang diharuskan sesuai dengan ketentuan yang berlaku.
+2.
+
+Aset disajikan berdasarkan karakteristiknya menurut urutan likuiditas,
+kewajiban disajikan menurut urutan jatuh temponya, dana syirkah
+temporer disajikan dalam unsur tersendiri.
+
+3.
+
+Saldo transaksi sehubungan dengan kegiatan operasi normal Bank
+disajikan dan diungkapkan secara terpisah antara pihak-pihak berelasi
+dan pihak-pihak tidak berelasi. Termasuk pihak berelasi antara lain
+pihak terkait sebagaimana dimaksud dalam ketentuan yang berlaku
+mengenai batas maksimum penyaluran dana.
+
+4.
+
+Laporan laba rugi menggambarkan pendapatan dan beban menurut
+karakteristiknya yang dikelompokkan secara berjenjang (multiple step)
+dari kegiatan utama Bank dan kegiatan lainnya.
+
+5.
+
+Catatan atas laporan keuangan harus disajikan secara sistematis
+dengan urutan penyajian sesuai komponen utamanya yang merupakan
+bagian yang tidak terpisahkan dari Laporan Keuangan. Informasi dalam
+catatan atas Laporan Keuangan berkaitan dengan pos-pos dalam
+Neraca, Laporan Laba Rugi, Laporan Perubahan Ekuitas dan Laporan
+Arus Kas yang sifatnya memberikan penjelasan, baik yang bersifat
+kualitatif maupun kuantitatif, termasuk komitmen dan kontinjensi
+serta transaksi-transaksi lainnya.
+
+6.
+
+Dalam
+
+catatan
+
+atas
+
+Laporan
+
+Keuangan
+
+tidak
+
+diperkenankan
+
+menggunakan ekspresi kualitatif seperti kata “sebagian besar” untuk
+menggambarkan bagian dari suatu jumlah tetapi harus dinyatakan
+dalam ...
+
+- 15 -
+
+dalam jumlah nominal atau persentase.
+7.
+
+Pada setiap lembar Neraca, Laporan Laba Rugi, Laporan Perubahan
+Ekuitas, dan Laporan Arus Kas harus diberi pernyataan bahwa “catatan
+atas Laporan Keuangan merupakan bagian tak terpisahkan dari
+Laporan Keuangan”.
+
+8.
+
+Selain hal-hal tersebut di atas, penyajian Laporan Keuangan wajib
+mengikuti ketentuan yang berlaku.
+
+H.
+
+Perubahan Akuntansi
+1.
+
+Perubahan estimasi akuntansi
+a.
+
+Estimasi akuntansi dapat diubah apabila terdapat perubahan
+jumlah tercatat aset dan kewajiban atau jumlah pemanfaatan
+periodik aset yang berasal dari pengujian status saat ini dan
+ekspektasi manfaat akan datang dari aset dan kewajiban.
+
+b.
+2.
+
+Perubahan estimasi akuntansi diterapkan secara prospektif.
+
+Perubahan kebijakan akuntansi
+a.
+
+Kebijakan akuntansi dapat diubah apabila:
+1) dipersyaratkan oleh SAK ETAP, yaitu:
+a) dampak perubahan kebijakan akuntansi harus mengikuti
+ketentuan transisi dalam SAK ETAP.
+b) dalam hal tidak diatur ketentuan transisi dalam SAK ETAP,
+maka dampak perubahan kebijakan akuntansi diterapkan
+secara retrospektif; atau
+2) akan menghasilkan informasi yang lebih relevan dan andal
+sebagai dampak perubahan kebijakan akuntansi diterapkan
+secara retrospektif.
+
+b.
+
+Dampak retrospektif perubahan kebijakan akuntansi dilakukan
+dengan menyajikan ulang seluruh periode sajian dan melaporkan
+dampaknya terhadap masa sebelum periode sajian. Periode sajian
+adalah periode yang wajib disajikan dalam penyusunan Laporan
+Keuangan yang umumnya meliputi 2 (dua) periode laporan
+keuangan terakhir secara komparatif.
+
+c.
+
+Dalam hal perlakuan secara retrospektif tidak praktis, setelah
+melakukan semua usaha yang wajar/rasional, maka perubahan
+kebijakan akuntansi tersebut diterapkan pada tanggal kebijakan
+tersebut dimungkinkan dapat diberlakukan.
+3. Kesalahan ...
+
+- 16 -
+
+3.
+
+Kesalahan periode lalu
+Koreksi kesalahan periode lalu dilakukan secara retrospektif dengan
+melakukan penyajian ulang seluruh periode sajian dan melaporkan
+dampaknya terhadap masa sebelum periode sajian.
+
+I.
+
+Konsistensi Penyajian
+1.
+
+Penyajian dan klasifikasi pos-pos dalam Laporan Keuangan antar
+periode harus konsisten, kecuali apabila:
+a.
+
+terjadi perubahan yang signifikan terhadap sifat operasi Bank,
+sepanjang dimungkinkan oleh ketentuan yang berlaku;
+
+b.
+
+terjadi perubahan yang bertujuan menghasilkan penyajian yang
+lebih baik sesuai kriteria pemilihan dan penerapan kebijakan
+akuntansi; atau
+
+c.
+2.
+
+dipersyaratkan oleh SAK ETAP.
+
+Apabila penyajian atau klasifikasi pos-pos dalam Laporan Keuangan
+diubah, maka penyajian periode sebelumnya perlu direklasifikasi untuk
+memastikan daya banding. Selain itu, alasan reklasifikasi tersebut juga
+harus diungkapkan. Dalam hal reklasifikasi dianggap tidak praktis
+maka cukup diungkapkan alasannya.
+
+J.
+
+Materialitas dan Agregasi
+1.
+
+Penyajian Laporan Keuangan didasarkan pada konsep materialitas.
+
+2.
+
+Pos-pos yang jumlahnya material disajikan tersendiri dalam Laporan
+Keuangan,
+
+sedangkan
+
+yang
+
+jumlahnya
+
+tidak
+
+material
+
+dapat
+
+digabungkan sepanjang memiliki sifat atau fungsi yang sejenis.
+3.
+
+Informasi dianggap material apabila kelalaian untuk mencantumkan
+(ommission) atau kesalahan dalam mencatat (misstatement) informasi
+tersebut dapat mempengaruhi keputusan yang diambil.
+
+K.
+
+Saling Hapus
+1.
+
+Jumlah aset dan kewajiban yang disajikan pada Neraca tidak boleh
+disalinghapuskan dengan kewajiban atau aset lain kecuali secara
+hukum dibenarkan dan saling hapus tersebut mencerminkan prakiraan
+realisasi atau penyelesaian aset atau kewajiban.
+
+2.
+
+Pos-pos pendapatan dan beban tidak boleh disalinghapuskan, kecuali
+apabila
+
+menyangkut
+
+aset
+
+dan
+
+kewajiban
+
+yang
+
+disalinghapuskan
+sebagaimana ...
+
+- 17 -
+
+sebagaimana dimaksud di atas.
+L.
+
+Periode Pelaporan
+1.
+
+Laporan Keuangan wajib disajikan secara tahunan berdasarkan tahun
+takwim.
+
+2.
+
+Dalam hal Bank baru berdiri, Laporan Keuangan dapat disajikan untuk
+periode yang lebih pendek dari satu tahun takwim. Selain itu, untuk
+kepentingan pihak lainnya, Bank dapat membuat dua laporan yaitu
+dalam tahun takwim dan periode efektif dengan mencantumkan:
+a.
+
+alasan penggunaan periode pelaporan selain periode satu tahunan;
+
+b.
+
+fakta bahwa jumlah yang tercantum dalam Neraca, Laporan Laba
+Rugi, Laporan Perubahan Ekuitas, Laporan Arus Kas, Laporan
+Rekonsiliasi Pendapatan dan Bagi Hasil, Laporan Sumber dan
+Penyaluran Dana Zakat, Laporan Sumber dan Penggunaan Dana
+Kebajikan, dan Catatan atas Laporan Keuangan tidak dapat
+dibandingkan.
+
+M. Informasi Komparatif
+1.
+
+Laporan Keuangan tahunan harus disajikan secara komparatif dengan
+periode sebelumnya.
+
+2.
+
+Informasi komparatif yang bersifat naratif dan deskriptif dari Laporan
+Keuangan periode sebelumnya wajib diungkapkan kembali apabila
+relevan untuk pemahaman Laporan Keuangan periode berjalan.
+
+II.2. KETERBATASAN ...
+...
+
+- 18 -
+
+II.2. KETERBATASAN LAPORAN KEUANGAN
+Laporan Keuangan memiliki keterbatasan, antara lain:
+1.
+
+bersifat historis yang menunjukkan transaksi dan peristiwa yang telah
+lampau;
+
+2.
+
+bersifat umum, baik dari sisi informasi maupun manfaat bagi pihak
+pengguna. Biasanya informasi khusus yang dibutuhkan oleh pihak
+tertentu tidak dapat secara langsung dipenuhi semata-mata dari
+Laporan Keuangan saja;
+
+3.
+
+tidak luput dari penggunaan berbagai pertimbangan dan taksiran;
+
+4.
+
+menggunakan pertimbangan materialitas;
+
+5.
+
+lebih menekankan pada penyajian suatu peristiwa atau transaksi
+sesuai substansi dan realitas ekonomi daripada bentuk hukumnya
+(formalitas); dan
+
+6.
+
+adanya berbagai alternatif metode akuntansi yang dapat digunakan
+sehingga
+
+menimbulkan
+
+variasi
+
+dalam
+
+pengukuran
+
+ekonomi dan tingkat kesuksesan antar bank.
+
+sumber
+
+daya

@@ -1,0 +1,193 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 24 Tahun 2024
+Tentang: Kualitas Aset Bank Perekonomian Rakyat Syariah
+Berkas: FAQ POJK 24 Tahun 2024 Kualitas Aset Bank Perekonomian Rakyat Syariah.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/POJK-24-Tahun-2024-Kualitas-Aset-Bank-Perekonomian-Rakyat-Syariah.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/FREQUENTLY ASKED QUESTIONS (FAQ)
+PERATURAN OTORITAS JASA KEUANGAN
+NOMOR 24 TAHUN 2024
+TENTANG
+KUALITAS ASET
+BANK PEREKONOMIAN RAKYAT SYARIAH
+1.
+
+Apa latar belakang penerbitan POJK ini?
+Penyusunan POJK dilatarbelakangi oleh adanya kebutuhan penyelarasan
+dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan
+Penguatan Sektor Keuangan, khususnya mengenai Agunan Yang Diambil Alih
+serta penambahan kegiatan usaha yang diperkenankan, penerbitan standar
+akuntansi keuangan entitas privat yang merupakan pengganti dari standar
+akuntansi keuangan tanpa entitas publik yang akan berlaku 1 Januari 2025,
+dan penyelarasan dengan ketentuan terkini.
+
+2.
+
+Apa saja yang termasuk Aset Produktif?
+Aset Produktif adalah penyediaan dana BPR Syariah dalam mata uang rupiah
+untuk mendapatkan penghasilan, dalam bentuk pembiayaan, surat berharga
+syariah, penempatan pada bank lain, dan penyertaan modal sesuai dengan
+prinsip syariah.
+
+3.
+
+Apa saja yang termasuk Aset Nonproduktif?
+Aset Nonproduktif adalah agunan yang diambil alih, properti terbengkalai, dan
+tagihan BPR Syariah yang timbul akibat pihak lawan tidak memenuhi
+kewajiban kepada BPR Syariah.
+
+4.
+
+Bagaimana penetapan kualitas Aset Produktif yang diberikan oleh lebih
+dari 1 (satu) BPR Syariah?
+BPR Syariah wajib menetapkan kualitas yang sama terhadap Aset Produktif
+yang diberikan oleh lebih dari 1 (satu) BPR Syariah yang digunakan untuk
+membiayai (satu) nasabah atau 1 (satu) proyek atau usaha yang sama, dengan
+ketentuan:
+a. Aset Produktif yang diberikan oleh setiap BPR Syariah dengan jumlah lebih
+dari Rp1.000.000.000,00 (satu miliar rupiah) kepada 1 (satu) nasabah atau
+1 (satu) proyek atau usaha yang sama;
+b. Aset Produktif yang diberikan oleh BPR Syariah dengan jumlah lebih dari
+Rp500.000.000,00
+(lima
+ratus
+juta
+rupiah)
+sampai
+dengan
+Rp1.000.000.000,00 (satu miliar rupiah) kepada 1 (satu) nasabah yang
+merupakan 25 (dua puluh lima) nasabah terbesar BPR Syariah tersebut,
+dan Aset Produktif yang diberikan oleh BPR Syariah lain kepada nasabah
+tersebut lebih dari Rp1.000.000.000,00 (satu miliar rupiah); dan/atau
+c. Aset Produktif yang diberikan berdasarkan perjanjian Pembiayaan bersama
+kepada 1 (satu) nasabah atau 1 (satu) proyek atau usaha yang sama.
+Dalam hal terdapat perbedaan kualitas Aset Produktif, kualitas yang ditetapkan
+oleh setiap BPR Syariah terhadap Aset Produktif wajib mengikuti kualitas yang
+paling rendah.
+
+Page 1 of 3
+
+https://jdih.ojk.go.id
+
+5.
+
+Bagaimana pelaporan BPR Syariah jika menetapkan kualitas yang berbeda
+untuk Aset Produktif yang diberikan kepada 1 nasabah?
+BPR Syariah wajib menyampaikan laporan perbedaan kualitas berupa daftar
+nasabah beserta rincian untuk posisi akhir bulan Maret, bulan Juni, bulan
+September, dan bulan Desember.
+
+6.
+
+Apakah yang dimaksud dengan pihak lawan yang tidak memenuhi
+kewajiban kepada BPR Syariah yang menyebabkan BPR Syariah wajib
+membentuk cadangan 100 (seratus persen)?
+Yang dimaksud dengan pihak lawan antara lain pegawai BPR syariah yang
+melakukan fraud dan memiliki itikad baik untuk mengembalikan aset BPR
+Syariah.
+
+7.
+
+Apakah BPR Syariah diwajibkan melakukan perhitungan dan pembentukan
+CKPN sesuai Peraturan Otoritas Jasa Keuangan ini?
+Ya, mulai 1 Januari 2025 BPR Syariah wajib menghitung dan membentuk
+CKPN sesuai standar akuntansi keuangan yaitu mengacu pada PSAK 459:
+Akuntansi Perbankan Syariah. Hal ini sesuai siaran pers DSAS IAI tanggal 15
+Mei 2024 yang menegaskan bagi entitas yang menggunakan SAK Indonesia
+untuk Entitas Privat sebagai kerangka pelaporan keuangannya maka entitas
+tersebut tetap menggunakan PSAK 459: Akuntansi Perbankan Syariah sebagai
+acuan kebijakan akuntansi untuk penurunan nilai atas aset keuangan yang
+berasal dari transaksi syariah.
+Perhitungan dan pembentukan CKPN menggunakan PSAK 459 mengacu pada
+perhitungan PPKA sebagaimana diatur dalam POJK ini sampai dengan adanya
+standar akuntansi keuangan terkait penurunan nilai untuk aset keuangan
+syariah yang berlaku bagi BPR Syariah.
+
+8.
+
+Bagaimana perhitungan nilai agunan yang dapat diperhitungkan sebagai
+agunan pengurang PPKA paling tinggi 20% (dua puluh persen) yang
+memenuhi kriteria sesuai POJK Kualitas Aset BPR Syariah, yaitu agunan
+lainnya yang dinilai 1 (satu) tahun terakhir oleh penilai independen dengan
+metode penilaian sebagaimana diatur oleh standar penilaian yang berlaku?
+Nilai agunan yang diperhitungkan sebagai pengurang PPKA untuk agunan
+tersebut yaitu menggunakan nilai hasil penilai independen, dalam hal terjadi
+penurunan nilai agunan secara signifikan, nilai agunan yang digunakan adalah
+nilai setelah penyesuaian atas penurunan nilai.
+
+9.
+
+Bagaimana konsekuensi kepemilikan atas aset tetap yang ditetapkan
+sebagai Properti Terbengkalai?
+Dalam hal BPR Syariah telah melakukan upaya penyelesaian terhadap Properti
+Terbengkalai, namun belum dapat diselesaikan dalam jangka waktu 1 (satu)
+tahun, BPR Syariah wajib memperhitungkan Properti Terbengkalai yang
+tercatat pada laporan posisi keuangan sebagai faktor pengurang modal inti BPR
+Syariah dalam perhitungan KPMM sebesar:
+a.
+15% (lima belas persen) dari nilai Properti Terbengkalai yang dimiliki lebih
+dari 1 (satu) tahun sampai dengan 3 (tiga) tahun sejak ditetapkan sebagai
+Properti Terbengkalai;
+
+Page 2 of 3
+
+https://jdih.ojk.go.id
+
+b.
+
+c.
+
+50% (lima puluh persen) dari nilai Properti Terbengkalai yang dimiliki
+lebih dari 3 (tiga) tahun sampai dengan 5 (lima) tahun sejak ditetapkan
+sebagai Properti Terbengkalai; atau
+100% (seratus persen) dari nilai Properti Terbengkalai yang dimiliki lebih
+dari 5 (lima) tahun sejak ditetapkan sebagai Properti Terbengkalai.
+
+10. Apakah BPR Syariah wajib melakukan evaluasi kebijakan Pembiayaan dan
+prosedur Pembiayaan secara berkala?
+Ya, BPR Syariah wajib melakukan evaluasi kebijakan Pembiayaan dan prosedur
+Pembiayaan secara berkala. Untuk menilai kecukupan serta efektivitas proses
+pemberian Pembiayaan, BPR Syariah melaksanakan evaluasi secara berkala
+atas kebijakan Pembiayaan dan prosedur Pembiayaan. Periode pelaksanaan
+evaluasi dilakukan sesuai dengan kebutuhan setiap BPR Syariah dengan
+memperhatikan antara lain:
+a.
+penerbitan ketentuan peraturan perundang-undangan terkini;
+b.
+strategi dan rencana bisnis BPR Syariah; dan/atau
+c.
+kondisi terkini BPR Syariah.
+11. Bagaimana peran Dewan Pengawas Syariah (DPS) terkait dengan kebijakan
+Pembiayaan dan prosedur Pembiayaan?
+Kebijakan Pembiayaan dan prosedur Pembiayaan wajib dievaluasi oleh DPS
+sebelum disetujui oleh Dewan Komisaris dan Direksi. DPS wajib melakukan
+pengawasan efektif terhadap pelaksanaan kebijakan Pembiayaan mencakup
+paling sedikit:
+a.
+mengevaluasi kebijakan Pembiayaan dan prosedur Pembiayaan yang
+terkait dengan pemenuhan Prinsip Syariah;
+b.
+mengevaluasi pertanggungjawaban Direksi atas pelaksanaan kebijakan
+Pembiayaan dan prosedur Pembiayaan yang terkait dengan pemenuhan
+Prinsip Syariah; dan
+c.
+melaporkan hasil pengawasan terhadap pemenuhan prinsip Syariah
+dalam pelaksanaan kebijakan Pembiayaan dan prosedur Pembiayaan oleh
+Direksi kepada Otoritas Jasa Keuangan dalam laporan hasil pengawasan
+DPS sesuai dengan ketentuan Otoritas Jasa Keuangan mengenai tata
+kelola bagi bank pembiayaan rakyat syariah.
+12. Bagaimana tindak lanjut atas kebijakan Pembiayaan dan prosedur
+Pembiayaan yang telah dimiliki BPR Syariah namun belum dievaluasi oleh
+DPS pada saat POJK ini mulai berlaku?
+Pada saat POJK ini mulai berlaku, terhadap kebijakan Pembiayaan dan
+prosedur Pembiayaan BPR Syariah yang belum di evaluasi oleh DPS wajib
+dilakukan evaluasi. Pelaksanaan evaluasi oleh DPS atas kebijakan Pembiayaan
+dan prosedur Pembiayaan dimaksud dilaporkan pada laporan hasil
+pengawasan DPS pada periode laporan semester I Tahun 2025.
+
+Page 3 of 3
+
+https://jdih.ojk.go.id

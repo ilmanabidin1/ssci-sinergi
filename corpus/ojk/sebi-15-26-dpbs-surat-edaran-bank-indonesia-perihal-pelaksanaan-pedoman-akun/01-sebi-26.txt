@@ -1,0 +1,509 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 15/26/DPbS
+Tentang: Surat Edaran Bank Indonesia perihal Pelaksanaan Pedoman Akuntansi Perbankan Syariah Indonesia
+Berkas: SEBI 26.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-perihal-Pelaksanaan-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia.aspx
+
+---
+
+No. 15/26/DPbS
+
+Jakarta, 10 Juli 2013
+
+SURAT
+
+EDARAN
+
+Kepada
+SEMUA BANK UMUM SYARIAH DAN UNIT USAHA SYARIAH
+DI INDONESIA
+
+Perihal :
+
+Pelaksanaan
+
+Pedoman
+
+Akuntansi
+
+Perbankan
+
+Syariah
+
+Indonesia
+
+Nomor
+
+Indonesia.
+
+Sehubungan
+14/14/PBI/2012
+
+dengan
+tentang
+
+Peraturan
+
+Transparansi
+
+Bank
+dan
+
+Publikasi
+
+Laporan
+
+Bank
+
+(Lembaran Negara Republik Indonesia Tahun 2012 Nomor 199, Tambahan
+Lembaran Negara Republik Indonesia Tahun 2012 Nomor 5353), perlu
+diatur ketentuan mengenai pelaksanaan pedoman akuntansi perbankan
+syariah Indonesia dalam Surat Edaran Bank Indonesia sebagai berikut:
+I.
+
+KETENTUAN UMUM
+A.
+
+Dalam rangka peningkatan transparansi kondisi keuangan bagi
+Bank Umum Syariah dan Unit Usaha Syariah, selanjutnya disebut
+Bank Syariah, dan penyusunan laporan keuangan yang relevan,
+komprehensif, andal dan dapat diperbandingkan, Bank Syariah
+menyusun
+
+dan
+
+menyajikan
+
+laporan
+
+keuangan
+
+berdasarkan
+
+Pernyataan Standar Akuntansi Keuangan (PSAK) yang relevan bagi
+Bank Syariah, Pedoman Akuntansi Perbankan Syariah Indonesia
+(PAPSI), dan ketentuan lain yang ditetapkan oleh Bank Indonesia.
+B.
+
+PAPSI merupakan petunjuk pelaksanaan yang berisi penjabaran
+lebih
+
+lanjut
+
+dari
+
+beberapa
+
+Pernyataan
+
+Standar
+
+Akuntansi
+
+Keuangan (PSAK) yang relevan bagi industri perbankan syariah.
+
+C. Dengan …
+
+C.
+
+Dengan diterbitkannya antara lain PSAK khusus tentang transaksi
+syariah, PSAK No. 50 (Revisi 2010) tentang Instrumen Keuangan:
+Penyajian, PSAK No. 55 (Revisi 2011) tentang Instrumen Keuangan:
+Pengakuan dan Pengukuran, dan PSAK No. 60 tentang Instrumen
+Keuangan: Pengungkapan, serta PSAK No.48 (Revisi 2009) tentang
+Penurunan Nilai Aset maka perlu dilakukan penyesuaian atas
+PAPSI 2003 menjadi PAPSI 2013 sebagaimana dimaksud pada
+Lampiran yang merupakan bagian tidak terpisahkan dari Surat
+Edaran Bank Indonesia ini.
+
+D.
+
+PAPSI
+
+2013
+
+merupakan
+
+pedoman
+
+dalam
+
+penyusunan
+
+dan
+
+penyajian laporan keuangan Bank Syariah. Untuk hal-hal yang
+tidak diatur dalam PAPSI 2013 tetap berpedoman kepada PSAK
+yang berlaku beserta pedoman pelaksanaannya sepanjang tidak
+bertentangan dengan prinsip syariah.
+II.
+
+PENGAKUAN PENDAPATAN DALAM TRANSAKSI JUAL BELI
+A.
+
+Sesuai dengan Fatwa Dewan Syariah Nasional Nomor: 84/DSNMUI/XII/2012
+
+tanggal
+
+21
+
+Desember
+
+2012
+
+tentang
+
+Metode
+
+Pengakuan Pendapatan Murabahah di Lembaga Keuangan Syariah
+(LKS) maka pengakuan pendapatan murabahah untuk Bank
+Syariah dapat dilakukan dengan menggunakan metode anuitas
+atau metode proporsional.
+B.
+
+Pengakuan pendapatan dengan menggunakan metode anuitas atau
+metode proprosional hanya dapat digunakan untuk pengakuan
+pendapatan pembiayaan atas dasar jual beli.
+
+C.
+
+Dalam hal Bank Syariah menggunakan metode anuitas maka
+pencatatan transaksi murabahah wajib menggunakan:
+1.
+
+PSAK 55 (Revisi 2011): Instrumen Keuangan: Pengakuan dan
+Pengukuran, selanjutnya disebut PSAK 55;
+
+2.
+
+PSAK 50 (Revisi 2010): Instrumen Keuangan: Penyajian,
+selanjutnya disebut PSAK 50;
+
+3.
+
+PSAK 60: Instrumen Keuangan: Pengungkapan, selanjutnya
+disebut PSAK 60; dan
+
+4. PSAK …
+
+4.
+D.
+
+PSAK lain yang relevan.
+
+Dalam hal Bank Syariah menggunakan metode proporsional maka
+pencatatan transaksi murabahah wajib menggunakan PSAK 102 :
+Akuntansi Murabahah.
+
+E.
+
+Penggunaan salah satu metode pengakuan pendapatan wajib
+digunakan untuk seluruh jenis portofolio pembiayaan murabahah
+dan diungkapkan dalam kebijakan akuntansi serta dilakukan
+secara konsisten.
+
+III. PENDAPATAN
+
+DAN
+
+BEBAN
+
+TERKAIT
+
+DENGAN
+
+TRANSAKSI
+
+MURABAHAH
+A.
+
+Dalam praktik penyaluran pembiayaan murabahah, Bank Syariah
+dapat:
+1.
+
+menerima pendapatan di luar marjin keuntungan seperti
+pendapatan administrasi; dan/atau
+
+2.
+
+mengeluarkan biaya yang terkait langsung dengan transaksi
+murabahah seperti biaya komisi, biaya survei, dan biaya lain.
+
+B.
+
+Dalam hal Bank Syariah menerapkan pengakuan pendapatan
+dengan metode anuitas, maka pendapatan dan biaya sebagaimana
+dimaksud dalam huruf A digabungkan dengan nilai pembiayaan
+murabahah. Selanjutnya nilai tersebut diamortisasi selama masa
+akad dengan menggunakan metode effective rate sebagaimana
+diatur dalam PSAK 55, PSAK 50, dan PSAK 60 serta PSAK lain yang
+relevan.
+
+C.
+
+Dalam hal Bank Syariah menerapkan pengakuan pendapatan
+dengan
+
+metode
+
+proporsional
+
+maka
+
+pendapatan
+
+dan
+
+biaya
+
+sebagaimana dimaksud dalam huruf A diakui selaras dengan
+pengakuan pendapatan murabahah secara proporsional selama
+masa akad.
+D.
+
+Pendapatan dan biaya sebagaimana dimaksud dalam huruf A
+menjadi
+
+bagian
+
+yang
+
+tidak
+
+terpisahkan
+
+dari
+
+pendapatan
+
+murabahah sehingga wajib dibagihasilkan kepada pemilik dana
+pihak ketiga (shahibul maal).
+
+IV. PEMBENTUKAN …
+
+IV. PEMBENTUKAN CADANGAN KERUGIAN
+A.
+
+Bank Syariah wajib membentuk cadangan kerugian penurunan
+nilai (CKPN) atas aset keuangan dan aset non keuangan sesuai
+dengan standar akuntansi keuangan yang berlaku.
+
+B.
+
+Dalam rangka menerapkan prinsip kehati-hatian, Bank Syariah
+wajib
+
+mempertimbangkan
+
+CKPN
+
+yang
+
+dibentuk
+
+berdasarkan
+
+ketentuan Bank Indonesia pada saat memperhitungkan cadangan
+kerugian aset keuangan dan aset non keuangan.
+C.
+
+Dalam hal terdapat selisih kurang antara CKPN yang dibentuk oleh
+Bank Syariah dengan kewajiban pembentukan cadangan kerugian
+sesuai dengan ketentuan Bank Indonesia maka kekurangan CKPN
+tersebut akan diperhitungkan sebagai pengurang faktor modal inti
+dalam perhitungan rasio kewajiban pemenuhan modal minimum
+(KPMM).
+
+V.
+
+ESTIMASI
+
+PENURUNAN
+
+NILAI
+
+PEMBIAYAAN
+
+SECARA
+
+KOLEKTIF
+
+DENGAN KETERBATASAN PENGALAMAN KERUGIAN SPESIFIK
+A.
+
+Dalam hal Bank Syariah tidak memiliki ketersediaan data kerugian
+pembiayaan secara spesifik untuk melakukan perhitungan estimasi
+penurunan nilai secara kolektif sebagaimana yang diatur dalam
+PSAK 55 bagi Bank Syariah yang menerapkan metode anuitas
+dalam
+
+pengakuan
+
+pendapatan
+
+murabahah
+
+maka
+
+tata
+
+cara
+
+perhitungan estimasi penurunan nilai secara kolektif berpedoman
+pada butir III.4 Lampiran Surat Edaran Bank Indonesia ini.
+B.
+
+Bank
+
+Syariah
+
+dapat
+
+menerapkan
+
+estimasi
+
+penurunan
+
+nilai
+
+pembiayaan secara kolektif sebagaimana dimaksud dalam huruf A
+paling lama sampai dengan tanggal 31 Desember 2014. Terhitung
+sejak 1 Januari 2015, Bank Syariah harus mengukur penurunan
+nilai pembiayaan dan membentuk CKPN atas pembiayaan secara
+kolektif dengan menggunakan data pengalaman kerugian spesifik
+atau kerugian historis dari peer group atas pembiayaan secara
+kolektif.
+C.
+
+Dalam rangka penerapan estimasi penurunan nilai pembiayaan
+secara kolektif dengan menggunakan data pengalaman kerugian
+
+spesifik …
+
+spesifik, Bank wajib menyampaikan rencana tindak (action plan)
+yang akan dilakukan.
+D.
+
+Ketentuan mengenai estimasi penurunan nilai pembiayaan secara
+kolektif sebagaimana dimaksud dalam huruf B, merupakan acuan
+bagi Bank Syariah dalam menyusun dan menyajikan laporan
+keuangan serta menjadi acuan bagi Akuntan Publik dalam
+melakukan pemeriksaan laporan keuangan Bank Syariah.
+
+E.
+
+Hal-hal
+
+yang
+
+harus
+
+dilakukan
+
+oleh
+
+Akuntan
+
+Publik
+
+dalam
+
+pemeriksaan atas estimasi penurunan nilai kolektif adalah sebagai
+berikut:
+1.
+
+Dalam pelaksanaan audit, Akuntan Publik bertanggung jawab
+untuk:
+a.
+
+menilai kewajaran penilaian sendiri (self-assessment) yang
+dilakukan
+menetapkan
+
+oleh
+
+manajemen
+keberadaan
+
+Bank
+kondisi
+
+Syariah
+
+dalam
+
+keterbatasan
+
+pengalaman kerugian spesifik sebagaimana dimaksud
+dalam Lampiran Surat Edaran Bank Indonesia ini; dan
+b.
+
+menilai kewajaran estimasi oleh manajemen Bank Syariah
+dalam menentukan penurunan nilai pembiayaan secara
+kolektif.
+
+2.
+
+Apabila dalam pelaksanaan audit, Akuntan Publik menemukan
+bahwa Bank Syariah tidak berada dalam kondisi keterbatasan
+pengalaman kerugian spesifik namun menerapkan estimasi
+penurunan nilai pembiayaan secara kolektif maka Bank
+Syariah dinilai tidak menerapkan PSAK 55 beserta pedoman
+pelaksanaannya dan melanggar Surat Edaran Bank Indonesia
+ini.
+
+3.
+
+Temuan Akuntan Publik sebagaimana dimaksud dalam angka
+2 harus diungkapkan oleh Akuntan Publik dalam laporan hasil
+audit dan Surat Komentar (Management Letter) dan wajib
+disampaikan kepada Bank Indonesia sebagaimana diatur
+dalam ketentuan Bank Indonesia yang mengatur mengenai
+transparansi kondisi keuangan bank.
+
+F. Dalam …
+
+F.
+
+Dalam rangka memberikan informasi yang lebih transparan kepada
+masyarakat dan pengguna laporan keuangan Bank, Bank Syariah
+yang menerapkan estimasi penurunan nilai pembiayaan secara
+kolektif wajib mengungkapkan informasi tersebut dalam Catatan
+atas Laporan Keuangan dalam Laporan Tahunan sebagaimana
+diatur dalam Surat Edaran Bank Indonesia mengenai laporan
+tahunan bank umum.
+
+VI. KETENTUAN PENUTUP
+Dengan berlakunya Surat Edaran Bank Indonesia ini, Surat Edaran
+Bank Indonesia Nomor 5/26/BPS tanggal 27 Oktober 2003 perihal
+Pelaksanaan
+
+Pedoman
+
+Akuntansi
+
+Perbankan
+
+Syariah
+
+Indonesia
+
+dinyatakan tidak berlaku bagi Bank Umum Syariah dan Unit Usaha
+Syariah.
+
+Surat Edaran Bank Indonesia ini mulai berlaku pada tanggal 1
+Agustus 2013.
+
+Agar setiap orang mengetahuinya, memerintahkan pengumuman
+Surat Edaran Bank Indonesia ini dengan penempatannya dalam Berita
+Negara Republik Indonesia.
+
+Demikian agar Saudara maklum.
+
+BANK INDONESIA,
+
+HALIM ALAMSYAH
+DEPUTI GUBERNUR
+DPbS

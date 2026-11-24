@@ -1,0 +1,5335 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/ 14/DKBU
+Tentang: Surat Edaran Bank Indonesia tentang Penerapan Program Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme bagi Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah
+Berkas: lamp_se131411.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-tentang-Penerapan-Program-Anti-Pencucian-Uang-dan-Pencegahan-Pendanaan-Terorisme-bagi-Bank-Perkreditan-Rakyat-dan-Bank.aspx
+
+---
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+Lampiran 1 Surat Edaran Bank Indonesia No.13/14 /DKBU Tanggal 12 Mei 2011
+
+Direktorat Kredit, BPR dan UMKM (DKBU)
+Direktorat Perbankan Syariah (DPbS)
+
+DKBU dan DPbS
+
+1
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+DAFTAR ISI
+PEDOMAN STANDAR PELAKSANAAN PROGRAM ANTI PENCUCIAN UANG
+DAN PENCEGAHAN PENDANAAN TERORISME BAGI
+BANK PERKREDITAN RAKYAT DAN BANK PEMBIAYAAN RAKYAT SYARIAH
+Halaman
+DAFTAR ISI
+
+i
+
+I.
+
+PENDAHULUAN
+A. Pencucian Uang
+B. Pendanaan Terorisme
+C. Pelaporan Kepada PPATK
+D. Kebijakan Pelaksanaan Program APU dan PPT
+
+1
+1
+5
+5
+6
+
+II.
+
+MANAJEMEN
+A. Pengawasan Aktif Direksi dan Dewan Komisaris
+B. Unit Kerja Khusus
+
+8
+8
+9
+
+III.
+
+KEBIJAKAN CDD DAN EDD
+
+13
+
+IV.
+
+PENGELOMPOKAN NASABAH MENGGUNAKAN PENDEKATAN
+BERDASARKAN RISIKO (RISK BASED APPROACH)
+A.
+Pengelompokkan Nasabah
+B.
+Penetapan Profil Risiko Menggunakan Pendekatan
+Berdasarkan Risiko
+
+15
+
+PROSEDUR IDENTIFIKASI, VERIFIKASI DAN PEMANTAUAN
+NASABAH (CUSTOMER DUE DILLIGENCE)
+A.
+Kebijakan dan Prosedur Penerimaan dan Identifikasi Nasabah
+B.
+Permintaan Informasi
+C.
+Permintaan Dokumen
+D.
+Verifikasi Dokumen
+E.
+Pemantauan
+F.
+Pengkinian
+G.
+Daftar Teroris
+
+21
+
+VI.
+
+PENATAUSAHAAN DOKUMEN DAN PELAPORAN
+A.
+Penatausahaan Dokumen
+B.
+Pelaporan
+
+33
+33
+33
+
+VII.
+
+PEMINDAHAN DANA
+A.
+Prosedur Pemindahan Dana
+B.
+Permintaan Informasi
+C.
+Pelaporan
+
+35
+35
+35
+36
+
+V.
+
+DKBU dan DPbS
+
+15
+16
+
+21
+22
+25
+27
+29
+30
+31
+
+2
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+Halaman
+VIII. PENUTUPAN HUBUNGAN DAN PENOLAKAN TRANSAKSI
+A.
+Penolakan Calon Nasabah atau WIC
+B.
+Penutupan Hubungan Usaha dengan Nasabah
+
+37
+37
+37
+
+IX.
+
+BENEFICIAL OWNER
+
+38
+
+X.
+
+POLITICALLY EXPOSED PERSON (PEP) DAN AREA BERISIKO
+TINGGI
+A.
+Prosedur terhadap PEP dan Area berisiko Tinggi
+B.
+Penetapan PEP dan Kriteria Area Berisiko Tinggi
+C.
+Enhanced Due Dilligence (EDD)
+
+40
+
+XI.
+
+CDD YANG LEBIH SEDERHANA
+
+45
+
+XII.
+
+CDD OLEH PIHAK KETIGA
+
+47
+
+XIII. PENGENDALIAN INTERN
+
+48
+
+XIV. SISTEM PENCATATAN
+
+49
+
+XV. SUMBER DAYA MANUSIA DAN PELATIHAN KARYAWAN
+A.
+Sumber Daya Manusia
+B.
+Pelatihan
+
+50
+50
+50
+
+40
+40
+43
+
+TABEL :
+1.
+
+Contoh matriks klasifikasi profil risiko
+
+18
+
+2.
+
+Informasi calon Nasabah
+
+22
+
+3.
+
+Informasi WIC
+
+23
+
+4.
+
+Dokumen Pendukung Calon Nasabah Perorangan dan Perusahaan
+
+26
+
+5.
+
+Dokumen pendukung Nasabah selain Perorangan dan Perusahaan
+
+27
+
+6.
+
+Bukti dan informasi lainnya terkait Beneficial Owner (BO)
+
+38
+
+7.
+
+Ketentuan mengenai PEP
+
+41
+
+8.
+
+CDD yang lebih sederhana
+
+45
+
+LAMPIRAN :
+A.
+
+Contoh-contoh Transaksi, Aktivitas, dan Perilaku yang Tidak Wajar
+dan/atau Tidak Sesuai dengan Profil Nasabah
+
+52
+
+B.
+
+Glossary
+
+58
+
+DKBU dan DPbS
+
+3
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB I
+PENDAHULUAN
+
+Lembaga keuangan, khususnya perbankan (termasuk BPR dan BPRS), sangat
+rentan untuk digunakan sebagai media pencucian uang dan/atau pendanaan
+terorisme. Perbankan menyediakan banyak pilihan transaksi bagi pelaku pencucian
+uang dan/atau pendanaan terorisme dalam upaya melancarkan tindak kejahatannya.
+Melalui berbagai pilihan transaksi tersebut seperti transaksi penyimpanan dan
+pengiriman uang, perbankan menjadi pintu masuk harta kekayaan yang merupakan
+hasil tindak pidana atau merupakan pendanaan kegiatan terorisme ke dalam sistem
+keuangan. Bagi pelaku pencucian uang, harta kekayaan tersebut dapat ditarik kembali
+sebagai harta kekayaan yang seolah-olah sah dan tidak lagi dapat dilacak asal
+usulnya. Sedangkan untuk pelaku pendanaan teroris, harta kekayaan tersebut dapat
+digunakan untuk membiayai kegiatan terorisme.
+
+A.
+
+Pencucian Uang
+1.
+
+Berdasarkan Undang-Undang No. 8 Tahun 2010 Tentang Pencegahan dan
+Pemberantasan Tindak Pidana Pencucian Uang (UU PPTPPU),
+a.
+b.
+
+DKBU dan DPbS
+
+Pencucian Uang adalah segala perbuatan yang memenuhi unsurunsur tindak pidana sesuai dengan ketentuan dalam UU PPTPPU.
+Hasil tindak pidana adalah Harta Kekayaan yang diperoleh dari tindak
+pidana:
+1)
+korupsi
+2)
+penyuapan
+3)
+narkotika
+4)
+psikotropika
+5)
+penyelundupan tenaga kerja
+6)
+penyelundupan migran
+7)
+di bidang perbankan
+8)
+di bidang pasar modal
+9)
+di bidang perasuransian
+10) kepabeanan
+11) cukai
+12) perdagangan orang
+13) perdagangan senjata gelap
+14) terorisme
+15) penculikan
+16) pencurian
+17) penggelapan
+18) penipuan
+19) pemalsuan uang
+20) perjudian
+4
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+21)
+22)
+23)
+24)
+25)
+26)
+
+prostitusi
+di bidang perpajakan
+di bidang kehutanan
+di bidang lingkungan hidup
+di bidang kelautan dan perikanan, atau
+tindak pidana lain yang diancam dengan pidana penjara 4
+(empat) tahun atau lebih,
+
+yang dilakukan di wilayah Negara Kesatuan Republik Indonesia atau
+di luar wilayah Negara Kesatuan Republik Indonesia dan tindak
+pidana tersebut juga merupakan tindak pidana menurut hukum
+Indonesia.
+c.
+
+2.
+
+Tindak pidana pencucian uang
+1)
+
+Setiap orang yang menempatkan, mentransfer, mengalihkan,
+membelanjakan, membayarkan, menghibahkan, menitipkan,
+membawa ke luar negeri, mengubah bentuk, menukarkan
+dengan mata uang atau surat berharga atau perbuatan lain
+atas Harta Kekayaan yang diketahuinya atau patut diduganya
+merupakan hasil tindak pidana sebagaimana dimaksud dalam
+huruf b diatas dengan tujuan menyembunyikan atau
+menyamarkan asal usul Harta Kekayaan.
+
+2)
+
+Setiap orang yang menyembunyikan atau menyamarkan asal
+usul, sumber, lokasi, peruntukan, pengalihan hak-hak, atau
+kepemilikan yang sebenarnya atas Harta Kekayaan yang
+diketahuinya atau patut diduganya merupakan hasil tindak
+pidana. sebagaimana dimaksud dalam huruf b diatas.
+
+3)
+
+Setiap orang yang menerima atau menguasai penempatan,
+pentransferan, pembayaran, hibah, sumbangan, penitipan,
+penukaran, atau menggunakan Harta Kekayaan yang
+diketahuinya atau patut diduganya merupakan hasil tindak
+pidana sebagaimana dimaksud dalam huruf a diatas.
+
+Berdasarkan Ikhtisar Ketentuan Pencegahan dan Pemberantasan Tindak
+Pidana Pencucian Uang dan Pendanaan Terorisme yang dikeluarkan oleh
+PPATK,
+a.
+
+DKBU dan DPbS
+
+metode pencucian uang mencakup :
+1)
+
+Buy and sell conversion yaitu pencucian uang melalui jual beli
+barang dan jasa antara lain dengan membayar kelebihan harga
+dengan menggunakan uang ilegal dan kemudian dicuci melalui
+transaksi bisnis. Dengan cara ini setiap aset, barang atau jasa
+dapat diubah seolah-olah menjadi hasil yang legal melalui
+rekening pribadi atau perusahaan yang ada di suatu bank.
+
+2)
+
+Off-shore conversions yaitu pengalihan dana ilegal ke wilayah
+yang merupakan tax haven money laundering centers dan
+
+5
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+kemudian disimpan di bank atau lembaga keuangan yang ada
+di wilayah tersebut untuk digunakan membeli aset dan investasi
+(fund investment). Di wilayah atau negara yang merupakan tax
+haven terdapat kecenderungan hukum perpajakan yang lebih
+longgar, ketentuan rahasia bank yang cukup ketat dan prosedur
+bisnis yang sangat mudah sehingga memungkinkan adanya
+perlindungan bagi kerahasiaan suatu transaksi bisnis,
+pembentukan dan kegiatan usaha trust fund maupun badan
+usaha lainnya. Kerahasiaan inilah yang memberikan ruang
+gerak yang leluasa bagi pergerakan “dana kotor” melalui
+berbagai pusat keuangan di dunia. Dalam hal ini, para
+pengacara, akuntan, dan pengelola dana biasanya sangat
+berperan dalam metode offshore conversion ini dengan
+memanfaatkan celah yang ditawarkan oleh ketentuan rahasia
+bank dan rahasia perusahaan.
+3)
+
+b.
+
+Pada dasarnya proses pencucian uang yang sering terjadi di sektor
+keuangan dapat dikelompokkan ke dalam 3 (tiga) tahap kegiatan
+yang meliputi :
+1)
+
+DKBU dan DPbS
+
+Legitimate business conversions yaitu menggunakan bisnis
+atau kegiatan usaha yang sah sebagai sarana untuk
+memindahkan dan memanfaatkan hasil kejahatan dengan cara
+mengkonversikan melalui transfer, cek, atau instrumen
+pembayaran lainnya yang kemudian di simpan di rekening bank
+atau ditarik atau di transfer kembali ke rekening bank lainnya.
+Metode ini memungkinkan pelaku kejahatan menjalankan
+usaha atau bekerjasama dengan mitra bisnisnya dan
+menggunakan rekening perusahaan yang bersangkutan
+sebagai tempat penampungan untuk hasil kejahatan yang
+dilakukan.
+
+Penempatan (Placement), adalah upaya menempatkan dana
+yang dihasilkan dari suatu kegiatan tindak pidana ke dalam
+sistem keuangan. Bentuk kegiatan ini antara lain:
+a)
+
+Menempatkan uang giral (cheque, wesel bank, sertifikat
+deposito, dan lain-lain) kembali ke dalam sistem
+keuangan, terutama sistem perbankan.
+
+b)
+
+Menyetorkan uang pada penyedia jasa keuangan sebagai
+pembayaran kredit untuk mengaburkan rekam jejak
+kredit.
+
+c)
+
+Menyelundupkan uang tunai dari suatu negara ke negara
+lain.
+
+d)
+
+Membiayai suatu usaha yang seolah-olah sah atau terkait
+dengan usaha.
+
+6
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+2)
+
+3)
+
+3.
+
+Transfer (Layering), adalah upaya memisahkan hasil tindak
+pidana transaksi keuangan untuk menyembunyikan atau
+menyamarkan asal usul dana. Dalam kegiatan ini terdapat
+proses pemindahan dana dari beberapa rekening atau lokasi
+tertentu sebagai hasil placement ke tempat lain melalui
+serangkaian transaksi yang kompleks dan didesain untuk
+menyamarkan dan menghilangkan jejak sumber dana tersebut.
+Bentuk kegiatan ini antara lain:
+a)
+
+Transfer dana dari satu bank ke bank lain dan atau antar
+wilayah/negara.
+
+b)
+
+Penggunaan simpanan tunai sebagai agunan untuk
+mendukung transaksi yang sah.
+
+c)
+
+Memindahkan uang tunai lintas batas negara melalui
+jaringan kegiatan usaha yang sah maupun shell
+company.
+
+Penggunaan harta kekayaan (Integration), adalah upaya
+menggunakan harta kekayaan yang telah tampak sah, baik
+untuk dinikmati langsung, diinvestasikan ke dalam berbagai
+bentuk kekayaan material maupun keuangan, dipergunakan
+untuk membiayai kegiatan bisnis yang sah, ataupun untuk
+membiayai kembali kegiatan tindak pidana.
+
+Beberapa modus pencucian uang yang banyak dilakukan oleh pelaku
+pencucian uang adalah:
+a.
+
+Smurfing, yaitu upaya untuk menghindari pelaporan dengan
+memecah-mecah transaksi yang dilakukan oleh banyak pelaku.
+
+b.
+
+Structuring, yaitu upaya untuk menghindari pelaporan dengan
+memecah-mecah transaksi sehingga jumlah transaksi menjadi lebih
+kecil.
+
+c.
+
+U Turn, yaitu upaya untuk mengaburkan asal usul hasil kejahatan
+dengan memutarbalikkan transaksi untuk kemudian dikembalikan ke
+rekening asalnya.
+
+d.
+
+Cuckoo Smurfing, yaitu upaya mengaburkan asal usul sumber dana
+dengan mengirimkan dana-dana dari hasil kejahatannya melalui
+rekening pihak ketiga yang menunggu kiriman dana dari luar negeri
+dan tidak menyadari bahwa dana yang diterimanya tersebut
+merupakan hasil kejahatan.
+
+e.
+
+Pembelian aset/barang-barang mewah, yaitu menyembunyikan
+status kepemilikan dari aset/barang mewah termasuk pengalihan
+aset tanpa terdeteksi oleh sistem keuangan.
+
+f.
+
+Pertukaran barang (barter), yaitu menghindari penggunaan dana
+tunai atau instrumen keuangan sehingga tidak dapat terdeteksi oleh
+sistem keuangan.
+
+DKBU dan DPbS
+
+7
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+B.
+
+C.
+
+g.
+
+Alternative Remittance Services menggunakan Underground
+Banking, yaitu kegiatan pengiriman uang melalui mekanisme jalur
+informal yang dilakukan atas dasar kepercayaan.
+
+h.
+
+Penggunaan pihak ketiga, yaitu transaksi yang dilakukan dengan
+menggunakan identitas pihak ketiga dengan tujuan menghindari
+terdeteksinya identitas dari pihak yang sebenarnya merupakan
+pemilik dana hasil tindak pidana.
+
+i.
+
+Mingling, yaitu mencampurkan dana hasil tindak pidana dengan dana
+dari hasil kegiatan usaha yang legal dengan tujuan untuk
+mengaburkan sumber asal dananya.
+
+j.
+
+Penggunaan identitas palsu, yaitu transaksi yang dilakukan dengan
+menggunakan identitas palsu sebagai upaya untuk mempersulit
+terlacaknya identitas dan pendeteksian keberadaan pelaku pencucian
+uang.
+
+Pendanaan Terorisme
+1.
+
+Pendanaan terorisme adalah penggunaan harta kekayaan secara langsung
+atau tidak langsung untuk kegiatan terorisme. Pendanaan terorisme pada
+dasarnya merupakan jenis tindak pidana yang berbeda dari Tindak Pidana
+Pencucian Uang (TPPU), namun demikian, keduanya mengandung
+kesamaan, yaitu menggunakan jasa keuangan sebagai sarana untuk
+melakukan suatu tindak pidana.
+
+2.
+
+Berbeda dengan TPPU yang tujuannya untuk menyamarkan asal-usul
+harta kekayaan, maka tujuan tindak pidana pendanaan terorisme adalah
+membantu kegiatan terorisme, baik dengan harta kekayaan yang
+merupakan hasil dari suatu tindak pidana ataupun dari harta kekayaan
+yang diperoleh secara sah.
+
+3.
+
+Untuk mencegah BPR dan BPRS digunakan sebagai sarana tindak pidana
+pendanaan terorisme, maka BPR dan BPRS perlu menerapkan Program
+Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme secara
+memadai.
+
+Pelaporan Kepada PPATK
+BPR dan BPRS wajib menyampaikan Laporan Transaksi Keuangan
+Mencurigakan (LTKM) atau Suspicious Transaction Report (STR) dan Laporan
+Transaksi Keuangan Tunai (LTKT) atau Cash Transaction Report (CTR) kepada
+Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK), sesuai dengan UU
+PPTPPU. Adapun mengenai tata cara pelaporan dari kedua laporan tersebut
+mengacu kepada pedoman yang dikeluarkan oleh PPATK.
+Termasuk dalam unsur Transaksi Keuangan Mencurigakan sesuai dengan UU
+PPTPPU adalah:
+
+DKBU dan DPbS
+
+8
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+1) Transaksi keuangan yang menyimpang dari profil, karakteristik, atau
+kebiasaan pola transaksi dari pengguna jasa yang bersangkutan;
+2) Transaksi keuangan oleh pengguna jasa yang patut diduga dilakukan dengan
+tujuan untuk menghindari pelaporan transaksi yang bersangkutan yang wajib
+dilakukan oleh pihak pelapor sesuai dengan ketentuan UU PPTPPU;
+3) Transaksi keuangan yang dilakukan atau batal dilakukan dengan
+menggunakan harta kekayaan yang diduga berasal dari tindak pidana; dan
+4) Transaksi keuangan yang diminta oleh PPATK untuk dilaporkan oleh pihak
+pelapor karena melibatkan harta kekayaan yang diduga berasal dari hasil
+tindak pidana.
+
+D.
+
+Kebijakan Pelaksanaan Program Anti Pencucian Uang dan Pencegahan
+Pendanaan Terorisme (Program APU dan PPT)
+1.
+
+Program APU dan PPT merupakan program yang wajib diterapkan oleh
+BPR dan BPRS dalam melakukan hubungan usaha dengan pengguna jasa
+BPR/BPRS (baik Nasabah maupun Walk In Customer). Program tersebut
+antara lain mencakup hal-hal yang diwajibkan dalam Rekomendasi
+Financial Action Task Force (FATF), yang dikenal dengan Rekomendasi 40
++ 9 FATF sebagai upaya untuk melindungi BPR dan BPRS agar tidak
+dijadikan sebagai sarana atau sasaran kejahatan baik yang dilakukan
+secara langsung maupun tidak langsung oleh pelaku kejahatan.
+
+2.
+
+Customer Due Dilligence (CDD) merupakan salah satu instrumen utama
+dalam Program APU dan PPT. CDD tidak saja penting untuk mendukung
+upaya pemberantasan pencucian uang dan pendanaan terorisme,
+melainkan juga dalam rangka penerapan prinsip kehatian-hatian perbankan
+(prudential banking). Pelaksanaan CDD membantu melindungi BPR dan
+BPRS dari berbagai risiko dalam kegiatan usaha BPR dan BPRS, seperti
+risiko operasional, risiko hukum, dan risiko reputasi serta mencegah
+industri perbankan digunakan sebagai sarana atau sasaran tindak pidana,
+khususnya pencucian uang dan pendanaan terorisme.
+
+3.
+
+Sebagai upaya meminimalisasi penggunaan BPR dan BPRS sebagai
+media pencucian uang atau pendanaan terorisme, maka BPR dan BPRS
+wajib menerapkan Program APU dan PPT. Program APU dan PPT
+merupakan bagian dari penerapan prinsip kehati-hatian BPR/BPRS dan
+paling kurang mencakup:
+
+4.
+
+a.
+
+pengawasan aktif Direksi dan Dewan Komisaris;
+
+b.
+
+kebijakan dan prosedur;
+
+c.
+
+pengendalian intern; dan
+
+d.
+
+sumber daya manusia dan pelatihan.
+
+Dalam menerapkan Program APU dan PPT, BPR dan BPRS wajib memiliki
+kebijakan dan prosedur tertulis yang paling kurang mencakup:
+
+DKBU dan DPbS
+
+9
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+a.
+
+5.
+
+pelaksanaan CDD, yang terdiri dari:
+1)
+
+permintaan informasi dan dokumen;
+
+2)
+
+verifikasi dokumen; dan
+
+3)
+
+pengkinian dan pemantauan.
+
+b.
+
+penatausahaan dokumen;
+
+c.
+
+pemindahan dana;
+
+d.
+
+penutupan hubungan dan penolakan transaksi;
+
+e.
+
+ketentuan mengenai Beneficial Owner;
+
+f.
+
+ketentuan mengenai area berisiko tinggi dan PEP;
+
+g.
+
+pelaksanaan CDD yang lebih sederhana; dan
+
+h.
+
+pelaksanaan CDD oleh pihak ketiga.
+
+Kebijakan dan prosedur diatas dituangkan dalam Pedoman Pelaksanaan
+Program Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme,
+dan harus mempertimbangkan faktor teknologi informasi yang berpotensi
+disalahgunakan oleh pelaku pencucian uang atau pendanaan terorisme,
+termasuk jika BPR/BPRS mengeluarkan produk dan jasa baru. Agar
+tercapai pelaksanaan program APU dan PPT yang efektif, maka pedoman
+tersebut wajib dikomunikasikan kepada seluruh pegawai serta diterapkan
+secara konsisten dan berkesinambungan.
+
+DKBU dan DPbS
+
+10
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB II
+MANAJEMEN
+
+Dalam rangka mendukung pelaksanaan Program Anti Pencucian Uang dan
+Pencegahan Pendanaan Terorisme (APU dan PPT), selain dibutuhkan pengawasan
+aktif dari Direksi dan Dewan Komisaris, BPR dan BPRS wajib membentuk Unit Kerja
+Khusus atau menunjuk pegawai yang bertanggung jawab atas pelaksanaan Program
+APU dan PPT. Peran aktif Direksi dan Dewan Komisaris sangat diperlukan dalam
+menciptakan efektifitas pelaksanaan Program APU dan PPT, mengingat peran Direksi
+dan Dewan Komisaris akan mempengaruhi tingkat pencapaian tujuan organisasi dalam
+pelaksanaan Program APU dan PPT. Selain itu, peran Direksi dan Dewan Komisaris
+juga dapat memotivasi karyawan dan unit kerja dalam mendorong terbentuknya
+budaya kepatuhan di seluruh jajaran organisasi. Terbentuknya kerangka kerja tata
+kelola perusahaan (corporate governance) yang kuat dalam organisasi akan
+mendukung pelaksanaan Program APU dan PPT yang dimiliki.
+
+A.
+
+Pengawasan Aktif Direksi dan Dewan Komisaris
+1.
+
+Pengawasan Aktif Direksi
+Pengawasan aktif Direksi paling kurang mencakup:
+a.
+
+memastikan bahwa BPR dan BPRS memiliki kebijakan dan prosedur
+program APU dan PPT;
+
+b.
+
+mengusulkan kebijakan dan prosedur tertulis Program APU dan PPT
+kepada Dewan Komisaris;
+
+c.
+
+memastikan Program APU dan PPT dilaksanakan sesuai dengan
+kebijakan dan prosedur tertulis yang telah ditetapkan;
+
+d.
+
+membentuk unit kerja khusus dan/atau menunjuk pegawai yang
+bertanggungjawab terhadap Program APU dan PPT di Kantor Pusat;
+
+e.
+
+memastikan bahwa unit kerja/pegawai yang melaksanakan kebijakan
+dan prosedur program APU dan PPT terpisah dari unit kerja/pegawai
+yang mengawasi pelaksanaannya;
+
+f.
+
+pengawasan atas kepatuhan unit kerja/pegawai dalam menerapkan
+program APU dan PPT;
+
+g.
+
+memastikan bahwa kantor cabang BPR dan BPRS memiliki pegawai
+yang bertanggungjawab terhadap Program APU dan PPT;
+
+h.
+
+memastikan bahwa kebijakan dan prosedur tertulis mengenai
+program APU dan PPT sejalan dengan perubahan dan
+pengembangan produk, jasa, dan teknologi BPR dan BPRS serta
+sesuai dengan perkembangan modus pencucian uang atau
+pendanaan terorisme; dan
+
+DKBU dan DPbS
+
+11
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+i.
+
+2.
+
+memastikan bahwa seluruh pegawai, khususnya pegawai terkait dan
+pegawai baru, telah mendapatkan pengetahuan yang berkaitan
+dengan program APU dan PPT secara berkala.
+
+Kewenangan dan Tanggung Jawab Direktur
+Direktur yang ditunjuk menangani Program APU dan PPT bertugas dan
+bertanggung jawab paling kurang :
+
+3.
+
+a.
+
+menetapkan dan mengevaluasi
+persetujuan pejabat eksekutif;
+
+transaksi
+
+yang
+
+memerlukan
+
+b.
+
+mengevaluasi secara berkala untuk memastikan ketepatan kebijakan,
+prosedur dan penetapan tingkat risiko dari area yang berisiko tinggi
+dan Politically Exposed Person (PEP);
+
+c.
+
+menetapkan langkah-langkah yang diperlukan untuk memastikan
+BPR dan BPRS telah memenuhi ketentuan Bank Indonesia tentang
+APU dan PPT dan peraturan perundang-undangan lainnya yang
+terkait;
+
+d.
+
+memastikan cakupan pengawasan aktif Direksi telah terpenuhi
+secara memadai;
+
+e.
+
+memantau dan menjaga kepatuhan BPR dan BPRS terhadap seluruh
+komitmen yang dibuat oleh BPR/BPRS kepada Bank Indonesia
+antara lain komitmen dalam Action Plan, dan hasil Pengawasan Bank
+Indonesia yang terkait dengan pelaksanaan Program APU dan PPT;
+
+f.
+
+memantau pelaksanaan tugas Unit Kerja Khusus dan/atau pegawai
+BPR/BPRS yang bertanggungjawab atas pelaksanaan Program APU
+dan PPT;
+
+g.
+
+memberikan rekomendasi kepada Direktur Utama mengenai pejabat
+yang akan memimpin Unit Kerja Khusus atau pegawai yang
+bertanggungjawab atas pelaksanaan Program APU dan PPT; dan
+
+h.
+
+memberikan persetujuan terhadap LTKM.
+
+Pengawasan aktif Dewan Komisaris
+Pengawasan aktif Dewan Komisaris paling kurang mencakup:
+
+B.
+
+a.
+
+persetujuan atas kebijakan dan prosedur pelaksanaan program APU
+dan PPT; dan
+
+b.
+
+pengawasan atas pelaksanaan tanggung jawab Direksi terhadap
+pelaksanaan program APU dan PPT.
+
+Unit Kerja Khusus
+1.
+
+Pembentukan Unit Kerja Khusus.
+a.
+
+DKBU dan DPbS
+
+Unit Kerja Khusus (UKK) wajib dibentuk dalam rangka melaksanakan
+Program APU dan PPT.
+12
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+2.
+
+3.
+
+b.
+
+Dalam hal berdasarkan pertimbangan beban tugas dan kompleksitas
+usahanya tidak dapat memenuhi kewajiban pembentukan UKK, maka
+BPR dan BPRS wajib menunjuk sekurang-kurangnya seorang
+pegawai yang bertanggungjawab dalam melaksanakan Program APU
+dan PPT.
+
+c.
+
+Tugas tersebut dapat dirangkap oleh pegawai yang mempunyai tugas
+lain, dengan mempertimbangkan bahwa unit kerja yang
+melaksanakan Program APU dan PPT terpisah dari unit kerja yang
+mengawasi
+pelaksanaannya,
+sehingga
+rangkap
+jabatan
+diperkenankan sepanjang tugas lain tersebut tidak merupakan bagian
+dari tugas operasional. Yang dimaksud dengan tugas operasional
+antara lain seperti unit kerja kasir (teller) atau Customer Service yang
+menangani penerimaaan calon Nasabah.
+
+d.
+
+Dalam hal BPR dan BPRS tidak dapat membentuk Unit Kerja Khusus
+atau menunjuk pegawai yang bertanggungjawab atas pelaksanaan
+program APU dan PPT, maka fungsi dimaksud dilaksanakan oleh
+salah satu anggota Direksi.
+
+Struktur Organisasi.
+a.
+
+Dalam menjalankan tugasnya, UKK atau pegawai yang ditunjuk
+melapor dan bertanggung jawab kepada Direktur yang berwenang.
+
+b.
+
+Seluruh unit kerja operasional, termasuk Kantor Cabang wajib
+menerapkan Program APU dan PPT dibawah koordinasi UKK atau
+pegawai yang ditunjuk di Kantor Pusat. Hal ini mengingat unit kerja
+operasional yang berhadapan langsung dengan Nasabah sebagai lini
+terdepan yang memagari BPR/BPRS dari upaya pencucian uang dan
+pendanaan terorisme.
+
+c.
+
+Unit kerja operasional memastikan bahwa pengawasan internal
+berfungsi dengan baik, tepat dan beroperasi secara efektif serta
+memastikan bahwa seluruh pegawai operasional telah diberi
+pelatihan yang memadai.
+
+d.
+
+Agar arahan dan ketentuan dari UKK dapat dilaksanakan dengan
+baik, BPR dan BPRS harus memiliki mekanisme kerja yang
+memadai, dan mekanisme kerja dimaksud didokumentasikan oleh
+setiap unit kerja. Mekanisme kerja tersebut juga dengan
+memperhatikan ketentuan anti tipping off dan menjaga kerahasiaan
+informasi.
+
+Tugas dan Tanggung Jawab UKK.
+Tugas pokok UKK atau pegawai BPR dan BPRS yang bertanggung jawab
+terhadap pelaksanaan Program APU dan PPT adalah:
+a.
+
+memantau adanya sistem yang mendukung program APU dan PPT;
+
+b.
+
+memantau pengkinian profil Nasabah dan profil transaksi Nasabah;
+
+DKBU dan DPbS
+
+13
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+c.
+
+melakukan koordinasi dan pemantauan terhadap pelaksanaan
+kebijakan Program APU dan PPT dengan unit kerja/pegawai terkait
+yang berhubungan dengan Nasabah;
+
+d.
+
+memastikan bahwa kebijakan dan prosedur telah sesuai dengan
+perkembangan Program APU dan PPT yang terkini, risiko produk
+BPR dan BPRS, kegiatan dan kompleksitas usaha BPR dan BPRS,
+dan volume transaksi BPR dan BPRS;
+
+e.
+
+menerima
+laporan
+transaksi
+keuangan
+yang
+berpotensi
+mencurigakan dari unit kerja terkait yang berhubungan dengan
+Nasabah dan melakukan analisis atas laporan tersebut;
+
+f.
+
+menyusun LTKM dan laporan lainnya sebagaimana dimaksud dalam
+UU PPTPPU untuk disampaikan kepada PPATK berdasarkan
+persetujuan Direktur;
+
+g.
+
+memantau bahwa:
+
+h.
+
+4.
+
+1)
+
+terdapat mekanisme komunikasi yang baik dari setiap unit kerja
+atau pegawai terkait kepada UKK atau pegawai yang
+bertanggungjawab terhadap pelaksanaan program APU dan
+PPT dengan menjaga kerahasiaan informasi;
+
+2)
+
+Unit kerja atau pegawai terkait mempersiapkan LTKM dan
+LTKT sebelum menyampaikannya kepada UKK atau pegawai
+yang ditunjuk yang bertanggungjawab terhadap pelaksanaan
+program APU dan PPT; dan
+
+3)
+
+area yang berisiko tinggi, terkait dengan APU dan PPT dengan
+mengacu pada ketentuan yang berlaku dan sumber informasi
+yang memadai.
+
+berperan sebagai petugas penghubung (contact person) bagi otoritas
+yang berwenang terkait dengan pelaksanaan program APU dan PPT,
+antara lain Bank Indonesia, PPATK, dan Penegak Hukum.
+
+Persyaratan Pegawai UKK atau Pegawai yang Menjalankan Fungsi UKK.
+Pegawai yang bertanggung jawab dalam menerapkan program APU dan
+PPT wajib memenuhi ketentuan:
+
+5.
+
+a.
+
+memiliki pengetahuan dan kemampuan yang memadai mengenai
+APU dan PPT dan peraturan lainnya yang terkait dengan pendanaan
+dan produk perbankan; dan
+
+b.
+
+memiliki kewenangan untuk mengakses seluruh data Nasabah dan
+informasi lainnya yang terkait dalam rangka pelaksanaan tugas.
+
+Pegawai yang Bertanggungjawab terhadap Program APU dan PPT di
+Kantor Cabang.
+a.
+
+DKBU dan DPbS
+
+Setiap kantor cabang BPR dan BPRS wajib memiliki pegawai yang
+bertanggungjawab terhadap program APU dan PPT.
+14
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+b.
+
+Pegawai yang bertanggungjawab terhadap program APU dan PPT
+tersebut bukan merupakan pegawai dari satuan kerja operasional.
+Namun dalam hal kondisi tidak memungkinkan maka pegawai di
+kantor cabang yang menjalankan fungsi UKK dapat berasal dari
+satuan kerja operasional sepanjang tidak memiliki benturan
+kepentingan dengan nasabah secara langsung.
+
+c.
+
+Tugas dan tanggung jawab pegawai yang bertanggungjawab
+terhadap program APU dan PPT sebagaimana dimaksud pada huruf
+b adalah sebagai berikut:
+
+DKBU dan DPbS
+
+1)
+
+Memastikan bahwa kebijakan, prosedur, dan peraturan lainnya
+yang terkait pelaksanaan program APU dan PPT telah
+dilaksanakan secara efektif.
+
+2)
+
+Memantau dan meninjau setiap validitas proses, checklist/daftar
+periksa dan dokumen pendukung pada saat pembukaan
+rekening.
+
+3)
+
+Memastikan bahwa persetujuan penerimaan dan/atau
+penolakan permohonan pembukaan rekening atau transaksi
+oleh calon Nasabah/WIC yang tergolong berisiko tinggi
+diberikan oleh pejabat eksekutif di unit kerja terkait atau Kantor
+Cabang setempat.
+
+4)
+
+Mengkoordinasikan dan memantau proses pengkinian data
+Nasabah.
+
+5)
+
+Menerima laporan transaksi keuangan yang mencurigakan dari
+unit kerja terkait dan melakukan analisa terhadap laporan
+tersebut untuk dilaporkan kepada UKK atau pegawai yang
+ditunjuk untuk menangani program APU dan PPT di Kantor
+Pusat.
+
+6)
+
+Memberikan masukan yang terkait dengan pelaksanaan APU
+dan PPT kepada pegawai unit kerja terkait atau Kantor Cabang
+yang memerlukan.
+
+7)
+
+Memantau, menganalisis, dan merekomendasikan kebutuhan
+pelatihan APU dan PPT para pegawai di unit kerja terkait atau
+Kantor Cabang kepada UKK di Kantor Pusat.
+
+15
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB III
+KEBIJAKAN CDD DAN EDD
+
+Costumer Due Dilligence (CDD) merupakan kegiatan berupa identifikasi,
+verifikasi, dan pemantauan yang dilakukan BPR dan BPRS untuk memastikan bahwa
+transaksi dilakukan sesuai dengan profil pengguna jasa bank. Dalam hal BPR dan
+BPRS berhubungan dengan Nasabah yang tergolong berisiko tinggi terhadap
+kemungkinan pencucian uang dan pendanaan terorisme, BPR dan BPRS melakukan
+prosedur CDD yang lebih mendalam yang disebut dengan Enhanced Due Diligence
+(EDD).
+1.
+
+2.
+
+3.
+
+BPR dan BPRS wajib melakukan prosedur CDD pada saat:
+a.
+
+melakukan hubungan usaha dengan calon Nasabah. Apabila rekening
+merupakan rekening joint account atau rekening bersama maka CDD
+dilakukan terhadap seluruh pemegang rekening joint account tersebut;
+
+b.
+
+melakukan hubungan usaha atau transaksi dengan WIC atau Nasabah
+yang tidak memiliki rekening di BPR dan BPRS;
+
+c.
+
+meragukan kebenaran informasi yang diberikan oleh Nasabah, penerima
+kuasa, dan/atau Beneficial Owner; atau
+
+d.
+
+terdapat transaksi keuangan yang tidak wajar yang terkait dengan
+pencucian uang dan/atau pendanaan terorisme. Hal ini antara lain dapat
+dicermati dari jumlah nominal transaksi tertentu dan adanya peningkatan
+nilai transaksi yang signifikan.
+
+Untuk Nasabah yang telah ada sebelum peraturan ini berlaku, BPR dan BPRS
+wajib melakukan CDD sesuai dengan pendekatan berdasarkan materialitas dan
+risiko apabila:
+a.
+
+terdapat transaksi dalam jumlah yang signifikan;
+
+b.
+
+terdapat perubahan standar dokumentasi yang mendasar;
+
+c.
+
+terdapat perubahan pola transaksi yang signifikan;
+
+d.
+
+informasi pada profil Nasabah yang tersedia dalam Customer Identification
+File (CIF) belum dilengkapi dengan dokumen sebagaimana dimaksud pada
+Bab V huruf C; dan/atau
+
+e.
+
+menggunakan rekening anonim
+menggunakan nama fiktif.
+
+atau
+
+rekening
+
+yang
+
+diindikasikan
+
+Apabila calon Nasabah/Nasabah/WIC memenuhi ketentuan sebagai berikut:
+a.
+
+tergolong berisiko tinggi atau PEP;
+
+b.
+
+melakukan transaksi yang terkait dengan negara berisiko tinggi; atau
+
+c.
+
+melakukan transaksi tidak sesuai dengan profil.
+
+DKBU dan DPbS
+
+16
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+maka terhadap calon Nasabah/Nasabah/WIC tersebut, BPR dan BPRS wajib
+melakukan EDD. Apabila dari hasil EDD diperoleh dasar transaksi/alasan yang
+jelas, maka pemantauan terhadap transaksi tersebut dilakukan sebagaimana
+biasanya, sedangkan apabila tidak diperoleh alasan yang jelas maka terhadap
+transaksi tersebut wajib dilakukan pemantauan yang lebih ketat.
+4.
+
+Penetapan penggolongan berisiko tinggi dilakukan dengan berpedoman pada
+ketentuan PPATK yang mengatur mengenai pedoman identifikasi produk,
+nasabah, usaha, dan negara berisiko tinggi bagi penyedia jasa keuangan dan
+pedoman mengenai identifikasi transaksi keuangan mencurigakan terkait
+pendanaan terorisme bagi penyedia jasa keuangan.
+
+5.
+
+BPR dan BPRS wajib melakukan EDD sebagaimana dimaksud angka 3 di atas
+dengan cara melakukan CDD sebagaimana dimaksud dalam Bab V serta
+melakukan kegiatan-kegiatan sebagai berikut :
+a.
+
+b.
+
+Bagi calon Nasabah:
+1)
+
+meminta informasi tambahan yang diperlukan untuk memastikan
+kebenaran profil calon Nasabah; dan/atau
+
+2)
+
+meminta dokumen pendukung tambahan untuk meyakini kebenaran
+informasi mengenai identitas dan sumber dana.
+
+Bagi Nasabah atau Beneficial Owner:
+1)
+
+melakukan kegiatan seperti yang dilakukan terhadap calon Nasabah
+sebagaimana dimaksud pada huruf a;
+
+2)
+
+melakukan analisa secara berkala paling kurang terhadap informasi
+mengenai sumber dana, tujuan transaksi, dan hubungan usaha
+dengan pihak-pihak yang terkait; dan
+
+3)
+
+memantau lebih ketat pola transaksi nasabah untuk kepentingan
+pengkinian profil Nasabah atau Beneficial Owner.
+
+DKBU dan DPbS
+
+17
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB IV
+PENGELOMPOKAN NASABAH MENGGUNAKAN
+PENDEKATAN BERDASARKAN RISIKO
+(RISK BASED APPROACH)
+A.
+
+Pengelompokkan Nasabah
+1.
+
+Untuk mendukung kebijakan dan pelaksanaan CDD yang efektif, BPR dan
+BPRS wajib mengelompokkan Nasabah berdasarkan tingkat risiko
+terhadap kemungkinan terjadinya pencucian uang atau pendanaan
+terorisme.
+
+2.
+
+Mempertimbangkan peluang untuk dijadikan media pencucian uang atau
+media pendanaan terorisme, tingkat risiko Nasabah dapat dikategorikan
+menjadi tingkat risiko rendah, menengah, dan tinggi.
+a.
+
+Dalam hal Nasabah memiliki tingkat risiko yang rendah dan
+memenuhi kriteria sebagaimana dimaksud dalam Pasal 34 Peraturan
+Bank Indonesia Nomor 12/20/PBI/2010 tentang Penerapan Program
+Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme bagi
+BPR dan BPRS, maka terhadap Nasabah tersebut dapat dilakukan
+CDD yang lebih sederhana sebagaimana diatur pada BAB XI.
+
+b.
+
+Dalam hal Nasabah memiliki tingkat risiko menengah maka terhadap
+yang bersangkutan dilakukan CDD sebagaimana diatur pada BAB V.
+
+c.
+
+Dalam hal Nasabah memiliki tingkat risiko tinggi maka terhadap yang
+bersangkutan dilakukan EDD sebagaimana diatur pada Bab X huruf
+C.
+
+3.
+
+Pengelompokkan Nasabah harus didokumentasikan dan dipantau secara
+berkesinambungan.
+
+4.
+
+Penilaian risiko (risk assessment) secara memadai dan pemantauan perlu
+dilakukan terhadap Nasabah yang telah menjalani hubungan usaha
+dengan mempertimbangkan informasi yang diperoleh BPR/BPRS, profil
+Nasabah dan kebutuhan Nasabah terhadap produk dan jasa yang
+ditawarkan BPR/BPRS.
+
+5.
+
+Apabila terdapat ketidak sesuaian antara transaksi/profil Nasabah dengan
+tingkat risiko yang telah ditetapkan, maka BPR dan BPRS harus
+menyesuaikan tingkat risiko dengan cara:
+a. Menerapkan prosedur CDD bagi Nasabah yang semula tergolong
+berisiko rendah berubah menjadi berisiko menengah yang sesuai
+dengan penetapan tingkat risiko yang baru.
+b. Menerapkan prosedur EDD bagi Nasabah yang semula tergolong
+berisiko rendah atau menengah berubah menjadi berisiko tinggi atau
+PEP.
+
+DKBU dan DPbS
+
+18
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+B.
+
+Penetapan Profil Risiko Menggunakan Pendekatan Berdasarkan Risiko
+1.
+
+Profil risiko menggambarkan tingkat risiko dari Nasabah, produk maupun
+jasa yang memiliki potensi pencucian uang atau pendanaan teroris, antara
+lain jasa pengiriman uang atau produk bank menggunakan jasa elektronik.
+
+2.
+
+Profil risiko merupakan nilai akhir dari seluruh komponen penilaian yang
+ditetapkan berdasarkan rating yang paling dominan dari seluruh komponen.
+
+3.
+
+Dalam hal tidak terdapat rating yang paling dominan namun terdapat
+komposisi yang seimbang atau sama dari komponen penilaian, maka profil
+risiko yang digunakan adalah profil risiko yang lebih ketat.
+
+4.
+
+Penetapan klasifikasi tingkat risiko tidak berlaku bagi Nasabah yang
+tergolong sebagai PEP. Dengan demikian apabila terdapat calon Nasabah
+atau Nasabah yang karena pekerjaannya atau jabatannya tergolong
+sebagai PEP, maka yang bersangkutan secara otomatis diklasifikasikan
+sebagai risiko tinggi.
+
+5.
+
+Pengelompokan profil risiko nasabah
+mempertimbangkan hal-hal sebagai berikut:
+a.
+
+dapat
+
+dilakukan
+
+dengan
+
+Identitas Nasabah
+Contoh identitas Nasabah yang perlu dilakukan analisis antara lain
+sebagai berikut:
+1)
+
+b.
+
+Nasabah tidak memiliki dokumen identitas namun memiliki
+surat keterangan dari aparat pemerintah setempat yang
+menerangkan bahwa yang bersangkutan:
+a)
+
+adalah warga setempat dan beralamat sesuai dengan
+informasi yang diberikan kepada BPR/BPRS; dan/atau
+
+b)
+
+telah menetap dalam jangka waktu yang cukup lama.
+
+2)
+
+Data/informasi identitas Nasabah sudah tidak sesuai.
+
+3)
+
+Jangka waktu berlakunya dokumen identitas Nasabah sudah
+kadaluarsa, namun tidak ada perubahan terhadap alamat
+tempat tinggal Nasabah dimaksud yang telah diyakini
+kebenarannya oleh BPR/BPRS.
+
+4)
+
+Dokumen pendukung identitas Nasabah khususnya dokumen
+perusahaan tidak lengkap, misalnya ijin-ijin perusahaan,
+Anggaran Dasar/Anggaran Rumah Tangga, Pemegang Kuasa
+atau Kewenangan bertindak mewakili perusahaan.
+
+Lokasi Usaha
+Contoh lokasi usaha Nasabah yang perlu dilakukan analisis antara
+lain sebagai berikut:
+1)
+
+DKBU dan DPbS
+
+Lokasi usaha calon Nasabah berada di yurisdiksi yang
+ditetapkan berisiko tinggi oleh lembaga atau badan
+internasional terhadap kondisi suatu yurisdiksi.
+19
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+c.
+
+2)
+
+Lokasi usaha Nasabah berada dalam wilayah rawan tingkat
+kejahatan (kriminal) seperti kejahatan terhadap penyelundupan
+atau produk ilegal.
+
+3)
+
+Lokasi usaha Nasabah berada di zona perdagangan bebas.
+
+Profil Nasabah
+Contoh profil Nasabah yang perlu dilakukan analisis antara lain
+sebagai berikut:
+
+d.
+
+1)
+
+Nasabah yang tidak memiliki penghasilan secara regular.
+
+2)
+
+Tergolong sebagai PEP atau memiliki hubungan dengan PEP.
+
+3)
+
+Pegawai instansi pemerintah, khususnya yang terkait dengan
+pelayanan publik.
+
+4)
+
+Aparat penegak hukum.
+
+5)
+
+Orang-orang yang melakukan jenis-jenis kegiatan atau sektor
+usaha yang rentan terhadap pencucian uang.
+
+6)
+
+Pihak-pihak yang dicantumkan dalam daftar Perserikatan
+Bangsa-Bangsa (PBB) atau daftar lainnya yang dikeluarkan
+oleh organisasi internasional sebagai teroris, organisasi teroris
+ataupun organisasi yang melakukan pendanaan atau
+melakukan penghimpunan dana untuk kegiatan terorisme.
+
+Nilai Transaksi
+Contoh nilai transaksi Nasabah yang perlu dilakukan analisis antara
+lain sebagai berikut:
+
+e.
+
+1)
+
+Pada saat pembukaan rekening, Nasabah melakukan transaksi
+dengan nilai besar atau signifikan namun informasi mengenai
+sumber dana dan tujuan transaksi tidak sesuai dengan profil
+ataupun tujuan pembukaan rekening.
+
+2)
+
+Nasabah melakukan sejumlah transaksi dalam nilai kecil namun
+secara akumulasi merupakan transaksi bernilai besar atau
+signifikan.
+
+3)
+
+Transaksi tunai dalam jumlah besar.
+
+Kegiatan Usaha Nasabah
+Contoh kegiatan usaha Nasabah yang perlu dilakukan analisis antara
+lain sebagai berikut:
+
+DKBU dan DPbS
+
+1)
+
+Kegiatan usaha yang menyediakan jasa penukaran uang;
+
+2)
+
+Kegiatan usaha yang menyediakan jasa pengiriman uang;
+
+3)
+
+Kegiatan usaha yang berbasis uang tunai dan tidak sesuai
+dengan profil nasabah seperti mini market, jasa pengelolaan
+
+20
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+parkir, rumah makan, Stasiun Pengisian Bahan Bakar Umum
+(SPBU), pedagang isi pulsa;
+
+f.
+
+4)
+
+Kegiatan usaha yang memberikan jasa pengurusan dokumen
+hukum;
+
+5)
+
+Kegiatan usaha yang melakukan perdagangan rumah, saham,
+perhiasan, mobil atau aset lainnya;
+
+6)
+
+Kegiatan usaha yang memasarkan produknya melalui internet;
+
+7)
+
+Perusahaan perdagangan ekspor/impor;
+
+8)
+
+Advokat, akuntan atau konsultan keuangan; atau
+
+9)
+
+Kegiatan usaha multi level marketing.
+
+Struktur kepemilikan bagi Nasabah perusahaan
+Contoh struktur kepemilikan bagi Nasabah perusahaan yang perlu
+dilakukan analisis antara lain sebagai berikut:
+
+g.
+
+1)
+
+struktur kepemilikan perusahaan yang kompleks sehingga
+akses untuk mendapatkan informasi terbatas;
+
+2)
+
+terdapat Beneficial Owner yang mengendalikan perusahaan;
+atau
+
+3)
+
+terdapat pemberitaan negatif dalam media massa mengenai
+Beneficial
+Owner
+perusahaan
+dimaksud,
+sehingga
+mengakibatkan tingkat risiko perusahaan menjadi tinggi.
+
+Informasi lainnya
+Contoh informasi lainnya : nasabah BPR/BPRS menerima kiriman
+dana yang berasal dari negara-negara yang belum menerapkan
+rekomendasi FATF secara memadai.
+
+6.
+
+Selain hal sebagaimana dimaksud pada angka 5, BPR/BPRS dapat
+mengembangkan sendiri metode untuk memperoleh profil risiko Nasabah
+sesuai dengan kebutuhan dan profil risiko dari masing-masing BPR/BPRS.
+
+Tabel 1. Contoh matriks klasifikasi profil risiko.
+
+Identitas
+Nasabah
+
+Rendah
+
+Menengah
+
+Tinggi
+
+Menyerahkan lebih dari
+satu
+identitas
+yang
+masih
+berlaku
+dan
+berdomisili
+sesuai
+dengan alamat dalam
+kartu ID.
+
+Data/informasi
+identitas
+calon
+Nasabah kadaluarsa,
+namun Nasabah tetap
+kooperatif melakukan
+updating
+
+Nasabah tidak memiliki
+ID yang dikeluarkan
+oleh
+pihak
+yang
+berwenang,
+Data/informasi identitas
+calon
+Nasabah
+diragukan,
+misalnya
+kartu
+ID
+tidak
+dikeluarkan oleh pihak
+yang berwenang, data
+tidak benar, dll
+
+DKBU dan DPbS
+
+21
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+Rendah
+
+Lokasi Usaha
+
+Bidang
+usaha/
+pekerjaan
+
+Menengah
+
+Lokasi usaha di dalam
+kabupaten/ kota yang
+sama atau berbatasan
+dengan
+lokasi
+kabupaten/kota berada.
+Buruh tani.
+
+Nilai
+Transaksi
+
+Nilai transaksi rendah,
+misal
+dibawah
+Rp
+1.000.000 (satu juta
+Rupiah)
+dan
+sesuai
+dengan profil nasabah.
+
+Kegiatan
+Usaha
+
+Pedagang
+tradisional
+
+DKBU dan DPbS
+
+di
+
+Lokasi usaha di luar
+kabupaten/
+kota
+dimana
+lokasi
+kabupaten/kota
+BPR/BPRS berada.
+Pegawai Perusahaan
+
+Tinggi
+Data/informasi identitas
+tidak sesuai dengan
+domisili atau Nasabah
+selalu
+berpindah
+tempat atau tidak dapat
+dihubungi (misal nomor
+telpon)
+Nasabah WNI yang
+pada saat pembukaan
+rekening menggunakan
+alamat
+yang
+wilayahnya berada di
+luar wilayah Indonesia.
+Lokasi usaha Nasabah
+berada
+di
+zona
+perdagangan bebas.
+
+Pekerjaan ybs tidak
+tergolong
+berisiko
+tinggi,
+namun
+ybs
+tergolong sebagai PEP
+atau
+orang
+yang
+digolongkan
+berisiko
+tinggi
+dengan
+berpedoman
+pada
+ketentuan PPATK.
+Pegawai
+dari
+perusahaan
+yang
+tergolong
+berisiko
+tinggi.
+Transaksi tunai dalam
+jumlah besar, misal diatas
+Rp100.000.000,- (seratus
+juta)
+dan/atau
+tidak
+sesuai
+dengan
+profil
+nasabah.
+
+Peningkatan
+jumlah
+transaksi
+tidak
+signifikan
+atau
+signifikan
+namun
+didukung
+dengan
+dokumen
+yang
+memadai atau masih
+tergolong wajar atau
+masih sesuai dengan
+profil nasabah.
+pasar Pedagang valuta asing Kegiatan
+usaha
+yang
+atau pengiriman uang
+berbasis
+uang
+tunai
+seperti mini market, jasa
+pengelolaan parkir, rumah
+makan, Stasiun Pengisian
+Bahan Bakar (SPBU),
+pedagang isi pulsa.
+
+22
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+Rendah
+Struktur
+Kepemilikan
+
+Informasi
+Lainnya
+
+Tidak
+memiliki
+pengendali
+dan
+komposisi
+pemegang
+saham tersedia dalam
+data publik
+Tidak terdapat informasi
+negatif lain
+
+DKBU dan DPbS
+
+Menengah
+
+Tinggi
+
+Informasi
+mengenai Perusahaan
+dengan
+pemegang
+saham pemegang saham atas
+tidak tersedia dalam unjuk
+data publik
+Memiliki usaha lainnya
+disamping
+sebagai
+karyawan perusahaan
+
+Nasabah kredit yang
+barang jaminannya atas
+nama pihak lain (baik
+jaminan tunai/jaminan
+dalam bentuk barang)
+yang tidak memiliki
+hubungan yang jelas
+Nasabah
+yang
+memberikan
+kuasa
+kepada pihak lain untuk
+melakukan
+penarikan
+pada rekening Nasabah
+setelah
+permohonan
+rekening disetujui
+
+23
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB V
+PROSEDUR IDENTIFIKASI, VERIFIKASI DAN PEMANTAUAN NASABAH
+(CUSTOMER DUE DILLIGENCE)
+A.
+
+Kebijakan dan Prosedur Penerimaan dan Identifikasi Nasabah
+Kebijakan dan prosedur tertulis tentang penerimaan Nasabah dan identifikasi
+calon Nasabah, termasuk dalam berhubungan dengan WIC sekurang-kurangnya
+mencakup hal-hal sebagai berikut:
+1.
+
+Penggunaan pendekatan berdasarkan risiko dengan mengelompokkan
+Nasabah berdasarkan tingkat risiko terjadinya pencucian uang atau
+pendanaan terorisme.
+
+2.
+
+Permintaan informasi mengenai calon Nasabah mencakup:
+a. identitas calon Nasabah;
+b. identitas Beneficial Owner, apabila Nasabah mewakili Beneficial Owner;
+c. sumber dana;
+d. rata-rata penghasilan;
+e. maksud dan tujuan hubungan usaha atau transaksi yang akan dilakukan
+calon Nasabah dengan BPR/BPRS; dan
+f.
+
+informasi lain yang diperlukan, yang memungkinkan BPR/BPRS
+mengetahui profil calon Nasabah.
+
+3.
+
+Permintaan bukti-bukti identitas dan dokumen pendukung informasi dari
+calon Nasabah.
+
+4.
+
+Penelitian atas kebenaran dokumen pendukung identitas calon Nasabah.
+
+5.
+
+Permintaan kartu identitas lebih dari satu yang dikeluarkan oleh pihak yang
+berwenang, apabila terdapat keraguan terhadap kartu identitas yang ada.
+
+6.
+
+Apabila diperlukan dapat dilakukan wawancara dengan calon Nasabah untuk
+memperoleh keyakinan atas kebenaran informasi, bukti-bukti identitas dan
+dokumen pendukung calon Nasabah.
+
+7.
+
+Larangan untuk membuka atau memelihara rekening anonim atau rekening
+yang menggunakan nama fiktif.
+
+8.
+
+Pertemuan langsung/tatap muka dengan calon Nasabah pada awal
+melakukan hubungan usaha dalam rangka meyakini kebenaran identitas
+calon Nasabah.
+
+9.
+
+Kewaspadaan terhadap transaksi atau hubungan usaha dengan calon
+Nasabah yang terkait dengan negara yang belum memadai dalam
+melaksanakan rekomendasi FATF, misalnya Calon Nasabah mempunyai
+mitra usaha dari negara yang memenuhi kriteria berisiko tinggi.
+
+10.
+
+Penyelesaian proses verifikasi identitas calon Nasabah sebelum membina
+hubungan usaha dengan calon Nasabah.
+
+DKBU dan DPbS
+
+24
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+11.
+
+12.
+
+B.
+
+Penolakan pembukaan rekening calon Nasabah dan atau penolakan
+pelaksanaan transaksi dengan WIC yang memenuhi kriteria sebagai berikut:
+a.
+
+tidak memenuhi ketentuan atau persyaratan sebagaimana diatur
+dalam Pasal 13, Pasal 14, Pasal 15, Pasal 16 dan Pasal 17 Peraturan
+Bank Indonesia Nomor 12/20/PBI/2010 tentang Penerapan Program
+Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme bagi
+BPR dan BPRS; atau
+
+b.
+
+diketahui menggunakan identitas dan atau memberikan informasi yang
+tidak benar.
+
+Pendokumentasian calon Nasabah atau WIC yang memenuhi kriteria
+sebagaimana angka 11 diatas dalam suatu daftar tersendiri dan
+melaporkannya dalam LTKM apabila transaksinya tidak wajar atau
+mencurigakan.
+
+Permintaan Informasi
+1.
+
+Sebelum melakukan hubungan usaha dengan Nasabah, BPR dan BPRS
+wajib meminta informasi yang memungkinkan BPR/BPRS untuk dapat
+mengetahui profil calon Nasabah.
+
+2.
+
+Calon Nasabah wajib diidentifikasikan dan diklasifikasikan ke dalam
+kelompok perseorangan dan perusahaan. Dalam hal calon Nasabah
+adalah Nasabah perusahaan maka dalam kelompok Nasabah perusahaan
+tersebut mencakup pula Beneficial Owner.
+
+3.
+
+Informasi yang wajib diminta terhadap calon Nasabah yang telah
+dikelompokan, paling kurang sebagai berikut:
+
+Tabel 2. Informasi calon Nasabah.
+No.
+
+Perorangan
+
+Perusahaan
+(termasuk Bank)
+
+Yayasan/
+Perkumpulan
+Nama
+yayasan/
+perkumpulan
+termasuk
+bentuk
+badan
+hukum
+(apabila
+berbadan
+hukum)
+Nomor izin bidang
+kegiatan/
+usaha
+(termasuk
+bidang
+kegiatan/ usaha) atau
+tujuan yayasan atau
+nomor
+bukti
+pendaftaran
+pada
+instansi
+yang
+berwenang.
+
+1.
+
+Nama lengkap
+termasuk alias
+
+Nama perusahaan
+termasuk
+bentuk
+badan hukum
+
+2.
+
+Nomor
+identitas
+
+Nomor izin usaha
+dari instansi yang
+berwenang
+
+DKBU dan DPbS
+
+dokumen
+
+Lembaga
+Negara/
+Pemerintah
+Nama lembaga
+Negara/
+pemerintah
+
+25
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+No.
+
+Perorangan
+
+3.
+
+Alamat tempat tinggal
+yang tercantum pada
+kartu identitas
+
+4.
+
+Alamat tempat tinggal
+terkini termasuk no.
+telepon apabila ada
+Tempat dan tanggal
+lahir
+Kewarganegaraan
+Pekerjaan
+(nama
+perusahaan/ institusi,
+alamat
+perusahaan
+/institusi, dan jabatan)
+Jenis kelamin
+
+5.
+6.
+7.
+
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+
+Status perkawinan
+Identitas
+Beneficial
+Owner apabila ada
+Sumber dana
+Rata-rata penghasilan
+Maksud dan tujuan
+hubungan usaha
+Informasi lain yang
+memungkinkan
+BPR/BPRS
+untuk
+dapat
+mengetahui
+profil calon Nasabah
+
+4.
+
+Perusahaan
+(termasuk Bank)
+
+Yayasan/
+Perkumpulan
+
+Alamat kedudukan
+
+Alamat
+kedudukan
+termasuk no. telepon
+
+Tempat
+dan
+tanggal pendirian
+
+Tempat dan tanggal
+pendirian
+
+Maksud dan tujuan
+hubungan usaha
+
+Maksud dan tujuan
+hubungan usaha
+
+Identitas Beneficial
+Owner apabila ada
+Sumber dana
+
+Identitas
+Beneficial
+Owner apabila ada
+Sumber dana
+
+Maksud dan tujuan
+hubungan usaha
+Informasi lain yang
+diperlukan
+
+Maksud dan tujuan
+hubungan usaha
+Informasi lain yang
+diperlukan
+mis.
+laporan
+keuangan
+calon Nasabah atau
+keterangan
+mengenai pelanggan
+utamanya
+
+Lembaga
+Negara/
+Pemerintah
+Alamat
+kedudukan
+termasuk
+no.
+telepon
+
+Dalam hal yang akan melakukan transaksi dengan BPR/BPRS adalah
+WIC, maka informasi yang wajib diminta oleh BPR dan BPRS paling
+kurang sebagai berikut:
+
+Tabel 3. Informasi WIC
+
+No.
+
+1.
+
+WIC yang melakukan transaksi sebesar
+Rp100.000.000,00 (seratus juta rupiah)
+atau lebih atau yang nilainya setara
+
+WIC yang melakukan transaksi kurang
+dari Rp100.000.000,00 (seratus juta
+rupiah) atau yang nilainya setara
+
+Perorangan
+
+Perusahaan
+
+Perorangan
+
+Perusahaan
+
+Nama lengkap
+termasuk alias
+
+Nama perusahaan
+
+Nama lengkap
+termasuk alias
+
+Nama perusahaan
+
+DKBU dan DPbS
+
+26
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+No.
+
+WIC yang melakukan transaksi sebesar
+Rp100.000.000,00 (seratus juta rupiah)
+atau lebih atau yang nilainya setara
+
+WIC yang melakukan transaksi kurang
+dari Rp100.000.000,00 (seratus juta
+rupiah) atau yang nilainya setara
+
+Perorangan
+
+Perusahaan
+
+Perorangan
+
+2.
+
+Nomor dokumen
+identitas
+
+Nomor izin usaha dari
+instansi
+yang
+berwenang
+
+Nomor dokumen
+identitas
+
+3.
+
+Alamat tempat
+tinggal
+yang
+tercantum pada
+kartu identitas
+
+Alamat kedudukan
+
+Alamat
+tempat
+tinggal
+yang
+tercantum pada
+kartu identitas
+
+4.
+
+Alamat tempat
+tinggal
+terkini
+termasuk nomor
+telepon apa bila
+ada
+
+5.
+
+Tempat
+dan
+tanggal lahir
+
+Tempat dan tanggal
+pendirian
+
+6.
+
+Kewarganegara
+an
+
+Bentuk badan hukum
+
+7.
+
+Pekerjaan
+
+8.
+
+Jenis kelamin
+
+9.
+
+Status
+perkawinan
+
+10.
+
+Identitas
+Beneficial Owner
+apabila ada
+
+Identitas
+Beneficial
+Owner apabila ada
+
+11.
+
+Sumber dana
+
+Sumber dana
+
+12.
+
+Rata-rata
+penghasilan
+
+13.
+
+Maksud
+dan
+tujuan hubungan
+usaha
+
+Maksud dan tujuan
+hubungan usaha
+
+14.
+
+Informasi lain yg
+memungkinkan
+BPR/BPRS
+mengetahui
+
+Informasi lain
+diperlukan
+
+DKBU dan DPbS
+
+Perusahaan
+
+Alamat kedudukan
+
+yang
+
+27
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+No.
+
+WIC yang melakukan transaksi sebesar
+Rp100.000.000,00 (seratus juta rupiah)
+atau lebih atau yang nilainya setara
+Perorangan
+profil
+Nasabah
+
+5.
+
+C.
+
+Perusahaan
+
+WIC yang melakukan transaksi kurang
+dari Rp100.000.000,00 (seratus juta
+rupiah) atau yang nilainya setara
+Perorangan
+
+Perusahaan
+
+calon
+
+Transaksi dengan WIC dengan nilai sebesar Rp100.000.000,00 (seratus
+juta rupiah) atau lebih atau yang nilainya setara yang dilakukan dalam 1
+(satu) kali maupun beberapa kali transaksi dalam 1 (satu) hari kerja
+sebagaimana dimaksud pada tabel 2 adalah transaksi yang memenuhi
+kriteria sebagai berikut:
+a.
+
+Dilakukan pada kantor BPR/BPRS yang sama; dan
+
+b.
+
+Jenis transaksi yang dilakukan adalah transaksi yang sama, misal
+transaksi pengiriman/transfer uang, transaksi pembayaran dan bukan
+merupakan gabungan dari beberapa transaksi yang berbeda jenis
+transaksinya.
+
+Permintaan Dokumen
+1.
+
+Untuk Nasabah perorangan, informasi pada tabel 1 dan tabel 2 di atas
+wajib didukung dengan dokumen identitas yang masih berlaku
+mencantumkan foto diri dan diterbitkan oleh pihak yang berwenang.
+
+2.
+
+Dokumen pendukung utama bagi identitas Nasabah perorangan yang
+berkewarganegaraan Indonesia adalah Kartu Tanda Penduduk (KTP),
+Surat Izin Mengemudi (SIM), atau paspor yang masih berlaku. Sedangkan
+untuk dokumen pendukung tambahan antara lain adalah kartu Nomor
+Pokok Wajib Pajak (NPWP), atau Kartu Keluarga (KK).
+
+3.
+
+Untuk calon Nasabah perusahaan, dokumen identitas yang wajib diminta
+adalah:
+
+4.
+
+a.
+
+akte pendirian dan/atau anggaran dasar perusahaan, dan
+
+b.
+
+izin usaha atau izin lainnya dari instansi berwenang. Contoh: izin
+usaha dari Bank Indonesia bagi Pedagang Valuta Asing Bukan Bank
+dan Kegiatan Usaha Pengiriman Uang, atau izin usaha dari
+Departemen Kehutanan bagi kegiatan usaha di bidang
+perkayuan/kehutanan (Hak Pengusahaan Hutan, Hutan Tanaman
+Industri, Izin Pemanfaatan Kayu).
+
+Untuk calon Nasabah berupa yayasan atau perkumpulan, dokumen
+identitas yang wajib diminta adalah akta pendirian yang telah disahkan oleh
+instansi yang berwenang dan/atau berupa izin bidang kegiatan/ tujuan
+yayasan atau surat telah terdaftar sebagai perkumpulan.
+
+DKBU dan DPbS
+
+28
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+5.
+
+Disamping dokumen identitas, BPR/BPRS wajib memperoleh dokumen
+lainnya berupa:
+
+Tabel 4. Dokumen Pendukung Calon Nasabah Perorangan dan Perusahaan
+No.
+
+Perorangan
+
+1.
+
+Spesimen
+tanda tangan
+
+2.
+
+3.
+
+4.
+
+5.
+6.
+7.
+
+DKBU dan DPbS
+
+Perusahaan (selain Bank)
+Usaha Mikro dan
+Bukan usaha Mikro
+Usaha Kecil
+dan Usaha Kecil
+Spesimen tandatangan Spesimen tanda tangan
+Pengurus atau pihak anggota Direksi yang
+yang
+diberi
+kuasa berwenang
+mewakili
+melakukan hubungan perusahaan atau pihak
+usaha
+dengan yang diberi kuasa untuk
+BPR/BPRS
+melakukan
+hubungan
+usaha
+dengan
+BPR/BPRS
+
+kartu
+NPWP
+bagi
+Nasabah
+yang
+diwajibkan
+untuk
+memiliki NPWP sesuai
+dengan ketentuan yang
+berlaku
+Surat
+Izin
+Tempat
+Usaha (SITU) atau
+dokumen lain yang
+dipersyaratkan
+oleh
+instansi
+yang
+berwenang
+
+kartu
+NPWP
+bagi
+Nasabah
+yang
+diwajibkan
+untuk
+memiliki NPWP sesuai
+dengan ketentuan yang
+berlaku
+Surat
+Izin
+Tempat
+Usaha
+(SITU)
+atau
+dokumen
+lain
+yang
+dipersyaratkan
+oleh
+instansi
+yang
+berwenang
+laporan keuangan atau
+deskripsi kegiatan
+usaha perusahaan
+struktur manajemen
+perusahaan
+struktur kepemilikan
+perusahaan
+dokumen
+identitas
+anggota Direksi yang
+berwenang
+mewakili
+perusahaan atau pihak
+yang diberi kuasa untuk
+melakukan
+hubungan
+usaha
+dengan
+BPR/BPRS
+
+Perusahaan
+berupa Bank
+Spesimen tanda
+tangan anggota
+Direksi
+yang
+berwenang
+mewakili
+perusahaan atau
+pihak yang diberi
+kuasa
+untuk
+melakukan
+hubungan usaha
+dengan
+BPR/BPRS
+
+Izin usaha dari
+Bank Indonesia.
+
+29
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+6.
+
+Untuk calon Nasabah selain yang tercantum dalam Tabel 3 di atas, maka
+BPR/BPRS wajib memperoleh dokumen lainnya selain dokumen identitas,
+yaitu:
+
+Tabel 5. Dokumen pendukung Nasabah selain Perorangan dan Perusahaan
+
+No.
+
+Yayasan
+
+Perkumpulan
+
+1.
+
+izin bidang kegiatan/
+tujuan yayasan
+
+bukti pendaftaran pada
+instansi yang berwenang
+
+2.
+
+deskripsi
+yayasan
+
+kegiatan
+
+nama penyelenggara
+
+3.
+
+struktur
+yayasan
+
+pengurus
+
+identitas
+pihak
+yang
+berwenang
+mewakili
+perkumpulan
+dalam
+melakukan
+hubungan
+usaha dengan BPR/BPRS
+
+4.
+
+dokumen
+identitas
+anggota pengurus yang
+berwenang
+mewakili
+yayasan
+untuk
+melakukan
+hubungan
+usaha
+dengan
+BPR/BPRS
+
+D.
+
+Lembaga Negara/
+Pemerintah, lembaga
+internasional, perwakilan
+asing
+
+surat penunjukan bagi pihakpihak
+yang
+berwenang
+mewakili
+lembaga
+atau
+perwakilan dalam melakukan
+hubungan usaha dengan
+BPR/BPRS
+spesimen tanda tangan
+
+Verifikasi Dokumen
+1.
+
+Informasi yang disampaikan oleh calon Nasabah/Nasabah/WIC beserta
+dokumen pendukungnya wajib diteliti kebenarannya dengan melakukan
+verifikasi terhadap dokumen pendukung untuk memastikan bahwa data
+tersebut adalah data yang benar dan terkini. Dalam hal terdapat keraguan,
+verifikasi dilakukan berdasarkan dokumen dan/atau sumber informasi
+lainnya yang dapat dipercaya dan independen.
+
+2.
+
+Dalam rangka meyakini kebenaran identitas calon Nasabah, verifikasi
+dilakukan dengan:
+a.
+
+DKBU dan DPbS
+
+Pertemuan langsung/tatap muka dengan calon Nasabah pada awal
+melakukan hubungan usaha. Dalam hal ini, BPR/BPRS dapat diwakili
+oleh pihak lain yang mengetahui prinsip dasar APU dan PPT,
+termasuk prosedur CDD yang diterapkan BPR/BPRS. Dalam hal
+pertemuan langsung dengan calon Nasabah tidak dapat
+dilaksanakan pada awal pertama membuka hubungan usaha dengan
+BPR/BPRS, maka kewajiban pertemuan langsung dapat dilakukan
+30
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+kemudian sepanjang memenuhi persyaratan paling kurang sebagai
+berikut:
+calon Nasabah tergolong berisiko rendah; atau
+
+2)
+
+mensyaratkan dokumen pendukung yang memuat identitas
+calon Nasabah yang telah dilegalisir oleh lembaga yang
+berwenang.
+
+b.
+
+Melakukan wawancara dengan calon Nasabah apabila diperlukan.
+
+c.
+
+Mencocokan kesesuaian profil calon Nasabah dengan foto diri yang
+tercantum dalam kartu identitas.
+
+d.
+
+Meminta kepada calon Nasabah untuk memberikan lebih dari satu
+dokumen identitas yang dikeluarkan oleh pihak yang berwenang,
+apabila timbul keraguan terhadap kartu identitas yang ada.
+
+e.
+
+Menatausahakan salinan dokumen kartu identitas setelah dilakukan
+pencocokan dengan dokumen asli yang sah.
+
+f.
+
+Melakukan pengecekan silang untuk memastikan adanya konsistensi
+dari berbagai informasi yang disampaikan oleh calon Nasabah,
+antara lain seperti:
+
+g.
+
+h.
+3.
+
+1)
+
+1)
+
+menghubungi Nasabah melalui telepon (rumah atau kantor);
+
+2)
+
+menghubungi pejabat Sumber Daya Manusia tempat dimana
+Nasabah bekerja apabila pekerjaan Nasabah adalah karyawan
+suatu perusahaan atau instansi; atau
+
+3)
+
+melakukan konfirmasi atas penghasilan Nasabah dengan
+mensyaratkan rekening Koran dari Bank lainnya yang
+berkedudukan di Indonesia.
+
+Pengecekan dimaksud juga mencakup pemeriksaan nama calon
+Nasabah terhadap:
+1)
+
+Daftar Teroris.
+
+2)
+
+Daftar lainnya yang dimiliki oleh BPR/BPRS (apabila ada),
+seperti daftar calon nasabah/ nasabah/ WIC sebagaimana
+dimaksud pada Pasal 28 Peraturan Bank Indonesia Nomor
+12/20/PBI/2010 tentang Penerapan Program Anti Pencucian
+Uang dan Pencegahan Pendanaan Terorisme bagi BPR dan
+BPRS.
+
+3)
+
+Dokumen lainnya seperti identitas pemberi kerja dari calon
+Nasabah, rekening telepon dan rekening listrik.
+
+Memastikan adanya kemungkinan hal-hal yang tidak wajar atau
+mencurigakan.
+
+Proses verifikasi identitas calon Nasabah dan Beneficial Owner wajib
+diselesaikan sebelum membina hubungan usaha dengan calon Nasabah
+atau sebelum melakukan transaksi dengan WIC.
+
+DKBU dan DPbS
+
+31
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+4.
+
+Dalam kondisi tertentu, proses verifikasi dapat diselesaikan kemudian,
+yaitu paling lambat:
+a.
+
+untuk Nasabah perorangan, 14 (empat belas) hari kerja setelah
+dilakukannya hubungan usaha.
+
+b.
+
+untuk Nasabah perusahaan, 90 (sembilan puluh) hari kerja setelah
+dilakukannya hubungan usaha
+
+Kondisi tertentu sebagaimana dimaksud di atas yaitu:
+
+E.
+
+a.
+
+kelengkapan dokumen tidak dapat dipenuhi pada saat hubungan
+usaha akan dilakukan misalnya karena dokumen masih dalam proses
+pengurusan yang dibuktikan dengan dokumen pendukung; dan
+
+b.
+
+apabila tingkat risiko calon Nasabah tergolong rendah.
+
+Pemantauan
+1.
+
+BPR dan BPRS wajib melakukan kegiatan pemantauan yang paling kurang
+mencakup hal-hal sebagai berikut:
+a.
+
+Dilakukan secara berkesinambungan untuk mengidentifikasi
+kesesuaian antara transaksi Nasabah dengan profil Nasabah dan
+menatausahakan dokumen tersebut, terutama terhadap hubungan
+usaha/transaksi dengan Nasabah WNI yang berdomisili di Negara
+lain.
+
+b.
+
+Melakukan analisis terhadap seluruh transaksi yang tidak sesuai
+dengan profil Nasabah. Contoh transaksi, aktivitas dan perilaku yang
+tidak sesuai dengan profil Nasabah adalah sebagaimana terlampir
+dalam Lampiran A pada Pedoman Standar ini.
+
+2.
+
+BPR dan BPRS dapat meminta informasi tentang latar belakang dan tujuan
+transaksi terhadap transaksi yang tidak sesuai dengan profil Nasabah,
+dengan memperhatikan ketentuan anti tipping-off sebagaimana dimaksud
+dalam UU PPTPPU .
+
+3.
+
+Kegiatan pemantauan profil dan transaksi Nasabah yang dilakukan secara
+berkesinambungan meliputi kegiatan:
+a.
+
+memastikan kelengkapan informasi dan dokumen Nasabah;
+
+b.
+
+meneliti kesesuaian antara profil transaksi dengan profil Nasabah;
+
+c.
+
+meneliti kemiripan atau kesamaan nama dengan nama yang
+tercantum dalam database daftar teroris; dan
+
+d.
+
+meneliti kemiripan atau kesamaan nama dengan nama tersangka
+atau terdakwa yang dipublikasikan dalam media massa atau oleh
+otoritas yang berwenang.
+
+DKBU dan DPbS
+
+32
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+4.
+
+a.
+
+media massa, seperti koran dan majalah; dan/atau
+
+b.
+
+sumber informasi lainnya.
+
+5.
+
+Pemantauan terhadap profil dan transaksi Nasabah harus dilakukan secara
+berkala dengan menggunakan pendekatan berdasarkan risiko.
+
+6.
+
+Apabila berdasarkan hasil pemantauan terdapat kemiripan atau kesamaan
+nama sebagaimana dimaksud pada angka 3 huruf c dan huruf d diatas,
+maka BPR dan BPRS harus melakukan klarifikasi kepada nasabah untuk
+memastikan kemiripan tersebut.
+
+7.
+
+Dalam hal nama dan identitas Nasabah sesuai dengan nama tersangka
+atau terdakwa yang diinformasikan dalam media massa dan/atau sesuai
+dengan daftar teroris sebagaimana dimaksud pada angka 3 huruf c dan
+huruf d diatas, maka BPR dan BPRS wajib melaporkan Nasabah tersebut
+dalam LTKM .
+
+8.
+
+Pemantauan terhadap rekening Nasabah harus dipantau lebih ketat
+apabila terdapat antara lain:
+
+9.
+
+F.
+
+Sumber informasi yang dapat digunakan untuk memantau Nasabah BPR
+dan BPRS yang ditetapkan sebagai status tersangka atau terdakwa dapat
+diperoleh antara lain melalui :
+
+a.
+
+transaksi pengiriman uang (incoming transfer) yang terkait dengan
+Negara yang berisiko tinggi;
+
+b.
+
+pembayaran pinjaman/kredit/pembiayaan yang dipercepat dan/atau
+nilainya lebih dari yang seharusnya dan dilakukan secara tunai
+dengan nilai yang signifikan ;
+
+c.
+
+belum dilakukan tatap muka dengan nasabah pada awal melakukan
+hubungan usaha.
+
+Seluruh kegiatan pemantauan didokumentasikan dengan tertib.
+
+Pengkinian
+1.
+
+BPR dan BPRS wajib melakukan pengkinian data terhadap informasi dan
+dokumen serta menatausahakannya, sebagaimana dimaksud dalam Pasal
+13, Pasal 14, Pasal 15, Pasal 16 dan Pasal 17 Peraturan Bank Indonesia
+Nomor 12/20/PBI/2010 tentang Penerapan Program Anti Pencucian Uang
+dan Pencegahan Pendanaan Terorisme bagi BPR dan BPRS.
+
+2.
+
+BPR dan BPRS wajib melakukan pengkinian data Nasabah yang dimiliki
+agar identifikasi dan pemantauan transaksi keuangan yang mencurigakan
+dapat berjalan efektif.
+
+3.
+
+Pengkinian data Nasabah dilakukan dengan menggunakan pendekatan
+berdasarkan risiko yang mencakup pengkinian profil Nasabah dan
+transaksinya. Dalam hal sumber daya yang dimiliki BPR dan BPRS
+terbatas, kegiatan pengkinian data dilakukan dengan skala prioritas.
+
+DKBU dan DPbS
+
+33
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+4.
+
+5.
+
+G.
+
+Parameter untuk menetapkan skala prioritas sebagaimana dimaksud pada
+angka 3 antara lain :
+a.
+
+tingkat risiko Nasabah tinggi;
+
+b.
+
+transaksi dengan jumlah yang signifikan dan/atau menyimpang dari
+profil transaksi atau profil Nasabah;
+
+c.
+
+saldo yang nilainya signifikan; atau
+
+d.
+
+informasi yang ada pada CIF belum sesuai dengan PBI APU dan
+PPT.
+
+BPR dan BPRS harus melakukan pengkinian data antara lain pada saat:
+a.
+
+pembukaan rekening tambahan;
+
+b.
+
+perpanjangan fasilitas pinjaman;
+
+c.
+
+penggantian buku tabungan, ATM, atau dokumen produk perbankan
+lainnya; atau
+
+d.
+
+terdapat transaksi keuangan yang signifikan dan/atau tidak sesuai
+dengan profil Nasabah.
+
+6.
+
+Selain melakukan pengkinian data sebagaimana dimaksud pada angka 5,
+pengkinian data dilakukan secara berkala berdasarkan tingkat risiko
+Nasabah/transaksi.
+
+7.
+
+Pencatatan pada CIF atas informasi Nasabah yang dikinikan tanpa
+didukung dengan dokumen, harus dengan persetujuan dari Pejabat
+BPR/BPRS yang berwenang.
+
+8.
+
+Seluruh kegiatan pengkinian data harus diadministrasikan.
+
+9.
+
+Dalam melakukan pengkinian data tersebut, BPR dan BPRS wajib
+melakukan pemantauan terhadap informasi dan dokumen Nasabah.
+
+Daftar Teroris
+1.
+
+BPR dan BPRS wajib memelihara Daftar Teroris yang diterima dari Bank
+Indonesia setiap 6 (enam) bulan berdasarkan data yang dipublikasikan
+oleh Perserikatan Bangsa Bangsa (PBB).
+
+2.
+
+Informasi mengenai Daftar Teroris antara lain dapat diperoleh melalui:
+a.
+
+website PBB :
+http://www.un.org/sc/committees/1267/consolist.shtml;
+
+b.
+
+sumber lainnya yang lazim digunakan oleh perbankan dan
+merupakan data publik antara lain The Office of Foreign Assets
+Control List (OFAC List) dengan alamat situs internet :
+http://www.treas.gov/offices/enforcement/ofac/index.shtml; atau
+
+c.
+DKBU dan DPbS
+
+pihak berwenang, seperti informasi dari PPATK atau Kepolisian.
+34
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+3.
+
+Kegiatan pemantauan yang wajib dilakukan BPR dan BPRS terkait dengan
+Daftar Teroris adalah :
+a.
+
+Memastikan secara berkala nama-nama Nasabah yang memiliki
+kesamaan atau kemiripan dengan nama yang tercantum dalam
+Daftar Teroris.
+
+b.
+
+Memastikan kesesuaian identitas Nasabah tersebut dengan informasi
+lain yang terkait dalam hal terdapat kemiripan nama Nasabah dengan
+nama yang tercantum dalam Daftar Teroris.
+
+c.
+
+Melaporkan Nasabah tersebut dalam LTKM dalam hal terdapat
+kesamaan nama Nasabah dan kesamaan informasi lainnya dengan
+nama yang tercantum dalam Daftar Teroris.
+
+DKBU dan DPbS
+
+35
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB VI
+PENATAUSAHAAN DOKUMEN DAN PELAPORAN
+
+A.
+
+Penatausahaan Dokumen
+1.
+
+BPR dan BPRS wajib menatausahakan data atau dokumen dengan baik
+sebagai upaya untuk membantu pihak yang berwenang dalam melakukan
+penyidikan terhadap dana-dana yang diindikasikan berasal dari hasil
+tindak pidana pencucian uang. Dengan demikian, dokumen yang
+dimiliki/disimpan BPR dan BPRS harus akurat dan lengkap, sehingga
+mudah pencariannya jika diperlukan.
+
+2.
+
+Jangka waktu penatausahaan dokumen adalah sebagai berikut:
+a.
+
+b.
+
+1)
+
+berakhirnya hubungan usaha dengan Nasabah;
+
+2)
+
+transaksi yang dilakukan dengan WIC; atau
+
+3)
+
+ditemukannya ketidak sesuaian transaksi dengan tujuan
+ekonomis dan/atau tujuan usaha.
+
+dokumen Nasabah atau WIC yang terkait dengan transaksi keuangan
+dengan jangka waktu sebagaimana dimaksud dalam Undang-Undang
+yang mengatur mengenai Dokumen Perusahaan.
+
+3.
+
+Dokumen dapat ditatausahakan dalam bentuk asli, salinan, electronic form,
+microfilm, atau dokumen yang berdasarkan Undang-Undang yang berlaku
+dapat digunakan sebagai alat bukti.
+
+4.
+
+Dokumen yang ditatausahakan paling kurang mencakup:
+
+5.
+
+B.
+
+dokumen yang terkait dengan data Nasabah atau WIC dengan
+jangka waktu paling kurang 5 (lima) tahun sejak:
+
+a.
+
+identitas Nasabah atau WIC; dan
+
+b.
+
+informasi transaksi yang antara lain meliputi jenis mata uang dan
+jumlah uang yang digunakan, tanggal perintah transaksi, asal dan
+tujuan transaksi, serta nomor rekening yang terkait dengan transaksi.
+
+BPR dan BPRS wajib memberikan informasi dan/atau dokumen
+sebagaimana dimaksud pada angka 4 diatas kepada Bank Indonesia
+dan/atau otoritas lain yang berwenang sebagaimana diatur dalam
+peraturan perundang-undangan yang berlaku.
+
+Pelaporan
+1.
+
+BPR dan BPRS wajib menyampaikan Laporan Transaksi Keuangan
+Mencurigakan (LTKM), Laporan Transaksi Keuangan Tunai (LTKT), dan
+laporan lain kepada PPATK sebagaimana diatur dalam UU PPTPPU .
+
+DKBU dan DPbS
+
+36
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+2.
+
+Berdasarkan hasil pemantauan atas profil dan transaksi Nasabah, BPR
+dan BPRS wajib melaporkan dalam LTKM apabila:
+a.
+
+b.
+
+c.
+
+d.
+
+Nasabah memiliki kemiripan atau kesamaan nama dan identitas
+dengan nama tersangka atau terdakwa yang diinformasikan dalam
+media massa dan/atau sesuai dengan daftar teroris;
+Nasabah yang ditutup hubungan usahanya karena tidak bersedia
+melengkapi informasi dan dokumen pendukung dan berdasarkan
+penilaian BPR/BPRS transaksi yang dilakukan tidak wajar atau
+mencurigakan;
+Nasabah/WIC yang ditolak atau dibatalkan transaksinya karena tidak
+bersedia melengkapi informasi yang diminta oleh BPR/BPRS dan
+berdasarkan penilaian BPR/BPRS transaksi yang dilakukan tidak wajar
+atau mencurigakan; atau
+Transaksi keuangan yang memenuhi kriteria mencurigakan
+sebagaimana dimaksud dalam UU PPTPPU.
+
+3.
+
+BPR dan BPRS wajib menyampaikan laporan Transaksi Keuangan
+Mencurigakan kepada PPATK paling lambat 3 (tiga) hari kerja setelah
+BPR dan BPRS mengetahui adanya unsur Transaksi Keuangan
+Mencurigakan.
+
+4.
+
+BPR dan BPRS wajib menyampaikan laporan Transaksi Keuangan Tunai
+kepada PPATK paling lambat 14 (empat belas) hari kerja terhitung sejak
+tanggal transaksi dilakukan.
+
+5.
+
+Tatacara pelaporan transaksi keuangan mencurigakan (termasuk transaksi
+yang diduga terkait dengan kegiatan terorisme atau pendanaan terorisme),
+transaksi keuangan tunai dan laporan lain kepada PPATK sebagaimana
+diatur dalam Pedoman PPATK yang mengatur mengenai Pedoman
+Identifikasi dan Tata Cara Pelaporan Transaksi Keuangan Mencurigakan
+bagi Penyedia Jasa Keuangan.
+
+DKBU dan DPbS
+
+37
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB VII
+PEMINDAHAN DANA
+
+A.
+
+Prosedur Pemindahan Dana
+1.
+
+Dalam melakukan kegiatan pemindahan dana, BPR dan BPRS Pengirim
+wajib memperoleh informasi dan melakukan identifikasi serta verifikasi
+terhadap Nasabah pengirim atau WIC pengirim, paling kurang meliputi:
+a.
+b.
+
+B.
+
+Nomor rekening dan identitas Nasabah pengirim atau identitas WIC
+pengirim.
+Tanggal transaksi dan nominal.
+
+2.
+
+BPR dan BPRS Pengirim wajib mendokumentasikan seluruh kegiatan
+pemindahan dana.
+
+3.
+
+BPR dan BPRS Penerima wajib memastikan kelengkapan informasi
+Nasabah pengirim dan WIC pengirim sebagaimana dimaksud pada angka
+1.
+
+4.
+
+Apabila Nasabah/WIC tidak memenuhi permintaan informasi sebagaimana
+dimaksud pada angka 1, maka BPR/BPRS Pengirim dengan menggunakan
+pendekatan berdasarkan risiko dapat:
+a.
+
+menolak untuk melaksanakan pemindahan dana;
+
+b.
+
+membatalkan transaksi pemindahan dana; dan/atau
+
+c.
+
+mengakhiri hubungan usaha dengan Nasabah.
+
+Permintaan Informasi
+Dalam rangka memastikan kelengkapan informasi Nasabah Pengirim diberikan
+penjelasan mengenai mekanisme tukar-menukar informasi sebagai berikut:
+1.
+
+Apabila diperlukan, BPR/BPRS Penerima dapat meminta informasi
+pengirim sebagaimana yang tercantum dalam huruf A.1 diatas kepada
+Bank Pengirim.
+
+2.
+
+Permintaan informasi harus diajukan secara tertulis dari pejabat yang
+berwenang baik melalui surat maupun melalui media elektronik.
+
+3.
+
+Tukar menukar informasi antar Bank sebagaimana dimaksud dalam angka
+1 di atas bersifat sangat rahasia dan hanya boleh digunakan untuk
+kepentingan analisis transaksi, penyidikan, dan kebutuhan otoritas yang
+berwenang.
+
+4.
+
+Pemenuhan permintaan informasi dari BPR/BPRS Penerima dilakukan
+dalam rangka tukar menukar informasi antar Bank, sehingga dikecualikan
+dari ketentuan tentang rahasia Bank.
+
+5.
+
+Permintaan dan penyampaian informasi wajib didokumentasikan.
+
+DKBU dan DPbS
+
+38
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+C.
+
+Pelaporan
+Apabila terdapat pemindahan dana, yang memenuhi kriteria mencurigakan, maka
+pemindahan dana tersebut wajib dilaporkan sebagai LTKM kepada PPATK.
+Dalam hal ini termasuk pemindahan dana yang terkait dengan transaksi
+pendanaan terorisme.
+
+DKBU dan DPbS
+
+39
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB VIII
+PENUTUPAN HUBUNGAN DAN PENOLAKAN TRANSAKSI
+
+A.
+
+Penolakan calon Nasabah atau WIC
+1.
+
+2.
+
+3.
+
+B.
+
+BPR dan BPRS wajib menolak melakukan hubungan usaha dengan calon
+Nasabah dan/atau melaksanakan transaksi dengan WIC, dalam hal calon
+Nasabah atau WIC:
+a.
+
+tidak memenuhi ketentuan sebagaimana dimaksud dalam Pasal 13,
+Pasal 14, Pasal 15, Pasal 16, dan Pasal 17 Peraturan Bank
+Indonesia Nomor 12/20/PBI/2010 tentang Penerapan Program Anti
+Pencucian Uang dan Pencegahan Pendanaan Terorisme bagi BPR
+dan BPRS; atau
+
+b.
+
+diketahui menggunakan identitas dan/atau memberikan informasi
+yang tidak benar.
+
+BPR dan BPRS dapat menolak transaksi, membatalkan transaksi, dan/atau
+menutup hubungan usaha dengan Nasabah dalam hal:
+a.
+
+kriteria sebagaimana dimaksud pada angka 1 terpenuhi;
+
+b.
+
+BPR dan BPRS ragu terhadap kebenaran informasi Nasabah; atau
+
+c.
+
+penggunaan rekening tidak sesuai dengan profil Nasabah.
+
+BPR dan BPRS wajib:
+a.
+
+mendokumentasikan data calon Nasabah, WIC, atau Nasabah yang
+memenuhi kriteria sebagaimana dimaksud pada angka 1 dan 2
+diatas.
+
+b.
+
+melaporkan calon Nasabah, WIC, atau Nasabah sebagaimana
+dimaksud pada angka 1 dan 2 dalam laporan Transaksi Keuangan
+Mencurigakan kepada PPATK apabila transaksinya tidak wajar atau
+mencurigakan.
+
+Penutupan hubungan usaha dengan Nasabah
+1.
+
+2.
+
+BPR/BPRS dapat menutup hubungan usaha dengan Nasabah apabila:
+a.
+
+Nasabah tidak memenuhi ketentuan permintaan informasi dan
+dokumen pendukung sebagaimana dimaksud dalam Tabel 1, Tabel,
+3, dan Tabel 4;
+
+b.
+
+BPR/BPRS ragu terhadap kebenaran informasi Nasabah; atau
+
+c.
+
+penggunaan rekening tidak sesuai dengan profil Nasabah.
+
+melaporkan Nasabah sebagaimana dimaksud pada angka 1 dan 2 dalam
+LTKM.
+
+DKBU dan DPbS
+
+40
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB IX
+BENEFICIAL OWNER
+
+1.
+
+BPR dan BPRS wajib memastikan apakah calon Nasabah atau WIC mewakili
+Beneficial Owner (termasuk Beneficial Owner lainnya apabila terdapat lebih dari
+satu Beneficial Owner) untuk membuka hubungan usaha atau melakukan
+transaksi dengan BPR/BPRS.
+
+2.
+
+Dalam hal calon Nasabah atau WIC mewakili Beneficial Owner untuk membuka
+hubungan usaha atau melakukan transaksi, BPR dan BPRS wajib melakukan
+prosedur CDD terhadap Beneficial Owner yang sama ketatnya dengan prosedur
+CDD bagi calon Nasabah atau WIC.
+
+3.
+
+Dalam hal Beneficial Owner digolongkan sebagai PEP, maka prosedur yang
+diterapkan adalah prosedur EDD.
+
+4.
+
+Terhadap Beneficial Owner, BPR dan BPRS wajib memperoleh bukti atas
+identitas dan/atau informasi lainnya yang sama dengan calon Nasabah
+sebagaimana dimaksud pada Tabel 1, Tabel 3, dan Tabel 4, ditambah dengan :
+
+Tabel 6. Bukti dan informasi lainnya terkait Beneficial Owner (BO)
+BO dari Nasabah
+Perorangan
+
+No.
+1.
+
+2.
+
+5.
+
+hubungan hukum antara
+calon Nasabah atau WIC
+dengan Beneficial Owner
+yang ditunjukkan dengan
+surat penugasan, surat
+perjanjian, surat kuasa atau
+bentuk lainnya
+pernyataan
+dari
+calon
+Nasabah
+atau
+WIC
+mengenai
+kebenaran
+identitas maupun sumber
+dana dari Beneficial Owner
+
+BO dari Nasabah
+Perusahaan/ Yayasan
+/Perkumpulan
+
+BO dari Nasabah
+berupa Bank lain di
+dalam negeri
+
+dokumen
+dan
+informasi
+identitas
+pemilik
+atau
+pengendali akhir perusahaan,
+yayasan, atau perkumpulan
+
+pernyataan tertulis dari
+Bank dimaksud bahwa
+identitas
+Beneficial
+Owner telah dilakukan
+verifikasi oleh Bank lain
+di dalam negeri tersebut
+
+pernyataan
+dari
+calon
+Nasabah atau WIC mengenai
+kebenaran identitas maupun
+sumber dana dari Beneficial
+Owner
+
+Terhadap Nasabah perusahaan, yang termasuk sebagai pengendali apabila
+memenuhi hal-hal sebagai berikut:
+a.
+
+memiliki saham perusahaan baik secara langsung maupun tidak langsung
+sebesar 25% (dua puluh lima persen) atau lebih dari jumlah saham yang
+dikeluarkan dan mempunyai hak suara; atau
+
+b.
+
+saham perusahaan kurang dari 25% (dua puluh lima persen) dari jumlah
+saham yang dikeluarkan dan mempunyai hak suara namun yang
+bersangkutan dapat dibuktikan telah melakukan Pengendalian perusahaan,
+baik secara langsung maupun tidak langsung.
+
+DKBU dan DPbS
+
+41
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+Sedangkan yang termasuk sebagai pengendali terakhir adalah apabila
+perorangan atau badan hukum yang secara langsung maupun tidak
+langsung memiliki saham perusahaan dan merupakan pengendali terakhir
+dari perusahaan dan/atau keseluruhan struktur kelompok usaha yang
+mengendalikan perusahaan.
+6.
+
+Terhadap Nasabah perorangan yang termasuk sebagai pengendali adalah
+apabila memiliki kepentingan atas suatu transaksi yang dilakukan.
+
+7.
+
+Dokumen identitas pemilik atau pengendali akhir dapat berupa surat pernyataan
+atau dokumen lainnya yang memuat informasi mengenai identitas pemilik atau
+pengendali akhir.
+
+8.
+
+Apabila Beneficial Owner berupa lembaga pemerintah atau perusahaan yang
+terdaftar di bursa efek (listing), maka kewajiban penyampaian dokumen dan/atau
+identitas pengendali akhir dikecualikan atau tidak berlaku. Dalam hal ini termasuk
+terhadap Nasabah perusahaan yang merupakan anak perusahaan (subsidiary)
+dari perusahaan yang terdaftar di bursa efek (listing), dimana kepemilikan
+perusahaan induk adalah mayoritas.
+
+9.
+
+Apabila BPR/BPRS meragukan atau tidak dapat meyakini identitas Beneficial
+Owner, BPR dan BPRS wajib menolak untuk melakukan hubungan usaha atau
+transaksi dengan calon Nasabah atau WIC.
+
+10.
+
+Beneficial Owner yang mendapatkan pengecualian wajib didokumentasikan.
+
+DKBU dan DPbS
+
+42
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB X
+POLITICALLY EXPOSED PERSON (PEP) DAN AREA BERISIKO TINGGI
+
+A.
+
+Prosedur terhadap PEP dan Area Berisiko Tinggi
+1.
+
+BPR dan BPRS wajib meneliti adanya calon Nasabah, Nasabah dan
+Beneficial Owner yang memenuhi kriteria berisiko tinggi atau PEP.
+
+2.
+
+Dalam hal calon Nasabah diketahui tergolong PEP maka BPR dan BPRS
+wajib melakukan EDD pada awal melakukan hubungan usaha dengan BPR
+dan BPRS.
+
+3.
+
+Nasabah dan Beneficial Owner yang memenuhi kriteria berisiko tinggi atau
+PEP dibuat dalam daftar tersendiri.
+
+4.
+
+Kewajiban BPR dan BPRS sebagaimana dimaksud pada angka 3
+diberlakukan pula terhadap Nasabah atau WIC yang menerima kiriman uang
+dari dan/atau melakukan transaksi lainnya dengan pihak yang berasal dari
+negara berisiko tinggi melalui rekening BPR/BPRS yang ada di Bank Umum
+dan/atau Unit Usaha Syariah dalam negeri.
+
+5.
+
+Dalam hal BPR dan BPRS akan melakukan hubungan usaha dengan calon
+Nasabah yang tergolong PEP, Direksi BPR/BPRS atau Pejabat Eksekutif
+bertanggung jawab atas pelaksanaan hubungan usaha dengan calon
+Nasabah tersebut.
+
+6.
+
+Apabila terdapat transaksi atau hubungan usaha dengan Nasabah yang
+terkait dengan negara yang belum memadai dalam melaksanakan
+rekomendasi FATF, maka BPR dan BPRS wajib mewaspadainya dan
+menetapkan mitigasi risiko yang mungkin terjadi.
+
+7.
+
+Direksi atau Pejabat Eksekutif sebagaimana dimaksud pada angka 5
+berwenang untuk:
+a. memberikan persetujuan atau penolakan terhadap calon Nasabah yang
+tergolong berisiko tinggi atau PEP; dan
+b. membuat keputusan untuk meneruskan atau menghentikan hubungan
+usaha dengan Nasabah atau Beneficial Owner yang tergolong PEP.
+
+B.
+
+Penetapan PEP dan Kriteria Area Berisiko Tinggi
+Dalam mengelompokkan Nasabah berdasarkan tingkat risikonya, BPR dan
+BPRS antara lain dapat berpedoman pada ketentuan PPATK yang mengatur
+mengenai Pedoman Identifikasi Produk, Nasabah, Usaha, dan Negara Berisiko
+Tinggi Bagi Penyedia Jasa Keuangan (selanjutnya disebut dengan Pedoman
+Identifikasi PPATK).
+Area berisiko tinggi dalam pedoman ini, selain mendasarkan pada Pedoman
+Identifikasi PPATK juga referensi lainnya yang dikeluarkan oleh otoritas
+
+DKBU dan DPbS
+
+43
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+berwenang atau yang telah menjadi kelaziman internasional (international best
+practice).
+1.
+
+Produk dan Jasa Berisiko Tinggi
+Karakteristik dari high risk product dan high risk services adalah
+produk/jasa yang ditawarkan kepada Nasabah yang mudah dikonversikan
+menjadi kas atau setara kas, atau yang dananya mudah dipindahpindahkan dari satu yurisdiksi ke yurisdiksi lainnya dengan maksud
+mengaburkan asal usul dana tersebut. Sebagai contoh:
+
+2.
+
+a.
+
+Electronic Banking;
+
+b.
+
+Internet Banking;
+
+c.
+
+Pemindahan Dana;
+
+d.
+
+Pemberian Kredit/ Pembiayaan dan Pendanaan; atau
+
+e.
+
+Jual Beli Valuta Asing (Bank notes).
+
+Nasabah Berisiko Tinggi
+Salah satu Nasabah yang berisiko tinggi adalah PEP yaitu orang yang
+mendapatkan kepercayaan untuk memiliki kewenangan publik diantaranya
+adalah Penyelenggara Negara sebagaimana dimaksud dalam peraturan
+perundang-undangan yang mengatur mengenai Penyelenggara Negara,
+dan/atau orang yang tercatat sebagai anggota partai politik yang memiliki
+pengaruh terhadap kebijakan dan operasional partai politik. Peraturan
+perundang-undangan yang mengatur tentang Penyelenggara Negara
+adalah:
+
+Tabel 7. Ketentuan mengenai PEP
+Ketentuan
+
+Definisi
+
+UU No.28 Tahun 1999
+
+Pejabat
+Negara
+yang
+menjalankan fungsi eksekutif,
+legislatif, atau yudikatif, dan
+pejabat lain yang fungsi dan tugas
+pokoknya
+berkaitan
+dengan
+penyelenggaraan negara sesuai
+dengan
+ketentuan
+peraturan
+perundang-undangan
+yang
+berlaku.
+
+Keterangan
+
+
+
+
+
+
+
+
+
+
+DKBU dan DPbS
+
+Pejabat
+Negara
+pada
+Lembaga
+Tertinggi
+Negara;
+Pejabat
+Negara
+pada
+Lembaga Tinggi Negara;
+Menteri;
+Gubernur;
+Hakim;
+Pejabat negara yang lain
+sesuai dengan ketentuan
+peraturan
+perundangundangan yang berlaku,
+dan
+Pejabat lain yang memiliki
+fungsi strategis dalam
+kaitannya
+dengan
+penyelenggaraan negara
+sesuai dengan ketentuan
+44
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+Ketentuan
+
+Definisi
+
+Keterangan
+peraturan
+perundangundangan yang berlaku
+
+SE/03/M.PAN/01/2005
+tanggal 20 Januari
+2005
+
+Penyelenggara Negara
+
+
+
+
+
+
+
+
+
+
+
+3.
+
+Pejabat eselon II dan
+pejabat
+lain
+yang
+disamakan di lingkungan
+Instansi
+Pemerintah
+dan/atau lembaga negara.
+Semua kepala Kantor di
+lingkungan
+Departemen
+Keuangan
+Pengawas Bea dan Cukai;
+Auditor;
+Pejabat
+yang
+mengeluarkan perijinan;
+Pejabat/Kepala
+Unit
+Masyarakat; dan
+Pejabat pembuat regulasi
+
+Usaha Berisiko Tinggi
+Contoh usaha yang berisiko tinggi antara lain:
+
+4.
+
+a.
+
+Pedagang Efek yang melakukan fungsi sebagai Perantara Efek
+(Nasabah perusahaan);
+
+b.
+
+Perusahaan Asuransi dan Broker Asuransi (Perusahaan);
+
+c.
+
+Money Changer (Perusahaan);
+
+d.
+
+Dana Pensiun dan Usaha Pendanaan (Perusahaan);
+
+e.
+
+Tempat hiburan dan executive club;
+
+f.
+
+Jasa pengiriman uang;
+
+g.
+
+Jasa akuntan, pengacara dan notaris (Perusahaan/ Perorangan);
+
+h.
+
+Jasa surveyor dan agen real estat (Perusahaan);
+
+i.
+
+Pedagang logam mulia (Perusahaan/perorangan);
+
+j.
+
+Usaha barang-barang antik, dealer mobil, kapal serta penjual
+barang/barang mewah;
+
+k.
+
+Agen perjalanan; atau
+
+l.
+
+Milik pegawai BPR/BPRS sendiri.
+
+Transaksi Nasabah yang Terkait dengan Negara Lain yang Berisiko Tinggi.
+Contoh negara yang berisiko tinggi antara lain:
+
+DKBU dan DPbS
+
+45
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+
+a.
+
+negara yang pelaksanaan rekomendasi FATF diidentifikasikan belum
+memadai;
+
+b.
+
+termasuk dalam daftar FATF statement;
+
+c.
+
+diketahui secara luas sebagai
+perdagangan narkoba;
+
+d.
+
+dikenal secara luas menerapkan banking secrecy laws yang ketat;
+
+e.
+
+dikenal sebagai tax haven antara lain berdasarkan data terkini dari
+Organisation for Economic Cooperation and Development (OECD).
+Posisi Mei 2009 terdapat 35 negara/wilayah yang tergolong tax haven
+yaitu:
+
+Aruba
+Anguilla
+Antigua and Barbuda
+Bermuda
+Bahamas
+Bahrain
+Belize
+British Virgin Islands
+Cook Islands
+Cyprus
+Dominica
+Gibraltar
+
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+
+tempat
+
+Grenada
+Guernsey
+Isle of Man
+Jersey
+Liberia
+Malta
+Marshall Islands
+Mauritius
+Montserrat
+Niue
+Nauru
+Netherlands Antilles
+
+25.
+26.
+27.
+28.
+29.
+30.
+31.
+32.
+33.
+34.
+35.
+
+penghasil
+
+dan
+
+pusat
+
+Samoa
+Panama
+San Marino
+Seychelles
+St. Lucia
+St. Kitts & Nevis
+St. Vincent and the
+Grenadines
+Turks & Caicos Islands
+US Virgin Islands
+Vanuatu
+Cayman Islands
+
+f.
+
+dikenal memiliki tingkat korupsi yang tinggi. Informasi tersebut dapat
+diperoleh antara lain dari publikasi Transparency International;
+
+g.
+
+dianggap merupakan sumber kegiatan terorisme, seperti yang
+diidentifikasikan oleh Office of Foreign Asset Control (OFAC); atau
+
+h.
+
+terkena sanksi PBB.
+
+Sehubungan dengan area berisiko tinggi di atas, BPR dan BPRS wajib
+meneliti adanya Nasabah dan/atau Beneficial Owner yang memenuhi
+kriteria berisiko tinggi tersebut dan mendokumentasikannya dalam daftar
+tersendiri.
+
+C.
+
+Enhanced Due Dilligence (EDD)
+1.
+
+EDD atau kegiatan CDD yang lebih mendalam harus dilakukan terhadap
+Nasabah berisiko tinggi dan yang tergolong PEP.
+
+2.
+
+Sifat, kualitas, dan kuantitas informasi Nasabah yang perlu diperoleh harus
+memberikan gambaran mengenai tingkat risiko yang timbul dari hubungan
+usaha yang terjadi.
+
+DKBU dan DPbS
+
+46
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+3.
+
+Informasi yang diperoleh harus dapat diverifikasi dan memberikan
+keyakinan terhadap profil Nasabah sesungguhnya.
+
+4.
+
+Bagi calon Nasabah :
+a. meminta informasi tambahan yang diperlukan untuk memastikan
+kebenaran profil calon Nasabah; dan/atau
+b. meminta dokumen pendukung tambahan untuk meyakini kebenaran
+informasi mengenai identitas dan sumber dana.
+
+5.
+
+Bagi Nasabah atau Beneficial Owner :
+a. melakukan kegiatan seperti yang dilakukan terhadap calon Nasabah
+sebagaimana dimaksud pada angka 4;
+b. melakukan analisa secara berkala paling kurang terhadap informasi
+mengenai sumber dana, tujuan transaksi, dan hubungan usaha
+dengan pihak-pihak yang terkait, yaitu:
+1)
+2)
+3)
+
+perusahaan yang dimiliki atau dikelola oleh PEP;
+keluarga PEP sampai dengan derajat kedua; dan/atau
+pihak-pihak yang secara umum dan diketahui publik mempunyai
+hubungan dekat dengan PEP; dan
+
+c. memantau lebih ketat pola transaksi nasabah untuk kepentingan
+pengkinian profil Nasabah atau Beneficial Owner.
+
+DKBU dan DPbS
+
+47
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB XI
+CDD YANG LEBIH SEDERHANA
+
+1.
+
+2.
+
+BPR dan BPRS dapat menerapkan prosedur CDD yang lebih sederhana
+terhadap calon Nasabah atau transaksi yang tingkat risiko terjadinya pencucian
+uang atau pendanaan terorisme tergolong rendah dan memenuhi kriteria sebagai
+berikut:
+a.
+
+tujuan pembukaan rekening untuk pembayaran gaji karyawan. Dalam hal
+ini rekening tersebut adalah rekening milik perusahaan yang digunakan
+untuk pembayaran gaji karyawan perusahaan tersebut atau rekening
+Nasabah perorangan yang tujuan pembukaan rekening adalah untuk
+menampung gaji yang diberikan oleh perusahaannya secara periodik;
+
+b.
+
+rekening
+berupa
+tabungan
+wajib
+terkait
+kredit/pembiayaan dari BPR/BPRS yang sama;
+
+c.
+
+calon Nasabah berupa perusahaan publik (perusahaan yang terdaftar pada
+bursa efek) yang tunduk pada peraturan tentang kewajiban untuk
+mengungkapkan kinerjanya sehinga informasi tentang identitas
+perusahaan dan Beneficial Owner dari Nasabah perusahaan tersebut
+dapat diakses oleh masyarakat;
+
+d.
+
+nilai transaksi awal pembukaan rekening dibawah Rp1.000.000,00 (satu
+juta rupiah).
+
+dengan
+
+pemberian
+
+Informasi dan dokumen yang dibutuhkan oleh calon Nasabah yang mendapat
+perlakukan CDD yang lebih sederhana adalah:
+
+Tabel 8. CDD yang lebih sederhana
+Perusahaan (selain Bank)
+WIC
+Perusahaan
+
+No.
+
+Perorangan
+
+Usaha Mikro dan
+Usaha Kecil
+
+1.
+
+Nama lengkap
+termasuk alias
+apabila ada
+Nomor dokumen
+identitas
+
+Nama perusahaan
+
+Nama perusahaan
+
+Nama
+perusahaan
+
+Alamat kedudukan
+
+Alamat kedudukan
+
+Alamat
+kedudukan
+
+Alamat
+tempat
+tinggal
+yang
+tercantum pada
+kartu identitas
+
+Spesimen
+tanda
+tangan
+anggota
+Direksi
+yang
+berwenang mewakili
+perusahaan
+atau
+pihak yang diberi
+kuasa
+untuk
+melakukan
+
+Dokumen
+identitas
+anggota Direksi yang
+berwenang
+mewakili
+perusahaan atau pihak
+yang diberi kuasa untuk
+melakukan
+hubungan
+usaha dengan BPR/BPRS
+
+2.
+
+3.
+
+DKBU dan DPbS
+
+Bukan Usaha Mikro dan
+Usaha Kecil
+
+48
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+Perusahaan (selain Bank)
+No.
+
+Perorangan
+
+Usaha Mikro dan
+Usaha Kecil
+
+Bukan Usaha Mikro dan
+Usaha Kecil
+
+WIC
+Perusahaan
+
+hubungan
+usaha
+dengan BPR/BPRS
+4.
+
+5.
+6.
+7.
+
+Alamat
+tempat
+tinggal
+terkini
+termasuk
+no.
+telepon apabila
+ada
+Tempat
+dan
+tanggal lahir
+Dokumen
+identitas
+Spesimen tanda
+tangan
+
+3.
+
+Terhadap Nasabah yang mendapat perlakukan CDD yang lebih sederhana, BPR
+dan BPRS wajib mendokumentasikannya dalam suatu daftar yang antara lain
+memuat informasi mengenai alasan penetapan risiko sehingga digolongkan
+sebagai risiko rendah.
+
+4.
+
+Apabila Nasabah yang mendapat perlakuan CDD yang lebih sederhana
+melakukan transaksi yang diindikasikan adanya pencucian uang atau pendanaan
+terorisme, maka prosedur CDD yang lebih sederhana yang telah diterapkan
+menjadi tidak berlaku namun sebaliknya terhadap Nasabah tersebut wajib
+dilakukan CDD dan dikeluarkan dari daftar CDD sederhana.
+
+DKBU dan DPbS
+
+49
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB XII
+CDD OLEH PIHAK KETIGA
+
+1.
+
+BPR dan BPRS dapat menggunakan hasil CDD yang telah dilakukan oleh pihak
+ketiga terhadap calon Nasabahnya yang telah menjadi Nasabah pada pihak
+ketiga tersebut. Dalam hal ini BPR dan BPRS tetap wajib melakukan identifikasi
+dan verifikasi atas hasil CDD yang telah dilakukan oleh pihak ketiga.
+
+2.
+
+Pihak ketiga sebagaimana dimaksud pada angka 1 adalah lembaga keuangan
+sesuai dengan ketentuan yang berlaku.
+
+3.
+
+Pihak ketiga berupa perusahaan non keuangan yang melakukan CDD atas dasar
+perjanjian kontrak (outsourcing atau agen), tidak termasuk sebagai pihak ketiga
+yang dimaksudkan dalam ketentuan ini. Mengingat outsourcing atau agen
+merupakan perpanjangan tangan BPR/BPRS dimana proses CDD masih tetap
+mengacu kepada BPR/BPRS tersebut, bukan pada pihak ketiga.
+
+4.
+
+Hasil CDD yang dapat digunakan oleh BPR dan BPRS adalah hasil CDD dari
+pihak ketiga yang memenuhi kriteria paling kurang sebagai berikut:
+a.
+
+memiliki prosedur CDD sesuai dengan ketentuan yang berlaku;
+
+b.
+
+memiliki kerja sama dengan BPR/BPRS dalam bentuk kesepakatan tertulis;
+
+c.
+
+tunduk pada pengawasan dari otoritas berwenang (antara lain Bank
+Indonesia atau Bapepam-LK) sesuai dengan ketentuan yang berlaku; dan
+
+d.
+
+bersedia memenuhi permintaan informasi yang paling kurang berupa
+informasi mengenai:
+1)
+
+nama lengkap sesuai dengan yang tercantum pada kartu identitas;
+
+2)
+
+alamat, tempat dan tanggal lahir;
+
+3)
+
+nomor kartu identitas; dan
+
+4)
+
+kewarganegaraan dari calon Nasabah,
+
+serta salinan dokumen pendukung apabila dibutuhkan oleh BPR/BPRS
+dalam rangka pelaksanaan Program APU dan PPT. Kesediaan dimaksud
+dituangkan dalam kesepakatan tertulis sebagaimana dimaksud dalam huruf
+b.
+5.
+
+BPR dan BPRS wajib memastikan kecukupan identifikasi dan verifikasi atas hasil
+CDD yang telah dilakukan oleh pihak ketiga. Tanggung jawab akhir atas hasil
+identifikasi dan verifikasi calon Nasabah sepenuhnya menjadi tanggung jawab
+BPR/BPRS.
+
+6.
+
+BPR dan BPRS bertanggung jawab untuk melaksanakan penatausahaan
+dokumen hasil CDD yang dilakukan pihak ketiga serta data hasil identifikasi dan
+verifikasi yang dilakukan oleh BPR dan BPRS.
+
+DKBU dan DPbS
+
+50
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB XIII
+PENGENDALIAN INTERN
+
+1.
+
+BPR dan BPRS wajib memiliki sistem pengendalian intern yang efektif dan
+melakukan pemisahan fungsi yang jelas antara unit kerja operasional dengan
+unit kerja yang melaksanakan fungsi pengendalian.
+
+2.
+
+Dalam pelaksanaan Program APU dan PPT, BPR dan BPRS harus melakukan
+pemisahan tugas dan tanggung jawab antara:
+a.
+
+pelaksana kebijakan dengan pengawas pelaksanaan kebijakan; dan
+
+b.
+
+pelaksana transaksi dengan pemutus transaksi.
+
+3.
+
+Termasuk dalam sistem pengendalian intern yang efektif adalah yang bersifat
+fungsional maupun melekat yang dapat memastikan bahwa pelaksanaan
+Program APU dan PPT oleh satuan kerja terkait atau Satuan Kerja Audit Intern
+(SKAI) telah sesuai dengan kebijakan dan prosedur yang ditetapkan.
+
+4.
+
+Dalam hal BPR dan BPRS tidak memiliki Satuan Kerja Audit Internal (SKAI),
+BPR dan BPRS menunjuk pejabat (pegawai/direksi/komisaris) yang
+melaksanakan fungsi pengendalian intern dalam rangka memastikan efektivitas
+pelaksanaan program APU dan PPT.
+
+5.
+
+Satuan Kerja Audit Intern (SKAI) atau pegawai yang ditunjuk untuk
+melaksanakan fungsi pengendalian intern harus memiliki kewenangan dan
+sarana yang memadai paling kurang mencakup:
+
+6.
+
+a.
+
+program dan prosedur audit yang mencakup uji kepatuhan dengan fokus
+pada CDD, operasional, produk dan jasa yang berisiko tinggi. Dalam
+memastikan efektivitas pelaksanaan program APU dan PPT, BPR dan BPRS
+mengoptimalkan satuan kerja Audit Intern yang telah ada antara lain untuk
+melakukan uji kepatuhan (termasuk penggunaan sample testing) terhadap
+kebijakan dan prosedur yang terkait dengan program APU dan PPT;
+
+b.
+
+penilaian kecukupan proses yang berlaku di BPR/BPRS
+mengidentifikasi dan melaporkan transaksi yang mencurigakan;
+
+c.
+
+pelaporan temuan pemeriksaan kepada Direksi dan/atau manajemen
+dengan tepat waktu; dan
+
+d.
+
+rekomendasi upaya-upaya perbaikan terhadap temuan yang ada.
+
+dalam
+
+Sistem pengendalian intern harus mampu secara tepat waktu mendeteksi
+kelemahan dan penyimpangan yang terjadi dalam pelaksanaan Program APU
+dan PPT dengan tujuan untuk meminimalkan potensi risiko yang dihadapi
+BPR/BPRS.
+
+DKBU dan DPbS
+
+51
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB XIV
+SISTEM PENCATATAN
+
+1.
+
+Untuk keperluan pemantauan profil dan transaksi Nasabah, BPR dan BPRS
+wajib memiliki sistem pencatatan yang dapat mengidentifikasi, menganalisa,
+memantau dan menyediakan laporan secara efektif mengenai karakteristik
+transaksi yang dilakukan oleh Nasabah.
+
+2.
+
+Sistem pencatatan yang dimiliki harus dapat memungkinkan BPR dan BPRS
+untuk menelusuri setiap transaksi individual, baik untuk keperluan intern dan atau
+Bank Indonesia, maupun dalam kaitannya dengan kasus peradilan.
+
+3.
+
+Tingkat kecanggihan sistem pencatatan untuk mengidentifikasi transaksi
+keuangan yang mencurigakan disesuaikan dengan kompleksitas, volume
+transaksi, dan risiko yang dimiliki BPR/BPRS.
+
+4.
+
+BPR dan BPRS yang tergolong besar didorong untuk memiliki pencatatan profil
+Nasabah secara terpadu (Single Customer Identification File/CIF) yang ditujukan
+untuk memudahkan pemantauan dalam rangka menganalisis transaksi keuangan
+yang mencurigakan dan paling kurang meliputi informasi sebagaimana dimaksud
+dalam Tabel 1 pada Bab V.
+
+5.
+
+Profil nasabah paling kurang meliputi:
+a.
+
+Pekerjaan/bidang usaha
+
+b.
+
+Jumlah penghasilan
+
+c.
+
+Rekening lain yang dimiliki (apabila ada)
+
+d.
+
+Aktivitas transaksi normal
+
+e.
+
+Tujuan pembukaan rekening.
+
+6.
+
+Pencatatan yang terdapat dalam single CIF mencakup seluruh rekening yang
+dimiliki oleh Nasabah pada suatu BPR/BPRS yaitu tabungan, deposito, dan
+kredit.
+
+7.
+
+Untuk rekening joint account terdapat dua pendekatan, yaitu:
+a.
+
+Apabila pemilik dari joint account (Rek A dan B) juga memiliki rekening
+lainnya atas nama masing-masing (Rek. A dan Rek. B), maka CIF yang
+dibuat adalah 2 (dua) CIF yaitu CIF atas nama A dan CIF atas nama B.
+Dalam setiap CIF harus menginformasikan bahwa baik A maupun B
+memiliki rekening joint account.
+
+b.
+
+Apabila pemilik dari joint account (Rek A dan B) tidak memiliki rekening
+lainnya, maka CIF yang dibuat mencakup pencatatan A dan B.
+
+Untuk keperluan pemeliharaan single CIF, BPR dan BPRS harus menetapkan
+kebijakan bahwa untuk setiap penambahan rekening oleh Nasabah yang sudah
+ada, BPR dan BPRS wajib mengkaitkan rekening tambahan tersebut dengan
+nomor informasi Nasabah dari Nasabah yang bersangkutan.
+DKBU dan DPbS
+
+52
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+BAB XV
+SUMBER DAYA MANUSIA DAN PELATIHAN KARYAWAN
+
+A.
+
+B.
+
+Sumber Daya Manusia
+1.
+
+BPR dan BPRS wajib melakukan prosedur penyaringan (screening) dalam
+rangka penerimaan pegawai baru, untuk mencegah digunakannya BPR
+dan BPRS sebagai media atau tujuan pencucian uang atau pendanaan
+terorisme yang melibatkan pihak intern BPR/BPRS.
+
+2.
+
+Pemanfaatan jasa perbankan sebagai media pencucian uang dan
+pendanaan terorisme dimungkinkan juga melibatkan pegawai BPR itu
+sendiri. Dengan demikian untuk mencegah ataupun mendeteksi terjadinya
+dugaan tindak pidana pencucian uang yang dilakukan melalui lembaga
+perbankan perlu diterapkan Know Your Employee (KYE) yang diantaranya
+adalah melalui prosedur screening.
+
+3.
+
+Metode screening disesuaikan dengan kebutuhan, kompleksitas kegiatan
+BPR/BPRS, dan profil risiko BPR/BPRS.
+
+4.
+
+Metode screening paling kurang memastikan profil calon pegawai tidak
+memiliki catatan kejahatan.
+
+5.
+
+Melakukan pemantauan terhadap profil karyawan.
+
+Pelatihan
+1.
+
+Peserta Pelatihan
+a.
+
+Seluruh karyawan harus mendapatkan pengetahuan mengenai
+kebijakan, prosedur, dan pelaksanaan Program APU dan PPT.
+
+b.
+
+Karyawan yang memenuhi kriteria sebagai berikut:
+1)
+
+berhadapan langsung dengan Nasabah (pelayanan Nasabah);
+
+2)
+
+pelaksanaan tugas sehari-hari terkait dengan pengawasan
+pelaksanaan Program APU dan PPT; atau
+
+3)
+
+pelaksanaan tugas sehari-hari terkait dengan pelaporan kepada
+PPATK dan Bank Indonesia,
+
+mendapatkan prioritas untuk memperoleh pelatihan.
+c.
+
+Karyawan yang mendapatkan prioritas harus mendapatkan pelatihan
+secara berkala, sedangkan karyawan lainnya yang tidak memenuhi
+kriteria sebagaimana dimaksud pada huruf b, harus mendapatkan
+pelatihan paling kurang 1 (satu) kali dalam masa kerjanya.
+
+d.
+
+Karyawan yang berhadapan langsung dengan Nasabah (front liner)
+harus mendapatkan pelatihan sebelum penempatan.
+
+DKBU dan DPbS
+
+53
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+2.
+
+Metode Pelatihan
+Pelatihan dapat dilakukan dengan cara:
+a.
+b.
+c.
+d.
+e.
+
+f.
+
+3.
+
+menyelenggarakan in house training;
+mengikutsertakan pegawai dalam pelatihan yang diselenggarakan oleh
+pihak lain;
+menyelenggarakan forum tukar-menukar informasi (knowledge
+sharing);
+melakukan pembelajaran dengan menggunakan sarana elektronik (elearning) maupun melalui pertemuan.
+Tatap muka secara interaktif (misal workshop) dengan topik pelatihan
+disesuaikan dengan kebutuhan peserta. Pendekatan ini digunakan
+untuk karyawan yang mendapatkan prioritas dan dilakukan secara
+berkala, misal setiap tahun; dan/atau
+Tatap muka satu arah (misal seminar) dengan topik pelatihan adalah
+berupa gambaran umum dari pelaksanaan Program APU dan PPT.
+Pendekatan ini diberikan kepada karyawan yang tidak mendapatkan
+prioritas dan dilakukan apabila terdapat perubahan ketentuan yang
+signifikan.
+
+Topik dan Evaluasi Pelatihan
+a.
+
+Topik pelatihan paling kurang mengenai:
+1)
+
+implementasi peraturan perundang-undangan yang terkait
+dengan program APU dan PPT;
+
+2)
+
+Teknik, metode, dan tipologi pencucian uang atau pendanaan
+terorisme termasuk trend dan perkembangan profil risiko
+produk perbankan; dan
+
+3)
+
+Kebijakan dan prosedur pelaksanaan Program APU dan PPT
+serta peran dan tanggungjawab pegawai dalam memberantas
+pencucian uang atau pendanaan terorisme, termasuk
+konsekuensi apabila karyawan melakukan tipping off.
+
+b.
+
+BPR dan BPRS harus melakukan evaluasi terhadap setiap pelatihan
+yang telah diselenggarakan untuk mengetahui tingkat pemahaman
+peserta pelatihan dan kesesuaian materi yang diberikan.
+
+c.
+
+Evaluasi dapat dilakukan secara langsung melalui wawancara atau
+tidak secara langsung melalui penyediaan soal.
+
+d.
+
+BPR dan BPRS harus melakukan upaya tindak lanjut dari hasil
+evaluasi pelatihan melalui penyempurnaan materi dan metode
+pelatihan.
+
+DKBU dan DPbS
+
+54
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+Lampiran A
+
+CONTOH-CONTOH
+TRANSAKSI, AKTIVITAS, DAN PERILAKU YANG TIDAK WAJAR
+DAN/ATAU TIDAK SESUAI DENGAN PROFIL NASABAH
+
+1.
+
+2.
+
+Transaksi yang Tidak Bernilai Ekonomis
+a.
+
+Dana yang baru saja disetorkan kemudian diambil kembali secara tiba-tiba,
+kecuali apabila terdapat alasan yang jelas atas penarikan secara tiba-tiba
+tersebut.
+
+b.
+
+Penarikan atau penyetoran dalam jumlah besar dari rekening Nasabah
+yang semula tidak aktif atau dari rekening Nasabah yang menerima
+setoran dalam jumlah besar dari luar negeri (melalui jalur kerjasama BPR
+dengan Bank Umum dan lembaga pengirim uang, e.g Western Union)
+tanpa didukung dengan alasan yang memadai dan tidak terdapat
+keterkaitan antara Nasabah dengan kegiatan usaha Nasabah
+
+c.
+
+Pinjaman back to back tanpa ada tujuan yang dapat diidentifikasi dan dapat
+diterima secara hukum
+
+d.
+
+Terdapat transaksi penyetoran uang tunai oleh seseorang untuk rekening
+Nasabah BPR dan pada saat yang berdekatan langsung dilakukan
+penarikan oleh nasabah.
+
+Transaksi dengan Menggunakan Uang Tunai dalam Jumlah Besar
+a.
+
+Penyetoran uang tunai dengan cara menggunakan banyak slip penyetoran
+dalam jumlah kecil, yang bila digabungkan maka jumlahnya menjadi sangat
+besar.
+
+b.
+
+Penyetoran dalam bentuk tunai untuk penyelesaian tagihan kepada
+BPR/BPRS termasuk tagihan kredit
+
+c.
+
+Nasabah yang depositnya terbukti terdiri dari mata uang palsu dan
+instrumen tiruan.
+
+d.
+
+Penyetoran secara tunai dalam jumlah besar ke rekening Nasabah yang
+tidak sesuai dengan profil Nasabah
+
+e.
+
+Penyetoran uang tunai dalam jumlah besar dengan menggunakan ATM
+dimalam hari untuk menghindari hubungan langsung dengan Bank.
+
+f.
+
+Beberapa Nasabah datang ke Bank secara bersamaan dan menggunakan
+teller yang berbeda untuk melakukan penarikan atau penyetoran dalam
+jumlah besar atau melakukan transaksi penukaran uang asing di
+BPR/BPRS yang mempunyai izin sebagai pedagang valuta asing.
+
+g.
+
+Terdapat penarikan secara tunai dalam jumlah yang besar dan dalam
+waktu yang sama langsung disetorkan ke rekening yang lain.
+
+DKBU dan DPbS
+
+55
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+3.
+
+h.
+
+Penukaran uang tunai berdenominasi kecil dalam jumlah besar dengan
+uang tunai berdenominasi besar
+
+i.
+
+Pembelian atau pembayaran atas mata uang asing dalam jumlah besar
+dengan menggunakan uang tunai walaupun Nasabah memiliki rekening di
+BPR/BPRS
+
+j.
+
+Penyetoran sejumlah besar uang tunai yang sering dilakukan yang tidak
+sesuai dengan aktivitas bisnis atau profil Nasabah
+
+k.
+
+Terdapat penarikan secara tunai dalam jumlah yang besar dan dalam
+waktu yang sama langsung disetorkan ke rekening yang lain
+
+Transaksi dengan menggunakan Rekening Bank
+a.
+
+Pemeliharaan beberapa rekening atas nama pihak lain (Nasabah sebagai
+Beneficial Owner) yang tidak sesuai dengan jenis kegiatan usaha Nasabah;
+
+b.
+
+Terdapat pemecahan transaksi melalui penyetoran secara tunai dalam
+jumlah kecil ke dalam beberapa rekening sehingga jumlah total penyetoran
+tersebut menjadi sangat besar;
+
+c.
+
+Penyetoran dalam jumlah besar dari rekening perorangan atau perusahaan
+yang tidak sesuai atau tidak terkait dengan usaha Nasabah;
+
+d.
+
+Pemberian informasi yang sulit dibuktikan atau memerlukan biaya yang
+sangat besar bagi BPR/BPRS untuk melakukan pembuktian;
+
+e.
+
+Pembayaran dari rekening Nasabah yang dilakukan setelah adanya
+penyetoran tunai kepada rekening dimaksud pada hari yang sama atau
+pada hari yang berdekatan;
+
+f.
+
+Pihak yang mewakili perusahaan selalu menghindar untuk berhubungan
+dengan petugas Bank;
+
+g.
+
+Penolakan oleh Nasabah untuk menyediakan tambahan dokumen atau
+informasi penting, yang apabila diberikan memungkinkan Nasabah menjadi
+layak untuk memperoleh fasilitas pemberian kredit atau jasa perbankan
+lainnya;
+
+h.
+
+Penolakan Nasabah terhadap fasilitas perbankan yang lazim diberikan,
+seperti penolakan untuk diberikan tingkat bunga yang lebih tinggi terhadap
+jumlah saldo tertentu;
+
+i.
+
+Pembukaan rekening atas nama pedagang valuta asing yang menerima
+structured deposits.
+
+j.
+
+Pemindahanbukuan dana dari rekening perusahaan kepada rekening
+pegawai atau sebaliknya.
+
+k.
+
+Peningkatan yang besar atas penyetoran tunai oleh suatu perusahaan
+dengan menggunakan rekening Nasabah perusahaan
+
+DKBU dan DPbS
+
+56
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+4.
+
+5.
+
+Transaksi yang Berhubungan dengan Pihak-pihak yang Tidak dapat Diidentifikasi
+a.
+
+Pihak ketiga yang tidak dikenali Bank dan tidak memiliki hubungan dengan
+Nasabah menjanjikan atau memberikan jaminan tanpa adanya penjelasan
+yang memadai.
+
+b.
+
+Permintaan pembayaran dengan informasi yang tidak akurat tentang pihak
+yang meminta informasi tersebut.
+
+c.
+
+Kepemilikan saham di sebuah perusahaan yang unlisted yang aktivitasnya
+tidak dapat dipastikan sebagai Bank.
+
+Transaksi yang Terkait dengan Perilaku Nasabah atau Pelaku Transaksi
+a.
+
+Menggunakan banyak nama untuk melakukan transaksi yang serupa.
+
+b.
+
+Transfer dana ke organisasi amal yang terletak di luar negeri.
+
+c.
+
+Banyak transaksi yang serupa yang dilakukan pada hari yang sama di
+lokasi yang berbeda.
+
+d.
+
+Pihak ketiga hadir dalam keseluruhan transaksi namun tidak berpartisipasi
+dalam transaksi aktual.
+
+e.
+
+Nasabah bersikeras agar transaksi dilakukan dengan cepat.
+
+f.
+
+Transaksi dilakukan melalui telepon atau faksimili atau internet (non face to
+face).
+
+g.
+
+Transfer dana dalam jumlah yang banyak ke atau dari luar negeri dengan
+instruksi untuk pembayaran dalam bentuk tunai
+
+h.
+
+Nasabah berbentuk grup tiba di Bank tetapi bertindak seolah-olah tidak
+saling mengenal satu sama lain, kemudian mereka melakukan transaksi
+yang bersamaan secara terpisah.
+
+i.
+
+Uang dalam jumlah besar namun sumber dana tidak jelas atau tidak
+konsisten dengan situasi keuangan Nasabah.
+
+j.
+
+Nasabah memiliki pengetahuan tentang kewajiban pelaporan atau
+pengendalian internal Bank, Pengawasan dan proses operasional secara
+tidak wajar.
+
+k.
+
+Nasabah memberikan informasi yang tidak konsisten kepada pegawai yang
+berbeda pada Bank yang sama.
+
+l.
+
+Informasi detail mengenai Nasabah tidak jelas atau sulit untuk diverifikasi.
+
+m.
+
+Nasabah memiliki keingintahuan yang tinggi terhadap sesuatu yang terkait
+dengan prosedur pengecualian.
+
+n.
+
+Nasabah tertutup dan menghindari pertemuan secara personal.
+
+o.
+
+Nasabah menjelaskan transaksi secara berlebihan.
+
+p.
+
+Pertanyaan yang diajukan kepada pegawai Bank tidak sesuai atau tidak
+wajar.
+
+DKBU dan DPbS
+
+57
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+6.
+
+7.
+
+8.
+
+q.
+
+Nasabah terburu-buru, panik atau gugup.
+
+r.
+
+Informasi yang diberikan oleh Nasabah berlawanan dengan informasi yang
+didapat dari sumber lain.
+
+s.
+
+Nasabah menggunakan banyak alamat yang mirip/sama.
+
+t.
+
+Informasi mengenai nama, alamat atau tanggal lahir tidak konsisten.
+
+u.
+
+Nasabah menolak memberikan penjelasan atau berusaha menutup-nutupi
+dengan mengalihkan pembicaraan kepada masalah lain yang tidak terkait
+dengan transaksi yang ditanyakan (transaksi besar yang dilakukan
+Nasabah dalam periode tertentu).
+
+v.
+
+Nasabah menolak menjawab pertanyaan dengan mengatakan bahwa
+Nasabah adalah orang terpandang/penting atau dekat dengan pejabat di
+daerah tertentu pada saat petugas Bank mengklarifikasi data Nasabah.
+
+w.
+
+Pola transaksi Nasabah di luar kebiasaan, misalnya Nasabah terbiasa
+bertransaksi melalui kurir kemudian berubah menjadi perintah tertulis.
+
+x.
+
+Pola transaksi Nasabah yang biasanya tidak pernah dilakukan tunai atau
+jarang, berubah menjadi tunai dalam jumlah yang sangat signifikan.
+
+y.
+
+Nasabah diberitakan terlibat tindakan kriminal (korupsi, illegal logging, dll),
+maka terindikasi simpanannya berasal dari tindakan dimaksud.
+
+z.
+
+Nasabah memberikan penjelasan yang tidak masuk akal atas penyetoran
+uang tunai yang dilakukan dengan jumlah sangat besar. Misalnya Nasabah
+mengatakan bahwa uang tunai dimaksud berasal dari hasil penjualan tanah
+untuk pengembangan jalan tol. Selazimnya transaksi tersebut melalui
+transfer yang dilakukan oleh instansi yang jelas, dan tidak melalui setoran
+tunai.
+
+Aktivitas yang Dapat Dikategorikan Ilegal
+
+a.
+
+Nasabah diberitakan oleh media massa sebagai seseorang yang diduga
+terlibat aktivitas illegal atau tindak pidana.
+
+b.
+
+Instruksi transfer dana masuk dari Negara tax haven atau Negara yang
+terkenal dengan pendanaan terorisme
+
+Transaksi mencurigakan yang melibatkan karyawan Bank dan atau agen
+
+a.
+
+Peningkatan kekayaan karyawan dan agen Bank dalam jumlah besar tanpa
+disertai penjelasan yang memadai;
+
+b.
+
+Hubungan transaksi melalui agen yang tidak dilengkapi dengan informasi
+yang memadai mengenai penerima akhir (ultimate beneficiary).
+
+Transaksi mencurigakan melalui transaksi pinjam meminjam
+
+a.
+
+Pelunasan pinjaman bermasalah secara tidak terduga;
+
+DKBU dan DPbS
+
+58
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+9.
+
+10.
+
+b.
+
+Permintaan fasilitas pinjaman dengan agunan yang asal usulnya dari aset
+yang diagunkan tidak jelas atau tidak sesuai dengan reputasi dan
+kemampuan finansial Nasabah;
+
+c.
+
+Permintaan Nasabah kepada Bank untuk memberikan fasilitas pendanaan
+dimana porsi dana sendiri Nasabah dalam fasilitas dimaksud tidak jelas
+asal usulnya, khususnya apabila terkait dengan properti.
+
+d.
+
+Percepatan pelunasan kredit jauh sebelum jatuh tempo jangka waktu kredit
+dengan pembayaran secara tunai/kas tanpa informasi yang jelas mengenai
+asal usul dana.
+
+Transaksi yang terkait dengan hasil Kejahatan dibidang Kehutanan
+a.
+
+Penyetoran dengan sumber dana berasal dari hasil penjualan kayu yang
+diperoleh secara ilegal melalui upaya penipuan dan penyuapan.
+
+b.
+
+Pemindahan dana baik melalui transfer atau pemindahbukuan dengan
+sumber dana berasal dari hasil penjualan kayu yang diperoleh secara ilegal
+melalui upaya penipuan dan penyuapan.
+
+c.
+
+Pembangunan kebun kelapa sawit dengan sumber dana berasal dari hasil
+penjualan kayu yang diperoleh secara ilegal melalui upaya penipuan dan
+penyuapan.
+
+d.
+
+Penjualan hasil kebun kelapa sawit dari lahan yang diperoleh melalui
+penipuan dan penyuapan.
+
+Tipe-tipe Transaksi Lainnya
+
+a.
+
+Perluasan atau peningkatan penggunaaan fasilitas penyetoran/tabungan
+yang tidak diikuti dengan aktivitas bisnis atau personal Nasabah yang
+meningkat.
+
+b.
+
+Aktivitas rekening tidak setara dengan profile Nasabah (misal: umur,
+pekerjaan, pendapatan)
+
+c.
+
+Nasabah sering mengubah alamat dan tanda tangan.
+
+d.
+
+Sejumlah besar dana diterima, dan tiba-tiba digunakan sebagai jaminan
+untuk memperoleh fasilitas perBankan.
+
+e.
+
+Seseorang yang baru berusia sekita 17-26 tahun membuka rekening dan
+melakukan penarikan atau transfer dana dalam waktu yang singkat, yang
+dapat diindikasikan sebagai pendanaan teroris.
+
+f.
+
+Nasabah menerima dana dari organisasi keagamaan atau amal dan
+memanfaatkan dananya untuk pembelian aset atau mentransfer dana
+dimaksud keluar dalam waktu yang relatif pendek.
+
+g.
+
+Nasabah atau WIC yang bersikeras tidak mau memberikan informasi dan
+dokumen yang dipersyaratkan atau hanya mau memberikan informasi yang
+
+DKBU dan DPbS
+
+59
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+minim, dan atau memberikan informasi yang tidak sesuai dengan dokumen
+pendukung.
+
+DKBU dan DPbS
+
+60
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+Lampiran B
+
+GLOSSARY
+
+Beneficial Owner : setiap orang yang memiliki dana, yang mengendalikan transaksi
+nasabah atau WIC, yang memberikan kuasa atas terjadinya suatu transaksi
+dan/atau yang melakukan pengendalian melalui badan hukum atau perjanjian.
+Buy and sell conversion : pencucian uang melalui jual beli barang dan jasa antara lain
+dengan membayar kelebihan harga dengan menggunakan uang ilegal dan
+kemudian dicuci melalui transaksi bisnis. Dengan cara ini setiap aset, barang
+atau jasa dapat diubah seolah-olah menjadi hasil yang legal melalui rekening
+pribadi atau perusahaan yang ada di suatu bank.
+Cuckoo Smurfing : upaya mengaburkan asal usul sumber dana dengan mengirimkan
+dana-dana dari hasil kejahatannya melalui rekening pihak ketiga yang
+menunggu kiriman dana dari luar negeri dan tidak menyadari bahwa dana
+yang diterimanya tersebut merupakan “proceed of crime”.
+Customer Due Diligence : kegiatan berupa identifikasi, verifikasi, dan pemantauan
+yang dilakukan BPR dan BPRS untuk memastikan bahwa transaksi dilakukan
+sesuai dengan profil pengguna jasa bank.
+Electronic Banking : meliputi antara lain jasa ATM, jasa transaksi on line, phone
+Banking dan cash management.
+Enhanced Due Dilligence (EDD) : CDD dan kegiatan lain yang dilakukan oleh BPR
+dan BPRS untuk mendalami profil calon Nasabah, Nasabah atau Beneficial
+Owner yang tergolong berisiko tinggi termasuk PEP terhadap kemungkinan
+pencucian uang dan pendanaan terorisme.
+Financial Action Task Force (FATF) : didirikan tahun1989 oleh negara-negara
+kelompok G-7, dengan tugas untuk menilai hasil kerjasama antar negara yang
+telah ada untuk mencegah dipergunakannya sistem perbankan sebagai media
+pencucian uang antara lain dengan mengeluarkan standar mengenai antipencucian uang yang komprehensif.
+Front Liner/Officer : petugas Bank yang langsung berhubungan dengan Nasabah
+yang membutuhkan pelayanan perbankan, antara lain teller dan customer
+service.
+High Risk Countries : negara-negara yang diklasifikasikan mempunyai risiko tinggi
+terhadap terjadinya pencucian uang atau pendanaan terorisme, antara lain
+karena tidak/belum menerapkan rekomendasi FATF.
+
+DKBU dan DPbS
+
+61
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+High Risk Customer : Nasabah yang diklasifikasikan mempunyai risiko tinggi sebagai
+pelaku/ikut serta dalam kegiatan pencucian uang baik karena pekerjaan,
+jabatan, jasa perBankan yang digunakan maupun kegiatan usahanya.
+High Risk Product : produk perbankan yang banyak diminati oleh pelaku pencucian
+uang.
+High Risk Service : jasa perbankan yang banyak diminati oleh pelaku pencucian
+uang.
+Internet Banking : layanan yang diberikan kepada Nasabahnya untuk melakukan
+transaksi perbankan melalui komputer dalam jaringan internet.
+Integration : upaya menggunakan harta kekayaan yang telah tampak sah, baik untuk
+dinikmati langsung, diinvestasikan ke dalam berbagai bentuk kekayaan
+material maupun keuangan, dipergunakan untuk membiayai kegiatan bisnis
+yang sah, ataupun untuk membiayai kembali kegiatan tindak pidana.
+Joint Account : rekening yang dimiliki secara bersama-sama oleh dua orang atau
+lebih Nasabah yang memiliki hak dan kewajiban yang sama atas rekening
+tersebut.
+Kredit : penyediaan dana atau tagihan yang dapat dipersamakan dengan itu
+berdasarkan persetujuan atau kesepakatan pinjam meminjam antara Bank
+dan pihak lain yang mewajibkan pihak peminjam untuk melunasi hutang
+setelah jangka waktu tertentu dengan pemberian bunga atau imbalan/bagi
+hasil.
+Legal Risk : risiko yang disebabkan oleh adanya kelemahan aspek hukum (yuridis).
+Kelemahan aspek yuridis antara lain disebabkan adanya tuntutan hukum,
+ketiadaan peraturan perundang-undangan yang mendukung atau kelemahan
+perikatan seperti tidak terpenuhinya syarat sahnya kontrak dan pengikatan
+agunan yang tidak sempurna.
+Legitimate Business Conversions : menggunakan bisnis atau kegiatan usaha yang
+sah sebagai sarana untuk memindahkan dan memanfaatkan hasil kejahatan
+dengan cara mengkonversikan melalui transfer, cek, atau instrumen
+pembayaran lainnya yang kemudian di simpan di rekening bank atau ditarik
+atau ditransfer kembali ke rekening bank lainnya. Metode ini memungkinkan
+pelaku kejahtan menjalankan usaha atau bekerjasama dengan mitra bisnisnya
+dan menggunakan rekening perusahaan yang bersangkutan sebagai tempat
+penampungan untuk hasil kejahatan yang dilakukan.
+Mingling : mencampurkan dana hasil tindak pidana dengan dana dari hasil kegiatan
+
+DKBU dan DPbS
+
+62
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+usaha yang legal dengan tujuan untuk mengaburkan sumber asal dananya.
+Money Laundering (Pencucian Uang) : perbuatan menempatkan, mentransfer,
+membayarkan,
+
+membelanjakan,
+
+menghibahkan,
+
+menyumbangkan,
+
+menitipkan, membawa ke luar negeri, menukarkan, atau perbuatan lainnya
+atas harta kekayaan yang diketahuinya atau patut diduga merupakan hasil
+tindak pidana dengan maksud untuk menyembunyikan, atau menyamarkan
+asal-usul harta kekayaan sehingga seolah-olah menjadi harta kekayaan yang
+sah.
+Off-shore conversions : pengalihan dana ilegal ke wilayah yang merupakan tax haven
+money laundering centers dan kemudian disimpan di bank atau lembaga
+keuangan yang ada di wilayah tersebut untuk digunakan membeli aset dan
+investasi (fund investment). Di wilayah atau negara yang merupakan tax
+haven terdapat kecenderungan hukum perpajakan yang lebih longgar,
+ketentuan rahasia bank yang cukup ketat dan prosedur bisnis yang sangat
+mudah sehingga memungkinkan adanya perlindungan bagi kerahasiaan suatu
+transaksi bisnis, pembentukan dan kegiatan usaha trust fund maupun badan
+usaha lainnya.
+Penempatan (Placement)
+
+: upaya menempatkan dana yang dihasilkan dari suatu
+
+kegiatan tindak pidana dihasilkan dari suatu kegiatan tindak pidana ke dalam
+sistem keuangan.
+Politically Exposed Person : orang yang mendapatkan kepercayaan untuk memiliki
+kewenangan
+sebagaimana
+
+publik
+
+diantaranya
+
+adalah
+
+Penyelenggara
+
+Negara
+
+dimaksud dalam peraturan perundang-undangan yang
+
+mengatur mengenai Penyelenggara Negara, dan/atau orang yang tercatat
+sebagai anggota partai politik yang memiliki pengaruh terhadap kebijakan dan
+operasional partai politik.
+Reputational Risk : risiko yang antara lain disebabkan adanya publikasi negatif yang
+terkait dengan kegiatan usaha Bank atau persepsi negatif terhadap Bank.
+Safe Deposit Box : jasa yang ditawarkan oleh Bank dengan menyediakan tempat
+penyimpanan barang atau dokumen berharga.
+Shell Banks : Bank yang tidak memiliki kehadiran secara fisik (physical presence) di
+Negara tempat Bank tersebut didirikan dan memperoleh izin, dan tidak
+berafiliasi dengan kelompok usaha jasa keuangan yang menjadi subyek
+pengawasan terkonsolodasi yang efektif.
+Single Customer Identification File : data profil Nasabah yang mencakup seluruh
+
+DKBU dan DPbS
+
+63
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+rekening yang dimiliki oleh satu Nasabah pada suatu Bank antara lain
+tabungan, deposito, giro dan kredit
+Smurfing : upaya untuk menghindari pelaporan dengan memecah-mecah transaksi
+yang dilakukan oleh banyak pelaku.
+Structuring : upaya untuk menghindari pelaporan dengan memecah-mecah transaksi
+sehingga jumlah transaksi menjadi lebih kecil.
+Suspicious Transaction : transaksi keuangan yang mencurigakan sebagaimana
+dimaksud dalam Undang-Undang yang mengatur mengenai Tindak Pidana
+Pencucian Uang.
+Tax Haven Country : negara atau wilayah yang undang-undang dan kebijakannya
+dapat digunakan untuk menghindari atau mengelabui ketentuan pajak dari
+negara lain. Kriteria pada umumnya memenuhi 1) tidak ada pajak atau pajak
+hanya nominal saja, 2) tidak adanya pertukaran informasi perpajakan dengan
+negara lain, 3) tidak ada transparansi dalam pelaksanaan undang-undang dan
+peraturan pelaksanaannya, 4) tidak ada kewajiban bagi badan usaha asing
+untuk berada secara fisik pada negara itu, 5) mempromosikan negara atau
+wilayahnya sebagai offshore financial center, 6) negara atau wilayah kecil
+yang keadaan politik dan ekonominya stabil serta didukung oleh prasarana
+yang baik.
+Terrorist List : daftar nama-nama teroris yang tercatat pada Resolusi Dewan
+Keamanan PBB No.1267.
+Transfer (Layering) : upaya memisahkan hasil tindak pidana transaksi keuangan
+untuk menyembunyikan atau menyamarkan asal usul dana. Dalam kegiatan
+ini terdapat proses pemindahan dana dari beberapa rekening atau lokasi
+tertentu sebagai hasil placement ke tempat lain melalui serangkaian transaksi
+yang kompleks dan didesain untuk menyamarkan dan menghilangkan jejak
+sumber dana tersebut.
+Ultimate owner/ultimate controller : perorangan yang menurut penilaian Bank memiliki
+dan/atau yang melakukan pengendalian akhir untuk mengambil keputusan
+dalam pengelolaan perusahaan.
+U
+
+Turn
+
+:
+
+upaya
+
+untuk
+
+mengaburkan
+
+asal
+
+usul
+
+hasil
+
+kejahatan
+
+dengan
+
+memutarbalikkan transaksi untuk kemudian dikembalikan ke rekening asalnya
+
+DKBU dan DPbS
+
+64
+
+Pedoman Standar Pelaksanaan Program APU dan PPT bagi BPR dan BPRS
+
+Walk in Customer (WIC) : pengguna jasa BPR/BPRS yang tidak memiliki rekening
+pada BPR/BPRS tersebut, tidak termasuk pihak yang mendapatkan perintah
+atau penugasan dari Nasabah untuk melakukan transaksi atas kepentingan
+Nasabah tersebut.
+
+DKBU dan DPbS
+
+65

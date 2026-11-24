@@ -1,0 +1,2308 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/17/DPbS
+Tentang: Surat Edaran Bank Indonesia perihal Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah
+Berkas: lamp_se1317711.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-perihal-Batas-Maksimum-Penyaluran-Dana-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+Lampiran Surat Edaran Bank Indonesia Nomor 13/17/DPbS tanggal 30 Mei 2011
+
+PEDOMAN PENYUSUNAN
+
+LAPORAN BATAS MAKSIMUM
+PENYALURAN DANA
+BANK PEMBIAYAAN RAKYAT SYARIAH
+
+DIREKTORAT PERBANKAN SYARIAH
+BANK INDONESIA
+TAHUN 2011
+
+KATA PENGANTAR
+
+Assalamu’alaikum Wr. Wb.
+Puji syukur kita panjatkan ke hadirat Allah SWT, karena berkat rahmat dan
+izin-Nya buku Pedoman Penyusunan Laporan Batas Maksimum Penyediaan Dana
+(BMPD) Bank Pembiayaan Rakyat Syariah (BPRS) Tahun 2011 ini dapat
+diterbitkan.
+
+Pedoman ini berisi mengenai format dan tatacara pengisian kolom-
+
+kolom laporan BMPD yang harus disampaikan BPRS kepada Bank Indonesia setiap
+bulan.
+Sebelum menyusun laporan BMPD, BPRS diharapkan membaca dan
+memahami ketentuan BMPD yang diatur dalam Peraturan Bank Indonesia Nomor
+13/ 5 /PBI/2011 tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan
+Rakyat Syariah serta ketentuan lain yang terkait dengan penyusunan dan
+penyampaian laporan BMPD.
+Akhirul kalam, besar harapan kami pedoman ini dapat membantu BPRS dalam
+menyusun laporan BMPD sehingga penyusunan dan penyampaian laporan BMPD
+dapat dilakukan secara cepat, akurat dan tepat waktu. Semoga seluruh niat, segenap
+upaya dan jerih payah dalam rangka pengembangan BPRS mendapat pertolongan,
+ridha, berkah, rahmat dan taufiq Allah SWT serta bermanfaat bagi kita semuanya.
+Wassalaamu’alaikum Wr. Wb.
+Jakarta, 30
+
+i
+
+Mei 2011
+
+DAFTAR ISI
+
+HALAMAN JUDUL
+KATA PENGANTAR
+
+i
+
+DAFTAR ISI
+
+ii
+
+PENJELASAN UMUM
+1
+I. LAPORAN PELANGGARAN BATAS MAKSIMUM PENYALURAN
+DANA (BMPD) PIHAK TERKAIT
+1.1 Formulir 1 Laporan Pelanggaran BMPD Pihak Terkait ................................
+
+2
+
+1.2 Rincian Formulir 1 Laporan Pelanggaran BMPD Pihak Terkait ...................
+
+3
+
+1.3 Penjelasan Formulir 1 Laporan Pelanggaran BMPD Pihak Terkait ..............
+
+5
+
+II. LAPORAN PENYALURAN DANA DAN PELAMPAUAN BATAS
+MAKSIMUM PENYALURAN DANA (BMPD) PIHAK TERKAIT
+2.1 Formulir 2 Laporan Penyaluran Dana dan Pelampauan BMPD Pihak
+Terkait ............................................................................................................ 10
+2.2 Rincian Formulir 2 Laporan Penyaluran Dana dan Pelampauan BMPD
+Pihak Terkait .................................................................................................. 11
+2.3 Penjelasan Formulir 2 Laporan Penyaluran Dana dan Pelampauan BMPD
+Pihak Terkait .................................................................................................. 13
+III. LAPORAN PELANGGARAN BATAS MAKSIMUM PENYALURAN
+DANA (BMPD) PIHAK TIDAK TERKAIT
+3.1 Formulir 3 Laporan Pelanggaran BMPD Pihak Tidak Terkait ......................
+
+17
+
+3.2 Rincian Formulir 3 Laporan Pelanggaran BMPD Pihak Tidak Terkait ........
+
+18
+
+3.3 Penjelasan Formulir 3 Laporan Pelanggaran BMPD Pihak Tidak Terkait ....
+
+20
+
+IV. LAPORAN PELAMPAUAN BATAS MAKSIMUM PENYALURAN
+DANA (BMPD) PIHAK TIDAK TERKAIT
+4.1 Formulir 4 Laporan Pelampauan BMPD Pihak Tidak Terkait ......................
+
+25
+
+4.2 Rincian Formulir 4 Laporan Pelampauan BMPD Pihak Tidak Terkait .........
+
+26
+
+4.3 Penjelasan Formulir 4 Laporan Pelampauan BMPD Pihak Tidak Terkait ....
+
+28
+
+ii
+
+PENJELASAN UMUM
+
+I.
+
+Tujuan Pelaporan
+Laporan Batas Maksimum Penyaluran Dana (BMPD) oleh Bank Pembiayaan
+Rakyat Syariah (BPRS) yang disusun menurut buku pedoman ini dimaksudkan
+untuk keperluan:
+
+a. Pembinaan dan pengawasan BPRS secara individual.
+b. Pemantauan terhadap pelaksanaan prinsip kehati-hatian dalam Penyaluran
+Dana.
+
+c. Penilaian tingkat kesehatan BPRS.
+Dalam rangka mencapai tujuan tersebut maka laporan BMPD harus diisi secara
+benar dan lengkap serta disampaikan tepat waktu, dengan mengacu pada
+pedoman yang berlaku.
+
+II.
+
+BPRS Pelapor
+BPRS pelapor adalah kantor pusat BPRS.
+
+III. Jenis Laporan
+1.
+
+Laporan Pelanggaran BMPD Pihak Terkait
+
+2.
+
+Laporan Penyaluran Dana dan Pelampauan BMPD Pihak Terkait
+
+3.
+
+Laporan Pelanggaran BMPD Pihak Tidak Terkait
+
+4.
+
+Laporan Pelampauan BMPD Pihak Tidak Terkait
+
+IV. Periode Laporan
+Laporan BMPD disampaikan secara bulanan kepada Bank Indonesia.
+
+V.
+
+Cara Pengisian Laporan
+BPRS pelapor melakukan pengisian data pada form entry data yang tersedia
+dalam aplikasi data entry laporan BMPD BPRS. Angka nominal dilaporkan
+dalam ribuan rupiah, dengan pembulatan sebagai berikut:
+a. angka kurang dari Rp500,00 (lima ratus rupiah) dibulatkan menjadi 0 (nol);
+dan
+b. angka Rp500,00 (lima ratus rupiah) atau lebih dibulatkan menjadi 1 (satu).
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+1
+
+1.1 FORMULIR 1 LAPORAN PELANGGARAN BMPD PIHAK TERKAIT
+FORMULIR 1
+LAPORAN PELANGGARAN BMPD PIHAK TERKAIT
+Nama
+
+:
+
+Alamat
+
+:
+
+Bulan
+Laporan
+
+:
+(Ribuan Rp)
+PADA SAAT PEMBERIAN/REALISASI PENYEDIAAN DANA
+
+NO.
+
+NOMOR
+NOMOR
+NASABAH REKENING
+
+I
+
+NAMA NASABAH PENERIMA
+FASILITAS/BANK
+
+II
+
+III
+
+HUBUNGAN
+JENIS
+KETERKAITAN
+FASILITAS
+DENGAN BPRS
+IV
+
+V
+
+TANGGAL
+
+PENYALURAN
+DANA/BAKI
+DEBET
+
+VI
+
+VII
+
+AGUNAN LIKUID/ PENYALURAN
+BAGIAN YANG
+DANA/BAKI
+DIJAMIN
+DEBET NETTO
+VIII
+
+IX
+
+MODAL
+KPMM
+
+X
+
+PELANGGARAN
+Rupiah
+
+%
+
+XI
+
+XII
+
+KUALITAS
+
+KETERANGAN
+
+XIII
+
+XIV
+
+A. Pembiayaan Yang Diberikan
+
+Total pelanggaran
+B. Penempatan Dana Pada Bank Lain
+
+Total pelanggaran
+JUMLAH
+
+Informasi yang di sampaikan sesuai dengan yang sebenarnya. Apabila dikemudian hari ditemukan ketidaksesuaian data yang disampaikan, segala resiko yang muncul atas penyampaian data tersebut
+menjadi tanggung jawab kami.
+....................,.......................
+Mengetahui,
+Ttd
+
+Direktur Utama
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+2
+
+1.2
+
+RINCIAN FORMULIR 1 LAPORAN PELANGGARAN BMPD PIHAK
+TERKAIT
+
+KOLOM
+I.
+
+Nomor Nasabah
+Nomor identifikasi Nasabah Penerima Fasilitas (CIF)
+
+II.
+
+Nomor Rekening
+Nomor rekening pada masing-masing fasilitas yang diberikan
+
+III. Nama Nasabah Penerima Fasilitas/Bank
+Nama Nasabah Penerima Fasilitas atau nama BPRS yang menerima
+Penempatan Dana Antar Bank
+IV.
+
+V.
+
+Hubungan Keterkaitan Dengan BPRS
+1.
+
+Hubungan kepemilikan
+
+2.
+
+Hubungan kepengurusan
+
+3.
+
+Hubungan keuangan
+
+4.
+
+Hubungan keluarga
+
+Jenis Fasilitas
+A. Pembiayaan Yang diberikan
+1.
+
+Murabahah
+
+2.
+
+Mudharabah
+
+3.
+
+Musyarakah
+
+4.
+
+Salam
+
+5.
+
+Istishna’
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik
+
+7.
+
+Qardh
+
+8.
+
+Lainnya
+
+B. Penempatan Dana Antar Bank
+1.
+
+Tabungan wadiah
+
+2.
+
+Tabungan mudharabah
+
+3.
+
+Deposito mudharabah
+
+4.
+
+Pembiayaan musyarakah
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+3
+
+VI.
+
+5.
+
+Pembiayaan mudharabah
+
+6.
+
+Piutang qardh
+
+7.
+
+Lainnya
+
+Tanggal
+TT/BB/TTTT
+
+VII. Penyaluran Dana/Baki Debet
+Dalam ribuan rupiah
+VIII. Agunan Likuid/Bagian Yang Dijamin
+Dalam ribuan rupiah
+IX.
+
+Penyaluran Dana/Baki Debet Netto
+Dalam ribuan rupiah
+
+X.
+
+Modal KPMM
+Dalam ribuan rupiah
+
+XI.
+
+Pelanggaran - Rupiah
+Dalam ribuan rupiah
+
+XII. Pelanggaran - Persentase
+Dalam angka persentase
+XIII. Kualitas
+1.
+
+Lancar
+
+2.
+
+Kurang lancar
+
+3.
+
+Diragukan
+
+4.
+
+Macet
+
+XIV. Keterangan
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+4
+
+1.3
+
+PENJELASAN FORMULIR 1 LAPORAN PELANGGARAN BMPD
+PIHAK TERKAIT
+
+KOLOM
+
+I.
+
+Nomor Nasabah
+Kolom ini diisi dengan nomor identifikasi Nasabah Penerima Fasilitas
+(Customer Identification File/CIF) yang ditetapkan BPRS.
+
+II.
+
+Nomor Rekening
+Kolom ini diisi dengan nomor rekening pada masing-masing fasilitas yang
+diberikan kepada Nasabah Penerima Fasilitas yang ditetapkan BPRS.
+
+III. Nama Nasabah Penerima Fasilitas/Bank
+Kolom ini diisi dengan nama Nasabah Penerima Fasilitas atau nama BPRS
+yang menerima Penempatan Dana Antar Bank sesuai dengan jenis Penyaluran
+Dana yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Nama Nasabah Penerima Fasilitas diisi dengan nama nasabah perorangan
+atau perusahaan/badan Pihak Terkait yang memperoleh fasilitas
+Pembiayaan sesuai dengan nama yang tercantum dalam perjanjian
+Pembiayaan.
+
+B.
+
+Penempatan Dana Antar Bank
+Nama Bank diisi dengan nama BPRS Pihak Terkait yang menerima
+Penempatan Dana Antar Bank dari BPRS pelapor.
+Kolom ini diisi nihil apabila tidak terdapat Penyaluran Dana kepada
+Pihak Terkait yang melanggar BMPD.
+
+IV. Hubungan Keterkaitan Dengan BPRS
+Kolom ini diisi dengan hubungan keterkaitan antara Nasabah Penerima
+Fasilitas atau BPRS penerima Penempatan Dana Antar Bank dengan BPRS
+pelapor, sesuai Pasal 7 Peraturan Bank Indonesia Nomor 13/5/PBI/2011
+tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah
+beserta penjelasannya, yang dikategorikan sebagai berikut:
+
+1.
+
+Hubungan kepemilikan;
+
+2.
+
+Hubungan kepengurusan;
+
+3.
+
+Hubungan keuangan; dan/atau
+
+4.
+
+Hubungan keluarga.
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+5
+
+V.
+
+Jenis Fasilitas
+Kolom ini diisi dengan nama akad atau jenis penempatan sesuai dengan jenis
+Penyaluran Dana yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Diisi dengan jenis akad Pembiayaan yang diberikan BPRS kepada
+Nasabah Penerima Fasilitas yaitu:
+
+B.
+
+1.
+
+Murabahah;
+
+2.
+
+Mudharabah;
+
+3.
+
+Musyarakah;
+
+4.
+
+Salam;
+
+5.
+
+Istishna’;
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik;
+
+7.
+
+Qardh; atau
+
+8.
+
+Lainnya.
+
+Penempatan Dana Antar Bank
+Diisi dengan jenis penempatan dana yang dilakukan BPRS pelapor pada
+BPRS lain, yaitu:
+1.
+
+Tabungan wadiah;
+
+2.
+
+Tabungan mudharabah;
+
+3.
+
+Deposito mudharabah;
+
+4.
+
+Pembiayaan musyarakah;
+
+5.
+
+Pembiayaan mudharabah;
+
+6.
+
+Piutang qardh; atau
+
+7.
+
+Lainnya.
+
+VI. Tanggal
+Kolom ini diisi dengan tanggal realisasi/pencairan Pembiayaan dan/atau
+Penempatan Dana Antar Bank dengan format tanggal/bulan/tahun
+(TT/BB/TTTT). Tata cara pengisian tanggal adalah sebagai berikut:
+1.
+
+Pembiayaan murabahah dan Pembiayaan istishna’, diisi dengan tanggal
+pada saat penyerahan barang;
+
+2.
+
+Pembiayaan multijasa, diisi dengan tanggal pada saat penandatanganan
+akad;
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+6
+
+3.
+
+Pembiayaan salam, diisi dengan tanggal pada saat pencairan dana;
+
+4.
+
+Pembiayaan mudharabah dan Pembiayaan musyarakah dengan pencairan
+sekaligus, diisi dengan tanggal pada saat pencairan;
+
+5.
+
+Pembiayaan mudharabah dan Pembiayaan musyarakah dengan pencairan
+bertahap, diisi dengan tanggal penarikan terakhir pada bulan laporan;
+
+6.
+
+Pembiayaan qardh, diisi dengan tanggal pada saat pencairan;
+
+7.
+
+Pembiayaan ijarah atau ijarah muntahiya bittamlik, diisi dengan tanggal
+pada saat penandatanganan akad;
+
+8.
+
+Penempatan Dana Antar Bank dalam bentuk deposito, diisi dengan tanggal
+penerbitan bilyet deposito.
+
+9.
+
+Penempatan Dana Antar Bank dalam bentuk tabungan, diisi dengan
+tanggal pada saat saldo tertinggi pada bulan laporan.
+
+VII. Penyaluran Dana/Baki Debet
+Kolom ini diisi dengan jumlah Pembiayaan yang diberikan kepada Nasabah
+Penerima Fasilitas atau Penempatan Dana Antar Bank pada BPRS lain, dalam
+ribuan rupiah sebagai berikut:
+A.
+
+B.
+
+Pembiayaan yang diberikan
+1.
+
+Pembiayaan murabahah, Pembiayaan istishna’, dan Pembiayaan
+multijasa dilaporkan sebesar jumlah harga pokok;
+
+2.
+
+Pembiayaan salam dilaporkan sebesar jumlah harga perolehan;
+
+3.
+
+Pembiayaan
+mudharabah,
+Pembiayaan
+musyarakah
+dan
+Pembiayaan qardh dilaporkan sebesar jumlah dana yang dicairkan;
+dan
+
+4.
+
+Pembiayaan ijarah dan ijarah muntahiya bittamlik dilaporkan
+sebesar jumlah harga perolehan aktiva ijarah atau ijarah muntahiya
+bittamlik.
+
+Penempatan Dana Antar Bank
+
+1. Tabungan wadiah, dilaporkan sebesar saldo tertinggi pada bulan
+laporan;
+
+2. Tabungan mudharabah, dilaporkan sebesar saldo tertinggi pada
+bulan laporan;
+
+3. Deposito mudharabah, dilaporkan sebesar nominal deposito sesuai
+yang tercantum dalam bilyet deposito;
+
+4. Pembiayaan musyarakah, dilaporkan sebesar jumlah dana yang
+dicairkan;
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+7
+
+5. Pembiayaan mudharabah, dilaporkan sebesar jumlah dana yang
+dicairkan;
+
+6. Piutang qardh, dilaporkan sebesar jumlah dana yang dicairkan; dan
+7. Lainnya, dilaporkan sebesar jumlah dana yang dicairkan.
+VIII. Agunan Likuid/Bagian Yang Dijamin
+Kolom ini diisi dengan nilai Pembiayaan yang dijamin oleh agunan likuid atau
+oleh pemerintah. Agunan likuid merupakan agunan yang mudah dicairkan
+seperti emas dan logam mulia, Sertifikat Bank Indonesia (SBI), tabungan dan
+deposito di BPRS yang bersangkutan yang diblokir dan dilengkapi dengan
+surat kuasa pencairan, dengan nilai agunan sebagai berikut:
+
+1. Agunan berupa tabungan dan deposito, dilaporkan sebesar nilai yang
+diblokir, dalam ribuan rupiah.
+
+2. Agunan berupa SBI, dilaporkan sebesar nilai nominal, dalam ribuan
+rupiah.
+
+3. Agunan berupa emas dan logam mulia, dilaporkan sebesar harga pasar
+(market value), dalam ribuan rupiah.
+Bagian yang dijamin adalah besarnya nilai dari bagian Pembiayaan yang
+dijamin oleh Pemerintah Indonesia secara langsung maupun melalui BUMN
+atau BUMD sebagaimana diatur dalam Pasal 15 huruf c Peraturan Bank
+Indonesia Nomor 13/5/PBI/2011 tentang Batas Maksimum Penyaluran Dana
+Bank Pembiayaan Rakyat Syariah.
+Bagian yang dijamin diisi dengan angka dalam ribuan rupiah.
+
+IX. Penyaluran Dana/Baki Debet Netto
+Kolom ini diisi dengan jumlah Penyaluran Dana/baki debet dikurangi Agunan
+Likuid/Bagian Yang Dijamin, dalam ribuan rupiah.
+
+X.
+
+Modal KPMM
+Kolom ini diisi dengan jumlah Modal BPRS sebagaimana diatur dalam
+ketentuan Bank Indonesia mengenai Kewajiban Penyediaan Modal Minimum
+(KPMM) yang berlaku bagi BPRS, pada posisi akhir bulan sebelum bulan
+laporan, dalam ribuan rupiah. Modal BPRS adalah sebesar jumlah modal inti
+ditambah modal pelengkap.
+
+XI. Pelanggaran - Rupiah
+Kolom ini diisi dengan selisih lebih antara jumlah Penyaluran Dana yang
+diperhitungkan dalam perhitungan BMPD dengan nominal BMPD Pihak
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+8
+
+Terkait, dalam ribuan rupiah. Nominal BMPD Pihak Terkait adalah sebesar
+10% (sepuluh persen) dari jumlah Modal BPRS pelapor.
+
+XII. Pelanggaran – Persentase
+Kolom ini diisi dengan angka persentase Pelanggaran BMPD yaitu persentase
+jumlah pelanggaran BMPD dengan Modal BPRS pelapor.
+
+XIII. Kualitas
+Kolom ini diisi dengan kualitas Pembiayaan atau Penempatan Dana Antar
+Bank sebagaimana diatur dalam ketentuan Bank Indonesia mengenai penetapan
+kualitas aktiva yang berlaku Bagi BPRS, yaitu: (1) Lancar, (2) Kurang lancar,
+(3) Diragukan dan (4) Macet.
+
+XIV. Keterangan
+Kolom ini diisi dengan penjelasan BPRS pelapor yang sekurang-kurangnya
+memuat jenis Penyaluran Dana, misalnya Deposito No. Bilyet XXX, Tabungan
+No. Rekening XXX, Pembiayaan No. Akad XXX.
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+9
+
+2.1 FORMULIR 2 LAPORAN PENYALURAN DANA DAN PELAMPAUAN BMPD PIHAK TERKAIT
+FORMULIR 2
+LAPORAN PENYALURAN DANA DAN PELAMPAUAN BMPD PIHAK TERKAIT
+Nama
+
+:
+
+MODAL PADA SAAT LAPORAN
+
+:
+
+Alamat
+
+:
+
+BMPD PADA SAAT LAPORAN (10%)
+
+:
+
+Bulan Laporan
+
+:
+(Ribuan Rp)
+PADA SAAT PEMBERIAN/REALISASI PENYEDIAAN DANA
+
+NO.
+
+NOMOR
+NASABAH
+
+NOMOR
+REKENING
+
+NAMA NASABAH PENERIMA
+FASILITAS/BANK
+
+HUBUNGAN
+KETERKAITAN
+DENGAN BPRS
+
+JENIS
+FASILITAS
+
+PENYALURAN
+DANA/BAKI
+DEBET
+
+AGUNAN LIKUID/
+BAGIAN YANG
+DIJAMIN
+
+PENYALURAN
+DANA/BAKI DEBET
+NETTO
+
+I
+
+II
+
+III
+
+IV
+
+V
+
+VI
+
+VII
+
+VIII
+
+PELAMPAUAN BMPD
+
+Rupiah
+
+%
+
+IX
+
+X
+
+KUALITAS
+
+KETERANGAN
+
+XI
+
+XII
+
+A. Pembiayaan Yang Diberikan
+
+Total Pelampauan
+B. Penempatan Dana Pada Bank Lain
+
+Total Pelampauan
+
+Total Pelampauan
+JUMLAH
+
+Informasi yang di sampaikan sesuai dengan yang sebenarnya. Apabila dikemudian hari ditemukan ketidaksesuaian data yang disampaikan, segala resiko yang muncul atas penyampaian data
+tersebut menjadi tanggung jawab kami.
+
+....................,.............................
+Mengetahui,
+Ttd
+
+Direktur Utama
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+10
+
+2.2
+
+RINCIAN FORMULIR 2 LAPORAN PENYALURAN DANA DAN
+PELAMPAUAN BMPD PIHAK TERKAIT
+
+KOLOM
+I.
+
+Nomor Nasabah
+Nomor identifikasi Nasabah Penerima Fasilitas (CIF)
+
+II.
+
+Nomor Rekening
+Nomor rekening pada masing-masing fasilitas yang diberikan
+
+III.
+
+Nama Nasabah Penerima Fasilitas/Bank
+Nama Nasabah Penerima Fasilitas atau nama BPRS yang menerima Penempatan
+Dana Antar Bank
+
+IV.
+
+V.
+
+Hubungan Keterkaitan Dengan BPRS
+1.
+
+Hubungan kepemilikan
+
+2.
+
+Hubungan kepengurusan
+
+3.
+
+Hubungan keuangan
+
+4.
+
+Hubungan keluarga
+
+Jenis Fasilitas
+A.
+
+B.
+
+Pembiayaan Yang diberikan
+1.
+
+Murabahah
+
+2.
+
+Mudharabah
+
+3.
+
+Musyarakah
+
+4.
+
+Salam
+
+5.
+
+Istishna’
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik
+
+7.
+
+Qardh
+
+8.
+
+Lainnya
+
+Penempatan Dana Antar Bank
+1.
+
+Tabungan wadiah
+
+2.
+
+Tabungan mudharabah
+
+3.
+
+Deposito mudharabah
+
+4.
+
+Pembiayaan musyarakah
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+11
+
+VI.
+
+5.
+
+Pembiayaan mudharabah
+
+6.
+
+Piutang qardh
+
+7.
+
+Lainnya
+
+Penyaluran Dana/Baki Debet
+Dalam ribuan rupiah
+
+VII. Agunan Likuid/Bagian Yang Dijamin
+Dalam ribuan rupiah
+VIII. Penyaluran Dana/Baki Debet Netto
+Dalam ribuan rupiah
+IX.
+
+Pelampauan - Rupiah
+Dalam ribuan rupiah
+
+X.
+
+Pelampauan - Persentase
+Dalam angka persentase
+
+XI.
+
+Kualitas
+1.
+
+Lancar
+
+2.
+
+Kurang lancar
+
+3.
+
+Diragukan
+
+4.
+
+Macet
+
+XII. Keterangan
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+12
+
+2.3
+
+PENJELASAN FORMULIR 2 LAPORAN PENYALURAN DANA DAN
+PELAMPAUAN BMPD PIHAK TERKAIT
+
+KOLOM
+
+I.
+
+Nomor Nasabah
+Kolom ini diisi dengan nomor identifikasi Nasabah Penerima Fasilitas (Customer
+Identification File/CIF) yang ditetapkan BPRS.
+
+II.
+
+Nomor Rekening
+Kolom ini diisi dengan nomor rekening pada masing-masing fasilitas yang
+diberikan kepada Nasabah Penerima Fasilitas yang ditetapkan BPRS.
+
+III. Nama Nasabah Penerima Fasilitas/Bank
+Kolom ini diisi dengan nama Nasabah Penerima Fasilitas atau nama BPRS yang
+menerima Penempatan Dana Antar Bank sesuai dengan jenis Penyaluran Dana
+yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Nama Nasabah Penerima Fasilitas diisi dengan nama nasabah perorangan
+atau perusahaan/badan Pihak Terkait yang memperoleh fasilitas Pembiayaan
+sesuai dengan nama yang tercantum dalam perjanjian Pembiayaan.
+
+B.
+
+Penempatan Dana Antar Bank
+Nama Bank diisi dengan nama BPRS Pihak Terkait yang menerima
+Penempatan Dana Antar Bank dari BPRS pelapor.
+Kolom ini diisi nihil apabila tidak terdapat Penyaluran Dana kepada Pihak
+Terkait.
+
+IV. Hubungan Keterkaitan Dengan BPRS
+Kolom ini diisi dengan hubungan keterkaitan antara Nasabah Penerima Fasilitas
+atau BPRS penerima Penempatan Dana Antar Bank dengan BPRS pelapor, sesuai
+Pasal 7 Peraturan Bank Indonesia Nomor 13/5/PBI/2011 tentang Batas
+Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah beserta
+penjelasannya, yang dikategorikan sebagai berikut:
+
+1. Hubungan kepemilikan;
+2. Hubungan kepengurusan;
+3. Hubungan keuangan; dan/atau
+4. Hubungan keluarga.
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+13
+
+V.
+
+Jenis Fasilitas
+Kolom ini diisi dengan nama akad atau jenis penempatan sesuai dengan jenis
+Penyaluran Dana yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Diisi dengan jenis akad Pembiayaan yang diberikan BPRS kepada Nasabah
+Penerima Fasilitas yaitu:
+
+B.
+
+1.
+
+Murabahah;
+
+2.
+
+Mudharabah;
+
+3.
+
+Musyarakah;
+
+4.
+
+Salam;
+
+5.
+
+Istishna’;
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik;
+
+7.
+
+Qardh; atau
+
+8.
+
+Lainnya.
+
+Penempatan Dana Antar Bank
+Diisi dengan jenis penempatan dana yang dilakukan BPRS pelapor pada
+BPRS lain, yaitu:
+1.
+
+Tabungan wadiah;
+
+2.
+
+Tabungan mudharabah;
+
+3.
+
+Deposito mudharabah;
+
+4.
+
+Pembiayaan musyarakah;
+
+5.
+
+Pembiayaan mudharabah;
+
+6.
+
+Piutang qardh; atau
+
+7.
+
+Lainnya.
+
+VI. Penyaluran Dana/Baki Debet
+Kolom ini diisi dengan jumlah Pembiayaan yang diberikan kepada Nasabah
+Penerima Fasilitas atau Penempatan Dana Antar Bank pada BPRS lain, dalam
+ribuan rupiah sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+1.
+
+Pembiayaan murabahah, Pembiayaan istishna’, dan Pembiayaan
+multijasa dilaporkan sebesar jumlah saldo harga pokok;
+
+2.
+
+Pembiayaan salam dilaporkan sebesar jumlah saldo harga perolehan;
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+14
+
+B.
+
+3.
+
+Pembiayaan mudharabah, Pembiayaan musyarakah dan Pembiayaan
+qardh dilaporkan sebesar baki debet; dan
+
+4.
+
+Pembiayaan ijarah atau ijarah muntahiya bittamlik dilaporkan sebesar
+jumlah saldo harga perolehan aktiva ijarah atau ijarah muntahiya
+bittamlik dikurangi dengan akumulasi penyusutan/amortisasi aktiva
+ijarah atau ijarah muntahiya bittamlik.
+
+Penempatan Dana Antar Bank
+
+1. Tabungan wadiah, dilaporkan sebesar saldo tertinggi pada bulan
+laporan;
+
+2. Tabungan mudharabah, dilaporkan sebesar saldo tertinggi pada bulan
+laporan;
+
+3. Deposito mudharabah, dilaporkan sebesar nominal deposito sesuai
+yang tercantum dalam bilyet deposito;
+
+4. Pembiayaan musyarakah, dilaporkan sebesar jumlah baki debet;
+5. Pembiayaan mudharabah, dilaporkan sebesar jumlah baki debet;
+6. Piutang qardh, dilaporkan sebesar jumlah saldo piutang; dan
+7. Lainnya, dilaporkan sebesar jumlah saldo pada posisi akhir bulan
+laporan.
+
+VII. Agunan Likuid/Bagian Yang Dijamin
+Kolom ini diisi dengan nilai Pembiayaan yang dijamin oleh agunan likuid atau
+oleh pemerintah. Agunan likuid merupakan agunan yang mudah dicairkan seperti
+emas dan logam mulia, Sertifikat Bank Indonesia (SBI), tabungan dan deposito di
+BPRS yang bersangkutan yang diblokir dan dilengkapi dengan surat kuasa
+pencairan, dengan nilai agunan sebagai berikut:
+
+1. Agunan berupa tabungan dan deposito, dilaporkan sebesar nilai yang diblokir,
+dalam ribuan rupiah.
+
+2. Agunan berupa SBI, dilaporkan sebesar nilai nominal, dalam ribuan rupiah.
+3. Agunan berupa emas dan logam mulia, dilaporkan sebesar harga pasar
+(market value), dalam ribuan rupiah.
+Bagian yang dijamin adalah besarnya nilai dari bagian Pembiayaan yang dijamin
+oleh Pemerintah Indonesia secara langsung maupun melalui BUMN atau BUMD
+sebagaimana diatur dalam Pasal 15 huruf c Peraturan Bank Indonesia Nomor
+13/5/PBI/2011 tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan
+Rakyat Syariah.
+Bagian yang dijamin diisi dengan angka dalam ribuan rupiah.
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+15
+
+VIII. Penyaluran Dana/Baki Debet Netto
+Kolom ini diisi dengan jumlah Penyaluran Dana/baki debet dikurangi Agunan
+Likuid/Bagian Yang Dijamin, dalam ribuan rupiah.
+
+IX. Pelampauan - Rupiah
+Kolom ini diisi dengan selisih lebih antara jumlah Penyaluran Dana yang
+diperhitungkan dalam perhitungan BMPD dengan nominal BMPD Pihak Terkait
+pada posisi akhir bulan laporan, dalam ribuan rupiah. Nominal BMPD Pihak
+Terkait adalah sebesar 10% (sepuluh persen) dari jumlah Modal BPRS pelapor.
+
+X.
+
+Pelampauan - Persentase
+Kolom ini diisi dengan angka persentase Pelampauan BMPD yaitu persentase
+jumlah pelampauan BMPD dengan Modal BPRS pelapor pada posisi akhir bulan
+laporan.
+
+XI. Kualitas
+Kolom ini diisi dengan kualitas Pembiayaan atau Penempatan Dana Antar Bank
+sebagaimana diatur dalam ketentuan Bank Indonesia mengenai penetapan kualitas
+aktiva yang berlaku Bagi BPRS, yaitu: (1) Lancar, (2) Kurang lancar, (3)
+Diragukan dan (4) Macet.
+
+XII. Keterangan
+Kolom ini diisi dengan penjelasan BPRS pelapor yang sekurang-kurangnya
+memuat jenis Penyaluran Dana, misalnya Deposito No. Bilyet XXX, Tabungan
+No. Rekening XXX, Pembiayaan No. Akad XXX.
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+16
+
+3.1 FORMULIR 3 LAPORAN PELANGGARAN BMPD PIHAK TIDAK TERKAIT
+FORMULIR 3
+LAPORAN PELANGGARAN BMPD PIHAK TIDAK TERKAIT
+Nama
+
+:
+
+Alamat
+
+:
+
+Bulan
+Laporan
+
+:
+(Ribuan Rp)
+PADA SAAT PEMBERIAN/REALISASI PENYEDIAAN DANA
+
+NO.
+
+NOMOR
+NASABAH
+
+I
+
+NOMOR
+REKENING
+
+NAMA NASABAH PENERIMA
+FASILITAS/BANK
+III
+
+II
+
+JENIS
+FASILITAS
+
+IV
+
+TANGGAL
+
+V
+
+PENYALURAN
+DANA/BAKI
+DEBET
+VI
+
+AGUNAN
+LIKUID/BAGIAN
+YANG DIJAMIN
+VII
+
+PENYALURAN
+DANA/BAKI
+DEBET NETTO
+VIII
+
+MODAL
+KPMM
+
+IX
+
+PELANGGARAN
+Rupiah
+
+%
+
+X
+
+XI
+
+KUALITAS
+
+KETERANGAN
+
+XII
+
+XIII
+
+A. INDIVIDUAL
+I. Pembiayaan Yang diberikan
+
+Total pelanggaran
+II. Penempatan Dana pada bank lain
+
+Total pelanggaran
+
+Total pelanggaran
+B. KELOMPOK
+Data 1
+
+Total pelanggaran
+Sub jumlah data 1
+Data 2
+
+Total pelanggaran
+Sub jumlah data 2
+JUMLAH PELANGGARAN PIHAK TIDAK TERKAIT
+Informasi yang di sampaikan sesuai dengan yang sebenarnya. Apabila dikemudian hari ditemukan ketidaksesuaian data yang disampaikan, segala resiko yang muncul atas penyampaian data tersebut
+menjadi tanggung jawab kami.
+
+.................,...................
+Mengetahui,
+Ttd
+
+Direktur Utama
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+17
+
+3.2
+
+RINCIAN FORMULIR 3 LAPORAN PELANGGARAN BMPD PIHAK
+TIDAK TERKAIT
+
+KOLOM
+I.
+
+Nomor Nasabah
+Nomor identifikasi Nasabah Penerima Fasilitas (CIF)
+
+II.
+
+Nomor Rekening
+Nomor rekening pada masing-masing fasilitas yang diberikan
+
+III.
+
+Nama Nasabah Penerima Fasilitas/Bank
+Nama Nasabah Penerima Fasilitas atau nama BPRS yang menerima Penempatan
+Dana Antar Bank
+
+IV.
+
+Jenis Fasilitas
+A.
+
+B.
+
+V.
+
+Pembiayaan Yang diberikan
+1.
+
+Murabahah
+
+2.
+
+Mudharabah
+
+3.
+
+Musyarakah
+
+4.
+
+Salam
+
+5.
+
+Istishna’
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik
+
+7.
+
+Qardh
+
+8.
+
+Lainnya
+
+Penempatan Dana Antar Bank
+1.
+
+Tabungan wadiah
+
+2.
+
+Tabungan mudharabah
+
+3.
+
+Deposito mudharabah
+
+4.
+
+Pembiayaan musyarakah
+
+5.
+
+Pembiayaan mudharabah
+
+6.
+
+Piutang qardh
+
+7.
+
+Lainnya
+
+Tanggal
+TT/BB/TTTT
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+18
+
+VI.
+
+Penyaluran Dana/Baki Debet
+Dalam ribuan rupiah
+
+VII. Agunan Likuid/Bagian Yang Dijamin
+Dalam ribuan rupiah
+VIII. Penyaluran Dana/Baki Debet Netto
+Dalam ribuan rupiah
+IX.
+
+Modal KPMM
+Dalam ribuan rupiah
+
+X.
+
+Pelanggaran - Rupiah
+Dalam ribuan rupiah
+
+XI.
+
+Pelanggaran - Persentase
+Dalam angka persentase
+
+XII. Kualitas
+1.
+
+Lancar
+
+2.
+
+Kurang lancar
+
+3.
+
+Diragukan
+
+4.
+
+Macet
+
+XIII. Keterangan
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+19
+
+3.3
+
+PENJELASAN FORMULIR 3
+PIHAK TIDAK TERKAIT
+
+LAPORAN PELANGGARAN
+
+BMPD
+
+KOLOM
+
+I.
+
+Nomor Nasabah
+Diisi dengan nomor identifikasi Nasabah Penerima Fasilitas (Customer
+Identification File/CIF) yang ditetapkan BPRS.
+
+II.
+
+Nomor Rekening
+Diisi dengan nomor rekening pada masing-masing fasilitas yang diberikan kepada
+Nasabah Penerima Fasilitas yang ditetapkan BPRS.
+
+III. Nama Nasabah Penerima Fasilitas/Bank
+Kolom ini diisi dengan nama Nasabah Penerima Fasilitas atau nama BPRS yang
+menerima Penempatan Dana Antar Bank sesuai dengan jenis Penyaluran Dana
+yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Nama Nasabah Penerima Fasilitas diisi dengan nama nasabah perorangan
+atau perusahaan/badan Pihak Terkait yang memperoleh fasilitas Pembiayaan
+sesuai dengan nama yang tercantum dalam perjanjian Pembiayaan.
+
+B.
+
+Penempatan Dana Antar Bank
+Nama Bank diisi dengan nama BPRS Pihak Terkait yang menerima
+Penempatan Dana Antar Bank dari BPRS pelapor.
+Kolom ini diisi nihil apabila tidak terdapat Penyaluran Dana kepada Pihak
+Tidak Terkait yang melanggar BMPD.
+
+IV. Jenis Fasilitas
+Kolom ini diisi dengan nama akad atau jenis penempatan sesuai dengan jenis
+Penyaluran Dana yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Diisi dengan jenis akad Pembiayaan yang diberikan BPRS kepada Nasabah
+Penerima Fasilitas yaitu:
+1.
+
+Murabahah;
+
+2.
+
+Mudharabah;
+
+3.
+
+Musyarakah;
+
+4.
+
+Salam;
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+20
+
+B.
+
+5.
+
+Istishna’;
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik;
+
+7.
+
+Qardh; atau
+
+8.
+
+Lainnya.
+
+Penempatan Dana Antar Bank
+Diisi dengan jenis penempatan dana yang dilakukan BPRS pelapor pada
+BPRS lain, yaitu:
+
+V.
+
+1.
+
+Tabungan wadiah;
+
+2.
+
+Tabungan mudharabah;
+
+3.
+
+Deposito mudharabah;
+
+4.
+
+Pembiayaan musyarakah;
+
+5.
+
+Pembiayaan mudharabah;
+
+6.
+
+Piutang qardh; atau
+
+7.
+
+Lainnya.
+
+Tanggal
+Kolom ini diisi dengan tanggal realisasi/pencairan Pembiayaan dan/atau
+Penempatan Dana Antar Bank dengan format tanggal/bulan/tahun
+(TT/BB/TTTT). Tata cara pengisian tanggal adalah sebagai berikut:
+1.
+
+Pembiayaan murabahah dan Pembiayaan istishna’, diisi dengan tanggal pada
+saat penyerahan barang;
+
+2.
+
+Pembiayaan multijasa, diisi dengan tanggal pada saat penandatanganan akad;
+
+3.
+
+Pembiayaan salam, diisi dengan tanggal pada saat pencairan dana;
+
+4.
+
+Pembiayaan mudharabah dan Pembiayaan musyarakah dengan pencairan
+sekaligus, diisi dengan tanggal pada saat pencairan;
+
+5.
+
+Pembiayaan mudharabah dan Pembiayaan musyarakah dengan pencairan
+bertahap, diisi dengan tanggal penarikan terakhir pada bulan laporan;
+
+6.
+
+Pembiayaan qardh, diisi dengan tanggal pada saat pencairan;
+
+7.
+
+Pembiayaan ijarah dan ijarah muntahiya bittamlik, diisi dengan tanggal pada
+saat penandatanganan akad;
+
+8.
+
+Penempatan Dana Antar Bank dalam bentuk deposito, diisi dengan tanggal
+penerbitan bilyet deposito.
+
+9.
+
+Penempatan Dana Antar Bank dalam bentuk tabungan, diisi dengan tanggal
+pada saat saldo tertinggi pada bulan laporan.
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+21
+
+VI. Penyaluran Dana/Baki Debet
+Kolom ini diisi dengan jumlah Pembiayaan yang diberikan kepada Nasabah
+Penerima Fasilitas atau Penempatan Dana Antar Bank pada BPRS lain, dalam
+ribuan rupiah sebagai berikut:
+A.
+
+B.
+
+Pembiayaan yang diberikan
+1.
+
+Pembiayaan murabahah, Pembiayaan istishna’, dan Pembiayaan
+multijasa dilaporkan sebesar jumlah harga pokok;
+
+2.
+
+Pembiayaan salam dilaporkan sebesar jumlah harga perolehan;
+
+3.
+
+Pembiayaan mudharabah, Pembiayaan musyarakah dan Pembiayaan
+qardh dilaporkan sebesar jumlah dana yang dicairkan; dan
+
+4.
+
+Pembiayaan ijarah dan ijarah muntahiya bittamlik dilaporkan sebesar
+jumlah harga perolehan aktiva ijarah atau ijarah muntahiya bittamlik.
+
+Penempatan Dana Antar Bank
+1.
+
+Tabungan wadiah, dilaporkan sebesar saldo tertinggi pada bulan
+laporan;
+
+2.
+
+Tabungan mudharabah, dilaporkan sebesar saldo tertinggi pada bulan
+laporan;
+
+3.
+
+Deposito mudharabah, dilaporkan sebesar nominal deposito sesuai
+yang tercantum dalam bilyet deposito;
+
+4.
+
+Pembiayaan musyarakah, dilaporkan sebesar jumlah dana yang
+dicairkan;
+
+5.
+
+Pembiayaan mudharabah, dilaporkan sebesar jumlah dana yang
+dicairkan;
+
+6.
+
+Piutang qardh, dilaporkan sebesar jumlah dana yang dicairkan; dan
+
+7.
+
+Lainnya, dilaporkan sebesar jumlah dana yang dicairkan.
+
+VII. Agunan Likuid/Bagian Yang Dijamin
+Kolom ini diisi dengan nilai Pembiayaan yang dijamin oleh agunan likuid atau
+oleh pemerintah. Agunan likuid merupakan agunan yang mudah dicairkan seperti
+emas dan logam mulia, Sertifikat Bank Indonesia (SBI), tabungan dan deposito di
+BPRS yang bersangkutan yang diblokir dan dilengkapi dengan surat kuasa
+pencairan, dengan nilai agunan sebagai berikut:
+
+1. Agunan berupa tabungan dan deposito, dilaporkan sebesar nilai yang diblokir,
+dalam ribuan rupiah.
+
+2. Agunan berupa SBI, dilaporkan sebesar nilai nominal, dalam ribuan rupiah.
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+22
+
+3. Agunan berupa emas dan logam mulia, dilaporkan sebesar harga pasar
+(market value), dalam ribuan rupiah.
+Bagian yang dijamin adalah besarnya nilai dari bagian Pembiayaan yang dijamin
+oleh Pemerintah Indonesia secara langsung maupun melalui BUMN atau BUMD
+sebagaimana diatur dalam Pasal 15 huruf c Peraturan Bank Indonesia Nomor
+13/5/PBI/2011 tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan
+Rakyat Syariah.
+Bagian yang dijamin diisi dengan angka dalam ribuan rupiah.
+
+VIII. Penyaluran Dana/Baki Debet Netto
+Kolom ini diisi dengan jumlah Penyaluran Dana/baki debet dikurangi Agunan
+Likuid/Bagian Yang Dijamin, dalam ribuan rupiah.
+
+IX. Modal KPMM
+Kolom ini diisi dengan jumlah Modal BPRS sebagaimana diatur dalam ketentuan
+Bank Indonesia mengenai Kewajiban Penyediaan Modal Minimum (KPMM)
+yang berlaku bagi BPRS, pada posisi akhir bulan sebelum bulan laporan, dalam
+ribuan rupiah. Modal BPRS adalah sebesar jumlah modal inti ditambah modal
+pelengkap.
+
+X.
+
+Rupiah - Pelanggaran BMPD
+Kolom ini diisi dengan selisih lebih antara jumlah Penyaluran Dana yang
+diperhitungkan dalam perhitungan BMPD dengan nominal BMPD Pihak Tidak
+Terkait, dalam ribuan rupiah. Nominal BMPD adalah sebesar:
+1.
+
+20% (dua puluh persen) dari jumlah Modal BPRS pelapor, untuk individu
+nasabah Pihak Tidak Terkait; dan
+
+2.
+
+30% (tiga puluh persen) dari jumlah Modal BPRS pelapor, untuk kelompok
+nasabah Pihak Tidak Terkait.
+
+XI. Persentase - Pelanggaran BMPD
+Kolom ini diisi dengan angka persentase Pelanggaran BMPD yaitu persentase
+jumlah pelanggaran BMPD dengan Modal BPRS pelapor.
+
+XII. Kualitas
+Kolom ini diisi dengan kualitas Pembiayaan atau Penempatan Dana Antar Bank
+sebagaimana diatur dalam ketentuan Bank Indonesia mengenai penetapan kualitas
+aktiva yang berlaku Bagi BPRS, yaitu: (1) Lancar, (2) Kurang lancar, (3)
+Diragukan dan (4) Macet.
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+23
+
+XIII. Keterangan
+Kolom ini diisi dengan penjelasan BPRS pelapor yang sekurang-kurangnya memuat
+jenis Penyaluran Dana, misalnya Deposito No. Bilyet XXX, Tabungan No. Rekening
+XXX, Pembiayaan No. Akad XXX.
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+24
+
+4.1 FORMULIR 4 LAPORAN PELAMPAUAN BMPD PIHAK TIDAK TERKAIT
+FORMULIR 4
+LAPORAN PELAMPAUAN BMPD PIHAK TIDAK TERKAIT
+Nama
+
+:
+
+Alamat
+
+:
+
+Bulan
+Laporan
+
+:
+
+MODAL KPMM
+
+:
+
+BMPD INDIVIDUAL 20%
+
+:
+
+BMPD KELOMPOK 30%
+
+:
+(Ribuan Rp)
+
+PADA SAAT LAPORAN
+NO.
+
+NOMOR
+NASABAH
+
+NOMOR
+REKENING
+
+I
+
+II
+
+NAMA NASABAH PENERIMA
+FASILITAS/BANK
+
+JENIS
+FASILITAS
+
+PENYALURAN
+DANA/BAKI
+DEBET
+
+AGUNAN LIKUID/
+BAGIAN YANG
+DIJAMIN
+
+PENYALURAN
+DANA/BAKI
+DEBET NETTO
+
+III
+
+IV
+
+V
+
+VI
+
+VII
+
+PELAMPAUAN
+Rupiah
+
+%
+
+VIII
+
+IX
+
+KUALITAS
+
+KETERANGAN
+
+X
+
+XI
+
+A. INDIVIDUAL
+I. Pembiayaan yang diberikan
+
+Total pelampauan
+II. Penempatan dana pada bank lain
+
+Total pelampauan
+B. KELOMPOK
+Data 1
+Total pelampauan
+Sub jumlah data 1
+Data 2
+Total pelampauan
+Sub jumlah data 2
+
+Sub Jumlah
+JUMLAH PELAMPAUAN BMPD PIHAK TIDAK TERKAIT
+Informasi yang di sampaikan sesuai dengan yang sebenarnya. Apabila dikemudian hari ditemukan ketidaksesuaian data yang disampaikan, segala resiko yang muncul atas penyampaian
+data tersebut menjadi tanggung jawab kami.
+
+...............,.........................
+
+Mengetahui,
+Ttd
+
+Direktur Utama
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+25
+
+4.2
+
+RINCIAN FORMULIR 4 LAPORAN PELAMPAUAN BMPD PIHAK
+TIDAK TERKAIT
+
+KOLOM
+I.
+
+Nomor Nasabah
+Nomor identifikasi Nasabah Penerima Fasilitas (CIF)
+
+II.
+
+Nomor Rekening
+Nomor rekening pada masing-masing fasilitas yang diberikan
+
+III.
+
+Nama Nasabah Penerima Fasilitas/Bank
+Nama Nasabah Penerima Fasilitas atau nama BPRS yang menerima Penempatan
+Dana Antar Bank
+
+IV.
+
+Jenis Fasilitas
+A.
+
+B.
+
+V.
+
+Pembiayaan Yang diberikan
+1.
+
+Murabahah
+
+2.
+
+Mudharabah
+
+3.
+
+Musyarakah
+
+4.
+
+Salam
+
+5.
+
+Istishna’
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik
+
+7.
+
+Qardh
+
+8.
+
+Lainnya
+
+Penempatan Dana Antar Bank
+1.
+
+Tabungan wadiah
+
+2.
+
+Tabungan mudharabah
+
+3.
+
+Deposito mudharabah
+
+4.
+
+Pembiayaan musyarakah
+
+5.
+
+Pembiayaan mudharabah
+
+6.
+
+Piutang qardh
+
+7.
+
+Lainnya
+
+Penyaluran Dana/Baki Debet
+Dalam ribuan rupiah
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+26
+
+VI.
+
+Agunan Likuid/Bagian Yang Dijamin
+Dalam ribuan rupiah
+
+VII. Penyaluran Dana/Baki Debet Netto
+Dalam ribuan rupiah
+VIII. Pelampauan - Rupiah
+Dalam ribuan rupiah
+IX.
+
+Pelampauan - Persentase
+Dalam angka persentase
+
+X.
+
+XI.
+
+Kualitas
+1.
+
+Lancar
+
+2.
+
+Kurang lancar
+
+3.
+
+Diragukan
+
+4.
+
+Macet
+
+Keterangan
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+27
+
+4.3
+
+PENJELASAN FORMULIR 4 LAPORAN PELAMPAUAN BMPD PIHAK
+TIDAK TERKAIT
+
+KOLOM
+
+I.
+
+Nomor Nasabah
+Kolom ini diisi dengan nomor identifikasi Nasabah Penerima Fasilitas (Customer
+Identification File/CIF) yang ditetapkan BPRS.
+
+II.
+
+Nomor Rekening
+Kolom ini diisi dengan nomor rekening pada masing-masing fasilitas yang
+diberikan kepada Nasabah Penerima Fasilitas yang ditetapkan BPRS.
+
+III. Nama Nasabah Penerima Fasilitas/Bank
+Kolom ini diisi dengan nama Nasabah Penerima Fasilitas atau nama BPRS yang
+menerima Penempatan Dana Antar Bank sesuai dengan jenis Penyaluran Dana
+yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Nama Nasabah Penerima Fasilitas diisi dengan nama nasabah perorangan
+atau perusahaan/badan Pihak Tidak Terkait yang memperoleh fasilitas
+Pembiayaan sesuai dengan nama yang tercantum dalam perjanjian
+Pembiayaan.
+
+B.
+
+Penempatan Dana Antar Bank
+Nama Bank diisi dengan nama BPRS Pihak Tidak Terkait yang menerima
+Penempatan Dana Antar Bank dari BPRS pelapor.
+Kolom ini diisi nihil apabila tidak terdapat Penyaluran Dana kepada Pihak
+Tidak Terkait yang melampaui BMPD.
+
+IV. Jenis Fasilitas
+Kolom ini diisi dengan nama akad atau jenis penempatan sesuai dengan jenis
+Penyaluran Dana yang dilakukan BPRS pelapor sebagai berikut:
+A.
+
+Pembiayaan yang diberikan
+Diisi dengan jenis akad Pembiayaan yang diberikan BPRS kepada Nasabah
+Penerima Fasilitas yaitu:
+1.
+
+Murabahah;
+
+2.
+
+Mudharabah;
+
+3.
+
+Musyarakah;
+
+4.
+
+Salam;
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+28
+
+B.
+
+5.
+
+Istishna’;
+
+6.
+
+Ijarah atau ijarah muntahiya bittamlik;
+
+7.
+
+Qardh; atau Lainnya.
+
+Penempatan Dana Antar Bank
+Diisi dengan jenis penempatan dana yang dilakukan BPRS pelapor pada
+BPRS lain, yaitu:
+
+V.
+
+1.
+
+Tabungan wadiah;
+
+2.
+
+Tabungan mudharabah;
+
+3.
+
+Deposito mudharabah;
+
+4.
+
+Pembiayaan musyarakah;
+
+5.
+
+Pembiayaan mudharabah;
+
+6.
+
+Piutang qardh; atau
+
+7.
+
+Lainnya.
+
+Penyaluran Dana/Baki Debet
+Kolom ini diisi dengan jumlah Pembiayaan yang diberikan kepada Nasabah
+Penerima Fasilitas atau Penempatan Dana Antar Bank pada BPRS lain, dalam
+ribuan rupiah sebagai berikut:
+A.
+
+B.
+
+Pembiayaan yang diberikan
+1.
+
+Pembiayaan murabahah, Pembiayaan istishna’, dan Pembiayaan
+multijasa dilaporkan sebesar jumlah saldo harga pokok;
+
+2.
+
+Pembiayaan salam dilaporkan sebesar jumlah saldo harga perolehan;
+
+3.
+
+Pembiayaan mudharabah, Pembiayaan musyarakah dan Pembiayaan
+qardh dilaporkan sebesar baki debet; dan
+
+5.
+
+Pembiayaan ijarah dan ijarah muntahiya bittamlik dilaporkan sebesar
+jumlah saldo harga perolehan aktiva ijarah atau ijarah muntahiya
+bittamlik dikurangi dengan akumulasi penyusutan/amortisasi aktiva
+ijarah atau ijarah muntahiya bittamlik.
+
+Penempatan Dana Antar Bank
+
+1. Tabungan wadiah, dilaporkan sebesar saldo tertinggi pada bulan
+laporan;
+
+2. Tabungan mudharabah, dilaporkan sebesar saldo tertinggi pada bulan
+laporan;
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+29
+
+3. Deposito mudharabah, dilaporkan sebesar nominal deposito sesuai
+yang tercantum dalam bilyet deposito;
+
+4. Pembiayaan musyarakah, dilaporkan sebesar jumlah baki debet;
+5. Pembiayaan mudharabah, dilaporkan sebesar jumlah baki debet;
+6. Piutang qardh, dilaporkan sebesar jumlah saldo piutang; dan
+7. Lainnya, dilaporkan sebesar jumlah saldo pada posisi akhir bulan
+laporan.
+
+VI. Agunan Likuid/Bagian Yang Dijamin
+Kolom ini diisi dengan nilai Pembiayaan yang dijamin oleh agunan likuid atau
+oleh pemerintah. Agunan likuid merupakan agunan yang mudah dicairkan seperti
+emas dan logam mulia, Sertifikat Bank Indonesia (SBI), tabungan dan deposito di
+BPRS yang bersangkutan yang diblokir dan dilengkapi dengan surat kuasa
+pencairan, dengan nilai agunan sebagai berikut:
+
+1. Agunan berupa tabungan dan deposito, dilaporkan sebesar nilai yang diblokir,
+dalam ribuan rupiah.
+
+2. Agunan berupa SBI, dilaporkan sebesar nilai nominal, dalam ribuan rupiah.
+3. Agunan berupa emas dan logam mulia, dilaporkan sebesar harga pasar
+(market value), dalam ribuan rupiah.
+Bagian yang dijamin adalah besarnya nilai dari bagian Pembiayaan yang dijamin
+oleh Pemerintah Indonesia secara langsung maupun melalui BUMN atau BUMD
+sebagaimana diatur dalam Pasal 15 huruf c Peraturan Bank Indonesia Nomor
+13/5/PBI/2011 tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan
+Rakyat Syariah.
+Bagian yang dijamin diisi dengan angka dalam ribuan rupiah.
+
+VII. Penyaluran Dana/Baki Debet Netto
+Kolom ini diisi dengan jumlah Penyaluran Dana/baki debet dikurangi Agunan
+Likuid/Bagian Yang Dijamin, dalam ribuan rupiah.
+
+VIII. Pelampauan - Rupiah
+Kolom ini diisi dengan selisih lebih antara jumlah Penyaluran Dana yang
+diperhitungkan dalam perhitungan BMPD dengan nominal BMPD Pihak Tidak
+Terkait, dalam ribuan rupiah. Nominal BMPD adalah sebesar:
+1.
+
+20% (dua puluh persen) dari jumlah Modal BPRS pelapor, untuk individu
+nasabah Pihak Tidak Terkait; dan
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+30
+
+2.
+
+30% (tiga puluh persen) dari jumlah Modal BPRS pelapor, untuk kelompok
+nasabah Pihak Tidak Terkait.
+
+IX. Pelampauan - Persentase
+Kolom ini diisi dengan angka persentase Pelampauan BMPD yaitu persentase
+jumlah pelampauan BMPD dengan Modal BPRS pelapor.
+
+X.
+
+Kualitas
+Kolom ini diisi dengan kualitas Pembiayaan atau Penempatan Dana Antar Bank
+sebagaimana diatur dalam ketentuan Bank Indonesia mengenai penetapan kualitas
+aktiva yang berlaku Bagi BPRS, yaitu: (1) Lancar, (2) Kurang lancar, (3)
+Diragukan dan (4) Macet.
+
+XI. Keterangan
+Kolom ini diisi dengan penjelasan BPRS pelapor yang sekurang-kurangnya
+memuat jenis Penyaluran Dana, misalnya Deposito No. Bilyet XXX, Tabungan
+No. Rekening XXX, Pembiayaan No. Akad XXX.
+
+Lampiran ini merupakan bagian yang tidak terpisahkan dari Surat Edaran Bank
+Indonesia ini.
+
+HALIM ALAMSYAH
+DEPUTI GUBERNUR
+
+Pedoman Penyusunan Laporan Batas Maksimum Penyaluran Dana BPRS
+
+31

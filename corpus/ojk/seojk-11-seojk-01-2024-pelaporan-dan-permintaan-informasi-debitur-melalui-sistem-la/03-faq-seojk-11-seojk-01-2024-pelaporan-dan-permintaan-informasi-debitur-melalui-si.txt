@@ -1,0 +1,225 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 11/SEOJK.01/2024
+Tentang: Pelaporan dan Permintaan Informasi Debitur Melalui Sistem Layanan Informasi Keuangan
+Berkas: FAQ SEOJK 11-SEOJK.01-2024 Pelaporan dan Permintaan Informasi Debitur Melalui Sistem Layanan Informasi Keuangan.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Pelaporan-dan-Permintaan-Informasi-Debitur-Melalui-Sistem-Layanan-Informasi-Keuangan-11-SEOJK01-2024.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/FREQUENTLY ASKED QUESTIONS (FAQ)
+SURAT EDARAN OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA
+NOMOR 11/SEOJK.01/2024
+TENTANG
+PELAPORAN DAN PERMINTAAN INFORMASI DEBITUR
+MELALUI SISTEM LAYANAN INFORMASI KEUANGAN
+1. Apa latar belakang penerbitan SEOJK ini?
+Penyempurnaan SEOJK tentang Pelaporan dan Permintaan Informasi
+Debitur melalui Sistem Layanan Informasi Keuangan (SEOJK SLIK)
+dilatarbelakangi oleh:
+a. Kebutuhan industri, yakni penyediaan informasi debitur secara lebih
+komprehensif melalui penambahan informasi pertanggungan /
+pengelolaan risiko, penjaminan, dan layanan pendanaan bersama
+berbasis teknologi informasi (LPBBTI) yang diberikan oleh industri
+asuransi, penjaminan, dan LPBBTI sehingga dapat meningkatkan
+kualitas manajemen risiko industri.
+b. Penambahan referensi dengan memperhatikan perkembangan
+ketentuan yang berlaku.
+c. Mengakomodir pedoman yang sebelumnya diatur melalui Surat Kepala
+Eksekutif.
+2. Apa saja poin-poin baru (penambahan) dan/atau penyesuaian dalam
+ketentuan dalam SEOJK SLIK ini yang berbeda dari SEOJK
+sebelumnya (SEOJK nomor 3/SEOJK.03/2021)?
+Gambaran umum pokok-pokok perubahan SEOJK SLIK:
+a. Perluasan Pelapor SLIK sebagaimana telah diatur dalam POJK nomor
+11 Tahun 2024 (POJK SLIK), yakni Perusahaan Asuransi, Perusahaan
+Asuransi Syariah, Perusahaan Penjaminan, Perusahaan Penjaminan
+Syariah, dan Penyelenggara Layanan Pendanaan Bersama Berbasis
+Teknologi Informasi (LPBBTI);
+b. Perluasan cakupan laporan debitur sehubungan dengan penambahan
+jenis Pelapor, yakni data pertanggungan, data penjaminan, dan
+LPBBTI;
+c. Perluasan cakupan Informasi Debitur;
+d. Penyesuaian pedoman pelaporan dan kode referensi;
+e. Penyesuaian kebutuhan perangkat dan jaringan komunikasi data;
+f. Penambahan mekanisme permintaan Informasi Debitur melalui host
+to host;
+g. Penyesuaian lain untuk mendukung operasional, a.l pedoman
+penggabungan pelaporan BNPL.
+
+Page 1 of 5
+
+https://jdih.ojk.go.id
+
+3. Segmen-segmen apa yang akan dilaporkan oleh industri asuransi,
+penjaminan dan LPBBTI?
+a. Perusahaan asuransi dan perusahaan asuransi syariah melaporkan
+segmen: D01, D02, F05, F06, A01, P01, M01, dan K01;
+b. Perusahaan penjaminan dan perusahaan penjaminan syariah
+melaporkan segmen: D01, D02, F05, F06, A01, P01, M01, dan K01;
+c. Penyelenggara LPBBTI dan penyelenggara LPBBTI Syariah melaporkan
+segmen: D01, D02, F01, F02, A01, P01, M01, dan K01.
+4. Apa cakupan data yang dilaporkan oleh perusahaan asuransi dan
+penjaminan pada SLIK?
+Perusahaan asuransi dan perusahaan penjaminan melaporkan data:
+a. Produk suretyship (konvensional dan syariah), antara lain:
+1) penjaminan pengadaan barang/jasa,
+2) penjaminan kepabeanan,
+3) penjaminan cukai, dan
+4) kontra bank garansi
+pada segmen “Garansi yang Diberikan” (F05). Dalam hal Debitur
+wanprestasi dan terdapat klaim, suretyship akan dilaporkan menjadi
+tagihan subrogasi pada segmen Fasilitas Lainnya (F06).
+b. Produk asuransi/penjaminan kredit (konvensional dan syariah),
+antara lain:
+1) tagihan subrogasi asuransi/penjaminan kredit atas transaksi
+penyaluran kredit
+2) tagihan subrogasi asuransi/penjaminan kredit atas transaksi
+perdagangan
+pada segmen “Fasilitas Lain” (F06) dalam hal telah terdapat klaim dari
+Lembaga Jasa Keuangan (LJK).
+5. Apa cakupan data yang dilaporkan oleh LPBBTI pada SLIK?
+Penyelenggara LPBBTI melaporkan data pendanaan yang disalurkan
+melalui LPBBTI yang memenuhi kriteria:
+a. data pinjaman yang belum dilaporkan Pelapor SLIK existing
+b. data pinjaman yang masih memiliki outstanding posisi akhir bulan
+secara concise/ringkas menggunakan mekanisme penggabungan
+pelaporan pada segmen “Kredit/Pembiayaan” (F01) dan/atau
+“Kredit/Pembiayaan Joint Account” (F02).
+6. Apakah telah terdapat penambahan referensi dalam rangka
+mendukung penyampaian laporan debitur oleh industri asuransi,
+penjaminan, dan LPBBTI?
+Ya.
+
+Page 2 of 5
+
+https://jdih.ojk.go.id
+
+Dalam rangka mendukung penyampaian laporan debitur oleh asuransi
+dan penjaminan, telah dilakukan penambahan referensi sebagai berikut:
+a. Segmen F05 (Fasilitas Garansi yang Diberikan)
+1) Kode jenis garansi, ditambahkan referensi:
+a) Custom Bonds (F4207)
+b) Excise Bonds (F4208)
+c) Asuransi Kredit Perdagangan (F4209)
+d) Jaminan Transaksi Dagang (F4210)
+2) Kode tujuan garansi, ditambahkan referensi “Dalam rangka
+pengadaan barang/jasa” (3).
+3) Kode kondisi, ditambahkan referensi:
+a) Klaim dalam proses (18)
+b) Klaim disetujui namun belum dibayar (19)
+c) Klaim dibayarkan (20)
+d) Klaim ditolak (21)
+b. Segmen F06 (Fasilitas Lain), kolom “Jenis Fasilitas Lain” ditambahkan
+referensi “Tagihan Subrogasi (009)”.
+Referensi lengkap penyampaian laporan debitur SLIK tersedia pada
+Lampiran I SEOJK Nomor 11/SEOJK.01/2024.
+7. Terkait tambahan Pelapor wajib, yakni industri asuransi dan industri
+penjaminan, apakah terdapat penyesuaian pola penyampaian laporan
+debitur SLIK?
+Ya.
+Dalam hal terdapat Debitur melakukan wanprestasi (default) atas
+kredit/pembiayaan yang ditanggung oleh asuransi atau dijamin oleh
+perusahaan penjaminan dan LJK Pelapor SLIK telah menerima
+pembayaran dari perusahaan asuransi/penjaminan, maka penyampaian
+laporan debitur SLIK dilakukan secara proporsional sesuai porsi yang
+disepakati antara LJK dengan perusahaan asuransi/penjaminan.
+Contoh:
+Debitur A mengalami default saat baki debet kredit/pembiayaan di Bank
+X Rp100juta. Kredit/pembiayaan tersebut ditanggung oleh asuransi Y/
+dijamin oleh perusahaan penjaminan
+Y
+dengan
+porsi 70
+(asuransi/penjaminan) : 30 (bank). Bank X melakukan klaim dan
+selanjutnya
+telah
+menerima
+pembayaran
+klaim
+dari
+asuransi/penjaminan Y. Penyampaian laporan debitur SLIK bulan data
+penerimaan klaim dari asuransi/penjaminan Y sebagai berikut:
+a. Oleh LJK Selain Asuransi/Penjaminan (Contoh: Bank)
+1) Baki Debet diisi Rp30juta
+2) Keterangan diisi
+SUBROGASI=70.000.000#PELAPOR BARU=PT ASURANSI Y
+b. Oleh Asuransi/Penjaminan
+Page 3 of 5
+
+https://jdih.ojk.go.id
+
+1) Baki Debet diisi Rp70juta
+2) Keterangan diisi
+NILAI KLAIM=70.000.000#PELAPOR ASAL=PT BANK X
+8. Terkait tambahan LPBBTI sebagai Pelapor wajib, apakah terdapat
+penyesuaian pola penyampaian laporan debitur SLIK?
+Ya.
+Dalam hal terdapat kredit/pembiayaan yang disalurkan melalui
+Penyelenggara LPBBTI dan memperhatikan cakupan data yang
+dilaporkan LPBBTI ke SLIK, penyampaian laporan debitur dilakukan oleh
+masing-masing
+pemilik
+dana
+secara
+proporsional
+sesuai
+nominal/besaran dana yang telah disalurkan.
+Contoh:
+Debitur A memiliki kredit/pembiayaan yang disalurkan melalui LPBBTI
+X Rp100juta dengan sumber pendanaan Rp70juta dari Bank X dan Rp30
+juta dari masyarakat. Maka penyampaian laporan debitur:
+a. Oleh LJK Selain LPBBTI (Contoh: Bank)
+1) Baki Debet diisi Rp70juta
+2) Keterangan diisi
+MITRA PENYALUR=LPBBTI X
+b. Oleh LPBBTI
+Baki Debet diisi Rp30juta
+9. Apakah terdapat perubahan penyampaian laporan debitur buy now
+pay later (BNPL)?
+Ya.
+Secara umum, buy now pay later (BNPL) dilaporkan secara concise
+dengan pola penggabungan pelaporan, namun terdapat penambahan
+referensi khusus mengenai BNPL pada SEOJK ini.
+Sebelumnya sebagaimana termuat dalam surat nomor S-99/PB.11/2022
+tanggal 12 Agustus 2022 berikut lampiran terkait, pelaporan pembiayaan
+paylater dan dana tunai disampaikan secara concise dengan pola
+penggabungan pelaporan dengan disertai tambahan informasi pada
+kolom keterangan berupa “Paylater” untuk transaksi BNPL dan “Dana
+Tunai” untuk pembiayaan dana tunai.
+Pada SEOJK nomor 11/SEOJK.01/2024, telah dilakukan penambahan
+referensi pada kolom “kode jenis kredit/pembiayaan”, yakni:
+a. Dengan perjanjian kredit/pembiayaan – disalurkan Pelapor Non
+LPBBTI
+1) BNPL (P10)
+2) Dana Tunai (P11)
+b. Dengan perjanjian kredit/pembiayaan – disalurkan Pelapor LPBBTI
+1) BNPL (Q01)
+Page 4 of 5
+
+https://jdih.ojk.go.id
+
+2) Lainnya (Q99)
+10. Apakah terdapat penambahan mekanisme permintaan informasi
+debitur?
+Ya.
+Terdapat penambahan mekanisme permohonan informasi debitur melalui
+mekanisme keterhubungan antar aplikasi Pelapor dan OJK secara
+interaktif (host to host). Permohonan dapat diajukan sesuai Lampiran VII
+SEOJK Nomor 11/SEOJK.01/2024 kepada OJK. OJK dapat memberikan
+persetujuan atau penolakan atas permohonan permintaan Informasi
+Debitur secara host to host oleh Pelapor setelah dokumen permohonan
+diterima lengkap dengan mempertimbangkan kebutuhan Pelapor,
+keamanan data, dan kinerja sistem.
+11. Apakah terdapat penambahan contoh/pedoman pengisian data yang
+lebih rinci pada SEOJK nomor 11/SEOJK.01/2024?
+Ya.
+Rincian mengenai pedoman penggabungan pelaporan penyampaian
+laporan debitur, pelaporan suretyship, dan pelaporan tagihan subrogasi
+tersedia pada Bab IV mengenai Contoh Pengisian Data Lampiran I SEOJK
+nomor 11/SEOJK.01/2024.
+
+Page 5 of 5
+
+https://jdih.ojk.go.id

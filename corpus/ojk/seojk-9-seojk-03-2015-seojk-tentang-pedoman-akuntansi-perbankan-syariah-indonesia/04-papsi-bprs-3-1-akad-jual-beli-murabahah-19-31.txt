@@ -1,0 +1,1480 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 3.1 Akad Jual Beli -Murabahah (19-31).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 19 -
+
+BAGIAN III AKAD JUAL BELI
+III.1. MURABAHAH
+A.
+
+Definisi
+1.
+
+Murabahah adalah akad jual beli barang dengan harga jual sebesar
+beban perolehan
+
+ditambah keuntungan yang disepakati dan penjual
+
+harus mengungkapkan beban perolehan barang tersebut kepada
+pembeli.
+2.
+
+Pembiayaan Murabahah adalah penyediaan dana dari Bank kepada
+nasabah untuk membeli barang dengan menegaskan harga belinya
+kepada pembeli (nasabah) dan pembeli (nasabah) membayarnya dengan
+harga yang lebih sebagai keuntungan Bank yang disepakati.
+
+3.
+
+Aset Murabahah adalah aset yang diperoleh dengan tujuan untuk dijual
+kembali dengan menggunakan akad Murabahah.
+
+4.
+
+Diskon harga beli adalah pengurangan harga atau penerimaan dalam
+bentuk apapun yang diperoleh pihak pembeli (nasabah) dari pemasok.
+
+5.
+
+Harga perolehan adalah harga beli barang oleh Bank sebelum dikurangi
+uang muka dari nasabah.
+
+6.
+
+Potongan piutang Murabahah adalah pengurangan kewajiban pembeli
+(nasabah) yang diberikan oleh pihak penjual (Bank).
+
+7.
+
+Uang muka (urbun) adalah jumlah yang dibayar oleh pembeli (nasabah)
+kepada penjual sebagai bukti komitmen untuk membeli barang dari
+penjual.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.102 tentang Akuntansi Murabahah.
+
+Penjelasan Umum
+1.
+
+Aset yang akan dijual Bank dalam transaksi Murabahah pada
+prinsipnya harus dimiliki Bank sebelum akad Murabahah disepakati.
+Cara memperoleh aset Murabahah dapat dilakukan secara langsung
+oleh Bank atau diwakilkan kepada pihak lain termasuk nasabah.
+
+2.
+
+Dalam hal Bank diwakilkan kepada pihak lain (akad Wakalah), pihak
+yang mewakili hanya sebatas pada pencarian informasi barang sesuai
+spesifikasi ...
+
+- 20 -
+
+spesifikasi yang diinginkan nasabah. Sedangkan penentuan atas
+pembelian aset dari pemasok menjadi kewenangan Bank. Akad
+Wakalah dilakukan sebelum akad Murabahah.
+3.
+
+Harga perolehan aset Murabahah harus diberitahukan Bank kepada
+nasabah.
+
+4.
+
+Harga jual Murabahah adalah harga perolehan aset Murabahah sebelum
+dikurangi uang muka ditambah dengan marjin yang disepakati.
+
+5.
+
+Murabahah yang dilakukan oleh Bank harus berdasarkan pesanan
+nasabah yang bersifat mengikat.
+
+6.
+
+Pendapatan yang diterima Bank selain marjin keuntungan seperti
+pendapatan administrasi dan beban lain yang terkait langsung dengan
+pembiayaan Murabahah seperti beban komisi, beban survei, dan beban
+lain kepada pihak lain yang ditunjuk oleh Bank yang tidak dapat
+diukur secara andal perolehannya diakui sepanjang masa pembiayaan
+Murabahah. Sedangkan pendapatan administrasi yang dapat diukur
+secara
+
+andal
+
+perolehannya
+
+dapat
+
+diakui
+
+pada
+
+saat
+
+penyaluran
+
+pembiayaan.
+7.
+
+Pengakuan
+
+pendapatan
+
+Murabahah
+
+secara
+
+non
+
+tunai
+
+dapat
+
+menggunakan metode anuitas (efektif) atau metode proporsional (flat).
+a. Metode anuitas (efektif)
+Penggunaan metode anuitas (efektif) didasarkan pada asumsi
+bahwa substansi pembiayaan Murabahah merupakan pembiayaan
+(financing) sehingga pencatatan akuntansi Murabahah mengacu
+pada SAK ETAP. Dalam metode anuitas (efektif), pendapatan
+pembiayaan
+
+Murabahah
+
+dialokasikan
+
+sepanjang
+
+masa
+
+akad
+
+berdasarkan saldo pokok pembiayaan Murabahah.
+b. Metode proporsional (flat)
+Penggunaan metode proporsional (flat) didasarkan pada asumsi
+bahwa substansi pembiayaan Murabahah merupakan jual beli
+sehingga pencatatan akuntansi Murabahah mengacu pada PSAK
+No.102 tentang Akuntansi Murabahah. Dalam metode proporsional
+(flat), pendapatan pembiayaan Murabahah dialokasikan sepanjang
+masa akad berdasarkan proporsi antara saldo pokok dan marjin
+pembiayaan Murabahah.
+8.
+
+Ilustrasi pengakuan pendapatan Murabahah:
+Bank melakukan transaksi Murabahah dengan nasabah atas aset
+Murabahah seharga Rp1.000 (seribu rupiah) dan marjin keuntungan
+yang ...
+
+- 21 -
+
+yang disepakati sebesar Rp200 (dua ratus rupiah). Pendapatan
+administrasi yang nilai perolehannya tidak dapat diukur secara andal
+sebesar Rp12 (dua belas rupiah).
+a. Metode anuitas:
+1) Pendapatan administrasi yang nilai perolehannya tidak dapat
+diukur
+
+secara
+
+andal
+
+diamortisasi
+
+selama
+
+jangka
+
+waktu
+
+pembiayaan dengan menggunakan metode garis lurus.
+2) Pendapatan
+
+marjin
+
+Murabahah
+
+yang
+
+telah
+
+disepakati
+
+dialokasikan berdasarkan saldo pokok pembiayaan Murabahah
+selama
+
+jangka
+
+waktu
+
+pembiayaan
+
+dan
+
+jumlah
+
+marjin
+
+pendapatan yang diakui tidak boleh melebihi marjin Murabahah
+yang disepakati.
+
+Periode
+
+Angsuran
+
+Awal
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+
+Porsi
+Pokok
+Margin
+71
+73
+75
+77
+79
+82
+84
+87
+89
+92
+94
+97
+
+29
+27
+25
+23
+21
+18
+16
+13
+11
+8
+6
+3
+
+Saldo
+Pokok
+Margin
+1000
+200
+929
+171
+856
+144
+781
+119
+704
+96
+625
+75
+543
+57
+459
+41
+372
+28
+283
+17
+191
+9
+97
+3
+0
+0
+
+Amortisasi
+Pendapatan
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+b. Metode proporsional:
+1) Pendapatan administrasi yang nilai perolehannya tidak dapat
+diukur
+
+secara
+
+andal
+
+diamortisasi
+
+selama
+
+jangka
+
+waktu
+
+pembiayaan dengan menggunakan metode garis lurus.
+2) Pendapatan
+
+marjin
+
+Murabahah
+
+yang
+
+telah
+
+disepakati
+
+dialokasikan berdasarkan proporsi antara pokok dan marjin
+pembiayaan Murabahah selama jangka waktu pembiayaan dan
+jumlah marjin pendapatan yang diakui tidak boleh melebihi
+marjin Murabahah yang disepakati.
+
+Periode ...
+
+- 22 -
+
+9.
+
+Periode
+
+Angsuran
+
+Awal
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+
+Porsi
+Pokok
+Margin
+83
+83
+83
+83
+83
+83
+83
+83
+83
+83
+83
+83
+
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+17
+
+Saldo
+Pokok
+Margin
+1000
+200
+917
+183
+833
+167
+750
+150
+667
+133
+583
+117
+500
+100
+417
+83
+333
+67
+250
+50
+167
+33
+83
+17
+0
+0
+
+Amortisasi
+Pendapatan
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+Akad Murabahah memperkenankan penawaran harga yang berbeda
+untuk cara pembayaran yang berbeda sebelum akad Murabahah
+dilakukan. Namun jika akad tersebut telah disepakati, maka hanya ada
+satu harga (harga dalam akad) yang digunakan. Sedangkan besarnya
+angsuran dapat disesuaikan berdasarkan kesepakatan Bank dengan
+nasabah.
+
+10. Dalam hal pembayaran angsuran oleh nasabah lebih kecil dari
+besarnya angsuran yang tercantum pada jadwal angsuran yang telah
+ditetapkan,
+
+maka
+
+pembayaran
+
+angsuran
+
+berikutnya dialokasikan
+
+terlebih dahulu untuk pemenuhan jadwal angsuran yang belum
+terpenuhi pembayarannya.
+Diskon harga beli
+11. Apabila setelah akad Murabahah pemasok memberikan diskon harga
+atas
+
+barang
+
+yang
+
+dibeli,
+
+maka
+
+diskon
+
+harga
+
+tersebut
+
+dibagi
+
+berdasarkan perjanjian atau persetujuan yang dimuat dalam akad.
+Oleh karena itu, klausul pembagian diskon harga tersebut harus
+diperjanjikan dalam akad. Apabila tidak diatur dalam akad, maka
+diskon tersebut menjadi hak Bank dan diakui sebagai pendapatan
+operasi lainnya.
+12. Diskon yang terkait dengan pembelian barang, antara lain:
+a.
+
+diskon dalam bentuk apapun dari pemasok atas pembelian barang;
+
+b.
+
+diskon beban asuransi dari perusahaan asuransi dalam rangka
+pembelian barang;
+
+c.
+
+komisi dalam bentuk apapun yang diterima terkait dengan
+pembelian barang.
+Uang ...
+
+- 23 -
+
+Uang muka
+13. Bank dapat meminta uang muka kepada nasabah sebagai bukti
+komitmen pembelian aset Murabahah sebelum akad disepakati dengan
+ketentuan:
+a.
+
+apabila akad Murabahah disepakati, maka uang muka menjadi
+bagian pelunasan piutang Murabahah;
+
+b.
+
+apabila akad Murabahah batal, maka uang muka dikembalikan
+kepada nasabah setelah dikurangi kerugian riil yang ditanggung
+oleh Bank;
+
+c.
+
+apabila uang muka itu lebih kecil dari kerugian, maka Bank dapat
+meminta tambahan dari nasabah.
+
+14. Keuntungan Murabahah yang diterima Bank dihitung berdasarkan
+harga perolehan aset Murabahah setelah memperhitungkan uang muka
+yang diserahkan oleh nasabah.
+Potongan piutang Murabahah
+15. Bank dapat memberikan potongan pada saat pelunasan piutang
+Murabahah, apabila:
+a.
+
+nasabah melakukan pelunasan pembayaran secara tepat waktu;
+atau
+
+b.
+
+nasabah melakukan pelunasan pembayaran lebih cepat dari waktu
+yang telah disepakati,
+
+dengan syarat potongan tidak diperjanjikan dalam akad dan besarnya
+potongan diserahkan pada kebijakan Bank.
+16. Pemberian potongan pelunasan piutang Murabahah dapat dilakukan
+dengan menggunakan salah satu metode berikut:
+a.
+
+diberikan pada saat pelunasan, yaitu Bank mengurangi piutang
+Murabahah dan keuntungan Murabahah, sehingga nasabah hanya
+membayar
+
+sebesar
+
+selisih
+
+antara
+
+piutang
+
+dengan
+
+potongan
+
+pelunasan; atau
+b.
+
+diberikan setelah pelunasan, yaitu Bank menerima pelunasan
+piutang dari nasabah dan kemudian membayarkan potongan
+pelunasannya kepada nasabah.
+
+17. Bank dapat memberikan potongan dari total piutang Murabahah yang
+belum dilunasi apabila:
+a.
+
+nasabah melakukan pembayaran angsuran tepat waktu; dan/atau
+
+b. nasabah ...
+
+- 24 -
+
+b.
+
+nasabah mengalami penurunan kemampuan pembayaran dengan
+syarat potongan tidak diperjanjikan dalam akad dan besarnya
+potongan diserahkan pada kebijakan Bank.
+
+18. Bank harus memiliki kebijakan dan kriteria mengenai nasabah yang
+membayar angsuran tepat waktu.
+19. Pemberian potongan pembayaran angsuran harus dapat dibuktikan
+dengan adanya penurunan kemampuan membayar dari nasabah.
+20. Kriteria penurunan kemampuan membayar nasabah antara lain adalah
+menurunnya kondisi keuangan nasabah untuk melakukan kewajiban
+pembayaran angsuran, baik yang disebabkan karena faktor mikro,
+misalnya persaingan industri nasabah maupun faktor makro, misalnya
+krisis keuangan.
+21. Dalam hal nasabah mengalami tunggakan pembayaran angsuran, Bank
+wajib membentuk Penyisihan Penghapusan Aset untuk pembiayaan
+Murabahah sesuai dengan ketentuan yang mengatur mengenai kualitas
+aset.
+Denda
+22. Bank dapat mengenakan denda kepada nasabah yang tidak dapat
+melakukan pembayaran angsuran piutang Murabahah, dengan indikasi
+antara lain:
+a.
+
+adanya unsur kesengajaan, yaitu nasabah mempunyai dana tetapi
+tidak melakukan pembayaran piutang Murabahah; dan
+
+b.
+
+adanya unsur penyalahgunaan dana, yaitu nasabah mempunyai
+dana tetapi digunakan terlebih dahulu untuk hal lain.
+
+23. Denda tidak dapat dikenakan kepada nasabah yang tidak/belum
+mampu melunasi disebabkan oleh force majeur, jika dapat dibuktikan.
+24. Denda kepada nasabah didasarkan pada pendekatan ta’zir, yaitu untuk
+membuat nasabah lebih disiplin terhadap kewajibannya.
+25. Denda yang dikenakan atas nasabah yang lalai merupakan sumber
+dana kebajikan.
+D.
+
+Perlakuan Akuntansi
+
+D.1. Pengakuan dan Pengukuran
+1.
+
+Uang muka
+a.
+
+Uang muka yang diterima Bank dari nasabah diakui sebagai uang
+muka Murabahah dari pembeli sebesar jumlah yang diterima Bank.
+b. Jika ...
+
+- 25 -
+
+b.
+
+Jika
+
+transaksi
+
+tersebut
+
+diakui
+
+Murabahah
+sebagai
+
+dilaksanakan,
+bagian
+
+dari
+
+maka
+
+uang
+
+pembayaran
+
+muka
+piutang
+
+Murabahah (merupakan bagian pokok).
+c.
+
+Jika transaksi Murabahah tidak dilaksanakan, maka :
+1) uang muka dikembalikan kepada nasabah sebesar selisih
+antara uang muka dengan beban riil dan kerugian atas
+pembatalan barang tersebut, apabila uang muka nasabah lebih
+besar dari beban-beban riil yang telah dikeluarkan Bank dan
+kerugian atas pembatalan, jika ada; atau
+2) Bank mengakui tagihan kepada nasabah sebesar selisih antara
+beban riil dengan uang muka dan kerugian atas pembatalan
+barang tersebut, apabila uang muka nasabah lebih kecil dari
+beban-beban riil yang telah dikeluarkan Bank dan kerugian
+atas pembatalan, jika ada.
+
+2.
+
+Diskon harga beli dari pemasok dan pihak lain
+a.
+
+Sebelum akad Murabahah ditandatangani maka diskon harga beli
+tersebut
+
+diakui
+
+sebagai
+
+pengurang
+
+harga
+
+perolehan
+
+aset
+
+Murabahah;
+b.
+
+Setelah akad Murabahah ditandatangani dan diskon harga beli:
+1) diperjanjikan dalam akad, maka bagian diskon harga beli yang
+menjadi
+
+hak
+
+nasabah
+
+diakui
+
+sebagai
+
+kewajiban
+
+kepada
+
+nasabah dan bagian diskon yang menjadi hak Bank diakui
+sebagai tambahan keuntungan Murabahah.
+2) tidak
+
+diperjanjikan
+
+dalam
+
+akad,
+
+maka
+
+diakui
+
+sebagai
+
+pendapatan operasi lain.
+3.
+
+Piutang Murabahah diakui pada saat akad transaksi Murabahah,
+sebesar harga perolehan ditambah keuntungan (marjin) yang disepakati.
+Dalam hal Bank menggunakan metode anuitas, piutang Murabahah
+yang diakui termasuk pendapatan dan beban yang belum diamortisasi.
+
+4.
+
+Pendapatan dan beban yang terkait langsung dengan transaksi
+Murabahah baik dengan menggunakan metode anuitas dan metode
+proporsional diamortisasi dengan menggunakan metode garis lurus
+sepanjang masa akad.
+
+5.
+
+Dalam hal transaksi Murabahah dilakukan secara tunai, pendapatan
+Murabahah diakui pada saat penyerahan aset Murabahah kepada
+nasabah.
+
+6.
+
+Potongan piutang Murabahah
+a. Potongan ...
+
+- 26 -
+
+a.
+
+Potongan pelunasan piutang Murabahah diakui sebagai pengurang
+pendapatan Murabahah pada saat pelunasan sebesar jumlah yang
+diberikan.
+
+b.
+
+Jika
+
+potongan
+
+pembayaran
+
+angsuran
+
+piutang
+
+Murabahah
+
+diberikan kepada nasabah karena:
+1) membayar angsuran tepat waktu, maka potongan pembayaran
+diakui sebagai pengurang pendapatan Murabahah; dan/atau
+2) adanya penurunan kemampuan pembayaran oleh nasabah,
+maka potongan pembayaran diakui sebagai beban Bank.
+7.
+
+Denda (ta’zir) atas nasabah yang lalai diakui sebagai sumber dana
+kebajikan sebesar dana yang diterima Bank.
+
+D.2. Penyajian
+1.
+
+Uang muka Murabahah dari pembeli disajikan sebagai kewajiban
+lainnya.
+
+2.
+
+Tagihan kepada nasabah atas pembatalan transaksi Murabahah dimana
+uang muka nasabah lebih kecil dari beban riil yang dikeluarkan
+nasabah disajikan sebagai piutang Qardh.
+
+3.
+
+Piutang Murabahah disajikan sebesar saldo pembiayaan Murabahah
+nasabah kepada Bank.
+
+4.
+
+Marjin Murabahah ditangguhkan disajikan sebagai pos lawan piutang
+Murabahah.
+
+5.
+
+Beban potongan pelunasan/angsuran Murabahah sebagai pos lawan
+(contra account) pendapatan marjin Murabahah.
+
+6.
+
+Pendapatan dan beban yang terkait langsung yang belum diamortisasi
+disajikan sebagai bagian dari pembiayaan Murabahah.
+
+7.
+
+Pendapatan marjin Murabahah yang akan diterima disajikan sebagai
+bagian dari aset lainnya pada saat nasabah tergolong performing.
+Sedangkan, apabila nasabah tergolong non-performing maka pendapatan
+marjin
+
+Murabahah
+
+yang
+
+akan
+
+diterima
+
+disajikan
+
+pada
+
+rekening
+
+administratif.
+8.
+
+Penyisihan Penghapusan Aset untuk Pembiayaan Murabahah disajikan
+sebagai pos lawan (contra account) piutang Murabahah.
+
+9.
+E.
+
+Denda (ta’zir) disajikan sebagai komponen dari sumber dana kebajikan.
+
+Ilustrasi Jurnal
+1.
+
+Penerimaan uang muka dari nasabah:
+Db. Kas/rekening …
+Kr. Kewajiban ...
+
+- 27 -
+
+Kr. Kewajiban lainnya - uang muka Murabahah dari pembeli.
+2.
+
+Pada saat timbul beban lain yang dikeluarkan oleh Bank:
+Db. Beban lain yang terkait.
+Kr. Kas/rekening …
+
+3.
+
+Pada saat perolehan Aset Murabahah:
+Db. Persediaan/Aset Murabahah.
+Kr. Kas/rekening pemasok/kliring.
+
+4.
+
+Pada
+
+saat
+
+penyaluran
+
+pembiayaan
+
+Murabahah
+
+kepada
+
+nasabah
+
+langsung
+
+dengan
+
+(pembayaran secara non-tunai):
+a.
+
+Metode Anuitas
+1) Transaksi penjualan
+Db.
+
+Piutang Murabahah.
+
+Kr.
+
+Marjin Murabahah ditangguhkan.
+
+Kr.
+
+Persediaan/Aset Murabahah.
+
+2) Pengakuan
+
+pendapatan
+
+yang
+
+terkait
+
+transaksi Murabahah
+Db.
+
+Kas.
+
+Kr.
+
+Piutang Murabahah - pendapatan yang terkait langsung.
+
+3) Pengakuan beban yang terkait langsung dengan transaksi
+Murabahah
+Db.
+
+Piutang Murabahah - beban yang terkait langsung.
+
+Kr.
+
+Kas.
+
+4) Uang muka nasabah diakui sebagai pembayaran piutang
+
+b.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Piutang Murabahah – porsi pokok.
+
+Metode Proporsional
+1) Transaksi penjualan
+Db.
+
+Piutang Murabahah.
+
+Kr.
+
+Marjin Murabahah ditangguhkan.
+
+Kr.
+
+Persediaan/Aset Murabahah.
+
+2) Pengakuan
+
+pendapatan
+
+yang
+
+terkait
+
+langsung
+
+dengan
+
+transaksi Murabahah
+Db.
+
+Kas.
+
+Kr.
+
+Liabilitas lainnya – Pendapatan yang ditangguhkan.
+
+3) Pengakuan beban yang terkait langsung dengan transaksi
+Murabahah
+Db.
+
+Aset lainnya – Beban yang ditangguhkan.
+Kr. Kas ...
+
+- 28 -
+
+Kr.
+
+Kas.
+
+4) Uang muka nasabah diakui sebagai pembayaran piutang
+
+5.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Piutang Murabahah – porsi pokok.
+
+Apabila pesanan nasabah dibatalkan:
+a.
+
+Uang muka lebih besar daripada kerugian dan beban lain yang
+dikeluarkan oleh Bank
+
+b.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Kerugian penjualan barang pesanan.
+
+Kr.
+
+Beban lain yang terkait.
+
+Kr.
+
+Kas/Rekening …
+
+Uang
+
+muka
+
+sama
+
+dengan
+
+kerugian
+
+dan
+
+beban
+
+lain
+
+yang
+
+dikeluarkan oleh Bank
+
+c.
+
+Db.
+
+Liabilitas lainnya - uang muka Murabahah dari pembeli.
+
+Kr.
+
+Kerugian penjualan barang pesanan.
+
+Kr.
+
+Beban lain yang terkait.
+
+Apabila uang muka lebih kecil daripada kerugian dan beban lain
+yang dikeluarkan oleh Bank
+
+6.
+
+Db.
+
+Tagihan kepada nasabah.
+
+Db.
+
+Liabilitas lainnya – uang muka Murabahah dari pembeli.
+
+Kr.
+
+Kerugian penjualan barang pesanan.
+
+Kr.
+
+Beban lain yang terkait.
+
+Pada saat pengakuan pendapatan di akhir periode pelaporan (akru):
+a.
+
+Metode Anuitas
+Db.
+
+Pendapatan marjin Murabahah yang akan diterima.
+
+Db/Kr. Piutang Murabahah.
+Kr.
+b.
+
+Pendapatan marjin Murabahah.
+
+Metode Proporsional
+1) Pengakuan pendapatan marjin Murabahah
+Db.
+
+Pendapatan marjin Murabahah yang akan diterima.
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pengakuan
+
+pendapatan
+
+yang
+
+terkait
+
+langsung
+
+dengan
+
+transaksi Murabahah
+Db.
+
+Liabilitas lainnya - Pendapatan yang ditangguhkan.
+
+Kr.
+
+Pendapatan.
+
+3) Pengakuan beban yang terkait langsung dengan transaksi
+Murabahah
+Db. Beban ...
+
+- 29 -
+
+7.
+
+Db.
+
+Beban.
+
+Kr.
+
+Aset lainnya - Beban yang ditangguhkan.
+
+Pada saat penerimaan angsuran dari nasabah (pokok dan marjin):
+a.
+
+Metode Anuitas
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah yang ditangguhkan.
+
+Db/Kr. Piutang Murabahah.
+Kr.
+b.
+
+8.
+
+Pendapatan marjin Murabahah.
+
+Metode Proporsional
+Db.
+
+Kas/rekening nasabah
+
+Kr.
+
+Piutang Murabahah
+
+Db.
+
+Marjin Murabahah yang ditangguhkan
+
+Kr.
+
+Pendapatan marjin Murabahah
+
+Pemberian potongan angsuran piutang Murabahah:
+a.
+
+Angsuran tepat waktu
+1) Pada saat penerimaan angsuran
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan. (jika masih ada)
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pada saat pemberian potongan angsuran
+
+b.
+
+Db.
+
+Beban potongan angsuran Murabahah.
+
+Kr.
+
+Kas/rekening nasabah.
+
+Penurunan kemampuan pembayaran
+1) Pada saat penerimaan angsuran
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan(jika masih ada).
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pada saat pemberian potongan angsuran
+
+9.
+
+Db.
+
+Beban operasional.
+
+Kr.
+
+Kas/rekening nasabah.
+
+Pemberian potongan pelunasan dini:
+a.
+
+Jika pada saat penyelesaian
+Bank ...
+
+- 30 -
+
+Bank
+
+mengurangi
+
+piutang
+
+Murabahah
+
+dan
+
+keuntungan
+
+Murabahah:
+1) Pada saat pemberian potongan pelunasan:
+Db.
+
+Beban potongan angsuran Murabahah.
+
+Kr.
+
+Piutang Murabahah.
+
+2) Pada saat penerimaan pelunasan:
+
+b.
+
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan (jika masih ada).
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+Jika setelah penyelesaian
+Bank terlebih dulu menerima pelunasan piutang Murabahah dari
+nasabah, kemudian Bank membayar potongan pelunasan dini
+Murabahah kepada nasabah dengan mengurangi pendapatan
+Murabahah:
+1) Pada saat penerimaan pelunasan:
+Db.
+
+Kas/rekening nasabah.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah ditangguhkan.
+
+Kr.
+
+Pendapatan marjin Murabahah.
+
+2) Pada saat memberi potongan pelunasan
+Db.
+
+Beban potongan pelunasan.
+
+Kr.
+
+Kas/rekening nasabah.
+
+10. Pada saat penyelesaian piutang Murabahah melalui eksekusi agunan
+a.
+
+b.
+
+Pada saat eksekusi agunan
+Db.
+
+Aset Yang Diambil Alih.
+
+Kr.
+
+Piutang Murabahah.
+
+Db.
+
+Marjin Murabahah yang ditangguhkan.
+
+Kr.
+
+Pendapatan yang ditangguhkan.
+
+Pada saat penjualan agunan
+1) Apabila hasil penjualan agunan lebih besar dari kewajiban
+nasabah
+Db.
+
+Kas/rekening …
+
+Kr.
+
+Aset Yang Diambil Alih.
+Kr. Rekening ...
+
+- 31 -
+
+Kr.
+
+Rekening nasabah.
+
+Db.
+
+Pendapatan yang ditangguhkan.
+
+Kr.
+
+Pendapatan Murabahah.
+
+2) Apabila hasil penjualan agunan lebih kecil dari kewajiban
+nasabah
+Db.
+
+Kas/rekening …
+
+Db.
+
+Tagihan kepada nasabah.
+
+Kr.
+
+Aset Yang Diambil Alih.
+
+Db.
+
+Pendapatan yang ditangguhkan.
+
+Kr.
+
+Pendapatan Murabahah.
+
+11. Penerimaan denda dari nasabah:
+Db. Kas/rekening …
+Kr.
+F.
+
+Rekening Dana Kebajikan.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+rincian piutang Murabahah berdasarkan jumlah, jangka waktu, jenis
+valuta, kualitas piutang, jenis penggunaan, sektor ekonomi, dan
+Penyisihan Penghapusan Aset;
+
+2.
+
+jumlah piutang Murabahah yang diberikan kepada pihak yang berelasi;
+
+3.
+
+kebijakan dan metode akuntansi untuk pengakuan pendapatan,
+Penyisihan Penghapusan Aset Produktif, penghapusan dan penanganan
+piutang Murabahah yang bermasalah;
+
+4.
+
+besarnya piutang Murabahah baik yang dibebani sendiri oleh Bank
+maupun secara bersama-sama dengan pihak lain sebesar bagian
+pembiayaan Bank.
+
+III.2. ISTISHNA ...

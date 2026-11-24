@@ -1,0 +1,767 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 1 Pendahuluan (3-11).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+-3-
+
+BAGIAN I
+
+PENDAHULUAN
+
+I.1. LATAR BELAKANG
+A.
+
+Tujuan Laporan Keuangan entitas Bank Pembiayaan Rakyat Syariah,
+untuk selanjutnya disebut Bank, adalah untuk menyediakan informasi
+yang menyangkut posisi keuangan, kinerja keuangan, dan arus kas dari
+aktivitas
+
+Bank
+
+yang
+
+bermanfaat
+
+dalam
+
+pengambilan
+
+keputusan
+
+ekonomi oleh siapapun yang tidak dalam posisi dapat meminta Laporan
+Keuangan untuk memenuhi kebutuhan informasi tertentu. Dalam
+memenuhi tujuannya, Laporan Keuangan juga menunjukkan apa yang
+telah dilakukan manajemen (stewardship) atau pertanggungjawaban
+manajemen atas sumber daya yang dipercayakan kepadanya.
+B.
+
+Suatu Laporan Keuangan bermanfaat apabila informasi yang disajikan
+dalam Laporan Keuangan tersebut dapat dipahami, relevan, andal, dan
+dapat diperbandingkan. Akan tetapi, perlu disadari pula bahwa Laporan
+Keuangan
+
+tidak
+
+menyediakan
+
+semua
+
+informasi
+
+yang
+
+mungkin
+
+dibutuhkan oleh pihak-pihak yang berkepentingan dengan Bank,
+karena secara umum Laporan Keuangan hanya menggambarkan
+pengaruh keuangan dari kejadian masa lalu. Namun dalam beberapa
+hal, Bank perlu menyediakan informasi yang mempunyai pengaruh
+keuangan masa depan.
+C.
+
+Bank memiliki fungsi sebagai:
+1.
+
+Manajer investasi
+Bank dapat mengelola investasi atas dana nasabah dengan
+menggunakan akad mudharabah dan wadiah.
+
+2.
+
+Agen investasi
+Bank dapat mengelola investasi atas dana nasabah dengan
+menggunakan akad wakalah.
+
+3.
+
+Investor
+Bank dapat menginvestasikan dana yang dimilikinya dan dana
+nasabah
+
+yang
+
+dipercayakan
+
+kepadanya
+
+dengan
+
+melakukan
+
+penempatan yang sesuai dengan Prinsip Syariah. Keuntungan yang
+diperoleh dibagihasilkan sesuai nisbah yang disepakati antara
+Bank dan nasabah.
+
+4. Penyedia ...
+
+-4-
+
+4.
+
+Penyedia jasa keuangan
+Bank dapat melakukan kegiatan jasa-jasa layanan Perbankan
+Syariah dengan mengacu kepada Undang-Undang Nomor 21
+Tahun 2008 tentang Perbankan Syariah.
+
+5.
+
+Pengemban fungsi sosial
+Berdasarkan Pasal 4 ayat (2) dan ayat (3) Undang-Undang Nomor
+21 Tahun 2008 tentang Perbankan Syariah, Bank mengemban
+fungsi sosial sebagai berikut:
+a.
+
+Bank dapat menjalankan fungsi sosial dalam bentuk lembaga
+baitul maal yaitu menerima dana yang berasal dari zakat,
+infak,
+
+sedekah,
+
+hibah,
+
+atau
+
+dana
+
+sosial
+
+lainnya
+
+dan
+
+menyalurkannya kepada organisasi pengelola zakat; dan
+b.
+
+Bank dapat menghimpun dana sosial yang berasal dari wakaf
+uang dan menyalurkannya kepada pengelola wakaf (nazhir)
+sesuai dengan kehendak pemberi wakaf (wakif).
+
+D.
+
+Bank sebagai investor pada dasarnya melakukan fungsi intermediasi
+penyaluran dana dalam bentuk pembiayaan yang meliputi, antara lain
+transaksi investasi untuk mendapatkan bagi hasil, transaksi atas dasar
+jual beli aset untuk mendapatkan keuntungan, dan atau pemberian
+layanan jasa untuk mendapatkan imbalan.
+
+I.2. ASAS DAN KARAKTERISTIK TRANSAKSI SYARIAH
+A.
+
+Asas Transaksi Syariah
+1.
+
+Transaksi
+(ukhuwah),
+
+syariah
+
+berasaskan
+
+keadilan
+
+pada
+
+(‘adalah),
+
+prinsip
+
+kemaslahatan
+
+persaudaraan
+(maslahah),
+
+keseimbangan (tawazun), dan universalisme (syumuliyah).
+2.
+
+Prinsip
+
+persaudaraan
+
+universal
+
+yang
+
+(ukhuwah)
+
+menata
+
+esensinya
+
+interaksi
+
+sosial
+
+merupakan
+dan
+
+nilai
+
+harmonisasi
+
+kepentingan para pihak untuk kemanfaatan secara umum dengan
+semangat saling menolong. Transaksi Syariah menjunjung tinggi
+nilai kebersamaan dalam memperoleh manfaat (sharing economics)
+sehingga seseorang tidak boleh mendapat keuntungan di atas
+kerugian
+
+orang
+
+lain.
+
+Ukhuwah
+
+dalam
+
+transaksi
+
+Syariah
+
+berdasarkan prinsip saling mengenal (ta’aruf), saling memahami
+(tafahum), saling menolong (ta’awun), saling menjamin (takaful),
+saling bersinergi dan beraliansi (tahaluf).
+3. Prinsip ...
+
+-5-
+
+3.
+
+Prinsip keadilan (‘adalah) esensinya menempatkan sesuatu hanya
+pada tempatnya dan memberikan sesuatu hanya pada yang
+berhak serta memperlakukan sesuatu hanya sesuai posisinya.
+Implementasi keadilan dalam kegiatan usaha berupa aturan
+prinsip muamalah yang melarang adanya unsur sebagai berikut:
+a.
+
+Unsur bunga dalam segala bentuk dan jenisnya, baik riba
+nasiah maupun riba fadhl (riba). Esensi riba adalah setiap
+tambahan pada jumlah piutang yang dipersyaratkan dalam
+transaksi pinjam-meminjam uang serta derivasinya dan
+transaksi tidak tunai lainnya, seperti murabahah tangguh;
+dan setiap tambahan yang dipersyaratkan dalam transaksi
+pertukaran antar barang ribawi termasuk pertukaran uang
+(money exchange) yang sejenis secara tunai maupun tangguh
+dan yang tidak sejenis secara tidak tunai;
+
+b.
+
+Unsur yang merugikan diri sendiri, orang lain, maupun
+lingkungan (zalim). Esensi zalim (dzulm) adalah menempatkan
+sesuatu tidak pada tempatnya, memberikan sesuatu tidak
+sesuai ukuran, kualitas dan temponya, mengambil sesuatu
+yang bukan haknya dan memperlakukan sesuatu tidak sesuai
+posisinya. Kezaliman dapat menimbulkan kemudharatan bagi
+masyarakat secara keseluruhan, bukan hanya sebagian atau
+membawa kemudharatan bagi salah satu pihak atau pihakpihak yang melakukan transaksi;
+
+c.
+
+Unsur judi dan sikap spekulatif (maysir). Esensi maysir
+adalah setiap transaksi yang bersifat spekulatif dan tidak
+berkaitan
+
+dengan
+
+produktivitas
+
+serta
+
+bersifat
+
+perjudian
+
+(gambling);
+d.
+
+Unsur ketidakjelasan (gharar). Esensi gharar adalah setiap
+transaksi yang berpotensi merugikan salah satu pihak karena
+mengandung
+
+unsur
+
+eksploitasi
+
+informasi
+
+ketidakjelasan,
+
+manipulasi,
+
+serta
+
+adanya
+
+tidak
+
+dan
+
+kepastian
+
+pelaksanaan akad. Bentuk-bentuk gharar antara lain:
+1) tidak adanya kepastian penjual untuk menyerahkan obyek
+akad pada waktu terjadi akad, baik obyek akad itu sudah
+ada maupun belum ada;
+2) menjual sesuatu yang belum berada di bawah penguasaan
+penjual;
+3) tidak ...
+
+-6-
+
+3) tidak adanya kepastian kriteria kualitas dan kuantitas
+barang/jasa;
+4) tidak adanya kepastian jumlah harga yang harus dibayar
+dan alat pembayaran;
+5) tidak adanya ketegasan jenis dan obyek akad;
+6) kondisi obyek akad tidak dapat dijamin kesesuaiannya
+dengan yang ditentukan dalam transaksi;
+7) adanya
+
+unsur
+
+informasi
+
+eksploitasi
+
+salah
+
+satu
+
+kurang
+
+atau
+
+dimanipulasi
+
+yang
+
+pihak
+
+karena
+dan
+
+ketidaktahuan atau ketidakpahaman yang ditransaksikan.
+e.
+
+Unsur haram baik dalam barang maupun jasa serta aktivitas
+operasional yang terkait. Esensi haram adalah segala unsur
+yang dilarang secara tegas dalam Al Quran dan As-Sunah.
+
+4.
+
+Prinsip kemaslahatan (mashlahah) esensinya merupakan segala
+bentuk kebaikan dan manfaat yang berdimensi duniawi dan
+ukhrawi, material dan spiritual, serta individual dan kolektif.
+Kemaslahatan yang diakui harus memenuhi dua unsur yakni
+kepatuhan
+
+syariah
+
+(halal)
+
+serta
+
+bermanfaat
+
+dan
+
+membawa
+
+kebaikan (thayib) dalam semua aspek yang tidak menimbulkan
+kemudharatan. Transaksi syariah yang dianggap bermaslahat
+harus memenuhi secara keseluruhan unsur-unsur yang menjadi
+tujuan
+
+ketetapan
+
+syariah
+
+(maqasid
+
+syariah)
+
+yaitu
+
+berupa
+
+pemeliharaan terhadap:
+
+5.
+
+a.
+
+akidah, keimanan dan ketakwaan (dien);
+
+b.
+
+akal (‘aql);
+
+c.
+
+keturunan (nasl);
+
+d.
+
+jiwa dan keselamatan (nafs); dan
+
+e.
+
+harta benda (mal).
+
+Prinsip keseimbangan (tawazun) esensinya meliputi keseimbangan
+aspek material dan spiritual, aspek privat dan publik, sektor
+keuangan dan sektor riil, bisnis dan sosial, dan keseimbangan
+aspek pemanfaatan dan pelestarian. Transaksi syariah tidak hanya
+menekankan pada maksimalisasi keuntungan perusahaan semata
+untuk kepentingan pemilik (shareholder), sehingga manfaat yang
+diperoleh tidak hanya difokuskan pada pemegang saham, tetapi
+juga untuk semua pihak yang dapat merasakan manfaat adanya
+suatu kegiatan ekonomi.
+6. Prinsip ...
+
+-7-
+
+6.
+
+Prinsip universalisme (syumuliyah) esensinya dapat dilakukan
+oleh, dengan, dan untuk semua pihak yang berkepentingan
+(stakeholders) tanpa membedakan suku, agama, ras dan golongan,
+sesuai dengan semangat kerahmatan semesta (rahmatan lil
+alamin).
+
+7.
+
+Transaksi syariah terikat dengan nilai-nilai etis meliputi aktivitas
+sektor keuangan dan sektor riil yang dilakukan secara koheren
+tanpa dikotomi, sehingga keberadaan dan nilai uang merupakan
+cerminan aktivitas investasi dan perdagangan.
+
+B.
+
+Karakteristik Transaksi Syariah
+1.
+
+Implementasi transaksi yang sesuai dengan paradigma dan asas
+transaksi syariah harus memenuhi karakteristik dan persyaratan
+sebagai berikut:
+a.
+
+Dilakukan berdasarkan prinsip saling paham dan saling
+ridha;
+
+b.
+
+Prinsip kebebasan bertransaksi diakui sepanjang objeknya
+halal dan baik (thayib);
+
+c.
+
+Uang
+
+hanya
+
+berfungsi
+
+sebagai
+
+alat
+
+tukar
+
+dan
+
+satuan
+
+pengukur nilai, bukan sebagai komoditas;
+d.
+
+Tidak mengandung unsur riba;
+
+e.
+
+Tidak mengandung unsur kezaliman;
+
+f.
+
+Tidak mengandung unsur maysir;
+
+g.
+
+Tidak mengandung unsur gharar;
+
+h.
+
+Tidak mengandung unsur haram;
+
+i.
+
+Tidak menganut prinsip nilai waktu dari uang (time value of
+money) karena keuntungan yang didapat dalam kegiatan
+usaha terkait dengan risiko yang melekat pada kegiatan usaha
+tersebut sesuai dengan prinsip al-ghunmu bil ghurmi (no gain
+without accompanying risk);
+
+j.
+
+Dilakukan berdasarkan suatu perjanjian yang jelas dan benar
+serta untuk keuntungan semua pihak tanpa merugikan pihak
+lain, sehingga tidak diperkenankan menggunakan standar
+ganda harga dalam satu akad serta tidak menggunakan dua
+transaksi bersamaan yang berkaitan (ta’alluq) dalam satu
+akad;
+
+k. Tidak ...
+
+-8-
+
+k.
+
+Tidak
+
+ada
+
+distorsi
+
+harga
+
+melalui
+
+rekayasa
+
+permintaan
+
+(najasy), maupun melalui rekayasa penawaran (ihtikar); dan
+l.
+
+Tidak mengandung unsur kolusi dengan suap menyuap
+(risywah).
+
+2.
+
+Transaksi syariah dapat berupa aktivitas bisnis yang bersifat
+komersial maupun aktivitas sosial yang bersifat non komersial.
+Transaksi syariah komersial dilakukan, antara lain, berupa
+investasi untuk mendapatkan bagi hasil, jual beli barang untuk
+mendapatkan laba, dan/atau pemberian layanan jasa untuk
+mendapatkan imbalan.
+
+3.
+
+Transaksi syariah nonkomersial dilakukan, antara lain, berupa
+pemberian
+
+dana
+
+pinjaman
+
+atau
+
+talangan
+
+(qardh)
+
+serta
+
+penghimpunan dan penyaluran dana sosial seperti zakat, infak,
+sedekah, wakaf, dan hibah.
+
+I.3. TUJUAN ...
+
+-9-
+
+I.3. TUJUAN DAN RUANG LlNGKUP
+A.
+
+Tujuan
+Tujuan dari penyusunan Pedoman Akuntansi Perbankan Syariah
+Indonesia bagi Bank Pembiayaan Rakyat Syariah (BPRS), untuk
+selanjutnya disebut “Pedoman” antara lain:
+1.
+
+membantu Bank menyusun Laporan Keuangan supaya sesuai
+dengan tujuan Laporan Keuangan, yaitu menyediakan informasi
+posisi keuangan, kinerja keuangan, dan laporan arus kas suatu
+entitas yang bermanfaat bagi sejumlah besar pengguna dalam
+pengambilan keputusan ekonomi oleh siapapun yang tidak dalam
+posisi dapat meminta laporan keuangan khusus untuk memenuhi
+kebutuhan
+
+informasi
+
+tertentu.
+
+Dalam
+
+memenuhi
+
+tujuannya,
+
+laporan keuangan juga menunjukkan apa yang telah dilakukan
+manajemen (stewardship) atau pertanggungjawaban manajemen
+atas sumberdaya yang dipercayakan kepadanya;
+2.
+
+menciptakan keseragaman penerapan perlakuan akuntansi dan
+penyajian
+
+Laporan
+
+Keuangan,
+
+sehingga
+
+meningkatkan
+
+daya
+
+banding antara Laporan Keuangan Bank;
+3.
+
+menjadi acuan minimum yang harus dipenuhi oleh Bank dalam
+menyusun Laporan Keuangan. Namun, keseragaman penyajian
+sebagaimana diatur dalam Pedoman ini tidak menghalangi masingmasing Bank untuk memberikan informasi yang relevan bagi
+pengguna laporan sesuai kondisi masing-masing Bank.
+
+B.
+
+Ruang Lingkup
+Pedoman ini berlaku bagi Bank dalam menyusun Laporan Keuangan.
+
+I.4. ACUAN ...
+
+- 10 -
+
+I.4. ACUAN PENYUSUNAN
+A.
+
+Referensi yang digunakan dalam menyusun Pedoman ini adalah:
+1.
+
+Standar Akuntansi Keuangan Entitas Tanpa Akuntabilitas Publik
+yang
+
+selanjutnya
+
+disingkat
+
+SAK
+
+ETAP
+
+sepanjang
+
+tidak
+
+bertentangan dengan Prinsip Syariah;
+2.
+
+Kerangka Dasar Penyusunan dan Penyajian Laporan Keuangan
+Syariah dan Pernyataan Standar Akuntansi Keuangan Syariah;
+
+3.
+
+Ketentuan yang dikeluarkan oleh Otoritas Jasa Keuangan;
+
+4.
+
+Fatwa yang dikeluarkan oleh Dewan Syariah Nasional - Majelis
+Ulama Indonesia;
+
+5.
+
+Peraturan perundang-undangan yang relevan dengan Laporan
+Keuangan; dan
+
+6.
+
+Praktik-praktik akuntansi yang berlaku umum sepanjang tidak
+bertentangan dengan Prinsip Syariah.
+
+B.
+
+Berdasarkan referensi di atas ketentuan yang relevan dan sesuai
+dengan kondisi lingkungan usaha berdasarkan Prinsip Syariah di
+Indonesia yang kemudian dikodifikasi dalam Pedoman ini. Selanjutnya,
+sebagai
+
+dasar
+
+penyusunan
+
+Laporan
+
+Keuangan
+
+Bank
+
+digunakan
+
+ketentuan dalam Pedoman ini.
+
+I.5. KETENTUAN ...
+
+- 11 -
+
+I.5. KETENTUAN LAIN
+A.
+
+Jurnal yang digunakan dalam Pedoman ini hanya merupakan ilustrasi
+dan tidak bersifat mengikat. Bank dapat mengembangkan metode
+pencatatan dan pengakuan sesuai sistem masing-masing sepanjang
+memberikan
+
+hasil
+
+dicantumkan
+
+dalam
+
+yang
+
+tidak
+
+Pedoman
+
+berbeda.
+ini
+
+Ilustrasi
+
+menggambarkan
+
+jurnal
+
+yang
+
+pencatatan
+
+akuntansi secara manual.
+B.
+
+Transaksi yang dicantumkan pada Pedoman ini diprioritaskan pada
+transaksi yang umum terjadi pada Bank.
+
+C.
+
+Pedoman ini secara periodik akan dievaluasi dan disesuaikan dengan
+perkembangan
+
+bisnis
+
+dan
+
+produk
+
+pada
+
+Bank,
+
+ketentuan
+
+SAK,
+
+ketentuan Otoritas Jasa Keuangan, dan ketentuan lainnya yang terkait
+dengan industri Bank.

@@ -1,0 +1,886 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 10/18/PBI/2008
+Tentang: Peraturan Bank Indonesia tentang Restruktrisasi Pembiayaan bagi Bank Syariah dan Unit Usaha Syariah
+Berkas: 168.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Restruktrisasi-Pembiayaan-bagi-Bank-Syariah-dan-Unit-Usaha-Syariah.aspx
+
+---
+
+PERATURAN BANK INDONESIA
+NOMOR: 10/18/PBI/2008
+TENTANG
+RESTRUKTURISASI PEMBIAYAAN BAGI BANK SYARIAH
+DAN UNIT USAHA SYARIAH.
+
+DENGAN RAHMAT TUHAN YANG MAHA ESA,
+
+GUBERNUR BANK INDONESIA,
+
+Menimbang: a.
+
+bahwa untuk menghindari risiko kerugian, Bank Syariah dan Unit
+Usaha Syariah berkewajiban menjaga kualitas pembiayaannya;
+
+b.
+
+bahwa salah satu upaya untuk menjaga kelangsungan usaha
+nasabah pembiayaan, Bank Syariah dan Unit Usaha Syariah dapat
+melakukan restrukturisasi pembiayaan atas nasabah yang memiliki
+prospek usaha dan/atau kemampuan membayar;
+
+c.
+
+bahwa restrukturisasi pembiayaan harus memperhatikan prinsip
+syariah dan prinsip kehati-hatian;
+
+d.
+
+bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam
+huruf a, huruf b, dan huruf c, perlu diatur kembali ketentuan
+mengenai Restrukturisasi Pembiayaan bagi Bank Syariah dan Unit
+Usaha Syariah dalam Peraturan Bank Indonesia.
+
+Mengingat: 1.
+
+Undang-Undang Nomor 21 Tahun 2008 tentang Perbankan Syariah
+(Lembaran Negara Republik Indonesia Tahun 2008 Nomor 94,
+Tambahan Lembaran Negara Republik Indonesia Nomor 4867);
+
+2.
+
+Undang-Undang
+
+Nomor 23 Tahun 1999 tentang Bank Indonesia
+
+(Lembaran ...
+
+-2(Lembaran Negara Republik Indonesia Tahun 1999 Nomor 66,
+Tambahan Lembaran Republik Indonesia Negara Nomor 3843)
+sebagaimana telah diubah dengan Undang-Undang Nomor 3 Tahun
+2004 (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 7,
+Tambahan Lembaran Negara Republik Indonesia Nomor 4357);
+
+MEMUTUSKAN:
+Menetapkan: PERATURAN BANK INDONESIA TENTANG RESTRUKTURISASI
+PEMBIAYAAN BAGI BANK SYARIAH DAN UNIT USAHA
+SYARIAH.
+
+BAB I
+KETENTUAN UMUM
+
+Pasal 1
+Dalam Peraturan Bank Indonesia ini yang dimaksud dengan:
+1. Bank adalah Bank Syariah dan Unit Usaha syariah.
+2. Bank Syariah adalah Bank yang menjalankan kegiatan usahanya
+berdasarkan prinsip syariah dan menurut jenisnya terdiri atas Bank
+Umum Syariah dan Bank Pembiayaan Rakyat Syariah sebagaimana
+dimaksud dalam Undang-Undang Nomor 21 Tahun 2008 tentang
+Perbankan Syariah.
+3. Bank Umum Syariah, yang selanjutnya disebut BUS adalah Bank
+Syariah yang dalam kegiatannya memberikan jasa dalam lalu lintas
+pembayaran sebagaimana dimaksud dalam Undang-Undang Nomor
+21 Tahun 2008 tentang Perbankan Syariah.
+
+4. Bank ...
+
+-34. Bank Pembiayaan Rakyat Syariah, yang selanjutnya disebut BPRS
+adalah Bank Syariah yang dalam kegiatannya tidak memberikan jasa
+dalam lalu lintas pembayaran sebagaimana dimaksud dalam UndangUndang Nomor 21 Tahun 2008 tentang Perbankan Syariah.
+5. Unit Usaha Syariah, yang selanjutnya disebut UUS adalah unit kerja
+dari kantor pusat Bank Umum Konvensional yang berfungsi sebagai
+kantor induk dari kantor atau unit yang melaksanakan kegiatan usaha
+berdasarkan prinsip syariah, atau unit kerja di kantor cabang dari
+suatu Bank yang berkedudukan di luar negeri yang melaksanakan
+kegiatan usaha secara konvensional yang berfungsi sebagai kantor
+induk dari kantor cabang pembantu syariah dan/atau unit syariah.
+6. Pembiayaan adalah penyediaan dana atau tagihan yang dipersamakan
+dengan itu berupa:
+a. transaksi bagi hasil dalam bentuk mudharabah dan musyarakah;
+b. transaksi sewa menyewa dalam bentuk ijarah atau sewa beli
+dalam bentuk ijarah muntahiyah bit tamlik;
+c. transaksi jual beli dalam bentuk piutang murabahah, salam dan
+istishna’;
+d. transaksi pinjam meminjam dalam bentuk piutang qardh; dan
+e. transaksi sewa-menyewa jasa dalam bentuk ijarah untuk transaksi
+multijasa
+berdasarkan persetujuan atau kesepakatan antara Bank Syariah
+dan/atau UUS dan pihak lain yang mewajibkan pihak yang dibiayai
+dan/atau diberi fasilitas dana untuk mengembalikan dana tersebut
+setelah jangka waktu tertentu dengan imbalan ujrah, tanpa imbalan
+atau bagi hasil sebagaimana dimaksud dalam Undang-Undang
+Nomor 21 Tahun 2008 tentang Perbankan Syariah.
+
+7. Restrukturisasi ...
+
+-47. Restrukturisasi Pembiayaan adalah upaya yang dilakukan Bank
+dalam rangka membantu nasabah agar dapat menyelesaikan
+kewajibannya, antara lain melalui:
+a. Penjadwalan kembali (rescheduling), yaitu perubahan jadwal
+pembayaran kewajiban nasabah atau jangka waktunya;
+b. Persyaratan kembali (reconditioning), yaitu perubahan sebagian
+atau seluruh persyaratan Pembiayaan, antara lain perubahan
+jadwal pembayaran, jumlah angsuran, jangka waktu dan/atau
+pemberian potongan sepanjang tidak menambah sisa kewajiban
+nasabah yang harus dibayarkan kepada Bank;
+c. Penataan kembali (restructuring), yaitu perubahan persyaratan
+Pembiayaan tidak terbatas pada rescheduling atau reconditioning,
+antara lain meliputi:
+1) penambahan dana fasilitas Pembiayaan Bank;
+2) konversi akad Pembiayaan;
+3) konversi
+
+Pembiayaan
+
+menjadi
+
+surat
+
+berharga
+
+syariah
+
+berjangka waktu menengah;
+4) konversi Pembiayaan menjadi penyertaan modal sementara
+pada perusahaan nasabah.
+8. Surat Berharga Syariah Berjangka Waktu Menengah adalah surat
+bukti
+
+investasi
+
+berdasarkan
+
+prinsip
+
+syariah
+
+yang
+
+lazim
+
+diperdagangkan di pasar uang dan/atau pasar modal berjangka waktu
+3 (tiga) sampai dengan 5 (lima) tahun dengan menggunakan akad
+mudharabah atau musyarakah .
+9. Penyertaan Modal Sementara adalah penyertaan modal BUS atau
+UUS, antara lain berupa pembelian saham dan/atau konversi
+Pembiayaan menjadi saham dalam perusahaan nasabah untuk
+
+mengatasi ...
+
+-5mengatasi kegagalan penyaluran dana dan/atau piutang dalam jangka
+waktu tertentu sebagaimana dimaksud dalam ketentuan Bank
+Indonesia yang berlaku.
+
+Pasal 2
+(1) Bank dapat melaksanakan Restrukturisasi Pembiayaan dengan
+menerapkan prinsip kehati-hatian.
+(2) Bank wajib menjaga dan mengambil langkah-langkah agar kualitas
+Pembiayaan setelah direstrukturisasi dalam keadaan Lancar.
+
+BAB II
+RESTRUKTURISASI
+
+Pasal 3
+Bank dilarang melakukan Restrukturisasi Pembiayaan dengan tujuan
+untuk menghindari:
+a. penurunan penggolongan kualitas Pembiayaan;
+b. pembentukan penyisihan penghapusan aktiva (PPA) yang lebih besar;
+atau
+c. penghentian pengakuan pendapatan margin atau ujrah secara akrual.
+
+Pasal 4
+Restrukturisasi
+
+Pembiayaan
+
+hanya
+
+dapat
+
+dilakukan
+
+atas
+
+dasar
+
+permohonan secara tertulis dari nasabah.
+
+Pasal 5 ...
+
+-6Pasal 5
+(1) Restrukturisasi Pembiayaan hanya dapat dilakukan untuk nasabah
+yang memenuhi kriteria sebagai berikut:
+a. nasabah mengalami penurunan kemampuan pembayaran; dan
+b. nasabah memiliki prospek usaha yang baik dan mampu
+memenuhi kewajiban setelah restrukturisasi.
+(2) Restrukturisasi
+
+Pembiayaan
+
+hanya
+
+dapat
+
+dilakukan
+
+untuk
+
+Pembiayaan dengan kualitas Kurang Lancar, Diragukan dan Macet.
+(3) Restrukturisasi Pembiayaan wajib didukung dengan analisis dan
+bukti-bukti yang memadai serta terdokumentasi dengan baik.
+
+Pasal 6
+(1) Restrukturisasi Pembiayaan dapat dilakukan paling banyak 3 (tiga)
+kali dalam jangka waktu akad Pembiayaan awal.
+(2) Restrukturisasi Pembiayaan kedua dan ketiga dapat dilakukan paling
+cepat
+
+6
+
+(enam)
+
+bulan
+
+setelah
+
+Restrukturisasi
+
+Pembiayaan
+
+sebelumnya.
+
+Pasal 7
+Restrukturisasi Pembiayaan terhadap nasabah yang memiliki beberapa
+fasilitas Pembiayaan dari Bank, dapat dilakukan terhadap masing-masing
+Pembiayaan.
+
+BAB III ...
+
+-7BAB III
+PERLAKUAN AKUNTANSI
+
+Pasal 8
+Dalam
+
+pelaksanaan
+
+Restrukturisasi
+
+Pembiayaan,
+
+Bank
+
+wajib
+
+menerapkan perlakuan akuntansi sesuai dengan Pernyataan Standar
+Akuntansi Keuangan dan Pedoman Akuntansi Perbankan Syariah
+Indonesia yang berlaku.
+
+BAB IV
+PRINSIP SYARIAH
+
+Pasal 9
+Restrukturisasi Pembiayaan dilaksanakan dengan memperhatikan fatwa
+Majelis Ulama Indonesia yang berlaku.
+
+BAB V
+KEBIJAKAN DAN PROSEDUR
+
+Pasal 10
+(1) Bank wajib memiliki kebijakan dan Standard Operating Procedure
+tertulis mengenai Restrukturisasi Pembiayaan.
+(2) Kebijakan Restrukturisasi Pembiayaan sebagaimana dimaksud pada
+ayat (1) wajib disetujui oleh Komisaris.
+(3) Standard
+
+Operating
+
+Procedure
+
+Restrukturisasi
+
+Pembiayaan
+
+sebagaimana dimaksud pada ayat (1) wajib dikinikan dan disetujui
+oleh Direksi dan Dewan Pengawas Syariah.
+
+(4) Pelaksanaan ...
+
+-8(4) Pelaksanaan kebijakan Restrukturisasi Pembiayaan wajib diawasi
+secara aktif oleh Komisaris.
+(5) Kebijakan
+
+dan
+
+Standard
+
+Operating
+
+Procedure
+
+Restrukturisasi
+
+Pembiayaan sebagaimana dimaksud pada ayat (1) akan diatur lebih
+lanjut dalam Surat Edaran Bank Indonesia.
+BAB VI
+PENETAPAN KUALITAS PEMBIAYAAN
+
+Pasal 11
+(1) Kualitas Pembiayaan setelah dilakukan restrukturisasi ditetapkan
+sebagai berikut:
+a. paling tinggi Kurang Lancar untuk Pembiayaan yang sebelum
+dilakukan restrukturisasi tergolong Diragukan atau Macet;
+b. kualitas Pembiayaan tidak berubah untuk Pembiayaan yang
+sebelum dilakukan restrukturisasi tergolong Kurang Lancar.
+(2) Kualitas Pembiayaan sebagaimana dimaksud pada ayat (1) dapat:
+a. menjadi Lancar, apabila tidak terdapat tunggakan selama 3 (tiga)
+kali periode pembayaran angsuran pokok dan/atau margin/bagi
+hasil/fee/ujrah secara berturut-turut sesuai dengan perjanjian
+Restrukturisasi Pembiayaan; atau
+b. menjadi sama dengan kualitas Pembiayaan sebelum dilakukan
+Restrukturisasi Pembiayaan atau menjadi lebih buruk, jika
+nasabah tidak memenuhi kriteria dan/atau syarat-syarat dalam
+perjanjian Restrukturisasi Pembiayaan dan/atau pelaksanaan
+Restrukturisasi Pembiayaan tidak didukung dengan analisis dan
+dokumentasi yang memadai;
+
+(3) Dalam ...
+
+-9(3) Dalam hal periode pembayaran angsuran pokok dan/atau margin/bagi
+hasil/fee/ujrah kurang dari 1 (satu) bulan, peningkatan kualitas
+menjadi Lancar sebagaimana dimaksud pada ayat (2) huruf a dapat
+dilakukan paling cepat dalam waktu 3 (tiga) bulan sejak dilakukan
+Restrukturisasi Pembiayaan;
+(4) Ketentuan sebagaimana dimaksud pada ayat (1), ayat (2) dan ayat (3)
+berlaku juga untuk Restrukturisasi Pembiayaan yang kedua dan
+ketiga.
+
+Pasal 12
+Pembiayaan yang direstrukturisasi lebih dari 3 (tiga) kali, digolongkan
+Macet sampai dengan Pembiayaan lunas.
+Pasal 13
+Pembiayaan yang direstrukturisasi dengan pemberian tenggang waktu
+pembayaran (grace period) ditetapkan memiliki kualitas sebagai berikut:
+a. selama grace period, kualitas mengikuti kualitas Pembiayaan
+sebelum dilakukan restrukturisasi; dan
+b. setelah grace period berakhir, kualitas Pembiayaan mengikuti
+penetapan kualitas sebagaimana dimaksud dalam Pasal 11.
+
+Pasal 14
+(1) Untuk
+
+BUS
+
+dan
+
+UUS,
+
+kualitas
+
+Pembiayaan
+
+yang
+
+telah
+
+direstrukturisasi wajib dinilai berdasarkan prospek usaha, kinerja
+(performance) nasabah dan/atau kemampuan membayar, sesuai
+dengan penggolongan nasabah, setelah 1 (satu) tahun sejak penetapan
+kualitas sebagaimana dimaksud dalam Pasal 11 ayat (1);
+
+(2) Untuk ...
+
+-10(2) Untuk BPRS, kualitas Pembiayaan yang telah direstrukturisasi wajib
+dinilai berdasarkan ketepatan dan/atau kemampuan membayar
+kewajiban nasabah.
+
+BAB VII
+TATACARA RESTRUKTURISASI PEMBIAYAAN
+
+Pasal 15
+(1) Pembiayaan dalam bentuk piutang murabahah atau piutang istishna’
+dapat direstrukturisasi dengan cara:
+a. penjadualan kembali (rescheduling);
+b. persyaratan kembali (reconditioning); dan
+c. penataan kembali (restructuring).
+(2) Pembiayaan dalam bentuk piutang qardh dapat direstrukturisasi
+dengan cara:
+a. penjadualan kembali (rescheduling); dan
+b. persyaratan kembali (reconditioning).
+(3) Pembiayaan dalam bentuk mudharabah atau musyarakah dapat
+direstrukturisasi dengan cara:
+a. penjadualan kembali (rescheduling);
+b. persyaratan kembali (reconditioning); dan
+c. penataan kembali (restructuring).
+(4) Pembiayaan dalam bentuk ijarah atau ijarah muntahiyyah bittamlik
+dapat direstrukturisasi dengan cara:
+a. penjadualan kembali (rescheduling);
+b. persyaratan kembali (reconditioning); dan
+c. penataan kembali (restructuring).
+(5) Pembiayaan ...
+
+-11(5) Pembiayaan multijasa dalam bentuk ijarah dapat direstrukturisasi
+dengan cara:
+a. penjadualan kembali (rescheduling); dan
+b. persyaratan kembali (reconditioning).
+(6) Pembiayaan dalam bentuk piutang salam dapat direstrukturisasi
+dengan cara:
+a. penjadualan kembali (rescheduling);
+b. persyaratan kembali (reconditioning); dan
+c. penataan kembali (restructuring).
+(7) Tata cara Restrukturisasi Pembiayaan akan diatur lebih lanjut dalam
+Surat Edaran Bank Indonesia.
+Pasal 16
+Restrukturisasi
+
+Pembiayaan
+
+dengan
+
+cara
+
+penataan
+
+kembali
+
+(restructuring) sebagaimana dimaksud dalam Pasal 15 dalam bentuk
+konversi Pembiayaan menjadi Surat Berharga Syariah Berjangka Waktu
+Menengah dan Penyertaan Modal Sementara tidak berlaku bagi BPRS.
+
+Pasal 17
+(1) Bank wajib melepaskan Penyertaan Modal Sementara apabila:
+a. telah sampai jangka waktu paling lama 5 (lima) tahun; atau
+b. perusahaan nasabah tempat Penyertaan Modal Sementara telah
+memperoleh laba kumulatif.
+(2) Bank wajib menghapus buku Penyertaan Modal Sementara apabila
+telah melampaui jangka waktu 5 (lima) tahun.
+
+BAB VIII ...
+
+-12BAB VIII
+LAPORAN RESTRUKTURISASI PEMBIAYAAN
+
+Pasal 18
+Bank wajib melaporkan Restrukturisasi Pembiayaan kepada Bank
+Indonesia.
+
+Pasal 19
+Pelaporan Restrukturisasi Pembiayaan sebagaimana dimaksud dalam
+Pasal 18 bagi BUS dan UUS mengacu pada ketentuan Bank Indonesia
+yang mengatur mengenai Laporan Berkala Bank Umum.
+
+Pasal 20
+(1) Laporan Restrukturisasi Pembiayaan sebagaimana dimaksud dalam
+Pasal 18, untuk BPRS wajib disampaikan setiap bulan paling lambat
+tanggal 14 pada bulan berikutnya setelah berakhirnya bulan laporan.
+(2) BPRS dinyatakan terlambat menyampaikan laporan apabila BPRS
+menyampaikan laporan melampaui batas waktu sebagaimana
+dimaksud pada ayat (1) sampai dengan tanggal 21 pada bulan
+berikutnya setelah berakhirnya bulan laporan.
+(3) BPRS dinyatakan tidak menyampaikan laporan apabila BPRS belum
+menyampaikan laporan sampai dengan batas waktu sebagaimana
+dimaksud pada ayat (2).
+(4) Dalam hal tanggal berakhirnya penyampaian laporan sebagaimana
+dimaksud pada ayat (2) dan ayat (3) jatuh pada hari Sabtu, Minggu
+atau hari libur maka laporan disampaikan pada hari kerja berikutnya.
+
+(5) Pelaporan ...
+
+-13(5) Pelaporan Restrukturisasi Pembiayaan sebagaimana dimaksud pada
+ayat (1) akan diatur lebih lanjut dalam Surat Edaran Bank Indonesia.
+
+BAB IX
+SANKSI
+
+Pasal 21
+Bank yang melakukan pelanggaran atas ketentuan sebagaimana diatur
+dalam Pasal 4, Pasal 5 ayat (3), Pasal 8, Pasal 9, Pasal 10 ayat (1) sampai
+dengan ayat (4), Pasal 14, Pasal 15, Pasal 17, Pasal 18 dikenakan sanksi
+administratif sebagaimana dimaksud dalam Pasal 58 ayat (1) Undang–
+Undang Nomor 21 Tahun 2008 tentang Perbankan Syariah.
+
+Pasal 22
+(1) BPRS yang terlambat menyampaikan laporan sebagaimana dimaksud
+dalam Pasal 20 ayat (2) dikenakan sanksi berupa denda uang sebesar
+Rp100.000,00 (seratus ribu rupiah) per hari keterlambatan dan paling
+banyak seluruhnya sebesar Rp700.000,00 (tujuh ratus ribu rupiah).
+(2) BPRS yang tidak menyampaikan laporan sebagaimana dimaksud
+dalam Pasal 20 ayat (3) dikenakan sanksi berupa denda uang sebesar
+paling banyak Rp1.000.000,00 (satu juta rupiah).
+
+Pasal 23
+Pengenaan sanksi administratif atas pelanggaran ketentuan Pasal 12,
+tidak mengurangi pengenaan sanksi dalam ketentuan Bank Indonesia
+mengenai Laporan Bulanan Bank Umum Syariah dan Laporan Bulanan
+Bank Pembiayaan Rakyat Syariah.
+
+Pasal 24 ...
+
+-14Pasal 24
+Pengenaan sanksi sebagaimana dimaksud dalam Pasal 22 ayat (2) tidak
+mengurangi
+
+kewajiban
+
+Bank
+
+untuk
+
+menyampaikan
+
+Laporan
+
+Restrukturisasi Pembiayaan sebagaimana dimaksud dalam Pasal 18.
+
+BAB X
+KETENTUAN PERALIHAN
+
+Pasal 25
+Restrukturisasi Pembiayaan yang telah dilakukan Bank sebelum
+berlakunya ketentuan ini tidak dihitung sebagai Restrukturisasi
+Pembiayaan sebagaimana diatur dalam Pasal 6 Peraturan Bank Indonesia
+ini.
+
+BAB XI
+KETENTUAN PENUTUP
+
+Pasal 26
+Dengan dikeluarkan Peraturan Bank Indonesia ini maka:
+a. Surat Keputusan Direksi Bank Indonesia Nomor 31/150/KEP/DIR
+tanggal 12 November 1998 tentang Restrukturisasi Kredit;
+b. Peraturan Bank Indonesia Nomor 2/15/PBI/2000 tanggal 12 Juni
+2000 tentang Perubahan Surat Keputusan Direksi Bank Indonesia
+Nomor 31/150/KEP/DIR tanggal 12 November 1998 tentang
+Restrukturisasi Kredit;
+c. Pasal 47 Peraturan Bank Indonesia Nomor 8/21/PBI/2006 tanggal 5
+Oktober 2006 tentang Penilaian Kualitas Aktiva Bank Umum Yang
+
+Melaksanakan ...
+
+-15Melaksanakan Kegiatan Usaha Berdasarkan Prinsip Syariah;
+d. Pasal 46 dan Pasal 46A Peraturan Bank Indonesia Nomor
+9/9/PBI/2007 tanggal 18 Juni 2007 tentang Perubahan Atas Peraturan
+Bank Indonesia Nomor 8/21/PBI/2006 tentang Penilaian Kualitas
+Aktiva
+
+Bank
+
+Umum
+
+Yang
+
+Melaksanakan
+
+Kegiatan
+
+Usaha
+
+Berdasarkan Prinsip Syariah;
+e. Pasal 23 Peraturan Bank Indonesia Nomor 8/24/PBI/2006 tanggal 5
+Oktober 2006 tentang Penilaian Kualitas Aktiva Bagi Bank
+Perkreditan Rakyat Berdasarkan Prinsip Syariah.
+dicabut dan dinyatakan tidak berlaku.
+
+Pasal 27
+Ketentuan pelaksanaan tentang Restrukturisasi Pembiayaan sebagaimana
+diatur dalam Peraturan Bank Indonesia ini akan diatur lebih lanjut
+dengan Surat Edaran Bank Indonesia.
+
+Pasal 28 ...
+
+-16Pasal 28
+Peraturan Bank Indonesia ini mulai berlaku pada tanggal ditetapkan.
+
+Agar setiap orang mengetahuinya, memerintahkan pengundangan
+Peraturan Bank Indonesia ini dengan penempatannya dalam Lembaran
+Negara Republik Indonesia.
+
+Ditetapkan di Jakarta
+Tanggal 25 September 2008
+
+GUBERNUR BANK INDONESIA,
+
+BOEDIONO
+Diundangkan
+di Jakarta
+undangkan
+di Jakarta
+Padatanggal
+tanggall 25 Sep.
+September
+2008
+Pada
+08
+MENTERI
+HUKUM
+DAN
+HAK
+ASASI
+MANUSIA
+MENTERI
+HUKUM
+DAN
+HAK
+ASASI
+MANUSIA
+REPUBLIK INDONESIA
+ANDI MATTALATTA
+
+ANDI MATTALATTA
+
+LEMBARAN NEGARA REPUBLIK INDONESIA TAHUN 2008 NOMOR 138.........
+DPbS
+
+-17-
+
+PENJELASAN
+ATAS
+PERATURAN BANK INDONESIA
+NOMOR 10/18/PBI/2008
+TENTANG
+RESTRUKTURISASI PEMBIAYAAN BAGI BANK SYARIAH
+DAN UNIT USAHA SYARIAH
+
+I. UMUM
+Dalam rangka memelihara kesinambungan usahanya, Bank harus mengelola
+risiko kredit dari aktivitas Pembiayaan (credit risk), sehingga dapat meminimalkan
+potensi kerugian yang akan terjadi. Penurunan kegiatan usaha dan/atau kemampuan
+pembayaran nasabah dapat
+
+mempengaruhi kelancaran pemenuhan kewajiban
+
+nasabah yang pada akhirnya akan meningkatkan risiko kredit bagi Bank.
+Untuk menurunkan risiko kredit dalam aktivitas Pembiayaan, Bank dapat
+melakukan langkah-langkah antisipatif untuk menjaga kelangsungan usaha nasabah
+pembiayaan.
+
+Langkah-langkah
+
+tersebut
+
+antara
+
+lain
+
+dengan
+
+melakukan
+
+Restrukturisasi Pembiayaan terhadap nasabah yang masih memiliki prospek usaha
+dan/atau kemampuan membayar.
+Kebutuhan dan penggunaan dana nasabah pada prinsipnya berbeda-beda
+sehingga Bank menyediakan fasilitas Pembiayaan kepada nasabah dalam beragam
+akad yang sesuai dengan prinsip syariah. Masing-masing akad Pembiayaan
+memiliki karakteristik khusus yang harus dipertimbangkan Bank dalam
+pengelolaan Pembiayaan.
+Pelaksanaan Restrukturisasi Pembiayaan pada Bank selain memperhatikan
+prinsip
+
+syariah
+
+juga
+
+harus
+
+memenuhi
+
+prinsip
+
+kehati-hatian.
+
+Ketentuan
+
+Restrukturisasi Pembiayaan yang berlaku saat ini belum sepenuhnya memenuhi
+
+kebutuhan ...
+
+-2kebutuhan Bank. Oleh karena itu, diperlukan suatu ketentuan khusus yang
+mengatur tentang pelaksanaan Restrukturisasi Pembiayaan bagi Bank.
+
+II. PASAL DEMI PASAL
+Pasal 1
+Angka 1 sampai dengan angka 9
+Cukup Jelas.
+
+Pasal 2
+Cukup jelas.
+
+Pasal 3
+Cukup jelas.
+
+Pasal 4
+Cukup jelas.
+
+Pasal 5
+Ayat (1)
+Restrukturisasi Pembiayaan untuk nasabah Pembiayaan non produktif
+antara lain didasarkan pada ada tidaknya sumber pembayaran angsuran
+yang jelas dari nasabah setelah dilakukan restrukturisasi.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Yang dimaksud dengan “bukti-bukti yang memadai” antara lain adalah
+adanya laporan keuangan nasabah yang menunjukkan perbaikan
+
+kinerja ...
+
+-3kinerja perusahaan, adanya kontrak kerja yang diperoleh nasabah atau
+adanya sumber pembayaran lain yang jelas.
+
+Pasal 6
+Ayat (1)
+Pembatasan frekuensi restrukturisasi dimaksudkan agar Bank tidak
+melakukan restrukturisasi dalam rangka menghindari penurunan
+penggolongan kualitas Pembiayaan.
+Yang dimaksud dengan “jangka waktu akad Pembiayaan awal” adalah
+jangka waktu yang disepakati oleh Bank dan nasabah dalam akad
+Pembiayaan sebelum dilakukan restrukturisasi.
+Contoh :
+Bank dan nasabah pada tanggal 1 September 2008 melakukan akad
+Pembiayaan dengan jangka waktu selama 3 (tiga) tahun. Pada tanggal
+1 September 2009, Bank melakukan Restrukturisasi Pembiayaan
+pertama dengan cara memperpanjang jangka waktu menjadi 5 (lima)
+tahun. Restrukturisasi Pembiayaan kedua dan ketiga dapat dilakukan
+paling lambat pada tanggal 1 September 2011.
+Ayat (2)
+Contoh :
+Berdasarkan contoh pada ayat (1), Restukturisasi Pembiayaan kedua
+paling cepat dilakukan pada tanggal 1 Maret 2010 dan apabila
+dilakukan Restrukturisasi Pembiayaan ketiga maka Restrukturisasi
+Pembiayaan paling cepat dilakukan pada tanggal 1 September 2010.
+
+Pasal 7
+Cukup jelas.
+
+Pasal 8 ...
+
+-4Pasal 8
+Cukup Jelas.
+
+Pasal 9
+Yang dimaksud dengan “fatwa Majelis Ulama Indonesia” adalah fatwa yang
+dikeluarkan oleh Dewan Syariah Nasional-Majelis Ulama Indonesia.
+
+Pasal 10
+Ayat (1)
+Kebijakan
+
+dan
+
+Standard
+
+Operating
+
+Procedure
+
+Restrukturisasi
+
+Pembiayaan merupakan bagian dari kebijakan manajemen risiko Bank
+sebagaimana diatur dalam ketentuan Bank Indonesia yang berlaku.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Cukup jelas.
+Ayat (4)
+Cukup jelas.
+Ayat (5)
+Pokok-pokok yang diatur dalam Surat Edaran Bank Indonesia antara
+lain satuan kerja atau petugas khusus Restrukturisasi Pembiayaan,
+limit wewenang memutus Restrukturisasi Pembiayaan, dan sistem
+informasi manajemen Restrukturisasi Pembiayaan.
+Pasal 11
+Cukup jelas.
+
+Pasal 12 ...
+
+-5Pasal 12
+Cukup jelas.
+
+Pasal 13
+Yang dimaksud dengan “grace period” adalah masa tenggang yang diberikan
+Bank kepada nasabah untuk tidak melakukan pembayaran angsuran pokok
+dan margin untuk akad Murabahah atau Istishna’ atau angsuran Ijarah untuk
+akad Ijarah dan Ijarah Muntahiyyah Bittamlik.
+
+Pasal 14
+Ayat (1)
+Yang
+
+dimaksud
+
+dengan
+
+“penggolongan
+
+nasabah”
+
+adalah
+
+pengelompokkan nasabah yang didasarkan pada:
+a. besar kecilnya jumlah penyediaan dana yang diberikan oleh Bank
+kepada nasabah,
+b. Usaha Kecil dan Menengah dengan mempertimbangkan Sistem
+Pengendalian Risiko, Kondisi Tingkat Kesehatan dan Rasio
+Kewajiban Pemenuhan Modal Minimum Bank.
+Ayat (2)
+Kualitas Pembiayaan bagi BPRS dinilai berdasarkan ketepatan
+dan/atau kemampuan membayar kewajiban nasabah.
+
+Pasal 15
+Cukup Jelas.
+
+Pasal 16
+Cukup jelas.
+
+Pasal 17 ...
+
+-6Pasal 17
+Pelepasan Penyertaan Modal Sementara pada prinsipnya harus segera
+dilakukan walaupun belum mencapai 5 (lima) tahun.
+
+Pasal 18
+Cukup Jelas.
+
+Pasal 19
+Cukup Jelas.
+
+Pasal 20
+Ayat (1)
+Cukup Jelas.
+Ayat (2)
+Cukup Jelas.
+Ayat (3)
+Cukup Jelas.
+Ayat (4)
+Cukup Jelas.
+Ayat (5)
+Hal-hal yang diatur dalam Surat Edaran Bank Indonesia antara lain
+format laporan dan tata cara pelaporan.
+
+Pasal 21
+Cukup Jelas.
+
+Pasal 22 ...
+
+-7Pasal 22
+Cukup Jelas.
+
+Pasal 23
+Cukup Jelas.
+
+Pasal 24
+Cukup Jelas.
+
+Pasal 25
+Cukup jelas.
+
+Pasal 26
+Cukup jelas.
+
+Pasal 27
+Cukup jelas.
+
+Pasal 28
+Cukup jelas.
+
+TAMBAHAN LEMBARAN NEGARA REPUBLIK INDONESIA NOMOR 4898

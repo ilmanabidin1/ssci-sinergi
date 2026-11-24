@@ -1,0 +1,1327 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/17/DPbS
+Tentang: Surat Edaran Bank Indonesia perihal Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah
+Berkas: SEBI1317DPbS.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-perihal-Batas-Maksimum-Penyaluran-Dana-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+No. 13/ 17 /DPbS
+
+Jakarta, 30 Mei 2011
+
+SURAT EDARAN
+
+Kepada
+SEMUA BANK PEMBIAYAAN RAKYAT SYARIAH
+DI INDONESIA
+
+Perihal : Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat
+Syariah
+
+Sehubungan dengan telah diterbitkannya Peraturan Bank Indonesia Nomor
+13/5/PBI/2011 tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan
+Rakyat Syariah (Lembaran Negara Republik Indonesia Tahun 2011 Nomor 11,
+Tambahan Lembaran Negara Republik Indonesia Nomor 5191), perlu diatur
+ketentuan pelaksanaan dalam Surat Edaran Bank Indonesia sebagai berikut:
+
+I.
+
+UMUM
+1.
+
+BPRS dalam menyalurkan dana perlu memperhatikan prinsip kehatihatian antara lain dengan penyebaran portofolio Penyaluran Dana
+yang diberikan agar risiko Penyaluran Dana tersebut tidak terpusat
+pada Nasabah Penerima Fasilitas atau sekelompok Nasabah Penerima
+Fasilitas tertentu.
+
+2.
+
+Penyaluran Dana adalah penyediaan dana BPRS dalam bentuk
+Pembiayaan dan/atau Penempatan Dana Antar Bank.
+3. Pembiayaan ...
+
+2
+
+3.
+
+Pembiayaan adalah penyediaan dana atau tagihan yang dipersamakan
+dengan itu berupa:
+a.
+
+transaksi bagi hasil dalam bentuk mudharabah dan musyarakah;
+
+b.
+
+transaksi sewa-menyewa dalam bentuk ijarah atau sewa beli
+dalam bentuk ijarah muntahiya bittamlik;
+
+c.
+
+transaksi jual beli dalam bentuk piutang murabahah, salam, dan
+istishna’;
+
+d.
+
+transaksi pinjam meminjam dalam bentuk piutang qardh; dan
+
+e.
+
+transaksi sewa-menyewa jasa dalam bentuk ijarah untuk
+transaksi multijasa,
+
+berdasarkan persetujuan atau kesepakatan antara BPRS dan pihak lain
+yang mewajibkan pihak yang dibiayai dan/atau diberi fasilitas dana
+untuk mengembalikan dana tersebut setelah jangka waktu tertentu
+dengan imbalan ujrah, tanpa imbalan, atau bagi hasil.
+4.
+
+Penempatan Dana Antar Bank yang terkena Batas Maksimum
+Penyaluran Dana (BMPD) adalah penempatan dana BPRS pada BPRS
+lain dalam bentuk tabungan, deposito berjangka dan pembiayaan yang
+diberikan.
+
+5.
+
+Dalam rangka pemantauan Penyaluran Dana, BPRS menyampaikan
+laporan BMPD secara bulanan kepada Bank Indonesia.
+
+6.
+
+Pada prinsipnya, pelaporan BMPD yang mencakup data kantor pusat
+dan data seluruh kantor cabang BPRS disampaikan oleh kantor pusat
+BPRS secara on-line. Namun demikian dalam kondisi tertentu
+pelaporan BMPD dapat disampaikan secara off-line.
+
+7.
+
+Penyusunan dan penyampaian laporan BMPD pada Bank Indonesia
+secara on-line dilakukan dengan menggunakan aplikasi Data Entry
+Laporan ...
+
+3
+
+Laporan Berkala BPRS dan aplikasi Web User BPRS Laporan Berkala
+BPRS.
+
+II.
+
+PERHITUNGAN BMPD
+1.
+
+BMPD untuk Pembiayaan
+Perhitungan BMPD untuk Pembiayaan dilakukan berdasarkan jenisjenis akad yang digunakan, yaitu:
+a.
+
+Pembiayaan murabahah, Pembiayaan istishna’, dan Pembiayaan
+multijasa dihitung berdasarkan saldo harga pokok;
+
+b.
+
+Pembiayaan salam dihitung berdasarkan harga perolehan;
+
+c.
+
+Pembiayaan
+
+mudharabah,
+
+Pembiayaan
+
+musyarakah
+
+dan
+
+Pembiayaan qardh dihitung berdasarkan saldo baki debet; dan
+d.
+
+Pembiayaan ijarah atau ijarah muntahiya bittamlik dihitung
+berdasarkan saldo harga perolehan aktiva ijarah atau ijarah
+muntahiya bittamlik dikurangi akumulasi penyusutan atau
+amortisasi aktiva ijarah atau ijarah muntahiya bittamlik.
+
+2.
+
+BMPD untuk Penempatan Dana Antar Bank dalam bentuk tabungan
+Perhitungan BMPD untuk Penempatan Dana Antar Bank dalam
+bentuk tabungan dilakukan berdasarkan saldo tertinggi pada bulan
+laporan.
+
+3.
+
+BMPD untuk Penempatan Dana Antar Bank dalam bentuk deposito
+Perhitungan BMPD untuk Penempatan Dana Antar Bank dalam
+bentuk deposito dilakukan berdasarkan jumlah nominal sebagaimana
+tercantum dalam seluruh bilyet deposito pada BPRS yang sama.
+
+4.
+
+BMPD untuk Penyaluran Dana kepada Pihak Terkait
+
+BMPD ...
+
+4
+
+BMPD untuk Penyaluran Dana kepada masing-masing dan/atau
+seluruh Pihak Terkait, sebesar 10% (sepuluh persen) dari Modal
+BPRS.
+5.
+
+BMPD untuk Penyaluran Dana kepada Pihak Tidak Terkait
+BMPD untuk Penyaluran Dana kepada masing-masing Nasabah
+Penerima Fasilitas Pihak Tidak Terkait, sebesar 20% (dua puluh
+persen) dari Modal BPRS.
+
+6.
+
+BMPD untuk Penyaluran Dana dalam bentuk Pembiayaan kepada satu
+atau lebih Nasabah Penerima Fasilitas Pihak Tidak Terkait yang
+merupakan bagian dari kelompok Nasabah Penerima Fasilitas Pihak
+Tidak Terkait
+BMPD untuk Penyaluran Dana dalam bentuk Pembiayaan kepada satu
+kelompok Nasabah Penerima Fasilitas yang merupakan Pihak Tidak
+Terkait sebesar 30% (tiga puluh persen) dari Modal BPRS, dengan
+Pembiayaan kepada masing-masing Nasabah Penerima Fasilitas
+tersebut tidak melebihi 20% (dua puluh persen) dari Modal BPRS.
+Termasuk dalam pengertian satu kelompok Nasabah Penerima
+Fasilitas adalah Nasabah Penerima Fasilitas non bank yang memiliki
+hubungan kepengurusan, kepemilikan, atau keuangan dengan bank
+selaku Nasabah Penerima Fasilitas.
+
+III. PELANGGARAN BMPD
+1.
+
+BPRS dinyatakan melakukan pelanggaran BMPD apabila terdapat
+selisih
+
+lebih
+
+direalisasikan
+
+antara
+
+persentase
+
+terhadap
+
+Modal
+
+Penyaluran Dana
+BPRS,
+
+dengan
+
+pada
+
+saat
+
+BMPD
+
+yang
+
+diperkenankan. BPRS tetap dinilai melanggar BMPD selama
+pelanggaran BMPD tersebut belum diselesaikan.
+2. Modal ...
+
+5
+
+2.
+
+Modal BPRS yang digunakan sebagai dasar dalam perhitungan
+pelanggaran BMPD adalah Modal BPRS pada posisi bulan terakhir
+sebelum tanggal realisasi Penyaluran Dana.
+
+3.
+
+Dalam hal terdapat Penyaluran Dana dalam bentuk Pembiayaan
+kepada anggota kelompok Nasabah Penerima Fasilitas Pihak Tidak
+Terkait yang secara individu tidak melanggar BMPD namun secara
+kelompok terdapat pelanggaran BMPD, maka pelanggaran BMPD
+dihitung terhadap satu kelompok Nasabah Penerima Fasilitas Pihak
+Tidak Terkait.
+
+4.
+
+Dalam hal terdapat Penyaluran Dana dalam bentuk Pembiayaan
+kepada salah satu anggota kelompok Nasabah Penerima Fasilitas
+Pihak Tidak Terkait yang secara individu melanggar BMPD namun
+secara
+
+kelompok
+
+tidak
+
+terdapat
+
+pelanggaran
+
+BMPD,
+
+maka
+
+pelanggaran BMPD dihitung terhadap individu Nasabah Penerima
+Fasilitas Pihak Tidak Terkait.
+5.
+
+Dalam hal terdapat Penyaluran Dana dalam bentuk Pembiayaan
+kepada salah satu anggota kelompok Nasabah Penerima Fasilitas
+Pihak Tidak Terkait yang secara individu melanggar BMPD dan
+secara kelompok terdapat pelanggaran BMPD, maka pelanggaran
+BMPD dihitung berdasarkan penjumlahan atas pelanggaran BMPD
+untuk masing-masing anggota kelompok dan pelanggaran BMPD
+terhadap satu kelompok Nasabah Penerima Fasilitas Pihak Tidak
+Terkait.
+
+6.
+
+Contoh Perhitungan BMPD:
+BPRS ”X” melakukan Penyaluran Dana berupa Pembiayaan kepada
+beberapa nasabah dan Penempatan Dana Antar Bank kepada BPRS
+“Y” (Pihak Tidak Terkait) masing-masing sebagai berikut:
+
+-
+
+Mudharabah ...
+
+6
+
+- Mudharabah kepada nasabah A sebesar Rp100.000.000,00 (seratus
+juta rupiah), nisbah bagi hasil 25:75, jangka waktu 2 (dua) tahun,
+tanggal akad 7 Maret 2011.
+- Musyarakah kepada nasabah B sebesar Rp80.000.000,00 (delapan
+puluh juta rupiah), nisbah bagi hasil 20:80, jangka waktu 1 (satu)
+tahun, tanggal akad 9 Maret 2011.
+- Murabahah untuk pembelian rumah kepada nasabah C dengan
+harga pokok rumah sebesar Rp450.000.000,00 (empat ratus lima
+puluh juta rupiah) dan margin sebesar Rp100.000.000,00 (seratus
+juta rupiah), jangka waktu 50 (lima puluh) bulan, tanggal akad 11
+Maret 2011.
+- Salam untuk pembelian beras jenis IR45 sebanyak 2 (dua) ton
+kepada nasabah D sebesar Rp50.000.000,00 (lima puluh juta
+rupiah), jangka waktu 6 (enam) bulan, tanggal akad 15 Maret 2011.
+- Ijarah atas hak penggunaan kios yang diperoleh dari Tuan F
+dengan harga perolehan sewa sebesar Rp120.000.000,00 (seratus
+dua puluh juta rupiah) selama 2 (dua) tahun kepada nasabah E dan
+BPRS
+
+menetapkan
+
+pendapatan
+
+sewa
+
+(ujroh)
+
+sebesar
+
+Rp20.000.000,00 (dua puluh juta rupiah), jangka waktu 2 (dua)
+tahun, tanggal akad 22 Maret 2011.
+- Musyarakah kepada BPRS “Y” sebesar Rp450.000.000,00 (empat
+ratus lima puluh juta rupiah), nisbah bagi hasil 20:80, jangka waktu
+3 (tiga) tahun, tanggal akad 15 Maret 2011.
+- Penempatan Dana Antar Bank pada BPRS “Y” berupa deposito
+mudharabah sebesar Rp50.000.000,00 (lima puluh juta rupiah)
+dengan nisbah bagi hasil 30:70, jangka waktu 6 (enam) bulan,
+mulai ...
+
+7
+
+mulai tanggal 24 Maret 2011 hingga jatuh tempo tanggal 23
+September 2011.
+Nasabah A, B, C, D dan E serta BPRS “Y” tersebut di atas memiliki
+hubungan kepemilikan, kepengurusan dan/atau keuangan, sehingga
+merupakan satu kelompok (satu grup).
+Modal BPRS “X”:
+- per akhir Februari 2011 sebesar Rp2.000.000.000,00 (dua miliar
+rupiah).
+- per akhir Maret 2011 sebesar Rp1.900.000,00 (satu miliar sembilan
+ratus juta rupiah).
+BMPD Pihak Tidak Terkait:
+Individual 20%:
+- bulan Maret 2011 sebesar Rp400.000.000,00 (empat ratus juta
+rupiah) = (20% x Rp2.000.000.000,00)
+- bulan April 2011 sebesar Rp380.000.000,00 (tiga ratus delapan
+puluh juta rupiah) = (20% x Rp1.900.000,00)
+Kelompok 30%:
+- bulan Maret 2011 sebesar Rp600.000.000,00 (enam ratus juta
+rupiah) = (30% x Rp2.000.000.000,00)
+- bulan April 2011 sebesar Rp570.000.000,00 (lima ratus tujuh puluh
+juta rupiah) = (30% x Rp1.900.000,00)
+Saldo masing-masing Pembiayaan dan nominal Penempatan Dana Antar
+Bank per akhir April 2011:
+- Pembiayaan mudharabah kepada nasabah A dengan baki debet
+Rp95.000.000,00 (sembilan puluh lima juta rupiah).
+
+- Pembiayaan ...
+
+8
+
+- Pembiayaan musyarakah kepada Nasabah B dengan baki debet
+Rp75.000.000,00 (tujuh puluh lima juta rupiah).
+- Pembiayaan murabahah kepada Nasabah C dengan saldo piutang
+sebesar Rp539.000.000,00 (lima ratus tiga puluh sembilan juta rupiah)
+dan saldo margin yang ditangguhkan sebesar Rp98.000.000,00
+(sembilan puluh delapan juta rupiah).
+- Pembiayaan salam kepada Nasabah D dengan saldo piutang sebesar
+Rp50.000.000,00 (lima puluh juta rupiah).
+- Pembiayaan ijarah kepada Nasabah E dengan harga perolehan aktiva
+ijarah sebesar Rp120.000.000,00 (seratus dua puluh juta rupiah) dan
+akumulasi amortisasi sebesar Rp5.000.000,00 (lima juta rupiah).
+- Pembiayaan
+
+kepada
+
+musyarakah
+
+BPRS
+
+“Y”
+
+sebesar
+
+Rp440.000.000,00 (empat ratus empat puluh juta rupiah).
+- Penempatan
+
+Dana
+
+Antar
+
+Bank
+
+pada
+
+BPRS
+
+“Y”
+
+sebesar
+
+Rp50.000.000,00 (lima puluh juta rupiah).
+Perhitungan Pelanggaran BMPD
+1) Bulan Maret 2011:
+Nama
+Nasabah
+
+Jumlah Penyaluran
+Dana
+
+BMPD
+
+Pelanggaran BMPD
+Nominal
+
+%
+
+A
+
+100.000.000,00
+
+400.000.000,00
+
+-
+
+0
+
+B
+
+80.000.000,00
+
+400.000.000,00
+
+-
+
+0
+
+C
+
+450.000.000,00
+
+400.000.000,00
+
+50.000.000,00
+
+2,50
+
+D
+
+50.000.000,00
+
+400.000.000,00
+
+-
+
+0
+
+E
+
+120.000.000,00
+
+400.000.000,00
+
+-
+
+0
+
+BPRS "Y"
+
+450.000.000,00
+
+500.000.000,00
+
+400.000.000,00
+
+100.000.000,00
+
+5,00
+
+1.250.000.000,00
+
+600.000.000,00
+
+650.000.000,00
+
+32,50
+
+50.000.000,00
+
+Kelompok
+
+Jumlah pelanggaran
+
+40,00
+
+Berdasarkan ...
+
+9
+
+Berdasarkan perhitungan tersebut di atas, terdapat pelanggaran
+BMPD kelompok Nasabah Penerima Fasilitas Pihak Tidak Terkait
+sebesar 40% (empat puluh persen) yang terdiri dari pelanggaran
+individu Nasabah Penerima Fasilitas atas nama nasabah C
+(Pembiayaan murabahah) sebesar 2,50% (dua koma lima puluh
+persen), pelanggaran individu Nasabah Penerima Fasilitas atas
+nama
+
+nasabah
+
+BPRS
+
+“Y”
+
+(Pembiayaan
+
+musyarakah
+
+&
+
+Penempatan Dana Antar Bank) sebesar 5% (lima persen), dan
+pelanggaran secara kelompok Nasabah Penerima Fasilitas sebesar
+32,50% (tiga puluh dua koma lima puluh persen).
+Jumlah Penyaluran Dana kepada BPRS “Y” yang diperhitungkan
+dalam pelanggaran BMPD Nasabah Penerima Fasilitas Pihak
+Tidak Terkait secara individual adalah sebesar Rp500.000.000,00
+(lima ratus juta rupiah) yang berasal dari Pembiayaan sebesar
+Rp450.000.000,00 (empat ratus lima puluh juta rupiah) dan
+Penempatan Dana Antar Bank sebesar Rp50.000.000,00 (lima
+puluh juta rupiah), sedangkan jumlah Penyaluran Dana kepada
+BPRS “Y” yang diperhitungkan dalam pelanggaran BMPD
+kelompok Nasabah Penerima Fasilitas Pihak Tidak Terkait hanya
+berupa Pembiayaan yaitu sebesar Rp450.000.000,00 (empat ratus
+lima puluh juta rupiah).
+
+2) Bulan ...
+
+10
+
+2) Bulan April 2011:
+Nama Nasabah
+
+Jumlah Penyaluran
+Dana
+
+BMPD
+
+Pelanggaran BMPD
+Nominal
+
+%
+
+A
+
+95.000.000,00
+
+380.000.000,00
+
+-
+
+0
+
+B
+
+75.000.000,00
+
+380.000.000,00
+
+-
+
+0
+
+C
+
+441.000.000,00
+
+380.000.000,00
+
+61.000.000,00
+
+3,21
+
+D
+
+40.000.000,00
+
+380.000.000,00
+
+-
+
+0
+
+E
+
+115.000.000,00
+
+380.000.000,00
+
+-
+
+0
+
+BPRS "Y"
+
+440.000.000,00
+490.000.000,00
+
+380.000.000,00
+
+110.000.000,00
+
+5,79
+
+1.206.000.000,00
+
+570.000.000,00
+
+636.000.000,00
+
+33,47
+
+50.000.000,00
+
+Kelompok
+
+Jumlah pelanggaran
+
+42,47
+
+Berdasarkan perhitungan tersebut di atas, pada bulan April masih
+terdapat pelanggaran BMPD kelompok Nasabah Penerima
+Fasilitas Pihak Tidak Terkait sebesar 42,47% (empat puluh dua
+koma empat puluh tujuh persen) yang terdiri dari pelanggaran
+individu Nasabah Penerima Fasilitas atas nama nasabah C
+(Pembiayaan murabahah) sebesar 3,21% (tiga koma dua puluh
+satu persen), pelanggaran individu Nasabah Penerima Fasilitas
+atas nama nasabah BPRS “Y” (Pembiayaan musyarakah &
+Penempatan Dana Antar Bank) sebesar 5,79% (lima koma tujuh
+puluh sembilan persen), dan pelanggaran secara kelompok
+Nasabah Penerima Fasilitas sebesar 33,47% (tiga puluh tiga koma
+empat puluh tujuh persen).
+Jumlah Penyaluran Dana kepada BPRS “Y” yang diperhitungkan
+dalam pelanggaran BMPD Nasabah Penerima Fasilitas Pihak
+Tidak Terkait secara individual adalah sebesar Rp490.000.000,00
+(empat ratus sembilan puluh juta rupiah) yang berasal dari
+Pembiayaan sebesar Rp440.000.000,00 (empat ratus empat puluh
+juta rupiah) dan Penempatan Dana Antar Bank sebesar
+Rp50.000.000,00 (lima puluh juta rupiah), sedangkan jumlah
+Penyaluran ...
+
+11
+
+Penyaluran Dana kepada BPRS “Y” yang diperhitungkan dalam
+pelanggaran BMPD kelompok Nasabah Penerima Fasilitas Pihak
+Tidak
+
+Terkait
+
+hanya
+
+berupa
+
+Pembiayaan
+
+yaitu
+
+sebesar
+
+Rp440.000.000,00 (empat ratus empat puluh juta rupiah).
+
+IV. PELAMPAUAN BMPD
+1.
+
+Penyaluran Dana oleh BPRS dikategorikan sebagai pelampauan
+BMPD apabila terjadi selisih lebih antara persentase Penyaluran Dana
+yang telah direalisasikan terhadap Modal BPRS pada saat tanggal
+laporan dengan BMPD yang diperkenankan dan tidak termasuk
+Pelanggaran BMPD.
+
+2.
+
+Pelampauan BMPD dapat disebabkan oleh penurunan Modal BPRS,
+penggabungan usaha (merger), peleburan usaha (konsolidasi),
+pengambilalihan usaha (akuisisi), perubahan struktur kepemilikan
+dan/atau kepengurusan yang menyebabkan perubahan Pihak Terkait
+dan/atau kelompok Nasabah Penerima Fasilitas, dan/atau perubahan
+ketentuan.
+
+3.
+
+Contoh Perhitungan Pelampauan BMPD karena penurunan modal:
+BPRS ”X” melakukan Penyaluran Dana dalam bentuk Pembiayaan
+murabahah untuk pembelian mobil kepada Nasabah Penerima
+Fasilitas A (Pihak Tidak Terkait) pada tanggal 15 April 2011 dengan
+harga pokok sebesar Rp240.000.000,00 (dua ratus empat puluh juta
+rupiah) dengan margin sebesar Rp24.000.000,00 (dua puluh empat
+juta rupiah) selama jangka waktu 1 (satu) tahun. Pembiayaan
+murabahah diangsur setiap bulan sebesar Rp22.000.000,00 (dua puluh
+dua juta rupiah).
+
+Modal ...
+
+12
+
+Modal BPRS:
+- per akhir Maret 2011 sebesar Rp1.500.000.000,00 (satu miliar lima
+ratus juta rupiah).
+- per akhir April 2011 sebesar Rp1.350.000.000,00 (satu miliar tiga
+ratus lima puluh juta rupiah).
+- per akhir Mei 2011 sebesar Rp1.200.000.000,00 (satu miliar dua
+ratus juta rupiah).
+- per akhir Juni 2011 sebesar Rp800.000.000,00 (delapan ratus juta
+rupiah).
+Saldo Pembiayaan murabahah adalah sebagai berikut:
+- per akhir April 2011 saldo piutang sebesar Rp242.000.000,00 (dua
+ratus empat puluh dua juta rupiah) dan saldo margin yang
+ditangguhkan sebesar Rp22.000.000,00 (dua puluh dua juta rupiah).
+- per akhir Mei 2011 saldo piutang sebesar Rp220.000.000,00 (dua
+ratus dua puluh juta rupiah) dan saldo margin yang ditangguhkan
+sebesar Rp20.000.000,00 (dua puluh juta rupiah).
+- per akhir Juni 2011 saldo piutang sebesar Rp198.000.000,00
+(seratus sembilan puluh delapan juta rupiah) dan saldo margin yang
+ditangguhkan sebesar Rp18.000.000,00 (delapan belas juta rupiah).
+Perhitungan pelampauan BMPD Individu Nasabah Penerima Fasilitas
+A (Pihak Tidak Terkait) posisi bulan April, Mei dan Juni 2011:
+Bulan
+
+Saldo Harga Pokok
+
+BMPD
+
+Pelampauan BMPD
+Nominal
+
+%
+
+April
+
+220.000.000,00
+
+270.000.000,00
+
+-
+
+0
+
+Mei
+
+200.000.000,00
+
+240.000.000,00
+
+-
+
+0
+
+Juni
+
+180.000.000,00
+
+160.000.000,00
+
+20.000.000,00
+
+2,50
+
+Berdasarkan ...
+
+13
+
+Berdasarkan perhitungan tersebut di atas, terdapat pelampauan BMPD
+individu Nasabah Penerima Fasilitas Pihak Tidak Terkait sebesar
+2,50% (dua koma lima puluh persen) pada bulan Juni 2011.
+
+V.
+
+PENYAMPAIAN
+
+LAPORAN
+
+BMPD
+
+DAN/ATAU
+
+KOREKSI
+
+LAPORAN BMPD
+1.
+
+BPRS pelapor menyampaikan laporan BMPD kepada Bank Indonesia
+secara on-line melalui fasilitas ekstranet Bank Indonesia atau sarana
+teknologi lainnya paling lama tanggal 14 (empat belas) pada bulan
+berikutnya setelah berakhirnya bulan laporan.
+
+2.
+
+BPRS pelapor menyampaikan koreksi laporan BMPD kepada Bank
+Indonesia secara on-line melalui fasilitas ekstranet Bank Indonesia
+atau sarana teknologi lainnya paling lama tanggal 20 (dua puluh) pada
+bulan berikutnya setelah berakhirnya bulan laporan.
+
+3.
+
+Laporan BMPD dan/atau koreksi laporan BMPD secara on-line dapat
+disampaikan pada hari Sabtu atau hari libur.
+
+4.
+
+Dalam hal BPRS menyampaikan laporan melewati batas waktu
+sebagaimana dimaksud pada angka 1 dan angka 2 sampai dengan
+akhir bulan berikutnya setelah berakhirnya bulan laporan, maka
+laporan BMPD dan/atau koreksi laporan BMPD yang disampaikan
+dinyatakan terlambat.
+
+5.
+
+Laporan BMPD dan/atau koreksi laporan BMPD yang mengalami
+keterlambatan sebagaimana dimaksud pada angka 4 tetap disampaikan
+secara on-line.
+
+6.
+
+Dalam hal BPRS tidak menyampaikan laporan BMPD dan/atau
+koreksi laporan BMPD sampai dengan akhir bulan berikutnya setelah
+
+berakhirnya ...
+
+14
+
+berakhirnya
+
+bulan
+
+laporan
+
+maka
+
+BPRS
+
+dinyatakan
+
+tidak
+
+menyampaikan laporan BMPD dan/atau koreksi laporan BMPD.
+7.
+
+BPRS yang dinyatakan tidak menyampaikan laporan BMPD dan/atau
+koreksi laporan BMPD sebagaimana dimaksud pada angka 6 tetap
+wajib menyampaikan laporan BMPD secara off-line.
+
+8.
+
+Dalam hal penyampaian laporan BMPD dan/atau koreksi laporan
+BMPD dilakukan setelah akhir bulan berikutnya setelah bulan laporan
+maka laporan tersebut hanya dapat disampaikan secara off-line.
+
+9.
+
+Penyampaian laporan BMPD dan/atau koreksi laporan BMPD secara
+off-line dilakukan dalam bentuk disket atau cd-rom dan hasil cetak
+komputer (hard copy) sebanyak 1 (satu) set disertai hasil validasi yang
+telah ditandatangani oleh penanggung jawab dan disampaikan kepada
+Bank Indonesia dengan alamat:
+a.
+
+Direktorat Perbankan Syariah Jl. M.H. Thamrin No. 2 Jakarta
+10350, bagi BPRS Pelapor yang berkedudukan di wilayah DKI
+Jakarta Raya, Banten, Bogor, Depok, Karawang, dan Bekasi,
+paling lambat pukul 16.00 WIB; atau
+
+b.
+
+Kantor Bank Indonesia setempat, bagi BPRS pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud dalam
+huruf a, paling lambat pukul 16.00 waktu setempat.
+
+10. Tanggal penerimaan laporan BMPD yang disampaikan secara off-line
+adalah tanggal stempel pos untuk yang dikirim via pos atau tanda
+terima dari jasa ekspedisi atau tanggal tanda terima Bank Indonesia
+apabila disampaikan secara langsung.
+11. Dalam hal terjadi kerusakan disket atau cd-rom yang telah diterima
+oleh Bank Indonesia secara off-line, BPRS Pelapor menyampaikan
+
+ulang ...
+
+15
+
+ulang disket atau cd-rom laporan BMPD dan/atau koreksi laporan
+BMPD setelah diminta oleh Bank Indonesia.
+12. BPRS menyampaikan pemberitahuan secara tertulis kepada Bank
+Indonesia untuk mendapatkan pengecualian penyampaian laporan
+BMPD
+
+dan/atau koreksi laporan BMPD secara on-line dengan
+
+alamat:
+a.
+
+Direktorat Perbankan Syariah Jl. M.H. Thamrin No. 2 Jakarta
+10350, bagi BPRS Pelapor yang berkedudukan di wilayah DKI
+Jakarta Raya, Banten, Bogor, Depok, Karawang, dan Bekasi,
+paling lambat pukul 16.00 WIB; atau
+
+b.
+
+Kantor Bank Indonesia setempat, bagi BPRS pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud dalam
+huruf a, paling lambat pukul 16.00 waktu setempat.
+
+13. Dalam hal tanggal 14 sebagaimana dimaksud pada angka 1, tanggal
+20 sebagaimana dimaksud pada angka 2 dan akhir bulan berikutnya
+setelah berakhirnya bulan laporan sebagaimana dimaksud angka 5
+jatuh pada hari Sabtu atau hari libur dan BPRS akan menyampaikan
+laporan BMPD tidak secara on-line, maka laporan BMPD dan/atau
+koreksi laporan BMPD secara off-line disampaikan pada hari kerja
+sebelumnya.
+14. Hari libur yang terkait dengan penyampaian laporan BMPD dan/atau
+koreksi laporan BMPD secara off-line adalah hari libur nasional
+dan/atau hari libur setempat yang ditetapkan oleh Pemerintah Daerah
+setempat.
+
+VI. FORMAT ...
+
+16
+
+VI. FORMAT DAN TATA CARA PENYUSUNAN LAPORAN BMPD
+DAN/ATAU KOREKSI LAPORAN BMPD
+1.
+
+Format dan tata cara penyusunan laporan BMPD diatur dalam
+Pedoman Penyusunan Laporan BMPD sebagaimana tercantum dalam
+Lampiran yang merupakan bagian yang tidak terpisahkan dari Surat
+Edaran ini.
+
+2.
+
+Tata cara pengoperasian aplikasi Laporan BMPD terdapat dalam buku
+mengenai Tata Cara Aplikasi Data Entry Laporan Berkala BPRS dan
+Tata Cara Aplikasi Web User BPRS Laporan Berkala BPRS, yang
+disampaikan kepada BPRS.
+
+VII. SARANA DAN SUMBER DAYA MANUSIA YANG DIPERLUKAN
+Dalam rangka penyusunan dan penyampaian laporan BMPD dan/atau
+koreksi
+
+laporan BMPD, BPRS perlu melakukan persiapan
+
+serta
+
+menyediakan sarana dan sumber daya manusia sebagai berikut:
+1.
+
+Personal Computer dengan memenuhi konfigurasi minimal hardware
+dan software sebagaimana tercantum dalam buku mengenai Tata Cara
+Aplikasi Data Entry Laporan Berkala BPRS dan Tata Cara Aplikasi
+Web User BPRS Laporan Berkala BPRS.
+
+2.
+
+Pegawai yang ditugaskan (Petugas) untuk mengoperasikan aplikasi
+dan melakukan verifikasi laporan BMPD dan/atau koreksi laporan
+BMPD.
+
+3.
+
+Penanggungjawab yang ditunjuk untuk melakukan verifikasi ulang
+dalam rangka meyakini kebenaran laporan BMPD dan/atau koreksi
+laporan BMPD serta menyampaikan laporan BMPD dan/atau koreksi
+laporan BMPD kepada Bank Indonesia.
+
+4. Sistem ...
+
+17
+
+4.
+
+Sistem pengamanan yang memadai terhadap sarana komputer yang
+digunakan, aplikasi, dan data laporan BMPD dan/atau koreksi laporan
+BMPD.
+
+5.
+
+Back up data laporan BMPD dan/atau koreksi laporan BMPD yang
+ditatausahakan dengan baik.
+
+VIII. TATA CARA PEMBAYARAN SANKSI KEWAJIBAN MEMBAYAR
+1.
+
+Pembayaran sanksi kewajiban membayar sebagaimana dimaksud
+dalam Pasal 29 Peraturan Bank Indonesia Nomor 13/5/PBI/2011
+tentang BMPD BPRS dilakukan oleh kantor pusat BPRS pelapor
+kepada Bank Indonesia dengan cara transfer melalui:
+a.
+
+Kliring
+Transfer ditujukan ke rekening nomor 566.000446.980 ”Rekening penerimaan sanksi administratif BPRS”, dengan
+mencantumkan pada kolom keterangan ”pembayaran sanksi
+kewajiban
+
+membayar
+
+dari
+
+BPRS
+
+XXX
+
+atas
+
+kesalahan/keterlambatan/tidak menyampaikan laporan BMPD
+dan/atau koreksi laporan BMPD periode BB-TTTT”.
+b.
+
+BI-RTGS
+Transfer ditujukan ke rekening nomor 566.000446.980 ”Rekening penerimaan sanksi administratif BPRS”, dengan
+mencantumkan
+
+Transaction
+
+BIRBK566
+
+mencantumkan
+
+dan
+
+Reference
+pada
+
+Number
+kolom
+
+(TRN)
+
+keterangan
+
+”pembayaran sanksi kewajiban membayar dari BPRS XXX atas
+kesalahan/keterlambatan/tidak menyampaikan laporan BMPD
+dan/atau koreksi laporan BMPD periode BB-TTTT”.
+
+2. BPRS ...
+
+18
+
+2.
+
+BPRS pelapor menyampaikan fotokopi bukti pembayaran sanksi
+kewajiban membayar sebagaimana dimaksud pada angka 1 kepada
+Bank Indonesia dengan alamat:
+a.
+
+Direktorat Perbankan Syariah Jl. M.H. Thamrin No. 2 Jakarta
+10350, atau melalui Faksimili Nomor 021-3447620, 0213501990, bagi BPRS Pelapor yang berkedudukan di wilayah
+DKI Jakarta Raya, Banten, Bogor, Depok, Karawang, dan
+Bekasi; atau
+
+b.
+
+Kantor Bank Indonesia setempat, bagi BPRS pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud dalam
+huruf a.
+
+IX. ALAMAT PENYAMPAIAN PERTANYAAN
+Pertanyaan-pertanyaan yang berkaitan dengan:
+1.
+
+Aplikasi Data Entry Laporan Berkala BPRS dan aplikasi Web User
+BPRS Laporan Berkala BPRS disampaikan kepada Help Desk Bank
+Indonesia dengan alamat Jl. M.H. Thamrin No. 2 Jakarta 10350,
+Telepon Nomor 021-3818000 (hunting), Faksimili Nomor 0213866071 atau Email Address: helpdesk@bi.go.id.
+
+2.
+
+Ketentuan laporan BMPD BPRS disampaikan kepada:
+a.
+
+Direktorat Perbankan Syariah, Jl. M.H. Thamrin No.2 Jakarta
+10350, Telepon Nomor 021-3818749, 021-3818513, Faksimili
+Nomor
+
+021-3447620,
+
+dpbs@bi.go.id,
+
+021-3501989,
+
+Email
+
+Address:
+
+bagi BPRS pelapor yang berkedudukan di
+
+wilayah DKI Jakarta Raya, Banten, Bogor, Depok, Karawang,
+dan Bekasi.
+
+b. Kantor ...
+
+19
+
+b.
+
+Kantor Bank Indonesia setempat bagi BPRS pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud pada huruf
+a.
+
+X.
+
+LAIN-LAIN
+1.
+
+BPRS melaporkan struktur kelompok usaha yang terkait dengan
+BPRS untuk posisi akhir tahun paling lama 30 (tiga puluh) hari setelah
+akhir tahun, antara lain berupa:
+a.
+
+Pemegang saham perorangan yang memiliki 10% (sepuluh
+persen) atau lebih saham BPRS;
+
+b.
+
+Pemegang saham badan hukum yang memiliki 10% (sepuluh
+persen) atau lebih saham BPRS, sampai dengan perorangan yang
+menjadi ultimate shareholders;
+
+c.
+
+Pemegang saham perorangan yang memiliki 10% (sepuluh
+persen) atau lebih saham badan hukum yang memiliki 10%
+(sepuluh persen) atau lebih saham BPRS;
+
+d.
+
+Pemegang saham badan hukum yang memiliki 10% (sepuluh
+persen) atau lebih saham badan hukum yang memiliki 10%
+(sepuluh persen) atau lebih saham BPRS, sampai dengan
+perorangan yang menjadi ultimate shareholders;
+
+e.
+
+Pemegang saham perorangan yang memiliki saham BPRS
+kurang
+
+dari
+
+10%
+
+(sepuluh
+
+persen)
+
+namun
+
+melakukan
+
+Pengendalian BPRS; dan/atau
+f.
+
+Pemegang saham badan hukum yang memiliki 10% (sepuluh
+persen) atau lebih saham badan hukum yang memiliki saham
+BPRS kurang dari 10% (sepuluh persen) namun melakukan
+
+Pengendalian ...
+
+20
+
+Pengendalian BPRS, sampai dengan perorangan yang menjadi
+ultimate shareholders.
+Contoh:
+Laporan
+
+struktur
+
+kelompok
+
+usaha
+
+PT
+
+BPRS
+
+XYZ:
+STRUKTUR KELOMPOK USAHA PT BPRS XYZ
+Perorangan
+(U/S)
+
+Perorangan
+(U/S)
+
+Perorangan
+(U/S)
+
+Perorangan
+(U/S)
+
+Perorangan
+
+65%
+
+80%
+
+PT G Tbk.
+
+99%
+15%
+
+PT F
+
+20%
+
+Perorangan
+(U/S)
+
+PT E
+70%
+30%
+
+PT J
+
+60%
+
+PT K
+
+20%
+
+PT I
+
+20%
+
+PT D
+
+Perorangan
+
+90%
+
+Perorangan
+(U/S)
+
+65%
+
+Perorangan
+(U/S)
+
+85%
+15%
+
+20%
+15%
+
+PT H
+
+PT C
+25%
+25%
+
+Perorangan
+
+3%
+
+PT BPRS XYZ
+
+10%
+
+Perorangan
+
+2%
+
+Hubungan
+Keluarga
+
+Perorangan
+(U/S)
+
+PT L
+
+10%
+
+Perorangan
+(U/S)
+
+Ket:
+U/S
+
+2.
+
+PT G Tbk.
+
+: Ultimate Shareholder
+: Pengendali
+
+25%
+
+PT B Tbk.
+(Tdk ada PS ≥ 25%)
+(U/S)
+
+100%
+
+PUBLIK
+Dirinci untuk PS ≥ 10%)
+
+: Jalur bukan Pengendalian
+: Jalur Pengendalian
+
+BPRS melaporkan setiap rencana perubahan struktur kelompok usaha
+yang menyebabkan perubahan pengendali BPRS paling lama 30 (tiga
+puluh) hari sebelum terjadinya perubahan.
+
+3.
+
+BPRS mengajukan calon PSP untuk dilakukan uji kemampuan dan
+kepatutan (fit and proper test) yang disebabkan oleh adanya
+perubahan struktur kelompok usaha BPRS yang mengakibatkan
+terjadinya perubahan Pengendalian.
+XI. PENUTUP ...
+
+21
+
+XI. PENUTUP
+Kewajiban penyampaian laporan BMPD secara on-line mulai berlaku sejak
+pelaporan data bulan Mei 2011 yang disampaikan pada bulan Juni 2011.
+Ketentuan dalam Surat Edaran Bank Indonesia ini mulai berlaku pada
+tanggal 30 Mei 2011
+Agar setiap orang mengetahuinya, memerintahkan pengumuman Surat
+Edaran Bank Indonesia ini dengan penempatannya dalam Berita Negara
+Republik Indonesia.
+Demikian agar Saudara maklum.
+
+BANK INDONESIA,
+
+HALIM ALAMSYAH
+DEPUTI GUBERNUR

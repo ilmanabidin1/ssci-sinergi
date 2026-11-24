@@ -1,0 +1,558 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 22 Tahun 2023
+Tentang: Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan
+Berkas: FAQ POJK Nomor 22 Tahun 2023 PKM SJK.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Pelindungan-Konsumen-dan-Masyarakat-di-Sektor-Jasa-Keuangan.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/FREQUENTLY ASKED QUESTIONS (FAQ)
+PERATURAN OTORITAS JASA KEUANGAN NOMOR 22 TAHUN 2023
+TENTANG PELINDUNGAN KONSUMEN DAN MASYARAKAT DI SEKTOR
+JASA KEUANGAN (POJK PKM SJK)
+1. Apa latar belakang penerbitan POJK ini?
+POJK PKM SJK ini diterbitkan sehubungan dengan penguatan
+pelindungan Konsumen dan masyarakat, pengawasan perilaku Pelaku
+Usaha Jasa Keuangan (PUJK) serta literasi dan inklusi keuangan
+sebagai tindak lanjut amanat Undang-Undang Nomor 4 Tahun 2023
+tentang Pengembangan dan Penguatan Sektor Keuangan (UU P2SK).
+Sebagaimana diatur dalam UU P2SK, POJK PKM SJK ini memuat
+penyesuaian pengaturan antara lain: (1) pencantuman 7 (tujuh) prinsip
+pelindungan Konsumen; (2) penegasan dan penambahan hak dan
+kewajiban Konsumen di sektor jasa keuangan serta hak, kewajiban,
+dan larangan bagi PUJK; (3) penambahan cakupan klausula baku yang
+dilarang dicantumkan dalam perjanjian baku; (4) penegasan
+pelindungan data Konsumen dan kewajiban memastikan keamanan
+sistem informasi dan ketahanan siber; (5) pelaksanaan literasi
+keuangan dan inklusi keuangan oleh PUJK; (6) kewajiban
+melaksanakan penanganan pengaduan; serta (7) tata cara pengenaan
+dan batas pemenuhan sanksi.
+POJK PKM SJK ini merupakan penyempurnaan terhadap
+Peraturan Otoritas Jasa Keuangan Nomor 6/POJK.07/2022 tentang
+Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+Penyempurnaan ini diharapkan dapat mendorong terciptanya sistem
+Pelindungan Konsumen yang andal, meningkatkan pemberdayaan
+Konsumen dan masyarakat, serta menumbuhkan kesadaran PUJK.
+Penyempurnaan dimaksud dilakukan untuk mewujudkan sistem
+keuangan yang tumbuh secara berkelanjutan dan stabil, serta mampu
+melindungi kepentingan Konsumen dan masyarakat sebagai respons
+perkembangan industri jasa keuangan yang makin kompleks dan
+dinamis.
+2. Apa saja perubahan substansi pengaturan POJK Nomor
+6/POJK.07/2022
+tentang
+Perlindungan
+Konsumen
+dan
+Masyarakat di Sektor Jasa Keuangan, yang terdapat pada POJK
+PKM SJK?
+Secara umum terdapat beberapa penambahan maupun penguatan
+ketentuan dalam POJK Nomor 6/POJK.07/2022 tentang Perlindungan
+Konsumen dan Masyarakat di Sektor Jasa Keuangan yang diatur
+dalam peraturan ini, antara lain:
+
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+1
+
+a. penambahan dua prinsip pelindungan Konsumen dan masyarakat
+yaitu penegakan kepatuhan dan persaingan yang sehat;
+b. penyesuaian peraturan dengan amanat UU P2SK terutama
+mengenai literasi dan inklusi keuangan, pengawasan perilaku
+PUJK, pemberantasan kegiatan usaha di sektor keuangan yang
+tidak memiliki izin dari Otoritas Jasa Keuangan atau otoritas yang
+berwenang, hak dan kewajiban Konsumen, serta hak, kewajiban,
+dan larangan bagi PUJK;
+c. penambahan cakupan PUJK yang wajib memenuhi POJK ini, yaitu
+Inovasi
+Teknologi
+Sektor
+Keuangan
+(ITSK),
+Perusahaan
+Perdagangan Aset Kripto, dan Koperasi yang melaksanakan
+kegiatan di sektor jasa keuangan;
+d. penambahan pengaturan mengenai larangan menerima sebagai
+konsumen dan/atau bekerja sama dengan pihak yang melakukan
+kegiatan usaha di sektor keuangan yang tidak memiliki izin dari
+Otoritas Jasa Keuangan atau otoritas yang berwenang;
+e. penambahan pengaturan pelindungan data dan/atau informasi dan
+kewajiban memastikan keamanan sistem informasi dan ketahanan
+siber;
+f. pencantuman
+biaya
+dan
+komisi/imbalan
+kepada
+agen
+pemasaran/perantara dalam perjanjian;
+g. penguatan pengaturan kegiatan penyediaan, penyampaian
+informasi, dan pemasaran pada Produk Asuransi Yang Dikaitkan
+Dengan Investasi (PAYDI);
+h. penguatan aspek pelindungan Konsumen dalam kegiatan
+penagihan dan pengambilalihan atau penarikan agunan produk
+kredit atau pembiayaan;
+i. penguatan layanan pengaduan oleh PUJK dan layanan Konsumen
+oleh OJK;
+j. penguatan pengawasan perilaku PUJK (market conduct);
+k. penguatan kewenangan OJK dalam melakukan pengawasan,
+pemeriksaan, dan pengenaan sanksi terhadap Lembaga Alternatif
+Penyelesaian Sengketa Sektor Jasa Keuangan (LAPS SJK);
+l. pengajuan keberatan terhadap sanksi administratif yang
+dikeluarkan oleh OJK; dan
+m. penguatan kewenangan OJK dalam melakukan gugatan perdata.
+3. Apakah PUJK berhak mendapat pelindungan hukum dari tindakan
+Konsumen yang beriktikad tidak baik?
+Berdasarkan Pasal 6 POJK ini dicantumkan apabila terdapat
+Konsumen yang beriktikad tidak baik maka PUJK berhak atas
+pelindungan hukum. Contoh dari iktikad tidak baik Konsumen antara
+lain Konsumen menyerahkan agunan yang bersumber dari tindak
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+2
+
+kejahatan, serta Konsumen memberikan informasi dan/atau dokumen
+yang tidak jelas, tidak akurat, salah, dan menyesatkan.
+4. Apa bentuk pelindungan bagi PUJK dalam POJK ini?
+Bentuk pelindungan bagi PUJK antara lain:
+a. Pasal 6 mengatur bahwa PUJK berhak mendapat pelindungan
+hukum dari tindakan Konsumen yang beriktikad tidak baik.
+Dalam Pasal 92 ayat (3) huruf c mengatur bahwa Konsumen
+memiliki kewajiban untuk beriktikad baik dalam penggunaan
+produk dan/atau layanan; dan
+b. Pasal 10 mengatur bahwa dalam hal PUJK dapat membuktikan
+bahwa terdapat keterlibatan, kesalahan, kelalaian, dan/atau
+perbuatan yang bertentangan dengan ketentuan peraturan
+perundang-undangan di sektor jasa keuangan yang dilakukan
+oleh Konsumen, PUJK tidak bertanggung jawab atas kerugian
+Konsumen yang timbul.
+Dalam penyusunan POJK ini OJK strikes the right balance atau
+mengatur secara seimbang kepentingan PUJK dan kepentingan
+konsumen.
+Oleh sebab itu, OJK mendorong untuk PUJK termasuk
+konsumen/masyarakat untuk dapat membaca peraturan ini dengan
+lengkap dan cermat.
+5. Bagaimana
+pengaturan
+larangan
+menyetujui
+permohonan
+penggunaan produk dan/atau layanan dan larangan melakukan
+kerja sama dengan pihak yang melakukan kegiatan usaha di sektor
+keuangan yang tidak memiliki izin dari otoritas?
+Pengaturan ini merupakan dukungan pengaturan dari amanat Pasal
+237 UU P2SK bahwa setiap orang dilarang melakukan:
+a. penghimpunan dana dari masyarakat dan/atau untuk disalurkan
+kepada masyarakat;
+b. penerbitan surat berharga yang ditawarkan kepada masyarakat;
+c. penyediaan produk atau jasa sistem pembayaran; dan
+d. kegiatan lain yang dapat dipersamakan dengan penghimpunan
+dana, penyaluran dana, pengelolaan dana, keperantaraan di sektor
+keuangan, dan penyediaan produk atau jasa sistem pembayaran,
+selain yang telah diatur dalam ketentuan perundang-undangan dan
+berdasarkan peraturan perundang-undangan diwajibkan memiliki
+izin dari otoritas sektor keuangan.
+Dalam pengaturan POJK ini tercantum bahwa adanya pelarangan
+PUJK untuk bekerja sama dengan pihak yang melakukan kegiatan
+usaha di sektor keuangan yang tidak memiliki izin dari Otoritas Jasa
+Keuangan atau otoritas yang berwenang, namun dicantumkan pula
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+3
+
+pengecualian terhadap pihak yang sedang dalam proses pengurusan
+perizinan dari otoritas di sektor keuangan, sehingga dengan kata lain
+pihak yang melakukan kegiatan usaha di sektor keuangan yang sedang
+dalam proses perizinan bukanlah termasuk pihak yang dilarang.
+Pengaturan ini mendorong PUJK untuk mendukung pencegahan dan
+penanganan kegiatan usaha di sektor keuangan yang tidak memiliki
+izin dari Otoritas dan mendukung program anti pencucian uang.
+6. Apakah laporan literasi keuangan dan laporan inklusi keuangan
+menjadi bagian dalam laporan rencana bisnis dan laporan realisasi
+rencana bisnis?
+Laporan literasi keuangan dan laporan inklusi keuangan merupakan
+laporan yang berdiri sendiri dan tidak menjadi bagian dalam rencana
+bisnis dan laporan realisasi rencana bisnis.
+Namun dalam Pasal 123 POJK PKM SJK mengatur mengenai waktu
+dimulainya penyampaian laporan rencana dan realisasi literasi
+keuangan dan inklusi keuangan kepada OJK c.q. Kepala Eksekutif
+Pengawas Perilaku PUJK, Edukasi, dan Pelindungan Konsumen untuk
+PUJK yang memiliki kewajiban penyusunan dan penyampaian laporan
+rencana dan realisasi rencana bisnis, yaitu:
+a. laporan rencana literasi keuangan dan inklusi keuangan paling
+lambat tanggal 30 November 2024; dan
+b. laporan realisasi literasi keuangan dan inklusi keuangan paling
+lambat tanggal 10 Juli 2024.
+Sebelum berlakunya kewajiban penyampaian tersebut, laporan literasi
+keuangan dan laporan inklusi keuangan disampaikan sesuai dengan
+ketentuan yang mengatur mengenai pelaporan rencana bisnis dan
+pelaporan realisasi rencana bisnis masing-masing PUJK.
+7. Bagaimana pengaturan terkait pemasaran terhadap PAYDI yang
+menggunakan sarana komunikasi pribadi?
+Pemasaran terhadap PAYDI yang menggunakan sarana komunikasi
+pribadi wajib dilakukan melalui pertemuan tatap muka atau tanpa
+tatap muka. Dalam hal kegiatan pemasaran terhadap PAYDI
+menggunakan sarana komunikasi pribadi yang diikuti pertemuan
+tanpa tatap muka wajib dilaksanakan secara digital melalui video
+conference.
+8. Apakah PUJK boleh melakukan penagihan kredit atau pembiayaan
+bekerja sama dengan pihak lain kepada Konsumen?
+Dalam Pasal 61 ayat (3) POJK PKM SJK diatur bahwa PUJK dapat
+bekerja sama dengan pihak lain dalam melakukan penagihan kredit
+
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+4
+
+atau pembiayaan kepada Konsumen namun wajib memenuhi
+ketentuan:
+a. pihak lain berbentuk badan hukum;
+b. pihak lain memiliki izin dari instansi berwenang; dan
+c. pihak lain memiliki sumber daya manusia yang telah memperoleh
+sertifikasi di bidang penagihan dari lembaga sertifikasi profesi
+dan/atau asosiasi penyelenggara yang terdaftar di Otoritas Jasa
+Keuangan.
+9. Siapakah yang bertanggung jawab atas segala dampak yang
+ditimbulkan dari penagihan kredit atau pembiayaan kepada
+Konsumen yang bekerja sama dengan pihak lain?
+Dalam Pasal 61 ayat (5) POJK PKM SJK diatur bahwa segala dampak
+yang ditimbulkan atas penagihan kredit yang bekerja sama dengan
+pihak lain akan menjadi tanggung jawab PUJK yang bersangkutan.
+10. Apa maksud POJK ini mengatur terkait penagihan termasuk
+pengambilalihan atau penarikan agunan?
+Penagihan termasuk pengambilalihan atau penarikan agunan yang
+merupakan salah satu bentuk perilaku PUJK sehingga menjadi
+cakupan pengaturan dalam POJK ini. Beberapa pertimbangan
+pengaturan dimaksud di antaranya upaya dalam pemenuhan UU P2SK
+terkait penguatan aspek iktikad baik PUJK dan pencegahan tindakan
+yang melanggar ketentuan peraturan perundang-undangan atau
+norma yang berlaku di masyarakat yang dapat menimbulkan gangguan
+fisik dan/atau psikis.
+Pengaturan
+ini
+juga
+mendorong
+agar
+PUJK
+memastikan
+produk/layanan yang ditawarkan sesuai dengan kebutuhan dan
+kemampuan calon konsumen sehingga lebih hati-hati atau selektif
+dalam menyalurkan kredit atau pembiayaan.
+11. Bagaimana pengaturan terhadap cara PUJK dalam melakukan
+penagihan untuk produk kredit atau pembiayaan kepada
+Konsumen?
+Penagihan produk kredit atau pembiayaan kepada Konsumen wajib
+dilaksanakan sesuai dengan norma yang berlaku di masyarakat dan
+ketentuan peraturan perundang-undangan dengan cara:
+a. tidak menggunakan cara ancaman, kekerasan dan/atau tindakan
+yang bersifat mempermalukan Konsumen;
+b. tidak menggunakan tekanan secara fisik maupun verbal;
+c. tidak kepada pihak selain Konsumen;
+d. tidak secara terus menerus yang bersifat mengganggu;
+e. di tempat alamat penagihan atau domisili Konsumen;
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+5
+
+f. hanya pada hari Senin sampai dengan Sabtu di luar hari libur
+nasional dari pukul 08.00 – 20.00 waktu setempat; dan/atau
+g. sesuai dengan ketentuan peraturan perundang- undangan.
+Untuk penagihan di luar tempat dan/atau waktu pada huruf e dan
+huruf f hanya dapat dilakukan atas dasar persetujuan dan/atau
+perjanjian dengan Konsumen terlebih dahulu.
+Pengaturan ini dimaksudkan memberikan pedoman bagi PUJK dalam
+melakukan penagihan untuk produk kredit dan pembiayaan,
+mengingat permasalahan penagihan menjadi perhatian publik
+Di sisi lain, periode jam dan hari merupakan representasi kewajaran
+aktivitas PUJK dan Konsumen, serta mengikuti beberapa referensi
+seperti peraturan yang relevan.
+12. Apakah penagihan tidak dapat dilakukan pada hari Minggu?
+Penagihan dilakukan pada hari Senin sampai dengan Sabtu di luar hari
+libur nasional dari pukul 08.00 – 20.00 waktu setempat. Namun, PUJK
+dapat melakukan penagihan pada hari Minggu dengan persetujuan
+dan/atau perjanjian dengan Konsumen terlebih dahulu.
+13. Apakah hari cuti bersama yang ditetapkan oleh pemerintah pusat
+termasuk hari libur nasional pada pengaturan penagihan?
+Sebagaimana diatur dalam Pasal 62 ayat (2) POJK PKM SJK, bahwa
+dalam melakukan tindakan penagihan PUJK wajib memastikan
+penagihan antara lain dilakukan hanya pada hari Senin sampai
+dengan Sabtu di luar hari libur nasional dari pukul 08.00 – 20.00
+waktu setempat. Hari cuti bersama yang ditetapkan oleh pemerintah
+pusat termasuk hari libur nasional, sehingga penagihan tidak dapat
+dilakukan pada hari cuti bersama.
+14. Bagaimana dengan penagihan yang dilakukan di luar tempat
+penagihan atau domisili Konsumen?
+Sesuai Pasal 62 ayat (3) PUJK dapat melakukan penagihan di luar
+tempat penagihan atau domisili Konsumen yang ditetapkan sepanjang
+telah mendapatkan persetujuan dan/atau perjanjian dengan
+Konsumen terlebih dahulu.
+15. Apakah penagihan dapat dilakukan kepada istri/suami Konsumen?
+Pada prinsipnya Konsumen merupakan pihak yang melakukan
+perjanjian dengan PUJK sehingga penagihan seharusnya dilakukan
+kepada Konsumen. Penagihan kepada istri/suami Konsumen dapat
+dilakukan apabila disetujui/disepakati oleh istri/suami Konsumen.
+
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+6
+
+16. Bagaimana pengaturan terhadap pengambilalihan atau penarikan
+agunan yang dilakukan oleh PUJK?
+Pengambilalihan atau penarikan agunan untuk produk kredit atau
+pembiayaan yang diagunkan oleh jaminan fidusia, hak tanggungan
+dan/atau hipotek oleh PUJK wajib memenuhi ketentuan:
+a. Konsumen terbukti wanprestasi;
+b. Konsumen sudah diberikan surat peringatan; dan
+c. PUJK memiliki sertifikat jaminan fidusia, sertifikat hak tanggungan,
+dan/atau sertifikat hipotek.
+17. Apa yang menjadi parameter Konsumen wanprestasi?
+Konsumen dinyatakan wanprestasi dalam hal Konsumen tidak
+melaksanakan kewajiban sebagaimana telah diatur dalam perjanjian
+penggunaan produk dan/atau layanan. Ketika menyusun perjanjian
+antara PUJK dan Konsumen, PUJK wajib menyampaikan dan
+memberikan pemahaman mengenai kewajiban Konsumen dan kondisi
+yang dapat menyebabkan Konsumen masuk dalam kategori
+wanprestasi.
+18. Bagaimana pengaturan terkait penentuan Konsumen terbukti
+wanprestasi untuk produk kredit atau pembiayaan yang diagunkan
+dengan jaminan fidusia, hak tanggungan dan/atau hipotek yang
+akan dilakukan pengambilalihan atau penarikan?
+Penentuan Konsumen terbukti wanprestasi untuk produk kredit atau
+pembiayaan yang diagunkan dengan jaminan fidusia, hak
+tanggungan
+dan/atau
+hipotek
+yang
+akan
+dilakukan
+pengambilalihan atau penarikan dilakukan melalui:
+a. kesepakatan tertulis para pihak yang di dalamnya terdapat
+penyerahan secara sukarela terhadap objek yang menjadi jaminan;
+b. putusan pengadilan atau LAPS Sektor Jasa Keuangan; dan/atau
+c. mekanisme lain sesuai dengan ketentuan peraturan perundangundangan
+Artinya, penentuan terbukti wanprestasi dapat memilih salah satu
+opsi tersebut di atas. Dengan demikian penentuan terbukti
+wanprestasi tidak harus melalui pengadilan.
+19. Bagaimana pengaturan pengambilalihan atau penarikan agunan
+khususnya yang memiliki sertifikat fidusia?
+Pengambilalihan atau penarikan agunan wajib dilaksanakan sesuai
+dengan ketentuan peraturan perundang-undangan terkait agunan,
+sebagaimana diatur dalam Pasal 64 ayat (3) POJK PKM SJK. Untuk
+agunan yang memiliki sertifikat fidusia, pengambilalihan atau
+penarikan agunan mengikuti UU Nomor 42 Tahun 1999 tentang
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+7
+
+Jaminan Fidusia (UU Jaminan Fidusia), misalnya dalam Pasal 20 UU
+Jaminan Fidusia mengatur bahwa Jaminan Fidusia tetap mengikuti
+Benda yang menjadi objek Jaminan Fidusia dalam tangan siapapun
+Benda tersebut berada, kecuali pengalihan atas benda persediaan yang
+menjadi objek Jaminan Fidusia serta larangan dan sanksi pidana
+Konsumen mengalihkan, menggadaikan, atau menyewakan kepada
+pihak lain benda yang menjadi objek Jaminan Fidusia yang tidak
+merupakan benda persediaan tanpa persetujuan tertulis terlebih
+dahulu dari Penerima Fidusia (Pasal 23 ayat (2) UU Jaminan Fidusia
+jo. Pasal 36 UU Jaminan Fidusia).
+20. Apakah penarikan barang jaminan atau agunan dilarang dilakukan
+di ruang publik atau di luar tempat domisili Konsumen?
+Perjanjian antara PUJK dan Konsumen merupakan ranah
+privat/perdata. Penarikan barang jaminan atau agunan yang
+dilakukan di ruang publik atau di luar tempat domisili Konsumen
+dapat berpotensi mengakibatkan gangguan secara fisik dan/atau
+psikis sehingga melanggar ketentuan peraturan perundang-undangan
+atau norma yang berlaku di masyarakat.
+Namun PUJK dapat melakukan penagihan yang diikuti dengan
+pengambilalihan atau penarikan barang agunan di ruang publik atau
+di luar tempat domisili Konsumen sepanjang terdapat persetujuan
+dan/atau perjanjian dengan Konsumen terlebih dahulu untuk
+menyerahkan barang agunan di ruang publik atau di luar tempat
+domisili Konsumen.
+Persetujuan Konsumen antara lain dapat dituangkan dalam berita
+acara pengambilalihan atau penarikan agunan.
+Untuk Konsumen yang beriktikad tidak baik sebagaimana dalam
+penjelasan Pasal 6 POJK PKM SJK, pelaksanaan penarikan barang
+jaminan atau agunan dapat dilakukan di mana saja sepanjang sesuai
+dengan ketentuan peraturan perundang-undangan terkait agunan.
+21. Berapakah jangka waktu penyelesaian untuk PUJK dalam
+menindaklanjuti dan menyelesaikan Pengaduan secara tertulis dari
+Konsumen?
+PUJK wajib menindaklanjuti dan menyelesaikan Pengaduan secara
+tertulis paling lama 10 (sepuluh) hari kerja sejak dokumen yang
+berkaitan langsung dengan Pengaduan diterima secara lengkap. Dalam
+hal terdapat kondisi tertentu, PUJK dapat memperpanjang jangka
+waktu paling lama 10 (sepuluh) hari kerja serta diberitahukan secara
+tertulis kepada Konsumen yang mengajukan Pengaduan sebelum
+jangka waktu dimaksud berakhir.
+
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+8
+
+22. Berapakah waktu yang diberikan kepada Konsumen untuk
+penyampaian respons atas tanggapan Pengaduan, dalam hal
+Konsumen menyampaikan Pengaduan melalui layanan Pengaduan
+kepada Otoritas Jasa Keuangan?
+Konsumen diberikan waktu 10 (sepuluh) hari kerja untuk
+menyampaikan respons atas Tanggapan Pengaduan PUJK pada Sistem
+Layanan Konsumen dan Masyarakat Terintegrasi di Sektor Jasa
+Keuangan.
+23. Apakah PUJK dapat mengenakan biaya atas layanan pengaduan
+konsumen?
+Dalam POJK ini diatur larangan bagi PUJK untuk mengenakan biaya
+kepada Konsumen dalam melaksanakan kebijakan dan prosedur
+layanan pengaduan konsumen.
+24. Apakah PUJK dapat menolak menangani Pengaduan?
+Pengaduan dari Konsumen dapat ditolak oleh PUJK apabila memenuhi
+salah satu kondisi sebagai berikut:
+a. Konsumen tidak melengkapi persyaratan dokumen sesuai dengan
+jangka waktu yang telah ditetapkan;
+b. Pengaduan sebelumnya telah diselesaikan oleh PUJK sesuai
+dengan Peraturan Otoritas Jasa Keuangan ini;
+c. Pengaduan tidak terkait dengan kerugian dan/atau potensi
+kerugian material, wajar, dan secara langsung sebagaimana
+tercantum dalam perjanjian dan/atau dokumen pemanfaatan
+produk dan/atau layanan;
+d. Pengaduan tidak terkait dengan pemanfaatan produk dan/atau
+layanan yang dikeluarkan oleh PUJK yang bersangkutan; dan/atau
+e. Pengaduan sedang dalam proses atau telah diputus oleh lembaga
+peradilan secara perdata.
+25. Apakah fungsi atau unit Pelindungan Konsumen dan fungsi atau
+unit Layanan Pengaduan itu sama?
+Dengan berlakunya POJK PKM SJK, tugas yang terdapat pada fungsi
+atau unit Layanan Pengaduan menjadi bagian dari tugas dari fungsi
+atau unit Pelindungan Konsumen. Artinya fungsi atau unit Layanan
+Pengaduan menjadi fungsi atau unit Pelindungan Konsumen. Fungsi
+atau unit Pelindungan Konsumen memiliki tugas di antaranya
+adalah menerima, menangani dan menyelesaikan Pengaduan yang
+disampaikan oleh Konsumen.
+26. Apa saja hak dan kewajiban calon Konsumen dan Konsumen dalam
+penyelenggaraan Pelindungan Konsumen dan masyarakat?
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+9
+
+a. Hak calon Konsumen dan/atau Konsumen meliputi:
+1) mendapatkan keamanan dalam menggunakan produk dan/atau
+memanfaatkan layanan sesuai yang ditetapkan dalam ketentuan
+peraturan perundang-undangan dan/atau perjanjian;
+2) memilih produk dan/atau layanan;
+3) mendapatkan produk dan/atau layanan sesuai dengan
+penawaran yang dijanjikan dan/atau sesuai dengan ketentuan
+peraturan perundang-undangan;
+4) mendapatkan informasi mengenai produk dan/atau layanan
+yang jelas, akurat, benar, mudah diakses, dan tidak berpotensi
+menyesatkan;
+5) didengar pendapat dan pengaduannya atas produk yang
+digunakan dan/atau layanan yang dimanfaatkan;
+6) mendapatkan advokasi, pelindungan, dan upaya penyelesaian
+Sengketa Konsumen sesuai dengan ketentuan peraturan
+perundang-undangan;
+7) mendapat edukasi keuangan;
+8) diperlakukan atau dilayani secara benar;
+9) mendapatkan ganti rugi apabila produk dan/atau layanan yang
+diterima tidak sesuai dengan perjanjian dan/atau ketentuan
+peraturan perundang-undangan;
+10) membentuk asosiasi Konsumen; dan
+11) hak lain yang diatur dalam ketentuan peraturan perundangundangan.
+b. Kewajiban calon Konsumen dan/atau Konsumen meliputi:
+1) mendengarkan penjelasan informasi mengenai produk dan/atau
+layanan yang disampaikan dengan metode pemasaran tertentu
+oleh PUJK sebelum membeli produk dan/atau layanan PUJK;
+2) membaca, memahami, dan melaksanakan dengan benar
+perjanjian dan/atau dokumen penggunaan produk dan/atau
+layanan;
+3) beriktikad baik dalam penggunaan produk dan/atau layanan;
+4) memberikan informasi dan/atau dokumen yang jelas, akurat,
+benar, dan tidak menyesatkan;
+5) membayar sesuai dengan nilai/harga dan/atau biaya produk
+dan/atau layanan yang disepakati dengan PUJK; dan
+6) mengikuti upaya penyelesaian Sengketa Pelindungan Konsumen
+sesuai dengan ketentuan peraturan perundang-undangan.
+27. Dalam hal calon Konsumen dan/atau Konsumen tidak
+melaksanakan kewajiban penyelenggaraan Pelindungan Konsumen
+dan masyarakat, hal apa saja yang dapat dilakukan oleh PUJK?
+
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu 10
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+PUJK dapat melakukan penundaan, pembatasan, penolakan, tidak
+memberikan pelayanan dan/atau memberikan denda sesuai dengan
+perjanjian kepada calon Konsumen dan/atau Konsumen.
+28. Bagaimana penerapan dari pengenaan sanksi administratif oleh
+OJK dalam POJK PKM SJK?
+Sesuai dengan pasal 113 POJK PKM ini, pengenaan sanksi
+administratif oleh OJK dalam POJK PKM SJK diberlakukan sesuai
+dengan tingkat pelanggaran yang dilakukan dan jangka waktu yang
+diberikan OJK untuk PUJK menindaklanjuti atau memenuhi sanksi
+administratif dimaksud.
+Untuk sanksi administratif berupa denda administratif, berdasarkan
+pasal 115 ayat (9) POJK PKM SJK diatur bahwa ketika PUJK
+mengajukan permohonan keberatan kepada Otoritas Jasa Keuangan,
+kewajiban pembayaran sanksi administratif ditangguhkan sementara
+sejak diterimanya surat permohonan keberatan sampai dengan
+ditetapkannya keputusan terhadap permohonan keberatan tersebut.
+29. Mengapa sebagian besar pasal memiliki norma sanksi administratif
+bahkan untuk denda administratif mencapai Rp 15 miliar?
+Penyusunan POJK ini mengikuti Lampiran II UU Nomor 13 Tahun
+2022 yang merupakan perubahan kedua dari UU Nomor 12 Tahun
+2011 tentang Pembentukan Peraturan Perundang-undangan yang
+menyatakan: “Norma yang memberikan sanksi administratif, sanksi
+keperdataan, atau sanksi pidana harus ditempatkan setelah norma
+yang memuat kewajiban atau larangan.”
+Nominal denda administratif sebesar Rp15 Miliar merupakan batas
+atas/maksimal di mana sebelumnya telah diatur dalam POJK
+6/POJK.07/2022 tentang Perlindungan Konsumen dan Masyarakat di
+Sektor Jasa Keuangan.
+Di sisi lain, pengenaan denda ini memperhatikan Pasal 113 POJK
+Nomor 22 Tahun 2023 yang mengatur bahwa pengenaan sanksi
+administratif diberlakukan sesuai dengan tingkat pelanggaran yang
+dilakukan dan batas pemenuhan dalam jangka waktu tertentu.
+30. Apakah Otoritas Jasa Keuangan dapat mengumumkan pengenaan
+sanksi administratif kepada masyarakat?
+Ya, Otoritas Jasa Keuangan dapat mengumumkan pengenaan sanksi
+administratif kepada masyarakat.
+31. Apakah PUJK dapat mengajukan keberatan atas sanksi yang
+diberikan oleh OJK dan berapa lama waktu yang diberikan kepada
+PUJK untuk mengajukan keberatan?
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu 11
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.
+
+Ya, PUJK dapat mengajukan keberatan atas sanksi yang diberikan oleh
+OJK dengan jangka waktu paling lambat 10 (sepuluh) hari kerja sejak
+tanggal surat ketetapan sanksi administratif.
+32. Apakah terdapat pengecualian kewajiban pelaksanaan kegiatan
+untuk peningkatan Literasi Keuangan dan Inklusi Keuangan?
+Ya, POJK ini mengatur kewajiban atas pelaksanaan kegiatan untuk
+peningkatan Literasi Keuangan dan Inklusi Keuangan dikecualikan
+bagi beberapa PUJK, yakni Perusahaan Reasuransi, Perusahaan
+Penjaminan Ulang, Perusahaan Pembiayaan Infrastruktur, Dana
+Pensiun Pemberi Kerja, dan Lembaga Keuangan Mikro.
+33. Kapan POJK ini mulai berlaku?
+POJK ini mulai berlaku pada tanggal diundangkan kecuali untuk
+beberapa PUJK yang diatur secara khusus waktu pemberlakuannya.
+
+Penafian (disclaimer):
+Informasi atau pernyataan dalam dokumen Frequently Asked Question (FAQ) ini tidak dapat dijadikan sebagai dasar hukum dan tetap mengacu 12
+kepada dokumen salinan resmi POJK Nomor 22 Tahun 2023 tentang Pelindungan Konsumen dan Masyarakat di Sektor Jasa Keuangan.

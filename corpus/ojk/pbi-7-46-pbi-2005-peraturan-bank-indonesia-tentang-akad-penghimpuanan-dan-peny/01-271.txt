@@ -1,0 +1,1661 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 7/46/PBI/2005
+Tentang: Peraturan Bank Indonesia tentang Akad Penghimpuanan dan Penyaluran Dana bagi Bank yang Melaksanakan Kegiatan Usaha berdasarkan Prinsip Syariah
+Berkas: 271.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Akad-Penghimpuanan-dan-Penyaluran-Dana-bagi-Bank-yang-Melaksanakan-Kegiatan-Usaha-berdasarkan-Prinsip-Syariah.aspx
+
+---
+
+PERATURAN BANK INDONESIA
+NOMOR: 7/46/PBI/2005
+TENTANG
+AKAD PENGHIMPUNAN DAN PENYALURAN DANA BAGI BANK
+YANG MELAKSANAKAN KEGIATAN USAHA BERDASARKAN
+PRINSIP SYARIAH
+GUBERNUR BANK INDONESIA,
+Menimbang:
+
+a. bahwa
+
+perbankan
+
+syariah
+
+harus
+
+senantiasa
+
+menjaga
+
+kepercayaan masyarakat baik dari aspek finansial maupun
+kesesuaian terhadap prinsip syariah yang menjadi dasar
+operasinya;
+b. bahwa setiap pelaku dalam industri perbankan syariah,
+termasuk pengelola bank/pemilik dana/pengguna dana, serta
+otoritas pengawas harus memiliki kesamaan cara pandang
+terhadap Akad-Akad produk penghimpunan dan penyaluran
+dana bank syariah;
+c. bahwa berdasarkan pertimbangan sebagaimana dimaksud
+dalam huruf a
+
+dan b dipandang perlu untuk menetapkan
+
+ketentuan tentang Akad penghimpunan dan penyaluran dana
+bagi bank yang melaksanakan kegiatan usaha berdasarkan
+prinsip syariah dalam Peraturan Bank Indonesia;
+Mengingat :
+
+1. Undang-undang Nomor 7 Tahun 1992 tentang Perbankan
+(Lembaran Negara Republik Indonesia Tahun 1992 Nomor 31,
+
+Tambahan …
+
+-2-
+
+Tambahan Lembaran Negara Republik Indonesia Nomor 3472)
+sebagaimana telah diubah dengan Undang-undang Nomor 10
+Tahun 1998 (Lembaran Negara Republik Indonesia Tahun
+1998 Nomor 182, Tambahan Lembaran Negara Republik
+Indonesia Nomor 3790);
+2. Undang-undang Nomor 23 Tahun 1999 tentang Bank Indonesia
+(Lembaran Negara Republik Indonesia Tahun 1999 Nomor 66,
+Tambahan Lembaran Negara Republik Indonesia Nomor 3843)
+sebagaimana telah diubah dengan Undang-undang Nomor 3
+Tahun 2004 (Lembaran Negara Republik Indonesia Tahun
+2004 Nomor 7, Tambahan Lembaran Negara Republik
+Indonesia Nomor 4357);
+MEMUTUSKAN:
+Menetapkan:
+
+PERATURAN
+
+BANK
+
+PENGHIMPUNAN
+BANK
+
+YANG
+
+INDONESIA
+
+DAN
+
+TENTANG
+
+PENYALURAN
+
+MELAKSANAKAN
+
+DANA
+
+KEGIATAN
+
+AKAD
+BAGI
+USAHA
+
+BERDASARKAN PRINSIP SYARIAH
+
+BAB I
+KETENTUAN UMUM
+Pasal 1
+Yang dimaksud dalam Peraturan Bank Indonesia ini dengan:
+
+1. Bank …
+
+-3-
+
+1.
+
+Bank adalah Bank Umum atau Bank Perkreditan Rakyat sebagaimana
+dimaksud dalam Undang-undang Nomor 7 Tahun 1992 tentang Perbankan
+sebagaimana telah diubah dengan Undang-undang Nomor 10 Tahun 1998,
+yang melaksanakan kegiatan usaha berdasarkan prinsip Syariah.
+
+2.
+
+Prinsip Syariah adalah prinsip syariah sebagaimana dimaksud dalam Pasal 1
+angka 13 Undang-undang No.7 Tahun 1992 tentang Perbankan sebagaimana
+telah diubah dengan Undang-undang Nomor 10 Tahun 1998;
+
+3.
+
+Akad adalah perjanjian tertulis yang memuat ijab (penawaran) dan qabul
+(penerimaan) antara Bank dengan pihak lain yang berisi hak dan kewajiban
+masing-masing pihak sesuai dengan prinsip Syariah;
+
+4.
+
+Wadi’ah adalah penitipan dana atau barang dari pemilik dana atau barang
+pada penyimpan dana atau barang dengan kewajiban pihak yang menerima
+titipan untuk mengembalikan dana atau barang titipan sewaktu-waktu.
+
+5.
+
+Mudharabah adalah penanaman dana dari pemilik dana (shahibul maal)
+kepada pengelola dana (mudharib) untuk melakukan kegiatan usaha tertentu,
+dengan pembagian menggunakan metode bagi untung dan rugi (profit and
+loss sharing) atau metode bagi pendapatan (revenue sharing) antara kedua
+belah pihak berdasarkan nisbah yang telah disepakati sebelumnya.
+
+6.
+
+Musyarakah adalah penanaman dana dari
+
+pemilik dana/modal untuk
+
+mencampurkan dana/modal mereka pada suatu usaha tertentu, dengan
+pembagian
+
+keuntungan
+
+berdasarkan
+
+nisbah
+
+yang
+
+telah
+
+disepakati
+
+sebelumnya, sedangkan kerugian ditanggung semua pemilik dana/ modal
+berdasarkan bagian dana/ modal masing-masing.
+
+7. Murabahah …
+
+-4-
+
+7.
+
+Murabahah adalah jual beli barang sebesar harga pokok barang ditambah
+dengan margin keuntungan yang disepakati.
+
+8.
+
+Salam adalah jual beli barang dengan cara pemesanan dengan syarat-syarat
+tertentu dan pembayaran tunai terlebih dahulu secara penuh.
+
+9.
+
+Istishna' adalah jual beli barang dalam bentuk pemesanan pembuatan barang
+dengan kriteria dan persyaratan tertentu yang disepakati dengan pembayaran
+sesuai dengan kesepakatan.
+
+10. Ijarah adalah transaksi sewa menyewa atas suatu barang dan atau upah
+mengupah atas suatu jasa dalam waktu tertentu melalui pembayaran sewa
+atau imbalan jasa;
+11. Qardh adalah pinjam meminjam dana tanpa imbalan dengan kewajiban pihak
+peminjam mengembalikan pokok pinjaman secara sekaligus atau cicilan
+dalam jangka waktu tertentu.
+Pasal 2
+(1) Dalam melaksanakan kegiatan penghimpunan dan penyaluran dana Bank
+wajib membuat Akad sesuai dengan ketentuan dalam Peraturan Bank
+Indonesia ini.
+(2) Dalam Akad sebagaimana dimaksud pada ayat (1) wajib ditegaskan jenis
+transaksi syariah yang digunakan.
+(3) Transaksi syariah sebagaimana dimaksud pada ayat (2) tidak boleh
+mengandung unsur gharar, maysir, riba, zalim,
+
+risywah,
+
+barang
+
+haram
+
+dan maksiat.
+
+BAB II …
+
+-5-
+
+BAB II
+PERSYARATAN AKAD PENGHIMPUNAN
+DAN PENYALURAN DANA
+Bagian Pertama
+Penghimpunan Dana
+Pasal 3
+Dalam kegiatan penghimpunan dana dalam bentuk giro atau tabungan berdasarkan
+Wadi'ah berlaku persyaratan paling kurang sebagai berikut:
+a.
+
+Bank bertindak sebagai penerima dana titipan dan nasabah bertindak sebagai
+pemilik dana titipan;
+
+b.
+
+dana titipan disetor penuh kepada Bank dan dinyatakan dalam jumlah
+nominal;
+
+c.
+
+dana titipan dapat diambil setiap saat;
+
+d.
+
+tidak diperbolehkan menjanjikan pemberian imbalan atau bonus kepada
+nasabah;
+
+e.
+
+Bank menjamin pengembalian dana titipan nasabah.
+Pasal 4
+
+Dalam
+
+kegiatan
+
+penghimpunan
+
+dana dalam bentuk giro berdasarkan
+
+Mudharabah berlaku persyaratan paling kurang sebagai berikut:
+a.
+
+nasabah bertindak sebagai pemilik dana (shahibul maal) dan Bank bertindak
+sebagai pengelola dana (mudharib);
+
+b.
+
+Bank dapat melakukan berbagai macam usaha yang tidak bertentangan
+dengan Prinsip Syariah dan mengembangkannya, termasuk di dalamnya
+melakukan Akad Mudharabah dengan pihak lain;
+c. modal …
+
+-6-
+
+c.
+
+modal harus dalam bentuk tunai dan bukan piutang, serta dinyatakan jumlah
+nominalnya;
+
+d.
+
+nasabah wajib memelihara saldo giro minimum yang ditetapkan oleh Bank
+dan tidak dapat ditarik oleh nasabah kecuali dalam rangka penutupan
+rekening;
+
+e.
+
+pembagian keuntungan harus dinyatakan dalam bentuk nisbah dan
+dituangkan dalam Akad pembukaan rekening.
+
+f.
+
+pemberian keuntungan untuk nasabah didasarkan pada saldo terendah setiap
+akhir bulan laporan.
+
+g.
+
+Bank menutup biaya operasional giro dengan menggunakan nisbah
+keuntungan yang menjadi haknya; dan
+
+h.
+
+Bank tidak diperkenankan mengurangi nisbah keuntungan nasabah tanpa
+persetujuan yang bersangkutan.
+Pasal 5
+
+Dalam kegiatan penghimpunan dana dalam bentuk tabungan atau deposito
+berdasarkan Mudharabah berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank bertindak sebagai pengelola dana dan nasabah bertindak sebagai
+pemilik dana;
+
+b.
+
+dana disetor penuh kepada Bank dan dinyatakan dalam jumlah nominal;
+
+c.
+
+pembagian keuntungan dari pengelolaaan dana investasi dinyatakan dalam
+bentuk nisbah;
+
+d.
+
+pada Akad tabungan berdasarkan Mudharabah, nasabah wajib menginvestasikan minimum dana tertentu yang jumlahnya ditetapkan oleh Bank
+dan tidak dapat ditarik oleh nasabah kecuali dalam rangka penutupan
+rekening;
+e. nasabah …
+
+-7-
+
+e.
+
+nasabah tidak diperbolehkan menarik dana di luar kesepakatan;
+
+f.
+
+Bank sebagai mudharib menutup biaya operasional tabungan atau deposito
+dengan menggunakan nisbah keuntungan yang menjadi haknya;
+
+g.
+
+Bank tidak diperbolehkan mengurangi bagian keuntungan nasabah tanpa
+persetujuan nasabah yang bersangkutan; dan
+
+h.
+
+Bank
+
+tidak menjamin dana nasabah, kecuali diatur berbeda dalam
+
+perundang-undangan yang berlaku.
+Bagian Kedua
+Penyaluran Dana
+Paragraf 1
+Penyaluran Dana Berdasarkan Mudharabah dan Musyarakah
+Pasal 6
+Dalam kegiatan penyaluran dana dalam
+
+bentuk pembiayaan berdasarkan
+
+Mudharabah berlaku persyaratan paling kurang sebagai berikut:
+a.
+
+Bank bertindak sebagai shahibul maal yang menyediakan dana secara penuh,
+dan nasabah bertindak sebagai mudharib yang mengelola dana dalam
+kegiatan usaha;
+
+b.
+
+jangka waktu pembiayaan, pengembalian dana, dan pembagian keuntungan
+ditentukan berdasarkan kesepakatan Bank dan nasabah;
+
+c.
+
+Bank tidak ikut serta dalam pengelolaan usaha nasabah tetapi memiliki hak
+dalam pengawasan dan pembinaan usaha nasabah;
+
+d.
+
+pembiayaan diberikan dalam bentuk tunai dan/atau barang;
+
+e.
+
+dalam hal pembiayaan diberikan dalam bentuk tunai harus dinyatakan
+jumlahnya;
+
+f.
+
+dalam hal pembiayaan diberikan dalam bentuk barang, maka barang yang
+diserahkan …
+
+-8-
+
+diserahkan harus dinilai berdasarkan harga perolehan atau harga pasar wajar;
+g.
+
+pembagian keuntungan dari pengelolaaan dana dinyatakan dalam bentuk
+nisbah yang disepakati;
+
+h.
+
+Bank menanggung seluruh risiko kerugian usaha yang dibiayai kecuali jika
+nasabah melakukan kecurangan, lalai, atau menyalahi perjanjian yang
+mengakibatkan kerugian usaha;
+
+i.
+
+nisbah bagi hasil yang disepakati tidak dapat diubah sepanjang jangka waktu
+investasi, kecuali atas dasar kesepakatan para pihak dan tidak berlaku surut;
+
+j.
+
+nisbah bagi hasil dapat ditetapkan secara berjenjang (tiering) yang besarnya
+berbeda-beda berdasarkan kesepakatan pada awal Akad;
+
+k.
+
+pembagian keuntungan dilakukan dengan menggunakan metode bagi untung
+dan rugi (profit and loss sharing) atau metode bagi pendapatan (revenue
+sharing);
+
+l.
+
+pembagian keuntungan berdasarkan hasil usaha dari mudharib sesuai dengan
+laporan hasil usaha dari usaha mudharib;
+
+m.
+
+dalam hal nasabah ikut menyertakan modal dalam kegiatan usaha yang
+dibiayai Bank, maka berlaku ketentuan;
+(i)
+
+nasabah bertindak sebagai mitra usaha dan mudharib;
+
+(ii) atas keuntungan yang dihasilkan dari kegiatan usaha yang dibiayai
+tersebut, maka nasabah mengambil bagian keuntungan dari porsi
+modalnya, sisa keuntungan dibagi sesuai kesepakatan antara Bank dan
+nasabah;
+n.
+
+pengembalian pembiayaan dilakukan pada akhir periode Akad untuk
+pembiayaan dengan jangka waktu sampai dengan satu tahun atau dilakukan
+secara angsuran berdasarkan aliran kas masuk (cash in flow) usaha nasabah;
+dan …
+
+-9-
+
+dan
+o.
+
+Bank dapat meminta jaminan atau agunan untuk mengantisipasi risiko
+apabila nasabah tidak dapat memenuhi kewajiban sebagaimana dimuat dalam
+Akad karena kelalaian dan/atau kecurangan.
+Pasal 7
+
+Dalam kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan
+Mudharabah muqayyadah (restricted investment) berlaku
+
+persyaratan paling
+
+kurang sebagai berikut:
+a.
+
+Bank bertindak sebagai agen penyalur dana investor (channelling agent)
+kepada nasabah yang bertindak sebagai pengelola dana untuk kegiatan usaha
+dengan persyaratan dan jenis kegiatan usaha yang ditentukan oleh investor;
+
+b.
+
+jangka waktu pembiayaan, pengembalian dana, dan pembagian keuntungan
+ditentukan berdasarkan kesepakatan antara investor, nasabah dan Bank;
+
+c.
+
+Bank tidak ikut serta dalam pengelolaan usaha nasabah tetapi memiliki hak
+dalam pengawasan dan pembinaan usaha nasabah;
+
+d.
+
+pembiayaan diberikan dalam bentuk tunai dan/atau barang;
+
+e.
+
+dalam hal pembiayaan diberikan dalam bentuk barang, maka barang yang
+diserahkan harus dinilai dengan harga perolehan atau harga pasar;
+
+f.
+
+Bank sebagai agen penyaluran dana dapat menerima fee (imbalan) yang
+perhitungannya diserahkan kepada kesepakatan para pihak;
+
+g.
+
+pembagian keuntungan dari pengelolaaan dana investasi dinyatakan dalam
+bentuk nisbah yang disepakati antara investor dan nasabah;
+
+h.
+
+Bank sebagai agen penyaluran dana milik investor tidak menanggung risiko
+kerugian usaha yang dibiayai; dan
+
+i. investor …
+
+- 10 -
+
+i.
+
+investor sebagai pemilik dana Mudharabah muqayyadah menanggung
+seluruh risiko kerugian kegiatan usaha kecuali jika nasabah melakukan
+kecurangan, lalai, atau menyalahi perjanjian yang mengakibatkan kerugian
+usaha.
+Pasal 8
+
+Dalam kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan
+Musyarakah berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank dan nasabah masing-masing bertindak sebagai mitra usaha dengan
+bersama-sama menyediakan dana dan/atau barang untuk membiayai suatu
+kegiatan usaha tertentu;
+
+b.
+
+nasabah bertindak sebagai pengelola usaha dan Bank sebagai mitra usaha
+dapat ikut serta dalam pengelolaan usaha sesuai dengan tugas dan wewenang
+yang disepakati;
+
+c.
+
+Bank berdasarkan kesepakatan dengan nasabah dapat menunjuk nasabah
+untuk mengelola usaha;
+
+d.
+
+pembiayaan diberikan dalam bentuk tunai dan/atau barang;
+
+e.
+
+dalam hal pembiayaan diberikan dalam bentuk barang, maka barang yang
+diserahkan harus dinilai secara tunai berdasarkan kesepakatan;
+
+f.
+
+jangka waktu pembiayaan, pengembalian dana, dan pembagian keuntungan
+ditentukan berdasarkan kesepakatan antara Bank dan nasabah;
+
+g.
+
+biaya operasional dibebankan pada modal bersama sesuai kesepakatan;
+
+h.
+
+pembagian keuntungan dari pengelolaan dana dinyatakan dalam bentuk
+nisbah yang disepakati;
+
+i.
+
+Bank dan nasabah menanggung kerugian secara proporsional menurut porsi
+modal …
+
+- 11 -
+
+modal masing-masing, kecuali jika terjadi kecurangan, lalai, atau menyalahi
+perjanjian dari salah satu pihak;
+j.
+
+nisbah bagi hasil yang disepakati tidak dapat diubah sepanjang jangka waktu
+investasi, kecuali atas dasar kesepakatan para pihak dan tidak berlaku surut;
+
+k.
+
+nisbah bagi hasil dapat ditetapkan secara berjenjang (tiering) yang besarnya
+berbeda-beda berdasarkan kesepakatan pada awal Akad;
+
+l.
+
+pembagian keuntungan dapat dilakukan dengan metode bagi untung atau rugi
+(profit and loss sharing) atau metode bagi pendapatan (revenue sharing);
+
+m.
+
+pembagian keuntungan berdasarkan hasil usaha sesuai dengan laporan
+keuangan nasabah;
+
+n.
+
+pengembalian pokok pembiayaan dilakukan pada akhir periode Akad atau
+dilakukan secara angsuran berdasarkan aliran kas masuk (cash in flow) usaha;
+dan
+
+o.
+
+Bank dapat meminta jaminan atau agunan untuk mengantisipasi risiko
+apabila nasabah tidak dapat memenuhi kewajiban sebagaimana dimuat dalam
+Akad karena kelalaian dan atau kecurangan.
+Paragraf 2
+Penyaluran Dana Berdasarkan Murabahah, Salam dan Istishna’
+Pasal 9
+
+(1) Kegiatan
+
+penyaluran
+
+dana
+
+dalam
+
+bentuk
+
+pembiayaan
+
+berdasarkan
+
+Murabahah berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank menyediakan dana pembiayaan berdasarkan perjanjian jual beli
+barang.
+
+b.
+
+jangka waktu pembayaran harga barang oleh nasabah kepada Bank
+
+ditentukan …
+
+- 12 -
+
+ditentukan berdasarkan kesepakatan Bank dan nasabah;
+c.
+
+Bank dapat membiayai sebagian atau seluruh harga pembelian barang
+yang telah disepakati kualifikasinya;
+
+d.
+
+dalam hal Bank mewakilkan kepada nasabah (wakalah) untuk membeli
+barang, maka Akad Murabahah harus dilakukan setelah barang secara
+prinsip menjadi milik Bank;
+
+e.
+
+Bank dapat meminta nasabah untuk membayar uang muka atau urbun
+saat menandatangani kesepakatan awal pemesanan barang oleh nasabah;
+
+f.
+
+Bank dapat meminta nasabah untuk menyediakan agunan tambahan
+selain barang yang dibiayai Bank;
+
+g.
+
+kesepakatan marjin harus ditentukan satu kali pada awal Akad dan tidak
+berubah selama periode Akad;
+
+h.
+
+Angsuran pembiayaan selama periode Akad harus dilakukan secara
+proporsional.
+
+(2) Dalam hal Bank meminta nasabah untuk membayar uang muka atau urbun
+sebagaimana dimaksud pada ayat (1) huruf e maka berlaku ketentuan sebagai
+berikut :
+a.
+
+dalam hal uang muka, jika nasabah menolak untuk membeli barang
+setelah membayar uang muka, maka biaya riil Bank harus dibayar dari
+uang muka tersebut dan bank harus mengembalikan kelebihan uang
+muka kepada nasabah. Namun jika nilai uang muka kurang dari nilai
+kerugian yang harus ditanggung oleh Bank, maka Bank dapat meminta
+lagi pembayaran sisa kerugiannya kepada nasabah;
+
+b.
+
+dalam hal urbun, jika nasabah batal membeli barang, maka urbun yang
+telah dibayarkan nasabah menjadi milik Bank
+
+maksimal sebesar
+kerugian …
+
+- 13 -
+
+kerugian yang ditanggung oleh Bank akibat pembatalan tersebut, dan
+jika urbun tidak mencukupi, nasabah wajib melunasi kekurangannya.
+Pasal 10
+(1) Dalam pembiayaan Murabahah Bank dapat memberikan potongan dari total
+kewajiban pembayaran hanya kepada nasabah yang telah melakukan
+kewajiban pembayaran cicilannya dengan tepat waktu dan/atau nasabah yang
+mengalami penurunan kemampuan pembayaran.
+(2) Besar potongan Murabahah kepada nasabah tidak boleh diperjanjikan dalam
+Akad dan diserahkan kepada kebijakan Bank.
+Pasal 11
+(1) Kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan Salam
+berlaku persyaratan paling kurang sebagai berikut:
+a.
+
+Bank membeli barang dari nasabah dengan spesifikasi, kualitas, jumlah,
+jangka waktu, tempat, dan harga yang disepakati;
+
+b.
+
+pembayaran harga oleh Bank kepada nasabah harus dilakukan secara
+penuh pada saat Akad disepakati;
+
+c.
+
+pembayaran oleh Bank kepada nasabah tidak boleh dalam bentuk
+pembebasan kewajiban nasabah kepada Bank ;
+
+d.
+
+alat bayar harus diketahui jumlah dan bentuknya sesuai dengan
+kesepakatan;
+
+e.
+
+Bank sebagai pembeli tidak boleh menjual barang yang belum diterima;
+
+f.
+
+dalam rangka meyakinkan bahwa penjual dapat menyerahkan barang
+sesuai kesepakatan maka Bank dapat meminta jaminan pihak ketiga
+sesuai …
+
+- 14 -
+
+sesuai ketentuan yang berlaku; dan
+g.
+
+Bank hanya dapat memperoleh keuntungan atau kerugian pada saat
+barang yang dibeli Bank telah dijual kepada pihak lain, kecuali terdapat
+perubahan harga pasar terhadap harga perolehan, sebelum barang dijual
+kepada pihak lain.
+
+(2) Dalam hal seluruh atau sebagian barang tidak tersedia sesuai dengan waktu
+penyerahan, kualitas atau jumlahnya sebagaimana kesepakatan maka Bank
+memiliki pilihan untuk :
+a.
+
+membatalkan (mem-fasakh-kan) Akad dan meminta pengembalian dana
+hak Bank;
+
+b.
+
+menunggu penyerahan barang tersedia; atau
+
+c.
+
+meminta kepada nasabah untuk mengganti dengan barang lainnya yang
+sejenis atau tidak sejenis sepanjang nilai pasarnya sama dengan barang
+pesanan semula;
+
+(3) dalam hal nasabah menyerahkan barang kepada Bank dengan kualitas yang
+lebih tinggi maka nasabah tidak boleh meminta tambahan harga, kecuali
+terdapat kesepakatan antara Bank dengan nasabah;
+(4) dalam hal nasabah menyerahkan barang kepada Bank dengan kualitas yang
+lebih rendah dan Bank dengan sukarela menerimanya, maka tidak boleh
+menuntut pengurangan harga (discount).
+Pasal 12
+(1) Kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan Salam
+paralel berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank sebagai pembeli dalam Akad Salam dapat membuat Akad Salam
+
+paralel …
+
+- 15 -
+
+paralel dengan pihak lainnya dimana Bank bertindak sebagai penjual;
+b.
+
+kewajiban dan hak dalam kedua Akad Salam tersebut harus terpisah;
+
+c.
+
+Pelaksanaan kewajiban salah satu Akad Salam tidak boleh tergantung
+pada Akad Salam lainnya;
+
+d.
+
+Bank yang bertindak sebagai penjual dalam Akad Salam paralel harus
+memenuhi kewajibannya kepada pihak lainnya apabila nasabah dalam
+Akad Salam tidak memenuhi Akad Salam;
+
+e.
+
+Bank menjual barang kepada nasabah pemesan dengan spesifikasi,
+kualitas, jumlah, jangka waktu, tempat, dan harga yang disepakati;
+
+f.
+
+pembayaran harga oleh nasabah kepada Bank dilakukan secara penuh
+pada saat Akad disepakati;
+
+g.
+
+dalam hal pembayaran harga oleh nasabah kepada Bank dilakukan
+secara angsuran maka wajib dilakukan dengan Akad Murabahah;
+
+h.
+
+pembayaran oleh nasabah kepada Bank tidak boleh dalam bentuk
+pembebasan kewajiban Bank kepada nasabah;
+
+i.
+
+alat bayar harus diketahui jumlah dan bentuknya sesuai dengan
+kesepakatan;
+
+j.
+
+nasabah sebagai pembeli tidak boleh menjual barang yang belum
+diterima;
+
+k.
+
+dalam rangka meyakinkan Bank dapat menyerahkan barang sesuai
+kesepakatan, maka nasabah dapat meminta jaminan pihak ketiga sesuai
+ketentuan yang berlaku.
+
+(2) Dalam hal seluruh atau sebagian barang tidak tersedia sesuai dengan waktu
+penyerahan, kualitas atau jumlahnya sebagaimana kesepakatan maka nasabah
+memiliki pilihan untuk:
+
+a. membatalkan …
+
+- 16 -
+
+a.
+
+membatalkan (mem-fasakh-kan) Akad dan meminta pengembalian dana
+hak nasabah;
+
+b.
+
+menunggu penyerahan barang tersedia; atau
+
+c.
+
+meminta kepada Bank untuk mengganti dengan barang lainnya yang
+sejenis atau tidak sejenis sepanjang nilai pasarnya sama dengan barang
+pesanan semula;
+
+(3) Dalam hal Bank menyerahkan barang kepada nasabah dengan kualitas yang
+lebih tinggi maka Bank tidak boleh meminta tambahan harga, kecuali
+terdapat kesepakatan antara Bank dengan nasabah;
+(4) Dalam hal Bank menyerahkan barang kepada nasabah dengan kualitas yang
+lebih rendah dan nasabah dengan sukarela menerimanya, maka tidak boleh
+menuntut pengurangan harga (discount).
+Pasal 13
+(1) Kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan Istishna'
+berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank menjual barang kepada nasabah dengan spesifikasi, kualitas,
+jumlah, jangka waktu, tempat, dan harga yang disepakati;
+
+b.
+
+pembayaran oleh nasabah kepada Bank tidak boleh dalam bentuk
+pembebasan hutang nasabah kepada Bank;
+
+c.
+
+alat bayar harus diketahui jumlah dan bentuknya sesuai dengan
+kesepakatan;
+
+d.
+
+pembayaran oleh nasabah selaku pembeli kepada Bank dilakukan secara
+bertahap atau sesuai kesepakatan;
+
+(2) Dalam hal seluruh atau sebagian barang tidak tersedia sesuai dengan waktu
+
+penyerahan …
+
+- 17 -
+
+penyerahan, kualitas atau jumlahnya sebagaimana kesepakatan maka nasabah
+memiliki pilihan untuk:
+a.
+
+membatalkan (mem-fasakh-kan) Akad dan meminta pengembalian dana
+kepada Bank;
+
+b.
+
+menunggu penyerahan barang tersedia; atau
+
+c.
+
+meminta kepada Bank untuk mengganti dengan barang lainnya yang
+sejenis atau tidak sejenis sepanjang nilai pasarnya sama dengan barang
+pesanan semula;
+
+(3) Dalam hal Bank menyerahkan barang kepada nasabah dengan kualitas yang
+lebih tinggi maka Bank tidak boleh meminta tambahan harga, kecuali
+terdapat kesepakatan antara nasabah dengan Bank;
+(4) Dalam hal Bank menyerahkan barang kepada nasabah dengan kualitas yang
+lebih rendah dan nasabah dengan sukarela menerimanya, maka nasabah tidak
+boleh menuntut pengurangan harga (discount).
+Pasal 14
+(1) Kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan Istishna'
+paralel berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank sebagai penjual dalam Akad Istishna’ dapat membuat Akad
+Istishna' paralel dengan pihak lainnya dimana Bank bertindak sebagai
+pembeli;
+
+b.
+
+kewajiban dan hak dalam kedua Akad Istishna’ tersebut harus terpisah;
+
+c.
+
+pelaksanaan kewajiban salah satu Akad Istishna’ tidak boleh tergantung
+pada Akad Istishna’ paralel atau sebaliknya;
+
+d.
+
+dalam hal Bank yang bertindak sebagai pembeli dalam Akad Istishna'
+
+paralel …
+
+- 18 -
+
+paralel harus memenuhi kewajibannya kepada pihak lainnya apabila
+nasabah dalam Akad Istishna’ tidak memenuhi Akad Istishna’;
+e.
+
+Dalam hal pembayaran dilakukan secara angsuran, harus dilakukan
+secara proporsional.
+
+(2) Ketentuan Istishna’ berlaku pula pada Istishna’ Paralel sebagai berikut :
+a.
+
+Bank membeli barang dari nasabah dengan spesifikasi, kualitas, jumlah,
+jangka waktu, tempat, dan harga yang disepakati;
+
+b.
+
+pembayaran oleh Bank kepada
+
+nasabah tidak boleh dalam bentuk
+
+pembebasan hutang nasabah kepada Bank;
+c.
+
+alat bayar harus diketahui jumlah dan bentuknya sesuai dengan
+kesepakatan;
+
+d.
+
+pembayaran oleh Bank selaku pembeli kepada nasabah dilakukan secara
+bertahap atau sesuai kesepakatan;
+
+e.
+
+dalam hal nasabah menyerahkan barang kepada Bank dengan kualitas
+yang lebih tinggi maka nasabah tidak boleh meminta tambahan harga;
+
+f.
+
+dalam hal nasabah menyerahkan barang kepada Bank dengan kualitas
+yang lebih rendah dan Bank dengan sukarela menerimanya, maka Bank
+tidak boleh menuntut pengurangan harga (discount).
+Paragraf 3
+Penyaluran dana berdasarkan Akad Ijarah, Ijarah muntahiya bitamlik
+dan Qardh
+Pasal 15
+
+Kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan Ijarah untuk
+transaksi sewa menyewa berlaku persyaratan paling kurang sebagai berikut :
+
+a. Bank …
+
+- 19 -
+
+a.
+
+Bank dapat membiayai pengadaan objek sewa berupa barang yang telah
+dimiliki Bank atau barang yang diperoleh dengan menyewa dari pihak lain
+untuk kepentingan nasabah berdasarkan kesepakatan;
+
+b.
+
+objek dan manfaat barang sewa harus dapat dinilai dan diidentifikasi secara
+spesifik dan dinyatakan dengan jelas termasuk pembayaran sewa dan jangka
+waktunya;
+
+c.
+
+Bank wajib menyediakan barang sewa, menjamin pemenuhan kualitas
+maupun kuantitas barang sewa serta ketepatan waktu penyediaan barang
+sewa sesuai kesepakatan;
+
+d.
+
+Bank wajib menanggung biaya pemeliharaan barang/aset sewa yang sifatnya
+materiil dan struktural sesuai kesepakatan;
+
+e.
+
+Bank dapat mewakilkan kepada nasabah untuk mencarikan barang yang akan
+disewa oleh nasabah;
+
+f.
+
+nasabah wajib membayar sewa secara tunai, menjaga keutuhan barang sewa,
+dan
+
+menanggung
+
+biaya
+
+pemeliharaan
+
+barang
+
+sewa
+
+sesuai
+
+dengan
+
+kesepakatan;
+g.
+
+nasabah tidak bertanggungjawab atas kerusakan barang sewa yang terjadi
+bukan karena pelanggaran perjanjian atau kelalaian nasabah ;
+Pasal 16
+
+(1) Kegiatan penyaluran dana dalam bentuk Pembiayaan berdasarkan Ijarah
+muntahiya bittamlik (IMBT) berlaku
+
+persyaratan paling kurang sebagai
+
+berikut :
+a.
+
+IMBT harus disepakati ketika Akad Ijarah ditandatangani dan
+kesepakatan tersebut wajib dituangkan dalam Akad Ijarah dimaksud;
+b. pelaksanaan …
+
+- 20 -
+
+b.
+
+pelaksanaan IMBT hanya dapat dilakukan setelah Akad Ijarah dipenuhi;
+
+c.
+
+Bank wajib mengalihkan kepemilikan barang sewa kepada nasabah
+berdasarkan hibah, pada akhir periode perjanjian sewa;
+
+d.
+
+pengalihan kepemilikan barang sewa kepada penyewa dituangkan dalam
+Akad tersendiri setelah masa Ijarah selesai;
+
+(2) Ketentuan Ijarah berlaku pula pada Akad IMBT sebagai berikut :
+a.
+
+Bank dapat membiayai pengadaan objek sewa berupa barang yang telah
+dimiliki Bank atau barang yang diperoleh dengan menyewa dari pihak
+lain untuk kepentingan nasabah berdasarkan kesepakatan;
+
+b.
+
+objek dan manfaat barang sewa harus dapat dinilai dan diidentifikasi
+secara spesifik dan dinyatakan dengan jelas termasuk pembayaran sewa
+dan jangka waktunya;
+
+c.
+
+Bank wajib menyediakan barang sewa, menjamin pemenuhan kualitas
+maupun kuantitas barang sewa serta ketepatan waktu penyediaan barang
+sewa sesuai kesepakatan;
+
+d.
+
+Bank wajib menanggung biaya pemeliharaan barang/aset sewa yang
+sifatnya materiil dan struktural sesuai kesepakatan;
+
+e.
+
+Bank dapat mewakilkan kepada nasabah untuk mencarikan barang yang
+akan disewa oleh nasabah;
+
+f.
+
+nasabah wajib membayar sewa secara tunai dan menjaga keutuhan
+barang sewa, dan menanggung biaya pemeliharaan barang sewa sesuai
+dengan kesepakatan;
+
+g.
+
+nasabah tidak bertanggung jawab atas kerusakan barang sewa yang
+terjadi bukan karena pelanggaran perjanjian atau kelalaian nasabah;
+
+Pasal 17 …
+
+- 21 -
+
+Pasal 17
+Kegiatan penyaluran dana dalam bentuk pembiayaan berdasarkan Ijarah untuk
+transaksi multijasa berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank dapat menggunakan Akad Ijarah untuk transaksi multijasa dalam jasa
+keuangan antara lain dalam bentuk pelayanan pendidikan, kesehatan,
+ketenaga kerjaan dan kepariwisataan;
+
+b.
+
+dalam pembiayaan kepada nasabah yang menggunakan Akad Ijarah untuk
+transaksi multijasa, Bank dapat memperoleh imbalan jasa (ujrah) atau fee;
+
+c.
+
+besar ujrah atau fee harus disepakati di awal dan dinyatakan dalam bentuk
+nominal bukan dalam bentuk prosentase.
+Pasal 18
+
+Kegiatan penyaluran dana dalam bentuk pinjaman dana berdasarkan Qardh
+berlaku persyaratan paling kurang sebagai berikut :
+a.
+
+Bank dapat memberikan pinjaman Qardh untuk kepentingan nasabah
+berdasarkan kesepakatan;
+
+b.
+
+nasabah wajib mengembalikan jumlah pokok pinjaman Qardh yang diterima
+pada waktu yang telah disepakati;
+
+c.
+
+Bank dapat membebankan kepada nasabah biaya administrasi sehubungan
+dengan pemberian pinjaman Qardh;
+
+d.
+
+nasabah dapat memberikan tambahan/sumbangan dengan sukarela kepada
+Bank selama tidak diperjanjikan dalam Akad;
+
+e.
+
+dalam hal nasabah tidak dapat mengembalikan sebagian atau seluruh
+kewajibannya pada waktu yang telah disepakati karena nasabah tidak
+mampu, maka Bank dapat memperpanjang jangka waktu pengembalian atau
+menghapus …
+
+- 22 -
+
+menghapus buku sebagian atau seluruh pinjaman nasabah atas beban
+kerugian Bank;
+f.
+
+dalam hal nasabah digolongkan mampu dan tidak mengembalikan sebagian
+atau seluruh kewajibannya pada waktu yang telah disepakati, maka Bank
+dapat
+
+menjatuhkan
+
+sanksi
+
+kewajiban
+
+pembayaran
+
+atas
+
+kelambatan
+
+pembayaran atau menjual agunan nasabah untuk menutup kewajiban
+pinjaman nasabah;
+g.
+
+sumber dana pinjaman Qardh untuk kegiatan usaha yang bersifat sosial dapat
+berasal dari modal, keuntungan yang disisihkan dan dari dana infak;
+
+h.
+
+sumber dana pinjaman Qardh untuk kegiatan usaha yang bersifat talangan
+dana komersial jangka pendek (short term financing) diperbolehkan dari
+Dana Pihak Ketiga
+
+yang bersifat investasi sepanjang tidak merugikan
+
+kepentingan nasabah pemilik dana;
+Bagian Ketiga
+Ketentuan Ganti Rugi (Ta’widh)
+Pasal 19
+Ketentuan Ganti Rugi (Ta'widh) dalam Pembiayaan:
+a.
+
+Bank dapat mengenakan ganti rugi (ta`widh) hanya atas kerugian riil yang
+dapat diperhitungkan dengan jelas kepada nasabah yang dengan sengaja atau
+karena kelalaian melakukan sesuatu yang menyimpang dari ketentuan Akad
+dan mengakibatkan kerugian pada Bank;
+
+b.
+
+Besar ganti rugi yang dapat diakui sebagai pendapatan Bank adalah sesuai
+dengan nilai kerugian riil (real loss) yang berkaitan dengan upaya Bank
+untuk memperoleh pembayaran dari nasabah dan bukan kerugian yang
+
+diperkirakan …
+
+- 23 -
+
+diperkirakan akan terjadi (potential loss) karena adanya peluang yang hilang
+(opportunity loss/al-furshah al-dha-i’ah);
+c.
+
+ganti rugi hanya boleh dikenakan pada Akad Ijarah dan Akad yang
+menimbulkan
+
+utang
+
+piutang
+
+(dain),
+
+seperti
+
+Salam,
+
+Istishna’
+
+serta
+
+Murabahah, yang pembayarannya dilakukan tidak secara tunai;
+d.
+
+ganti rugi dalam Akad Mudharabah dan Musyarakah, hanya boleh dikenakan
+Bank sebagai shahibul maal apabila bagian keuntungan Bank yang sudah
+jelas tidak dibayarkan oleh nasabah sebagai mudharib;
+
+e.
+
+klausul pengenaan ganti rugi harus ditetapkan secara jelas dalam Akad dan
+dipahami oleh nasabah; dan
+
+f.
+
+Besarnya ganti rugi atas kerugian riil ditetapkan berdasarkan kesepakatan
+antara Bank dengan nasabah.
+BAB III
+PENYELESAIAN SENGKETA BANK
+DAN NASABAH
+Pasal 20
+
+(1) Dalam hal salah satu pihak tidak memenuhi kewajibannya sebagaimana
+diperjanjikan dalam Akad atau jika terjadi perselisihan di antara Bank dan
+Nasabah maka upaya penyelesaian dilakukan melalui musyawarah;
+(2) Dalam hal musyawarah sebagaimana dimaksud pada ayat (1) tidak mencapai
+kesepakatan, maka penyelesaian lebih lanjut dapat dilakukan melalui
+alternatif penyelesaian sengketa atau badan arbitrase Syariah;
+
+BAB IV …
+
+- 24 -
+
+BAB IV
+SANKSI
+Pasal 21
+(1) Bank yang tidak melaksanakan ketentuan dalam Pasal 2 sampai dengan Pasal
+19 Peraturan Bank Indonesia ini dikenakan sanksi administratif sebagaimana
+dimaksud dalam Pasal 52 Undang-undang Nomor 7 Tahun 1992 tentang
+Perbankan sebagaimana telah diubah dengan Undang-undang Nomor 10
+Tahun 1998 berupa:
+a.
+
+teguran tertulis;
+
+b.
+
+penurunan tingkat kesehatan; dan atau
+
+c.
+
+penggantian pengurus.
+
+(2) Unit Usaha Syariah (UUS) yang tidak melaksanakan pengawasan terkait
+dengan pelaksanaan ketentuan dalam Pasal
+
+2 sampai dengan Pasal 19
+
+Peraturan Bank Indonesia ini dikenakan sanksi administratif berupa:
+a.
+
+teguran tertulis; dan atau
+
+b.
+
+pencabutan izin usaha UUS.
+BAB V
+KETENTUAN PERALIHAN
+Pasal 22
+
+Akad-Akad Bank yang telah jatuh tempo dan akan diperpanjang wajib disesuaikan
+dengan Peraturan Bank Indonesia ini.
+
+BAB VI …
+
+- 25 -
+
+BAB VI
+KETENTUAN PENUTUP
+Pasal 23
+Peraturan ini mulai berlaku sejak tanggal ditetapkan.
+Ditetapkan di Jakarta
+Pada tanggal : 14 November 2005
+GUBERNUR BANK INDONESIA,
+
+BURHANUDDIN ABDULLAH
+
+LEMBARAN NEGARA REPUBLIK INDONESIA TAHUN 2005 NOMOR 124
+DPbS
+
+PENJELASAN
+ATAS
+PERATURAN BANK NDONESIA
+NOMOR: 7/46/PBI/2005
+TENTANG
+AKAD PENGHIMPUNAN DAN PENYALURAN DANA BAGI BANK YANG
+MELAKSANAKAN KEGIATAN USAHA BERDASARKAN
+PRINSIP SYARIAH
+UMUM
+Sejalan dengan perkembangan pesat
+
+industri perbankan syariah
+
+dimungkinkan pula adanya berbagai penafsiran dalam penyusunan Akad produk
+dan jasa bank syariah yang dapat menimbulkan iklim usaha yang kurang kondusif
+bagi bank syariah dan ketidak pastian bagi para pihak terkait dan stakeholders
+lainnya. Dengan demikian diperlukan pengaturan Akad penghimpunan dan
+penyaluran dana bank syariah dalam rangka memelihara kepercayaan masyarakat
+terhadap bank syariah.
+Dengan adanya ketentuan tentang Akad penghimpunan dan penyaluran
+dana bank syariah akan memberikan manfaat kepada semua pihak yang
+berkepentingan yang pada gilirannya akan mewujudkan pengelolaan bank syariah
+yang sehat. Selain itu, kejelasan Akad akan membantu operasional bank sehingga
+menjadi lebih efisien dan meningkatkan kepastian hukum para pihak termasuk
+bagi pengawas dan auditor bank syariah.
+Ketentuan persyaratan minimum Akad ini disusun berpedoman kepada
+fatwa yang diterbitkan oleh Dewan Syariah Nasional dengan memberikan
+penjelasan …
+
+-2-
+
+penjelasan lebih rinci aspek teknis perbankan guna menyediakan landasan hukum
+yang cukup memadai bagi para pihak yang berkepentingan.
+Ketentuan persyaratan minimum Akad ini mengikuti proses yang
+berkesinambungan (evolving process) dengan memperhatikan perubahan dan
+perkembangan kondisi regulasi dan sistem perundangan yang berlaku
+Prinsip-prinsip umum yang diatur dalam ketentuan persyaratan minimum
+Akad ini meliputi antara lain prinsip transparansi produk dan jasa dalam upaya
+mewujudkan bank syariah yang penuh integritas dan amanah, asas keberlakuan
+secara universal sehingga bank syariah dapat dimanfaatkan oleh seluruh lapisan
+masyarakat, dan pengutamaan penyelesaian sengketa antara bank dan nasabah
+secara musyawarah, memenuhi rasa keadilan dan efisiensi biaya dalam
+penyelesaian sengketa melalui alternatif penyelesaian sengketa atau arbitrase
+syariah.
+PASAL DEMI PASAL
+Pasal 1
+Angka 1 sampai dengan angka 11
+Cukup jelas.
+Pasal 2
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Yang dimaksud dengan jenis transaksi syariah yang maksud adalah
+Wadi’ah, Mudharabah, Musyarakah, Murabahah, Salam, Istishna’,
+Ijarah dan Qardh.
+Ayat (3) …
+
+-3-
+
+Ayat (3)
+Yang dimaksud dengan:
+"Gharar" adalah transaksi yang mengandung tipuan dari salah satu
+pihak sehingga pihak yang lain dirugikan.
+"Maysir" adalah transaksi yang mengandung unsur perjudian, untunguntungan atau spekulatif yang tinggi.
+"Riba" adalah transaksi dengan pengambilan tambahan, baik dalam
+transaksi jual-beli maupun pinjam-meminjam secara batil atau
+bertentangan dengan ajaran Islam.
+"Zalim" adalah tindakan atau perbuatan yang mengakibatkan kerugian
+dan penderitaan pihak lain.
+"Risywah" adalah tindakan suap dalam bentuk uang, fasilitas, atau
+bentuk lainnya yang melanggar hukum sebagai upaya mendapatkan
+fasilitas atau kemudahan dalam suatu transaksi.
+"Barang haram dan maksiat" adalah barang atau fasilitas yang dilarang
+dimanfaatkan atau digunakan menurut hukum Islam.
+Pasal 3
+Cukup jelas
+Pasal 4
+Huruf a sampai dengan huruf f
+Cukup jelas.
+Huruf g
+Yang dimaksud dengan "biaya operasional" adalah biaya yang berkaitan
+langsung dengan fasilitas pengelolaan rekening nasabah misalnya biaya
+
+kartu …
+
+-4-
+
+kartu ATM, cetak buku/cek/bilyet giro, cetak laporan traksaksi dan
+saldo rekening, pembukaan dan penutupan rekening.
+Huruf h
+Cukup jelas
+Pasal 5
+Cukup jelas
+Pasal 6
+Huruf a
+Yang dimaksud dengan Mudharabah dalam pengaturan pasal ini
+adalah Mudharabah mutlaqah.
+Huruf b sampai dengan huruf e
+Cukup jelas.
+Huruf f
+Harga pasar digunakan untuk barang yang telah dimiliki oleh Bank
+atau bukan pengadaan baru.
+Nasabah mengembalikan dana Bank sebesar nilai nominal yang
+ditetapkan berdasarkan nilai perolehan atau nilai pasar pada saat Akad.
+Huruf g sampai dengan huruf k
+Cukup jelas
+Huruf l
+Bank dapat melakukan review, meminta bukti-bukti dari laporan hasil
+usaha yang dibuat oleh nasabah. Laporan hasil usaha disepakati kedua
+belah
+
+pihak
+
+berdasarkan
+
+bukti
+
+pendukung
+
+yang
+
+dapat
+
+dipertanggungjawabkan.
+
+Huruf m …
+
+-5-
+
+Huruf m sampai dengan huruf o
+Cukup jelas
+Pasal 7
+Cukup jelas
+Pasal 8
+Huruf a sampai dengan huruf l
+Cukup jelas
+Huruf m
+Bank dapat melakukan review, meminta bukti-bukti dari laporan hasil
+usaha yang dibuat oleh nasabah. Laporan hasil usaha disepakati kedua
+belah
+
+pihak
+
+berdasarkan
+
+bukti
+
+pendukung
+
+yang
+
+dapat
+
+dipertanggungjawabkan.
+Huruf n dan huruf o
+Cukup jelas
+Pasal 9
+Ayat (1)
+Huruf a
+Yang dimaksud dengan “barang” adalah barang yang diketahui
+jelas kuantitas, kualitas dan spesifikasinya.
+Huruf b dan huruf c
+Cukup jelas
+
+Huruf d …
+
+-6-
+
+Huruf d
+Wakalah harus dibuatkan Akad secara terpisah dari Akad
+Murabahah.
+Yang dimaksud dengan secara prinsip barang milik Bank dalam
+wakalah pada Akad Murabahah adalah adanya aliran dana yang
+ditujukan kepada pemasok barang atau dibuktikan dengan
+kuitansi pembelian.
+Huruf e sampai dengan huruf g
+Cukup jelas
+Huruf h
+Angsuran secara proposional adalah angsuran yang ditetapkan
+Bank secara proposional antara harga pokok dan marjin, serta
+jangka waktu angsuran. Contoh :
+ Harga pokok mesin Rp10.000.000,- (sepuluh juta rupiah)
+ Marjin Rp2.000.000,- (dua juta rupiah)
+ Jangka waktu angsuran = 12 (dua belas) bulan
+ Angsuran nasabah Rp12.000.000,-/12 = Rp1.000.000,- (satu
+juta rupiah)
+Ayat (2)
+Cukup jelas
+Pasal 10
+Ayat (1)
+Yang dimaksud dengan nasabah yang mengalami penurunan
+kemampuan membayar adalah nasabah yang kegiatan usahanya
+terkena dampak bencana alam atau krisis perekonomian yang
+ditetapkan …
+
+-7-
+
+ditetapkan secara resmi oleh pemerintah sebagai krisis nasional.
+Pemotongan kewajiban pembayaran ditetapkan berdasarkan kebijakan
+Bank.
+Ayat (2)
+Cukup jelas
+Pasal 11
+Ayat (1)
+Huruf a
+Yang dimaksud ‘barang’ adalah hasil pertanian dan atau hasil
+tambang.
+Huruf b
+Yang dimaksud dengan pembayaran secara penuh pada saat
+Akad adalah pembayaran segera setelah Akad disepakati atau
+paling lambat 7 (tujuh) hari setelah Akad disepakati.
+Huruf c sampai dengan huruf e
+Cukup Jelas
+Huruf f
+Jaminan pihak ketiga antara lain dalam bentuk garansi
+berdasarkan prinsip syariah.
+Huruf g
+Cukup jelas
+Ayat (2)
+Cukup jelas
+
+Ayat (3) …
+
+-8-
+
+Ayat (3)
+Cukup jelas
+Ayat (4)
+Cukup jelas
+Pasal 12
+Ayat (1)
+Pembiayaan berdasarkan Salam paralel muncul pada saat Bank
+membeli barang untuk dijual kembali kepada pihak lain.
+Ayat (2)
+Cukup jelas
+Ayat (3)
+Cukup jelas
+Ayat (4)
+Cukup jelas
+Pasal 13
+Ayat (1)
+Huruf a
+Yang dimaksud ‘barang’ adalah proyek infrastruktur dan atau
+hasil industri manufaktur.
+Huruf b sampai dengan huruf d
+Cukup jelas
+Ayat (2)
+Cukup jelas
+
+Ayat 3 …
+
+-9-
+
+Ayat (3)
+Cukup jelas
+Ayat (4)
+Cukup jelas
+Pasal 14
+Ayat (1)
+Pembiayaan Istishna’ paralel muncul pada saat Bank memesan barang
+untuk dijual kembali kepada pihak lain.
+Ayat (2)
+Huruf a
+Nasabah adalah termasuk nasabah produsen, pemasok atau
+penyedia.
+Huruf b sampai dengan huruf f
+Cukup jelas
+Pasal 15
+Huruf a
+Yang dimaksud ‘barang’ adalah barang bergerak atau tidak bergerak
+yang dapat diambil manfaat sewa.
+Huruf b dan huruf c
+Cukup jelas
+Huruf d
+Uraian biaya pemeliharaan yang bersifat material dan struktural sesuai
+kesepakatan dituangkan dalam Akad
+
+Huruf e …
+
+- 10 -
+
+Huruf e
+Akad mewakilkan kepada nasabah di buatkan secara terpisah dari
+Akad Ijarah
+Huruf f dan huruf g
+Cukup jelas
+Pasal 16
+Ayat (1)
+Yang dimaksud dengan IMBT adalah Ijarah dengan janji (wa’ad)
+yang mengikat pihak yang menyewakan untuk mengalihkan
+kepemilikan kepada penyewa.
+Ayat (2)
+Cukup jelas.
+Pasal 17
+Cukup jelas.
+Pasal 18
+Huruf a sampai dengan huruf d
+Cukup jelas
+Huruf e
+Kondisi “nasabah tidak mampu” adalah ketidak mampuan nasabah
+terhadap hal-hal di luar kemampuan nasabah karena musibah bencana
+alam atau krisis perekonomian nasional yang ditetapkan sebagai krisis
+oleh pemerintah.
+Huruf f dan huruf g
+Cukup jelas
+Huruf h …
+
+- 11 -
+
+Huruf h
+Dalam rangka kehati-hatian pemberian pinjaman Qardh untuk kegiatan
+usaha yang bersifat talangan dana komersial, Bank dapat meminta
+agunan kepada nasabah.
+Pasal 19
+Huruf a
+Cukup jelas
+Huruf b
+Kerugian riil adalah biaya-biaya riil yg dikeluarkan oleh Bank dalam
+rangka penagihan hak Bank yang seharusnya dibayarkan oleh nasabah.
+Huruf c sampai dengan huruf f
+Cukup jelas
+Pasal 20
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Badan arbitrase syariah yang digunakan adalah badan arbitrase syariah
+yang berdomisili paling dekat dengan kantor Bank yang bersangkutan
+atau yang ditunjuk sesuai kesepakatan Bank dan nasabah.
+Pasal 21
+Ayat (1)
+Cukup jelas
+
+Ayat (2) …
+
+- 12 -
+
+Ayat (2)
+Cukup jelas
+Pasal 22
+Cukup jelas
+Pasal 23
+Cukup jelas
+
+TAMBAHAN LEMBARAN NEGARA REPUBLIK INDONESIA NOMOR 4563

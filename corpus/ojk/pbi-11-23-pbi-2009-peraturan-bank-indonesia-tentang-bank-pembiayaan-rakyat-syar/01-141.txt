@@ -1,0 +1,2405 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 11/23/PBI/2009
+Tentang: Peraturan Bank Indonesia tentang Bank Pembiayaan Rakyat Syariah
+Berkas: 141.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+PERATURAN BANK INDONESIA
+NOMOR 11/23/PBI/2009
+TENTANG
+BANK PEMBIAYAAN RAKYAT SYARIAH
+
+DENGAN RAHMAT TUHAN YANG MAHA ESA,
+
+GUBERNUR BANK INDONESIA,
+
+Menimbang:
+
+a. bahwa perekonomian nasional perlu memiliki sistem perbankan
+syariah yang dapat melayani seluruh lapisan masyarakat termasuk
+kepada pengusaha menengah, kecil dan mikro;
+b. bahwa untuk meningkatkan pelayanan jasa perbankan syariah
+kepada usaha menengah, kecil dan mikro secara optimal, Bank
+Pembiayaan
+
+Rakyat
+
+Syariah
+
+harus
+
+sehat
+
+dan
+
+tangguh
+
+(sustainable);
+c. bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam
+huruf a dan huruf b maka diperlukan penyesuaian terhadap
+ketentuan mengenai Bank Pembiayaan Rakyat Syariah dalam
+suatu Peraturan Bank Indonesia.
+Mengingat :
+
+1. Undang-Undang Nomor 23 Tahun 1999 tentang Bank Indonesia
+(Lembaran Negara Republik Indonesia Tahun 1999 Nomor 66,
+Tambahan Lembaran Negara Republik Indonesia Nomor 3843)
+sebagaimana telah diubah terakhir dengan Peraturan Pemerintah
+Pengganti Undang-Undang Nomor 2 Tahun 2008 (Lembaran
+Negara Republik Indonesia Tahun 2009 Nomor 142, Tambahan
+
+Lembaran ...
+
+-2-
+
+Lembaran Negara Republik Indonesia Nomor 4901) sebagaimana
+telah ditetapkan dengan Undang-Undang Nomor 6 Tahun 2009
+tentang Penetapan Peraturan Pemerintah Pengganti UndangUndang Nomor 2 Tahun 2008 tentang Perubahan Kedua atas
+Undang-Undang Nomor 23 Tahun 1999 tentang Bank Indonesia
+menjadi Undang-Undang (Lembaran Negara Republik Indonesia
+Tahun 2009 Nomor 7, Tambahan Lembaran Negara Republik
+Indonesia Nomor 4962);
+2. Undang-Undang Nomor 21 Tahun 2008 tentang Perbankan
+Syariah (Lembaran Negara Republik Indonesia Tahun 2008
+Nomor 94, Tambahan Lembaran Negara Republik Indonesia
+Nomor 4867);
+3. Undang-Undang Nomor 40 Tahun 2007 tentang Perseroan
+Terbatas (Lembaran Negara Republik Indonesia Tahun 2007
+Nomor 106, Tambahan Lembaran Negara Republik Indonesia
+Nomor 4756);
+
+MEMUTUSKAN:
+
+Menetapkan:
+
+PERATURAN
+
+BANK
+
+INDONESIA
+
+TENTANG
+
+BANK
+
+PEMBIAYAAN RAKYAT SYARIAH.
+
+BAB I ...
+
+-3-
+
+BAB I
+KETENTUAN UMUM
+Pasal 1
+Dalam Peraturan Bank Indonesia ini yang dimaksud dengan:
+1.
+
+Bank Pembiayaan Rakyat Syariah yang selanjutnya disebut
+BPRS adalah Bank Pembiayaan Rakyat Syariah sebagaimana
+dimaksud dalam Undang-Undang Nomor 21 Tahun 2008 tentang
+Perbankan Syariah;
+
+2.
+
+Kantor Cabang adalah kantor BPRS yang bertanggungjawab
+kepada kantor pusat BPRS yang bersangkutan dengan alamat
+tempat usaha yang jelas sesuai dengan lokasi Kantor Cabang
+tersebut melakukan usahanya;
+
+3.
+
+Kantor Kas adalah kantor yang kegiatan usahanya melakukan
+pelayanan kas dalam rangka membantu kantor induknya;
+
+4.
+
+Kegiatan Kas di luar Kantor adalah kegiatan kas dalam rangka
+melayani nasabah BPRS meliputi antara lain:
+a.
+
+Kas Keliling yaitu kegiatan pelayanan kas secara berpindahpindah dengan menggunakan alat transportasi atau pada
+lokasi tertentu secara tidak permanen, antara lain kas mobil,
+kas terapung atau counter bank non permanen;
+
+b.
+
+Payment Point yaitu kegiatan dalam bentuk penerimaan
+pembayaran melalui kerjasama antara BPRS dengan pihak
+lain pada suatu lokasi tertentu, seperti untuk penerimaan
+pembayaran tagihan telepon, tagihan listrik dan/atau
+penerimaan setoran dari pihak ketiga; dan
+
+c.
+
+Anjungan Tunai Mandiri (ATM) yaitu kegiatan kas atau non
+
+kas ...
+
+-4-
+
+kas yang dilakukan secara elektronis untuk memudahkan
+nasabah antara lain dalam rangka menarik atau menyetor
+secara
+
+tunai
+
+atau
+
+melakukan
+
+pembayaran
+
+melalui
+
+pemindahbukuan, transfer antar bank dan/atau memperoleh
+informasi
+
+mengenai
+
+saldo/mutasi
+
+rekening
+
+nasabah,
+
+termasuk ATM yang dilakukan dengan pemanfaatan
+teknologi melalui kerja sama dengan pihak lain;
+5.
+
+Prinsip Syariah adalah prinsip hukum Islam dalam kegiatan
+perbankan syariah berdasarkan fatwa yang dikeluarkan oleh
+Dewan Syariah Nasional – Majelis Ulama Indonesia;
+
+6.
+
+Dewan Komisaris adalah Dewan Komisaris sebagaimana
+dimaksud dalam Undang-undang Nomor 40 Tahun 2007 tentang
+Perseroan Terbatas;
+
+7.
+
+Direksi adalah Direksi sebagaimana dimaksud dalam Undangundang Nomor 40 Tahun 2007 tentang Perseroan Terbatas;
+
+8.
+
+Dewan Pengawas Syariah yang selanjutnya disebut DPS adalah
+dewan yang bertugas memberikan nasihat dan saran kepada
+Direksi serta mengawasi kegiatan BPRS agar sesuai dengan
+Prinsip Syariah;
+
+9.
+
+Pejabat Eksekutif adalah pemimpin Kantor Cabang yang
+bertanggung jawab langsung kepada Direktur BPRS dan/atau
+mempunyai pengaruh terhadap kebijakan dan operasional BPRS;
+
+10. Pemegang Saham Pengendali yang selanjutnya disebut PSP
+adalah badan hukum, orang perseorangan, dan/atau kelompok
+usaha yang:
+a. memiliki saham BPRS sebesar 25% (dua puluh lima persen)
+
+atau ...
+
+-5-
+
+atau lebih dari jumlah saham yang dikeluarkan dan
+memperoleh hak suara; atau
+b. memiliki saham BPRS kurang dari 25% (dua puluh lima
+persen) dari jumlah saham yang dikeluarkan dan mempunyai
+hak suara, tetapi yang bersangkutan dapat dibuktikan telah
+melakukan pengendalian BPRS baik secara langsung
+maupun tidak langsung;
+11. Hari adalah hari kalender.
+
+Pasal 2
+Bentuk badan hukum BPRS adalah Perseroan Terbatas.
+
+Pasal 3
+BPRS harus memiliki anggaran dasar yang selain memenuhi
+persyaratan anggaran dasar sebagaimana diatur dalam ketentuan
+perundang-undangan juga harus memuat ketentuan bahwa:
+a.
+
+calon anggota Dewan Komisaris, calon anggota Direksi dan
+calon anggota DPS diangkat oleh rapat umum pemegang saham;
+
+b.
+
+pengangkatan anggota Dewan Komisaris, anggota Direksi dan
+anggota DPS berlaku efektif setelah mendapat persetujuan Bank
+Indonesia;
+
+c.
+
+tugas, wewenang, tanggung jawab dan hal-hal lain yang terkait
+dengan persyaratan Dewan Komisaris, Direksi dan DPS harus
+sesuai dengan ketentuan peraturan perundang-undangan yang
+berlaku;
+
+d.
+
+rapat umum pemegang saham BPRS harus menetapkan
+
+remunerasi ...
+
+-6-
+
+remunerasi anggota Dewan Komisaris dan Direksi, laporan
+pertanggungjawaban tahunan, penunjukan dan biaya jasa
+akuntan publik, dan hal-hal lainnya yang ditetapkan dalam
+ketentuan Bank Indonesia; dan
+e.
+
+rapat umum pemegang saham harus dipimpin oleh Komisaris
+Utama.
+
+BAB II
+PERIZINAN
+Bagian Pertama
+Pendirian BPRS
+Pasal 4
+(1)
+
+BPRS hanya dapat didirikan dan melakukan kegiatan usaha
+setelah memperoleh izin Bank Indonesia.
+
+(2)
+
+Pemberian izin sebagaimana dimaksud dalam ayat (1) dilakukan
+dalam 2 (dua) tahap:
+a. persetujuan prinsip, yaitu persetujuan untuk melakukan
+persiapan pendirian BPRS; dan
+b. izin usaha, yaitu izin untuk melakukan kegiatan usaha BPRS
+setelah persiapan sebagaimana dimaksud dalam huruf a
+selesai dilakukan.
+
+Pasal 5
+Modal disetor BPRS paling kurang sebesar:
+a.
+
+Rp2.000.000.000,00 (dua miliar rupiah) untuk BPRS yang
+
+didirikan ...
+
+-7-
+
+didirikan di wilayah Daerah Khusus Ibukota Jakarta Raya dan
+Kabupaten/Kota Bogor, Depok, Tangerang dan Bekasi;
+b.
+
+Rp1.000.000.000,00 (satu miliar rupiah) untuk BPRS yang
+didirikan di wilayah ibukota propinsi di luar wilayah tersebut
+pada huruf a di atas;
+
+c.
+
+Rp500.000.000,00 (lima ratus juta rupiah) untuk BPRS yang
+didirikan di luar wilayah tersebut pada huruf a dan huruf b di
+atas.
+
+Pasal 6
+BPRS hanya dapat didirikan dan/atau dimiliki oleh:
+a.
+
+warga negara Indonesia dan/atau badan hukum Indonesia yang
+seluruh pemiliknya warga negara Indonesia;
+
+b.
+
+pemerintah daerah; atau
+
+c.
+
+dua pihak atau lebih sebagaimana dimaksud dalam huruf a dan
+huruf b.
+
+Bagian Kedua
+Persetujuan Prinsip
+Pasal 7
+(1)
+
+Permohonan persetujuan prinsip pendirian BPRS sebagaimana
+dimaksud dalam Pasal 4 ayat (2) huruf a diajukan paling kurang
+oleh salah satu calon pemilik BPRS disertai dengan antara lain:
+a. akta pendirian atau rancangan akta pendirian badan hukum
+Perseroan Terbatas (PT), termasuk anggaran dasar atau
+
+rancangan ...
+
+-8-
+
+rancangan anggaran dasar;
+b. daftar pemegang saham berikut rincian besarnya masingmasing kepemilikan saham;
+c. daftar calon anggota Dewan Komisaris, anggota Direksi dan
+anggota DPS disertai dengan dokumen yang akan diatur
+lebih lanjut dalam Surat Edaran Bank Indonesia;
+d. studi kelayakan mengenai potensi ekonomi dan peluang
+pasar;
+e. rencana bisnis (business plan); dan
+f.
+
+bukti setoran modal paling kurang 30% (tiga puluh persen)
+dari modal disetor minimum sebagaimana dimaksud dalam
+Pasal 5.
+
+(2)
+
+Calon pemilik BPRS harus memberikan penjelasan mengenai
+sumber dana, rencana dan tujuan pendirian serta kemampuan
+keuangan
+
+dalam
+
+rangka
+
+memelihara
+
+solvabilitas
+
+dan
+
+pertumbuhan BPRS.
+
+Pasal 8
+(1)
+
+Persetujuan prinsip sebagaimana dimaksud dalam Pasal 7 ayat
+(1) berlaku untuk jangka waktu 1 (satu) tahun terhitung sejak
+tanggal
+
+persetujuan
+
+prinsip
+
+diberikan
+
+dan
+
+tidak
+
+dapat
+
+diperpanjang.
+(2)
+
+Pihak yang telah mendapat persetujuan prinsip sebagaimana
+dimaksud pada ayat (1) dilarang melakukan kegiatan usaha
+sebelum mendapat izin usaha.
+
+(3)
+
+Apabila dalam jangka waktu sebagaimana dimaksud dalam ayat
+
+(1) calon ...
+
+-9-
+
+(1) calon pemilik BPRS belum mengajukan permohonan izin
+usaha kepada Bank Indonesia, maka persetujuan prinsip yang
+telah diberikan menjadi tidak berlaku.
+
+Bagian Ketiga
+Izin Usaha
+Pasal 9
+Permohonan untuk mendapatkan izin usaha BPRS sebagaimana
+dimaksud dalam Pasal 4 ayat (2) huruf b, diajukan oleh pihak
+yang telah mendapat persetujuan prinsip sebagaimana dimaksud
+dalam Pasal 7 ayat (1) disertai dengan, antara lain:
+a. akta pendirian badan hukum Perseroan Terbatas (PT), yang
+memuat anggaran dasar yang telah disahkan oleh instansi
+berwenang;
+b. daftar pemegang saham sebagaimana dimaksud dalam Pasal 7
+ayat (1) huruf b, dalam hal terjadi perubahan pemegang
+saham;
+c. daftar calon anggota Dewan Komisaris, anggota Direksi dan
+anggota DPS sebagaimana dimaksud dalam Pasal 7 ayat (1)
+huruf c, dalam hal terjadi perubahan calon anggota Dewan
+Komisaris, Direksi dan/atau DPS; dan
+d. bukti pemenuhan modal disetor minimum sebagaimana
+dimaksud dalam Pasal 5.
+
+Pasal 10 ...
+
+-10-
+
+Pasal 10
+
+(1) BPRS yang telah mendapat izin usaha dari Bank Indonesia wajib
+melaksanakan kegiatan usaha paling lambat 60 (enam puluh)
+hari terhitung sejak tanggal izin usaha diberikan.
+
+(2) Pelaksanaan kegiatan usaha BPRS sebagaimana dimaksud pada
+ayat (1) wajib dilaporkan oleh Direksi BPRS kepada Bank
+Indonesia paling lambat 10 (sepuluh) hari terhitung sejak tanggal
+pelaksanaan kegiatan usaha.
+
+(3) Apabila dalam jangka waktu sebagaimana dimaksud pada ayat
+(1) BPRS belum melakukan kegiatan usaha, maka izin usaha
+BPRS yang telah diberikan dinyatakan tidak berlaku.
+
+Pasal 11
+BPRS yang telah mendapat izin usaha dari Bank Indonesia wajib
+mencantumkan secara jelas frase “Bank Pembiayaan Rakyat Syariah”
+atau “BPR Syariah” atau “BPRS” pada penulisan namanya dan logo
+iB pada kantor BPRS yang bersangkutan.
+
+BAB III
+KEPEMILIKAN DAN PERUBAHAN MODAL
+Bagian Pertama
+Kepemilikan
+Pasal 12
+Kepemilikan BPRS oleh badan hukum Indonesia sebagaimana
+dimaksud dalam Pasal 6 paling tinggi sebesar modal bersih badan
+
+hukum ...
+
+-11-
+
+hukum yang bersangkutan.
+
+Pasal 13
+Sumber dana yang digunakan dalam rangka kepemilikan BPRS
+dilarang:
+a.
+
+berasal dari pinjaman atau fasilitas pembiayaan dalam bentuk
+apapun dari bank dan/atau pihak lain; dan/atau
+
+b.
+
+berasal dari dan untuk tujuan pencucian uang (money
+laundering).
+
+Pasal 14
+(1) Pihak-pihak yang dapat menjadi pemilik BPRS harus memenuhi
+persyaratan integritas, yang paling kurang mencakup:
+a.
+
+memiliki akhlak dan moral yang baik;
+
+b.
+
+memiliki komitmen untuk mematuhi peraturan perbankan
+syariah dan peraturan perundang-undangan yang berlaku;
+dan
+
+c.
+
+memiliki komitmen yang tinggi terhadap pengembangan
+BPRS yang sehat dan tangguh (sustainable).
+
+(2) BPRS wajib memiliki PSP.
+(3) Pemegang saham yang ditunjuk sebagai PSP sebagaimana
+dimaksud pada ayat (2), selain memenuhi persyaratan integritas
+sebagaimana pada ayat (1) juga harus memenuhi persyaratan
+kelayakan keuangan.
+
+Bagian ...
+
+-12-
+
+Bagian Kedua
+Perubahan Kepemilikan
+Pasal 15
+(1) Perubahan kepemilikan BPRS yang mengakibatkan perubahan
+dan/atau terjadinya PSP baru, tunduk kepada tatacara perubahan
+pemilik BPRS yang diatur dalam ketentuan peraturan perundangundangan yang berlaku mengenai penggabungan (merger),
+peleburan (konsolidasi), dan pengambilalihan (akuisisi).
+(2) Perubahan kepemilikan BPRS sebagaimana dimaksud pada ayat
+(1) sebagai akibat adanya pewarisan tidak diperlakukan sebagai
+akuisisi namun tetap wajib memperoleh persetujuan dari Bank
+Indonesia.
+(3) Perubahan kepemilikan BPRS yang tidak mengakibatkan
+perubahan dan/atau terjadinya PSP baru wajib dilaporkan oleh
+Direksi BPRS kepada Bank Indonesia paling lambat 10 (sepuluh)
+hari setelah perubahan.
+
+Bagian Ketiga
+Perubahan Modal Dasar
+Pasal 16
+Perubahan modal dasar wajib dilaporkan oleh Direksi BPRS kepada
+Bank Indonesia paling lambat 10 (sepuluh) hari setelah tanggal
+diterimanya persetujuan perubahan anggaran dasar dari instansi
+berwenang.
+
+Pasal 17 ...
+
+-13-
+
+Pasal 17
+Pembelian kembali saham yang telah dikeluarkan oleh BPRS wajib
+memperoleh persetujuan terlebih dahulu dari Bank Indonesia dan
+dilaksanakan sesuai dengan ketentuan yang berlaku.
+
+Pasal 18
+BPRS wajib mengadministrasikan dengan tertib daftar pemegang
+saham dan perubahannya.
+
+BAB IV
+DEWAN KOMISARIS, DIREKSI, DEWAN PENGAWAS SYARIAH
+DAN PEJABAT EKSEKUTIF
+Bagian Kesatu
+Dewan Komisaris dan Direksi
+Pasal 19
+Anggota Dewan Komisaris dan anggota Direksi wajib memenuhi dan
+memelihara integritas, kompetensi dan reputasi keuangan.
+
+Pasal 20
+(1)
+
+Dewan Komisaris melakukan pengawasan atas pelaksanaan
+tugas dan tanggung jawab Direksi, serta memberikan nasihat
+kepada Direksi.
+
+(2)
+
+Pengawasan dan nasihat sebagaimana dimaksud pada ayat (1)
+dilakukan
+
+sedemikian
+
+rupa
+
+sehingga
+
+Direksi
+
+dapat
+
+mengembangkan dan memitigasi risiko atas kegiatan bisnisnya.
+
+(3) Dewan ...
+
+-14-
+
+(3)
+
+Dewan Komisaris wajib mendorong Direksi BPRS untuk
+memenuhi prinsip kehati-hatian dan Prinsip Syariah.
+
+Pasal 21
+(1)
+
+Jumlah anggota Dewan Komisaris paling sedikit 2 (dua) orang
+dan paling banyak 3 (tiga) orang.
+
+(2)
+
+Anggota Dewan Komisaris sebagaimana dimaksud pada ayat (1)
+paling sedikit 1 (satu) orang wajib berdomisili di dekat tempat
+kedudukan BPRS.
+
+(3)
+
+Dewan Komisaris dipimpin oleh Presiden Komisaris atau
+Komisaris Utama.
+
+Pasal 22
+Anggota Dewan Komisaris hanya dapat merangkap jabatan sebagai:
+a.
+
+anggota Dewan Komisaris paling banyak pada 2 (dua) BPRS
+atau Bank Perkreditan Rakyat lain; atau
+
+b.
+
+anggota Dewan Komisaris, Direksi, atau Pejabat Eksekutif pada
+2 (dua) lembaga/perusahaan lain bukan bank.
+Pasal 23
+
+(1) Direksi mengelola BPRS sesuai dengan kewenangan dan
+tanggung jawabnya sebagaimana diatur dalam ketentuan
+peraturan perundang-undangan yang berlaku bagi perbankan
+syariah.
+(2) Direksi bertanggungjawab untuk melaksanakan pengelolaan
+BPRS sebagai lembaga intermediasi dengan memenuhi prinsip
+
+kehati-hatian ...
+
+-15-
+
+kehati-hatian dan Prinsip Syariah.
+Pasal 24
+(1)
+
+Jumlah anggota Direksi BPRS paling sedikit 2 (dua) orang.
+
+(2)
+
+Direksi dipimpin oleh Presiden Direktur atau Direktur Utama.
+
+(3)
+
+Paling sedikit 50% (lima puluh persen) dari anggota Direksi
+termasuk Direktur Utama harus berpengalaman operasional
+paling kurang:
+a. 2 (dua) tahun sebagai pejabat di bidang pendanaan dan/atau
+pembiayaan di perbankan syariah;
+b. 2 (dua) tahun sebagai pejabat di bidang pendanaan dan/atau
+perkreditan di perbankan konvensional dan memiliki
+pengetahuan di bidang perbankan syariah; atau
+c. 3 (tiga) tahun sebagai direksi atau setingkat dengan direksi di
+lembaga keuangan mikro syariah.
+
+(4)
+
+Anggota Direksi berpendidikan formal paling kurang setingkat
+Diploma III atau Sarjana Muda.
+
+(5)
+
+Anggota Direksi wajib memiliki sertifikasi kelulusan dari
+lembaga sertifikasi paling lambat 2 (dua) tahun setelah tanggal
+pengangkatan efektif.
+
+(6)
+
+Direktur Utama dan anggota Direksi lainnya wajib bersikap
+independen dalam menjalankan tugasnya.
+
+(7)
+
+Direktur Utama wajib berasal dari pihak independen terhadap
+PSP.
+
+Pasal 25 ...
+
+-16-
+
+Pasal 25
+(1)
+
+Seluruh anggota Direksi wajib berdomisili di sekitar tempat
+kedudukan kantor pusat BPRS.
+
+(2)
+
+Anggota Direksi dilarang memiliki hubungan keluarga dengan:
+
+a. anggota Direksi lainnya dalam hubungan sebagai orang tua,
+anak, mertua, besan, menantu, suami, istri, saudara kandung
+atau ipar; dan/atau
+
+b. anggota Dewan Komisaris dalam hubungan sebagai orang
+tua, anak, mertua, besan, menantu, suami, istri atau saudara
+kandung.
+(3)
+
+Anggota Direksi dilarang merangkap jabatan sebagai anggota
+Direksi, anggota Dewan Komisaris, anggota DPS atau Pejabat
+Eksekutif pada lembaga keuangan, badan usaha atau lembaga
+lain.
+
+(4)
+
+Anggota Direksi dilarang memberikan kuasa umum yang
+mengakibatkan pengalihan tugas, wewenang dan tanggung
+jawab kepada pihak lain.
+
+Pasal 26
+(1)
+
+Penunjukkan anggota Dewan Komisaris dan/atau anggota
+Direksi BPRS harus mendapat persetujuan rapat umum
+pemegang saham.
+
+(2)
+
+Pengangkatan anggota Dewan Komisaris dan/atau anggota
+Direksi berlaku efektif setelah mendapat persetujuan dari Bank
+Indonesia.
+
+(3)
+
+Pemegang saham dapat mengajukan calon anggota Dewan
+
+Komisaris ...
+
+-17-
+
+Komisaris dan/atau calon anggota Direksi BPRS sebelum rapat
+umum pemegang saham.
+(4)
+
+Calon anggota Dewan Komisaris dan/atau calon anggota Direksi
+BPRS sebagaimana dimaksud pada ayat (3) wajib diangkat
+dalam rapat umum pemegang saham paling lambat 45 (empat
+puluh lima) hari terhitung sejak tanggal persetujuan Bank
+Indonesia diberikan.
+
+(5)
+
+Pengangkatan anggota Dewan Komisaris dan/atau anggota
+Direksi sebagaimana dimaksud pada ayat (4) wajib dilaporkan
+oleh BPRS kepada Bank Indonesia paling lambat 10 (sepuluh)
+hari sejak tanggal rapat umum pemegang saham.
+
+Pasal 27
+(1) Rencana pemberhentian dan/atau pengunduran diri anggota
+Dewan Komisaris dan/atau anggota Direksi wajib disampaikan
+kepada Bank Indonesia.
+(2)
+
+Pemberhentian dan/atau pengunduran diri anggota Dewan
+Komisaris dan/atau anggota Direksi sebagaimana dimaksud pada
+ayat (1) berlaku efektif setelah mendapat penegasan dari Bank
+Indonesia.
+
+Bagian ...
+
+-18-
+
+Bagian Kedua
+Dewan Pengawas Syariah
+Pasal 28
+(1)
+
+BPRS wajib membentuk DPS yang berkedudukan di kantor
+pusat BPRS.
+
+(2)
+
+Anggota DPS wajib memenuhi persyaratan sebagai berikut:
+a. Integritas, yang paling kurang mencakup:
+1.
+
+memiliki akhlak dan moral yang baik;
+
+2.
+
+memiliki
+
+komitmen
+
+untuk
+
+mematuhi
+
+peraturan
+
+perbankan syariah dan peraturan perundang-undangan
+yang berlaku;
+3.
+
+memiliki
+
+komitmen
+
+yang
+
+tinggi
+
+terhadap
+
+pengembangan operasional BPRS yang sehat;
+4.
+
+tidak termasuk dalam Daftar Kepatutan dan Kelayakan
+(Daftar Tidak Lulus) sebagaimana diatur dalam
+ketentuan mengenai uji kemampuan dan kepatutan (fit
+and proper test) yang ditetapkan oleh Bank Indonesia.
+
+b. Kompetensi, yang paling kurang memiliki pengetahuan dan
+pengalaman di bidang syariah mu’amalah dan pengetahuan
+di bidang perbankan dan/atau keuangan secara umum; dan
+c. Reputasi keuangan, yang paling kurang mencakup:
+1.
+
+tidak termasuk dalam daftar kredit macet;
+
+2.
+
+tidak pernah dinyatakan pailit atau menjadi pemegang
+saham, anggota Dewan Komisaris atau anggota Direksi
+yang
+
+dinyatakan
+
+bersalah
+
+menyebabkan
+
+suatu
+
+perseroan dinyatakan pailit, dalam waktu 5 (lima)
+
+tahun ...
+
+-19-
+
+tahun terakhir sebelum dicalonkan.
+
+Pasal 29
+(1)
+
+DPS bertugas dan bertanggungjawab memberikan nasihat dan
+saran kepada Direksi serta mengawasi penerapan Prinsip Syariah
+dalam penghimpunan dana, pembiayaan dan kegiatan jasa BPRS
+lainnya.
+
+(2)
+
+Pelaksanaan tugas dan tanggung jawab DPS sebagaimana
+dimaksud pada ayat (1), meliputi antara lain:
+a. mengawasi proses pengembangan produk baru BPRS;
+b. meminta fatwa kepada Dewan Syariah Nasional untuk
+produk baru BPRS yang belum ada fatwanya.
+c. melakukan review secara berkala terhadap mekanisme
+penghimpunan dana dan penyaluran dana serta pelayanan
+jasa BPRS; dan
+d. meminta data dan informasi terkait dengan aspek syariah
+dari satuan kerja BPRS dalam rangka pelaksanan tugasnya.
+
+(3)
+
+Pedoman
+
+pelaksanaan
+
+tugas
+
+dan
+
+tanggung
+
+jawab
+
+DPS
+
+sebagaimana dimaksud pada ayat (1) akan diatur lebih lanjut
+dalam Surat Edaran Bank Indonesia.
+
+Pasal 30
+(1)
+
+Jumlah anggota DPS paling sedikit 2 (dua) orang dan paling
+banyak 3 (tiga) orang.
+
+(2)
+
+DPS dipimpin oleh seorang ketua yang berasal dari salah satu
+anggota DPS.
+
+(3) Anggota ...
+
+-20-
+
+(3)
+
+Anggota DPS dapat merangkap jabatan sebagai anggota DPS
+paling banyak pada 4 (empat) lembaga keuangan syariah lain.
+
+Pasal 31
+(1)
+
+Penunjukkan anggota DPS harus mendapat persetujuan rapat
+umum pemegang saham.
+
+(2)
+
+Penunjukkan sebagaimana dimaksud pada ayat (1) dilakukan
+setelah mendapat rekomendasi Dewan Syariah Nasional Majelis Ulama Indonesia.
+
+(3)
+
+Pengangkatan anggota DPS berlaku efektif setelah mendapat
+persetujuan dari Bank Indonesia.
+
+Pasal 32
+(1)
+
+Rencana pemberhentian dan/atau pengunduran diri anggota DPS
+wajib disampaikan kepada Bank Indonesia.
+
+(2)
+
+Pemberhentian
+
+dan/atau
+
+pengunduran
+
+diri
+
+anggota
+
+DPS
+
+sebagaimana dimaksud pada ayat (1) berlaku efektif setelah
+mendapat penegasan dari Bank Indonesia.
+
+Bagian Ketiga
+Pejabat Eksekutif
+Pasal 33
+(1)
+
+Pengangkatan,
+
+penggantian
+
+atau
+
+pemberhentian
+
+Pejabat
+
+Eksekutif BPRS wajib dilaporkan oleh Direksi BPRS kepada
+Bank Indonesia paling lambat 10 (sepuluh) hari terhitung sejak
+
+tanggal ...
+
+-21-
+
+tanggal pengangkatan, penggantian atau pemberhentian efektif.
+(2)
+
+Apabila menurut penilaian dan penelitian Bank Indonesia,
+Pejabat Eksekutif sebagaimana dimaksud pada ayat (1)
+tercantum dalam Daftar Kepatutan dan Kelayakan (Daftar Tidak
+Lulus), Daftar Kredit Macet atau terdapat informasi lain yang
+menunjukkan
+
+tidak
+
+terpenuhinya
+
+aspek
+
+integritas
+
+dan
+
+kompetensi, maka pengangkatan Pejabat Eksekutif tersebut
+wajib dibatalkan paling lambat 30 (tiga puluh) hari setelah
+tanggal surat penegasan dari Bank Indonesia.
+
+BAB V
+KEGIATAN USAHA
+Pasal 34
+BPRS wajib melaksanakan kegiatan usaha sebagaimana diatur dalam
+Undang-Undang Perbankan Syariah dengan menerapkan Prinsip
+Syariah dan prinsip kehati-hatian.
+
+BAB VI
+PEMBUKAAN KANTOR BPRS
+Bagian Pertama
+Kantor Cabang
+Pasal 35
+(1)
+
+Pembukaan Kantor Cabang hanya dapat dilakukan dengan izin
+Bank Indonesia.
+
+(2)
+
+Pembukaan Kantor Cabang sebagaimana dimaksud pada ayat (1)
+
+harus ...
+
+-22-
+
+harus memenuhi persyaratan paling kurang:
+a. berlokasi dalam 1 (satu) wilayah propinsi yang sama dengan
+kantor pusatnya;
+b. telah tercantum dalam rencana kerja tahunan BPRS;
+c. didukung dengan teknologi sistem informasi yang memadai;
+dan
+d. menambah modal disetor paling kurang sebesar 75% (tujuh
+puluh lima persen) dari ketentuan modal minimal BPRS
+sebagaimana dimaksud dalam Pasal 5 sesuai dengan lokasi
+pembukaan Kantor Cabang.
+(3)
+
+Khusus untuk BPRS yang berkantor pusat di wilayah Daerah
+Khusus Ibukota Jakarta Raya dan Kabupaten/Kota Bogor,
+Depok, Tangerang dan Bekasi, selain dapat membuka Kantor
+Cabang di wilayah sebagaimana dimaksud pada ayat (2) huruf a,
+juga dapat membuka Kantor Cabang di wilayah Daerah Khusus
+Ibukota Jakarta Raya dan Kabupaten/Kota Bogor, Depok,
+Tangerang dan Bekasi.
+
+Pasal 36
+(1)
+
+Pelaksanaan pembukaan Kantor Cabang wajib dilakukan paling
+lambat 30 (tiga puluh) hari terhitung sejak tanggal izin
+diterbitkan.
+
+(2)
+
+Pelaksanaan pembukaan Kantor Cabang sebagaimana dimaksud
+pada ayat (1) wajib dilaporkan oleh Direksi BPRS kepada Bank
+Indonesia paling lambat 10 (sepuluh) hari setelah tanggal
+pembukaan.
+
+(3) Apabila ...
+
+-23-
+
+(3)
+
+Apabila dalam jangka waktu sebagaimana dimaksud dalam ayat
+(1) BPRS tidak melaksanakan pembukaan Kantor Cabang, maka
+izin pembukaan Kantor Cabang yang telah diberikan menjadi
+tidak berlaku.
+
+Bagian Kedua
+Kantor Kas dan Kegiatan Kas di luar Kantor
+Pasal 37
+(1)
+
+Rencana pembukaan Kantor Kas dan Kegiatan Kas di luar
+Kantor harus dicantumkan dalam rencana kerja tahunan BPRS.
+
+(2)
+
+Pembukaan Kantor Kas dan Kegiatan Kas di luar Kantor hanya
+dapat dilakukan di wilayah sekitar kantor BPRS yang menjadi
+induknya.
+
+(3)
+
+Laporan keuangan Kantor Kas dan transaksi keuangan yang
+dilakukan dalam Kegiatan Kas di luar Kantor wajib digabungkan
+dengan laporan keuangan kantor BPRS yang menjadi induknya
+pada hari yang sama.
+
+Pasal 38
+Pelaksanaan pembukaan Kantor Kas wajib dilaporkan oleh Direksi
+BPRS kepada Bank Indonesia paling lambat 10 (sepuluh) setelah
+tanggal pembukaan.
+
+Pasal 39
+(1) Pembukaan Kegiatan Kas di luar Kantor wajib dilaporkan oleh
+
+Direksi ...
+
+-24-
+
+Direksi BPRS kepada Bank Indonesia secara semesteran untuk
+posisi akhir bulan Juni dan Desember.
+(2) Laporan pembukaan Kegiatan Kas di luar Kantor sebagaimana
+dimaksud pada ayat (1) wajib disampaikan paling lambat 10
+(sepuluh) hari setelah akhir bulan laporan.
+
+BAB VII
+PEMINDAHAN ALAMAT KANTOR
+Bagian Kesatu
+Kantor Pusat dan Kantor Cabang
+Pasal 40
+(1)
+
+Pemindahan alamat kantor pusat dan Kantor Cabang hanya dapat
+dilakukan dengan izin Bank Indonesia.
+
+(2)
+
+Pemindahan alamat kantor pusat dan Kantor Cabang hanya dapat
+dilakukan dalam wilayah Kabupaten/Kota yang sama.
+
+(3)
+
+Pemindahan alamat kantor pusat dan Kantor Cabang harus
+mempertimbangkan kepentingan nasabah.
+
+Pasal 41
+(1)
+
+Pemindahan alamat kantor pusat dan Kantor Cabang wajib
+diumumkan kepada nasabah dan masyarakat paling lambat 10
+(sepuluh) hari sebelum pelaksanaan pemindahan alamat kantor.
+
+(2)
+
+Pelaksanaan pemindahan alamat kantor pusat dan Kantor
+Cabang wajib dilaporkan oleh Direksi BPRS kepada Bank
+Indonesia paling lambat
+
+10 (sepuluh) hari setelah tanggal
+
+pelaksanaan ...
+
+-25-
+
+pelaksanaan pemindahan alamat.
+(3)
+
+Apabila dalam jangka waktu 30 (tiga puluh) hari terhitung sejak
+tanggal izin diberikan, BPRS tidak melaksanakan pemindahan
+alamat kantor, maka izin pemindahan alamat kantor pusat dan
+Kantor Cabang yang telah diberikan akan ditinjau kembali.
+
+Bagian Kedua
+Kantor Kas dan Kegiatan Kas di luar Kantor
+Pasal 42
+(1)
+
+Pemindahan alamat Kantor Kas dan Kegiatan Kas di luar Kantor
+hanya dapat dilakukan di wilayah sekitar kantor BPRS yang
+menjadi induknya.
+
+(2)
+
+Pemindahan alamat Kantor Kas dan Kegiatan Kas di luar Kantor
+harus mempertimbangkan kepentingan nasabah.
+
+Pasal 43
+(1)
+
+Pemindahan alamat Kantor Kas wajib diumumkan kepada
+nasabah dan masyarakat paling lambat 10 (sepuluh) hari sebelum
+tanggal pelaksanaan.
+
+(2)
+
+Pelaksanaan pemindahan alamat Kantor Kas wajib dilaporkan
+oleh Direksi BPRS paling lambat
+
+10 (sepuluh) hari setelah
+
+tanggal pelaksanaan.
+
+Pasal 44
+(1) Pemindahan alamat Kegiatan Kas di luar Kantor wajib
+
+dilaporkan ...
+
+-26-
+
+dilaporkan oleh Direksi BPRS kepada Bank Indonesia secara
+semesteran untuk posisi akhir bulan Juni dan Desember.
+(2) Laporan pemindahan alamat Kegiatan Kas di luar Kantor
+sebagaimana dimaksud pada ayat (1) wajib disampaikan paling
+lambat 10 (sepuluh) hari setelah akhir bulan laporan.
+
+BAB VIII
+PENUTUPAN KANTOR
+Bagian Kesatu
+Kantor Cabang
+Pasal 45
+Penutupan Kantor Cabang hanya dapat dilakukan dengan izin Bank
+Indonesia.
+
+Pasal 46
+(1)
+
+BPRS yang telah memperoleh izin penutupan Kantor Cabang
+wajib untuk:
+a. menyelesaikan seluruh kewajiban Kantor Cabang;
+b. mengumumkan rencana penutupan Kantor Cabang kepada
+nasabah dan masyarakat paling lambat 3 (tiga) hari sebelum
+tanggal pelaksanaan penutupan; dan
+c. menghentikan seluruh kegiatan usaha pada Kantor Cabang
+dimaksud.
+
+(2)
+
+Pelaksanaan penutupan Kantor Cabang wajib dilaporkan oleh
+Direksi BPRS paling lambat 10 (sepuluh) hari setelah tanggal
+
+pelaksanaan ...
+
+-27-
+
+pelaksanaan.
+
+Bagian Kedua
+Kantor Kas dan Kegiatan Kas di luar Kantor
+Pasal 47
+Pelaksanaan penutupan Kantor Kas wajib dilaporkan oleh Direksi
+BPRS paling lambat 10 (sepuluh) hari setelah tanggal penutupan.
+
+Pasal 48
+(1) Penutupan Kegiatan Kas di luar Kantor wajib dilaporkan oleh
+Direksi BPRS kepada Bank Indonesia secara semesteran untuk
+posisi akhir bulan Juni dan Desember.
+(2) Laporan penutupan Kegiatan Kas di luar Kantor sebagaimana
+dimaksud pada ayat (1) wajib disampaikan paling lambat 10
+(sepuluh) hari setelah akhir bulan laporan.
+
+BAB IX
+PERUBAHAN ANGGARAN DASAR DAN NAMA
+Bagian Kesatu
+Perubahan Anggaran Dasar
+Pasal 49
+BPRS wajib melaporkan setiap perubahan anggaran dasar BPRS
+paling lambat 10 (sepuluh) hari setelah diterimanya persetujuan atau
+penerimaan pemberitahuan perubahan anggaran dasar dari instansi
+yang berwenang.
+
+Bagian ...
+
+-28-
+
+Bagian Kedua
+Perubahan Nama
+Pasal 50
+(1)
+
+Perubahan nama BPRS wajib dilakukan dengan memenuhi
+ketentuan perundang-undangan yang berlaku.
+
+(2)
+
+BPRS yang telah memperoleh persetujuan perubahan anggaran
+dasar terkait penggunaan nama baru dari instansi berwenang
+wajib mengajukan permohonan mengenai penetapan penggunaan
+izin usaha yang dimiliki untuk BPRS dengan nama yang baru.
+
+(3)
+
+Permohonan sebagaimana dimaksud pada ayat (2) diajukan oleh
+Direksi BPRS paling lambat 30 (tiga puluh) hari setelah
+perubahan nama mendapat persetujuan dari instansi berwenang.
+
+Pasal 51
+Pelaksanaan perubahan nama BPRS wajib diumumkan dalam surat
+kabar harian lokal atau pada papan pengumuman di kantor kecamatan
+setempat dan kantor BPRS paling lambat 10 (sepuluh) hari setelah
+tanggal persetujuan Bank Indonesia.
+
+BAB X
+PENCABUTAN IZIN USAHA ATAS PERMINTAAN BPRS
+Pasal 52
+Bank Indonesia dapat mencabut izin usaha BPRS atas permintaan
+BPRS.
+
+Pasal 53 ...
+
+-29-
+
+Pasal 53
+(1)
+
+BPRS yang telah memperoleh persetujuan pencabutan izin usaha
+wajib untuk:
+a. menghentikan seluruh kegiatan usaha BPRS;
+b. mengumumkan kepada nasabah dan masyarakat paling
+lambat 10 (sepuluh) hari sejak tanggal surat persetujuan
+persiapan pencabutan izin usaha BPRS; dan
+c. segera menyelesaikan seluruh hak dan kewajiban BPRS.
+
+(2)
+
+Pelaksanaan penghentian kegiatan BPRS wajib dilaporkan oleh
+Direksi BPRS paling lambat 10 (sepuluh) hari setelah tanggal
+penghentian.
+
+Pasal 54
+Status badan hukum BPRS berakhir sejak tanggal pengumuman
+berakhirnya badan hukum BPRS dalam Berita Negara Republik
+Indonesia.
+
+BAB XI
+KANTOR BPRS TIDAK BEROPERASI
+PADA HARI KERJA
+Pasal 55
+Penutupan sementara kantor BPRS di luar hari libur resmi wajib
+memperoleh persetujuan dari Bank Indonesia.
+
+Pasal 56 ...
+
+-30-
+
+Pasal 56
+(1)
+
+BPRS wajib mengajukan persetujuan atas rencana untuk tidak
+beroperasi pada hari kerja paling lambat 15 (lima belas) hari
+sebelum tanggal tidak beroperasi.
+
+(2)
+
+Rencana kantor BPRS untuk tidak beroperasi pada hari kerja
+wajib diumumkan kepada masyarakat paling lambat 3 (tiga) hari
+sebelum tanggal tidak beroperasi.
+
+BAB XII
+PENCANTUMAN STATUS DAN LOGO PADA KANTOR BPRS
+Pasal 57
+(1)
+
+BPRS wajib mencantumkan secara jelas nama dan jenis status
+kantor pada masing-masing kantornya.
+
+(2)
+
+BPRS wajib mencantumkan logo iB pada formulir, warkat,
+produk dan kantor serta Kegiatan Kas di luar Kantor BPRS.
+
+BAB XIII
+SANKSI
+Pasal 58
+(1)
+
+BPRS yang tidak memenuhi ketentuan dalam Pasal 6, Pasal 10
+ayat (1), Pasal 11, Pasal 13, Pasal 14 ayat (2), Pasal 15 ayat (2),
+Pasal 17, Pasal 18, Pasal 19, Pasal 20 ayat (3), Pasal 21 ayat (2),
+Pasal 22, Pasal 24 ayat (5), ayat (6) dan ayat (7), Pasal 25, Pasal
+26 ayat (4), Pasal 27 ayat (1), Pasal 28, Pasal 32 ayat (1), Pasal
+33 ayat (2), Pasal 34, Pasal 35 ayat (1), Pasal 36 ayat (1), Pasal
+
+37 ...
+
+-31-
+
+37 ayat (2) dan ayat (3), Pasal 39 ayat (1), Pasal 40 ayat (1) dan
+ayat (2), Pasal 42 ayat (1), Pasal 44 ayat (1), Pasal 45, Pasal 46
+ayat (1), Pasal 48 ayat (1), Pasal 50, Pasal 53 ayat (1), Pasal 55,
+Pasal 56 ayat (1), Pasal 57, Pasal 59 ayat (3) dan ayat (4), dan
+Pasal 60 dapat dikenakan sanksi administratif sesuai Pasal 58
+Undang-undang Nomor 21 Tahun 2008 tentang Perbankan
+Syariah.
+(2)
+
+BPRS yang tidak memenuhi ketentuan dalam Pasal 10 ayat (2),
+Pasal 15 ayat (3), Pasal 16, Pasal 26 ayat (5), Pasal 33 ayat (1),
+Pasal 36 ayat (2), Pasal 38, Pasal 39 ayat (2), Pasal 41 ayat (1)
+dan ayat (2), Pasal 43, Pasal 44 ayat (2), Pasal 46 ayat (2), Pasal
+47, Pasal 48 ayat (2), Pasal 49, Pasal 51, Pasal 53 ayat (2) dan
+Pasal 56 ayat (2) dapat dikenakan sanksi administratif sesuai
+Pasal 58 Undang-undang Nomor 21 Tahun 2008 tentang
+Perbankan Syariah, berupa:
+a. teguran tertulis dan denda uang sebesar Rp100.000,00
+(seratus ribu rupiah) per hari kerja kelambatan untuk setiap
+laporan dan/atau pengumuman atau paling banyak sebesar
+Rp1.000.000,00 (satu juta rupiah) untuk setiap laporan
+dan/atau pengumuman;
+b. teguran tertulis dan denda uang paling banyak sebesar
+Rp1.000.000,00 (satu
+menyampaikan
+
+juta rupiah) apabila BPRS tidak
+
+laporan
+
+dan/atau
+
+melaksanakan
+
+pengumuman.
+(3)
+
+BPRS dinyatakan tidak menyampaikan laporan dan/atau
+pengumuman
+apabila
+
+BPRS
+
+sebagaimana dimaksud pada ayat (2) huruf b
+belum
+
+menyampaikan
+
+laporan
+
+dan/atau
+
+melaksanakan ...
+
+-32-
+
+melaksanakan pengumuman setelah 30 (tiga puluh) hari sejak
+batas akhir penyampaian laporan dan/atau melaksanakan
+pengumuman.
+(4)
+
+Pengenaan sanksi teguran tertulis dan denda uang karena tidak
+menyampaikan laporan dan/atau melaksanakan pengumuman
+sebagaimana dimaksud pada ayat (2) huruf b tidak menghapus
+kewajiban BPRS untuk menyampaikan laporan dan/atau
+melaksanakan pengumuman.
+
+(5)
+
+Setiap pihak yang tidak mentaati ketentuan dalam Pasal 4 ayat
+(1) dan Pasal 8 ayat (2), dapat dikenakan sanksi pidana sesuai
+dengan Pasal 59 Undang-undang Nomor 21 Tahun 2008 tentang
+Perbankan Syariah.
+
+BAB XIV
+KETENTUAN PERALIHAN
+Pasal 59
+(1)
+
+Persetujuan prinsip pendirian BPRS yang telah dikeluarkan oleh
+Bank Indonesia sebelum berlakunya Peraturan Bank Indonesia
+ini, dinyatakan tetap berlaku.
+
+(2)
+
+Persyaratan anggota Direksi paling kurang berpendidikan formal
+setingkat Diploma III atau Sarjana Muda sebagaimana dimaksud
+dalam Pasal 24 ayat (4), dikecualikan bagi anggota Direksi
+BPRS yang telah disetujui Bank Indonesia dan diangkat sebelum
+berlakunya Peraturan Bank Indonesia ini.
+
+(3)
+
+Anggota DPS yang tidak memenuhi persyaratan rangkap jabatan
+sebagaimana dimaksud dalam Pasal 30 ayat (3), wajib
+
+menyesuaikan ...
+
+-33-
+
+menyesuaikan dengan ketentuan tersebut paling lambat 1 (satu)
+tahun terhitung sejak berlakunya Peraturan Bank Indonesia ini.
+(4)
+
+BPRS yang telah memiliki izin usaha sebagai BPRS wajib
+menyesuaikan ketentuan sesuai dengan amanat Undang-Undang
+Perbankan Syariah.
+
+Pasal 60
+BPRS yang belum memenuhi persyaratan modal disetor sebagaimana
+dimaksud dalam Pasal 5, wajib memenuhi persyaratan modal disetor
+dengan ketentuan sebagai berikut:
+a.
+
+paling kurang 70% (tujuh puluh persen) dari jumlah modal
+disetor yang ditetapkan paling lambat pada tanggal 31 Desember
+2010;
+
+b.
+
+100% (seratus persen) dari jumlah modal disetor yang ditetapkan
+paling lambat pada tanggal 31 Desember 2012.
+
+BAB XV
+KETENTUAN PENUTUP
+Pasal 61
+Peraturan pelaksanaan tentang Bank Pembiayaan Rakyat Syariah
+diatur lebih lanjut dalam Surat Edaran Bank Indonesia
+
+Pasal 62 ...
+
+-34-
+
+Pasal 62
+Dengan berlakunya Peraturan Bank Indonesia ini, maka Peraturan
+Bank Indonesia Nomor 6/17/PBI/2004 tanggal 1 Juli 2004 tentang
+Bank Perkreditan Rakyat Berdasarkan Prinsip Syariah (Lembaran
+Negara Republik Indonesia Tahun 2004 Nomor 58, Tambahan
+Lembaran Negara Nomor 4392) dan Peraturan Bank Indonesia Nomor
+8/25/PBI/2006 tanggal 5 Oktober 2006 tentang Perubahan Atas
+Peraturan Bank Indonesia Nomor 6/17/PBI/2004 tanggal 1 Juli 2004
+tentang Bank Perkreditan Rakyat Berdasarkan Prinsip Syariah
+(Lembaran Negara Republik Indonesia Tahun 2006 Nomor 82,
+Tambahan Lembaran Negara Nomor 4651) dicabut dan dinyatakan
+tidak berlaku.
+
+Pasal 63
+Peraturan Bank Indonesia ini mulai berlaku pada tanggal ditetapkan.
+
+Agar ...
+
+-35-
+
+Agar setiap orang mengetahuinya, memerintahkan pengundangan
+Peraturan Bank Indonesia ini dengan penempatannya dalam Lembaran
+Negara Republik Indonesia
+
+Ditetapkan di Jakarta
+Pada tanggal 1 Juli 2009
+Pjs. GUBERNUR BANK INDONESIA,
+
+MIRANDA S. GOELTOM
+Diundangkan di :
+Pada tanggal
+
+: 1 Juli 2009
+
+MENTERI HUKUM DAN HAK ASASI MANUSIA
+REPUBLIK INDONESIA,
+
+ANDI MATTALATTA
+
+LEMBARAN NEGARA REPUBLIK INDONESIA TAHUN 2009 NOMOR 101
+DPbS
+
+PENJELASAN
+ATAS
+PERATURAN BANK INDONESIA
+NOMOR 11 /23/PBI/2009
+TENTANG
+BANK PEMBIAYAAN RAKYAT SYARIAH
+
+I.
+
+UMUM
+Dalam rangka mendukung perkembangan perekonomian nasional, maka
+diperlukan lembaga perbankan yang mampu memberikan layanan secara luas
+kepada masyarakat. Kebutuhan masyarakat akan adanya lembaga perbankan
+syariah dirasa cukup tinggi.
+
+Untuk memenuhi tuntutan masyarakat tersebut,
+
+maka dalam sistem perbankan nasional dimungkinkan adanya pendirian bank
+syariah yang salah satu jenisnya adalah Bank Pembiayaan Rakyat Syariah
+(BPRS).
+
+Keberadaan BPRS dimaksudkan untuk dapat memberikan layanan
+
+perbankan secara cepat, mudah dan sederhana kepada masyarakat khususnya
+pengusaha menengah, kecil dan mikro baik di perdesaan maupun perkotaan yang
+selama ini belum terjangkau oleh layanan bank umum.
+BPRS sebagai salah satu lembaga kepercayaan masyarakat yang kegiatan
+usahanya berdasarkan Prinsip Syariah, dituntut agar selalu dapat mengemban
+amanah dari para pemilik dana dengan cara menyalurkannya untuk usaha
+produktif dalam rangka meningkatkan taraf hidup masyarakat.
+
+Dalam
+
+menjalankan kegiatan usahanya, BPRS harus selalu memegang teguh prinsip
+kehati-hatian serta mampu menerapkan Prinsip Syariah secara konsisten,
+sehingga tercipta BPRS yang sehat yang mampu memberikan layanan terbaik
+kepada masyarakat.
+
+Untuk ...
+
+-2Untuk menciptakan BPRS yang sehat diperlakukan kebijakan yang
+komprehensif, transparan dan mengandung kepastian hukum, diantaranya
+berkaitan dengan pengaturan kepemilikan dan permodalan, kepengurusan,
+perluasan jaringan, serta kegiatan usaha BPRS. Dengan diberlakukannya
+Undang-undang Nomor 21 Tahun 2008 tentang Perbankan Syariah, terdapat
+beberapa perubahan pengaturan yang terkait dengan kelembagaan dan kegiatan
+usaha BPRS, sehingga dipandang perlu untuk melakukan penyempurnaan
+terhadap ketentuan BPRS yang telah ada.
+
+II.
+
+PASAL DEMI PASAL
+Pasal 1
+Cukup jelas.
+
+Pasal 2
+Cukup jelas.
+
+Pasal 3
+Huruf a
+Cukup jelas.
+Huruf b
+Cukup jelas.
+Huruf c
+Pokok-pokok pengaturan tugas Direksi BPRS dalam anggaran dasar
+antara lain:
+a.
+
+tugas dan tanggung jawab;
+
+b. pelaporan....
+
+-3b.
+
+pelaporan;
+
+c.
+
+perlindungan dalam pelaksanaan tugas.
+
+Huruf d
+Cukup jelas.
+Huruf e
+Dalam hal Komisaris Utama berhalangan, maka Rapat Umum
+Pemegang Saham dapat dipimpin oleh anggota Dewan Komisaris
+lainnya.
+
+Pasal 4
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Huruf a
+Pemberian persetujuan prinsip pendirian BPRS diberikan oleh
+Bank Indonesia berdasarkan pada antara lain:
+a.
+
+penilaian terhadap komitmen calon pemilik BPRS dalam
+pendirian BPRS;
+
+b.
+
+analis terhadap studi kelayakan pendirian BPRS;
+
+c.
+
+analisis yang mencakup antara lain tingkat kejenuhan
+jumlah BPRS serta pemerataan pembangunan ekonomi
+nasional; dan
+
+d.
+
+uji kemampuan dan kepatutan (fit and proper test) terhadap
+calon PSP, anggota Direksi dan anggota Dewan Komisaris,
+dan wawancara terhadap calon anggota DPS.
+
+Huruf b...
+
+-4Huruf b
+Pemberian izin usaha pendirian BPRS diberikan oleh Bank
+Indonesia berdasarkan pada antara lain:
+a.
+
+analis terhadap kesiapan operasional pendirian BPRS; dan
+
+b.
+
+uji kemampuan dan kepatutan (fit and proper test) terhadap
+calon PSP, anggota Direksi dan anggota Dewan Komisaris,
+dan wawancara terhadap calon anggota DPS, apabila
+terdapat penggantian.
+
+Pasal 5
+Mengingat kondisi dan perkembangan perekonomian daerah yang berbedabeda, maka Bank Indonesia dapat meminta calon pemilik BPRS untuk
+menyediakan modal disetor di atas jumlah minimum yang dipersyaratkan.
+
+Pasal 6
+Cukup jelas.
+
+Pasal 7
+Ayat (1)
+Huruf a
+Cukup jelas.
+Huruf b
+Cukup jelas.
+Huruf c
+Cukup jelas.
+Huruf d...
+
+-5Huruf d
+Cukup jelas.
+Huruf e
+Yang dimaksud dengan “rencana bisnis” adalah rencana kegiatan
+usaha BPRS yang paling kurang memuat:
+1.
+
+rencana penghimpunan dan penyaluran dana serta strategi
+pencapaiannya; dan
+
+2.
+
+proyeksi neraca bulanan dan laporan laba rugi kumulatif
+bulanan selama 12 (dua belas) bulan yang dimulai sejak
+BPRS melakukan kegiatan operasional;
+
+Huruf f
+Cukup jelas.
+Ayat (2)
+Hal-hal yang harus dijelaskan melalui presentasi di Bank Indonesia
+antara lain:
+a.
+
+tujuan dan alasan pendirian BPRS;
+
+b.
+
+target pasar penghimpunan dan penyaluran dana;
+
+c.
+
+rencana bisnis jangka pendek, jangka menengah dan jangka
+panjang;
+
+d.
+
+sistem teknologi informasi (IT); dan
+
+e.
+
+struktur organisasi dan personalia.
+
+Pasal 8
+Cukup jelas.
+
+Pasal 9 ...
+
+-6Pasal 9
+Cukup jelas.
+
+Pasal 10
+Cukup jelas.
+
+Pasal 11
+Contoh : PT Bank Pembiayaan Rakyat Syariah “ABC”; atau
+PT BPR Syariah “ABC”; atau
+PT BPRS “ABC”; atau
+Bank Pembiayaan Rakyat Syariah “ABC”; atau
+BPR Syariah “ABC”; atau
+BPRS “ABC”.
+
+Pasal 12
+Yang dimaksud dengan “modal bersih” adalah:
+a.
+
+penjumlahan dari modal disetor, cadangan umum, cadangan tujuan,
+laba tahun lalu dan laba tahun berjalan dikurangi penyertaan dan
+kerugian, untuk badan hukum Perseroan Terbatas/Perusahaan Daerah;
+
+b.
+
+penjumlahan dari simpanan pokok, simpanan wajib, hibah, modal
+penyertaan, dana cadangan, dan sisa hasil usaha, dikurangi penyertaan
+dan kerugian, untuk badan hukum Koperasi; atau
+
+c.
+
+perhitungan modal bersih atau yang dapat dipersamakan dengan itu
+sesuai jenis badan hukum yang bersangkutan, untuk badan hukum
+lainnya.
+Pasal 13 ...
+
+-7Pasal 13
+Huruf a
+Tidak termasuk dalam pengertian pihak lain adalah Pemerintah Pusat,
+Pemerintah Daerah, atau lembaga yang bertugas untuk melakukan
+penyelamatan BPRS sesuai peraturan perundang-undangan yang
+berlaku.
+Huruf b
+Cukup jelas.
+
+Pasal 14
+Ayat (1)
+Huruf a
+Cukup jelas.
+Huruf b
+Cukup jelas.
+Huruf c
+Yang dimaksud dengan “memiliki komitmen yang tinggi” antara
+lain
+
+kesediaan untuk membantu mengembangkan BPRS agar
+
+menjadi sehat, tangguh dan berkembang (sustainable).
+Ayat (2)
+PSP
+
+berfungsi
+
+sebagai
+
+koordinator
+
+pemegang
+
+saham
+
+untuk
+
+mengefektifkan komunikasi antara pemilik bank dengan stakeholder.
+Dalam hal BPRS tidak memiliki PSP, maka salah satu pemegang
+saham akan ditunjuk sebagai PSP oleh Bank Indonesia.
+
+Ayat (3) ...
+
+-8Ayat (3)
+Persyaratan dan tata cara penilaian pemenuhan persyaratan PSP
+mengikuti ketentuan Bank Indonesia mengenai uji kemampuan dan
+kepatutan (fit and proper test).
+
+Pasal 15
+Ayat (1)
+Perubahan kepemilikan BPRS mencakup:
+a.
+
+penggantian pemegang saham;
+
+b.
+
+penambahan pemegang saham baru; dan/atau
+
+c.
+
+perubahan komposisi jumlah kepemilikan saham diantara para
+pemegang saham lama tanpa penggantian maupun penambahan
+pemegang saham baru;
+
+dengan atau tanpa disertai dengan penambahan modal disetor.
+Ayat (2)
+Yang dimaksud dengan “tidak diperlakukan sebagai pengambilalihan
+(akuisisi)” adalah penggantian PSP yang tidak melalui persyaratan dan
+tatacara pengambilalihan sebagaimana diatur dalam peraturan
+perundang-undangan yang berlaku.
+Ayat (3)
+Perubahan kepemilikan BPRS mencakup:
+a.
+
+penggantian pemegang saham;
+
+b. penambahan pemegang saham baru; dan/atau
+c.
+
+perubahan komposisi jumlah kepemilikan saham diantara para
+pemegang saham lama tanpa penggantian maupun penambahan
+
+pemegang ...
+
+-9pemegang saham baru;
+dengan atau tanpa disertai dengan penambahan modal disetor.
+
+Pasal 16
+Cukup jelas.
+
+Pasal 17
+Cukup jelas.
+
+Pasal 18
+Cukup jelas.
+
+Pasal 19
+Persyaratan dan tata cara penilaian pemenuhan persyaratan anggota Dewan
+Komisaris dan anggota Direksi diatur dalam ketentuan Bank Indonesia
+mengenai uji kemampuan dan kepatutan (fit and proper test).
+
+Pasal 20
+Cukup jelas.
+
+Pasal 21
+Ayat (1)
+Cukup jelas.
+
+Ayat (2) ...
+
+-10Ayat (2)
+Kedekatan domisili komisaris dengan tempat kedudukan BPRS pada
+prinsipnya dimaksudkan agar Dewan Komisaris dapat melaksanakan
+tugas secara efektif sesuai dengan ketentuan yang berlaku.
+Yang dimaksud dengan “berdomisili di dekat” adalah jarak tempuh
+dapat dicapai melalui perjalanan darat dan/atau air paling lama dalam
+waktu 2 (dua) jam, pada kondisi normal.
+Ayat (3)
+Cukup jelas.
+
+Pasal 22
+Anggota Dewan Komisaris tidak dapat merangkap jabatan sebagai anggota
+Direksi pada BPRS lain, Bank Perkreditan Rakyat dan/atau Bank Umum.
+
+Pasal 23
+Cukup jelas.
+
+Pasal 24
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Huruf a
+Cukup jelas.
+Huruf b ...
+
+-11Huruf b
+Cukup jelas.
+Huruf c
+Yang dimaksud dengan “lembaga keuangan mikro syariah”
+adalah antara lain koperasi simpan pinjam syariah, dan Baitul
+Maal wa Tamwil (BMT).
+Ayat (4)
+Pendidikan setingkat Diploma III atau Sarjana Muda harus dibuktikan
+dengan ijazah
+
+yang diterbitkan oleh perguruan tinggi yang
+
+bersangkutan.
+Ayat (5)
+Cukup jelas.
+Ayat (6)
+Yang dimaksud dengan “bersikap independen” adalah pengambilan
+keputusan dilakukan secara profesional dan obyektif.
+Ayat (7)
+Penilaian independen didasarkan pada keterkaitan yang bersangkutan
+pada kepengurusan, kepemilikan dan/atau hubungan keuangan dengan
+seluruh kelompok usaha Pemegang Saham pengendali.
+
+Pasal 25
+Ayat (1)
+Yang dimaksud dengan “berdomisili di dekat” adalah jarak tempuh
+dapat dicapai melalui perjalanan darat dan/atau air paling lama dalam
+waktu 2 (dua) jam, pada kondisi normal.
+
+Ayat (2) ...
+
+-12Ayat (2)
+Cukup jelas.
+Ayat (3)
+Anggota Direksi BPRS yang merangkap jabatan sebagai pengurus
+organisasi/lembaga non profit harus melaporkan kepada Bank
+Indonesia.
+Ayat (4)
+Cukup jelas.
+
+Pasal 26
+Ayat (1)
+Dalam kondisi tertentu terhadap calon anggota Dewan Komisaris
+dan/atau calon anggota Direksi BPRS dapat dilakukan proses uji
+kemampuan dan kepatutan (fit & proper test) sebelum rapat umum
+pemegang saham.
+Ayat (2)
+Ketentuan ini berlaku juga terhadap peralihan jabatan dari anggota
+Direksi menjadi anggota Dewan Komisaris atau sebaliknya.
+Pemberian persetujuan terhadap calon anggota Dewan Komisaris
+dan/atau calon anggota Direksi diberikan oleh Bank Indonesia
+berdasarkan pada antara lain:
+a.
+
+penelitian atas kelengkapan dan kebenaran dokumen; dan
+
+b.
+
+uji kemampuan dan kepatutan (fit and proper test) terhadap
+calon anggota Dewan Komisaris dan/atau calon anggota Direksi.
+
+Ayat (3)
+Pengajuan calon anggota Dewan Komisaris dan/atau calon anggota
+
+Direksi ...
+
+-13Direksi BPRS sebelum rapat umum pemegang saham hanya dapat
+dilakukan setelah BPRS memberikan penjelasan disertai dengan
+alasan yang cukup kuat kepada Bank Indonesia.
+Ayat (4)
+Calon anggota Dewan Komisaris dan/atau calon anggota Direksi yang
+tidak diangkat oleh rapat umum pemegang saham dalam jangka waktu
+45 (empat puluh lima) hari, maka persetujuan yang telah diberikan
+oleh Bank Indonesia menjadi tidak berlaku.
+Ayat (5)
+Cukup jelas.
+
+Pasal 27
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Yang dimaksud dengan “pemberhentian efektif” adalah tanggal
+setelah pemberhentian yang bersangkutan mendapat persetujuan dari
+rapat umum pemegang saham, serah terima jabatan, atau mekanisme
+lainnya sebagaimana diatur dalam anggaran dasar.
+
+Pasal 28
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+
+Huruf a ...
+
+-14Huruf a
+Angka 1
+Cukup jelas.
+Angka 2
+Cukup jelas.
+Angka 3
+Yang dimaksud dengan “memiliki komitmen” antara lain
+kesediaan untuk menyediakan waktu yang cukup kepada
+BPRS dalam rangka melaksanakan tugasnya secara efektif.
+Angka 4
+Cukup jelas.
+Huruf b
+Yang dimaksud dengan ”syariah mu’amalah” adalah hubungan
+sosial, termasuk kegiatan bisnis, yang sejalan atau didasarkan
+pada prinsip Syariah.
+Huruf c
+Angka 1
+Yang dimaksud dengan “daftar kredit macet” adalah daftar
+kredit macet sebagaimana diatur dalam ketentuan Bank
+Indonesia yang mengatur mengenai Sistem Informasi
+Debitur.
+Angka 2
+Cukup jelas.
+
+Pasal 29 ...
+
+-15Pasal 29
+Cukup jelas.
+
+Pasal 30
+Cukup jelas.
+
+Pasal 31
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Persetujuan terhadap calon anggota DPS diberikan berdasarkan pada
+antara lain:
+a.
+
+penilaian terhadap komitmen calon anggota DPS dalam
+pengawasan BPRS dan ketersediaan waktu; dan
+
+b.
+
+wawancara terhadap calon anggota DPS.
+
+Pasal 32
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Yang dimaksud dengan “pemberhentian efektif” adalah tanggal
+setelah pemberhentian yang bersangkutan mendapat persetujuan dari
+rapat umum pemegang saham, serah terima jabatan, atau mekanisme
+
+lainnya ...
+
+-16lainnya sebagaimana diatur dalam anggaran dasar.
+
+Pasal 33
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Yang dimaksud dengan ”informasi lain yang menunjukkan tidak
+terpenuhinya aspek integritas” antara lain dilakukan melalui
+wawancara, pengamatan dan pengujian (interview, observation and
+test) pada saat pelaksanaan pemeriksaan BPRS, informasi track
+record yang berasal dari hasil pengawasan Bank Indonesia atau
+sumber-sumber lainnya.
+
+Pasal 34
+Cukup jelas.
+
+Pasal 35
+Ayat (1)
+Persetujuan atas permohonan pembukaan Kantor Cabang diberikan
+berdasarkan pada antara lain:
+a.
+
+penilaian terhadap kesiapan operasional Kantor Cabang;
+
+b.
+
+analisis atas hasil studi kelayakan yang disampaikan oleh BPRS;
+
+c.
+
+analisis atas kinerja keuangan BPRS, antara lain:
+
+1. rasio...
+
+-171.
+
+rasio Non Performing Financing (NPF) gross tidak lebih
+dari 15%;
+
+2.
+
+tidak dalam keadaan rugi yang semakin besar; dan
+
+3.
+
+memiliki peringkat komposit paling rendah 3 (tiga) selama
+2 (dua) periode penilaian terakhir.
+
+d.
+
+pemenuhan persyaratan modal; dan
+
+e.
+
+tidak
+
+terdapat
+
+pelampauan
+
+dan/atau
+
+pelanggaran
+
+Batas
+
+Maksimum Penyaluran Dana.
+Ayat (2)
+Huruf a
+Cukup jelas.
+Huruf b
+Cukup jelas.
+Huruf c
+Yang dimaksud dengan “teknologi sistem informasi yang
+memadai”
+
+adalah
+
+teknologi
+
+sistem
+
+informasi
+
+yang
+
+memungkinkan adanya pencatatan transaksi nasabah di Kantor
+Cabang secara otomasi dan online dengan kantor lain BPRS.
+Huruf d
+Cukup jelas.
+Ayat (3)
+Cukup jelas.
+
+Pasal 36
+Cukup jelas.
+
+Pasal 37 ...
+
+-18Pasal 37
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Yang dimaksud dengan “wilayah sekitar” adalah antara lain dalam
+wilayah Kabupaten/Kota yang sama dengan tempat kedudukan kantor
+BPRS yang menjadi induknya.
+Ayat (3)
+Cukup jelas.
+
+Pasal 38
+Cukup jelas.
+
+Pasal 39
+Cukup jelas.
+
+Pasal 40
+Ayat (1)
+Persetujuan atas permohonan izin pemindahan alamat kantor pusat
+dan Kantor Cabang diberikan berdasarkan pertimbangan antara lain:
+a.
+
+alasan pemindahan kantor;
+
+b.
+
+kesiapan operasional kantor pusat dan Kantor Cabang; dan
+
+c.
+
+hasil analisis atas kinerja pada lokasi kantor lama dan studi
+kelayakan usaha pada lokasi kantor yang baru.
+
+Ayat (2) ...
+
+-19Ayat (2)
+Cukup jelas.
+Ayat (3)
+Faktor-faktor yang harus dipertimbangkan antara lain:
+a.
+
+jarak lokasi kantor lama dengan yang baru;
+
+b.
+
+jumlah nasabah yang telah dibiayai; dan
+
+c.
+
+infrastruktur penunjang pada lokasi kantor yang baru
+
+Pasal 41
+Ayat (1)
+Pengumuman dilakukan dalam surat kabar harian lokal atau dengan
+menempelkan pengumuman di lokasi kantor yang lama.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Yang dimaksud dengan “ditinjau kembali” adalah izin pemindahan
+dibatalkan apabila BPRS tidak dapat menyampaikan alasan yang
+relevan atas keterlambatan pelaksanaan pemindahan kantor atau
+diperpanjang apabila penundaan disebabkan oleh hal-hal yang tidak
+dapat dihindari (force majeur) oleh BPRS atau pertimbangan lain yang
+dapat diterima.
+
+Pasal 42
+Ayat (1)
+Yang dimaksud dengan “wilayah sekitar” adalah antara lain dalam
+
+wilayah ...
+
+-20wilayah Kabupaten/Kota yang sama dengan tempat kedudukan kantor
+BPRS yang menjadi induknya.
+Ayat (2)
+Faktor-faktor yang harus dipertimbangkan antara lain:
+a.
+
+jarak lokasi kantor lama dengan yang baru;
+
+b.
+
+jumlah nasabah yang telah dibiayai; dan
+
+c.
+
+infrastruktur penunjang pada lokasi kantor yang baru.
+
+Pasal 43
+Ayat (1)
+Pengumuman dapat dilakukan antara lain dengan menempelkan
+pengumuman di lokasi kantor yang lama.
+Ayat (2)
+Cukup jelas.
+.
+Pasal 44
+Cukup jelas.
+
+Pasal 45
+Cukup jelas.
+
+Pasal 46
+Ayat (1)
+Huruf a
+Cukup jelas.
+
+Huruf b ...
+
+-21Huruf b
+Pengumuman dilakukan dalam surat kabar harian lokal atau
+dengan menempelkan pengumuman di lokasi kantor yang lama.
+Huruf c
+Cukup jelas.
+Ayat (2)
+Cukup jelas.
+
+Pasal 47
+Cukup jelas.
+
+Pasal 48
+Cukup jelas.
+
+Pasal 49
+Cukup jelas.
+
+Pasal 50
+Cukup jelas.
+
+Pasal 51
+Cukup jelas.
+
+Pasal 52
+Cukup jelas.
+
+Pasal 53 ...
+
+-22Pasal 53
+Ayat (1)
+Huruf a
+Cukup jelas.
+Huruf b
+Pengumuman dilakukan dalam surat kabar harian lokal atau
+dengan menempelkan pengumuman di kantor kecamatan dan
+lokasi kantor BPRS yang lama.
+Pengumumam pencabutan izin usaha memuat antara lain rencana
+pembubaran badan hukum BPRS, rencana penyelesaian seluruh
+hak dan kewajiban BPRS.
+Huruf c
+Termasuk dalam penyelesaian kewajiban dimaksud antara lain
+penyelesaian kewajiban kepada nasabah dan kreditur lainnya,
+pembayaran gaji terhutang, pembayaran biaya kantor, pajak
+terhutang dan biaya-biaya lain yang relevan.
+Ayat (2)
+Cukup jelas.
+
+Pasal 54
+Pembubaran badan hukum BPRS dilakukan sesuai dengan ketentuan
+peraturan perundang-undangan yang berlaku.
+
+Pasal 55
+Cukup jelas.
+
+Pasal 56 ...
+
+-23Pasal 56
+Cukup jelas.
+
+Pasal 57
+Ayat (1)
+Kantor BPRS yang dimaksud meliputi kantor pusat, Kantor Cabang
+dan Kantor Kas.
+Pencantuman nama dan jenis kantor BPRS dapat dilakukan antara lain
+melalui papan nama dan/atau pada dinding atau kaca depan kantor
+BPRS agar mudah terlihat oleh nasabah.
+Contoh:
+1.
+
+Penulisan Kantor Cabang
+PT BANK PEMBIAYAAN RAKYAT SYARIAH/ BANK
+PEMBIAYAAN RAKYAT SYARIAH/ PT BPR SYARIAH/
+BPR SYARIAH/ PT BPRS/BPRS/ “XXX”
+Kantor Cabang “YYY”.
+
+2.
+
+Penulisan Kantor Kas
+PT BANK PEMBIAYAAN RAKYAT SYARIAH/ BANK
+PEMBIAYAAN RAKYAT SYARIAH/ PT BPR SYARIAH/
+BPR SYARIAH/ PT BPRS/BPRS/ “XXX”
+Kantor Kas “YYY”.
+
+Ayat (2)
+Cukup jelas.
+
+Pasal 58...
+
+-24Pasal 58
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Laporan dinyatakan diterima oleh Bank Indonesia apabila telah
+disampaikan secara lengkap dengan memuat data, informasi dan/atau
+dokumen yang dipersyaratkan sesuai jenis laporannya.
+Tanggal penerimaan laporan oleh Bank Indonesia adalah tanggal:
+a.
+
+stempel pos (time stamp), apabila laporan dikirimkan melalui
+P.T. Pos Indonesia; atau
+
+b.
+
+penerimaan laporan, apabila laporan disampaikan secara
+langsung oleh BUK atau UUS atau dikirimkan melalui
+perusahaan jasa pengiriman selain P.T. Pos Indonesia.
+
+Huruf a
+Jumlah sanksi kewajiban membayar dihitung sebagai berikut:
+Jumlah kewajiban membayar =
+jumlah hari kerja keterlambatan x Rp100.000,00 x jumlah
+laporan/ pengumuman.
+Huruf b
+Jumlah sanksi kewajiban membayar dihitung sebagai berikut:
+Jumlah kewajiban membayar =
+Rp1.000.000,00 x jumlah laporan/ pengumuman.
+BPRS
+
+yang
+
+dikenakan
+
+sanksi
+
+tidak
+
+menyampaikan
+
+laporan/pengumuman, tidak dikenakan sanksi keterlambatan
+penyampaian laporan/pengumuman.
+
+Ayat (3) ...
+
+-25Ayat (3)
+Cukup jelas.
+Ayat (4)
+Cukup jelas.
+Ayat (5)
+Cukup jelas.
+
+Pasal 59
+Cukup jelas.
+
+Pasal 60
+Cukup jelas
+
+Pasal 61
+Cukup jelas.
+
+Pasal 62
+Cukup jelas
+
+Pasal 63
+Cukup jelas.
+
+TAMBAHAN LEMBARAN NEGARA REPUBLIK INDONESIA NOMOR 5027
+DPbS

@@ -1,0 +1,867 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 11 EKUITAS (114-126).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 114 -
+
+BAGIAN XI EKUITAS
+XI.1. PENDAHULUAN
+1.
+
+Ekuitas adalah hak residual atas aset Bank setelah dikurangi semua
+kewajiban.
+
+2.
+
+Unsur ekuitas dapat disubklasifikasikan dalam neraca menjadi pospos ekuitas, misalnya modal disetor, tambahan modal disetor, saldo
+laba, cadangan umum, dan cadangan tujuan yang disajikan dalam
+pos-pos terpisah. Klasifikasi semacam itu dapat menjadi relevan
+untuk pengambilan keputusan pemakai laporan keuangan apabila
+pos tersebut mengindikasikan pembatasan hukum atau pembatasan
+lainnya terhadap kemampuan perseroan untuk membagikan atau
+menggunakan ekuitas.
+
+3.
+
+Komponen ekuitas untuk Bank antara lain terdiri atas:
+a.
+
+modal;
+
+b.
+
+dana setoran modal – ekuitas;
+
+c.
+
+surplus revaluasi aset tetap;
+
+d.
+
+saldo laba.
+
+XI.2. MODAL ...
+
+- 115 -
+
+XI.2. MODAL
+A.
+
+Definisi
+1.
+
+Modal Dasar adalah seluruh nilai nominal saham sesuai dengan
+Anggaran Dasar.
+
+2.
+
+Modal Disetor adalah modal yang telah efektif diterima bank sebesar
+nilai nominal saham.
+
+3.
+
+Tambahan Modal Disetor (Agio Saham), yaitu selisih lebih setoran
+modal yang diterima oleh Bank sebagai akibat harga saham yang
+melebihi nilai nominalnya.
+
+4.
+
+Modal Sumbangan, yaitu sumbangan yang berasal dari pemilik Bank
+dalam bentuk dana atau aset lainnya termasuk pengembalian saham
+pemilik.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+Undang-undang tentang Perseroan Terbatas.
+
+Penjelasan
+1.
+
+Modal Disetor
+a.
+
+Modal Disetor merupakan bagian dari modal ditempatkan yang
+telah disetor penuh oleh pemegang saham.
+
+b.
+
+Saham yang dikeluarkan dapat berupa saham utama (preferen)
+dan saham biasa.
+
+c.
+
+Penambahan modal disetor lazimnya dicatat berdasarkan:
+1) Jumlah uang yang diterima.
+2) Besarnya utang yang dikonversi menjadi modal.
+3) Nilai wajar aset non-kas yang diterima.
+
+2.
+
+Tambahan Modal Disetor
+a.
+
+Tambahan
+
+Modal
+
+Disetor
+
+merupakan
+
+bagian
+
+dari
+
+modal
+
+ditempatkan yang telah disetor penuh oleh pemegang saham.
+b.
+
+Pos Tambahan Modal Disetor tidak boleh didebit atau dikredit
+dengan pos laba atau rugi.
+
+3.
+
+Modal Sumbangan
+Modal Sumbangan adalah sejumlah uang atau barang modal yang
+dapat dinilai dengan uang yang diterima dari pihak lain yang bersifat
+hibah dan tidak mengikat.
+D. Perlakuan ...
+
+- 116 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+Modal Disetor
+1.
+
+Modal Disetor diakui pada saat penerimaan setoran modal baik
+berupa dana kas maupun aset non-kas.
+
+2.
+
+Modal Disetor dicatat berdasarkan:
+a.
+
+Jumlah uang yang diterima.
+
+b.
+
+Setoran saham dalam bentuk uang, sesuai transaksi nyata.
+
+c.
+
+Besarnya utang yang dikonversi menjadi modal.
+
+d.
+
+Setoran saham dalam dividen saham dilakukan dengan harga
+wajar saham, yaitu nilai wajar yang disepakati RUPS untuk
+saham.
+
+e.
+
+Nilai wajar aset non-kas yang diterima.
+Setoran saham dalam bentuk aset non-kas, menggunakan nilai
+wajar aset non-kas yang diserahkan, yaitu nilai appraisal
+tanggal transaksi yang disetujui Dewan Komisaris, atau nilai
+kesepakatan Dewan Komisaris dan penyetor aset non-kas.
+
+Pengeluaran saham dicatat sebesar nilai nominal yang bersangkutan.
+Apabila jumlah yang diterima dari pengeluaran saham tersebut lebih
+besar daripada nilai nominalnya, maka selisihnya dibukukan pada
+akun Agio Saham.
+Tambahan Modal Disetor (Agio Saham)
+1.
+
+Tambahan modal disetor diakui pada saat penerimaan setoran modal
+dari pihak ketiga baik berupa dana kas maupun aset nonkas.
+
+2.
+
+Penambahan pos Tambahan Modal Disetor diakui pada saat:
+a.
+
+dilakukan penambahan setoran kas oleh pemilik sebesar kas
+yang diterima.
+
+b.
+
+dilakukan penambahan setoran aset non-kas sebesar nilai
+wajar aset non-kas yang diterima.
+
+Modal Sumbangan
+1.
+
+Modal Sumbangan diakui pada saat diterimanya sumbangan berupa
+kas atau aset non-kas dari pemilik.
+
+2.
+
+Modal Sumbangan berupa kas dinilai sebesar kas yang diterima.
+
+3.
+
+Sumbangan berupa aset non-kas dinilai sebesar nilai wajar aset nonkas yang diterima.
+
+D2. Penyajian ...
+
+- 117 -
+
+D2.
+
+Penyajian
+1.
+
+Penyajian modal dalam neraca harus dilakukan sesuai dengan
+ketentuan pada anggaran dasar Bank dan peraturan yang berlaku
+serta menggambarkan hubungan keuangan yang ada.
+
+2.
+
+Modal dasar, modal ditempatkan, modal disetor, nilai nominal dan
+banyaknya saham untuk setiap jenis saham harus dinyatakan dalam
+neraca.
+
+3.
+
+Tambahan Modal Disetor disajikan dalam kelompok pos ekuitas.
+
+4.
+
+Modal sumbangan disajikan dalam kelompok pos ekuitas sesudah
+akun Tambahan Modal Disetor.
+
+E.
+
+Ilustrasi Jurnal
+Modal Disetor
+1.
+
+Pada saat penyetoran modal secara tunai pada nilai nominal:
+Db. Kas/Rekening….
+Kr. Modal Disetor.
+
+2.
+
+Pada saat penyetoran modal secara tunai di atas nilai nominal:
+Db. Kas/Rekening….
+Kr. Modal Disetor.
+Kr. Agio Saham.
+
+3.
+
+Pada saat penyetoran modal dalam bentuk barang (aset nonkas):
+Db. Aset yang diterima (nilai wajar).
+Kr. Modal Disetor.
+
+4.
+
+Pada saat konversi kewajiban utang menjadi modal:
+Db. Kewajiban/Utang yang terkait.
+Kr. Modal Disetor.
+
+Modal Sumbangan
+1.
+
+Pada saat menerima Modal Sumbangan dari pemilik dalam bentuk
+kas:
+Db. Kas (nilai nominal).
+Kr. Modal Sumbangan.
+
+2.
+
+Pada saat menerima Modal Sumbangan dari pemilik dalam bentuk
+aset non-kas:
+Db. Aset yang diterima (nilai wajar).
+Kr. Modal Sumbangan.
+F. Pengungkapan ...
+
+- 118 -
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Hak dan keistimewaan dari suatu golongan saham atas dividen dan
+pelunasan modal pada saat likuidasi, dalam hal terdapat lebih dari
+satu jenis saham.
+
+2.
+
+Pembatasan yang melekat pada setiap jenis saham, termasuk
+pembatasan atas dividen dan pembayaran kembali atas modal.
+
+3.
+
+Jumlah tunggakan dividen atas saham preferen dengan hak dividen
+kumulatif tiap saham dan jumlah keseluruhan dividen periode
+sebelumnya.
+
+4.
+
+Perubahan atas modal yang ditanam dalam tahun berjalan.
+
+5.
+
+Agio saham.
+
+6.
+
+Rincian modal sumbangan.
+
+7.
+
+Nama-nama penyumbang.
+
+XI.3. DANA ...
+
+- 119 -
+
+XI.3. DANA SETORAN MODAL – EKUITAS
+A.
+
+Definisi
+Dana Setoran Modal adalah dana yang telah disetor penuh untuk tujuan
+penambahan
+
+modal
+
+namun
+
+belum
+
+didukung
+
+dengan
+
+kelengkapan
+
+persyaratan untuk dapat digolongkan sebagai Modal Disetor seperti
+pelaksanaan rapat umum pemegang saham maupun pengesahan anggaran
+dasar dari instansi yang berwenang.
+B.
+
+Dasar Pengaturan
+Ekuitas sebagai bagian hak pemilik dalam entitas harus dilaporkan
+sedemikian rupa sehingga memberikan informasi mengenai sumbernya
+secara jelas dan disajikan sesuai dengan peraturan perundangan dan akta
+pendirian yang berlaku. (SAK ETAP paragraf 19.2)
+
+C.
+
+Penjelasan
+1.
+
+Dana Setoran Modal adalah dana yang secara efektif telah disetor
+penuh oleh pemegang saham atau calon pemegang saham dalam
+rangka penambahan modal, tetapi belum memenuhi aspek legalitas
+dan kelengkapan persyaratan untuk dapat digolongkan sebagai
+Modal Disetor.
+
+2.
+
+Untuk dapat diperhitungkan sebagai Dana Setoran Modal maka dana
+tersebut harus ditempatkan pada rekening khusus (escrow account)
+dan tidak boleh ditarik kembali oleh pemegang saham. Penggunaan
+dana dalam escrow account tersebut harus dengan persetujuan
+Otoritas Jasa Keuangan.
+
+3.
+
+Dalam hal Dana Setoran Modal berasal dari calon pemilik Bank
+maka jika berdasarkan penelitian Otoritas Jasa Keuangan, calon
+pemilik Bank atau dana tersebut tidak memenuhi syarat sebagai
+pemegang saham atau modal, dana tersebut tidak dapat dianggap
+sebagai komponen modal, dan dapat ditarik kembali oleh calon
+pemilik.
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+Dana Setoran Modal diakui sebesar jumlah dana yang memenuhi
+ketentuan permodalan yang berlaku.
+D.2. Penyajian ...
+
+- 120 -
+
+D2.
+
+Penyajian
+Dana Setoran Modal disajikan dalam pos tersendiri setelah pos Modal.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat Dana Setoran Modal diakui oleh otoritas:
+Db. Penempatan pada bank umum.
+Kr. Dana Setoran Modal.
+
+2.
+
+Pada saat Dana Setoran Modal telah didukung dengan kelengkapan
+dokumen
+
+sesuai
+
+dengan
+
+ketentuan
+
+perundang-undangan
+
+yang
+
+berlaku:
+Db. Dana Setoran Modal.
+Kr. Modal disetor.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian Dana Setoran Modal dan pemilik dana.
+
+2.
+
+Proses yang telah dilakukan atas dana setoran modal sampai dengan
+tanggal pelaporan.
+
+3.
+
+Dana Setoran Modal yang telah digunakan oleh Bank.
+
+XI.4. SURPLUS ...
+
+- 121 -
+
+XI.4. SURPLUS REVALUASI ASET TETAP
+A.
+
+Definisi
+Surplus Revaluasi Aset Tetap adalah selisih antara nilai revaluasi dengan
+nilai tercatat aset tetap dan inventaris sebelum dilakukan revaluasi.
+
+B.
+
+Dasar Pengaturan
+1.
+
+Penilaian kembali atau revaluasi aset tetap pada umumnya tidak
+diperkenankan
+
+karena
+
+SAK
+
+ETAP
+
+menganut
+
+penilaian
+
+aset
+
+berdasarkan biaya perolehan atau harga pertukaran. Penyimpangan
+dari ketentuan ini mungkin dilakukan berdasarkan ketentuan
+pemerintah. Dalam hal ini laporan keuangan harus menjelaskan
+mengenai penyimpangan dari konsep biaya perolehan di dalam
+penyajian aset tetap serta pengaruh dari penyimpangan tersebut
+terhadap gambaran keuangan entitas. Selisih antara nilai revaluasi
+dengan nilai tercatat aset tetap diakui dalam ekuitas dengan nama “
+Surplus Revaluasi Aset Tetap”.(SAK ETAP paragraf 15.15)
+2.
+
+Surplus Revaluasi Aset Tetap dalam ekuitas dapat dipindahkan
+langsung
+
+ke
+
+saldo
+
+laba
+
+pada
+
+saat
+
+aset
+
+tersebut
+
+dihentikan
+
+pengakuannya. Hal ini meliputi pemindahan sekaligus surplus
+revaluasi pada saat penghentian atau pelepasan aset tersebut.
+Namun, sebagian surplus revaluasi tersebut dapat dipindahkan
+sejalan dengan penggunaan aset oleh entitas. Dalam halini, surplus
+revaluasi yang dipindahkan ke saldo laba adalah sebesar perbedaan
+antara jumlah penyusutan berdasarkan nilai revaluasian aset dengan
+jumlah penyusutan berdasarkan biaya perolehan aset tersebut.
+Pemindahan surplus revaluasi ke saldo laba tidak dilakukan melalui
+laporan laba rugi. (SAK ETAP paragraf 15.16)
+C.
+
+Penjelasan
+1.
+
+Penyimpangan dan pengaruh dari penggunaan konsep selain biaya
+perolehan harus dijelaskan dalam laporan keuangan.
+
+2.
+
+Surplus Revaluasi Aset Tetap diakui sebagai penambah aset atau
+pengurang akumulasi penyusutan yang telah dibentuk.
+
+D. Perlakuan ...
+
+- 122 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+1.
+
+Dalam hal Bank melakukan penilaian kembali aset tetap dan
+inventarisnya, maka selisih antara nilai revaluasi dengan nilai
+tercatat sebelum dilakukan revaluasi dicatat pada pos Surplus
+Revaluasi Aset Tetap.
+
+2.
+
+Surplus Revaluasi Aset Tetap akan direklasifikasi ke Saldo Laba pada
+saat penghentian-pengakuan.
+
+3.
+
+Reklasifikasi Surplus Revaluasi Aset Tetap ke Saldo Laba melalui
+laporan perubahan ekuitas, bukan laporan laba rugi.
+
+D2.
+
+Penyajian
+Surplus Revaluasi Aset Tetap disajikan sebagai pos tersendiri dalam
+ekuitas.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat dilakukan revaluasi aset tetap dan inventaris:
+Db. Aset tetap dan inventaris/Akumulasi penyusutan
+Kr. Surplus Revaluasi Aset Tetap (ekuitas)
+
+2.
+
+Pada saat reklasifikasi Surplus Revaluasi Aset Tetap ke saldo laba
+(saat penghentian-pengakuan) :
+Db. Kas/Rekening….
+Db. Akumulasi penyusutan.
+Kr. Aset tetap dan inventaris.
+Dapat terjadi keuntungan atau kerugian
+Db. Surplus Revaluasi Aset Tetap.
+Kr. Saldo laba.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Kebijakan akuntansi untuk revaluasi aset tetap dan inventaris.
+
+2.
+
+Dasar yang digunakan untuk melakukan revaluasi aset tetap dan
+inventaris.
+
+3.
+
+Tanggal efektif revaluasi aset tetap dan inventaris.
+
+4.
+
+Pihak yang melakukan penilaian.
+
+5.
+
+Dasar penentuan nilai Revaluasi Aset Tetap dan inventaris.
+
+6.
+
+Jumlah tercatat setiap jenis aset tetap dan inventaris sebelum
+dilakukan revaluasi.
+7. Jumlah ...
+
+- 123 -
+
+7.
+
+Jumlah Surplus Revaluasi Aset Tetap yang direklasifikasi ke saldo
+laba.
+
+XI.5. SALDO ...
+
+- 124 -
+
+XI.5. SALDO LABA
+A.
+
+Definisi
+1.
+
+Saldo Laba (Laba Ditahan) adalah akumulasi hasil usaha periodik
+setelah memperhitungkan pembagian dividen, koreksi laba rugi
+periode lalu, dan reklasifikasi surplus revaluasi aset tetap.
+
+2.
+
+Saldo Laba dikelompokkan menjadi:
+a.
+
+Cadangan tujuan, yaitu cadangan yang dibentuk dari laba neto
+setelah pajak yang tujuan penggunaannya telah ditetapkan;
+
+b.
+
+Cadangan umum, yaitu cadangan yang dibentuk dari laba neto
+setelah pajak yang dimaksudkan untuk memperkuat modal;
+dan
+
+c.
+
+Saldo Laba yang belum ditentukan tujuannya, terdiri dari:
+1) laba
+
+rugi
+
+periode
+
+lalu
+
+yang
+
+belum
+
+ditetapkan
+
+penggunaannya; dan
+2) laba rugi periode berjalan.
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+Undang-Undang tentang Perseroan Terbatas.
+
+Penjelasan
+1.
+
+Pos Saldo Laba harus dinyatakan secara terpisah dari pos Modal.
+Seluruh Saldo Laba dianggap bebas untuk dibagikan sebagai dividen,
+kecuali jika diberikan indikasi mengenai pembatasan terhadap saldo
+laba, misalnya dicadangkan untuk tujuan tertentu, atau untuk
+memenuhi ketentuan regulasi atau ikatan tertentu.
+
+2.
+
+Saldo Laba yang tidak tersedia untuk dibagikan sebagai dividen
+karena pembatasan-pembatasan tersebut dilaporkan dalam pos
+tersendiri
+
+yang
+
+menggambarkan
+
+tujuan
+
+pencadangan
+
+yang
+
+dimaksud.
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+1.
+
+Saldo Laba tidak boleh dibebani atau dikredit dengan pos-pos yang
+seharusnya diperhitungkan pada laba rugi tahun berjalan.
+
+2.
+
+Pembagian dividen diakui sebagai pengurang saldo laba ketika
+dividen dideklarasikan.
+a. Dividen ...
+
+- 125 -
+
+a.
+
+Dividen dalam bentuk tunai diakui sebesar jumlah yang
+ditetapkan.
+
+b.
+
+Dividen dalam bentuk saham diakui sebesar nilai wajar saham
+saat dividen dideklarasikan.
+
+3.
+
+Saldo Laba yang belum ditentukan tujuannya direklasifikasi ke
+cadangan
+
+tujuan
+
+atau
+
+cadangan
+
+umum
+
+ketika
+
+dilakukan
+
+pembentukan cadangan sebesar jumlah yang ditentukan.
+D2.
+
+Penyajian
+Saldo Laba disajikan tersendiri dalam bentuk cadangan tujuan, cadangan
+umum dan saldo laba yang belum ditentukan tujuannya.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat pemindahan laba tahun berjalan ke saldo laba:
+Db. Ikhtisar laba rugi.
+Kr.Saldo Laba.
+
+2.
+
+Pada saat pemindahan rugi tahun berjalan ke saldo laba:
+Db. Saldo Laba.
+Kr. Ikhtisar laba rugi.
+
+3.
+
+Pembagian dividen tunai
+a.
+
+Pada saat ditetapkan:
+Db. Saldo Laba.
+Kr. Kewajiban Segera – Utang dividen.
+
+b.
+
+Pada saat dibayar:
+Db. Kewajiban Segera – Utang dividen
+Kr. Kas/Rekening …
+
+4.
+
+Pada saat pembagian dividen saham:
+Db. Saldo Laba.
+Kr. Modal Disetor.
+
+5.
+
+Pada saat pembentukan cadangan:
+Db. Saldo Laba.
+Kr. Cadangan tujuan.
+Kr. Cadangan umum.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Penjatahan (apropriasi) dan pemisahan Saldo Laba, penjelasan jenis
+penjatahan dan pemisahan, tujuan penjatahan dan pemisahan saldo
+laba ...
+
+- 126 -
+
+laba, serta jumlahnya, termasuk perubahan akun-akun penjatahan
+atau pemisahan Saldo Laba.
+2.
+
+Peraturan, perikatan, pembatasan dan jumlah pembatasan Saldo
+Laba.
+
+3.
+
+Koreksi masa lalu, baik bruto maupun neto setelah pajak dengan
+menjelaskan bentuk kesalahan laporan keuangan terdahulu, dampak
+koreksi terhadap laba usaha, laba neto dan nilai saham per lembar.
+
+4.
+
+Jumlah
+
+dividen
+
+dan
+
+dividen
+
+per
+
+lembar
+
+saham,
+
+termasuk
+
+keterbatasan Saldo Laba tersedia bagi dividen.
+5.
+
+Tunggakan dividen (utang dividen), baik jumlah maupun tunggakan
+per lembar saham. Pengungkapan deklarasi dividen setelah tanggal
+neraca tetapi sebelum tanggal penyelesaian laporan keuangan.

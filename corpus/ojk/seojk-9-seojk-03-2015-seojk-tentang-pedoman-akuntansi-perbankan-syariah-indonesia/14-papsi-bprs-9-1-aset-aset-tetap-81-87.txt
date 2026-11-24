@@ -1,0 +1,665 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 9.1 Aset - Aset Tetap (81-87).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 81 -
+
+BAGIAN IX ASET
+IX.1
+A.
+
+ASET TETAP
+Definisi
+Aset tetap adalah aset berwujud yang:
+1. dimiliki untuk digunakan dalam penyediaan jasa atau untuk tujuan
+administratif; dan
+2. diharapkan akan digunakan lebih dari satu periode.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+1.
+
+Aset tetap, antara lain:
+a. tanah;
+b. bangunan;
+c. inventaris (peralatan, perlengkapan dan kendaraan).
+
+2.
+
+Pengakuan awal
+a. Biaya perolehan aset tetap terdiri dari:
+1)
+
+Harga beli, termasuk biaya hukum dan broker, bea impor dan
+pajak
+
+pembelian
+
+yang
+
+tidak
+
+boleh
+
+dikreditkan,
+
+setelah
+
+dikurangi diskon pembelian dan potongan lainnya.
+2)
+
+Biaya-biaya
+
+yang
+
+dapat
+
+diatribusikan
+
+langsung
+
+untuk
+
+membawa aset ke lokasi dan kondisi yang diinginkan agar aset
+siap digunakan sesuai dengan maksud manajemen. Misalnya,
+biaya penyiapan lahan, biaya penanganan dan penyerahan
+awal, biaya instalasi dan perakitan dan biaya pengujian
+fungsionalitas.
+3)
+
+Estimasi awal biaya pembongkaran aset, biaya pemindahan
+aset dan biaya restorasi lokasi, jika ada.
+
+b.
+
+Dalam hal aset tetap diperoleh melalui pembelian secara tidak
+tunai, maka biaya perolehan aset tetap adalah setara dengan nilai
+tunai pada saat tanggal pengakuan.
+
+c.
+
+Aset tetap yang diperoleh dari sumbangan pemilik diakui sebagai
+bagian modal sumbangan. Aset tetap yang diperoleh bukan dari
+sumbangan pemilik diakui sebagai pendapatan non-operasional.
+d. Aset ...
+
+- 82 -
+
+d.
+
+Aset tetap yang diperoleh dari undian berhadiah diakui sebagai
+pendapatan non-operasional.
+
+e.
+
+Pertukaran aset tetap
+1)
+
+Aset tetap yang diperoleh melalui pertukaran dengan aset nonmoneter lain, atau kombinasi aset moneter dan aset nonmoneter diukur sebesar:
+a)
+
+Nilai wajar aset yang diterima atau nilai wajar aset yang
+diserahkan,
+
+jika
+
+pertukaran
+
+mempunyai
+
+substansi
+
+komersial.
+b)
+
+Nilai tercatat aset yang diserahkan, jika nilai wajar aset
+yang diterima atau aset yang diserahkan tidak dapat
+diukur secara andal, atau pertukaran tidak mempunyai
+substansi komersial.
+
+2)
+
+Substansi komersial dapat terjadi ketika nilai wajar aset yang
+diserahkan berbeda secara signifikan dengan nilai wajar aset
+yang diterima.
+Untuk aset tetap yang diperoleh melalui pertukaran, biaya
+perolehan dari suatu aset tetap diukur pada nilai wajar,
+kecuali:
+a)
+
+transaksi pertukaran tidak memiliki substansi komersial;
+atau
+
+b)
+
+nilai wajar dari aset yang diterima dan diserahkan tidak
+dapat diukur secara andal.
+
+Jika nilai wajar aset tetap yang diperoleh tidak dapat diukur
+secara andal, maka biaya perolehan diukur dengan jumlah
+tercatat dari aset yang diserahkan. Jika pertukaran memiliki
+substansi komersial yang signifikan maka selisih antara nilai
+wajar
+
+aset
+
+yang
+
+dipertukarkan
+
+diakui
+
+sebagai
+
+pendapatan/beban.
+f.
+
+Perolehan melalui sewa pembiayaan
+1)
+
+Aset tetap yang diperoleh melalui sewa jika sewa tersebut
+merupakan sewa pembiayaan.
+
+2)
+
+Suatu sewa diklasifikasikan sebagai sewa pembiayaan jika
+memenuhi salah satu syarat berikut ini:
+a)
+
+Perjanjian sewa mengalihkan kepemilikan aset kepada
+Bank pada akhir masa sewa.
+
+b) Bank ...
+
+- 83 -
+
+b)
+
+Bank mempunyai opsi untuk membeli aset pada harga
+yang cukup rendah dibandingkan nilai wajar pada tanggal
+opsi mulai dapat dilaksanakan, sehingga pada awal sewa
+dapat dipastikan bahwa opsi memang akan dilaksanakan.
+
+c)
+
+Masa sewa adalah untuk sebagian besar umur ekonomis
+aset meskipun hak milik tidak dialihkan yaitu masa sewa
+sama atau lebih dari 75% (tujuh puluh lima perseratus)
+umur ekonomis aset sewaan.
+
+d)
+
+Pada awal sewa, nilai kini dari jumlah pembayaran sewa
+minimum secara substansial mendekati nilai wajar aset
+sewaan yaitu pembayaran sewa minimum sama atau lebih
+dari 90% (sembilan puluh perseratus) nilai wajar aset
+sewaan.
+
+e)
+
+Aset sewaan bersifat khusus dan dimana hanya Bank yang
+dapat menggunakannya tanpa perlu modifikasi secara
+material.
+
+3)
+
+Biaya perolehan aset tetap yang diperoleh melalui sewa adalah
+nilai tunai dari seluruh pembayaran sewa ditambah nilai
+residu (harga opsi) yang harus dibayar pada akhir masa sewa.
+
+3.
+
+Pengeluaran setelah pengakuan awal
+a.
+
+Pengeluaran setelah perolehan (pengakuan awal) suatu aset tetap
+yang memperpanjang umur manfaat atau yang kemungkinan besar
+memberi manfaat ekonomi di masa yang akan datang dalam
+bentuk peningkatan standar kinerja, harus ditambahkan pada
+jumlah tercatat aset tetap tersebut.
+
+b.
+
+Biaya pemeliharaan dan reparasi sehari-hari (cost of day-to-day
+servicing) dari aset tetap diakui sebagai beban dalam laporan laba
+rugi pada periode terjadinya.
+
+4.
+
+Penyusutan
+a.
+
+Aset tetap disusutkan secara sistematis selama umur manfaatnya.
+
+b.
+
+Penyusutan dimulai ketika suatu aset tersedia untuk digunakan,
+misalnya aset berada di lokasi dan kondisi yang diperlukan
+sehingga mampu beroperasi sebagaimana maksud manajemen.
+
+c.
+5.
+
+Penyusutan dihentikan ketika aset dihentikan pengakuannya.
+
+Penurunan dan pemulihan nilai
+a.
+
+Indikasi penurunan nilai
+1) Sumber informasi eksternal
+a) Selama ...
+
+- 84 -
+
+a) Selama periode tertentu, nilai pasar aset menurun secara
+signifikan lebih dari yang diekspektasikan akibat berlalunya
+waktu atau penggunaan normal.
+b) Terjadi perubahan yang signifikan dengan pengaruh negatif
+dalam periode tertentu atau dalam waktu dekat dalam
+bidang lingkungan teknologi, pasar, ekonomi,
+
+hukum
+
+dimana Bank beroperasi, atau dalam pasar dimana aset
+tersebut diperuntukkan.
+2)
+
+Sumber informasi internal
+a) Tersedianya bukti keusangan atau kerusakan fisik dari
+aset.
+b) Terjadi perubahan yang signifikan dengan pengaruh negatif
+pada periode tertentu atau dalam waktu dekat atas cara
+dan bagaimana aset digunakan atau diharapkan akan
+digunakan.
+c) Tersedianya
+
+bukti
+
+mengindikasikan
+
+dari
+
+bahwa
+
+pelaporan
+kinerja
+
+internal
+
+ekonomis
+
+yang
+
+dari
+
+aset
+
+memburuk atau akan memburuk dari yang diharapkan.
+b.
+
+Pengujian penurunan nilai dilakukan setelah terdapat indikasi
+penurunan nilai.
+
+c.
+
+Jika aset tetap mengalami penurunan nilai, maka pada setiap
+tanggal pelaporan Bank harus menilai apakah terdapat indikasi
+bahwa kerugian penurunan nilai yang telah diakui pada periode
+sebelumnya untuk aset masih ada atau berkurang. Jika terdapat
+indikasi tersebut, maka Bank harus mengestimasi nilai wajar
+dikurangi biaya untuk menjual aset tersebut.
+
+d.
+
+Indikasi pemulihan nilai secara umum merupakan kebalikan atas
+indikasi yang disebutkan pada huruf a.
+
+e.
+6.
+
+Kompensasi penurunan nilai diakui ketika menjadi terutang.
+
+Revaluasi aset tetap
+a.
+
+Revaluasi aset tetap pada umumnya tidak diperkenankan.
+
+b.
+
+Revaluasi aset tetap dapat dilakukan jika berdasarkan ketentuan
+pemerintah.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Perlakuan dan Pengukuran
+1.
+
+Pada awal perolehan, aset tetap diakui sebesar biaya perolehan.
+2. Biaya ...
+
+- 85 -
+
+2.
+
+Biaya perolehan aset tetap melalui pertukaran adalah sebesar:
+a.
+
+nilai wajar aset yang diserahkan, jika pertukaran memiliki
+substansi komersial.
+
+b.
+
+nilai wajar aset yang diterima, jika pertukaran memiliki substansi
+komersial dan nilai wajar aset yang diserahkan tidak dapat diukur
+secara
+
+andal
+
+(nilai
+
+wajar
+
+aset
+
+yang
+
+diterima
+
+lebih
+
+andal
+
+dibandingkan nilai wajar aset yang diserahkan).
+c.
+
+nilai tercatat aset yang diserahkan, jika pertukaran tidak memiliki
+substansi
+
+komersial
+
+atau
+
+nilai
+
+wajar
+
+aset
+
+yang
+
+diterima/diserahkan tidak dapat diukur secara andal.
+3.
+
+Penyusutan untuk setiap periode diakui sebagai beban untuk periode
+yang bersangkutan.
+
+4.
+
+Penurunan nilai aset tetap diakui sebagai kerugian pada periode
+terjadinya penurunan nilai sebesar selisih nilai tercatat dengan nilai
+wajar dikurangi biaya untuk menjual. Sedangkan pemulihan nilai
+diakui sebagai keuntungan.
+
+5.
+
+Selisih antara nilai aset tetap setelah revaluasi dengan nilai tercatat
+diakui sebagai “surplus revaluasi aset tetap” dalam ekuitas. Surplus
+revaluasi aset tetap tersebut direklasifikasi ke saldo laba (melalui
+laporan
+
+perubahan
+
+ekuitas)
+
+pada
+
+saat
+
+aset
+
+tetap
+
+dihentikan
+
+pengakuannya.
+6.
+
+Keuntungan atau kerugian diakui ketika aset tetap dihentikan
+pengakuannya.
+
+D2. Penyajian
+1.
+
+Aset tetap disajikan berdasarkan nilai perolehan dikurangi akumulasi
+penyusutan dan rugi penurunan nilai, jika ada.
+
+2.
+
+Surplus revaluasi aset tetap disajikan sebagai pos tersendiri dalam
+ekuitas.
+
+3.
+
+Aset tetap yang berasal dari sewa pembiayaan disajikan tersendiri
+dalam pos aset tetap.
+
+4.
+E.
+
+Kewajiban sewa pembiayaan disajikan dalam pinjaman yang diterima.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat perolehan aset tetap:
+a.
+
+Pembelian
+Db. Aset tetap.
+Kr. Kas/Rekening …
+b. Sewa ...
+
+- 86 -
+
+b.
+
+Sewa pembiayaan
+Db. Aset tetap – sewa pembiayaan.
+Kr. Pinjaman yang diterima – sewa pembiayaan.
+
+c.
+
+Sumbangan
+Db. Aset tetap.
+Kr. Modal sumbangan/pendapatan non-operasional.
+
+d.
+
+Undian
+Db. Aset tetap.
+Kr. Pendapatan non-operasional.
+
+2.
+
+Pada saat pembebanan penyusutan:
+Db. Beban penyusutan.
+Kr. Akumulasi penyusutan.
+
+3.
+
+Pada saat penurunan nilai:
+a.
+
+Pada saat pengakuan kerugian penurunan nilai
+Db. Kerugian penurunan nilai.
+Kr. Cadangan kerugian penurunan nilai.
+
+b.
+
+Pada saat kompensasi atas kerugian penurunan nilai menjadi
+piutang, jika ada:
+Db. Piutang terkait.
+Kr. Pendapatan penggantian atas kerugian penurunan nilai.
+
+Catatan:
+-
+
+Piutang terkait dengan penggantian dan akumulasi kerugian
+penurunan nilai tidak dapat disajikan secara neto (saling hapus)
+dalam neraca.
+
+-
+
+Pendapatan penggantian dan kerugian penurunan nilai dapat
+disajikan secara neto (saling hapus) dalam laporan laporan laba
+rugi.
+
+c.
+
+Pada saat menerima penggantian:
+Db. Kas/rekening….
+Kr. Piutang terkait.
+
+4.
+
+Pada saat pertukaran aset:
+Db.
+
+Aset tetap (baru).
+
+Db.
+
+Akumulasi penyusutan.
+
+Db.
+
+Akumulasi kerugian penurunan nilai, jika ada.
+
+Db/Kr. Kerugian/Keuntungan.
+Kr.
+5.
+
+Aset tetap (lama).
+
+Pada saat penghentian pengakuan (misalnya dijual):
+Db. Kas ...
+
+- 87 -
+
+Db.
+
+Kas/rekening …
+
+Db.
+
+Akumulasi penyusutan.
+
+Db.
+
+Akumulasi kerugian penurunan nilai, jika ada.
+
+Db/Kr. Kerugian/Keuntungan.
+Kr.
+6.
+
+7.
+
+F.
+
+Aset tetap.
+
+Pada saat revaluasi aset tetap:
+Db.
+
+Aset tetap/Akumulasi penyusutan.
+
+Kr.
+
+Surplus revaluasi aset tetap (ekuitas).
+
+Pada saat aset yang telah direvaluasi dihentikan pengakuannya:
+Db.
+
+Surplus revaluasi aset tetap.
+
+Kr.
+
+Saldo laba.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Untuk setiap kelompok aset tetap:
+a.
+
+Dasar pengukuran yang digunakan untuk menentukan jumlah
+bruto aset tetap.
+
+b.
+
+Metode penyusutan yang digunakan.
+
+c.
+
+Umur manfaat atau tarif penyusutan yang digunakan.
+
+d.
+
+Jumlah bruto aset tetap dan akumulasi penyusutan (agregat
+dengan akumulasi rugi penurunan nilai) pada awal dan akhir
+periode.
+
+e.
+
+Rekonsiliasi jumlah tercatat pada awal dan akhir periode yang
+menunjukkan:
+1)
+
+penambahan;
+
+2)
+
+pelepasan (disposal);
+
+3)
+
+rugi penurunan nilai yang diakui atau dipulihkan dalam
+Laporan Laba Rugi;
+
+2.
+
+4)
+
+penyusutan; dan/atau
+
+5)
+
+perubahan lainnya.
+
+Keberadaan dan jumlah pembatasan atas hak milik dan aset tetap yang
+dijaminkan untuk utang, jika ada.
+
+3.
+
+Jumlah komitmen kontrak untuk memperoleh aset tetap, jika ada.
+
+4.
+
+Pertimbangan yang digunakan dalam melakukan pertukaran aset tetap
+dalam menentukan substansi komersial.
+
+IX.2. ASET ...

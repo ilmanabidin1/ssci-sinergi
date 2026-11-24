@@ -1,0 +1,479 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/ 16/ DPbS
+Tentang: Surat Edaran Bank Indonesia tentang Perubahan atas Surat Edaran Bank Indonesia Nomor 10/35/DPbS tanggal 22 Oktober 2008 tentang Restrukturisasi Pembiayaan bagi Bank Pembiayaan Rakyat Syariah
+Berkas: lamp_se_131611.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-tentang-Perubahan-atas-SEBI-Nomor-1035DPbS-tanggal-22-Oktober-2008-tentang-Restrukturisasi-Pembiayaan.aspx
+
+---
+
+Lampiran 1 Surat Edaran Bank Indonesia Nomor 13/ 16 /DPbS tanggal 30 Mei 2011
+
+PEDOMAN PENYUSUNAN
+
+LAPORAN RESTRUKTURISASI
+PEMBIAYAAN
+BANK PEMBIAYAAN RAKYAT SYARIAH
+
+DIREKTORAT PERBANKAN SYARIAH
+BANK INDONESIA
+TAHUN 2011
+
+KATA PENGANTAR
+
+Assalamu’alaikum Wr. Wb.
+Puji syukur kita panjatkan ke hadirat Allah SWT, karena berkat rahmat dan
+izin-Nya buku Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan Bank
+Pembiayaan Rakyat Syariah (BPRS) Tahun 2011 ini dapat diterbitkan. Pedoman ini
+berisi mengenai format dan tatacara pengisian kolom-kolom Laporan Restrukturisasi
+Pembiayaan BPRS yang harus disampaikan BPRS kepada Bank Indonesia setiap
+bulan.
+Sebelum menyusun Laporan Restrukturisasi Pembiayaan, BPRS diharapkan
+membaca dan memahami ketentuan restrukturisasi pembiayaan bagi BPRS yang
+diatur
+
+dalam
+
+Peraturan
+
+Bank
+
+Indonesia
+
+Nomor
+
+10/18/PBI//2008
+
+tentang
+
+Restrukturisasi Pembiayaan Bagi Bank Syariah dan Unit Usaha Syariah sebagaimana
+telah diubah dengan Peraturan Bank Indonesia Nomor 13/9/PBI//2011 dan ketentuan
+yang terkait dengan penyusunan dan penyampaian Laporan Restrukturisasi
+Pembiayaan BPRS.
+Akhirul kalam, besar harapan kami pedoman ini dapat membantu BPRS dalam
+menyusun Laporan Restrukturisasi Pembiayaan BPRS sehingga penyusunan dan
+penyampaian Laporan Restrukturisasi Pembiayaan BPRS dapat dilakukan secara
+cepat, akurat dan tepat waktu. Semoga seluruh niat, segenap upaya dan jerih payah
+dalam rangka pengembangan BPRS mendapat pertolongan, ridha, berkah, rahmat
+dan taufiq Allah SWT serta bermanfaat bagi kita semuanya.
+Wassalaamu’alaikum Wr. Wb.
+Jakarta, 30
+
+i
+
+Mei 2011
+
+DAFTAR ISI
+
+HALAMAN JUDUL
+KATA PENGANTAR
+DAFTAR ISI
+PENJELASAN UMUM
+LAPORAN RESTRUKTURISASI PEMBIAYAAN BPRS
+1.1 Formulir Laporan Restrukturisasi Pembiayaan BPRS...........................................
+1.2 Rincian Formulir Laporan Restrukturisasi Pembiayaan BPRS.............................
+1.3 Penjelasan Formulir Laporan Restrukturisasi Pembiayaan BPRS.........................
+
+ii
+
+i
+ii
+1
+2
+3
+4
+
+PENJELASAN UMUM
+
+I.
+
+Tujuan Pelaporan
+Laporan Restrukturisasi Pembiayaan Bank Pembiayaan Rakyat Syariah
+(BPRS) yang disusun menurut buku pedoman ini dimaksudkan untuk
+keperluan:
+
+a. Pembinaan dan pengawasan BPRS secara individual.
+b. Pemantauan
+
+terhadap pelaksanaan prinsip
+pelaksanaan restrukturisasi pembiayaan.
+
+kehati-hatian
+
+dalam
+
+c. Penilaian kualitas aktiva produktif dalam bentuk pembiayaan.
+Dalam rangka mencapai tujuan tersebut maka laporan Restrukturisasi
+Pembiayaan BPRS harus diisi secara benar dan lengkap serta disampaikan
+tepat waktu, dengan mengacu pada pedoman ini.
+
+II.
+
+BPRS Pelapor
+BPRS pelapor adalah kantor pusat BPRS.
+
+III.
+
+Jenis Laporan
+Laporan Restrukturisasi Pembiayaan BPRS meliputi kantor pusat BPRS yang
+mencakup data restrukturisasi pembiayaan di kantor pusat dan kantor cabang
+BPRS.
+
+IV.
+
+Periode Laporan
+Laporan Restrukturisasi Pembiayaan BPRS disampaikan secara bulanan
+kepada Bank Indonesia.
+
+V.
+
+Cara Pengisian Laporan
+BPRS pelapor melakukan pengisian data pada form entry data yang tersedia
+dalam aplikasi data entry Laporan Restrukturisasi Pembiayaan BPRS. Angka
+nominal dilaporkan dalam ribuan rupiah, dengan pembulatan sebagai berikut:
+a. angka kurang dari Rp500,00 (lima ratus rupiah) dibulatkan menjadi 0 (nol);
+dan
+b. angka Rp500,00 (lima ratus rupiah) atau lebih dibulatkan menjadi 1 (satu).
+
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+1
+
+1.1 FORMULIR LAPORAN RESTRUKTURISASI PEMBIAYAAN BPRS
+
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+2
+
+1.2 RINCIAN LAPORAN RESTRUKTURISASI PEMBIAYAAN BPRS
+KOLOM
+1.
+No.
+Nomor urut
+2.
+Nama
+Nama nasabah
+3.
+Nomor Nasabah
+Nomor identifikasi nasabah pembiayaan (CIF)
+4.
+Nomor Rekening
+Nomor rekening nasabah
+5.
+Metode Restrukturisasi - Cara
+10. Penjadwalan kembali (rescheduling)
+20. Persyaratan kembali (reconditioning)
+31. Penataan kembali (restructuring) - Penambahan dana bank
+32. Penataan kembali (restructuring) - Konversi akad
+6.
+Metode Restrukturisasi - Frekuensi
+Jumlah restrukturisasi
+7.
+Jenis Akad
+10. Murabahah
+20. Istishna'
+30. Salam
+40. Multijasa
+50. Mudharabah
+60. Musyarakah
+70. Qardh
+80. Ijarah
+90. Ijarah Muntahiya Bittamlik
+8.
+Sisa Kewajiban
+Dalam ribuan Rupiah
+9.
+Jangka Waktu - Awal
+Bulan/Tahun (BB/TTTT)
+10. Jangka Waktu - Akhir
+Bulan/Tahun (BB/TTTT)
+11. Kualitas
+1. Lancar
+2. Kurang Lancar
+3. Diragukan
+4. Macet
+12. Tanggal Restrukturisasi
+Tanggal/Bulan/Tahun (TT/BB/TTTT)
+13. Jenis Akad
+Sesuai angka 7
+14. Sisa Kewajiban
+Dalam ribuan Rupiah
+15. Jangka Waktu – Awal
+Bulan/Tahun (BB/TTTT)
+16. Jangka Waktu – Akhir
+Bulan/Tahun (BB/TTTT)
+17. Kualitas
+Sesuai angka 11
+
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+3
+
+1.3
+
+PENJELASAN LAPORAN RESTRUKTURISASI PEMBIAYAAN BPRS
+
+KOLOM
+
+1.
+
+No.
+Kolom ini diisi dengan nomor urut nasabah pembiayaan yang direstrukturisasi.
+
+2.
+
+Nama
+Kolom ini diisi dengan nama nasabah pembiayaan yang direstrukturisasi sesuai
+dengan nama yang tercantum dalam akad pembiayaan.
+
+3.
+
+Nomor Nasabah
+Kolom ini diisi dengan nomor identifikasi nasabah (Customer Identification
+File/CIF) pembiayaan yang dilakukan restrukturisasi sesuai dengan nomor
+nasabah yang ditetapkan oleh masing-masing BPRS.
+
+4.
+
+Nomor Rekening
+Kolom ini diisi dengan nomor rekening nasabah pembiayaan yang
+direstrukturisasi sesuai dengan nomor rekening yang ditetapkan oleh masingmasing BPRS. Nomor rekening nasabah pembiayaan yang direstrukturisasi
+harus sama dengan nomor rekening nasabah pembiayaan yang dilaporkan dalam
+Laporan Bulanan BPRS.
+
+5.
+
+Metode Restrukturisasi - Cara
+Kolom ini diisi dengan metode atau cara restrukturisasi pembiayaan yang
+dilakukan oleh BPRS sesuai ketentuan yang berlaku, sebagai berikut:
+10. Penjadwalan kembali (rescheduling)
+Penjadwalan kembali adalah restrukturisasi yang dilakukan dengan cara
+perubahan jadwal pembayaran kewajiban nasabah atau jangka waktunya.
+Cara restrukturisasi ini dapat dilakukan untuk akad pembiayaan murabahah,
+istishna’, salam, multijasa, musyarakah, mudharabah, qardh, ijarah dan
+ijarah muntahiya bittamlik.
+Perpanjangan atas pembiayaan mudharabah atau musyarakah yang
+memenuhi kualitas lancar dan telah jatuh tempo serta bukan disebabkan
+nasabah mengalami penurunan kemampuan membayar tidak termasuk
+restrukturisasi pembiayaan.
+20. Persyaratan kembali (reconditioning)
+Persyaratan kembali adalah restrukturisasi yang dilakukan dengan cara
+perubahan sebagian atau seluruh persyaratan pembiayaan tanpa menambah
+sisa pokok kewajiban nasabah yang harus dibayarkan kepada BPRS, antara
+lain meliputi:
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+4
+
+1)
+2)
+3)
+4)
+5)
+6)
+
+perubahan jadwal pembayaran;
+perubahan jumlah angsuran;
+perubahan jangka waktu;
+perubahan nisbah dalam pembiayaan mudharabah atau
+musyarakah;
+perubahan proyeksi bagi hasil dalam pembiayaan
+mudharabah atau musyarakah; dan/atau
+pemberian potongan.
+
+Cara restrukturisasi ini dapat dilakukan untuk akad pembiayaan murabahah,
+istishna’, salam, multijasa, musyarakah, mudharabah, qardh, ijarah dan
+ijarah muntahiya bittamlik.
+31. Penataan kembali (restructuring) - Penambahan dana bank.
+Penataan kembali melalui penambahan dana BPRS adalah restrukturisasi
+yang dilakukan dengan cara memberikan tambahan dana kepada nasabah
+agar kegiatan usaha nasabah dapat kembali berjalan dengan baik, yang dapat
+disertai dengan penjadwalan kembali (rescheduling) atau persyaratan
+kembali (reconditioning). Cara penataan kembali dengan penambahan dana
+ini dapat dilakukan untuk akad pembiayaan salam, musyarakah dan
+mudharabah.
+32. Penataan kembali (restructuring) – Konversi akad.
+Penataan kembali melalui konversi akad adalah restrukturisasi yang
+dilakukan dengan cara konversi akad pembiayaan awal menjadi akad
+pembiayaan baru yang berbeda, yang dapat disertai dengan penjadwalan
+kembali (rescheduling) atau persyaratan kembali (reconditioning). Cara
+penataan kembali dengan konversi akad ini dapat dilakukan untuk akad
+pembiayaan murabahah, istishna’, ijarah dan ijarah muntahiya bittamlik.
+
+6.
+
+Metode Restrukturisasi - Frekuensi
+Kolom ini diisi dengan jumlah restrukturisasi pembiayaan yang dilakukan BPRS
+untuk masing-masing fasilitas pembiayaan nasabah.
+
+7.
+
+Jenis Akad
+Kolom ini diisi dengan jenis akad pembiayaan yang dilakukan restrukturisasi,
+sebagai berikut:
+10. Murabahah
+Pembiayaan Murabahah adalah pembiayaan suatu barang dengan
+menegaskan harga belinya kepada pembeli dan pembeli membayarnya
+dengan harga yang lebih sebagai keuntungan yang disepakati.
+
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+5
+
+20. Istishna'
+Pembiayaan Istishna’ adalah pembiayaan suatu barang dalam bentuk
+pemesanan pembuatan barang tertentu dengan kriteria dan persyaratan
+tertentu yang disepakati antara nasabah dan penjual atau pembuat barang.
+30. Salam
+Pembiayaan Salam adalah pembiayaan suatu barang dengan cara pemesanan
+dan pembayaran harga yang dilakukan terlebih dahulu dengan syarat
+tertentu yang disepakati.
+40. Multijasa
+Pembiayaan Multijasa adalah pembiayaan yang diberikan oleh bank kepada
+nasabah dalam memperoleh manfaat atas suatu jasa.
+50. Mudharabah
+Pembiayaan Mudharabah adalah pembiayaan dalam bentuk kerjasama suatu
+usaha antara BPRS yang menyediakan seluruh modal dan nasabah yang
+bertindak selaku pengelola dana dengan membagi keuntungan usaha sesuai
+dengan kesepakatan yang dituangkan dalam akad, sedangkan kerugian
+ditanggung sepenuhnya oleh BPRS kecuali jika nasabah melakukan
+kesalahan yang disengaja, lalai, atau menyalahi perjanjian.
+60. Musyarakah
+Pembiayaan Musyarakah adalah pembiayaan dalam bentuk kerja sama
+antara BPRS dengan nasabah untuk suatu usaha tertentu yang masingmasing pihak memberikan porsi dana dengan ketentuan bahwa keuntungan
+akan dibagi sesuai dengan kesepakatan, sedangkan kerugian ditanggung
+sesuai dengan porsi dana masing-masing.
+70. Qardh
+Pembiayaan Qardh adalah pembiayaan dalam bentuk pinjaman dana kepada
+nasabah dengan ketentuan bahwa nasabah wajib mengembalikan dana yang
+diterimanya pada waktu yang telah disepakati.
+80. Ijarah
+Pembiayaan Ijarah adalah pembiayaan dalam rangka memindahkan hak
+guna atau manfaat dari suatu barang atau jasa berdasarkan transaksi sewa,
+tanpa diikuti dengan pemindahan kepemilikan barang itu sendiri.
+90. Ijarah Muntahiya Bittamlik
+Pembiayaan Ijarah Muntahiya Bittamlik adalah pembiayaan dalam rangka
+memindahkan hak guna atau manfaat dari suatu barang atau jasa
+berdasarkan transaksi sewa dengan opsi pemindahan kepemilikan barang.
+
+8.
+
+Sisa Kewajiban
+Kolom ini diisi dengan jumlah kewajiban nasabah pembiayaan kepada BPRS
+yang masih ada sebelum restrukturisasi dilakukan, sesuai dengan jenis akad
+pembiayaan sebagai berikut:
+
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+6
+
+a.
+b.
+c.
+d.
+e.
+f.
+
+Pembiayaan dengan akad Murabahah dan Istishna' adalah sebesar saldo
+pokok ditambah dengan saldo margin.
+Pembiayaan dengan akad Salam adalah sebesar nilai barang yang harus
+diserahkan nasabah.
+Pembiayaan dengan akad Multijasa adalah sebesar saldo pokok ditambah
+dengan saldo sewa (ujrah).
+Pembiayaan dengan akad Mudharabah dan Musyarakah adalah sebesar
+saldo pokok.
+Pembiayaan dengan akad Qardh adalah sebesar saldo pokok.
+Pembiayaan dengan akad Ijarah dan Ijarah Muntahiya Bittamlik adalah
+sebesar nilai kontrak sewa dikurangi dengan jumlah akumulasi angsuran
+sewa.
+
+9.
+
+Jangka Waktu – Awal
+Kolom ini diisi dengan bulan dan tahun awal pemberian fasilitas pembiayaan
+kepada nasabah yang tercantum dalam akad pembiayaan sebelum dilakukan
+restrukturisasi.
+
+10.
+
+Jangka Waktu – Akhir
+Kolom ini diisi dengan bulan dan tahun jatuh tempo pemberian fasilitas
+pembiayaan kepada nasabah yang tercantum dalam akad pembiayaan sebelum
+dilakukan restrukturisasi.
+
+11.
+
+Kualitas
+Kolom ini diisi dengan kualitas pembiayaan nasabah sebelum dilakukan
+restrukturisasi, yaitu:
+1. Lancar
+2. Kurang Lancar
+3. Diragukan
+4. Macet
+
+12.
+
+Tanggal Restrukturisasi
+Kolom ini diisi dengan tanggal, bulan dan tahun pelaksanaan restrukturisasi
+pembiayaan.
+
+13.
+
+Jenis Akad
+Kolom ini diisi dengan jenis akad pembiayaan setelah dilakukan restrukturisasi
+dengan rincian sebagaimana penjelasan pada angka 7.
+
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+7
+
+14.
+
+Sisa Kewajiban
+Kolom ini diisi dengan jumlah kewajiban nasabah setelah dilakukan
+restrukturisasi sesuai dengan jenis akad sebagaimana penjelasan pada angka 8.
+Sisa kewajiban nasabah pembiayaan yang direstrukturisasi harus sama dengan
+sisa kewajiban nasabah pembiayaan yang dilaporkan dalam Laporan Bulanan
+BPRS.
+
+15.
+
+Jangka Waktu – Awal
+Kolom ini diisi dengan bulan dan tahun awal akad pembiayaan pada saat
+restrukturisasi.
+Dalam hal restrukturisasi dilakukan dengan cara penjadwalan kembali
+(rescheduling), persyaratan kembali (reconditioning) dan penataan kembali
+(restructuring) melalui penambahan dana, maka jangka waktu awal setelah
+restrukturisasi adalah sama dengan jangka waktu awal pembiayaan pertama kali
+sebelum dilakukan restrukturisasi.
+Dalam hal restrukturisasi dilakukan dengan cara penataan kembali
+(restructuring) melalui konversi akad, maka jangka waktu awal adalah jangka
+waktu awal yang tercantum dalam akad pembiayaan yang baru.
+Jangka waktu awal pembiayaan yang direstrukturisasi harus sama dengan jangka
+waktu awal pembiayaan yang dilaporkan dalam Laporan Bulanan BPRS.
+
+16.
+
+Jangka Waktu – Akhir
+Kolom ini diisi dengan bulan dan tahun jatuh tempo pemberian fasilitas
+pembiayaan kepada nasabah yang tercantum dalam akad yang digunakan dalam
+restrukturisasi pembiayaan.
+Jangka waktu akhir pembiayaan yang direstrukturisasi harus sama dengan
+jangka waktu akhir pembiayaan yang dilaporkan dalam Laporan Bulanan BPRS.
+
+17.
+
+Kualitas
+Kolom ini diisi dengan kualitas pembiayaan setelah dilakukan restrukturisasi,
+dengan rincian sebagaimana penjelasan angka 11.
+Kualitas pembiayaan yang direstrukturisasi harus sama dengan kualitas
+pembiayaan yang dilaporkan dalam Laporan Bulanan BPRS.
+
+Lampiran ini merupakan bagian yang tidak terpisahkan dari Surat Edaran Bank
+Indonesia ini.
+
+HALIM ALAMSYAH
+DEPUTI GUBERNUR
+Pedoman Penyusunan Laporan Restrukturisasi Pembiayaan BPRS
+
+8

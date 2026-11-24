@@ -1,0 +1,212 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 5.2 Akad Sewa - Ijarah atas jasa (64-66).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 64 -
+
+V.2. IJARAH ATAS JASA
+A.
+
+Definisi
+Ijarah atas jasa adalah Ijarah dimana obyek Ijarah adalah manfaat yang
+bukan berasal dari aset berwujud.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.107 tentang Akuntansi Ijarah.
+
+Penjelasan
+1.
+
+Transaksi Ijarah atas jasa dikenal dengan istilah pembiayaan multijasa.
+
+2.
+
+Manfaat (jasa) yang bisa di-Ijarah-kan, antara lain, jasa pendidikan,
+jasa kesehatan, dan jasa pariwisata rohani.
+
+3.
+
+Dalam melakukan transaksi multijasa, Bank melakukan akad Ijarah
+dengan pihak pemasok dan kemudian melakukan akad Ijarah lebih
+lanjut dengan nasabah.
+
+4.
+
+Perolehan aset Ijarah atas jasa diamortisasi sesuai dengan jangka
+waktu akad Ijarah Bank dengan pemasok.
+
+5.
+
+Perlakuan akuntansi transaksi multijasa mengikuti akuntansi untuk
+Ijarah dengan skema sewa dan sewa-lanjut.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Perolehan aset Ijarah atas jasa diakui sebagai aset Ijarah pada saat
+perolehan hak atas jasa sebesar biaya yang terjadi.
+
+2.
+
+Pendapatan Ijarah diakui selama masa akad Bank dengan nasabah.
+
+3.
+
+Amortisasi atas perolehan aset Ijarah diakui sebagai beban Ijarah.
+
+4.
+
+Bank wajib membentuk Penyisihan Penghapusan Aset untuk piutang
+multijasa sebesar porsi pokok sewa yang tertunda sesuai dengan
+ketentuan yang diatur dalam PSAK yang terkait.
+
+D2. Penyajian
+1.
+
+Perolehan atas jasa disajikan sebagai bagian aset Ijarah dan disajikan
+terpisah dari aset Ijarah lain.
+
+2.
+
+Amortisasi atas perolehan aset Ijarah disajikan sebagai pos lawan dari
+aset Ijarah.
+
+3. Porsi ...
+
+- 65 -
+
+3.
+
+Porsi pokok atas piutang multijasa yang belum dibayar disajikan
+sebagai piutang sewa.
+
+4.
+
+Porsi ujrah atas pendapatan sewa multijasa yang belum dibayar
+disajikan sebagai pendapatan sewa multijasa yang akan diterima yang
+merupakan bagian dari aset lainnya pada saat nasabah tergolong lancar
+(performing). Sedangkan, apabila nasabah tergolong non-lancar (nonperforming) maka pendapatan sewa multijasa yang akan diterima
+disajikan pada rekening administratif.
+
+5.
+
+Penyisihan Penghapusan Aset atas piutang sewa disajikan sebagai pos
+lawan (contra account) piutang sewa.
+
+6.
+
+Beban amortisasi aset Ijarah disajikan sebagai pengurang pendapatan
+Ijarah pada Laporan Laba Rugi.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat perolehan jasa
+Db. Aset Ijarah.
+Kr. Kas/rekening …
+
+2.
+
+Pada saat pengakuan pendapatan Ijarah pada tanggal laporan
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa multijasa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+
+3.
+
+Pada saat pengakuan amortisasi pada tanggal laporan
+Db. Beban amortisasi.
+Kr. Akumulasi amortisasi.
+
+4.
+
+Pada saat penerimaan sewa dari nasabah
+Dr. Kas/rekening …
+Kr. Piutang sewa (porsi pokok).
+Kr. Piutang pendapatan sewa multijasa (porsi ujrah).
+
+5.
+
+Pada saat terjadi tunggakan pembayaran sewa
+a.
+
+nasabah masih tergolong lancar (performing)
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa multijasa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+
+b.
+
+nasabah tergolong non-lancar (non-performing)
+1)
+
+dilakukan jurnal balik pendapatan sewa
+Db. Pendapatan Ijarah.
+Kr. Piutang pendapatan sewa multijasa (porsi ujrah).
+2) pengakuan ...
+
+- 66 -
+
+2)
+
+pengakuan atas porsi pokok sewa
+Db.
+
+Piutang sewa (porsi pokok).
+
+Kr. Pendapatan Ijarah.
+6.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset atas piutang
+sewa
+Db. Beban Penyisihan Penghapusan Aset–piutang sewa.
+Kr. Penyisihan Penghapusan Aset–piutang sewa.
+
+7.
+
+Pada saat pemulihan Penyisihan Penghapusan Aset atas piutang sewa
+Db. Penyisihan Penghapusan Aset-piutang sewa.
+Kr. Beban Penyisihan Penghapusan Aset–piutang sewa /Keuntungan
+pemulihan nilai–piutang sewa.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Sumber dana yang digunakan dalam pembiayaan Ijarah.
+
+2.
+
+Rincian perolehan atas jasa berdasarkan jenis.
+
+3.
+
+Jumlah piutang cicilan Ijarah yang akan jatuh tempo hingga dua tahun
+terakhir.
+
+4.
+
+Transaksi dan saldo dengan pihak-pihak yang berelasi.

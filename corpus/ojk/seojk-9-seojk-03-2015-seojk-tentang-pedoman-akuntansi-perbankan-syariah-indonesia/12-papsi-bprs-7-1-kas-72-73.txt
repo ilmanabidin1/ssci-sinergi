@@ -1,0 +1,105 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 7.1 Kas (72-73).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 72 -
+
+BAGIAN VII
+
+KAS
+
+VII.1. KAS
+A.
+
+Definisi
+Kas adalah mata uang kertas dan logam baik Rupiah maupun valuta asing
+yang masih berlaku sebagai alat pembayaran yang sah.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+1.
+
+Dalam pengertian kas termasuk kas besar, kas kecil, kas dalam mesin
+Anjungan Tunai Mandiri dan kas dalam perjalanan.
+
+2.
+
+Mata uang rupiah yang telah dicabut dan ditarik dari peredaran tidak
+berlaku sebagai alat pembayaran yang sah sebagaimana ditetapkan
+oleh ketentuan yang berlaku. Mata uang dimaksud tidak termasuk
+dalam pengertian kas dan disajikan dalam aset lain-lain.
+
+3.
+
+Tidak termasuk dalam pengertian kas adalah emas batangan, uang
+logam
+
+yang
+
+diterbitkan
+
+untuk
+
+memperingati
+
+peristiwa
+
+nasional
+
+(commemorative coins/notes) dan mata uang emas.
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+Transaksi kas diakui sebesar nilai nominal.
+D2. Penyajian
+Kas disajikan pada urutan pertama dalam aset.
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat penerimaan setoran:
+Db. Kas.
+Kr. Rekening yang dituju.
+
+2.
+
+Pada saat penarikan setoran:
+Db. Rekening yang ditarik.
+Kr. Kas.
+
+3.
+
+Pada saat mata uang rupiah dicabut dan ditarik dari peredaran:
+Db. Aset ...
+
+- 73 -
+
+Db. Aset lain-lain.
+Kr. Kas.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian jumlah kas.
+
+2.
+
+Jumlah kas pada mesin ATM.
+
+VII.2. KAS...

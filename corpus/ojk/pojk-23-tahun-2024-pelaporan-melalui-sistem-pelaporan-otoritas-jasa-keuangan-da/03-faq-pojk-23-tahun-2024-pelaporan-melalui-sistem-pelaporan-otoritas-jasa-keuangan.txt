@@ -1,0 +1,330 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 23 Tahun 2024
+Tentang: Pelaporan Melalui Sistem Pelaporan Otoritas Jasa Keuangan dan Transparansi Kondisi Keuangan Bagi Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah
+Berkas: FAQ POJK 23 Tahun 2024 Pelaporan Melalui Sistem Pelaporan Otoritas Jasa Keuangan dan Transparansi Kondisi Keuangan Bagi BPR dan BPRS.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/POJK-23-Tahun-2024-Pelaporan-Melalui-Sistem-Pelaporan-OJK-dan-Transparansi-Kondisi-Keuangan-Bagi-BPR-dan-BPRS.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/FREQUENTLY ASKED QUESTIONS (FAQ)
+PERATURAN OTORITAS JASA KEUANGAN
+NOMOR 23 TAHUN 2024
+TENTANG
+PELAPORAN MELALUI SISTEM PELAPORAN OTORITAS JASA
+KEUANGAN DAN TRANSPARANSI KONDISI KEUANGAN BAGI
+BANK PEREKONOMIAN RAKYAT DAN
+BANK PEREKONOMIAN RAKYAT SYARIAH
+1.
+
+Apa latar belakang penerbitan POJK ini?
+Penyusunan POJK Pelaporan dan TKK BPR dan BPR Syariah dilatarbelakangi
+oleh adanya kebutuhan untuk meningkatkan pengawasan bank perekonomian
+rakyat (BPR) dan bank perekonomian rakyat syariah (BPR Syariah) berbasis
+teknologi, sehingga diperlukan laporan yang memuat data dan informasi
+kondisi keuangan serta kegiatan usaha BPR dan BPR Syariah secara lengkap,
+akurat, kini, dan utuh serta tepat waktu sesuai dengan ketentuan peraturan
+perundang-undangan. Selain itu, POJK disusun untuk mendukung pelaporan
+BPR dan BPR Syariah yang efisien, cepat, dan terdigitalisasi khususnya untuk
+laporan yang masih disampaikan secara luring.
+
+2.
+
+Apa saja laporan yang menjadi cakupan berdasarkan POJK ini?
+POJK ini mencakup Laporan yang disampaikan oleh BPR dan BPR Syariah
+kepada Otoritas Jasa Keuangan melalui Aplikasi Pelaporan Online OJK (APOLO)
+baik Laporan yang disampaikan secara berkala maupun pada kondisi
+tertentu/insidental sesuai ketentuan peraturan perundang-undangan.
+
+3.
+
+Apa saja cakupan Laporan Berkala sesuai POJK ini?
+Laporan Berkala mencakup seluruh Laporan yang disampaikan oleh BPR dan
+BPR Syariah kepada Otoritas Jasa Keuangan secara rutin setiap periode
+tertentu meliputi Laporan Berkala bulanan, triwulanan, semesteran, dan
+tahunan.
+
+4.
+
+Apa saja cakupan Laporan Insidental sesuai POJK ini?
+Laporan Insidental mencakup seluruh Laporan yang disampaikan oleh BPR
+dan BPR Syariah kepada Otoritas Jasa Keuangan pada kondisi tertentu.
+
+5.
+
+Kapan BPR dan BPR Syariah pertama kali menyampaikan Laporan sesuai
+dengan POJK ini?
+BPR dan BPR Syariah menyampaikan Laporan sesuai dengan POJK ini, mulai:
+a. Laporan posisi bulan Desember 2024, untuk Laporan Berkala; dan
+b. tanggal 1 Desember 2024, untuk Laporan Insidental.
+
+6.
+
+Kapan batas waktu penyampaian masing-masing Laporan?
+Batas waktu penyampaian Laporan berdasarkan POJK sebagai berikut:
+a. untuk Laporan Berkala yang terdiri atas bulanan, triwulanan, semesteran
+dan tahunan diatur berdasarkan periode yang berbeda sebagaimana POJK
+Pelaporan dan TKK BPR dan BPR Syariah;
+b. untuk Laporan Insidental sesuai dengan ketentuan peraturan perundangundangan atau sesuai dengan batas waktu yang ditentukan dalam
+Page 1 of 6
+
+https://jdih.ojk.go.id
+
+pemberitahuan Otoritas Jasa Keuangan untuk Laporan Insidental yang
+merupakan
+tindak lanjut
+pengawasan
+dan/atau
+pemeriksaan
+berdasarkan permintaan Otoritas Jasa Keuangan.
+7.
+
+Laporan apa saja yang termasuk dalam Laporan Berkala triwulanan periode
+I dan periode II yang wajib disampaikan BPR dan BPR Syariah?
+Laporan Berkala triwulanan yang wajib disampaikan BPR dan BPR Syariah
+antara lain:
+a. Periode I, Laporan disampaikan paling lambat tanggal 10 pada bulan
+berikutnya setelah akhir bulan Laporan Berkala triwulanan yang
+bersangkutan sebagai bagian dari Laporan Berkala bulanan pada bulan
+bersangkutan yaitu Laporan Keuangan Publikasi; dan
+b. Periode II, Laporan disampaikan paling lambat tanggal 15 pada bulan
+berikutnya setelah akhir bulan Laporan Berkala triwulanan yang
+bersangkutan, antara lain Laporan Perkembangan Penyelenggaraan
+Layanan Keuangan Tanpa Kantor Dalam Rangka Keuangan Inklusif
+sebagaimana Peraturan Otoritas Jasa Keuangan mengenai layanan
+keuangan tanpa kantor dalam rangka keuangan inklusif.
+Ketentuan lebih lanjut mengenai jenis Laporan sesuai periodisasi akan diatur
+dalam Surat Edaran Otoritas Jasa Keuangan.
+
+8.
+
+Laporan apa saja yang termasuk dalam Laporan Berkala tahunan Periode I,
+II, III, dan IV yang wajib disampaikan BPR dan BPR Syariah?
+Laporan Berkala tahunan dikategorikan berdasarkan batas waktu
+penyampaian laporan sebagaimana diatur dalam ketentuan peraturan
+perundang-undangan. Sebagai contoh Laporan Berkala tahunan yang wajib
+disampaikan BPR dan BPR Syariah yaitu:
+a. periode I, Laporan disampaikan paling lambat pada tanggal 15 Desember
+sebelum tahun rencana bisnis dimulai, antara lain laporan rencana bisnis
+sebagaimana POJK Nomor 15/POJK.03/2021 tentang rencana bisnis BPR
+dan BPRS;
+b. periode II, Laporan disampaikan paling lambat pada tanggal 30 April tahun
+berikutnya untuk posisi akhir bulan Desember, antara lain Laporan
+Tahunan sebagaimana diatur dalam POJK ini;
+c. periode III, Laporan disampaikan paling lama 10 (sepuluh) hari kerja
+setelah perjanjian kerja antara BPR atau BPR Syariah dan kantor akuntan
+publik ditandatangani, antara lain laporan penunjukan akuntan publik
+dan/atau kantor akuntan publik sebagaimana POJK Nomor 9 Tahun 2023
+tentang penggunaan jasa akuntan publik dan kantor akuntan publik dalam
+kegiatan jasa keuangan; dan
+d. periode IV, Laporan disampaikan paling lama 6 (enam) bulan setelah tahun
+buku berakhir, antara lain laporan realisasi penggunaan penggunaan jasa
+akuntan publik dan/atau kantor akuntan publik sebagaimana POJK
+Nomor 9 Tahun 2023 tentang penggunaan jasa akuntan publik dan kantor
+akuntan publik dalam kegiatan jasa keuangan.
+Ketentuan lebih lanjut mengenai jenis Laporan sesuai periodisasi akan diatur
+dalam Surat Edaran Otoritas Jasa Keuangan.
+
+Page 2 of 6
+
+https://jdih.ojk.go.id
+
+9.
+
+Apakah BPR dan BPR Syariah wajib mengumumkan Laporan Keuangan
+Publikasi (LKP) pada situs web masing-masing BPR dan BPR Syariah?
+Sesuai POJK, BPR dan BPR Syariah wajib mengumumkan LKP posisi akhir
+bulan Maret, bulan Juni, bulan September, dan bulan Desember pada situs
+web BPR dan BPR Syariah.
+Selain itu, bagi BPR dan BPR Syariah yang mempunyai total aset:
+a. paling sedikit Rp10.000.000.000,00 (sepuluh miliar rupiah), pengumuman
+LKP juga dilakukan dalam:
+1) surat kabar harian lokal atau media pengumuman di kantor yang
+mudah dibaca oleh publik untuk posisi akhir bulan Maret, bulan Juni,
+dan bulan September; dan
+2) surat kabar harian lokal dan media pengumuman di kantor yang
+mudah dibaca oleh publik untuk posisi akhir bulan Desember.
+b. kurang dari Rp10.000.000.000,00 (sepuluh miliar rupiah), pengumuman
+LKP untuk posisi akhir bulan Maret, bulan Juni, bulan September, dan
+bulan Desember juga dilakukan dalam:
+1) surat kabar harian lokal; atau
+2) media pengumuman di kantor yang mudah dibaca oleh publik.
+
+10. Apakah BPR dan BPR Syariah wajib menyampaikan bukti pengumuman
+atas publikasi Laporan Keuangan Publikasi (LKP)?
+BPR dan BPR Syariah wajib menyampaikan bukti pengumuman LKP
+sebagaimana butir 9. Bukti pengumuman LKP disampaikan sebagai bagian dari
+Laporan Berkala bulanan pada periode terdekat melalui APOLO.
+Sebagai contoh, BPR X dengan total aset sebanyak Rp9.000.000.000,00
+(sembilan miliar rupiah) telah mengumumkan LKP posisi bulan Desember 2024
+pada:
+a. tanggal 5 Maret 2025 pada situs web BPR X; dan
+b. tanggal 15 Maret 2025 pada papan pengumuman di kantor BPR X.
+BPR X menyampaikan bukti pengumuman LKP berupa tangkapan layar
+(screenshot) pada situs web BPR dan foto papan pengumuman yang memuat
+LKP sebagai bagian dari Laporan Berkala bulanan posisi Maret 2025.
+11. Apakah BPR dan BPR Syariah wajib menyampaikan bukti pengumuman
+atas publikasi Laporan Tahunan?
+BPR dan BPR Syariah wajib menyampaikan bukti pengumuman Laporan
+Tahunan sebagai bagian dari Laporan Berkala bulanan periode terdekat.
+Sebagai contoh, BPR Syariah D telah mengumumkan Laporan Tahunan tahun
+buku 2024 pada situs web tanggal 27 Maret 2025. BPR Syariah D wajib
+menyampaikan bukti pengumuman Laporan Tahunan sebagai bagian dari
+Laporan Berkala bulanan posisi bulan Maret 2025.
+12. Bagaimana
+kewajiban
+pelaporan
+dan
+pengumuman
+Laporan
+Tahunan/Laporan Keuangan Publikasi (LKP) bagi BPR atau BPR Syariah
+yang mengalami keadaan kahar?
+Apabila BPR dan BPR Syariah mengalami keadaan kahar sehingga tidak dapat
+melaporkan dan/atau mengumumkan Laporan Tahunan/LKP sampai dengan
+batas waktu penyampaian laporan/pengumuman, BPR dan BPR Syariah
+menyampaikan pemberitahuan tertulis kepada OJK untuk memperoleh
+penundaan batas waktu penyampaian laporan/pengumuman. Bagi BPR dan
+Page 3 of 6
+
+https://jdih.ojk.go.id
+
+BPR Syariah yang memperoleh penundaan batas waktu dapat dikecualikan
+dari pengenaan sanksi keterlambatan penyampaian dan/atau pengumuman
+Laporan Tahunan/LKP sesuai dengan POJK ini.
+Yang dimaksud dengan “keadaan kahar” sesuai POJK ini adalah keadaan
+bencana yang tidak dapat dihindari, terdiri atas:
+a. bencana alam;
+b. bencana nonalam; dan/atau
+c. bencana sosial,
+yang mengganggu kegiatan operasional BPR dan BPR Syariah, yang dibenarkan
+oleh pejabat instansi yang berwenang dari daerah setempat dan/atau
+diverifikasi kebenarannya oleh OJK.
+13. Bagaimana pengenaan sanksi bagi pelanggaran pelaporan yang ditemukan
+setelah POJK berlaku atas laporan yang telah disampaikan sebelum POJK
+berlaku?
+Pengenaan sanksi bagi pelanggaran pelaporan yang ditemukan setelah POJK
+ini berlaku atas laporan yang telah disampaikan sebelum POJK ini berlaku
+mengacu pada masing-masing ketentuan peraturan perundang-undangan.
+Sebagai contoh, BPR menyampaikan Laporan Berkala bulanan posisi Oktober
+2024 sebagaimana POJK Nomor 13/POJK.03/2019 tentang Pelaporan Bank
+Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah Melalui Sistem
+Pelaporan Otoritas Jasa Keuangan pada tanggal 9 November 2024. Dalam hal
+pengawas menemukan kesalahan dalam laporan tersebut berdasarkan hasil
+pemeriksaan pada tanggal 10 Januari 2025, sanksi atas kesalahan dimaksud
+dikenakan berdasarkan POJK Nomor 13/POJK.03/2019.
+14. Bagaimana penerapan sanksi apabila BPR dan BPR Syariah melakukan
+pelanggaran tidak menyampaikan laporan berkala dan insidental sesuai
+batas waktu sesuai ketentuan dan/atau terdapat kesalahan data dan/atau
+informasi dalam penyampaian laporan yang dilakukan setelah POJK
+Pelaporan dan TKK BPR dan BPR Syariah berlaku?
+Pengenaan sanksi atas pelanggaran dimaksud dilakukan berdasarkan POJK
+Pelaporan dan TKK BPR dan BPR Syariah, mengingat sesuai dengan POJK ini
+telah dilakukan pencabutan ketentuan mengenai sanksi keterlambatan
+dan/atau tidak menyampaikan Laporan, sanksi kesalahan dan/atau
+ketidaksesuaian Laporan pada masing-masing ketentuan peraturan
+perundang-undangan.
+Berikut ini sanksi atas keterlambatan dan/atau tidak menyampaikan laporan
+serta sanksi atas kesalahan dan/atau ketidaksesuaian laporan BPR dan BPR
+Syariah yang tidak berlaku setelah POJK Pelaporan dan TKK BPR dan BPR
+Syariah berlaku, antara lain :
+a.
+Sanksi atas keterlambatan dan/atau tidak menyampaikan Laporan BPR
+dan BPR Syariah
+1) Peraturan Otoritas Jasa Keuangan Nomor 7 Tahun 2024 mengenai
+Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah:
+• Pasal 26 ayat (5) untuk pelanggaran Pasal 17 ayat (2), Pasal 18 ayat
+(3), dan Pasal 22 ayat (1);
+• Pasal 87 ayat (5) untuk pelanggaran Pasal 61 ayat (3), ayat (4), dan
+ayat (5);
+• Pasal 97 ayat (4) untuk pelanggaran Pasal 90 ayat (2), Pasal 95 ayat
+(2), dan ayat (3);
+Page 4 of 6
+
+https://jdih.ojk.go.id
+
+• Pasal 137 ayat (5) untuk pelanggaran Pasal 132 ayat (5);
+• Pasal 140 ayat (4) untuk pelanggaran Pasal 139 ayat (3) dan ayat
+(4).
+2) Peraturan Otoritas Jasa Keuangan Nomor 3/POJK.03/2022 mengenai
+Penilaian Tingkat Kesehatan Bank Perkreditan Rakyat dan Bank
+Pembiayaan Rakyat Syariah
+• Pasal 3 ayat (7) sampai dengan ayat (9) untuk pelanggaran Pasal
+3 ayat (5);
+• Pasal 21 ayat (1) sampai dengan ayat (3) untuk pelanggaran Pasal
+17 ayat (2), Pasal 18 ayat (2), ayat (3), dan ayat (4).
+3) Pasal 24 ayat (1) untuk pelanggaran Pasal 19 ayat (1), Pasal 20 ayat
+(2), dan Pasal 22 ayat (2) Peraturan Otoritas Jasa Keuangan Nomor
+15/POJK.03/2021 tentang Rencana Bisnis Bank Perkreditan Rakyat
+dan Bank Pembiayaan Rakyat Syariah
+4) Peraturan Otoritas Jasa Keuangan Nomor 23 Tahun 2022 tentang
+Batas Maksimum Pemberian Kredit Bank Perkreditan Rakyat dan
+Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah
+• Pasal 17 untuk pelanggaran Pasal 15 ayat (2), ayat (3), dan ayat
+(4);
+• Pasal 20 untuk pelanggaran Pasal 19 ayat (2).
+5) Peraturan Otoritas Jasa Keuangan Nomor 25/POJK.03/2021 tentang
+Penyelenggaraan Produk Bank Perkreditan Rakyat dan Bank
+Pembiayaan Rakyat Syariah
+• Pasal 16 ayat (4) untuk pelanggaran Pasal 7 ayat (1) dan Pasal 15
+ayat (1);
+• Pasal 16 ayat (1) sampai dengan ayat (3) untuk pelanggaran Pasal
+8 ayat (3);
+• Pasal 19 ayat (4) untuk pelanggaran Pasal 19 ayat (2);
+• Pasal 20 ayat (5) sampai dengan ayat (7) untuk pelanggaran Pasal
+20 ayat (3) huruf b.
+6) Pasal 31 ayat (1) untuk pelanggaran Pasal 22 ayat (2), Pasal 25 ayat
+(2), Pasal 26 ayat (3), dan Pasal 30 ayat (1) Peraturan Otoritas Jasa
+Keuangan Nomor 27/POJK.03/2016 tentang Penilaian Kemampuan
+dan Kepatutan bagi Pihak Utama Lembaga Jasa Keuangan, bagi BPR
+dan BPR Syariah
+7) Peraturan Otoritas Jasa Keuangan Nomor 28 Tahun 2023 tentang
+Penetapan Status dan Tindak Lanjut Pengawasan Bank Perekonomian
+Rakyat dan Bank Perekonomian Rakyat Syariah
+• Pasal 15 untuk pelanggaran Pasal 3 ayat (2), Pasal 4 ayat (1), Pasal
+8 ayat (1), dan Pasal 9 ayat (3);
+• Pasal 23 untuk pelanggaran Pasal 21 ayat (4).
+8) Pasal 19 ayat (2) untuk pelanggaran Pasal 17 ayat (4) Peraturan
+Otoritas Jasa Keuangan Nomor 64/POJK.03/2016 tentang
+Perubahan Kegiatan Usaha Bank Konvensional menjadi Bank
+Syariah, bagi BPR Syariah.
+9) Peraturan Otoritas Jasa Keuangan Nomor 1/POJK.03/2022 tentang
+Layanan Keuangan Tanpa Kantor dalam rangka Keuangan Inklusif
+• Pasal 34 ayat (2) dan ayat (3) untuk pelanggaran Pasal 34 ayat (1);
+• Pasal 37 ayat (4) untuk pelanggaran Pasal 35 ayat (1)
+bagi BPR dan BPR Syariah
+10) Peraturan Otoritas Jasa Keuangan Nomor 75/POJK.03/2016 tentang
+Standar Penyelenggaraan Teknologi Informasi bagi Bank Perkreditan
+Rakyat dan Bank Pembiayaan Rakyat Syariah
+Page 5 of 6
+
+https://jdih.ojk.go.id
+
+b.
+
+• Pasal 27 untuk pelanggaran Pasal 18 ayat (2) dan Pasal 19 ayat (3);
+• Pasal 28 ayat (1) untuk pelanggaran Pasal 23 ayat (1), Pasal 24,
+Pasal 25, dan Pasal 26 ayat (2);
+• Pasal 29 untuk pelanggaran Pasal 23 ayat (1), ayat (3), Pasal 24,
+Pasal 25, dan Pasal 26 ayat (2).
+11) Pasal 20 ayat (3) untuk pelanggaran Pasal 12 ayat (6) dan Pasal 15
+ayat (3) Peraturan Otoritas Jasa Keuangan Nomor 34/POJK.03/2018
+tentang Penilaian Kembali bagi Pihak Utama Lembaga Jasa Keuangan.
+Sanksi atas kesalahan dan/atau ketidaksesuaian Laporan BPR dan BPR
+Syariah.
+1) Pasal 25 ayat (1) sampai dengan ayat (3) untuk pelanggaran Pasal 20
+ayat (2) Peraturan Otoritas Jasa Keuangan Nomor 15/POJK.03/2021
+tentang Rencana Bisnis Bank Perkreditan Rakyat dan Bank
+Pembiayaan Rakyat Syariah
+2) Peraturan Otoritas Jasa Keuangan Nomor 1 Tahun 2024 tentang
+Kualitas Aset Bank Perekonomian Rakyat
+• Pasal 18 ayat (1) sampai dengan ayat (3) untuk pelanggaran Pasal
+6 ayat (3);
+• Pasal 47 untuk pelanggaran Pasal 46 ayat (3).
+
+15. Kapan Peraturan Otoritas Jasa Keuangan (POJK) ini mulai berlaku?
+Peraturan Otoritas Jasa Keuangan (POJK) ini mulai berlaku pada tanggal 1
+Desember 2024.
+
+Page 6 of 6
+
+https://jdih.ojk.go.id

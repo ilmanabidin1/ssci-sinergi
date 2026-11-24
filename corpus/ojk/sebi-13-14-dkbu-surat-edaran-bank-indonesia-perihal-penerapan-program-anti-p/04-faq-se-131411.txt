@@ -1,0 +1,215 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/14/DKBU
+Tentang: Surat Edaran Bank Indonesia perihal Penerapan Program Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme bagi Bank Perkreditan Rakyat dan Bank Perkreditan Rakyat Syariah
+Berkas: faq_se_131411.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-perihal-Penerapan-Program-Anti-Pencucian-Uang-dan-Pencegahan-Pendanaan-Terorisme-bagi-BPR-dan-BPRS.aspx
+
+---
+
+FREQUENTLY ASKED QUESTIONS (FAQs)
+Se Ekstern No.13/14/Dkbu/2011 Tentang Penerapan Program Anti
+Pencucian Uang Dan Pencegahan Pendanaan Terorisme
+Bagi Bank Perkreditn Rakyat Dan Bank Pembiayaan Rakyat Syariah
+
+1. Apa latar belakang penerbitan Surat Edaran (SE) ini?
+SE ini diterbitkan sebagai aturan pelaksanaan Penerapan Program Anti Pencucian Uang dan
+Pencegahan Pendanaan Terorisme bagi Bank Perkreditan Rakyat dan Bank Pembiayaan
+Rakyat Syariah (Pedoman APU dan PPT) dan merupakan tindak lanjut atas penerbitan PBI
+No.12/20/PBI/2010 tanggal 4 Oktober 2010 tentang Penerapan Program Anti Pencucian
+Uang dan Pencegahan Pendanaan Terorisme Bagi Bank Perkreditan Rakyat dan Bank
+Pembiayaan Rakyat Syariah. Pedoman APU dan PPT ini merupakan acuan standar minimum
+yang wajib dipenuhi oleh BPR dan BPRS dalam menyusun Pedoman Pelaksanaan Program
+APU dan PPT serta mekanisme penilaian dalam rangka penerapan Program APU dan PPT.
+Mengingat adanya beberapa penyesuaian yang dilakukan terhadap ketentuan sebelumnya,
+yaitu PBI No.5/23/PBI/2003 tanggal 23 Oktober 2003 Penerapan Prinsip Mengenal Nasabah
+(Know Your Customer) bagi Bank Perkreditan Rakyat dan dengan mengacu pada standar
+internasional yaitu 40 + 9 Financial Action Task Force on Money Laundering (FATF)
+
+Recommendation, serta memperhatikan best practices pengaturan APU dan PPT di negara
+lain, sehingga dibutuhkan pedoman yang lebih komprehensif sebagai upaya untuk
+mendukung pencegahan tindak pidana pencucian uang dan pendanaan terorisme.
+BPR dan BPRS dpat menyusun dan mengembangkan Pedoman Pelaksanaan Program APU
+dan PPT sesuai dengan kebutuhan dan kompleksitas operasional usahanya dengan tetap
+mengacu pada pedoman standar pelaksanaan program APU dan PPT.
+2. Apa pokok-pokok pengaturan dalam SE ini?
+SE ini memuat mengenai Pedoman Standar Pelaksanaan Program APU dan PPT, penilaian
+penerapan program APU dan PPT dan pengenaan sanksi.
+
+3. Pokok-pokok apa saja yang diatur dalam Pedoman Standar Pelaksanaan
+Program APU dan PPT?
+Pedoman Standar Pelaksanaan Program APU dan PPT memuat pokok-pokok sebagai
+berikut:
+a.
+
+Manajemen;
+
+b.
+
+Kebijakan CDD (Customer Due Diligence) dan EDD (Enhanced Due Diligence);
+
+c.
+
+Pengelompokan Nasabah menggunakan pendekatan berdasarkan risiko (Risk Based
+Approach);
+
+d.
+
+Prosedur identifikasi, verifikasi dan pemantauan nasabah (Customer Due Dilligence);
+
+e.
+
+Penatausahaan dokumen dan pelaporan;
+
+f.
+
+Pemindahan dana;
+
+g.
+
+Penutupan hubungan dan penolakan transaksi;
+
+h.
+
+Beneficial Owner;
+
+i.
+
+Politically Exposed Person (PEP) dan area berisiko tinggi;
+
+j.
+
+CDD yang lebih sederhana;
+
+k.
+
+CDD oleh pihak ketiga;
+
+l.
+
+Pengendalian intern;
+
+m. Sistem pencatatan; dan
+n.
+
+Sumber Daya Manusia dan pelatihan karyawan.
+
+4. Kapan SE ini berlaku?
+SE ini berlaku sejak tanggal ditetapkan, yaitu 12 Mei 2011.
+5. Kapan Pedoman Pelaksanaan Program APU dan PPT wajib disampaikan kepada
+Bank Indonesia?
+BPR dan BPRS wajib menyampaikan Pedoman Pelaksanaan Program APU dan PPT kepada
+Bank Indonesia paling lambat 1 Desember 2011.
+Sedangkan perubahan Pedoman Pelaksanaan Program APU dan PPT disampaikan kepada
+Bank Indonesia paling lambat 30 hari sejak perubahan tersebut kepada Bank Indonesia.
+
+6. Apa saja yang wajib dilakukan BPR dan BPRS dalam hal penetapan kebijakan
+Risk Based Approach (RBA)?
+Bank wajib melakukan:
+a.
+
+Pengelompokan Nasabah berdasarkan tingkat risiko terhadap kemungkinan terjadinya
+pencucian uang atau pendanaan terorisme. Selanjutnya BPR dan BPRS harus
+mendokumentasikan dan memantau secara
+
+berkesinambungan pengelompokan
+
+tersebut.
+b.
+
+Penetapan profil risiko Nasabah menggunakan pendekatan berdasarkan risiko.
+
+7. Dalam rangka meyakini kebenaran identitas calon Nasabah, apa saja yang harus
+dilakukan oleh Bank?
+Bank wajib melakukan verifikasi dengan:
+a.
+
+Pertemuan langsung (face to face) dengan calon Nasabah pada awal melakukan
+hubungan usaha.
+
+b.
+
+Melakukan wawancara dengan calon Nasabah apabila diperlukan.
+
+c.
+
+Mencocokan kesesuaian profil calon Nasabah dengan foto diri yang tercantum dalam
+kartu identitas.
+
+d.
+
+Meminta kepada calon Nasabah untuk memberikan lebih dari satu dokumen identitas
+yang dikeluarkan oleh pihak yang berwenang, apabila timbul keraguan terhadap kartu
+identitas yang ada.
+
+e.
+
+Menatausahakan salinan dokumen kartu identitas setelah dilakukan pencocokan
+dengan dokumen asli yang sah.
+
+f.
+
+Melakukan pengecekan silang untuk memastikan adanya konsistensi dari berbagai
+informasi yang disampaikan oleh calon Nasabah.
+
+g.
+
+Memastikan adanya kemungkinan hal-hal yang tidak wajar atau mencurigakan.
+
+8. CDD yang lebih sederhana dapat dilakukan terhadap nasabah dengan kriteria
+seperti apa?
+CDD yang lebih sederhana terhadap calon Nasabah atau transaksi yang tingkat risiko
+terjadinya pencucian uang atau pendanaan terorisme tergolong rendah dan memenuhi
+kriteria sebagai berikut:
+a.
+
+tujuan pembukaan rekening untuk pembayaran gaji;
+
+b.
+
+rekening berupa tabungan wajib terkait dengan pemberian kredit/ pembiayaan dari
+BPR/BPRS yang sama;
+
+c.
+
+calon Nasabah berupa perusahaan publik yang tunduk pada peraturan tentang
+kewajiban untuk mengungkapkan kinerjanya sehinga informasi tentang identitas
+perusahaan dan Beneficial Owner dari Nasabah perusahaan tersebut dapat diakses
+oleh masyarakat; atau
+
+d.
+
+nilai transaksi awal pembukaan rekening dibawah Rp1.000.000,00.
+
+9. Dari mana saja daftar mengenai teroris dapat diperoleh?
+a.
+
+website PBB: http://www.un.org/sc/committees/1267/consolist.shtml;
+
+b.
+
+sumber lainnya yang lazim digunakan oleh perbankan dan merupakan data publik
+antara lain The Office of Foreign Assets Controls List (OFAC List) dengan alamat situs
+internet http://www.treas.gov/offices/enforcement/ofac/index.shtml; atau
+
+c.
+
+pihak berwenang, seperti informasi dari PPATK atau Kepolisian.
+
+10. Aspek apa saja yang dinilai dalam penerapan program APU dan PPT?
+Penilaian atas penerapan program APU dan PPT mecakup 4 (empat) aspek utama yaitu:
+a.
+
+Pengawasan aktif Direksi dan Dewan Komisaris
+
+b.
+
+Kebijakan dan prosedur
+
+c.
+
+Pengendalian intern
+
+d.
+
+SDM dan pelatihan

@@ -1,0 +1,229 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 3/SEOJK.03/2023
+Tentang: Laporan Bulanan Bank Pembiayaan Rakyat Syariah
+Berkas: RINGKASAN SEOJK 3 - 03 - 2023.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Laporan-Bulanan-Bank-Pembiayaan-Rakyat-Syariah-2023.aspx
+
+---
+
+RINGKASAN
+SURAT EDARAN OTORITAS JASA KEUANGAN
+NOMOR 3/SEOJK.03/2023
+TENTANG
+LAPORAN BULANAN BANK PEMBIAYAAN RAKYAT SYARIAH
+(SEOJK LAPORAN BULANAN BPRS)
+
+1.
+
+SEOJK Laporan Bulanan BPRS merupakan ketentuan pelaksanaan dari POJK
+Nomor 13/POJK.03/2019 tentang Pelaporan Bank Perkreditan Rakyat dan
+Bank Pembiayaan Rakyat Syariah Melalui Sistem Pelaporan Otoritas Jasa
+Keuangan, sebagai pedoman bagi BPRS untuk menyusun Laporan Bulanan
+BPRS yang disampaikan melalui Sistem Pelaporan Otoritas Jasa Keuangan.
+
+2.
+
+SEOJK
+
+ini
+
+merupakan
+
+ketentuan
+
+penyempurnaan
+
+dari
+
+SEOJK
+
+Nomor 18/SEOJK.03/2019 tentang Laporan Bulanan Bank Pembiayaan
+Rakyat Syariah (SEOJK Laporan Bulanan BPRS 2019).
+3.
+
+Latar belakang penyempurnaan pengaturan mengenai Laporan Bulanan BPRS
+dalam SEOJK ini, yaitu:
+a.
+
+kewajiban BPRS untuk menyampaikan laporan terkait kelembagaan
+BPRS secara daring melalui Sistem Pelaporan Otoritas Jasa Keuangan
+sesuai dengan POJK Nomor 26 Tahun 2022 tentang Bank Pembiayaan
+Rakyat Syariah;
+
+b.
+
+kebutuhan pengawasan terkait data dan informasi BPRS mengenai
+penyediaan dana dalam rangka penanggulangan potensi dan/atau
+permasalahan likuiditas, penerapan program anti pencucian uang dan
+pencegahan pendanaan terorisme, serta realisasi kerja sama BPRS
+dengan Penyelenggara Layanan Pendanaan Bersama Berbasis Teknologi
+Informasi/Fintech Peer-to-Peer Lending (LPBBTI/Fintech P2PL);
+
+c.
+
+penyelarasan pengaturan dengan SEOJK Nomor 3/SEOJK.03/2021
+tentang Pelaporan dan Permintaan Informasi Debitur Melalui Sistem
+Layanan Informasi Keuangan; dan
+
+d.
+
+perubahan lain, antara lain definisi usaha mikro, kecil, dan menengah
+sesuai
+
+ketentuan
+
+peraturan
+
+perundang-undangan
+
+terkini,
+
+serta
+
+penyelarasan pengaturan dengan SEOJK Nomor 11/SEOJK.03/2022
+tentang Penilaian Tingkat Kesehatan Bank Perkreditan Rakyat dan Bank
+
+-2-
+
+Pembiayaan
+
+Rakyat Syariah
+
+berupa penyesuaian
+
+rasio
+
+keuangan
+
+triwulanan.
+4.
+
+Pokok penyempurnaan pengaturan dalam SEOJK ini terhadap SEOJK Laporan
+Bulanan BPRS 2019, sebagai berikut:
+a.
+
+Perubahan pada form existing:
+1)
+
+2)
+
+Laporan per Kantor:
+a)
+
+Form 01.00 – Data Kantor BPRS;
+
+b)
+
+Form 05.00 – Daftar Penempatan Pada Bank Lain;
+
+c)
+
+Form 06.00 – Daftar Piutang Murabahah;
+
+d)
+
+Form 07.00 – Daftar Piutang Istishna;
+
+e)
+
+Form 08.00 – Daftar Piutang Multijasa;
+
+f)
+
+Form 09.00 – Daftar Piutang Qardh;
+
+g)
+
+Form 10.00 – Daftar Pembiayaan Bagi Hasil;
+
+h)
+
+Form 11.00 – Daftar Pembiayaan Sewa;
+
+i)
+
+Form 24.00 – Daftar Liabilitas Kepada Bank Lain; dan
+
+j)
+
+Form 30.00 – Daftar Penerusan Dana (Channeling).
+
+Laporan Gabungan:
+a)
+
+Form 01.01 – Informasi Pokok BPRS;
+
+b)
+
+Form 01.03 – Data Anggota Direksi, Anggota Dewan Komisaris,
+dan Anggota Dewan Pengawas Syariah BPRS;
+
+b.
+
+c)
+
+Form 01.04 – Data Organ Pelaksana BPRS;
+
+d)
+
+Form 01.05 – Data Pihak Terkait Lainnya; dan
+
+e)
+
+Form 06.00 – Rasio Keuangan Triwulanan.
+
+Penambahan form baru:
+1)
+
+Laporan per Kantor:
+a)
+
+Form 01.01 – Data Kantor Kas dan Kegiatan Pelayanan Kas
+BPRS; dan
+
+b)
+
+Form 01.02 – Data Penutupan Kantor Kas dan Kegiatan
+Pelayanan Kas BPRS.
+
+2)
+
+Laporan Gabungan:
+a)
+
+Form 01.06 – Data Anggota Direksi, Anggota Dewan Komisaris,
+dan Anggota Dewan Pengawas Syariah BPRS yang Berhenti
+Menjabat;
+
+b)
+
+Form 01.07 – Data Organ Pelaksana BPRS yang Berhenti
+Menjabat;
+
+-3-
+
+c)
+
+Form 01.08 – Data Penutupan Kantor Cabang BPRS;
+
+d)
+
+Form 01.09 – Dokumen Pendukung
+
+e)
+
+Form 01.10 – Daftar Data Jenis Nasabah dan Produk
+Penghimpunan Dana pada BPRS; dan
+
+f)
+
+Form 01.11 – Rincian Transaksi Terkait Penilaian Risiko Tindak
+Pidana Pencucian Uang dan Tindak Pidana Pendanaan
+Terorisme.
+
+5.
+
+Ketentuan dalam SEOJK Laporan Bulanan BPRS ini mulai berlaku pada
+tanggal 1 Februari 2023 (mulai Laporan Bulanan BPRS posisi data bulan
+Januari 2023 yang disampaikan pada bulan Februari 2023).

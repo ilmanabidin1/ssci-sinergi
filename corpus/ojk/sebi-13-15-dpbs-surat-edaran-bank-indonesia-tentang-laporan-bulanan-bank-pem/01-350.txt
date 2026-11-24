@@ -1,0 +1,346 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/ 15/DPbS
+Tentang: Surat Edaran Bank Indonesia tentang Laporan Bulanan Bank Pembiayaan Rakyat Syariah
+Berkas: 350.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-tentang-Laporan-Bulanan-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+No. 13/ 15
+
+/DPbS
+
+Jakarta,
+
+30 Mei 2011
+
+SURAT EDARAN
+
+Kepada
+SEMUA BANK PEMBIAYAAN RAKYAT SYARIAH
+DI INDONESIA
+
+Perihal:
+
+Laporan Bulanan Bank Pembiayaan Rakyat Syariah.
+
+Sesuai dengan Peraturan Bank Indonesia Nomor 7/9/PBI/2005 (Lembaran
+Negara Republik Indonesia Tahun 2005 Nomor 19, Tambahan Lembaran Negara
+Republik Indonesia Nomor 4478) tentang Laporan Bulanan Bank Perkreditan
+Rakyat Syariah, Peraturan Bank Indonesia Nomor 11/23/PBI/2009 (Lembaran
+Negara Republik Indonesia Tahun 2009 Nomor 101, Tambahan Lembaran
+Negara Republik Indonesia Nomor 5027) tentang Bank Pembiayaan Rakyat
+Syariah, dan Undang-Undang Nomor 20 Tahun 2008 tentang Usaha Mikro, Kecil
+dan Menengah (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 93,
+Tambahan Lembaran Negara Republik Indonesia Nomor 4866) serta dalam
+rangka meningkatkan transparansi informasi keuangan kegiatan usaha Bank
+Pembiayaan Rakyat Syariah, Bank Pembiayaan Rakyat Syariah (BPRS) wajib
+menyampaikan Laporan Bulanan beserta koreksinya kepada Bank Indonesia.
+Sehubungan dengan hal tersebut perlu diatur kembali ketentuan pelaksanaan
+tentang penyusunan dan pelaporan Laporan Bulanan BPRS dalam suatu Surat
+Edaran Bank Indonesia sebagai berikut:
+
+I. UMUM ...
+
+2
+
+I.
+
+UMUM
+1.
+
+Laporan Bulanan BPRS disampaikan kepada Bank Indonesia dalam
+rangka penyusunan laporan dan informasi serta statistik perbankan
+yang dipergunakan untuk kepentingan pengaturan dan pengawasan
+BPRS, dan kepentingan manajemen masing-masing BPRS.
+
+2.
+
+BPRS menyusun Laporan Bulanan BPRS dengan mengacu pada
+Pedoman Penyusunan Laporan Bulanan BPRS.
+
+3.
+
+Dengan adanya pengembangan aplikasi Laporan Bulanan BPRS maka
+penyusunan dan penyampaian Laporan Bulanan BPRS kepada Bank
+Indonesia secara on-line dilakukan dengan menggunakan aplikasi
+Data Entry Laporan Berkala BPRS dan aplikasi Web User BPRS
+Laporan Berkala BPRS.
+
+4.
+
+BPRS Pelapor adalah BPRS atau kantor pusat BPRS bagi BPRS yang
+memiliki kantor cabang.
+
+5.
+
+Bagi BPRS Pelapor yang memiliki kantor cabang, laporan keuangan
+yang disampaikan kepada Bank Indonesia mencakup laporan
+keuangan konsolidasi kantor pusat dan kantor cabang BPRS beserta
+rinciannya.
+
+6.
+
+Dalam hal Laporan Bulanan BPRS disampaikan secara off-line,
+tanggal penerimaan Laporan Bulanan BPRS adalah tanggal stempel
+pos untuk yang dikirim via pos atau tanda terima dari jasa ekspedisi
+atau tanggal tanda terima Bank Indonesia apabila disampaikan secara
+langsung.
+
+II.
+
+SARANA DAN SUMBER DAYA MANUSIA YANG DIPERLUKAN
+Sarana dan Sumber Daya Manusia yang diperlukan dalam rangka
+penyusunan dan penyampaian Laporan Bulanan BPRS adalah:
+1.
+
+Personal Computer dengan memenuhi konfigurasi minimal software
+dan hardware sebagaimana dimaksud dalam buku mengenai Tata
+
+Cara...
+
+3
+
+Cara Aplikasi Data Entry Laporan Berkala BPRS dan Tata Cara
+Aplikasi Web User BPRS Laporan Berkala BPRS.
+2.
+
+Pegawai BPRS yang dapat mengoperasikan serta memahami
+komputer, untuk menyusun dan melakukan verifikasi Laporan
+Bulanan BPRS.
+
+3.
+
+Penanggung jawab yang ditunjuk untuk melakukan verifikasi ulang
+dan menyampaikan Laporan Bulanan BPRS ke Bank Indonesia.
+Verifikasi ulang oleh penanggung jawab diperlukan untuk meyakini
+kebenaran Laporan Bulanan BPRS sebelum dikirimkan kepada Bank
+Indonesia.
+
+4.
+
+Pedoman tertulis tentang sistem dan prosedur konversi laporan
+keuangan intern ke Laporan Bulanan BPRS.
+
+5.
+
+Sistem pengamanan yang memadai terhadap sarana komputer yang
+digunakan dan seluruh data Laporan Bulanan BPRS.
+
+6.
+
+Back up data Laporan Bulanan BPRS yang ditatausahakan dengan
+baik.
+
+III. FORMAT LAPORAN BULANAN DAN TATA CARA PELAPORAN
+1.
+
+Format Laporan Bulanan BPRS dan tata cara penyusunan laporan
+diatur dalam Pedoman Penyusunan Laporan Bulanan BPRS
+sebagaimana tercantum dalam Lampiran yang merupakan bagian yang
+tidak terpisahkan dari Surat Edaran Bank Indonesia ini.
+
+2.
+
+Tata cara pengoperasian aplikasi Laporan Bulanan BPRS terdapat
+dalam buku mengenai Tata Cara Aplikasi Data Entry Laporan Berkala
+BPRS dan Tata Cara Aplikasi Web User BPRS Laporan Berkala
+BPRS yang disampaikan kepada BPRS.
+
+IV. PENYAMPAIAN ...
+
+4
+
+IV. PENYAMPAIAN LAPORAN DAN KOREKSI LAPORAN
+1.
+
+Laporan Bulanan BPRS dan/atau koreksinya disampaikan kepada
+Bank Indonesia secara on-line melalui fasilitas ekstranet Bank
+Indonesia atau sarana teknologi lainnya paling lama tanggal 21 (dua
+puluh satu) pada bulan berikutnya setelah berakhirnya bulan laporan.
+
+2.
+
+Laporan Bulanan BPRS dan/atau koreksinya disampaikan kepada
+Bank Indonesia secara off-line dengan menggunakan disket atau cdrom dan hasil cetak komputer (hard copy) sebanyak 1 (satu) set
+disertai hasil validasi dengan alamat:
+a.
+
+Direktorat Perbankan Syariah Jl. M.H. Thamrin Nomor 2 Jakarta
+10350, bagi BPRS Pelapor yang berkedudukan di wilayah DKI
+Jakarta Raya, Banten, Bogor, Depok, Karawang, dan Bekasi,
+paling lama pukul 16.00 WIB; atau
+
+b.
+
+Kantor Bank Indonesia setempat, bagi BPRS Pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud dalam
+huruf a, paling lama pukul 16.00 waktu setempat.
+
+3.
+
+Dalam hal terjadi kerusakan disket atau cd-rom yang telah
+disampaikan ke Bank Indonesia secara off-line, BPRS Pelapor
+menyampaikan ulang disket atau cd-rom Laporan Bulanan BPRS.
+
+4.
+
+BPRS menyampaikan pemberitahuan secara tertulis kepada Bank
+Indonesia untuk mendapatkan pengecualian penyampaian Laporan
+Bulanan secara on-line dengan alamat:
+a.
+
+Direktorat Perbankan Syariah Jl. M.H. Thamrin Nomor 2 Jakarta
+10350, bagi BPRS Pelapor yang berkedudukan di wilayah DKI
+Jakarta Raya, Banten, Bogor, Depok, Karawang, dan Bekasi,
+paling lama pukul 16.00 WIB; atau
+
+b.
+
+Kantor Bank Indonesia setempat, bagi BPRS Pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud dalam
+huruf a, paling lama pukul 16.00 waktu setempat.
+V. TATA ...
+
+5
+
+V.
+
+TATA CARA PEMBAYARAN SANKSI KEWAJIBAN MEMBAYAR
+1.
+
+Pembayaran sanksi kewajiban membayar kepada Bank Indonesia
+dilakukan dengan cara transfer ke rekening Bank Indonesia melalui:
+a.
+
+Kliring
+Transfer ditujukan ke rekening nomor 566.000446.980 ”Rekening penerimaan sanksi administratif BPRS”, dan pada
+kolom keterangan dicantumkan ”pembayaran sanksi kewajiban
+membayar dari BPRS XXX atas kesalahan/keterlambatan/tidak
+menyampaikan laporan bulanan dan/atau koreksi laporan
+bulanan periode BB-TTTT”.
+
+b.
+
+BI-RTGS
+Transfer ditujukan ke rekening nomor 566.000446.980 ”Rekening penerimaan sanksi administratif BPRS”, dengan
+mencantumkan
+BIRBK566
+
+dan
+
+Transaction
+pada
+
+Reference
+
+kolom
+
+Number
+
+keterangan
+
+(TRN)
+
+dicantumkan
+
+”pembayaran sanksi kewajiban membayar dari BPRS XXX atas
+kesalahan/keterlambatan/tidak menyampaikan laporan bulanan
+dan/atau koreksi laporan bulanan periode BB-TTTT”.
+2.
+
+BPRS Pelapor menyampaikan fotokopi bukti pembayaran sanksi
+kewajiban membayar sebagaimana dimaksud dalam angka 1. kepada
+Bank Indonesia dengan alamat:
+a.
+
+Direktorat Perbankan Syariah, Jl.M.H.Thamrin Nomor 2 Jakarta
+10350 atau melalui
+
+Faksimili Nomor 021-3447620, 021-
+
+3501990, bagi BPRS Pelapor yang berkedudukan di wilayah
+DKI Jakarta Raya, Banten, Bogor, Depok, Karawang, dan
+Bekasi.
+b.
+
+Kantor Bank Indonesia setempat bagi BPRS Pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud dalam
+huruf a.
+VI. ALAMAT ...
+
+6
+
+VI. ALAMAT PENYAMPAIAN PERTANYAAN DAN INFORMASI
+Pertanyaan-pertanyaan yang berkaitan dengan :
+1.
+
+Aplikasi Data Entry Laporan Berkala BPRS dan Aplikasi Web User
+BPRS Laporan Berkala BPRS disampaikan kepada Help Desk Bank
+Indonesia dengan alamat Jl.M.H.Thamrin Nomor 2 Jakarta10350,
+Telepon Nomor 021-3818000 (Hunting), Fax No. 021-3866071, email
+address : helpdesk@bi.go.id.
+
+2.
+
+Ketentuan Laporan Bulanan BPRS disampaikan kepada :
+a.
+
+Direktorat Perbankan Syariah, Jl.M.H. Thamrin Nomor 2
+Jakarta10350, Telepon Nomor 021-3818749, 021-3818513,
+Faksimili Nomor 021-3447620, 021-3501989, email address :
+dpbs@bi.go.id bagi BPRS Pelapor yang berkedudukan di
+wilayah DKI Jakarta Raya, Banten, Bogor, Depok, Karawang,
+dan Bekasi.
+
+b.
+
+Kantor Bank Indonesia setempat bagi BPRS Pelapor yang
+berkedudukan di luar wilayah sebagaimana dimaksud dalam
+huruf a.
+
+VII. LAIN LAIN
+Dalam rangka kelancaran penyampaian Laporan Bulanan BPRS,
+BPRS Pelapor wajib mengkinikan:
+a. nama pegawai dan penanggungjawab yang ditunjuk untuk menyusun
+dan menyampaikan Laporan Bulanan BPRS;
+b. nomor telepon yang digunakan untuk penyampaian Laporan Bulanan
+BPRS.
+
+VIII. PENUTUP
+Kewajiban penyampaian Laporan Bulanan BPRS secara online
+sebagaimana dimaksud pada butir IV.1 mulai berlaku sejak pelaporan data
+bulan ...
+
+7
+
+bulan Mei 2011 yang disampaikan pada bulan Juni 2011.
+
+Dengan diberlakukannya Surat Edaran Ini maka :
+a.
+
+Surat Edaran Bank Indonesia Nomor 7/13/DPbS tanggal 11 April
+2005 perihal Laporan Bulanan Bank Perkreditan Rakyat Syariah; dan
+
+b.
+
+Surat Edaran Bank Indonesia Nomor 9/17/DPbS tanggal 8 Agustus
+2007 perihal Perubahan atas Surat Edaran Nomor 7/13/DPbS perihal
+Laporan Bulanan Bank Perkreditan Rakyat Syariah,
+
+dicabut dan dinyatakan tidak berlaku.
+
+Ketentuan dalam Surat Edaran Bank Indonesia ini mulai berlaku pada
+tanggal 30 Mei 2011
+
+Agar setiap orang mengetahuinya, memerintahkan pengumuman Surat
+Edaran Bank Indonesia ini dengan penempatannya dalam Berita Negara
+Republik Indonesia.
+
+Demikian agar Saudara maklum.
+
+BANK INDONESIA,
+
+HALIM ALAMSYAH
+DEPUTI GUBERNUR

@@ -1,0 +1,403 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 4.2 Akad Bagi Hasil - Musyarakah (50-53).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 50 -
+
+IV.2. PEMBIAYAAN MUSYARAKAH
+A.
+
+Definisi
+1.
+
+Musyarakah adalah akad kerjasama antara dua pihak atau lebih untuk
+suatu usaha tertentu, dimana masing-masing pihak memberikan
+kontribusi
+
+dana
+
+dengan
+
+ketentuan
+
+bahwa
+
+keuntungan
+
+dibagi
+
+berdasarkan kesepakatan sedangkan kerugian berdasarkan porsi
+kontribusi dana berupa kas maupun aset non-kas yang diperkenankan
+oleh Syariah.
+2.
+
+Musyarakah permanen adalah Musyarakah dengan ketentuan bagian
+dana setiap mitra ditentukan sesuai akad dan jumlahnya tetap hingga
+akhir masa akad.
+
+3.
+
+Musyarakah menurun (Musyarakah Mutanaqisah) adalah Musyarakah
+dengan ketentuan bagian dana pihak pertama akan dialihkan secara
+bertahap kepada pihak kedua sehingga bagian dana pihak pertama
+akan menurun dan pada akhir masa akad pihak kedua tersebut akan
+menjadi pemilik penuh usaha tersebut.
+
+4.
+
+Mitra aktif adalah mitra yang mengelola usaha Musyarakah, baik
+mengelola sendiri atau menunjuk pihak lain atas nama mitra tersebut.
+
+5.
+B.
+
+C.
+
+Mitra pasif adalah mitra yang tidak ikut mengelola usaha Musyarakah.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.106 tentang Akuntansi Musyarakah.
+
+Penjelasan
+1.
+
+Musyarakah dapat berupa Musyarakah permanen dan Musyarakah
+menurun (Musyarakah Mutanaqisah).
+
+2.
+
+Bank
+
+dapat bertindak sebagai mitra aktif dan mitra pasif. Untuk
+
+pembahasan ini Bank masih berperan sebagai mitra pasif.
+3.
+
+Pada umumnya pembiayaan Musyarakah yang diberikan oleh Bank
+dalam bentuk kas yang dilakukan secara bertahap atau sekaligus.
+
+4.
+
+Keuntungan atau pendapatan Musyarakah dibagi di antara mitra
+berdasarkan nisbah yang disepakati, sedangkan kerugian Musyarakah
+dibagi diantara mitra secara proporsional dengan modal yang disetor.
+
+5.
+
+Pengakuan penghasilan usaha Musyarakah dalam praktik dapat
+diketahui berdasarkan laporan bagi hasil atas penghasilan usaha dari
+mitra ...
+
+- 51 -
+
+mitra aktif. Tidak diperkenankan mengakui pendapatan dari proyeksi
+hasil usaha.
+6.
+
+Dalam pembiayaan Musyarakah setiap mitra tidak dapat menjamin
+modal mitra lain, namun setiap mitra dapat meminta mitra lain untuk
+menyediakan jaminan atas kelalaian atau kesalahan yang disengaja.
+
+7.
+
+Kelalaian atau kesalahan pengelola dana antara lain ditunjukkan oleh:
+a.
+
+tidak dipenuhinya persyaratan yang ditentukan di dalam akad.
+
+b.
+
+tidak terdapat kondisi di luar kemampuan (force majeur) yang lazim
+dan/atau yang telah ditentukan di dalam akad.
+
+c.
+8.
+
+hasil putusan dari badan arbitrase atau pengadilan.
+
+Dalam pembiayaan Musyarakah Mutanaqisah, mitra dapat menyewa
+aset yang menjadi dasar (underlying) pembiayaan Musyarakah. Hasil
+sewa dari aset tersebut dibagihasilkan di antara mitra berdasarkan
+nisbah yang disepakati.
+
+9.
+
+Bank membentuk Penyisihan Penghapusan Aset untuk pembiayaan
+Musyarakah sesuai dengan ketentuan yang berlaku mengenai kualitas
+aset.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Pembiayaan Musyarakah dalam bentuk kas diakui pada saat pencairan
+sebesar jumlah uang yang diberikan Bank.
+
+2.
+
+Pembiayaan Musyarakah yang diberikan secara bertahap diakui pada
+setiap tahap pembayaran.
+
+3.
+
+Keuntungan pembiayaan Musyarakah diakui pada periode terjadinya
+hak bagi hasil berdasarkan laporan hasil usaha yang disampaikan
+nasabah sesuai dengan nisbah yang disepakati.
+
+4.
+
+Keuntungan pembiayaan Musyarakah yang telah menjadi hak Bank
+dan belum dibayarkan oleh nasabah diakui sebagai piutang bagi hasil.
+
+5.
+
+Apabila terjadi kerugian dalam Musyarakah akibat kelalaian atau
+penyimpangan mitra Musyarakah, mitra yang melakukan kelalaian
+tersebut menanggung beban kerugian. Kerugian Bank yang diakibatkan
+kelalaian atau penyimpangan mitra aktif (nasabah) tetap diakui sebagai
+pembiayaan Musyarakah.
+
+6.
+
+Pembiayaan Musyarakah yang sudah berakhir dan belum diselesaikan
+oleh mitra aktif (nasabah) maka saldo pembiayaan Musyarakah tetap
+
+diakui ...
+
+- 52 -
+
+diakui sebagai pembiayaan Musyarakah yang wajib diselesaikan oleh
+mitra aktif.
+D2. Penyajian
+1.
+
+Pembiayaan
+
+Musyarakah
+
+disajikan
+
+sebesar
+
+saldo
+
+pembiayaan
+
+Musyarakah nasabah kepada Bank.
+2.
+
+Piutang bagi hasil disajikan sebagai bagian dari aset lainnya pada saat
+nasabah tergolong lancar (performing). Sedangkan, apabila nasabah
+tergolong non lancar (non-performing) maka piutang bagi hasil disajikan
+pada rekening administratif.
+
+3.
+
+Penyisihan
+
+Penghapusan
+
+Aset
+
+pembiayaan
+
+Musyarakah
+
+disajikan
+
+sebagai pos lawan (contra account) pembiayaan Musyarakah.
+4.
+
+Pembiayaan Musyarakah yang diakhiri sebelum jatuh tempo atau
+sudah berakhir dan belum diselesaikan oleh nasabah tetap disajikan
+sebagai bagian dari pembiayaan Musyarakah.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat Bank membayarkan modal tunai kepada mitra (nasabah)
+Db. Pembiayaan Musyarakah.
+Kr. Kas/rekening …/kliring.
+
+2.
+
+Pada saat pengakuan keuntungan Musyarakah
+Db. Piutang bagi hasil.
+Kr. Pendapatan Musyarakah.
+
+3.
+
+Pada saat penerimaan keuntungan Musyarakah
+Db. Kas/rekening …/kliring.
+Kr.
+
+4.
+
+Piutang bagi hasil.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset pembiayaan
+Musyarakah
+Db. Beban penghapusan aset pembiayaan Musyarakah.
+Kr. Penyisihan Penghapusan Aset–pembiayaan Musyarakah.
+
+5.
+
+Pada saat koreksi Penyisihan Penghapusan Aset untuk pembiayaan
+Mudharabah
+Db. Penyisihan Penghapusan Aset-pembiayaan Mudharabah.
+Kr. Beban penghapusan aset produktif pembiayaan.
+Mudharabah/Koreksi
+
+Penyisihan
+
+Penghapusan
+
+Aset-pembiayaan
+
+Mudharabah.
+6.
+
+Pada
+
+saat
+
+pembayaran
+
+angsuran
+
+pokok
+
+untuk
+
+Musyarakah
+
+Mutanaqisah/pengalihan modal kepada mitra aktif (nasabah)
+Db.Kas ...
+
+- 53 -
+
+Db. Kas/rekening …/kliring.
+Kr. Pembiayaan Musyarakah.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian jumlah pembiayaan Musyarakah berdasarkan modal mitra,
+jenis valuta, jenis penggunaan, sektor ekonomi, status bank dalam
+pembiayaan Musyarakah (mitra pasif), dan mitra aktif (jika mitra aktif
+bukan berasal dari salah satu mitra Musyarakah).
+
+2.
+
+Klasifikasi pembiayaan Musyarakah menurut jangka waktu akad
+pembiayaan, kualitas pembiayaan, dan tingkat bagi hasil rata-rata.
+
+3.
+
+Jumlah dan persentase pembiayaan Musyarakah yang diberikan
+kepada pihak-pihak berelasi.
+
+4.
+
+Jumlah
+
+dan
+
+persentase
+
+pembiayaan
+
+Musyarakah
+
+yang
+
+telah
+
+direstrukturisasi dan informasi lain tentang pembiayaan Musyarakah
+yang direstrukturisasi selama periode berjalan.
+5.
+
+Kebijakan
+
+manajemen
+
+dalam
+
+pelaksanaan
+
+pengendalian
+
+risiko
+
+portofolio pembiayaan Musyarakah.
+6.
+
+Besarnya
+
+pembiayaan
+
+Musyarakah
+
+bermasalah
+
+dan
+
+Penyisihan
+
+Penghapusan Aset untuk setiap sektor ekonomi.
+7.
+
+Kebijakan dan metode yang digunakan dalam penanganan Musyarakah
+bermasalah.
+
+8.
+
+Ikhtisar
+
+pembiayaan
+
+menunjukkan
+
+saldo
+
+Musyarakah
+awal,
+
+yang
+
+penghapusan
+
+dihapus
+selama
+
+buku
+
+tahun
+
+yang
+
+berjalan,
+
+penerimaan atas pembiayaan Musyarakah yang telah dihapus buku
+dan pembiayaan Musyarakah yang telah dihapustagih dan saldo akhir
+pembiayaan Musyarakah yang dihapus buku.
+
+IV.3.DANA ...

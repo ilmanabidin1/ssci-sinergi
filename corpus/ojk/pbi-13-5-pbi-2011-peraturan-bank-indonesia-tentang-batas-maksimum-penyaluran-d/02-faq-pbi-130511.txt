@@ -1,0 +1,120 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 13/ 5/PBI/2011
+Tentang: Peraturan Bank Indonesia tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah
+Berkas: faq_pbi_130511.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Batas-Maksimum-Penyaluran-Dana-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+Peraturan Bank Indonesia Nomor 13/ 5 /PBI/2011 tanggal 24 Januari 2011
+Tentang
+Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah
+
+Frequently Asked Question:
+Q:
+A:
+
+Apakah yang dimaksud dengan Batas Maksimum Penyaluran Dana (BMPD) ?
+BMPD adalah persentase maksimum realisasi penyaluran dana terhadap modal
+BPRS yang mencakup pembiayaan dan penempatan dana BPRS di bank lain.
+
+Q:
+A:
+
+Apakah yang dimaksud dengan pelanggaran BMPD ?
+Pelanggaran BMPD yaitu selisih lebih persentase penyaluran dana pada saat
+direalisasikan terhadap modal BPRS dengan BMPD yang diperkenankan.
+
+Q:
+A:
+
+Apakah yang dimaksud dengan pelampauan BMPD ?
+Pelampauan BMPD yaitu selisih lebih antara persentase penyaluran dana yang
+telah direalisasikan terhadap modal BPRS pada saat tanggal laporan dengan
+BMPD yang diperkenankan, dan penyaluran dana tersebut tidak melanggar
+BMPD pada saat direalisasikan.
+
+Q:
+A:
+
+Apa saja yang tidak boleh dilakukan oleh BPRS berkaitan dengan BMPD ?
+1. BPRS dilarang membuat akad pembiayaan apabila akad pembiayaan tersebut
+mewajibkan BPRS untuk menyalurkan dana yang akan mengakibatkan
+terjadinya pelanggaran BMPD.
+2. BPRS dilarang memberikan penyaluran dana yang mengakibatkan
+pelanggaran BMPD.
+
+Q:
+A:
+
+Berapakah BMPD yang diperkenankan kepada BPRS ?
+1. Penyaluran dana kepada seluruh pihak terkait ditetapkan paling tinggi 10%
+dari modal BPRS.
+2. Penyaluran dana dalam bentuk penempatan dana antar bank kepada BPRS
+lain yang merupakan pihak tidak terkait dan/atau dalam bentuk pembiayaan
+kepada 1 (satu) nasabah penerima fasilitas yang merupakan pihak tidak
+terkait ditetapkan paling tinggi 20% (dua puluh persen) dari modal BPRS.
+3. Penyaluran dana dalam bentuk pembiayaan kepada 1 (satu) kelompok
+nasabah penerima fasilitas yang merupakan pihak tidak terkait ditetapkan
+paling tinggi 30% dari modal BPRS.
+
+Q:
+
+BPRS wajib menyusun dan menyampaikan rencana tindak (action plan) untuk
+penyelesaian pelanggaran BMPD dan/ atau pelampauan BMPD. Apa yang harus
+dicantumkan dalam action plan ?
+Action plan wajib memuat paling kurang langkah-langkah untuk penyelesaian
+pelanggaran BMPD dan/atau pelampauan BMPD serta target waktu penyelesaian.
+
+A:
+
+1
+
+Q:
+A:
+
+Laporan apa saja yang wajib disampaikan oleh BPRS ?
+Laporan BMPD mencakup:
+1. Penyaluran Dana kepada pihak tidak terkait yang melanggar dan melampaui
+BMPD; dan
+2. Seluruh penyaluran dana kepada pihak terkait.
+
+Q:
+A:
+
+Kapan laporan BMPD disampaikan? Bagaimana dengan koreksi laporan?
+Laporan BMPD wajib disampaikan oleh BPRS kepada Bank Indonesia paling lama
+tanggal 14 pada bulan berikutnya setelah berakhirnya bulan laporan yang
+bersangkutan.
+
+Q:
+
+Apakah BPRS wajib melaporkan struktur kelompok usaha? Dan kapan
+disampaikan?
+BPRS wajib melaporkan struktur kelompok usaha yang terkait dengan BPRS
+termasuk badan hukum pemilik BPRS sampai dengan ultimate shareholders
+kepada Bank Indonesia, 1 tahun sekali untuk posisi akhir tahun dan setiap
+terdapat rencana perubahan struktur kelompok usaha yang menyebabkan
+perubahan pengendali BPRS.
+
+A:
+
+Q:
+A:
+
+Bagaimana pengungkapan ultimate shareholders BPRS?
+BPRS wajib mengungkapkan ultimate shareholders BPRS dalam laporan
+keuangan tahunan dan laporan keuangan publikasi BPRS. Kewajiban ini
+merupakan tambahan atas kewajiban pengungkapan informasi mengenai
+pemegang saham BPRS.
+
+Q:
+A:
+
+Kapan PBI ini mulai diberlakukan?
+Peraturan Bank Indonesia ini mulai berlaku pada tanggal 1 Februari 2011.
+
+DPbS
+
+2

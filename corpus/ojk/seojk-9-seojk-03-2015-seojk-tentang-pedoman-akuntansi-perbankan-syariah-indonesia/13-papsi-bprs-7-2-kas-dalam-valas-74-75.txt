@@ -1,0 +1,186 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 7.2 Kas Dalam Valas (74-75).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 74 -
+
+VII.2. KAS DALAM VALUTA ASING
+A.
+
+Definisi
+Kas dalam Valuta Asing adalah mata uang kertas asing, uang logam asing
+dan travellers cheque yang masih berlaku yang dimiliki Bank dalam kegiatan
+penukaran sebagai pedagang valuta asing.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+1.
+
+Kas dalam valuta asing yang dapat dimiliki oleh Bank sesuai dengan
+peraturan yang berlaku.
+
+2.
+
+Bank dapat memiliki kas dalam valuta asing hanya dalam rangka
+melakukan kegiatan usaha sebagai pedagang valuta asing yang telah
+mendapat persetujuan dari Bank Indonesia.
+
+3.
+
+Saldo mata uang kertas dan logam asing yang sudah tidak dapat
+digunakan sebagai alat tukar namun masih dapat ditukarkan ke bank
+sentral negara penerbit disajikan dalam pos Aset Lain-lain sebesar nilai
+nominal dikurangi dengan taksiran biaya repatriasi.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Mata uang asing diakui sebesar kurs transaksi yang berlaku pada
+tanggal perolehan.
+
+2.
+
+Pada setiap tanggal pelaporan mata uang asing harus dilaporkan sesuai
+dengan kurs tengah Bank Indonesia yang berlaku pada tanggal
+pelaporan. Kurs tengah adalah kurs transaksi jual ditambah kurs
+transaksi beli mata uang asing Bank Indonesia dibagi dua. Dalam hal
+kurs mata uang asing tidak tersedia di Bank Indonesia, digunakan kurs
+tengah di Bank yang bersangkutan pada tanggal pelaporan.
+
+3.
+
+Selisih antara nilai tercatat mata uang asing berdasarkan kurs tengah
+Bank
+
+Indonesia
+
+sebelumnya
+
+pada
+
+diakui
+
+tanggal
+
+sebagai
+
+pelaporan
+
+keuntungan
+
+dengan
+atau
+
+nilai
+
+tercatat
+
+kerugian
+
+(non-
+
+operasional) dalam Laporan Laba Rugi periode berjalan.
+D2. Penyajian
+Kas dalam Valuta Asing disajikan dalam pos tersendiri.
+E. Ilustrasi ...
+
+- 75 -
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+2.
+
+Pada saat perolehan:
+Db.
+
+Kas dalam Valuta Asing.
+
+Kr.
+
+Kas (rupiah).
+
+Pada saat penjualan kas dalam valuta asing:
+Db.
+
+Kas (rupiah).
+
+Kr.
+
+Kas dalam Valuta Asing.
+
+Db/Kr. Pendapatan/beban
+
+operasional
+
+–
+
+Keuntungan/kerugian
+
+transaksi valuta asing.
+3.
+
+Pada saat penilaian akhir periode pelaporan:
+Db.
+
+Kas dalam Valuta Asing.
+
+Kr.
+
+Pendapatan non-operasional – Keuntungan selisih kurs valuta
+asing.
+
+atau
+
+4.
+
+F.
+
+Db.
+
+Beban non-operasional – Kerugian selisih kurs valuta asing.
+
+Kr.
+
+Kas dalam Valuta Asing.
+
+Pada saat Kas dalam valuta asing dicabut dan ditarik dari peredaran:
+Db.
+
+Aset lain-lain.
+
+Kr.
+
+Kas dalam Valuta Asing.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian mata uang asing.
+
+2.
+
+Jumlah nominal masing-masing mata uang asing.
+
+3.
+
+Jumlah selisih kurs pada akhir periode yang diakui dalam Laporan
+Laba Rugi.

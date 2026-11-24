@@ -1,0 +1,71 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 23/POJK.03/2018
+Tentang: Penerapan Manajemen Risiko bagi Bank Pembiayaan Rakyat Syariah
+Berkas: FAQ POJK Manajemen Risiko BPRS.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Penerapan-Manajemen-Risiko-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+FREQUENTLY ASKED QUESTIONS
+POJK Nomor 23/POJK.03/2018 tentang Penerapan Manajemen Risiko
+bagi Bank Pembiayaan Rakyat Syariah
+1.
+
+Apakah terdapat ketentuan pelaksanaan dari POJK ini?
+Ya, POJK ini akan diatur lebih lanjut dalam Surat Edaran Otoritas Jasa
+Keuangan.
+
+2.
+
+Mengapa dalam frasa yang digunakan dalam POJK ini adalah risiko kredit
+bukan risiko pembiayaan?
+Berdasarkan Guiding Principles of Risk Management For Institutions (Other Than
+Insurance Institutions) Offering Only Islamic Financial Services yang diterbitkan oleh
+The Islamic Financial Services Board (IFSB), frasa yang digunakan adalah frasa risiko
+kredit (credit risk). Cakupan risiko kredit termasuk pembiayaan dan penempatan pada
+bank lain. Credit risk sendiri memiliki arti sebagai risiko akibat kegagalan nasabah
+atau pihak lain dalam memenuhi kewajiban kepada bank.
+
+3.
+
+Apakah Pejabat Eksekutif Manajemen Risiko (PE MR) dapat merangkap
+sebagai Pejabat Eksekutif Kepatuhan (PE Kepatuhan) dan Pejabat Eksekutif
+Audit Intern (PE AI)?
+PE MR dapat merangkap sebagai PE Kepatuhan, namun tidak dapat merangkap
+sebagai PE AI.
+
+4.
+
+Apakah seluruh BPRS yang memiliki Satuan Kerja Manajemen Risiko (SKMR)
+dan/atau PE MR wajib memiliki direktur yang membawahkan fungsi
+manajemen risiko?
+Seluruh BPRS wajib memiliki direktur yang membawahkan fungsi manajemen
+risiko. Direktur tersebut dapat merangkap sebagai fungsi kepatuhan dengan tetap
+memenuhi ketentuan tata kelola BPRS.
+Direktur yang membawahkan fungsi manajemen risiko tidak harus mengikuti
+penilaian kemampuan dan kepatutan seperti halnya persyaratan untuk menjadi
+direktur yang membawahkan fungsi kepatuhan (apabila tidak merangkap dengan
+fungsi kepatuhan).
+
+-2-
+
+5.
+
+Apakah diperlukan sertifikasi khusus manajemen risiko untuk dapat menjadi
+anggota komite manajemen risiko, satuan kerja manajemen risiko, dan/atau
+PE MR?
+Pengaturan dalam POJK Manajemen Risiko BPRS tidak mewajibkan bagi anggota
+komite manajemen risiko, SKMR, dan/atau PE MR untuk memiliki sertifikasi terkait
+manajemen risiko, namun dalam melakukan nominasi atas jabatan tersebut perlu
+mempertimbangkan kompetensi terkait manajemen risiko.
+
+6.
+
+Apabila BPRS memiliki eksposur risiko diluar dari jenis risiko yang
+diwajibkan, apakah BPRS tersebut juga wajib menerapkan manajemen risiko
+terhadap risiko lain tersebut?
+Dalam hal BPRS memiliki eksposur risiko diluar dari jenis risiko yang diwajibkan
+dan memenuhi kondisi sebagaimana diatur dalam Pasal 22 POJK ini, maka BPRS
+tersebut wajib menerapkan manajemen risiko atas risiko lain tersebut dan
+menyampaikan Laporan Profil Risiko Lain kepada OJK.

@@ -1,0 +1,351 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan ADK
+Nomor: PADK 12 Tahun 2026
+Tentang: Kewajiban Penyediaan Modal Minimum Dan Pemenuhan Modal Inti Minimum Bank Perekonomian Rakyat Syariah
+Berkas: FAQ PADK 12 Tahun 2026 Kewajiban Penyediaan Modal Minimum Dan Pemenuhan Modal Inti Minimum Bank Perekonomian Rakyat Syariah.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PADK-12-Tahun-2026-Kewajiban-Penyediaan-Modal-Minimum-Dan-Pemenuhan-Modal-Inti-Minimum-Bank-Perekonomian-Rakyat-Syariah.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/FREQUENTLY ASKED QUESTIONS (FAQ)
+PERATURAN ANGGOTA DEWAN KOMISIONER
+OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA
+NOMOR 12 TAHUN 2026
+TENTANG
+KEWAJIBAN PENYEDIAAN MODAL MINIMUM DAN PEMENUHAN MODAL
+INTI MINIMUM BANK PEREKONOMIAN RAKYAT SYARIAH
+1.
+
+Apa latar belakang penerbitan PADK ini?
+PADK ini diterbitkan sebagai ketentuan pelaksanaan dari POJK Nomor
+66/POJK.03/2016 tentang Kewajiban Penyediaan Modal Minimum dan
+Pemenuhan Modal Inti Minimum Bank Pembiayaan Rakyat Syariah,
+sebagai penyempurnaan atas SEOJK Nomor 1/SEOJK.03/2017 dan
+SEOJK Nomor 7/SEOJK.03/2020 sejalan dengan penerbitan ketentuan
+terkini yaitu POJK Nomor 24 Tahun 2024 tentang Kualitas Aset Bank
+Perekonomian Rakyat Syariah dan SEOJK Nomor 2/SEOJK.03/2025
+tentang Kewajiban Penyediaan Modal Minimum dan Pemenuhan Modal
+Inti Minimum Bank Perekonomian Rakyat.
+
+2.
+
+Apa saja perubahan dalam komponen permodalan dalam
+perhitungan rasio KPMM dan rasio Modal Inti?
+Perubahan dalam komponen permodalan dalam perhitungan rasio
+KPMM dan rasio Modal Inti diatur dalam Lampiran II PADK ini, yaitu
+sebagai berikut:
+a. Penambahan pos “Selisih kurang antara CKPN dan PPKA”.
+b. Penambahan pos “Properti Terbengkalai” sesuai dengan besaran
+konsekuensi sebagaimana diatur dalam POJK Nomor 24 Tahun
+2024 tentang Kualitas Aset Bank Perekonomian Rakyat Syariah.
+
+3.
+
+Apa saja perubahan dalam komponen ATMR dalam perhitungan rasio
+KPMM dan rasio Modal Inti?
+Perubahan dalam komponen ATMR dalam perhitungan rasio KPMM dan
+rasio Modal Inti diatur dalam Lampiran III PADK ini, yaitu sebagai
+berikut:
+a. Penyesuaian bobot risiko untuk pos “Aset produktif dengan sumber
+dana profit sharing” dari 1% menjadi 0%.
+b. Penambahan pos “Surat Berharga Syariah yang diterbitkan Bank
+Indonesia”.
+c.
+Penambahan pos “Surat Berharga Syariah yang diterbitkan
+Pemerintah”.
+d. Penambahan pos “Surat Berharga Syariah yang diterbitkan
+Pemerintah Daerah” sesuai dengan bobot risiko berdasarkan
+peringkat investasinya.
+e.
+Penambahan pos “Bagian pembiayaan yang dijamin asuransi
+pembiayaan oleh perusahaan asuransi swasta dengan persyaratan
+tertentu”.
+1 of 5
+
+f.
+g.
+h.
+
+Penambahan pos “Penyertaan Modal”.
+Penambahan pos “Properti Terbengkalai yang telah melampaui 1
+(satu) tahun sejak tanggal penetapan”.
+Penambahan pos “Properti Terbengkalai yang belum melampaui 1
+(satu) tahun sejak tanggal penetapan”.
+
+4.
+
+Bagaimana pelaporan untuk bagian pembiayaan yang dijamin
+asuransi pembiayaan oleh perusahaan asuransi swasta dengan
+persyaratan tertentu?
+BPR Syariah melaporkan data nasabah yang dijamin dengan asuransi
+pembiayaan oleh perusahaan asuransi swasta dengan persyaratan
+tertentu dalam Laporan Berkala Bulanan Form 06.00, Form 07.00, Form
+08.00, Form 09.00, Form 10.00, dan Form 11.00, dengan mengisi Kolom
+Agunan/Jaminan - Jenis Agunan/Jaminan dengan sandi 230 (Jaminan
+- Asuransi Pembiayaan) dan Kolom Agunan/Jaminan - Golongan
+Penjamin dengan sandi 861 (Perusahaan Asuransi Swasta yang
+Memenuhi Kriteria sesuai dengan PADK KPMM BPR Syariah).
+
+5.
+
+Dalam kriteria penilai independen sesuai PADK KPMM BPR Syariah,
+apa yang dimaksud dengan penilai independen “tidak merupakan
+kelompok nasabah dengan nasabah BPR Syariah”?
+Yang dimaksud dengan penilai independen “tidak merupakan kelompok
+nasabah dengan nasabah BPR Syariah” adalah penilai independen tidak
+termasuk dalam kelompok nasabah penerima fasilitas BPR Syariah
+sebagaimana diatur dalam POJK Nomor 23 Tahun 2022 tentang Batas
+Maksimum Pemberian Kredit Bank Perkreditan Rakyat dan Batas
+Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah.
+
+6.
+
+Apa yang dimaksud dengan “peringkat investasi” pada bagian
+pembiayaan yang dijamin asuransi pembiayaan oleh perusahaan
+asuransi swasta yang memiliki peringkat investasi paling rendah
+investment grade (peringkat layak investasi) dari lembaga
+pemeringkat yang diakui oleh Otoritas Jasa Keuangan?
+Yang dimaksud dengan peringkat investasi atau investment grade adalah
+peringkat yang menunjukkan bahwa suatu jenis investasi memiliki
+risiko gagal bayar yang relatif rendah yang diterbitkan oleh lembaga
+pemeringkat yang diakui oleh Otoritas Jasa Keuangan. Contoh peringkat
+investasi atau investment grade yaitu paling rendah BBB- (Standard &
+Poor’s), Baa3 (Moody’s), atau BBB- (Fitch Rating).
+
+7.
+
+Bagaimana penyampaian laporan penggunaan aset tetap dan/atau
+aset lainnya yang berasal dari setoran modal atau modal
+sumbangan?
+BPR Syariah menyampaikan laporan penggunaan aset tetap dan/atau
+aset lainnya yang berasal dari setoran modal atau modal sumbangan
+secara daring melalui Aplikasi Pelaporan Online Otoritas Jasa Keuangan
+kanal Laporan Insidental BPR Syariah dengan sandi laporan LL999.
+
+2 of 5
+
+8.
+
+Bagaimana pencatatan dana setoran modal atas penambahan modal
+disetor yang tidak mengakibatkan perubahan PSP?
+Penambahan modal disetor yang tidak mengakibatkan perubahan PSP
+pada prinsipnya dilakukan sesuai dengan Pasal 41 POJK Nomor 7 Tahun
+2024 tentang Bank Perekonomian Rakyat dan Bank Perekonomian
+Rakyat Syariah, yaitu melaporkan secara daring melalui sistem
+pelaporan OJK paling lama 10 (sepuluh) hari kerja setelah tanggal surat
+penerimaan pemberitahuan perubahan data dari instansi yang
+berwenang disertai dengan dokumen persyaratan permohonan
+penambahan modal disetor yang tidak mengakibatkan perubahan PSP
+sebagaimana tercantum dalam Lampiran POJK dimaksud. BPR Syariah
+mencatat setoran modal yang tidak mengakibatkan perubahan PSP pada
+pos modal disetor jika seluruh persyaratan penambahan modal disetor
+seluruhnya telah terpenuhi.
+
+9.
+
+Bagaimana perhitungan selisih kurang antara CKPN dan PPKA pada
+faktor pengurang modal inti?
+Perhitungan selisih kurang antara CKPN dan PPKA pada faktor
+pengurang modal inti dilakukan dengan mencari selisih antara total
+CKPN dan total PPKA dalam hal total CKPN yang telah dibentuk BPR
+Syariah lebih kecil daripada total PPKA.
+Ilustrasi 1:
+No. Nasabah Kualitas
+
+Baki
+Agunan*
+Tarif
+PPKA CKPN
+Debet
+PPKA
+1.
+N001
+1
+1000
+800
+0.5%
+5.0
+0.0
+2.
+N002
+2
+1200
+960
+3%
+7.2
+17.0
+3.
+N003
+3
+1400
+1120
+10%
+28.0
+35.0
+4.
+N004
+4
+1600
+1280
+50%
+160.0 165.0
+5.
+N005
+5
+1800
+1440
+100%
+360.0 345.0
+Total
+560.2 562.0
+Berdasarkan data di atas, tidak terdapat selisih kurang antara CKPN dan
+PPKA, karena total CKPN yang telah dibentuk BPR Syariah lebih besar
+daripada total PPKA.
+Ilustrasi 2:
+No. Nasabah Kualitas
+1.
+2.
+3.
+4.
+5.
+
+N001
+N002
+N003
+N004
+N005
+
+1
+2
+3
+4
+5
+
+Baki
+Agunan*
+Debet
+1000
+800
+1200
+960
+1400
+1120
+1600
+1280
+1800
+1440
+Total
+
+Tarif
+PPKA
+0.5%
+3%
+10%
+50%
+100%
+
+PPKA CKPN
+
+5.0
+0.0
+7.2
+10.0
+28.0
+35.0
+160.0 165.0
+360.0 340.0
+560.2 542.0
+18.2
+Berdasarkan data di atas, terdapat selisih kurang antara CKPN dan
+PPKA, karena total CKPN yang telah dibentuk BPR Syariah lebih kecil
+daripada total PPKA. Sehingga faktor pengurang modal inti akibat selisih
+antara CKPN dan PPKA sebesar 18.2.
+
+3 of 5
+
+*) Agunan yang dapat diperhitungkan sebagai pengurang PPKA sesuai
+dengan POJK Nomor 24 Tahun 2024.
+10. Bagaimana perhitungan ATMR untuk pos Surat Berharga Syariah
+yang Diterbitkan Pemerintah Daerah?
+Sesuai dengan Lampiran I Huruf C.1.b., nilai nominal untuk Surat
+Berharga Syariah adalah sebesar nilai pencatatan sesuai dengan
+pedoman akuntansi yang berlaku bagi BPR Syariah.
+Dalam perhitungan ATMR untuk Surat Berharga Syariah yang
+Diterbitkan Pemerintah Daerah dengan kualitas selain lancar maka nilai
+nominal dikurangi dengan CKPN dengan bobot risiko sebagaimana
+diatur dalam format pada Lampiran III PADK ini.
+Ilustrasi:
+BPR Syariah memiliki 3 (tiga) Surat Berharga Syariah yang Diterbitkan
+Pemerintah Daerah, sebagai berikut:
+a. Surat Berharga Syariah ABC dengan nilai nominal 1000 memiliki
+peringkat AA- dengan kualitas Lancar.
+b. Surat Berharga Syariah DEF dengan nilai nominal 700 memiliki
+peringkat BB+ dengan kualitas Kurang Lancar.
+c.
+Surat Berharga Syariah XYZ dengan nilai nominal 500, tanpa
+peringkat dengan kualitas Kurang Lancar.
+Perhitungan ATMR untuk komponen Surat Berharga Syariah yang
+Diterbitkan Pemerintah Daerah yang dimiliki BPR Syariah sebagai
+berikut:
+Komponen
+Nominal CKPN
+Nominal
+Bobot ATMR
+Setelah
+Risiko
+Dikurangi
+%
+CKPN
+Surat berharga syariah
+1070
+yang diterbitkan oleh
+Pemerintah Daerah
+a. Peringkat AAA s.d.
+1000
+0
+20%
+200
+AAb. Peringkat A+ s.d. A0
+0
+0
+50%
+0
+c. Peringkat BBB+ s.d.
+0
+0
+0
+50%
+0
+BBBd. Peringkat BB+ s.d.
+700
+40
+660 100%
+660
+Be. Peringkat kurang
+0
+0
+0 150%
+0
+dari Bf. Tanpa peringkat
+500
+80
+420
+50%
+210
+11. Bagaimana perhitungan ATMR untuk Aset Ijarah?
+Sesuai SEOJK Nomor 17/SEOJK.03/2024 tentang Pelaporan Melalui
+Sistem Pelaporan Otoritas Jasa Keuangan dan Transparansi Kondisi
+Keuangan Bagi Bank Perekonomian Rakyat Syariah, Aset Ijarah
+direklasifikasi dari semula bagian dari pembiayaan menjadi aset
+nonkeuangan.
+
+4 of 5
+
+Sejalan dengan SEOJK tersebut, nilai Aset Ijarah yang diperhitungkan
+dalam perhitungan ATMR adalah sebesar nilai Aset Ijarah setelah
+dikurangi Akumulasi Penyusutan/Amortisasi dan Cadangan Kerugian
+Penurunan Nilai. Nilai Aset Ijarah tersebut diperhitungkan dalam
+komponen Aset Lain dan dikenakan bobot risiko 100%.
+
+5 of 5

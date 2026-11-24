@@ -1,0 +1,444 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 10/SEOJK.03/2019
+Tentang: Penerapan Manajemen Risiko Bagi Bank Pembiayaan Rakyat Syariah
+Berkas: ringkasan seojk 10.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Penerapan-Manajemen-Risiko-Bagi-Bank-Pembiayaan-Rakyat-Syariah-bagian-2.aspx
+
+---
+
+Ringkasan Eksekutif
+SEOJK tentang Penerapan Manajemen Risiko bagi
+Bank Pembiayaan Rakyat Syariah
+(SEOJK MR BPRS)
+1.
+
+Latar belakang disusunnya SEOJK ini adalah sebagai ketentuan pelaksanaan dari
+POJK Nomor 23/POJK.03/2018 tentang Penerapan Manajemen Risiko bagi Bank
+Pembiayaan Rakyat Syariah (POJK MR BPRS). SEOJK ini bertujuan untuk
+memberikan standar minimum dalam penerapan Manajemen Risiko bagi BPRS yang
+meliputi penyusunan kebijakan dan pedoman penerapan Manajemen Risiko bagi
+BPRS.
+
+2.
+
+Penilaian penerapan Manajemen Risiko berupa penilaian profil Risiko meliputi
+penilaian dan penetapan tingkat Risiko inheren, penilaian dan penetapan kualitas
+penerapan Manajemen Risiko (KPMR), penetapan tingkat Risiko untuk setiap jenis
+Risiko, dan penetapan peringkat Risiko.
+
+3.
+
+Penilaian Risiko inheren
+
+4.
+
+a.
+
+Risiko inheren merupakan Risiko yang melekat pada kegiatan bisnis BPRS, baik
+yang dapat dikuantifikasi maupun yang tidak dapat dikuantifikasi, yang
+berpengaruh secara signifikan terhadap kondisi keuangan BPRS. Risiko inheren
+dapat ditentukan oleh faktor intern dan faktor ekstern.
+
+b.
+
+Penilaian atas Risiko inheren dilakukan dengan memperhatikan parameter yang
+bersifat kuantitatif
+maupun
+kualitatif.
+Penilaian dilakukan
+tanpa
+mempertimbangkan fungsi pengendalian atas setiap jenis Risiko yang dilakukan
+oleh BPRS.
+
+c.
+
+Penetapan tingkat Risiko inheren
+dikategorikan ke dalam:
+1)
+peringkat 1 (Sangat Rendah);
+2)
+peringkat 2 (Rendah);
+3)
+peringkat 3 (Sedang);
+4)
+peringkat 4 (Tinggi); dan
+5)
+peringkat 5 (Sangat Tinggi).
+
+d.
+
+SEOJK MR BPRS hanya menetapkan threshold untuk penetapan peringkat 1,
+sedangkan penetapan peringkat 2 sampai dengan peringkat 5 ditetapkan BPRS
+dengan melakukan penilaian sendiri (self-assessment).
+
+untuk
+
+masing-masing
+
+jenis
+
+Risiko
+
+Penilaian kualitas penerapan Manajemen Risiko
+a.
+
+KPMR merupakan kecukupan sistem pengendalian Risiko yang mencakup
+seluruh pilar penerapan Manajemen Risiko, yaitu:
+1)
+
+pengawasan aktif Direksi, Dewan Komisaris, dan Dewan Pengawas Syariah
+(DPS);
+
+2)
+
+kecukupan kebijakan dan prosedur Manajemen Risiko, dan penetapan
+limit Risiko;
+
+3)
+
+kecukupan proses identifikasi, pengukuran, pemantauan,
+pengendalian Risiko serta sistem informasi Manajemen Risiko; dan
+
+4)
+
+sistem pengendalian intern yang menyeluruh.
+
+b.
+
+Penilaian atas KPMR dilakukan dengan memperhatikan parameter yang bersifat
+kualitatif. Analisis penilaian dilakukan secara komprehensif dengan
+memperhatikan keterkaitan antara satu parameter penilaian dengan parameter
+lain.
+
+c.
+
+Penetapan tingkat KPMR untuk masing-masing jenis Risiko dikategorikan
+dalam:
+1)
+peringkat 1 (Sangat Memadai);
+2)
+peringkat 2 (Memadai);
+3)
+peringkat 3 (Cukup Memadai);
+4)
+peringkat 4 (Kurang Memadai); dan
+5)
+
+5.
+
+dan
+
+peringkat 5 (Tidak Memadai).
+
+Berdasarkan penilaian terhadap Risiko inheren dan KPMR untuk masing-masing jenis
+Risiko, selanjutnya BPRS harus menentukan tingkat Risiko. Tingkat Risiko adalah
+Risiko yang melekat pada aktivitas BPRS setelah memperhitungkan KPMR. Tingkat
+Risiko ditentukan berdasarkan matriks penetapan tingkat Risiko sebagai berikut:
+Tingkat Risiko
+Inheren
+
+1
+(Sangat Rendah)
+
+1
+(Sangat
+Memadai)
+
+1
+
+1
+
+2
+
+2
+
+2
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+semesteran)
+
+2
+
+2
+
+3
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+semesteran)
+
+3
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+triwulanan)
+
+4
+(Tinggi)
+
+2
+
+3
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+triwulanan)
+
+4
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+triwulanan)
+
+4
+(kaji ulang
+menyeluruh,
+rencana tindak
+dilaporkan
+triwulanan)
+
+5
+(Sangat
+Tinggi)
+
+3
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+triwulanan)
+
+3
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+bulanan)
+
+4
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+bulanan)
+
+5
+(kaji ulang
+menyeluruh,
+rencana tindak
+dilaporkan
+bulanan)
+
+2
+(Rendah)
+
+3
+(Sedang)
+
+1
+
+Tingkat Kualitas Penerapan Manajemen Risiko
+3
+4
+2
+(Cukup
+(Kurang
+(Memadai)
+Memadai)
+Memadai)
+
+1
+
+1
+
+5
+(Tidak Memadai)
+1
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+semesteran)
+2
+(kaji ulang
+terbatas, rencana
+tindak dilaporkan
+triwulanan)
+3
+(kaji ulang
+menyeluruh,
+rencana tindak
+dilaporkan
+triwulanan)
+4
+(kaji ulang
+menyeluruh,
+rencana tindak
+dilaporkan
+bulanan)
+5
+(pengawasan
+melekat,
+membutuhkan
+pemantauan
+secara lebih
+mendalam)
+
+6.
+
+Berdasarkan penetapan tingkat Risiko untuk setiap jenis Risiko yang telah dilakukan
+BPRS, selanjutnya BPRS menetapkan peringkat Risiko dengan memperhatikan
+prinsip umum yaitu berorientasi Risiko, proporsionalitas, signifikansi, dan
+materialitas, serta komprehensif dan terstruktur.
+Penetapan peringkat Risiko terdiri atas 5 (lima) peringkat yaitu:
+a.
+Peringkat 1 (Sangat Rendah);
+b.
+Peringkat 2 (Rendah);
+c.
+Peringkat 3 (Sedang);
+d.
+Peringkat 4 (Tinggi); dan
+e.
+Peringkat 5 (Sangat Tinggi).
+
+Frequently Asked Questions (FAQ’s)
+SEOJK tentang Penerapan Manajemen Risiko bagi
+Bank Pembiayaan Rakyat Syariah
+(SEOJK MR BPRS)
+1.
+
+Apakah yang dimaksud dengan kaji ulang terbatas dan kaji ulang menyeluruh
+pada tingkat Risiko sebagaimana dalam matriks penetapan tingkat Risiko?
+Kaji ulang terbatas ialah kaji ulang yang dilakukan terbatas pada bagian yang paling
+menyebabkan penilaian Risiko inheren dan/atau kualitas penerapan Manajemen
+Risiko (KPMR) buruk. Contohnya adalah KPMR yang buruk karena pelaksanaan
+pencairan pembiayaan yang tidak sesuai, sedangkan proses pembiayaan yang lainnya
+telah sesuai dengan standar operasional prosedur. Sehingga kaji ulang dilakukan
+terbatas pada KPMR terkait pelaksanaan pencairan pembiayaan.
+Sedangkan kaji ulang menyeluruh dilakukan pada penilaian Risiko inheren dan KPMR
+pada jenis Risiko dimaksud yang mendapat tingkat Risiko dengan catatan perlu untuk
+dilakukan kaji ulang menyeluruh.
+
+2.
+
+Bagaimana pengukuran untuk penetapan penilaian peringkat Risiko BPRS?
+Penilaian penerapan Manajemen Risiko meliputi penilaian dan penetapan tingkat
+Risiko inheren, penilaian dan penetapan tingkat KPMR, penetapan tingkat Risiko
+untuk setiap jenis Risiko, dan penetapan peringkat Risiko. Berdasarkan Pasal 10 ayat
+(1) POJK MR BPRS, BPRS wajib melakukan proses identifikasi, pengukuran,
+pemantauan, dan pengendalian Risiko terhadap seluruh faktor Risiko yang bersifat
+material. Penilaian tersebut menggunakan pengukuran yang dapat bersifat kuantitatif
+dan kualitatif.
+
+3.
+
+Apakah BPRS dapat menambahkan parameter lain bagi penilaian Risiko inheren
+maupun KPMR selain hal-hal yang diatur dalam SEOJK MR BPRS?
+Pilar dan parameter yang diatur dalam SEOJK MR BPRS untuk setiap jenis Risiko
+merupakan pilar dan parameter minimum yang dilakukan penilaian oleh BPRS.
+Dalam hal diperlukan maka BPRS dan/atau OJK dapat menambahkan pilar dan
+parameter pada jenis Risiko dimaksud. Penetapan tingkat Risiko inheren dan KPMR
+adalah berdasarkan signifikansi dan materialitas dari parameter dan pilar, tanpa
+menggunakan bobot. Prinsip yang sama digunakan dalam melakukan penetapan
+peringkat Risiko BPRS.
+
+4.
+
+Dalam hal BPRS memiliki eksposur Risiko diluar dari jenis Risiko yang wajib
+dilaporkan, apakah BPRS tersebut wajib menyampaikan laporan profil Risiko
+lain?
+BPRS wajib menyampaikan laporan profil Risiko lain kepada OJK apabila terdapat
+kondisi yang berpotensi menimbulkan kerugian yang signifikan terhadap kondisi
+
+keuangan. Laporan profil Risiko lain mencakup laporan profil Risiko selain laporan
+profil Risiko yang diwajibkan bagi BPRS sesuai dengan pentahapan.
+5.
+
+Dalam hal BPRS wajib menyampaikan laporan profil Risiko lain, apakah laporan
+profil Risiko lain tersebut akan terus disampaikan oleh BPRS?
+Laporan profil Risiko lain wajib disampaikan paling lambat 1 (satu) bulan setelah
+diketahuinya kondisi berpotensi menimbulkan kerugian yang signifikan terhadap
+kondisi keuangan BPRS atau didasarkan atas permintaan OJK. Dalam hal risiko
+tersebut masih berpotensi menimbulkan kerugian signifikan bagi BPRS maka BPRS
+tetap menyampaikan laporan profil Risiko lain kepada OJK.
+
+6.
+
+Siapakah yang melakukan evaluasi dari eksposur Risiko di BPRS?
+Evaluasi terhadap eksposur Risiko dilakukan oleh satuan kerja atau pejabat
+independen yang tidak terkait dengan penyusunan dan/atau penetapan eksposur
+Risiko.
+Dalam hal penyusunan dan/atau penetapan eksposur Risiko dilakukan oleh fungsi
+operasional maka evaluasi terhadap eksposur Risiko dilakukan oleh Satuan Kerja
+Manajemen Risiko (SKMR) atau Pejabat Eksekutif yang bertanggung jawab terhadap
+pelaksanaan fungsi Manajemen Risiko (PEMR). Sedangkan apabila penyusunan
+dan/atau penetapan eksposur Risiko dilakukan oleh SKMR atau PEMR maka evaluasi
+terhadap eksposur Risiko dilakukan oleh Satuan Kerja Audit Intern (SKAI) atau
+Pejabat Eksekutif yang bertanggung jawab terhadap pelaksanaan fungsi audit intern
+(PEAI), atau oleh SKMR atau PEMR dengan mekanisme self-evaluation.
+
+7.
+
+Dalam hal tidak terdapat Direktur yang membawahi fungsi Manajemen Risiko
+secara khusus, apakah PEMR dapat bertanggung jawab pada Direktur yang
+membawahi fungsi Audit Intern?
+Dalam POJK MR BPRS tidak diatur batasan Direktur yang membawahi fungsi
+Manajemen Risiko, namun idealnya karena PEMR dapat merangkap sebagai PE
+Kepatuhan, maka PEMR bertanggung jawab kepada Direktur yang membawahi fungsi
+Kepatuhan (Direktur Kepatuhan). Namun demikian perlu diperhatikan batasan bagi
+Direktur
+
+Kepatuhan.
+
+Bagi
+
+BPRS yang
+
+memiliki
+
+modal
+
+inti
+
+paling
+
+sedikit
+
+Rp50.000.000.000,00 (lima puluh miliar rupiah) maka Direktur Kepatuhan tidak
+dapat merangkap sebagai direktur utama dan tidak membawahkan bidang
+operasional penghimpunan dana dan penyaluran, sedangkan bagi BPRS yang
+memiliki modal inti kurang dari Rp50.000.000.000,00 (lima puluh miliar rupiah)
+maka Direktur Kepatuhan tidak dapat menangani penyaluran dana. Berdasarkan hal
+tersebut
+
+maka
+
+bagi
+
+BPRS
+
+yang
+
+memiliki
+
+modal
+
+inti
+
+paling
+
+sedikit
+
+Rp50.000.000.000,00 (lima puluh miliar rupiah) diatur bahwa Direktur Kepatuhan
+tidak dapat merangkap sebagai Direktur Utama, sedangkan Direktur Utama
+merupakan Direktur yang membawahi fungsi audit intern sehingga pada BPRS
+
+dimaksud PEMR tidak dimungkinkan bertanggung jawab kepada Direktur Kepatuhan
+selama PEMR tersebut merangkap sebagai PE Kepatuhan.
+8.
+
+Apakah yang dimaksud peer group bagi BPRS? Apakah BPR merupakan peer
+group bagi BPRS?
+Contoh peer group bagi BPRS antara lain BPRS dengan kondisi serupa, BPRS di
+wilayah operasional yang sama, serta BPRS dengan skala dan kompleksitas usaha
+yang sama. Namun dalam hal BPRS tidak memiliki contoh peer group sesama BPRS
+sebagaimana contoh diatas maka BPR dapat menjadi peer group bagi BPRS dimaksud.

@@ -1,0 +1,3422 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 11/SEOJK.03/2022
+Tentang: Penilaian Tingkat Kesehatan Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah
+Berkas: SEOJK 11 - 03 - 2022.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Penilaian-Tingkat-Kesehatan-BPR-dan-BPRS.aspx
+
+---
+
+Yth.
+1.
+
+Direksi Bank Perkreditan Rakyat; dan
+
+2.
+
+Direksi Bank Pembiayaan Rakyat Syariah,
+
+di tempat.
+
+SALINAN
+SURAT EDARAN OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA
+NOMOR 11 /SEOJK.03/2022
+TENTANG
+PENILAIAN TINGKAT KESEHATAN BANK PERKREDITAN RAKYAT DAN
+BANK PEMBIAYAAN RAKYAT SYARIAH
+Sehubungan dengan ditetapkannya Peraturan Otoritas Jasa Keuangan
+Nomor
+
+3/POJK.03/2022
+
+tentang
+
+Penilaian
+
+Tingkat
+
+Kesehatan
+
+Bank
+
+Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah (Lembaran Negara
+Republik Indonesia Tahun 2022 Nomor 58, Tambahan Lembaran Negara
+Republik Indonesia Nomor 6773), yang selanjutnya disebut POJK TKS BPR dan
+BPRS, perlu untuk mengatur pelaksanaan atas POJK TKS BPR dan BPRS
+dalam Surat Edaran Otoritas Jasa Keuangan sebagai berikut:
+I.
+
+KETENTUAN UMUM
+1.
+
+Dalam Surat Edaran Otoritas Jasa Keuangan ini yang dimaksud
+dengan:
+a.
+
+Bank Perkreditan Rakyat yang selanjutnya disingkat BPR
+adalah bank konvensional yang dalam kegiatannya tidak
+memberikan jasa dalam lalu lintas pembayaran.
+
+b.
+
+Bank Pembiayaan Rakyat Syariah yang selanjutnya disingkat
+BPRS adalah bank syariah yang dalam kegiatan usahanya tidak
+memberikan jasa dalam lalu lintas pembayaran.
+
+c.
+
+Tingkat Kesehatan BPR dan BPRS adalah hasil penilaian
+kondisi BPR dan BPRS yang dilakukan terhadap faktor profil
+risiko, tata kelola, rentabilitas, dan permodalan BPR dan BPRS.
+
+-2-
+
+d.
+
+Peringkat Komposit adalah peringkat akhir hasil penilaian
+Tingkat Kesehatan BPR dan BPRS.
+
+2.
+
+Seiring dengan perkembangan industri BPR dan BPRS, sistem
+penilaian Tingkat Kesehatan BPR dan BPRS perlu disempurnakan
+untuk memberikan gambaran kinerja BPR dan BPRS berdasarkan
+risiko sesuai kinerja yang sebenarnya dan berorientasi ke depan
+(forward looking) serta untuk meningkatkan efektivitas penerapan
+manajemen risiko dan tata kelola. Peningkatan efektivitas penerapan
+manajemen risiko dan tata kelola bertujuan agar BPR dan BPRS
+mampu mengidentifikasi permasalahan secara lebih dini, melakukan
+tindak lanjut perbaikan yang sesuai dan lebih cepat, serta
+menerapkan manajemen risiko dan tata kelola yang lebih baik
+sehingga BPR dan BPRS dapat bertahan menghadapi persaingan
+usaha dan kondisi krisis serta melakukan kegiatan usahanya
+dengan lebih baik.
+
+3.
+
+Tingkat
+
+Kesehatan
+
+BPR
+
+dan
+
+BPRS
+
+serta
+
+pengelolaan
+
+dan
+
+kelangsungan usaha BPR dan BPRS merupakan tanggung jawab
+penuh
+
+dari
+
+manajemen
+
+BPR
+
+dan
+
+BPRS.
+
+Oleh
+
+karena
+
+itu,
+
+sebagaimana dimaksud dalam Pasal 2 ayat (1) POJK TKS BPR dan
+BPRS, BPR dan BPRS wajib memelihara dan/atau meningkatkan
+tingkat kesehatan dengan menerapkan prinsip kehati-hatian dan
+manajemen risiko dalam melaksanakan kegiatan usaha, serta
+menerapkan prinsip syariah bagi BPRS, termasuk melakukan
+penilaian sendiri secara berkala terhadap tingkat kesehatan dan
+mengambil
+
+langkah
+
+perbaikan
+
+secara
+
+efektif.
+
+Di lain sisi, Otoritas Jasa Keuangan mengevaluasi dan menilai
+Tingkat Kesehatan BPR dan BPRS serta melakukan tindakan
+pengawasan
+
+yang
+
+sesuai
+
+dan
+
+tepat
+
+waktu
+
+dengan
+
+mempertimbangkan kondisi dan permasalahan yang dihadapi.
+II.
+
+PRINSIP UMUM PENILAIAN TINGKAT KESEHATAN BPR DAN BPRS
+Untuk memenuhi kewajiban sebagaimana dimaksud dalam Pasal 7 POJK
+TKS BPR dan BPRS, penilaian Tingkat Kesehatan BPR dan BPRS dengan
+pendekatan risiko, dilakukan dengan memperhatikan prinsip umum
+penilaian Tingkat Kesehatan BPR dan BPRS sebagai berikut:
+
+-3-
+
+1.
+
+Berorientasi Risiko
+Penilaian Tingkat Kesehatan BPR dan BPRS didasarkan pada risiko
+dan dampak yang ditimbulkan pada kinerja BPR dan BPRS secara
+keseluruhan. Hal ini dilakukan dengan cara mengidentifikasi faktor
+internal dan eksternal yang dapat meningkatkan risiko atau
+memengaruhi kinerja keuangan BPR dan BPRS pada saat ini dan
+pada masa yang akan datang. Dengan demikian diharapkan mampu
+mendeteksi secara lebih dini akar permasalahan serta mengambil
+langkah pencegahan dan perbaikan secara efektif dan efisien.
+
+2.
+
+Proporsionalitas
+Penggunaan parameter atau komponen dalam setiap faktor penilaian
+Tingkat Kesehatan BPR dan BPRS dilakukan dengan memperhatikan
+karakteristik dan kompleksitas usaha BPR dan BPRS. Parameter
+atau komponen penilaian Tingkat Kesehatan BPR dan BPRS dalam
+Surat Edaran Otoritas Jasa Keuangan ini merupakan standar
+minimum yang harus digunakan dalam menilai Tingkat Kesehatan
+BPR
+
+dan
+
+BPRS.
+
+Penilaian
+
+tingkat
+
+kesehatan
+
+dapat
+
+mempertimbangkan parameter atau komponen lain sesuai dengan
+karakteristik
+
+dan
+
+kompleksitas
+
+usaha
+
+sehingga
+
+dapat
+
+mencerminkan kondisi BPR dan BPRS yang sebenarnya.
+3.
+
+Signifikansi dan Materialitas
+Penilaian Tingkat Kesehatan BPR dan BPRS perlu memperhatikan
+signifikansi
+
+dan
+
+materialitas
+
+setiap
+
+faktor
+
+penilaian
+
+Tingkat
+
+Kesehatan BPR dan BPRS yaitu profil risiko, tata kelola, rentabilitas,
+dan permodalan serta signifikansi parameter atau komponen
+penilaian pada masing-masing faktor dalam menyimpulkan hasil
+penilaian dan menetapkan peringkat faktor. Penentuan signifikansi
+dan materialitas tersebut didasarkan pada analisis yang didukung
+oleh data dan informasi yang memadai mengenai risiko dan kinerja
+keuangan BPR dan BPRS.
+4.
+
+Komprehensif dan Terstruktur
+Proses penilaian dilakukan secara menyeluruh dan sistematis serta
+difokuskan pada permasalahan utama BPR dan BPRS. Analisis
+dilakukan secara terintegrasi, yaitu dengan mempertimbangkan
+keterkaitan antarrisiko dan antarfaktor penilaian Tingkat Kesehatan
+BPR dan BPRS. Analisis harus didukung oleh fakta pokok dan rasio
+yang relevan untuk menunjukkan tingkat, tren, dan tingkat
+
+-4-
+
+permasalahan
+
+yang
+
+dihadapi
+
+oleh
+
+BPR
+
+dan
+
+BPRS
+
+serta
+
+didokumentasikan secara memadai.
+III.
+
+CAKUPAN FAKTOR PENILAIAN
+Penilaian Tingkat Kesehatan BPR dan BPRS mencakup penilaian
+terhadap 4 (empat) faktor yang terdiri atas:
+1.
+
+Faktor Profil Risiko
+a.
+
+Penilaian faktor profil risiko merupakan penilaian terhadap
+risiko inheren dan kualitas penerapan manajemen risiko dalam
+aktivitas operasional BPR dan BPRS yang mencerminkan sistem
+pengendalian risiko BPR dan BPRS. Risiko yang dinilai terdiri
+atas risiko kredit, risiko operasional, risiko kepatuhan, risiko
+likuiditas, risiko reputasi, dan risiko strategis sesuai dengan
+Peraturan
+
+Otoritas
+
+Jasa
+
+Keuangan
+
+mengenai
+
+penerapan
+
+manajemen risiko bagi BPR dan Peraturan Otoritas Jasa
+Keuangan mengenai penerapan manajemen risiko bagi BPRS.
+Secara umum, penilaian profil risiko terdiri atas:
+1)
+
+Penilaian Risiko Inheren
+Penilaian risiko inheren merupakan penilaian atas risiko
+yang melekat pada kegiatan bisnis BPR dan BPRS, baik
+yang dapat dikuantifikasi maupun yang tidak dapat
+dikuantifikasi,
+
+yang
+
+berpengaruh
+
+secara
+
+signifikan
+
+terhadap kondisi keuangan BPR dan BPRS. Risiko inheren
+ditentukan oleh faktor internal dan eksternal. Penilaian
+atas risiko inheren dilakukan dengan memperhatikan
+parameter baik yang bersifat kuantitatif maupun kualitatif.
+Penetapan tingkat risiko inheren untuk masing-masing
+jenis risiko dilakukan berdasarkan analisis komprehensif
+terhadap
+
+seluruh
+
+mempertimbangkan
+
+parameter
+
+dan
+
+signifikansi
+
+pilar,
+serta
+
+termasuk
+keterkaitan
+
+antarparameter dan antarpilar.
+2)
+
+Penilaian Kualitas Penerapan Manajemen Risiko (KPMR)
+Penilaian KPMR merupakan penilaian atas kecukupan
+sistem pengendalian risiko yang mencakup seluruh pilar
+penerapan manajemen risiko. Penilaian KPMR paling
+sedikit mencakup penilaian terhadap 4 (empat) pilar yaitu:
+
+-5-
+
+a)
+
+Bagi BPR:
+(1)
+
+pengawasan Direksi dan Dewan Komisaris;
+
+(2)
+
+kecukupan kebijakan, prosedur, dan limit, yaitu:
+
+(3)
+
+(a)
+
+kebijakan manajemen risiko;
+
+(b)
+
+prosedur manajemen risiko; dan
+
+(c)
+
+penetapan limit risiko;
+
+kecukupan proses dan sistem, yaitu:
+(a)
+
+proses
+
+identifikasi,
+
+pengukuran,
+
+pemantauan, dan pengendalian risiko; dan
+(b)
+(4)
+b)
+
+sistem informasi manajemen risiko;
+
+sistem pengendalian intern yang menyeluruh.
+
+Bagi BPRS:
+(1)
+
+pengawasan aktif Direksi, Dewan Komisaris, dan
+Dewan Pengawas Syariah;
+
+(2)
+
+kecukupan kebijakan dan prosedur manajemen
+risiko serta penetapan limit risiko;
+
+(3)
+
+kecukupan
+
+proses
+
+identifikasi,
+
+pengukuran,
+
+pemantauan, dan pengendalian risiko serta
+sistem informasi manajemen risiko; dan
+(4)
+
+sistem pengendalian intern yang menyeluruh.
+
+Penerapan manajemen risiko BPR dan BPRS sangat
+bervariasi sesuai dengan karakteristik, kompleksitas, dan
+tingkat risiko yang akan diambil serta yang dapat
+ditoleransi oleh BPR dan BPRS. Penilaian atas KPMR
+dilakukan dengan memperhatikan parameter yang bersifat
+kualitatif.
+
+Penetapan
+
+peringkat
+
+parameter
+
+dilakukan
+
+melalui analisis parameter penilaian secara komprehensif
+dengan memperhatikan keterkaitan antarparameter.
+3)
+
+Penetapan Tingkat Risiko untuk Setiap Jenis Risiko
+Berdasarkan penilaian terhadap risiko inheren dan KPMR
+untuk masing-masing jenis risiko, selanjutnya ditentukan
+tingkat risiko. Tingkat risiko adalah risiko yang melekat
+pada aktivitas BPR dan BPRS setelah memperhitungkan
+KPMR.
+
+4)
+
+Penetapan Peringkat Risiko
+Berdasarkan penetapan tingkat risiko untuk setiap jenis
+risiko, ditetapkan peringkat risiko dengan memperhatikan
+
+-6-
+
+signifikansi dan materialitas masing-masing jenis risiko
+terhadap
+
+profil
+
+risiko
+
+secara
+
+keseluruhan
+
+dengan
+
+memperhatikan prinsip umum penerapan manajemen
+risiko.
+b.
+
+Pedoman dan tata cara penilaian terhadap faktor profil risiko
+secara lebih rinci mengacu pada Peraturan Otoritas Jasa
+Keuangan mengenai penerapan manajemen risiko bagi BPR dan
+Peraturan
+
+Otoritas
+
+Jasa
+
+Keuangan
+
+mengenai
+
+penerapan
+
+manajemen risiko bagi BPRS.
+c.
+
+Sebagaimana dimaksud dalam Pasal 8 POJK TKS BPR dan
+BPRS, penerapan manajemen risiko dan penyampaian laporan
+profil risiko BPR dilakukan sesuai kategori dengan penerapan
+sebagai berikut:
+Sejak Posisi Laporan Bulan Desember 2022
+Kategori BPR
+1.
+
+BPR yang memiliki modal Paling sedikit:
+inti
+
+2.
+
+3.
+
+Jenis Risiko
+
+kurang
+
+dari a.
+
+risiko kredit;
+
+Rp50.000.000.000,00 (lima b.
+
+risiko operasional;
+
+puluh miliar rupiah)
+
+c.
+
+risiko kepatuhan; dan
+
+d.
+
+risiko likuiditas.
+
+BPR yang memiliki modal a.
+
+risiko kredit;
+
+inti
+
+sedikit b.
+
+risiko operasional;
+
+Rp50.000.000.000,00 (lima c.
+
+risiko kepatuhan;
+
+puluh miliar rupiah)
+
+risiko likuiditas;
+
+paling
+
+d.
+
+BPR yang memiliki modal e.
+inti
+
+kurang
+
+dari f.
+
+risiko reputasi; dan
+risiko strategis.
+
+Rp50.000.000.000,00 (lima
+puluh miliar rupiah) namun
+memiliki produk, layanan,
+jasa, dan/atau kegiatan lain
+yang menambah eksposur
+risiko
+Pengenaan sanksi atas pelanggaran penerapan manajemen
+risiko BPR berdasarkan jenis risiko posisi:
+1)
+
+laporan profil risiko bulan Juni 2022 sampai dengan Juni
+2023 dilakukan sesuai Peraturan Otoritas Jasa Keuangan
+mengenai penerapan manajemen risiko bagi BPR;
+
+-7-
+
+2)
+
+sejak laporan profil risiko bulan Desember 2023 dilakukan
+sesuai dengan POJK TKS BPR dan BPRS.
+
+d.
+
+Sebagaimana dimaksud dalam Pasal 9 POJK TKS BPR dan
+BPRS, penerapan manajemen risiko dan penyampaian laporan
+profil risiko BPRS dilakukan sesuai kategori dengan penerapan
+sebagai berikut:
+Posisi Laporan Bulan Desember 2022
+Kategori BPRS
+
+Jenis Risiko
+
+BPRS yang memiliki modal inti a.
+
+risiko kredit;
+
+paling
+
+risiko operasional; dan
+
+sedikit b.
+
+Rp50.000.000.000,00
+
+(lima c.
+
+risiko kepatuhan.
+
+puluh miliar rupiah)
+Posisi Laporan Bulan Juni 2023
+Kategori BPRS
+1.
+
+2.
+
+Jenis Risiko
+
+BPRS yang memiliki modal a.
+
+risiko kredit;
+
+inti
+
+sedikit b.
+
+risiko operasional;
+
+Rp50.000.000.000,00 (lima c.
+
+risiko kepatuhan;
+
+puluh miliar rupiah)
+
+d.
+
+risiko likuiditas;
+
+e.
+
+risiko reputasi; dan
+
+f.
+
+risiko strategis.
+
+paling
+
+BPRS yang memiliki modal a.
+
+risiko kredit; dan
+
+inti
+
+risiko operasional.
+
+kurang
+
+dari b.
+
+Rp50.000.000.000,00 (lima
+puluh miliar rupiah)
+Sejak Posisi Laporan Bulan Desember 2023
+Kategori BPRS
+1.
+
+2.
+
+Jenis Risiko
+
+BPRS yang memiliki modal a.
+
+risiko kredit;
+
+inti
+
+sedikit b.
+
+risiko operasional;
+
+Rp50.000.000.000,00 (lima c.
+
+risiko kepatuhan;
+
+puluh miliar rupiah)
+
+d.
+
+risiko likuiditas;
+
+e.
+
+risiko reputasi; dan
+
+f.
+
+risiko strategis.
+
+paling
+
+BPRS yang memiliki modal Paling sedikit:
+inti
+
+kurang
+
+dari a.
+
+risiko kredit;
+
+-8-
+
+Sejak Posisi Laporan Bulan Desember 2023
+Kategori BPRS
+
+Jenis Risiko
+
+Rp50.000.000.000,00 (lima b.
+
+risiko operasional;
+
+puluh miliar rupiah)
+
+c.
+
+risiko kepatuhan; dan
+
+d.
+
+risiko likuiditas.
+
+Pengenaan sanksi atas pelanggaran:
+1)
+
+penerapan manajemen risiko BPRS dan penyampaian
+laporan profil risiko BPRS selain terkait perubahan
+penerapan manajemen risiko karena adanya peningkatan
+modal inti BPRS tetap mengacu pada Peraturan Otoritas
+Jasa Keuangan mengenai penerapan manajemen risiko
+bagi BPRS; dan
+
+2)
+
+terkait perubahan penerapan manajemen risiko karena
+adanya peningkatan modal inti BPRS mengacu pada POJK
+TKS BPR dan BPRS.
+
+Pengenaan sanksi terhadap penyampaian laporan profil risiko
+BPRS sebagaimana dimaksud pada angka 1) di atas mulai
+diterapkan pada penyampaian laporan:
+1)
+
+semester pertama tahun 2023, bagi BPRS yang memiliki
+modal inti paling sedikit Rp50.000.000.000,00 (lima puluh
+miliar rupiah); dan
+
+2)
+
+semester kedua tahun 2023, bagi BPRS yang memiliki
+modal inti kurang dari Rp50.000.000.000,00 (lima puluh
+miliar rupiah).
+
+2.
+
+Faktor Tata Kelola
+a.
+
+Penilaian faktor tata kelola merupakan penilaian terhadap
+kualitas penerapan prinsip tata kelola oleh manajemen BPR dan
+BPRS. Penilaian faktor tata kelola dilakukan berdasarkan
+analisis atas:
+1)
+
+Penerapan prinsip tata kelola yaitu:
+a)
+
+Bagi
+
+BPR:
+
+keterbukaan,
+
+akuntabilitas,
+
+pertanggungjawaban, independensi, dan kewajaran.
+b)
+
+Bagi
+
+BPRS:
+
+keterbukaan,
+
+akuntabilitas,
+
+pertanggungjawaban, profesional, dan kewajaran.
+2)
+
+Kecukupan struktur, proses, dan hasil penerapan tata
+kelola yang mencakup 11 (sebelas) faktor penilaian
+penerapan tata kelola yaitu:
+
+-9-
+
+a)
+
+Bagi BPR:
+(1)
+
+pelaksanaan tugas dan tanggung jawab Direksi;
+
+(2)
+
+pelaksanaan tugas dan tanggung jawab Dewan
+Komisaris;
+
+(3)
+
+kelengkapan dan pelaksanaan tugas atau fungsi
+komite;
+
+(4)
+
+penanganan benturan kepentingan;
+
+(5)
+
+penerapan fungsi kepatuhan;
+
+(6)
+
+penerapan fungsi audit intern;
+
+(7)
+
+penerapan fungsi audit ekstern;
+
+(8)
+
+penerapan manajemen risiko, termasuk sistem
+pengendalian intern;
+
+(9)
+
+batas maksimum pemberian kredit;
+
+(10) rencana bisnis BPR; dan
+(11) transparansi
+
+kondisi
+
+keuangan
+
+dan
+
+nonkeuangan.
+b)
+
+Bagi BPRS:
+(1)
+
+pelaksanaan tugas dan tanggung jawab Direksi;
+
+(2)
+
+pelaksanaan tugas dan tanggung jawab Dewan
+Komisaris;
+
+(3)
+
+pelaksanaan tugas dan tanggung jawab Dewan
+Pengawas Syariah;
+
+(4)
+
+kelengkapan dan pelaksanaan tugas atau fungsi
+komite;
+
+(5)
+
+pelaksanaan prinsip syariah dalam kegiatan
+BPRS;
+
+(6)
+
+penanganan benturan kepentingan;
+
+(7)
+
+penerapan fungsi kepatuhan, audit intern, dan
+audit ekstern;
+
+(8)
+
+penerapan manajemen risiko, termasuk sistem
+pengendalian intern;
+
+(9)
+
+batas maksimum penyaluran dana;
+
+(10) rencana bisnis BPRS; dan
+(11) transparansi
+nonkeuangan.
+
+kondisi
+
+keuangan
+
+dan
+
+- 10 -
+
+3)
+
+Informasi lain yang terkait dengan tata kelola yang
+didasarkan pada data dan informasi yang relevan.
+
+b.
+
+Pedoman dan tata cara penilaian terhadap faktor tata kelola
+mengacu pada Peraturan Otoritas Jasa Keuangan mengenai
+penerapan tata kelola bagi BPR dan Peraturan Otoritas Jasa
+Keuangan mengenai penerapan tata kelola bagi BPRS.
+
+c.
+
+Sebagaimana dimaksud dalam Pasal 12 POJK TKS BPR dan
+BPRS, penyampaian dan publikasi laporan penerapan tata
+kelola sejak posisi laporan bulan Desember 2022 dilakukan
+paling lambat tanggal 31 Januari untuk laporan posisi tanggal
+31 Desember.
+1)
+
+Pengenaan sanksi untuk penyampaian dan publikasi
+laporan penerapan tata kelola posisi laporan bulan
+Desember 2022, dilakukan sesuai dengan Peraturan
+Otoritas Jasa Keuangan mengenai penerapan tata kelola
+bagi BPR dan Peraturan Otoritas Jasa Keuangan mengenai
+penerapan tata kelola bagi BPRS jika penyampaian dan
+publikasi laporan melebihi batas waktu:
+a)
+
+4 (empat) bulan setelah tanggal 31 Desember 2022
+bagi BPR; atau
+
+b)
+
+3 (tiga) bulan setelah tanggal 31 Desember 2022 bagi
+BPRS.
+
+Contoh:
+Apabila
+
+BPR
+
+atau
+
+BPRS
+
+menyampaikan
+
+dan
+
+mempublikasikan laporan penerapan tata kelola posisi
+laporan bulan Desember 2022 pada tanggal 15 Februari
+2023, BPR atau BPRS tidak dikenakan sanksi pelanggaran
+penyampaian dan publikasi laporan sesuai dengan POJK
+TKS BPR dan BPRS. Namun, apabila BPR atau BPRS
+menyampaikan dan mempublikasikan laporan penerapan
+tata kelola posisi laporan bulan Desember 2022 pada
+tanggal 15 Mei 2023, BPR atau BPRS dikenakan sanksi
+pelanggaran penyampaian dan publikasi laporan sesuai
+dengan Peraturan Otoritas Jasa Keuangan mengenai
+penerapan tata kelola bagi BPR atau Peraturan Otoritas
+Jasa Keuangan mengenai penerapan tata kelola bagi BPRS.
+
+- 11 -
+
+2)
+
+Pengenaan sanksi untuk penyampaian dan publikasi
+laporan penerapan tata kelola sejak posisi laporan bulan
+Desember 2023, dilakukan sesuai dengan POJK TKS BPR
+dan BPRS jika penyampaian dan publikasi laporan
+penerapan tata kelola melebihi tanggal 31 Januari tahun
+berikutnya.
+Contoh: Apabila BPR atau BPRS menyampaikan dan
+mempublikasikan laporan penerapan tata kelola posisi
+laporan bulan Desember 2023 pada tanggal 15 Februari
+2024, BPR atau BPRS dikenakan sanksi pelanggaran
+penyampaian dan publikasi laporan sesuai dengan POJK
+TKS BPR dan BPRS.
+
+d.
+
+Penilaian Tingkat Kesehatan BPR dan BPRS posisi bulan Juni,
+mempertimbangkan penilaian atas penerapan tata kelola posisi
+bulan Desember tahun sebelumnya yang disesuaikan dengan
+perkembangan kondisi atau permasalahan dalam penerapan
+tata kelola selama 6 (enam) bulan terakhir.
+
+3.
+
+Faktor Rentabilitas
+a.
+
+Penilaian faktor rentabilitas merupakan penilaian terhadap
+kondisi dan kemampuan BPR dan BPRS dalam menghasilkan
+laba untuk mendukung permodalan dan kegiatan operasional
+secara
+
+memadai
+
+dan
+
+berkesinambungan
+
+yang
+
+meliputi
+
+penilaian terhadap kinerja rentabilitas dan tingkat efisiensi
+operasional BPR dan BPRS. Penilaian faktor rentabilitas
+dilakukan dengan mempertimbangkan antara lain tingkat, tren,
+struktur, stabilitas rentabilitas, dan/atau perbandingan kinerja
+BPR dan BPRS dengan kinerja industri atau peer group misalnya
+BPR dan BPRS dengan karakteristik serupa, antara lain BPR
+dan BPRS di wilayah operasional yang sama, atau BPR dan
+BPRS dengan skala dan kompleksitas usaha yang sama. Untuk
+mendukung proses penilaian faktor rentabilitas, BPR dan BPRS
+dapat mengembangkan basis data kinerja industri atau peer
+group dengan data dan informasi yang bersumber dari pihak
+atau lembaga yang berwenang.
+b.
+
+Penilaian aspek kuantitatif faktor rentabilitas merupakan
+penilaian terhadap 3 (tiga) komponen, yaitu:
+1)
+
+Return on Asset (ROA);
+
+- 12 -
+
+2)
+
+Rasio
+
+Beban
+
+Operasional
+
+terhadap
+
+Pendapatan
+
+Operasional (BOPO); dan
+3)
+
+Net Interest Margin (NIM) bagi BPR atau Net Imbalan bagi
+BPRS.
+
+c.
+
+Selain penilaian aspek kuantitatif, penilaian faktor rentabilitas
+mempertimbangkan pula penilaian aspek kualitatif, yaitu:
+1)
+
+sumber rentabilitas, ditunjukkan antara lain dengan
+penilaian atas kontribusi komponen pendapatan yang
+mendukung rentabilitas;
+
+2)
+
+kesinambungan rentabilitas, ditunjukkan antara lain
+dengan penilaian atas prospek rentabilitas di masa yang
+akan datang; dan/atau
+
+3)
+
+manajemen rentabilitas, ditunjukkan antara lain dengan
+penilaian
+
+atas
+
+kemampuan
+
+BPR
+
+dan
+
+BPRS
+
+dalam
+
+mengelola rentabilitas.
+4.
+
+Faktor Permodalan
+a.
+
+Penilaian faktor permodalan merupakan penilaian terhadap
+kecukupan
+
+modal
+
+BPR
+
+dan
+
+BPRS
+
+yang
+
+mencerminkan
+
+dukungan keuangan dalam pelaksanaan aktivitas BPR dan
+BPRS untuk menyerap potensi kerugian saat ini dan waktu
+yang
+
+akan
+
+datang.
+
+mempertimbangkan
+
+Penilaian
+
+tingkat,
+
+tren,
+
+dilakukan
+
+dengan
+
+struktur,
+
+stabilitas
+
+permodalan, dan perbandingan kinerja BPR dan BPRS dengan
+kinerja industri atau peer group misalnya BPR dan BPRS dengan
+karakteristik serupa, antara lain BPR dan BPRS di wilayah
+operasional yang sama, atau BPR dan BPRS dengan skala dan
+kompleksitas usaha yang sama. Untuk mendukung proses
+penilaian
+
+faktor
+
+permodalan,
+
+BPR
+
+dan
+
+BPRS
+
+dapat
+
+mengembangkan basis data kinerja industri atau peer group
+dengan data dan informasi yang bersumber dari pihak atau
+lembaga yang berwenang.
+b.
+
+Penilaian aspek kuantitatif faktor permodalan merupakan
+penilaian terhadap 2 (dua) komponen yaitu:
+1)
+
+Rasio Kewajiban Pemenuhan Modal Minimum (KPMM); dan
+
+2)
+
+Rasio Modal Inti terhadap Aset Produktif Bermasalah Neto
+(MIAPB).
+
+- 13 -
+
+c.
+
+Penilaian aspek kualitatif faktor
+
+permodalan
+
+merupakan
+
+penilaian terhadap:
+1)
+
+manajemen permodalan, ditunjukkan dengan penilaian
+atas pemahaman Direksi dan Dewan Komisaris terhadap
+pengelolaan modal, kebijakan dan prosedur pengelolaan
+modal, perencanaan modal, dan penilaian kecukupan
+modal; dan/atau
+
+2)
+
+kemampuan
+
+akses
+
+permodalan,
+
+ditunjukkan
+
+dengan
+
+penilaian atas akses sumber modal baik yang berasal dari
+internal maupun eksternal, misalnya kinerja rentabilitas
+yang mendukung permodalan atau pihak lain yang dapat
+mendukung permodalan BPR dan BPRS.
+IV.
+
+TATA CARA PENILAIAN
+Penilaian Tingkat Kesehatan BPR dan BPRS, dilakukan berdasarkan
+tahapan sebagai berikut:
+1.
+
+Tahap Penetapan Peringkat Faktor dan Komponen
+a.
+
+Faktor Profil Risiko
+Peringkat faktor profil risiko ditetapkan ke dalam 5 (lima)
+peringkat yaitu:
+1)
+
+peringkat 1 (sangat rendah);
+
+2)
+
+peringkat 2 (rendah);
+
+3)
+
+peringkat 3 (sedang);
+
+4)
+
+peringkat 4 (tinggi); atau
+
+5)
+
+peringkat 5 (sangat tinggi).
+
+Urutan
+
+peringkat
+
+faktor
+
+profil
+
+risiko
+
+yang
+
+lebih
+
+kecil
+
+mencerminkan semakin rendahnya risiko yang dihadapi oleh
+BPR dan BPRS sebagaimana tercantum dalam Lampiran Bagian
+A yang merupakan bagian tidak terpisahkan dari Surat Edaran
+Otoritas Jasa Keuangan ini. Penetapan peringkat faktor profil
+risiko dilakukan sesuai dengan Peraturan Otoritas Jasa
+Keuangan mengenai penerapan manajemen risiko bagi BPR dan
+Peraturan
+
+Otoritas
+
+Jasa
+
+Keuangan
+
+mengenai
+
+penerapan
+
+manajemen risiko bagi BPRS.
+b.
+
+Faktor Tata Kelola
+Peringkat faktor tata kelola ditetapkan ke dalam 5 (lima)
+peringkat yaitu:
+
+- 14 -
+
+1)
+
+peringkat 1 (sangat baik);
+
+2)
+
+peringkat 2 (baik);
+
+3)
+
+peringkat 3 (cukup baik);
+
+4)
+
+peringkat 4 (kurang baik); atau
+
+5)
+
+peringkat 5 (tidak baik).
+
+Urutan
+
+peringkat
+
+faktor
+
+tata
+
+kelola
+
+yang
+
+lebih
+
+kecil
+
+mencerminkan penerapan tata kelola yang lebih baik oleh BPR
+dan BPRS sebagaimana tercantum dalam Lampiran Bagian B
+yang merupakan bagian tidak terpisahkan dari Surat Edaran
+Otoritas Jasa Keuangan ini. Penetapan peringkat faktor tata
+kelola dilakukan sesuai dengan Peraturan Otoritas Jasa
+Keuangan mengenai penerapan tata kelola bagi BPR dan
+Peraturan Otoritas Jasa Keuangan mengenai penerapan tata
+kelola bagi BPRS.
+c.
+
+Faktor Rentabilitas
+Penetapan peringkat faktor rentabilitas dilakukan dengan
+menilai aspek kuantitatif dan kualitatif, sebagai berikut:
+1)
+
+Dalam
+
+penilaian
+
+aspek
+
+kuantitatif,
+
+BPR
+
+dan
+
+BPRS
+
+menetapkan peringkat komponen rentabilitas dengan cara
+terlebih dahulu menghitung masing-masing komponen
+rentabilitas dan menetapkan peringkat masing-masing
+komponen rentabilitas dengan mengacu pada Lampiran
+Bagian C bagi BPR dan Lampiran Bagian D bagi BPRS yang
+merupakan bagian tidak terpisahkan dari Surat Edaran
+Otoritas Jasa Keuangan ini. Selanjutnya, BPR dan BPRS
+mempertimbangkan
+merupakan
+
+penilaian
+
+penilaian
+
+kesinambungan
+
+aspek
+
+terhadap
+
+rentabilitas,
+
+kualitatif
+
+yang
+
+sumber
+
+rentabilitas,
+
+dan/atau
+
+manajemen
+
+rentabilitas
+
+dilakukan
+
+rentabilitas.
+2)
+
+Penetapan
+
+peringkat
+
+faktor
+
+berdasarkan analisis yang komprehensif dan terstruktur
+terhadap
+
+aspek
+
+memperhatikan
+
+kuantitatif
+
+dan
+
+signifikansi
+
+serta
+
+kualitatif
+
+dengan
+
+mempertimbangkan
+
+permasalahan lain yang memengaruhi rentabilitas BPR
+dan BPRS. Penilaian faktor rentabilitas dapat dilakukan
+dengan mempertimbangkan antara lain tingkat, tren,
+struktur, stabilitas rentabilitas, dan/atau perbandingan
+
+- 15 -
+
+kinerja BPR dan BPRS dengan kinerja industri atau peer
+group.
+3)
+
+Peringkat faktor rentabilitas ditetapkan ke dalam 5 (lima)
+peringkat yaitu:
+a)
+
+peringkat 1 (sangat baik);
+
+b)
+
+peringkat 2 (baik);
+
+c)
+
+peringkat 3 (cukup baik);
+
+d)
+
+peringkat 4 (kurang baik); atau
+
+e)
+
+peringkat 5 (tidak baik).
+
+Urutan peringkat faktor rentabilitas yang lebih kecil
+mencerminkan
+
+kondisi
+
+rentabilitas
+
+yang
+
+lebih
+
+baik.
+
+Penetapan peringkat faktor rentabilitas dilakukan dengan
+mengacu pada Lampiran Bagian E yang merupakan bagian
+tidak terpisahkan dari Surat Edaran Otoritas Jasa
+Keuangan ini.
+d.
+
+Faktor Permodalan
+Penetapan peringkat faktor permodalan dilakukan dengan
+menilai aspek kuantitatif dan kualitatif, sebagai berikut:
+1)
+
+Dalam
+
+penilaian
+
+aspek
+
+kuantitatif,
+
+BPR
+
+dan
+
+BPRS
+
+menetapkan peringkat komponen permodalan dengan cara
+terlebih dahulu menghitung masing-masing komponen
+permodalan dan menetapkan peringkat masing-masing
+komponen permodalan dengan mengacu pada Lampiran
+Bagian C bagi BPR dan Lampiran Bagian D bagi BPRS yang
+merupakan bagian tidak terpisahkan dari Surat Edaran
+Otoritas Jasa Keuangan ini. Selanjutnya, BPR dan BPRS
+mempertimbangkan
+
+penilaian
+
+aspek
+
+kualitatif
+
+yang
+
+merupakan penilaian terhadap manajemen permodalan
+dan/atau kemampuan akses permodalan.
+2)
+
+Penetapan
+
+peringkat
+
+faktor
+
+permodalan
+
+dilakukan
+
+berdasarkan analisis yang komprehensif dan terstruktur
+terhadap
+
+aspek
+
+memperhatikan
+
+kuantitatif
+
+dan
+
+signifikansi
+
+serta
+
+kualitatif
+
+dengan
+
+mempertimbangkan
+
+permasalahan lain yang memengaruhi permodalan BPR
+dan BPRS.
+3)
+
+Peringkat faktor permodalan ditetapkan ke dalam 5 (lima)
+peringkat yaitu:
+
+- 16 -
+
+a)
+
+peringkat 1 (sangat baik);
+
+b)
+
+peringkat 2 (baik);
+
+c)
+
+peringkat 3 (cukup baik);
+
+d)
+
+peringkat 4 (kurang baik); atau
+
+e)
+
+peringkat 5 (tidak baik).
+
+Urutan peringkat faktor permodalan yang lebih kecil
+mencerminkan kondisi permodalan yang lebih baik.
+Penetapan peringkat faktor permodalan dilakukan dengan
+mengacu pada Lampiran Bagian F yang merupakan bagian
+tidak terpisahkan dari Surat Edaran Otoritas Jasa
+Keuangan ini.
+2.
+
+Tahap Penetapan Peringkat Komposit Tingkat Kesehatan BPR dan
+BPRS
+a.
+
+Berdasarkan peringkat faktor yang diperoleh, masing-masing
+peringkat faktor dikalikan dengan bobot faktor, sebagai berikut:
+1)
+
+faktor profil risiko, dengan bobot 25% (dua puluh lima
+persen);
+
+2)
+
+faktor tata kelola, dengan bobot 30% (tiga puluh persen);
+
+3)
+
+faktor rentabilitas, dengan bobot 15% (lima belas persen);
+dan
+
+4)
+b.
+
+faktor permodalan, dengan bobot 30% (tiga puluh persen).
+
+Hasil penjumlahan dari peringkat faktor dikalikan bobot faktor
+disebut dengan nilai komposit. Penetapan Peringkat Komposit
+tingkat kesehatan dilakukan berdasarkan definisi Peringkat
+Komposit sebagaimana tercantum dalam Lampiran Bagian G
+yang merupakan bagian tidak terpisahkan dari Surat Edaran
+Otoritas Jasa Keuangan ini.
+
+c.
+
+Penetapan Peringkat Komposit Tingkat Kesehatan BPR dan
+BPRS terdiri dari 5 (lima) peringkat yaitu:
+1)
+
+Peringkat Komposit 1 (PK-1);
+
+2)
+
+Peringkat Komposit 2 (PK-2);
+
+3)
+
+Peringkat Komposit 3 (PK-3);
+
+4)
+
+Peringkat Komposit 4 (PK-4); dan
+
+5)
+
+Peringkat Komposit 5 (PK-5).
+
+Urutan Peringkat Komposit yang lebih kecil mencerminkan
+kondisi BPR dan BPRS yang lebih sehat.
+
+- 17 -
+
+d.
+
+Penilaian akhir tingkat kesehatan ditetapkan berdasarkan pada
+analisis terhadap masing-masing faktor penilaian tingkat
+kesehatan meliputi analisis profil risiko, tata kelola, rentabilitas,
+permodalan,
+
+serta
+
+keseluruhan.
+
+Analisis
+
+penilaian
+
+tingkat
+
+analisis
+
+tingkat
+
+dimaksud
+
+kesehatan
+
+kesehatan
+
+merupakan
+
+secara
+
+secara
+
+bagian
+
+dari
+
+komprehensif
+
+dan
+
+terstruktur yang paling sedikit mencakup informasi terkini
+kondisi BPR dan BPRS, pokok permasalahan yang sedang
+dihadapi, termasuk keterkaitan antarfaktor. Dalam hal BPR dan
+BPRS menggunakan parameter dan/atau komponen tambahan
+pada setiap faktor tingkat kesehatan, BPR dan BPRS harus
+menginformasikan dalam laporan penilaian sendiri.
+3.
+
+Pengkinian Penilaian Tingkat Kesehatan BPR dan BPRS
+a.
+
+Penilaian Tingkat Kesehatan BPR dan BPRS dapat dikinikan
+sewaktu-waktu dalam hal BPR dan BPRS memenuhi kondisi
+tertentu sesuai dengan POJK TKS BPR dan BPRS. Pengkinian
+atas penilaian Tingkat Kesehatan BPR dan BPRS dapat
+dilakukan di luar periode akhir bulan Juni dan Desember.
+Contoh:
+BPR atau BPRS menghadapi permasalahan signifikan pada
+bulan September akibat kerugian fraud yang berdampak pada
+permodalan dan kinerja BPR atau BPRS secara keseluruhan.
+Berdasarkan kondisi tersebut, BPR atau BPRS melakukan
+pengkinian penilaian tingkat kesehatan pada posisi akhir bulan
+September dengan mempertimbangkan kondisi permasalahan
+yang terjadi.
+
+b.
+
+Otoritas Jasa Keuangan dapat meminta BPR dan BPRS untuk
+menyampaikan hasil pengkinian penilaian sendiri Tingkat
+Kesehatan BPR dan BPRS sewaktu-waktu dengan memberikan
+batas waktu penyampaian sesuai dengan kondisi BPR dan
+BPRS serta urgensi kebutuhan pengawasan.
+
+c.
+
+Dalam hal hasil pengkinian penilaian sendiri Tingkat Kesehatan
+BPR dan BPRS sewaktu-waktu disampaikan atas inisiatif BPR
+atau BPRS, penyampaian dilakukan setelah melalui komunikasi
+dengan pengawas Otoritas Jasa Keuangan yang selanjutnya
+dilaporkan melalui sistem pelaporan Otoritas Jasa Keuangan
+
+- 18 -
+
+berdasarkan
+
+surat
+
+yang
+
+diterbitkan
+
+oleh
+
+Otoritas
+
+Jasa
+
+Keuangan.
+V.
+
+RENCANA TINDAK
+1.
+
+Sesuai dengan Pasal 17 ayat (1) POJK TKS BPR dan BPRS, dalam hal
+berdasarkan hasil penilaian Tingkat Kesehatan BPR dan BPRS yang
+dilakukan Otoritas Jasa Keuangan dan/atau hasil penilaian sendiri
+terdapat:
+a.
+
+faktor tata kelola dan/atau profil risiko BPR dan BPRS yang
+ditetapkan dengan peringkat 4 dan/atau peringkat 5;
+
+b.
+
+Peringkat Komposit Tingkat Kesehatan BPR dan BPRS yang
+ditetapkan dengan peringkat 4; dan/atau
+
+c.
+
+Peringkat Komposit Tingkat Kesehatan BPR dan BPRS yang
+ditetapkan selain peringkat 4 atau peringkat 5, namun
+berpotensi ditetapkan dalam pengawasan intensif atau terdapat
+permasalahan
+
+signifikan
+
+yang
+
+perlu
+
+diatasi
+
+agar
+
+tidak
+
+mengganggu kelangsungan usaha BPR dan BPRS,
+BPR dan BPRS wajib menyampaikan rencana tindak.
+Penyampaian dan pelaksanaan rencana tindak dan laporan realisasi
+rencana tindak dilakukan sesuai dengan POJK TKS BPR dan BPRS.
+2.
+
+Penyampaian dan pelaksanaan rencana tindak manajemen risiko
+termasuk kaji ulang manajemen risiko serta pengawasan melekat
+sesuai dengan Surat Edaran Otoritas Jasa Keuangan mengenai
+penerapan manajemen risiko bagi BPR dan Surat Edaran Otoritas
+Jasa Keuangan mengenai penerapan manajemen risiko bagi BPRS,
+dilakukan sebagaimana dimaksud pada angka 1 di atas.
+
+3.
+
+Penyampaian dan pelaksanaan rencana tindak sesuai dengan Surat
+Edaran Otoritas Jasa Keuangan mengenai penerapan tata kelola bagi
+BPR dan Surat Edaran Otoritas Jasa Keuangan mengenai penerapan
+tata kelola bagi BPRS, dilakukan sebagaimana dimaksud pada angka
+1 di atas.
+
+4.
+
+BPR dan BPRS menyusun dan menyampaikan rencana tindak dalam
+hal BPR dan BPRS memenuhi kondisi tertentu sesuai dengan POJK
+TKS BPR dan BPRS. Rencana tindak antara lain meliputi:
+a.
+
+memperbaiki penerapan manajemen risiko dengan langkah
+perbaikan
+
+yang
+
+penyelesaian.
+
+nyata
+
+disertai
+
+dengan
+
+target
+
+waktu
+
+- 19 -
+
+Contoh:
+Pada BPR atau BPRS dengan tingkat risiko kredit yang tinggi,
+rencana tindak yang dapat dilakukan adalah menurunkan
+tingkat risiko kredit tersebut dengan memperbaiki kelemahan
+dalam kualitas penerapan manajemen risiko kredit dan/atau
+menurunkan eksposur risiko kredit inheren;
+b.
+
+memperbaiki penerapan tata kelola dengan langkah perbaikan
+yang nyata dan target waktu penyelesaian.
+Contoh:
+Pada BPR atau BPRS dengan peringkat faktor tata kelola 4, yang
+disebabkan
+
+karena
+
+lemahnya
+
+fungsi
+
+kepatuhan
+
+akibat
+
+perangkapan jabatan yang berdampak pada pelaksanaan tugas,
+BPR atau BPRS dapat memperbaiki kelemahan tersebut dengan
+pemenuhan struktur sebagaimana ketentuan yang berlaku dan
+meningkatkan efektivitas fungsi kepatuhan dalam proses bisnis
+BPR atau BPRS;
+c.
+
+memperbaiki
+
+kinerja
+
+keuangan,
+
+antara
+
+lain
+
+melalui
+
+peningkatan efisiensi dalam hal BPR dan BPRS mengalami
+permasalahan rentabilitas; dan/atau
+d.
+
+melakukan
+
+tambahan
+
+setoran
+
+modal
+
+secara
+
+tunai
+
+oleh
+
+pemegang saham dalam hal BPR dan BPRS mengalami
+permasalahan permodalan.
+5.
+
+Rencana tindak dan laporan realisasi rencana tindak disampaikan
+kepada Otoritas Jasa Keuangan melalui sistem pelaporan Otoritas
+Jasa Keuangan.
+
+6.
+
+Dalam hal sistem pelaporan Otoritas Jasa Keuangan sebagaimana
+dimaksud pada angka 5 belum tersedia, rencana tindak dan laporan
+realisasi rencana tindak disampaikan dalam bentuk:
+a.
+
+salinan elektronik (softcopy) melalui surat elektronik resmi; atau
+
+b.
+
+salinan cetak (hardcopy),
+
+yang ditujukan kepada Kantor Regional Otoritas Jasa Keuangan
+atau Kantor Otoritas Jasa Keuangan setempat sesuai dengan
+wilayah tempat kedudukan kantor pusat BPR dan BPRS.
+
+- 20 -
+
+VI.
+
+PELAPORAN
+1.
+
+BPR dan BPRS menyampaikan laporan hasil penilaian sendiri atas
+Tingkat Kesehatan BPR dan BPRS kepada Otoritas Jasa Keuangan
+dengan mengacu pada Lampiran Bagian H bagi BPR dan Lampiran
+Bagian I bagi BPRS yang merupakan bagian tidak terpisahkan dari
+Surat Edaran Otoritas Jasa Keuangan ini paling lambat tanggal:
+a.
+
+31 Juli untuk penilaian Tingkat Kesehatan BPR dan BPRS posisi
+akhir bulan Juni; dan
+
+b.
+
+31 Januari untuk penilaian Tingkat Kesehatan BPR dan BPRS
+posisi akhir bulan Desember.
+
+2.
+
+Laporan sebagaimana dimaksud pada angka 1 yang telah disetujui
+oleh Direksi dan disampaikan kepada Dewan Komisaris selanjutnya
+disampaikan kepada Otoritas Jasa Keuangan melalui sistem
+pelaporan Otoritas Jasa Keuangan.
+
+3.
+
+Penyampaian laporan kepada Otoritas Jasa Keuangan sebagaimana
+dimaksud pada angka 2 dilakukan pertama kali untuk posisi laporan
+bulan Desember 2022.
+
+4.
+
+BPR dan BPRS menyiapkan laporan penilaian sendiri atas tingkat
+kesehatan dalam bentuk text file (.txt) dan dokumen pendukung
+portable document format (.pdf).
+
+5.
+
+Dalam hal batas waktu penyampaian:
+a.
+
+laporan profil risiko sesuai dengan Peraturan Otoritas Jasa
+Keuangan mengenai penerapan manajemen risiko bagi BPR
+atau Peraturan Otoritas Jasa Keuangan mengenai penerapan
+manajemen risiko bagi BPRS; dan
+
+b.
+
+laporan penerapan tata kelola sesuai dengan:
+1)
+
+Peraturan Otoritas Jasa Keuangan mengenai penerapan
+tata kelola bagi BPR atau Peraturan Otoritas Jasa
+Keuangan mengenai penerapan tata kelola bagi BPRS
+sampai posisi laporan bulan Desember 2022; dan
+
+2)
+
+POJK TKS BPR dan BPRS mulai posisi laporan bulan
+Desember 2023,
+
+jatuh pada hari Sabtu, hari Minggu, atau hari libur yang ditetapkan
+oleh Pemerintah Pusat dan/atau Pemerintah Daerah, batas waktu
+penyampaian laporan adalah hari kerja berikutnya.
+
+- 21 -
+
+VII. PENUTUP
+1.
+
+Pada saat Surat Edaran Otoritas Jasa Keuangan ini mulai berlaku,
+Surat Edaran Otoritas Jasa Keuangan Nomor 28/SEOJK.03/2019
+tentang Sistem Penilaian Tingkat Kesehatan Bank Pembiayaan
+Rakyat Syariah dicabut dan dinyatakan tidak berlaku pada tanggal
+1 Desember 2023.
+
+2.
+
+Pada saat Surat Edaran Otoritas Jasa Keuangan ini mulai berlaku,
+pelaksanaan dan penyampaian mengenai kaji ulang dan rencana
+tindak serta pengawasan melekat sebagaimana dimaksud pada
+Matriks Penetapan Tingkat Risiko dalam Lampiran II:
+a.
+
+Surat
+
+Edaran
+
+Otoritas
+
+Jasa
+
+Keuangan
+
+Nomor
+
+1/SEOJK.03/2019 tentang Penerapan Manajemen Risiko bagi
+Bank Perkreditan Rakyat; dan
+b.
+
+Surat
+
+Edaran
+
+Otoritas
+
+Jasa
+
+Keuangan
+
+Nomor
+
+10/SEOJK.03/2019 tentang Penerapan Manajemen Risiko bagi
+Bank Pembiayaan Rakyat Syariah,
+dicabut dan dinyatakan tidak berlaku pada tanggal 1 Januari 2024.
+3.
+
+Ketentuan dalam Surat Edaran Otoritas Jasa Keuangan ini mulai
+berlaku pada tanggal ditetapkan.
+
+Ditetapkan di Jakarta
+pada tanggal 18 Juli 2022
+KEPALA EKSEKUTIF PENGAWAS PERBANKAN
+OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA,
+ttd
+HERU KRISTIYANA
+
+Salinan ini sesuai dengan aslinya
+Direktur Hukum 1
+Departemen Hukum
+ttd
+Mufli Asmawidjaja
+
+LAMPIRAN
+SURAT EDARAN OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA
+NOMOR 11 /SEOJK.03/2022
+TENTANG
+PENILAIAN
+
+TINGKAT
+
+KESEHATAN
+
+BANK PEMBIAYAAN RAKYAT SYARIAH
+
+BANK
+
+PERKREDITAN
+
+RAKYAT
+
+DAN
+
+-2-
+
+Bagian A: Peringkat Faktor Profil Risiko
+Peringkat
+
+Penjelasan
+
+Peringkat 1
+
+Profil risiko BPR dan BPRS yang termasuk dalam peringkat ini pada umumnya memiliki karakteristik antara
+
+(Sangat Rendah)
+
+lain:
+a.
+
+Dengan mempertimbangkan aktivitas bisnis yang dilakukan BPR dan BPRS, kemungkinan kerugian yang
+dihadapi BPR dan BPRS dari risiko inheren tergolong sangat rendah selama periode waktu tertentu pada
+masa yang akan datang.
+
+b.
+
+KPMR sangat memadai. Dalam hal terdapat kelemahan minor, kelemahan tersebut dapat diabaikan.
+
+Peringkat 2
+
+Profil risiko BPR dan BPRS yang termasuk dalam peringkat ini pada umumnya memiliki karakteristik antara
+
+(Rendah)
+
+lain:
+a.
+
+Dengan mempertimbangkan aktivitas bisnis yang dilakukan BPR dan BPRS, kemungkinan kerugian yang
+dihadapi BPR dan BPRS dari risiko inheren tergolong rendah selama periode waktu tertentu pada masa
+yang akan datang.
+
+b.
+
+KPMR memadai. Dalam hal terdapat kelemahan minor, kelemahan tersebut perlu mendapatkan perhatian
+manajemen.
+
+Peringkat 3
+(Sedang)
+
+Profil risiko BPR dan BPRS yang termasuk dalam peringkat ini pada umumnya memiliki karakteristik antara
+lain:
+a.
+
+Dengan mempertimbangkan aktivitas bisnis yang dilakukan BPR dan BPRS, kemungkinan kerugian yang
+dihadapi BPR dan BPRS dari risiko inheren tergolong sedang selama periode waktu tertentu pada masa
+yang akan datang.
+
+-3-
+
+Peringkat
+
+Penjelasan
+b.
+
+KPMR cukup memadai. Meskipun persyaratan minimum terpenuhi, terdapat beberapa kelemahan yang
+membutuhkan perhatian manajemen dan perbaikan.
+
+Peringkat 4
+(Tinggi)
+
+Profil risiko BPR dan BPRS yang termasuk dalam peringkat ini pada umumnya memiliki karakteristik antara
+lain:
+a.
+
+Dengan mempertimbangkan aktivitas bisnis yang dilakukan BPR dan BPRS, kemungkinan kerugian yang
+dihadapi BPR dan BPRS dari risiko inheren tergolong tinggi selama periode waktu tertentu pada masa yang
+akan datang.
+
+b.
+
+KPMR kurang memadai. Terdapat kelemahan signifikan pada berbagai aspek manajemen risiko yang
+membutuhkan tindakan korektif segera.
+
+Peringkat 5
+(Sangat Tinggi)
+
+Profil risiko BPR dan BPRS yang termasuk dalam peringkat ini pada umumnya memiliki karakteristik antara
+lain:
+a.
+
+Dengan mempertimbangkan aktivitas bisnis yang dilakukan BPR dan BPRS, kemungkinan kerugian yang
+dihadapi BPR dan BPRS dari risiko inheren tergolong sangat tinggi selama periode waktu tertentu pada
+masa yang akan datang.
+
+b.
+
+KPMR tidak memadai. Terdapat kelemahan signifikan pada berbagai aspek manajemen risiko yang
+tindakan penyelesaiannya di luar kemampuan manajemen.
+
+Peringkat faktor profil risiko adalah peringkat risiko sesuai dengan Surat Edaran Otoritas Jasa Keuangan mengenai penerapan
+manajemen risiko bagi BPR dan Surat Edaran Otoritas Jasa Keuangan mengenai penerapan manajemen risiko bagi BPRS.
+
+-4-
+
+Bagian B: Peringkat Faktor Tata Kelola
+Peringkat
+
+Penjelasan
+
+Peringkat 1
+
+BPR dan BPRS memiliki penerapan tata kelola yang sangat baik.
+
+Peringkat 2
+
+BPR dan BPRS memiliki penerapan tata kelola yang baik.
+
+Peringkat 3
+
+BPR dan BPRS memiliki penerapan tata kelola yang cukup baik.
+
+Peringkat 4
+
+BPR dan BPRS memiliki penerapan tata kelola yang kurang baik.
+
+Peringkat 5
+
+BPR dan BPRS memiliki penerapan tata kelola yang tidak baik.
+
+Peringkat faktor tata kelola adalah peringkat komposit tata kelola sesuai dengan Surat Edaran Otoritas Jasa Keuangan mengenai
+penerapan tata kelola bagi BPR dan Surat Edaran Otoritas Jasa Keuangan mengenai penerapan tata kelola bagi BPRS.
+
+-5-
+
+Bagian C: Peringkat Komponen Faktor Rentabilitas dan Permodalan bagi BPR
+No.
+1.
+
+Komponen
+
+Penjelasan
+
+Return on Asset (ROA)
+
+𝐿𝑎𝑏𝑎 𝑠𝑒𝑏𝑒𝑙𝑢𝑚 𝑝𝑎𝑗𝑎𝑘
+
+ROA = 𝑅𝑎𝑡𝑎−𝑟𝑎𝑡𝑎 𝑡𝑜𝑡𝑎𝑙 𝑎𝑠𝑒𝑡
+a.
+
+Peringkat
+Peringkat 1: ROA ≥2%
+
+Laba Sebelum Pajak adalah laba sebelum pajak Peringkat 2: 1.5%≤ROA<2%
+sebagaimana tercatat dalam laba rugi tahun Peringkat 3: 1%≤ROA<1.5%
+berjalan yang disetahunkan. Contoh: Untuk Peringkat 4: 0.5%≤ROA<1%
+posisi bulan Juni, akumulasi laba pada posisi Peringkat 5: ROA <0.5%
+Juni dihitung dengan cara dibagi 6 dan dikalikan
+dengan 12.
+
+b.
+
+Rata-rata Total Aset adalah hasil penjumlahan
+keseluruhan total aset posisi bulan pertama
+awal tahun sampai dengan posisi bulan laporan
+dibagi dengan jumlah bulan laporan.
+Total aset adalah total aset sebagaimana tercatat
+dalam laporan posisi keuangan tahun berjalan.
+Contoh: Untuk posisi bulan Juni, dihitung
+dengan cara menjumlahkan total aset posisi
+Januari sampai dengan Juni dibagi dengan 6.
+
+-6-
+
+No.
+2.
+
+Komponen
+
+Penjelasan
+
+Rasio Beban Operasional
+
+𝐵𝑒𝑏𝑎𝑛 𝑜𝑝𝑒𝑟𝑎𝑠𝑖𝑜𝑛𝑎𝑙
+
+BOPO=𝑃𝑒𝑛𝑑𝑎𝑝𝑎𝑡𝑎𝑛 𝑜𝑝𝑒𝑟𝑎𝑠𝑖𝑜𝑛𝑎𝑙
+
+terhadap Pendapatan
+Operasional (BOPO)
+
+Peringkat
+
+a.
+
+Peringkat 1: BOPO ≤85%
+
+Beban Operasional adalah semua beban yang Peringkat 2: 85%<BOPO≤90%
+dikeluarkan atas kegiatan utama BPR yang Peringkat 3: 90%<BOPO≤95%
+disetahunkan. Contoh: Untuk posisi bulan Juni, Peringkat 4: 95%<BOPO≤100%
+akumulasi beban operasional pada posisi Juni Peringkat 5: BOPO >100%
+dihitung dengan cara dibagi 6 dan dikalikan
+dengan 12.
+
+b.
+
+Pendapatan
+
+Operasional
+
+adalah
+
+semua
+
+pendapatan yang merupakan hasil dari kegiatan
+utama BPR yang disetahunkan. Contoh: Untuk
+posisi
+
+bulan
+
+Juni,
+
+akumulasi
+
+pendapatan
+
+operasional pada posisi Juni dihitung dengan
+cara dibagi 6 dan dikalikan dengan 12.
+3.
+
+Net Interest Margin (NIM)
+
+𝑃𝑒𝑛𝑑𝑎𝑝𝑎𝑡𝑎𝑛 𝑏𝑢𝑛𝑔𝑎 𝑏𝑒𝑟𝑠𝑖ℎ
+
+NIM=𝑅𝑎𝑡𝑎−𝑟𝑎𝑡𝑎 𝑡𝑜𝑡𝑎𝑙 𝑎𝑠𝑒𝑡 𝑝𝑟𝑜𝑑𝑢𝑘𝑡𝑖𝑓
+a.
+
+Peringkat 1: NIM ≥10%
+
+Pendapatan Bunga Bersih adalah pendapatan Peringkat 2: 8%≤NIM<10%
+bunga yang disetahunkan dikurangi dengan Peringkat 3: 6%≤NIM<8%
+beban bunga yang disetahunkan.
+
+Peringkat 4: 4%≤NIM<6%
+Peringkat 5: NIM <4%
+
+-7-
+
+No.
+
+Komponen
+
+Penjelasan
+Contoh: Untuk posisi bulan Juni, pendapatan
+bunga bersih adalah akumulasi pendapatan
+bunga pada posisi Juni yang dihitung dengan
+cara dibagi 6 dan dikalikan dengan 12 dikurangi
+dengan akumulasi beban bunga pada posisi Juni
+yang dihitung dengan cara dibagi 6 dan dikalikan
+dengan 12.
+b.
+
+Rata-rata Total Aset Produktif adalah hasil
+penjumlahan keseluruhan total aset produktif
+posisi bulan pertama awal tahun sampai dengan
+posisi bulan laporan dibagi dengan jumlah bulan
+laporan.
+Total aset produktif merupakan total Sertifikat
+Bank Indonesia, penempatan pada Bank lain,
+dan kredit yang diberikan.
+Contoh: Untuk posisi bulan Juni, dihitung
+dengan cara menjumlahkan total aset produktif
+posisi Januari sampai dengan Juni dibagi
+dengan 6.
+
+Peringkat
+
+-8-
+
+No.
+4.
+
+Komponen
+
+Penjelasan
+
+Rasio Kecukupan
+KPMM=
+
+Pemenuhan Modal Minimum
+(KPMM)
+
+Peringkat
+
+𝑀𝑜𝑑𝑎𝑙 𝑖𝑛𝑡𝑖+𝑚𝑜𝑑𝑎𝑙 𝑝𝑒𝑙𝑒𝑛𝑔𝑘𝑎𝑝
+
+Peringkat 1: KPMM ≥15%
+
+𝐴𝑇𝑀𝑅
+
+Modal inti, modal pelengkap, dan Aset Tertimbang Peringkat 2: 13%≤KPMM<15%
+Menurut Risiko (ATMR) mengacu pada Peraturan Peringkat 3: 12%≤KPMM<13%
+Otoritas
+
+Jasa
+
+Keuangan
+
+mengenai
+
+kewajiban Peringkat 4: 8%≤KPMM<12%
+
+penyediaan modal minimum dan pemenuhan modal Peringkat 5: KPMM <8%
+inti minimum BPR.
+5.
+
+Rasio Modal Inti terhadap
+
+𝑀𝑜𝑑𝑎𝑙 𝑖𝑛𝑡𝑖
+
+MIAPB=𝐴𝑠𝑒𝑡 𝑃𝑟𝑜𝑑𝑢𝑘𝑡𝑖𝑓 𝐵𝑒𝑟𝑚𝑎𝑠𝑎𝑙𝑎ℎ (𝑛𝑒𝑡𝑜)
+
+Aset Produktif Bermasalah
+Neto (MIAPB)
+
+a.
+
+Peringkat 1: MIAPB ≥200%
+
+Modal inti mengacu pada Peraturan Otoritas Peringkat 2: 180%≤MIAPB<200%
+Jasa Keuangan mengenai kewajiban penyediaan Peringkat 3: 150%≤MIAPB<180%
+modal minimum dan pemenuhan modal inti Peringkat 4: 120%≤MIAPB<150%
+minimum BPR.
+
+b.
+
+Aset produktif bermasalah (neto) adalah aset
+produktif yang memiliki kualitas kurang lancar,
+diragukan, dan macet setelah dikurangi dengan
+penyisihan penghapusan aset produktif.
+
+Peringkat 5: MIAPB <120%
+
+-9-
+
+Bagian D: Peringkat Komponen Faktor Rentabilitas dan Permodalan bagi BPRS
+No.
+1.
+
+Komponen
+
+Penjelasan
+
+Return on Asset (ROA)
+
+Peringkat
+
+𝐿𝑎𝑏𝑎 𝑠𝑒𝑏𝑒𝑙𝑢𝑚 𝑝𝑎𝑗𝑎𝑘
+
+ROA = 𝑅𝑎𝑡𝑎−𝑟𝑎𝑡𝑎 𝑡𝑜𝑡𝑎𝑙 𝑎𝑠𝑒𝑡
+a.
+
+Peringkat 1: ROA ≥2%
+
+Laba Sebelum Pajak adalah laba sebelum Peringkat 2: 1.5%≤ROA<2%
+pajak sebagaimana tercatat dalam laba rugi Peringkat 3: 1%≤ROA<1.5%
+tahun berjalan yang disetahunkan. Contoh: Peringkat 4: 0.5%≤ROA<1%
+Untuk posisi bulan Juni, akumulasi laba Peringkat 5: ROA <0.5%
+pada posisi Juni dihitung dengan cara dibagi
+6 dan dikalikan dengan 12.
+
+b.
+
+Rata-rata
+
+Total
+
+Aset
+
+adalah
+
+hasil
+
+penjumlahan keseluruhan total aset posisi
+bulan pertama awal tahun sampai dengan
+posisi bulan laporan dibagi dengan jumlah
+bulan laporan. Total aset adalah total aset
+sebagaimana tercatat dalam laporan posisi
+keuangan tahun berjalan. Contoh: Untuk
+posisi bulan Juni, dihitung dengan cara
+menjumlahkan total aset posisi Januari
+sampai dengan Juni dibagi dengan 6.
+
+- 10 -
+
+No.
+2.
+
+Komponen
+
+Penjelasan
+
+Rasio Beban Operasional
+
+𝐵𝑒𝑏𝑎𝑛 𝑜𝑝𝑒𝑟𝑎𝑠𝑖𝑜𝑛𝑎𝑙
+
+BOPO=𝑃𝑒𝑛𝑑𝑎𝑝𝑎𝑡𝑎𝑛 𝑜𝑝𝑒𝑟𝑎𝑠𝑖𝑜𝑛𝑎𝑙
+
+terhadap Pendapatan
+Operasional (BOPO)
+
+Peringkat
+
+a.
+
+Peringkat 1: BOPO ≤85%
+
+Beban operasional adalah beban bagi hasil Peringkat 2: 85%<BOPO≤90%
+untuk pemilik dana investasi dan beban Peringkat 3: 90%<BOPO≤95%
+operasional, yang disetahunkan. Contoh: Peringkat 4: 95%<BOPO≤100%
+Untuk posisi bulan Juni, akumulasi beban Peringkat 5: BOPO >100%
+bagi hasil untuk pemilik dana investasi dan
+beban operasional pada posisi Juni dihitung
+dengan cara dibagi 6 dan dikalikan dengan
+12.
+
+b.
+
+Pendapatan Operasional adalah pendapatan
+dari
+
+penyaluran
+
+dana
+
+dan
+
+pendapatan
+
+operasional lainnya, yang disetahunkan.
+Contoh: Untuk posisi bulan Juni, akumulasi
+pendapatan
+
+dari
+
+penyaluran
+
+dana
+
+dan
+
+pendapatan operasional lainnya pada posisi
+Juni dihitung dengan cara dibagi 6 dan
+dikalikan dengan 12.
+
+- 11 -
+
+No.
+3.
+
+Komponen
+
+Penjelasan
+
+Net Imbalan (NI)
+
+Peringkat
+
+𝑃𝑒𝑛𝑑𝑎𝑝𝑎𝑡𝑎𝑛 𝑝𝑒𝑛𝑦𝑎𝑙𝑢𝑟𝑎𝑛 𝑑𝑎𝑛𝑎 𝑠𝑒𝑡𝑒𝑙𝑎ℎ
+𝑏𝑎𝑔𝑖 ℎ𝑎𝑠𝑖𝑙, 𝑖𝑚𝑏𝑎𝑙𝑎𝑛, 𝑑𝑎𝑛 𝑏𝑜𝑛𝑢𝑠
+NI= 𝑅𝑎𝑡𝑎−𝑟𝑎𝑡𝑎 𝑡𝑜𝑡𝑎𝑙 𝑎𝑠𝑒𝑡 𝑝𝑟𝑜𝑑𝑢𝑘𝑡𝑖𝑓
+
+a.
+
+Peringkat 1: NI ≥10%
+
+Pendapatan Penyaluran Dana Setelah Bagi
+Hasil,
+
+Imbalan,
+
+pendapatan
+
+dan
+
+Bonus
+
+adalah
+
+dana
+
+yang
+
+penyaluran
+
+disetahunkan dikurangi dengan beban bagi
+hasil,
+
+imbalan,
+
+dan
+
+bonus,
+
+yang
+
+posisi
+
+bulan
+
+Juni,
+
+disetahunkan.
+Contoh:
+
+Untuk
+
+pendapatan penyaluran dana setelah bagi
+hasil, imbalan, dan bonus adalah akumulasi
+pendapatan penyaluran dana pada posisi
+Juni yang dihitung dengan cara dibagi 6 dan
+dikalikan
+
+dengan
+
+12
+
+dikurangi
+
+dengan
+
+akumulasi beban bagi hasil, imbalan, dan
+bonus pada posisi Juni yang dihitung dengan
+cara dibagi 6 dan dikalikan dengan 12.
+b.
+
+Rata-rata Total Aset Produktif adalah hasil
+penjumlahan
+
+keseluruhan
+
+total
+
+aset
+
+produktif posisi bulan pertama awal tahun
+
+Peringkat 2: 8%≤NI<10%
+Peringkat 3: 6%≤NI<8%
+Peringkat 4: 4%≤NI<6%
+Peringkat 5: NI <4%
+
+- 12 -
+
+No.
+
+Komponen
+
+Penjelasan
+
+Peringkat
+
+sampai dengan posisi bulan laporan dibagi
+dengan jumlah bulan laporan.
+Total
+
+aset
+
+produktif
+
+penempatan
+
+pada
+
+merupakan
+Bank
+
+total
+
+Indonesia,
+
+penempatan pada bank lain, dan pembiayaan
+yang diberikan.
+Contoh: Untuk posisi bulan Juni, dihitung
+dengan
+
+cara
+
+menjumlahkan
+
+total
+
+aset
+
+produktif posisi Januari sampai dengan Juni
+dibagi dengan 6.
+4.
+
+Rasio Kecukupan
+KPMM=
+
+Pemenuhan Modal Minimum
+(KPMM)
+
+𝑀𝑜𝑑𝑎𝑙 𝑖𝑛𝑡𝑖+𝑚𝑜𝑑𝑎𝑙 𝑝𝑒𝑙𝑒𝑛𝑔𝑘𝑎𝑝
+
+Peringkat 1: KPMM ≥15%
+
+𝐴𝑇𝑀𝑅
+
+Modal inti, modal pelengkap, dan ATMR mengacu Peringkat 2: 13%≤KPMM<15%
+pada Peraturan Otoritas Jasa Keuangan mengenai Peringkat 3: 12%≤KPMM<13%
+kewajiban
+
+penyediaan
+
+modal
+
+minimum
+
+pemenuhan modal inti minimum BPRS.
+5.
+
+Rasio Modal Inti terhadap
+
+𝑀𝑜𝑑𝑎𝑙 𝑖𝑛𝑡𝑖
+
+MIAPB=𝐴𝑠𝑒𝑡 𝑃𝑟𝑜𝑑𝑢𝑘𝑡𝑖𝑓 𝐵𝑒𝑟𝑚𝑎𝑠𝑎𝑙𝑎ℎ (𝑛𝑒𝑡𝑜)
+
+Aset Produktif Bermasalah
+Neto (MIAPB)
+
+a.
+
+dan Peringkat 4: 8%≤KPMM<12%
+Peringkat 5: KPMM <8%
+Peringkat 1: MIAPB ≥200%
+
+Modal inti mengacu pada Peraturan Otoritas Peringkat 2: 180%≤MIAPB<200%
+Jasa
+
+Keuangan
+
+mengenai
+
+kewajiban Peringkat 3: 150%≤MIAPB<180%
+
+- 13 -
+
+No.
+
+Komponen
+
+Penjelasan
+
+Peringkat
+
+penyediaan modal minimum dan pemenuhan Peringkat 4: 120%≤MIAPB<150%
+modal inti minimum BPRS.
+b.
+
+Peringkat 5: MIAPB <120%
+
+Aset produktif bermasalah (neto) adalah aset
+produktif yang memiliki kualitas kurang
+lancar,
+
+diragukan,
+
+dan
+
+macet
+
+setelah
+
+dikurangi dengan penyisihan penghapusan
+aset produktif.
+
+- 14 -
+
+Bagian E: Peringkat Faktor Rentabilitas
+Peringkat Faktor
+
+Penjelasan
+
+Peringkat 1
+
+Rentabilitas sangat memadai, laba melebihi target, dan mendukung pertumbuhan permodalan. BPR dan BPRS
+yang termasuk dalam Peringkat 1 memenuhi seluruh atau sebagian besar dari contoh karakteristik sebagai
+berikut:
+a.
+
+kinerja BPR dan BPRS dalam menghasilkan laba (rentabilitas) sangat memadai;
+
+b.
+
+sumber utama rentabilitas yang berasal dari core earnings sangat dominan. Core earnings mencakup
+seluruh pendapatan yang bersumber dari aktivitas utama BPR dan BPRS;
+
+c.
+
+komponen yang mendukung core earnings sangat stabil; dan/atau
+
+d.
+
+kemampuan laba dalam meningkatkan permodalan dan prospek laba pada masa yang akan datang sangat
+tinggi.
+
+Peringkat 2
+
+Rentabilitas memadai, laba melebihi target, dan mendukung pertumbuhan permodalan. BPR dan BPRS yang
+termasuk dalam Peringkat 2 memenuhi seluruh atau sebagian besar dari contoh karakteristik sebagai berikut:
+
+Peringkat 3
+
+a.
+
+kinerja BPR dan BPRS dalam menghasilkan laba (rentabilitas) memadai;
+
+b.
+
+sumber utama rentabilitas yang berasal dari core earnings dominan;
+
+c.
+
+komponen yang mendukung core earnings stabil; dan/atau
+
+d.
+
+kemampuan laba dalam meningkatkan permodalan dan prospek laba pada masa yang akan datang tinggi.
+
+Rentabilitas cukup memadai, laba memenuhi target, meskipun terdapat tekanan terhadap kinerja laba yang
+dapat menyebabkan penurunan laba namun cukup mendukung pertumbuhan permodalan BPR dan BPRS. BPR
+dan BPRS yang termasuk dalam Peringkat 3 ini memenuhi seluruh atau sebagian besar dari contoh
+karakteristik sebagai berikut:
+
+- 15 -
+
+Peringkat Faktor
+
+Penjelasan
+a.
+
+kinerja BPR dan BPRS dalam menghasilkan laba (rentabilitas) cukup memadai;
+
+b.
+
+sumber utama rentabilitas berasal dari core earnings cukup dominan namun terdapat pengaruh yang
+cukup besar dari noncore earnings;
+
+c.
+
+komponen yang mendukung core earnings cukup stabil; dan/atau
+
+d.
+
+kemampuan laba dalam meningkatkan permodalan dan prospek laba pada masa yang akan datang cukup
+baik.
+
+Peringkat 4
+
+Rentabilitas kurang memadai, laba tidak memenuhi target, dan diperkirakan akan tetap seperti kondisi tersebut
+pada masa yang akan datang sehingga kurang mendukung pertumbuhan permodalan dan kelangsungan usaha
+BPR dan BPRS. BPR dan BPRS yang termasuk dalam Peringkat 4 memenuhi seluruh atau sebagian besar dari
+contoh karakteristik sebagai berikut:
+a.
+
+kinerja BPR dan BPRS dalam menghasilkan laba (rentabilitas) tidak memadai atau BPR dan BPRS
+mengalami kerugian;
+
+b.
+
+sumber utama rentabilitas berasal dari noncore earnings;
+
+c.
+
+komponen yang mendukung core earnings kurang stabil; dan/atau
+
+d.
+
+kemampuan laba dalam meningkatkan permodalan dan prospek laba pada masa yang akan datang kurang
+baik atau bahkan dapat berpengaruh negatif terhadap permodalan BPR dan BPRS.
+
+Peringkat 5
+
+Rentabilitas tidak memadai, laba tidak memenuhi target dan tidak dapat diandalkan serta segera memerlukan
+peningkatan kinerja laba untuk memastikan kelangsungan usaha BPR dan BPRS. BPR dan BPRS yang
+termasuk dalam Peringkat 5 memenuhi seluruh atau sebagian besar dari contoh karakteristik sebagai berikut:
+a.
+
+BPR dan BPRS mengalami kerugian yang signifikan;
+
+- 16 -
+
+Peringkat Faktor
+
+Penjelasan
+b.
+
+sumber utama rentabilitas berasal dari noncore earnings;
+
+c.
+
+komponen yang mendukung core earnings tidak stabil; dan/atau
+
+d.
+
+kerugian BPR dan BPRS memengaruhi permodalan secara signifikan.
+
+- 17 -
+
+Bagian F: Peringkat Faktor Permodalan
+Peringkat
+
+Penjelasan
+
+Peringkat 1
+
+BPR dan BPRS memiliki kualitas dan kecukupan permodalan yang sangat memadai relatif terhadap kondisi
+risiko yang disertai dengan pengelolaan permodalan yang sangat kuat sesuai dengan karakteristik, skala usaha,
+dan kompleksitas usaha BPR dan BPRS. BPR dan BPRS yang termasuk dalam Peringkat 1 memenuhi seluruh
+atau sebagian besar dari contoh karakteristik sebagai berikut:
+a.
+
+BPR dan BPRS memiliki tingkat permodalan yang sangat memadai, sangat mampu mengantisipasi seluruh
+risiko yang dihadapi, dan mendukung ekspansi usaha BPR dan BPRS ke depan;
+
+b.
+
+kualitas komponen permodalan pada umumnya sangat baik, permanen, dan dapat menyerap kerugian;
+
+c.
+
+BPR dan BPRS telah melakukan simulasi kecukupan atau ketahanan modal dengan hasil yang dapat
+menutup seluruh risiko yang dihadapi dengan sangat memadai;
+
+d.
+
+BPR dan BPRS memiliki manajemen permodalan yang sangat baik dan/atau memiliki proses penilaian
+kecukupan modal yang sangat baik sesuai dengan strategi dan tujuan bisnis serta kompleksitas usaha dan
+skala BPR dan BPRS; dan/atau
+
+e.
+
+BPR dan BPRS memiliki akses sumber permodalan yang sangat baik dan/atau memiliki dukungan
+permodalan dari pemegang saham.
+
+Peringkat 2
+
+BPR dan BPRS memiliki kualitas dan kecukupan permodalan yang memadai relatif terhadap kondisi risiko,
+yang disertai dengan pengelolaan permodalan yang kuat sesuai dengan karakteristik, skala usaha, dan
+kompleksitas usaha BPR dan BPRS. BPR dan BPRS yang termasuk dalam Peringkat 2 memenuhi seluruh atau
+sebagian besar dari contoh karakteristik sebagai berikut:
+
+- 18 -
+
+Peringkat
+
+Penjelasan
+a.
+
+BPR dan BPRS memiliki tingkat permodalan yang memadai dan dapat mengantisipasi hampir seluruh
+risiko yang dihadapi;
+
+b.
+
+kualitas komponen permodalan pada umumnya baik, permanen, dan dapat menyerap kerugian;
+
+c.
+
+BPR dan BPRS telah melakukan simulasi kecukupan atau ketahanan modal dengan hasil yang dapat
+menutup seluruh risiko yang dihadapi dengan memadai;
+
+d.
+
+BPR dan BPRS memiliki manajemen permodalan yang baik dan/atau memiliki proses penilaian kecukupan
+modal yang baik; dan/atau
+
+e.
+
+BPR dan BPRS memiliki akses sumber permodalan yang baik dan/atau terdapat dukungan permodalan
+dari pemegang saham.
+
+Peringkat 3
+
+BPR dan BPRS memiliki kualitas dan kecukupan permodalan yang cukup memadai relatif terhadap kondisi
+risiko yang disertai dengan pengelolaan permodalan yang cukup kuat sesuai dengan karakteristik, skala usaha,
+dan kompleksitas usaha BPR dan BPRS. BPR dan BPRS yang termasuk dalam Peringkat 3 memenuhi seluruh
+atau sebagian besar dari contoh karakteristik sebagai berikut:
+a.
+
+BPR dan BPRS memiliki tingkat permodalan yang cukup memadai, dan cukup mampu mengantisipasi
+risiko yang dihadapi;
+
+b.
+
+kualitas komponen permodalan pada umumnya cukup baik, cukup permanen, dan cukup dapat menyerap
+kerugian;
+
+c.
+
+BPR dan BPRS telah melakukan simulasi kecukupan atau ketahanan modal dengan hasil yang dapat
+menutup seluruh risiko yang dihadapi dengan cukup memadai;
+
+- 19 -
+
+Peringkat
+
+Penjelasan
+d.
+
+BPR dan BPRS memiliki manajemen permodalan yang cukup baik dan/atau memiliki proses penilaian
+kecukupan modal yang cukup baik; dan/atau
+
+e.
+
+BPR dan BPRS memiliki akses sumber permodalan yang cukup baik, namun dukungan dari pemegang
+saham memerlukan waktu realisasi.
+
+Peringkat 4
+
+BPR dan BPRS memiliki kualitas dan kecukupan permodalan yang kurang memadai relatif terhadap kondisi
+risiko, yang disertai dengan pengelolaan permodalan yang lemah dibandingkan dengan karakteristik, skala
+usaha, dan kompleksitas usaha BPR dan BPRS. BPR dan BPRS yang termasuk dalam Peringkat 4 memenuhi
+seluruh atau sebagian besar dari contoh karakteristik sebagai berikut:
+a.
+
+BPR dan BPRS memiliki tingkat permodalan yang kurang memadai dan tidak dapat mengantisipasi seluruh
+risiko yang dihadapi;
+
+b.
+
+kualitas komponen permodalan pada umumnya kurang baik, kurang permanen, dan kurang dapat
+menyerap kerugian;
+
+c.
+
+BPR dan BPRS telah melakukan simulasi kecukupan atau ketahanan modal dengan hasil yang kurang
+dapat menutup seluruh risiko yang dihadapi;
+
+d.
+
+BPR dan BPRS memiliki manajemen permodalan yang kurang baik dan/atau memiliki proses penilaian
+kecukupan modal yang kurang baik; dan/atau
+
+e.
+
+BPR dan BPRS kurang memiliki akses pada sumber permodalan, dan tidak terdapat dukungan dari
+pemegang saham.
+
+- 20 -
+
+Peringkat
+
+Penjelasan
+
+Peringkat 5
+
+BPR dan BPRS memiliki kualitas dan kecukupan permodalan yang tidak memadai relatif terhadap kondisi
+risiko, yang disertai dengan pengelolaan permodalan yang sangat lemah dibandingkan dengan karakteristik,
+skala usaha, dan kompleksitas usaha BPR dan BPRS. BPR dan BPRS yang termasuk dalam Peringkat 5
+memenuhi seluruh atau sebagian besar dari contoh karakteristik sebagai berikut:
+a.
+
+BPR dan BPRS memiliki tingkat permodalan yang tidak memadai, sehingga harus menambah modal untuk
+mengantisipasi seluruh risiko yang dihadapi pada saat kondisi normal dan pada saat kondisi krisis;
+
+b.
+
+kualitas instrumen permodalan pada umumnya tidak baik, tidak permanen, dan tidak dapat menyerap
+kerugian;
+
+c.
+
+BPR dan BPRS telah melakukan simulasi kecukupan atau ketahanan modal dengan hasil yang tidak dapat
+menutup seluruh risiko yang dihadapi;
+
+d.
+
+BPR dan BPRS memiliki manajemen permodalan yang tidak baik dan/atau memiliki proses penilaian
+kecukupan modal yang tidak baik; dan/atau
+
+e.
+
+BPR dan BPRS tidak memiliki akses pada sumber permodalan dan tidak terdapat dukungan dari pemegang
+saham.
+
+- 21 -
+
+Bagian G: Peringkat Komposit Tingkat Kesehatan
+Peringkat
+
+Nilai Komposit
+
+Penjelasan
+
+Peringkat 1
+
+1.00 – 1.50
+
+Peringkat Komposit 1 (PK-1) mencerminkan kondisi BPR dan BPRS yang secara umum sangat
+sehat sehingga dinilai sangat mampu menghadapi pengaruh negatif yang signifikan dari
+perubahan kondisi bisnis dan faktor eksternal lain. Hal ini tercermin dari peringkat faktor
+penilaian, antara lain profil risiko, penerapan tata kelola, rentabilitas, dan permodalan, yang
+secara umum sangat baik. Jika terdapat kelemahan baik dari sisi internal maupun eksternal
+maka secara umum kelemahan tersebut tidak signifikan.
+
+Peringkat 2
+
+1.51 – 2.60
+
+Peringkat Komposit 2 (PK-2) mencerminkan kondisi BPR dan BPRS yang secara umum sehat
+sehingga dinilai mampu menghadapi pengaruh negatif yang signifikan dari perubahan kondisi
+bisnis dan faktor eksternal lain. Hal ini tercermin dari peringkat faktor penilaian, antara lain
+profil risiko, penerapan tata kelola, rentabilitas, dan permodalan, yang secara umum baik. Jika
+terdapat kelemahan baik dari sisi internal maupun eksternal maka secara umum kelemahan
+tersebut kurang signifikan.
+
+Peringkat 3
+
+2.61 – 3.40
+
+Peringkat Komposit 3 (PK-3) mencerminkan kondisi BPR dan BPRS yang secara umum cukup
+sehat sehingga dinilai cukup mampu menghadapi pengaruh negatif yang signifikan dari
+perubahan kondisi bisnis dan faktor eksternal lain. Hal ini tercermin dari peringkat faktor
+penilaian, antara lain profil risiko, penerapan tata kelola, rentabilitas, dan permodalan, yang
+secara umum cukup baik. Jika terdapat kelemahan baik dari sisi internal maupun eksternal
+maka secara umum kelemahan tersebut cukup signifikan dan jika tidak berhasil diatasi dengan
+baik oleh manajemen maka dapat mengganggu kelangsungan usaha BPR dan BPRS.
+
+- 22 -
+
+Peringkat
+
+Nilai Komposit
+
+Penjelasan
+
+Peringkat 4
+
+3.41 – 4.20
+
+Peringkat Komposit 4 (PK-4) mencerminkan kondisi BPR dan BPRS yang secara umum kurang
+sehat sehingga dinilai kurang mampu menghadapi pengaruh negatif yang signifikan dari
+perubahan kondisi bisnis dan faktor eksternal lain. Hal ini tercermin dari peringkat faktor
+penilaian, antara lain profil risiko, penerapan tata kelola, rentabilitas, dan permodalan, yang
+secara umum kurang baik. Terdapat kelemahan baik dari sisi internal maupun eksternal yang
+secara umum signifikan dan tidak dapat diatasi dengan baik oleh manajemen serta mengganggu
+kelangsungan usaha BPR dan BPRS.
+
+Peringkat 5
+
+4.21 – 5.00
+
+Peringkat Komposit 5 (PK-5) mencerminkan kondisi BPR dan BPRS yang secara umum tidak
+sehat sehingga dinilai tidak mampu menghadapi pengaruh negatif yang signifikan dari
+perubahan kondisi bisnis dan faktor eksternal lain. Hal ini tercermin dari peringkat faktor
+penilaian, antara lain profil risiko, penerapan tata kelola, rentabilitas, dan permodalan, yang
+secara umum tidak baik. Terdapat kelemahan baik dari sisi internal maupun eksternal yang
+secara umum sangat signifikan sehingga untuk mengatasinya dibutuhkan dukungan dana dari
+pemegang saham atau sumber dana dari pihak lain untuk memperkuat kondisi keuangan BPR
+dan BPRS.
+
+- 23 -
+
+Bagian H: Format Laporan Penilaian Sendiri TKS BPR
+LAPORAN PENILAIAN SENDIRI
+TINGKAT KESEHATAN
+Nama BPR
+
+:
+
+Posisi
+
+:
+Penilaian Posisi Laporan
+
+Faktor/Komponen
+
+Penilaian Posisi Laporan Sebelumnya
+
+Rasio
+
+Peringkat
+
+Bobot
+
+Nilai Faktor
+
+Rasio
+
+Peringkat
+
+Bobot
+
+Nilai Faktor
+
+(%)
+
+(a)
+
+(b)
+
+(c)=(a)*(b)
+
+(%)
+
+(a)
+
+(b)
+
+(c)=(a)*(b)
+
+Profil Risiko
+Tata Kelola
+Rentabilitas
+
+*)
+
+1.
+
+Return on Asset (ROA)
+
+2.
+
+Rasio
+
+Beban
+
+Operasional terhadap
+Pendapatan
+Operasional (BOPO)
+3.
+
+Net
+
+Interest
+
+Margin
+
+(NIM)
+Permodalan
+1.
+
+*)
+
+Rasio
+
+Kewajiban
+
+Penyediaan
+
+Modal
+
+Minimum (KPMM)
+2.
+
+Rasio
+
+Modal
+
+terhadap
+
+Inti
+Aset
+
+Produktif Bermasalah
+Neto (MIAPB)
+Nilai Komposit (Penjumlahan dari Nilai Faktor)
+Peringkat Komposit
+Analisis Posisi Laporan**)
+1.
+
+Kesimpulan Tingkat Kesehatan
+…..
+
+2.
+
+Profil Risiko
+…..
+
+3.
+
+Tata Kelola
+…..
+
+4.
+
+Rentabilitas
+…..
+
+5.
+
+Permodalan
+…..
+Keterangan:
+*) Penetapan peringkat faktor rentabilitas dan permodalan dilakukan dengan memperhitungkan aspek kuantitatif dan
+kualitatif.
+**) Analisis Posisi Laporan berisi analisis terhadap tingkat kesehatan secara keseluruhan beserta masing-masing faktor
+penilaian dengan mempertimbangkan informasi terkini kondisi BPR, pokok permasalahan yang sedang dihadapi,
+termasuk keterkaitan antarfaktor.
+
+- 24 -
+
+Bagian I: Format Laporan Penilaian Sendiri TKS BPRS
+LAPORAN PENILAIAN SENDIRI
+TINGKAT KESEHATAN
+Nama BPRS
+
+:
+
+Posisi
+
+:
+Penilaian Posisi Laporan
+
+Faktor/Komponen
+
+Penilaian Posisi Laporan Sebelumnya
+
+Rasio
+
+Peringkat
+
+Bobot
+
+Nilai Faktor
+
+Rasio
+
+Peringkat
+
+Bobot
+
+Nilai Faktor
+
+(%)
+
+(a)
+
+(b)
+
+(c)=(a)*(b)
+
+(%)
+
+(a)
+
+(b)
+
+(c)=(a)*(b)
+
+Profil Risiko
+Tata Kelola
+Rentabilitas
+
+*)
+
+1.
+
+Return on Asset (ROA)
+
+2.
+
+Rasio
+
+Beban
+
+Operasional terhadap
+Pendapatan
+Operasional (BOPO)
+3.
+
+Net Imbalan (NI)
+
+Permodalan
+1.
+
+*)
+
+Rasio
+
+Kewajiban
+
+Penyediaan
+
+Modal
+
+Minimum (KPMM)
+2.
+
+Rasio
+
+Modal
+
+terhadap
+
+Inti
+Aset
+
+Produktif Bermasalah
+Neto (MIAPB)
+Nilai Komposit (Penjumlahan dari Nilai Faktor)
+Peringkat Komposit
+Analisis Posisi Laporan**)
+1.
+
+Kesimpulan Tingkat Kesehatan
+…..
+
+2.
+
+Profil Risiko
+…..
+
+3.
+
+Tata Kelola
+…..
+
+4.
+
+Rentabilitas
+…..
+
+5.
+
+Permodalan
+…..
+
+Keterangan:
+*) Penetapan peringkat faktor rentabilitas dan permodalan dilakukan dengan memperhitungkan aspek kuantitatif dan
+kualitatif.
+**) Analisis Posisi Laporan berisi analisis terhadap tingkat kesehatan secara keseluruhan beserta masing-masing faktor
+penilaian dengan mempertimbangkan informasi terkini kondisi BPRS, pokok permasalahan yang sedang dihadapi,
+termasuk keterkaitan antarfaktor.
+
+- 25 -
+
+Ditetapkan di Jakarta
+pada tanggal 18 Juli 2022
+KEPALA EKSEKUTIF PENGAWAS PERBANKAN
+OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA,
+ttd
+HERU KRISTIYANA
+
+Salinan ini sesuai dengan aslinya
+Direktur Hukum 1
+Departemen Hukum
+ttd
+Mufli Asmawidjaja

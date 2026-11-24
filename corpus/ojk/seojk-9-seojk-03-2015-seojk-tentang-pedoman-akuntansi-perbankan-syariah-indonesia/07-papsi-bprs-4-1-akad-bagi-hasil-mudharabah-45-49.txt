@@ -1,0 +1,499 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 4.1 Akad Bagi Hasil - Mudharabah (45-49).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 45 -
+
+BAGIAN IV AKAD BAGI HASIL
+IV.1. PEMBIAYAAN MUDHARABAH
+A.
+
+Definisi
+1.
+
+Mudharabah adalah akad kerjasama usaha antara dua pihak dimana
+pihak pertama (pemilik dana) menyediakan seluruh dana, sedangkan
+pihak
+
+kedua
+
+(pengelola
+
+dana)
+
+bertindak
+
+selaku
+
+pengelola,
+
+dan
+
+keuntungan dibagi di antara mereka sesuai kesepakatan sedangkan
+kerugian finansial hanya ditanggung oleh pemilik dana.
+2.
+
+Mudharabah Muthlaqah adalah Mudharabah dimana pemilik dana
+memberikan kebebasan kepada pengelola dana dalam pengelolaan
+investasinya.
+
+3.
+
+Mudharabah Muqayyadah adalah Mudharabah dimana pemilik dana
+memberikan batasan kepada pengelola dana, antara lain mengenai
+tempat, cara dan/atau obyek investasi.
+
+4.
+
+Mudharabah
+
+Musytarakah
+
+adalah
+
+bentuk
+
+Mudharabah
+
+dimana
+
+pengelola dana menyertakan modal atau dananya dalam kerjasama
+investasi.
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.105 tentang Akuntansi Mudharabah.
+
+Penjelasan
+1.
+
+Mudharabah terdiri dari dua jenis, yaitu Mudharabah Muthlaqah dan
+Mudharabah Muqayyadah. Bagian ini membahas Bank sebagai shahibul
+maal (pemilik dana) dalam pembiayaan Mudharabah baik bersifat
+mutlaqah maupun Muqayyadah.
+
+2.
+
+Investasi Mudharabah yang dilakukan oleh Bank disebut pembiayaan
+Mudharabah. Pada umumnya pembiayaan Mudharabah yang dilakukan
+oleh Bank diberikan dalam bentuk kas yang dilakukan secara bertahap
+atau sekaligus.
+
+3.
+
+Pengembalian pembiayaan Mudharabah dapat dilakukan bersamaan
+dengan
+
+distribusi
+
+bagi
+
+hasil
+
+atau
+
+pada
+
+saat
+
+diakhirinya
+
+akad
+
+Mudharabah.
+4. Bagi ...
+
+- 46 -
+
+4.
+
+Bagi hasil Mudharabah dapat dilakukan dengan menggunakan dua
+metode, yaitu bagi laba (profit sharing) atau bagi hasil (gross profit
+margin atau dalam fatwa disebut net revenue sharing). Bagi laba
+dihitung dari pendapatan setelah dikurangi dengan harga pokok dan
+beban
+
+yang
+
+Sedangkan
+
+berkaitan
+bagi
+
+dengan
+
+hasil,
+
+pengelolaan
+
+dihitung
+
+dana
+
+Mudharabah.
+
+dari
+
+pendapatan
+
+pengelolaan
+
+profit
+
+margin/net
+
+revenue
+
+Mudharabah dikurangi harga pokok.
+Sebagai ilustrasi:
+Penjualan
+
+xxx
+
+Beban pokok
+
+(xxx)
+
+penjualan
+Pendapatan
+
+xxx
+
+(gross
+sharing)
+
+5.
+
+Beban pengelolaan
+
+(xxx)
+
+Laba
+
+xxx
+
+(profit sharing)
+
+Dalam hal terjadi kerugian dalam usaha nasabah (pengelola dana),
+Bank
+
+sebagai pemilik dana akan menanggung semua kerugian
+
+sepanjang kerugian tersebut bukan disebabkan oleh kelalaian atau
+kesalahan nasabah (pengelola dana).
+6.
+
+Kelalaian atau kesalahan pengelola dana antara lain ditunjukkan oleh:
+a.
+
+Tidak dipenuhinya persyaratan yang ditentukan di dalam akad;
+
+b.
+
+Tidak terdapat kondisi di luar kemampuan (force majeur) yang
+lazim dan/atau yang telah ditentukan di dalam akad; atau
+
+c.
+7.
+
+Hasil putusan dari badan arbitrase atau pengadilan.
+
+Pada prinsipnya, dalam pembiayaan Mudharabah tidak dipersyaratkan
+adanya jaminan, namun agar tidak terjadi moral hazard berupa penyimpangan oleh pengelola dana, pemilik dana dapat meminta jaminan dari
+pengelola dana atau pihak ketiga. Jaminan ini hanya dapat dicairkan
+apabila pengelola dana terbukti melakukan pelanggaran terhadap halhal yang telah disepakati bersama dalam akad.
+
+8.
+
+Pengakuan penghasilan usaha Mudharabah dalam praktik dapat
+diketahui berdasarkan laporan bagi hasil atas penghasilan usaha dari
+pengelola dana. Tidak diperkenankan mengakui pendapatan dari
+proyeksi hasil usaha.
+
+9.
+
+Bank membentuk Penyisihan Penghapusan Aset Produktif untuk
+pembiayaan Mudharabah sesuai dengan ketentuan yang diatur oleh
+Otoritas Jasa Keuangan.
+D. Perlakuan ...
+
+- 47 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Pembiayaan Mudharabah dalam bentuk kas diakui pada saat pencairan
+sebesar jumlah uang yang diberikan Bank kepada pengelola dana
+(nasabah).
+
+2.
+
+Pembiayaan Mudharabah yang diberikan secara bertahap diakui pada
+setiap tahap pembayaran.
+
+3.
+
+Pembayaran kembali pembiayaan Mudharabah oleh pengelola dana
+(nasabah) akan mengurangi pembiayaan Mudharabah.
+
+4.
+
+Keuntungan yang dihasilkan dari pembiayaan Mudharabah diakui pada
+periode terjadinya hak bagi hasil berdasarkan laporan hasil usaha yang
+disampaikan nasabah sesuai dengan nisbah yang disepakati.
+
+5.
+
+Keuntungan pembiayaan Mudharabah yang telah menjadi hak Bank
+dan belum dibayarkan oleh nasabah diakui sebagai piutang bagi hasil.
+
+6.
+
+Pembiayaan Mudharabah yang diakhiri sebelum jatuh tempo atau
+sudah berakhir dan belum diselesaikan oleh nasabah maka saldo
+pembiayaan Mudharabah tetap diakui sebagai pembiayaan Mudharabah
+yang wajib diselesaikan oleh mudharib.
+
+D2. Penyajian
+1.
+
+Pembiayaan
+
+Mudharabah
+
+disajikan
+
+sebesar
+
+saldo
+
+pembiayaan
+
+Mudharabah nasabah kepada Bank.
+2.
+
+Piutang bagi hasil disajikan sebagai bagian dari aset lainnya pada saat
+nasabah tergolong performing. Sedangkan, apabila nasabah tergolong
+non-performing maka piutang bagi hasil disajikan pada rekening
+administratif.
+
+3.
+
+Penyisihan
+
+Penghapusan
+
+Aset
+
+untuk
+
+pembiayaan
+
+Mudharabah
+
+disajikan sebagai pos lawan (contra account) pembiayaan Mudharabah.
+4.
+
+Pembiayaan Mudharabah yang diakhiri sebelum jatuh tempo atau
+sudah berakhir dan belum diselesaikan oleh nasabah tetap disajikan
+sebagai bagian dari pembiayaan Mudharabah.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat pemberian pembiayaan Mudharabah kepada mudharib:
+Db. Pembiayaan Mudharabah.
+Kr. Kas/rekening …/kliring.
+
+2.
+
+Pada saat pengakuan keuntungan Mudharabah
+Db. Piutang bagi hasil.
+Kr. Pendapatan ...
+
+- 48 -
+
+Kr.
+3.
+
+Pendapatan Mudharabah.
+
+Pada saat penerimaan keuntungan Mudharabah
+Db. Kas/rekening …/kliring.
+Kr.
+
+4.
+
+Pada
+
+Piutang bagi hasil.
+saat
+
+pembentukan
+
+Penyisihan
+
+Penghapusan
+
+Aset
+
+untuk
+
+pembiayaan Mudharabah:
+Db. Beban penghapusan aset pembiayaan Mudharabah.
+Kr. Penyisihan Penghapusan Aset - pembiayaan Mudharabah.
+5.
+
+Pada saat koreksi Penyisihan Penghapusan Aset untuk pembiayaan
+Mudharabah:
+Db. Penyisihan Penghapusan Aset - pembiayaan Mudharabah.
+Kr. Beban
+
+Penghapusan
+
+Aset
+
+pembiayaan
+
+Mudharabah/Koreksi
+
+Penyisihan Penghapusan Aset - pembiayaan Mudharabah.
+6.
+
+Pada
+
+saat
+
+pembayaran
+
+angsuran
+
+pokok/pelunasan
+
+pembiayaan
+
+Mudharabah:
+Db. Kas/rekening …/kliring.
+Kr. Pembiayaan Mudharabah.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian jumlah pembiayaan Mudharabah berdasarkan sifat akad
+(Mudharabah
+
+Mutlaqah
+
+atau
+
+Mudharabah
+
+Muqayyadah),
+
+jenis
+
+penggunaan dan sektor ekonomi.
+2.
+
+Klasifikasi pembiayaan Mudharabah menurut jangka waktu (masa
+akad), kualitas pembiayaan, valuta, Penyisihan Penghapusan Aset dan
+tingkat bagi hasil rata-rata.
+
+3.
+
+Jumlah dan persentase pembiayaan Mudharabah yang diberikan
+kepada pihak-pihak berelasi.
+
+4.
+
+Jumlah pembiayaan Mudharabah yang telah direstrukturisasi dan
+informasi lain tentang pembiayaan Mudharabah yang direstrukturisasi
+selama periode berjalan.
+
+5.
+
+Besarnya
+
+pembiayaan
+
+Mudharabah
+
+bermasalah
+
+dan
+
+Penyisihan
+
+Penghapusan Aset untuk setiap sektor ekonomi.
+6.
+
+Kebijakan
+
+dan
+
+metode
+
+yang
+
+dipergunakan
+
+dalam
+
+penanganan
+
+Mudharabah bermasalah.
+7.
+
+Ikhtisar
+
+pembiayaan
+
+menunjukkan
+
+saldo
+
+Mudharabah
+awal,
+
+yang
+
+penghapusan
+
+dihapus
+selama
+
+buku
+
+yang
+
+tahun berjalan,
+penerimaan ...
+
+- 49 -
+
+penerimaan atas pembiayaan Mudharabah yang telah dihapusbukukan
+dan pembiayaan Mudharabah yang telah dihapustagih dan saldo akhir
+pembiayaan Mudharabah yang dihapus buku.
+
+IV.2.PEMBIAYAAN ...

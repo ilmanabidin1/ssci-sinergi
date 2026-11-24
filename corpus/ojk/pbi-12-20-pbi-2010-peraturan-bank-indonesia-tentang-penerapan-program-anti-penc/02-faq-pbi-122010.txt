@@ -1,0 +1,116 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 12/ 20/PBI/2010
+Tentang: Peraturan Bank Indonesia tentang Penerapan Program Anti Pencucian Uang dan Pencegahan Terorisme bagi Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah
+Berkas: faq_pbi_122010.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Penerapan-Program-Anti-Pencucian-Uang-dan-Pencegahan-Pendanaan-Terorisme-bagi-BPR-dan-Bank-Pembiayaan.aspx
+
+---
+
+FREQUENTLY ASKED QUESTION PBI TENTANG PENERAPAN PROGRAM
+ANTI PENCUCIAN UANG (APU) DAN PENCEGAHAN PENDANAAN
+TERORISME (PPT) BAGI BPR DAN BPRS
+1. Apa latar belakang penerbitan PBI ini?
+-
+
+Semakin berkembangnya industri BPR dan BPRS disertai dengan perkembangan
+produk serta pelayanan BPR/BPRS terutama yang berbasis teknologi informasi, maka
+risiko pemanfaatan BPR dan BPRS dalam pencucian uang dan pendanaan terorisme
+semakin tinggi.
+
+-
+
+Penyesuaian PBI No. 5/23/PBI/2003 tentang Penerapan Prinsip Mengenal Nasabah
+(Know Your Customer Principles) Bagi Bank Perkreditan Rakyat dengan mengacu
+kepada standar internasional (rekomendasi FATF) dalam mendukung upaya
+pencegahan tindak pidana pencucian uang dan pencegahan pendanaan terorisme.
+
+2. Apa yang berubah dari PBI No.12/20/PBI/2010 dibandingkan PBI No.5/23/PBI/2003
+tentang Penerapan Program Anti Pencucian Uang dan Pencegahan Pendanaan
+Terorisme Bagi BPR (APU & PPT)?
+a. Penggunaan istilah Customer Due Dilligence (CDD) untuk Know Your Customer
+Principles dalam identifikasi, verifikasi, dan pemantauan nasabah.
+b. Enhanced Due Dilligence (EDD) untuk nasabah berisiko tinggi dan Politically
+Exposed Person (PEP)
+c. Permintaan informasi berlaku juga bagi Walk-In Customer (WIC) untuk transaksi
+dibawah Rp100 juta
+d. Kewajiban BPR untuk:
+- membentuk unit kerja khusus/menunjuk pegawai yang bertanggungjawab atas
+penerapan program APU dan PPT,
+- memiliki sistem pengendalian intern,
+- memelihara database daftar teroris.
+e. Pengaturan program APU dan PPT dalam hal terdapat kegiatan pemindahan dana,
+ketentuan mengenai Beneficial Owner, pelaksanaan CDD lebih sederhana dan
+pelaksanaan CDD oleh pihak ketiga
+3. Hal apa saja yang perlu diperhatikan terkait kebijakan dan prosedur tertulis
+penerapan APU & PPT yang wajib dimiliki oleh BPR/BPRS?
+a. Faktor teknologi informasi yang berpotensi disalahgunakan oleh pelaku pencucian
+uang atau pendanaan terorisme;
+b. Kebijakan dan prosedur dituangkan dalam Pedoman Pelaksanaan Program APU dan
+PPT;
+c. Penerapan kebijakan dan prosedur dilakukan secara konsisten dan berkesinambungan;
+dan
+d. Pedoman Pelaksanaan dan Pengendalian terhadap Program APU dan PPT wajib
+disetujui oleh Dewan Komisaris.
+4. Bagaimana implementasi manajemen risiko dalam penerimaan nasabah?
+
+Page 1 of 3
+
+Dilakukan dengan mengelompokkan nasabah berdasarkan tingkat risiko terjadinya
+pencucian uang atau pendanaan terorisme, yang mencakup paling kurang identitas
+nasabah, lokasi usaha nasabah, profil nasabah, nilai transaksi, kegiatan usaha nasabah,
+struktur kepemilikan bagi nasabah perusahaan, dan informasi lainnya yang dapat
+digunakan untuk mengukur tingkat risiko nasabah.
+5. Apa yang dimaksud dengan Politically Exposed Person dan bagaimana penerapan
+APU dan PPT terhadap nasabah tergolong Politically Exposed Person ini?
+- Politically Exposed Person adalah orang yang mendapatkan kepercayaan untuk
+memiliki kewenangan publik diantaranya adalah Penyelenggara Negara sebagaimana
+dimaksud dalam peraturan perundang-undangan yang mengatur mengenai
+Penyelenggara Negara dan/atau orang yang tercatat sebagai anggota partai politik
+yang memiliki pengaruh terhadap kebijakan dan operasional partai politik.
+- BPR dan BPRS wajib melakukan Enhanced Due Diligence (EDD) terhadap calon
+Nasabah yang diketahui tergolong PEP pada awal melakukan hubungan usaha dengan
+BPR dan BPRS.
+- Direksi atau Pejabat Eksekutif bertanggung jawab atas pelaksanaan hubungan usaha
+dengan calon Nasabah yang tergolong PEP tersebut.
+6. Apa perbedaaan Customer Due Diligence dan Enhanced Due Diligence?
+a. Pelaksanaan Customer Due Diligence (CDD) terdiri dari permintaan informasi dan
+dokumen, verifikasi dokumen serta pengkinian dan pemantauan
+b. Enhanced Due Diligence adalah CDD ditambah dengan kegiatan-kegiatan sebagai
+berikut :
+- Meminta informasi tambahan yang diperlukan
+- Meminta dokumen tambahan yang diperlukan
+- Melakukan analisa berkala paling kurang terhadap informasi mengenai sumber
+dana, tujuan transaksi dan hubungan usaha dengan pihak-pihak terkait
+- Memantau lebih ketat pola transaksi Nasabah untuk kepentingan pengkinian profil
+Nasabah atau Beneficial Owner
+7. Terkait dengan Daftar Teroris, hal apa saja yang harus dilakukan BPR/BPRS?
+a. memelihara Daftar Teroris yang diterima dari Bank Indonesia.
+b. memastikan secara berkala nama Nasabah Bank yang memiliki kesamaan atau
+kemiripan dengan nama yang tercantum dalam database Daftar Teroris.
+- bila terdapat kemiripan nama Nasabah dengan nama yang tercantum dalam
+database Daftar Teroris, Bank wajib memastikan kesesuaian identitas Nasabah
+tersebut dengan informasi lain yang terkait.
+- bila terdapat kesamaan nama Nasabah dan kesamaan informasi lainnya dengan
+nama yang tercantum dalam database Daftar Teroris, Bank wajib melaporkan
+nasabah tersebut dalam laporan Transaksi Keuangan Mencurigakan.
+8. Bagaimana penerapan program APU dan PPT bagi Nasabah yang telah ada
+sebelum ketentuan ini berlaku?
+
+Page 2 of 3
+
+BPR dan BPRS wajib melakukan CDD kepada Nasabah yang telah ada sesuai dengan
+pendekatan berdasarkan materialitas dan risiko dalam hal:
+a. Terdapat transaksi dalam jumlah yang signifikan
+b. Terdapat perubahan standar dokumentasi yang mendasar
+c. Teradapat perubahan pola transaksi yang signifikan
+d. BPR dan BPRS mengetahui adanya kekurangan informasi dan/atau dokumen yang
+diperlukan; dan/atau
+e. Nasabah diketahui menggunakan rekening anonim atau rekening yang diindikasikan
+menggunakan nama fiktif
+9. Kapan PBI ini mulai berlaku?
+a. PBI ini mulai berlaku sejak tanggal 1 Desember 2010
+b. BPR diberikan waktu 12 (dua belas) bulan untuk menyampaikan Pedoman Pelaksanaan
+Program APU dan PPT sejak diberlakukannya Peraturan Bank Indonesia ini.
+
+Page 3 of 3

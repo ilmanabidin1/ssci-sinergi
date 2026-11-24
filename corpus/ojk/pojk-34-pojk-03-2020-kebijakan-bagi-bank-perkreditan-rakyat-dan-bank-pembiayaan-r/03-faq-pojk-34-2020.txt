@@ -1,0 +1,295 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 34/POJK.03/2020
+Tentang: Kebijakan bagi Bank Perkreditan Rakyat dan Bank Pembiayaan Rakyat Syariah Sebagai Dampak Penyebaran Coronavirus Disease 2019
+Berkas: FAQ POJK 34 2020.PDF
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Kebijakan-bagi-Bank-Perkreditan-Rakyat-dan-Bank-Pembiayaan-Rakyat-Syariah-Sebagai-Dampak-Penyebaran-Coronavirus-.aspx
+
+---
+
+FREQUENTLY ASKED QUESTION
+PERATURAN OTORITAS JASA KEUANGAN NO.34/POJK.03/2020
+TENTANG
+KEBIJAKAN BAGI BANK PERKREDITAN RAKYAT DAN BANK PEMBIAYAAN RAKYAT
+SYARIAH SEBAGAI DAMPAK PENYEBARAN CORONAVIRUS DISEASE 2019
+A. UMUM
+1. Apa latar belakang penerbitan POJK ini?
+Perkembangan penyebaran coronavirus disease 2019 (COVID-19) di wilayah Indonesia
+berdampak cukup signifikan terhadap kinerja BPR dan BPRS, di antaranya terkait
+dengan peningkatan potensi risiko kredit dan risiko likuiditas (penurunan arus kas
+masuk). Hal dimaksud dapat memengaruhi pertumbuhan industri BPR dan BPRS,
+sehingga untuk mendorong optimalisasi kinerja industri BPR dan BPRS perlu diambil
+kebijakan bagi BPR dan BPRS sebagai dampak penyebaran coronavirus disease 2019
+(COVID-19).
+2. Apa kebijakan bagi BPR dan BPRS yang diatur dalam POJK ini?
+Penerapan kebijakan bagi BPR dan BPRS sebagai dampak penyebaran COVID-19
+meliputi:
+a. Penyisihan Penghapusan Aset Produktif (PPAP)
+BPR/BPRS dapat membentuk PPAP umum kurang dari 0,5% atau tidak
+membentuk PPAP umum untuk aset produktif berupa penempatan pada bank lain
+dan kredit/pembiayaan dengan kualitas lancar untuk Laporan Bulanan sejak
+posisi April 2020;
+b. Agunan Yang Diambil Alih (AYDA)
+Perhitungan AYDA berdasarkan jangka waktu kepemilikan dapat dihentikan
+sementara sampai dengan 31 Maret 2021. Selanjutnya BPR/BPRS dapat
+menggunakan persentase nilai AYDA posisi 31 Maret 2020 sebagai faktor
+pengurang modal inti dalam perhitungan Kewajiban Penyediaan Modal Minimum
+(KPMM) sampai dengan 31 Maret 2021. Setelah tenggat waktu tersebut,
+perhitungan persentase AYDA sebagai faktor pengurang modal inti kembali
+mengacu pada ketentuan mengenai penilaian kualitas aset BPR/BPRS, dan
+BPR/BPRS memperhitungkan periode kepemilikan AYDA sejak AYDA dieksekusi
+tanpa memperhitungkan periode relaksasi;
+c. Penyediaan Dana Dalam Bentuk Penempatan Dana Antar Bank (PDAB)
+1) Penyediaan dana dalam bentuk PDAB untuk penanggulangan permasalahan
+likuiditas pada BPR/BPRS lain dikecualikan dari ketentuan Batas Maksimum
+Pemberian Kredit (BMPK) atau Batas Maksimum Penyaluran Dana (BMPD).
+2) Penyediaan dana dimaksud dapat dilakukan kepada seluruh BPR/BPRS pihak
+terkait dan pihak tidak terkait paling banyak 30% (tiga puluh persen) dari
+modal BPR/BPRS dengan didasarkan pada surat pernyataan dari BPR/BPRS.
+3) Dalam hal terdapat PDAB untuk penanggulangan permasalahan likuiditas
+melebihi 30% (tiga puluh persen), maka BPR/BPRS yang melakukan
+penempatan dana menyusun rencana tindak yang terdiri dari langkah dan
+target waktu penyelesaian secepatnya.
+4) BPR/BPRS yang melakukan penyediaan dana dalam bentuk PDAB untuk
+penanggulangan permasalahan likuiditas harus menyampaikan laporan paling
+lambat tanggal 10 pada bulan berikutnya setelah penyediaan dana tersebut.
+d. BPR dan BPRS dapat menyediakan dana pendidikan dan pelatihan untuk
+pengembangan sumber daya manusia (SDM) tahun 2020 kurang dari 5% (lima
+persen) dari realisasi biaya SDM tahun sebelumnya.
+
+3. Apakah yang perlu diperhatikan dalam hal BPR dan BPRS menerapkan kebijakan
+bagi BPR dan BPRS yang diatur dalam POJK ini?
+Dalam hal BPR dan BPRS menerapkan salah satu atau seluruh kebijakan terhadap
+ketentuan BPR dan BPRS sebagai dampak penyebaran COVID-19, BPR dan BPRS
+harus melakukan:
+a. penyesuaian pedoman pelaksanaan perhitungan PPAP, pedoman pelaksanaan
+perhitungan AYDA, pedoman pelaksanaan penyediaan dana dalam bentuk
+penempatan dana antar bank, dan/atau pedoman penyediaan dana pendidikan
+dan pelatihan untuk pengembangan SDM; dan
+b. dokumentasi dan administrasi yang memadai atas seluruh kebijakan yang
+diterapkan, paling sedikit memuat:
+1) terkait PPAP:
+a) jumlah penyisihan penghapusan aset produktif yang wajib dibentuk
+sebagaimana diatur dalam ketentuan POJK mengenai kualitas aset
+produktif dan pembentukan penyisihan penghapusan aset produktif BPR
+dan BPRS; dan
+b) realisasi jumlah penyisihan penghapusan aset produktif yang dibentuk
+sebagaimana diatur dalam POJK ini,
+untuk masing-masing rekening aset produktif BPR dan BPRS;
+2) terkait AYDA
+perhitungan nilai agunan yang diambil alih yang menjadi faktor pengurang
+modal inti BPR dan BPRS dalam perhitungan kewajiban pemenuhan modal
+minimum;
+3) terkait penyediaan dana dalam bentuk penempatan dana antar bank
+perhitungan penyediaan dana dalam bentuk penempatan dana antar bank
+pada BPR atau BPRS lain untuk penanggulangan permasalahan likuiditas
+pada BPR dan BPRS lain;
+4) terkait penyediaan dana pendidikan dan pelatihan untuk pengembangan SDM
+a) jumlah biaya pendidikan dan pelatihan sumber daya manusia yang wajib
+dipenuhi sebagaimana diatur dalam POJK mengenai kewajiban
+penyediaan dana pendidikan dan pelatihan untuk pengembangan sumber
+daya manusia BPR dan BPRS; dan
+b) realisasi biaya pendidikan dan pelatihan sumber daya manusia BPR dan
+BPRS sebagaimana diatur dalam POJK ini.
+4. Mengapa diperlukan dokumentasi dan administrasi penerapan kebijakan yang
+memadai atas seluruh kebijakan yang diterapkan?
+Dokumentasi dan administrasi diperlukan sebagai bahan review dan monitoring BPR
+dan BPRS agar pada saat berakhirnya POJK pada tanggal 31 Maret 2020, BPR dan
+BPRS telah mempersiapkan kembali penerapan POJK existing.
+5. Dalam hal terdapat BPR dan BPRS yang tetap mengimplementasikan norma
+sebagaimana diatur dalam POJK atau PBI existing, apakah BPR dan BPRS dinilai
+melanggar POJK ini?
+BPR dan BPRS tidak melanggar POJK ini mengingat pengaturan dalam POJK ini
+bersifat opsional bagi BPR dan BPRS, di mana dalam penerapan kebijakan
+sebagaimana POJK ini BPR dan BPRS tetap memperhatikan prinsip kehati-hatian.
+Dalam hal BPR dan BPRS menerapkan kebijakan sebagaimana POJK ini, BPR dan
+BPRS perlu mempertimbangkan kemampuan BPR dan BPRS dalam menyerap risiko.
+
+-2-
+
+B. KEBIJAKAN PENYISIHAN PENGHAPUSAN ASET PRODUKTIF
+1. Kapan kebijakan PPAP yang diatur dalam POJK ini berlaku?
+Kebijakan terhadap ketentuan PPAP yang diatur dalam POJK ini berlaku sejak laporan
+posisi bulan April 2020 sampai dengan laporan posisi bulan Maret 2021.
+2. Apakah kebijakan PPAP yang diatur dalam POJK ini hanya mencakup aset
+produktif berupa kredit atau pembiayaan?
+Kebijakan terkait PPAP yang diatur dalam POJK ini mencakup aset produktif, berupa
+kredit atau pembiayaan dan penempatan pada bank lain, dengan kualitas lancar.
+3. Apakah penempatan dana BPRS pada bank umum konvensional untuk
+kepentingan transfer dana bagi BPRS dan nasabah BPRS termasuk dalam cakupan
+aset produktif yang diatur dalam POJK ini?
+Tidak, karena sesuai POJK No.29/POJK.03/2019 penempatan pada bank umum
+konvensional tidak termasuk dalam aset produktif sehingga tidak termasuk dalam
+kebijakan sebagaimana POJK ini dan tetap wajib membentuk penyisihan penghapusan
+aset sesuai POJK No.29/POJK.03/2019.
+4. Apakah BPR dan BPRS diperkenankan untuk tetap membentuk PPAP untuk aset
+produktif dengan kualitas lancar sebesar 0,5% (nol koma lima persen)
+sebagaimana POJK No.33/POJK.03/2018 dan POJK No.29/POJK.03/2019?
+Mengingat pengaturan dalam POJK ini bersifat opsional bagi BPR dan BPRS, BPR dan
+BPRS diperkenankan untuk tetap membentuk PPAP sebesar 0,5% (nol koma lima
+persen) sesuai kebijakan dan mitigasi risiko yang diterapkan BPR dan BPRS.
+Selanjutnya BPR dan BPRS perlu mengkomunikasikan hal ini kepada pengawas.
+5. Dalam hal BPR dan BPRS tidak membentuk PPAP untuk aset produktif dengan
+kualitas lancar selama masa berlaku kebijakan sebagaimana POJK ini, apakah BPR
+dan BPRS perlu membentuk akumulasi cadangan penyisihan kerugian sebesar
+0.5% dari asset produktif kualitas lancar yang tidak dibentuk selama masa
+berlaku POJK ini pada tanggal 1 April 2021?
+BPR dan BPRS tidak perlu membentuk akumulasi cadangan penyisihan kerugian
+sebesar 0.5% (nol koma lima persen) dari aset produktif kualitas lancar yang tidak
+dibentuk selama masa berlaku POJK ini pada tanggal 1 April 2021. Namun demikian,
+BPR dan BPRS sebaiknya menghitung cadangan penyisihan kerugian sebesar 0,5% (nol
+koma persen) dari aset produktif kualitas lancar sebagai dokumentasi dan administrasi
+BPR dan BPRS dalam rangka mengantisipasi kebutuhan pembentukan PPAP saat
+POJK ini tidak lagi berlaku. Selanjutnya, pada tanggal 1 April 2021, BPR dan BPRS
+harus kembali membentuk PPAP untuk aset produktif dengan kualitas lancar
+sebagaimana POJK No.33/POJK.03/2018 dan POJK No.29/POJK.03/2019.
+C. KEBIJAKAN AGUNAN YANG DIAMBIL ALIH
+1. Kapan kebijakan AYDA yang diatur dalam POJK ini berlaku?
+Kebijakan AYDA yang diatur dalam POJK ini berlaku sejak laporan posisi bulan April
+2020 sampai dengan laporan posisi bulan Maret 2021.
+2. Bagaimana kebijakan AYDA yang diatur dalam POJK ini?
+Kebijakan AYDA yang diatur dalam POJK ini adalah BPR dan BPRS diperkenankan
+menggunakan persentase dari nilai AYDA sebagai faktor pengurang modal inti dalam
+perhitungan KPMM sebagaimana persentase untuk posisi laporan bulan Maret 2020
+dan menghentikan perhitungan jangka waktu kepemilikan AYDA sejak 1 April 2020
+sampai dengan 31 Maret 2021.
+-3-
+
+Contoh:
+Pada tanggal 1 Juni 2019, BPR “A” mengambil alih agunan dalam bentuk tanah
+dan/atau bangunan yang diserahkan oleh nasabah dengan nilai realisasi bersih
+sebesar Rp100.000.000,00 (seratus juta rupiah). Apabila setelah 1 (satu) tahun sejak
+tanggal pengambilalihan agunan yaitu setelah tanggal 31 Mei 2020 BPR “A” belum
+dapat mencairkan AYDA, maka persentase nilai AYDA BPR “A” yang diperhitungkan
+sebagai faktor pengurang modal inti untuk laporan posisi:
+a. Bulan Juni 2020 adalah:
+Sesuai POJK No.33/POJK.03/2018 seharusnya dihitung 50% (lima puluh persen)
+karena jangka waktu AYDA sampai dengan posisi laporan bulan Juni 2020 adalah
+lebih dari 1 (satu) tahun. Namun, sesuai POJK ini, cukup dihitung 0% (nol persen)
+karena menggunakan jangka waktu AYDA pada posisi laporan bulan Maret 2020.
+b. Bulan Juni 2022 adalah:
+Sesuai POJK No.33/POJK.03/2018 seharusnya dihitung 75% (tujuh puluh lima
+persen) karena jangka waktu AYDA sampai dengan posisi laporan bulan Juni 2022
+adalah lebih dari 3 (tiga) tahun. Namun, sesuai POJK ini, cukup dihitung 50% (lima
+puluh persen) karena selama POJK ini berlaku jangka waktu AYDA tidak
+diperhitungkan sampai dengan tanggal 31 Maret 2021 sehingga jangka waktu
+AYDA adalah 2 (dua) tahun 1 (satu) bulan pada posisi laporan bulan Juni 2022.
+3. Apakah BPR dan BPRS yang memiliki AYDA dengan jenis agunan kendaraan
+bermotor dengan jangka waktu 1 (satu) tahun 1 (satu) bulan pada posisi Juni 2020
+dapat tetap menerapkan persentase nilai AYDA sebagai faktor pengurang modal
+inti sebesar 50% sebagaimana POJK No.33/POJK.03/2018, dan tidak
+menggunakan persentase nilai AYDA posisi bulan Maret 2020?
+Mengingat pengaturan dalam POJK ini bersifat opsional, BPR dan BPRS diperkenankan
+menerapkan persentase nilai AYDA sebagai faktor pengurang modal inti sebesar 50%
+(lima puluh persen) sebagaimana POJK No.33/POJK.03/2018 dan POJK
+No.29/POJK.03/2019. Selanjutnya BPR dan BPRS perlu menginformasikan hal ini
+kepada pengawas.
+4. Dalam hal terdapat BPR atau BPRS yang melakukan pengambilalihan agunan
+sebagai AYDA setelah POJK ini berlaku, bagaimana perhitungan jangka waktu
+kepemilikan AYDA?
+Jangka waktu kepemilikan AYDA dimaksud tetap diperhitungkan sejak dilakukan
+pengambilalihan.
+Contoh:
+Apabila BPR “X” mengambilalih agunan pada tanggal 1 Juli 2020, maka jangka waktu
+kepemilikan AYDA pada tanggal 1 April 2021 adalah 9 (sembilan) bulan.
+
+D. KEBIJAKAN PENYEDIAAN DANA DALAM BENTUK PENEMPATAN DANA ANTAR BANK
+1. Bagaimana penerapan kebijakan penyediaan dana dalam bentuk PDAB untuk
+penanggulangan permasalahan likuiditas pada BPR/BPRS lain yang diatur dalam
+POJK ini?
+a. BPR dan BPRS dapat melakukan penempatan dana antar bank pada BPR atau
+BPRS lain untuk penanggulangan permasalahan likuiditas pada BPR atau BPRS
+lain, baik pihak terkait maupun pihak tidak terkait, paling banyak sebesar 30%
+dari modal BPR atau BPRS yang melakukan penempatan dana, di luar batas
+maksimum penempatan dana kepada pihak terkait dan batas maksimum
+penempatan dana berupa PDAB kepada pihak tidak terkait.
+-4-
+
+b. BPR dan BPRS tetap dapat menggunakan kelonggaran batas maksimum
+penempatan dana kepada pihak terkait dan batas maksimum penempatan dana
+berupa PDAB kepada pihak tidak terkait sebagaimana POJK No.49/POJK.03/2017
+dan PBI No/13/5/PBI/2011 untuk penempatan dana antar bank pada BPR atau
+BPRS lain.
+Contoh:
+Apabila BPR X telah melakukan penempatan dana pada BPR A (pihak tidak
+terkait) sebanyak 20% dari modal BPR X, apakah BPR X dapat melakukan
+penempatan dana pada BPR A sebesar 30 % dari modal berdasarkan POJK ini ?
+Dalam hal BPR A mengalami permasalahan likuiditas dan BPR X belum
+menempatkan dana pada BPR lain dalam rangka penanggulangan permasalahan
+likuiditas, BPR X dapat melakukan penempatan dana pada BPR A maksimal
+sebesar 30% dari modal BPR X dengan syarat BPR X dan BPR A membuat surat
+pernyataan bahwa penempatan dana tersebut digunakan dalam rangka
+penanggulangan permasalahan likuiditas.
+Apabila BPR Y telah melakukan penempatan dana pada seluruh pihak terkait
+(termasuk BPR C) sebanyak 10% dari modal BPR Y, apakah BPR Y dapat
+melakukan penempatan dana pada BPR C (pihak terkait) sebesar 30 % dari
+modal berdasarkan POJK ini ?
+Dalam hal BPR Y akan melakukan penempatan dana kembali di BPR C mengalami
+permasalahan likuiditas dan BPR Y belum menempatkan dana pada BPR lain
+dalam rangka penanggulangan permasalahan likuiditas, BPR Y dapat melakukan
+penempatan dana pada BPR C maksimal sebesar 30% dari modal BPR Y dengan
+syarat BPR Y dan BPR C membuat surat pernyataan bahwa penempatan dana
+tersebut digunakan dalam rangka penanggulangan permasalahan likuiditas.
+Apabila BPR Z telah melakukan penempatan dana pada seluruh BPR pihak
+terkait sebesar 10% dari modal BPR Z dan pada BPR D (pihak tidak terkait)
+sebanyak 20% dari modal BPR Z, berapa maksimal penempatan dana yang
+dapat dilakukan BPR Z dalam rangka penanggulangan permasalahan likuiditas
+pada BPR lain berdasarkan POJK ini ?
+BPR Z dapat melakukan penempatan dana pada seluruh BPR pihak terkait dan
+tidak terkait berdasarkan POJK ini maksimal sebesar 30% dari modal BPR.
+2. Kapan kebijakan penyediaan dana dalam bentuk PDAB yang diatur dalam POJK
+ini dapat diterapkan?
+a. Kebijakan penyediaan dana dalam bentuk PDAB dalam rangka penanggulangan
+masalah likuiditas BPR/BPRS lain yang diatur dalam POJK ini berlaku sejak
+tanggal diundangkan sampai dengan 31 Maret 2021.
+b. Pada tanggal 1 April 2021, BPR dan BPRS tidak lagi diperkenankan melakukan
+penyediaan dana dalam bentuk PDAB dalam rangka penanggulangan masalah
+likuiditas BPR/BPRS lain selain batas maksimum penyediaan dana yang diatur
+dalam POJK No.49/POJK.03/2017 dan PBI No/13/5/PBI/2011.
+
+-5-
+
+3. Apakah BPRS dapat melakukan penyediaan dana dalam bentuk penempatan dana
+antar bank untuk penanggulangan permasalahan likuiditas kepada BPR?
+Tidak, dalam penyediaan dana dalam bentuk penempatan dana antar bank untuk
+penanggulangan permasalahan likuiditas, BPRS dilarang menempatkan dana pada
+BPR sebagaimana diatur dalam POJK No.29/POJK.03/2019.
+4. Mengapa penerapan kebijakan terhadap ketentuan penyediaan dana dalam bentuk
+penempatan dana antar bank untuk penanggulangan permasalahan likuiditas
+memerlukan adanya laporan khusus, yang berbeda dengan penerapan kebijakan
+lain dalam POJK ini?
+Laporan dimaksud diperlukan sebagai sarana monitoring OJK serta BPR dan BPRS
+dalam melakukan penerapan kebijakan terhadap ketentuan penyediaan dana dalam
+bentuk penempatan dana antar bank pada BPR atau BPRS lain untuk penanggulangan
+permasalahan likuiditas pada BPR dan BPRS lain, di mana:
+a. Dalam hal BPR dan BPRS melakukan penerapan kebijakan terhadap ketentuan
+penyediaan dana dalam bentuk penempatan dana antar bank pada BPR atau BPRS
+lain untuk penanggulangan permasalahan likuiditas pada BPR dan BPRS lain
+melebihi 30% (tiga puluh persen) dari modal BPR atau BPRS yang diperkenankan,
+BPR dan BPRS harus secepatnya melakukan penyelesaian agar kembali pada 30%
+(tiga puluh persen) selama POJK berlaku.
+b. Dalam hal BPR dan BPRS melakukan penerapan kebijakan terhadap ketentuan
+penyediaan dana dalam bentuk penempatan dana antar bank pada BPR atau BPRS
+lain untuk penanggulangan permasalahan likuiditas pada BPR dan BPRS lain
+sebesar 30% (tiga puluh persen) dari modal BPR atau BPRS yang diperkenankan,
+BPR dan BPRS harus memiliki perencanaan dan langkah penyelesaian agar pada
+saat masa berlaku POJK berakhir, BPR dan BPRS tetap memenuhi POJK
+49/POJK.03/2017 dan PBI 13/5/PBI/2011.
+5. Bagaimana pengisian kolom “tanggal jatuh tempo” pada laporan penyediaan dana
+dalam bentuk penempatan dana antar bank untuk penanggulangan permasalahan
+likuiditas?
+Kolom dimaksud diisi dengan tanggal berakhirnya penempatan dana antar bank untuk
+penanggulangan permasalahan likuiditas pada BPR atau BPRS lain sesuai dengan
+komitmen BPR yang menerima penempatan dana dengan memperhatikan target waktu
+rencana penyelesaian penempatan dana antar bank untuk penanggulangan
+permasalahan likuiditas yaitu paling lama tanggal 31 Maret 2021.
+E. KEBIJAKAN TERHADAP KETENTUAN PENYEDIAAN DANA PENDIDIKAN DAN
+PELATIHAN UNTUK PENGEMBANGAN SDM
+1. Apakah BPR dan BPRS diperkenankan tidak melakukan penyediaan dana
+pendidikan dan pelatihan untuk pengembangan SDM?
+Ya, BPR dan BPRS diperkenankan tidak melakukan penyediaan dana pendidikan dan
+pelatihan untuk pengembangan SDM untuk tahun 2020. Selanjutnya, pada tahun
+2021 BPR dan BPRS harus menyediakan kembali dana pendidikan dan pelatihan
+untuk pengembangan SDM sebagaimana POJK 47/POJK.03/2017.
+
+-6-

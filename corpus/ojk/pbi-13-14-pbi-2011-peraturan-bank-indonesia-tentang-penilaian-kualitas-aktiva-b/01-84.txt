@@ -1,0 +1,1365 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: PPBI
+Nomor: 13/14/PBI/2011
+Tentang: Peraturan Bank Indonesia tentang Penilaian Kualitas Aktiva bagi Bank Pembiayaan Rakyat Syariah
+Berkas: 84.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/PBI-tentang-Penilaian-Kualitas-Aktiva-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+PERATURAN BANK INDONESIA
+NOMOR: 13/14/PBI/2011
+TENTANG
+PENILAIAN KUALITAS AKTIVA
+BAGI BANK PEMBIAYAAN RAKYAT SYARIAH
+
+DENGAN RAHMAT TUHAN YANG MAHA ESA
+
+GUBERNUR BANK INDONESIA,
+
+Menimbang:
+
+a. bahwa kelangsungan usaha Bank Pembiayaan Rakyat Syariah
+tergantung dari kemampuan bank dalam melakukan penanaman
+dana dengan mempertimbangkan risiko dan prinsip kehati-hatian
+yang tercermin pada pemenuhan kualitas aktiva dan penyisihan
+penghapusan aktiva yang memadai baik terhadap aktiva produktif
+dan aktiva non produktif;
+b. bahwa dengan diberlakukannya Undang-Undang Nomor 21
+Tahun 2008 tentang Perbankan Syariah perlu dilakukan
+penyesuaian pengaturan terkait dengan kualitas aktiva;
+c. bahwa ketentuan mengenai kualitas aktiva sangat berpengaruh
+dengan pengembangan industri perbankan syariah;
+d. bahwa berdasarkan pertimbangan sebagaimana dimaksud pada
+huruf a, huruf b, dan huruf c, perlu mengatur kembali ketentuan
+mengenai penilaian kualitas aktiva bagi Bank Pembiayaan Rakyat
+Syariah dalam Peraturan Bank Indonesia;
+
+Mengingat ...
+
+-2-
+
+Mengingat:
+
+1. Undang-Undang Nomor 23 Tahun 1999 tentang Bank Indonesia
+(Lembaran Negara Republik Indonesia Tahun 1999 Nomor 66,
+Tambahan Lembaran Negara Republik Indonesia Nomor 3843)
+sebagaimana telah diubah terakhir dengan Undang-Undang
+Nomor 6 Tahun 2009 tentang Penetapan Peraturan Pemerintah
+Pengganti Undang-Undang Nomor 2 Tahun 2008 tentang
+Perubahan Kedua atas Undang-Undang Nomor 23 Tahun 1999
+tentang Bank Indonesia menjadi Undang-Undang (Lembaran
+Negara Republik Indonesia Tahun 2009 Nomor 7, Tambahan
+Lembaran Negara Republik Indonesia Nomor 4962);
+2. Undang-Undang Nomor 21 Tahun 2008 tentang Perbankan
+Syariah (Lembaran Negara Republik Indonesia Tahun 2008
+Nomor 94, Tambahan Lembaran Negara Republik Indonesia
+Nomor 4867);
+
+MEMUTUSKAN:
+
+Menetapkan:
+
+PERATURAN
+
+BANK
+
+INDONESIA
+
+TENTANG
+
+PENILAIAN
+
+KUALITAS AKTIVA BAGI BANK PEMBIAYAAN RAKYAT
+SYARIAH.
+
+BAB I
+KETENTUAN UMUM
+Pasal 1
+Dalam Peraturan Bank Indonesia ini yang dimaksud dengan:
+1.
+
+Bank Pembiayaan Rakyat Syariah, yang selanjutnya disebut BPRS, adalah Bank
+Pembiayaan Rakyat Syariah sebagaimana dimaksud dalam Undang-Undang
+
+Nomor ...
+
+-3-
+
+Nomor 21 Tahun 2008 tentang Perbankan Syariah.
+2.
+
+Aktiva Produktif adalah penanaman dana BPRS untuk mendapatkan penghasilan,
+antara lain dalam bentuk Pembiayaan dan Penempatan Pada Bank Lain sesuai
+dengan Prinsip Syariah.
+
+3.
+
+Aktiva Non Produktif adalah aset BPRS selain Aktiva Produktif yang memiliki
+potensi kerugian, yaitu dalam bentuk Agunan Yang Diambil Alih.
+
+4.
+
+Pembiayaan adalah penyediaan dana atau tagihan yang dipersamakan dengan itu
+berupa:
+a.
+
+transaksi bagi hasil dalam bentuk mudharabah dan musyarakah;
+
+b.
+
+transaksi sewa-menyewa dalam bentuk ijarah atau sewa beli dalam bentuk
+ijarah muntahiya bittamlik;
+
+c.
+
+transaksi jual beli dalam bentuk piutang murabahah, salam, dan istishna’;
+
+d.
+
+transaksi pinjam meminjam dalam bentuk piutang qardh; dan
+
+e.
+
+transaksi sewa-menyewa jasa dalam bentuk ijarah untuk transaksi
+multijasa,
+
+berdasarkan persetujuan atau kesepakatan antara BPRS dan pihak lain yang
+mewajibkan pihak yang dibiayai dan/atau diberi fasilitas dana untuk
+mengembalikan dana tersebut setelah jangka waktu tertentu dengan imbalan
+ujrah, tanpa imbalan, atau bagi hasil.
+5.
+
+Pembiayaan
+
+berdasarkan
+
+akad
+
+mudharabah,
+
+yang
+
+selanjutnya
+
+disebut
+
+Pembiayaan Mudharabah, adalah Pembiayaan dalam bentuk kerjasama suatu
+usaha antara BPRS yang menyediakan seluruh modal dan nasabah yang
+bertindak selaku pengelola dana dengan membagi keuntungan usaha sesuai
+dengan kesepakatan yang dituangkan dalam akad, sedangkan kerugian
+ditanggung sepenuhnya oleh BPRS kecuali jika nasabah melakukan kesalahan
+yang disengaja, lalai, atau menyalahi perjanjian.
+
+6. Pembiayaan ...
+
+-4-
+
+6.
+
+Pembiayaan
+
+berdasarkan
+
+akad
+
+musyarakah,
+
+yang
+
+selanjutnya
+
+disebut
+
+Pembiayaan Musyarakah, adalah Pembiayaan dalam bentuk kerja sama antara
+BPRS dengan nasabah untuk suatu usaha tertentu yang masing-masing pihak
+memberikan porsi dana dengan ketentuan bahwa keuntungan akan dibagi sesuai
+dengan kesepakatan, sedangkan kerugian ditanggung sesuai dengan porsi dana
+masing-masing.
+7.
+
+Pembiayaan berdasarkan akad murabahah, yang selanjutnya disebut Pembiayaan
+Murabahah, adalah Pembiayaan suatu barang dengan menegaskan harga belinya
+kepada pembeli dan pembeli membayarnya dengan harga yang lebih sebagai
+keuntungan yang disepakati.
+
+8.
+
+Pembiayaan berdasarkan akad salam, yang selanjutnya disebut Pembiayaan
+Salam, adalah Pembiayaan suatu barang dengan cara pemesanan dan pembayaran
+harga yang dilakukan terlebih dahulu dengan syarat tertentu yang disepakati.
+
+9.
+
+Pembiayaan berdasarkan akad istishna’, yang selanjutnya disebut Pembiayaan
+Istishna’, adalah Pembiayaan suatu barang dalam bentuk pemesanan pembuatan
+barang tertentu dengan kriteria dan persyaratan tertentu yang disepakati antara
+nasabah dan penjual atau pembuat barang.
+
+10. Pembiayaan berdasarkan akad ijarah, yang selanjutnya disebut Pembiayaan
+Ijarah, adalah Pembiayaan dalam rangka memindahkan hak guna atau manfaat
+dari suatu barang atau jasa berdasarkan transaksi sewa, tanpa diikuti dengan
+pemindahan kepemilikan barang itu sendiri.
+11. Pembiayaan berdasarkan akad ijarah muntahiyya bittamlik, yang selanjutnya
+disebut Pembiayaan Ijarah Muntahiya Bittamlik, adalah Pembiayaan dalam
+rangka memindahkan hak guna atau manfaat dari suatu barang atau jasa
+berdasarkan transaksi sewa dengan opsi pemindahan kepemilikan barang.
+12. Pembiayaan berdasarkan akad qardh, yang selanjutnya disebut Pembiayaan
+Qardh, adalah Pembiayaan dalam bentuk pinjaman dana kepada nasabah dengan
+
+ketentuan ...
+
+-5-
+
+ketentuan bahwa nasabah wajib mengembalikan dana yang diterimanya pada
+waktu yang telah disepakati.
+13. Penempatan Pada Bank Lain adalah penanaman dana pada Bank Umum Syariah,
+Unit Usaha Syariah atau BPRS lainnya berdasarkan Prinsip Syariah antara lain
+dalam bentuk giro, tabungan, dan/atau deposito, Pembiayaan, dan/atau bentukbentuk penempatan lainnya sesuai dengan Prinsip Syariah.
+14. Proyeksi Bagi Hasil, yang selanjutnya disebut PBH, adalah perkiraan pendapatan
+yang akan diterima BPRS dari nasabah atas Pembiayaan Mudharabah dan
+Pembiayaan Musyarakah setelah memperhitungkan nisbah bagi hasil, dengan
+jumlah dan tanggal jatuh tempo yang disepakati antara BPRS dan nasabah.
+15. Realisasi Bagi Hasil, yang selanjutnya disebut RBH, adalah pendapatan yang
+diterima BPRS dari nasabah atas Pembiayaan Mudharabah dan Pembiayaan
+Musyarakah setelah memperhitungkan nisbah bagi hasil.
+16. Agunan Yang Diambil Alih, yang selanjutnya disebut AYDA, adalah sebagian
+atau seluruh agunan yang dibeli BPRS, baik melalui pelelangan maupun di luar
+pelelangan, berdasarkan penyerahan sukarela oleh pemilik agunan atau
+berdasarkan pemberian kuasa untuk menjual dari pemilik agunan, dengan
+kewajiban untuk dicairkan kembali.
+17. Penyisihan Penghapusan Aktiva, yang selanjutnya disebut PPA, adalah cadangan
+yang harus dibentuk sebesar persentase tertentu berdasarkan kualitas aktiva.
+18. Penilai Independen adalah Kantor Jasa Penilai Publik (KJPP) yang:
+a.
+
+tidak ada keterkaitan dalam hal kepemilikan, kepengurusan dan keuangan
+baik dengan BPRS maupun nasabah yang menerima fasilitas;
+
+b.
+
+melakukan kegiatan penilaian berdasarkan kode etik profesi dan ketentuanketentuan lain yang ditetapkan oleh institusi yang berwenang;
+
+c.
+
+menggunakan metode penilaian berdasarkan standar profesi penilaian yang
+diterbitkan oleh institusi yang berwenang;
+
+d. memiliki ...
+
+-6-
+
+d.
+
+memiliki izin usaha dari institusi yang berwenang untuk beroperasi sebagai
+perusahaan penilai; dan
+
+e.
+
+tercatat sebagai anggota asosiasi yang diakui oleh institusi yang berwenang.
+
+BAB II
+KUALITAS AKTIVA
+Pasal 2
+(1) Penanaman dan/atau penyediaan dana BPRS wajib dilaksanakan berdasarkan
+prinsip kehati-hatian dan Prinsip Syariah.
+(2)
+
+BPRS wajib menilai, memantau dan mengambil langkah-langkah antisipasi agar
+kualitas aktiva senantiasa dalam keadaan Lancar.
+
+Pasal 3
+(1) BPRS wajib melakukan penilaian kualitas aktiva baik terhadap Aktiva Produktif,
+Aktiva Non Produktif dan penempatan dana pada bank umum konvensional
+sesuai dengan Peraturan Bank Indonesia ini.
+(2) Penilaian kualitas aktiva sebagaimana dimaksud pada ayat (1) dilakukan secara
+bulanan.
+
+BAB III
+AKTIVA PRODUKTIF
+Pasal 4
+(1)
+
+BPRS wajib menetapkan kualitas yang sama terhadap beberapa rekening Aktiva
+Produktif yang digunakan untuk membiayai 1 (satu) nasabah pada BPRS yang
+sama.
+
+(2)
+
+Dalam hal terdapat kualitas Aktiva Produktif yang berbeda untuk 1 (satu)
+nasabah pada BPRS yang sama, BPRS wajib menggolongkan kualitas yang sama
+
+untuk ...
+
+-7-
+
+untuk masing-masing Aktiva Produktif mengikuti kualitas Aktiva Produktif yang
+paling rendah.
+
+Pasal 5
+(1)
+
+Kualitas Aktiva Produktif dalam bentuk Pembiayaan digolongkan menjadi 4
+(empat) golongan yaitu Lancar, Kurang Lancar, Diragukan, dan Macet.
+
+(2)
+
+Penggolongan kualitas Aktiva Produktif sebagaimana dimaksud pada ayat (1)
+dilakukan berdasarkan pada ketepatan dan/atau kemampuan membayar
+kewajiban oleh nasabah.
+
+Pasal 6
+(1) Penilaian kualitas Aktiva Produktif dalam bentuk Pembiayaan Mudharabah dan
+Pembiayaan Musyarakah yang dilakukan berdasarkan kemampuan membayar
+mengacu pada pencapaian rasio RBH terhadap PBH dan/atau ketepatan
+pembayaran pokok.
+(2) Penghitungan rasio RBH terhadap PBH sebagaimana dimaksud pada ayat (1),
+dilakukan berdasarkan akumulasi selama periode Pembiayaan Mudharabah dan
+Pembiayaan Musyarakah yang telah berjalan.
+(3) PBH dihitung berdasarkan pada analisis kelayakan usaha dan arus kas masuk
+nasabah selama jangka waktu Pembiayaan Mudharabah dan Pembiayaan
+Musyarakah.
+(4) BPRS dapat mengubah PBH berdasarkan kesepakatan dengan nasabah apabila
+terdapat perubahan atas kondisi ekonomi makro, pasar, dan politik yang
+mempengaruhi usaha nasabah.
+(5) BPRS wajib mencantumkan PBH dan perubahan PBH dalam perjanjian
+Pembiayaan Mudharabah dan Pembiayaan Musyarakah antara BPRS dengan
+nasabah.
+
+Pasal ...
+
+-8-
+
+Pasal 7
+(1)
+
+Dalam Pembiayaan
+
+Mudharabah,
+
+BPRS tidak
+
+diwajibkan
+
+menetapkan
+
+pembayaran angsuran pokok secara berkala kepada nasabah.
+(2)
+
+BPRS wajib melakukan langkah-langkah untuk mengurangi risiko tidak
+terbayarnya pokok Pembiayaan pada saat jatuh tempo, apabila dalam
+Pembiayaan Mudharabah disepakati tidak ada pembayaran angsuran pokok
+secara berkala.
+
+(3)
+
+Untuk Pembiayaan Musyarakah dengan jangka waktu lebih dari 1 (satu) tahun,
+BPRS wajib menetapkan pembayaran angsuran pokok secara berkala sesuai
+dengan proyeksi arus kas masuk (cash inflow) usaha nasabah.
+
+(4)
+
+Pembayaran angsuran pokok Pembiayaan Mudharabah dan Pembiayaan
+Musyarakah wajib dicantumkan dalam perjanjian Pembiayaan antara BPRS
+dengan nasabah.
+
+Pasal 8
+(1)
+
+Penilaian kualitas Aktiva Produktif dalam bentuk Pembiayaan Murabahah,
+Pembiayaan Salam, Pembiayaan Istishna’, Pembiayaan Ijarah, Pembiayaan
+Ijarah Muntahiya Bittamlik, Pembiayaan multijasa, dan Pembiayaan Qardh
+dilakukan berdasarkan ketepatan pembayaran angsuran, yang dibedakan sebagai
+berikut:
+
+(2)
+
+a.
+
+angsuran di luar Kredit Pemilikan Rumah;
+
+b.
+
+angsuran untuk Kredit Pemilikan Rumah.
+
+Pembayaran angsuran sebagaimana dimaksud pada ayat (1) wajib dicantumkan
+dalam perjanjian Pembiayaan antara BPRS dengan nasabah yang didukung
+dengan dokumen lengkap, paling kurang memuat porsi pokok, marjin/ujrah,
+dan/atau jadwal pembayaran.
+
+Pasal ...
+
+-9-
+
+Pasal 9
+Kualitas Aktiva Produktif dalam bentuk Penempatan Pada Bank Lain digolongkan
+sebagai berikut:
+a.
+
+Lancar, apabila:
+1)
+
+tidak terdapat tunggakan pembayaran pokok untuk Pembiayaan Qardh; atau
+
+2)
+
+rasio RBH terhadap PBH lebih besar dari atau sama dengan 80% (delapan
+puluh persen) dan/atau tidak terdapat tunggakan pembayaran pokok untuk
+Pembiayaan Mudharabah dan untuk Pembiayaan Musyarakah;
+
+b.
+
+Kurang Lancar, apabila:
+1)
+
+terdapat tunggakan pembayaran pokok untuk Qardh; atau
+
+2)
+
+rasio RBH terhadap PBH lebih besar dari 30% (tiga puluh persen) dan
+kurang dari 80% (delapan puluh persen) atau rasio RBH terhadap PBH
+sama atau lebih kecil dari 30% (tiga puluh persen) sampai dengan 3 (tiga)
+periode pembayaran dan/atau terdapat tunggakan pembayaran pokok
+sampai dengan 5 (lima) hari kerja untuk Pembiayaan Mudharabah dan
+untuk Pembiayaan Musyarakah;
+
+c.
+
+Macet, apabila:
+1)
+
+BPRS atau Bank Umum Syariah yang menerima penempatan telah
+ditetapkan dalam pengawasan khusus, telah dikenakan sanksi pembekuan
+seluruh kegiatan usaha, atau telah dicabut izin usaha;
+
+2)
+
+terdapat tunggakan pembayaran pokok untuk Pembiayaan Qardh; dan/atau
+
+3)
+
+rasio RBH terhadap PBH sama dengan atau lebih kecil dari 30% (tiga puluh
+persen) selama lebih dari 3 (tiga) periode pembayaran dan/atau terdapat
+tunggakan pembayaran pokok selama lebih dari 5 (lima) hari kerja untuk
+Pembiayaan Mudharabah dan untuk Pembiayaan Musyarakah.
+
+Pasal ...
+
+- 10 -
+
+Pasal 10
+(1)
+
+Penanaman dana BPRS dalam bentuk Aktiva Produktif wajib didukung dengan
+dokumen yang lengkap dan informasi yang cukup.
+
+(2)
+
+Bank Indonesia berwenang menurunkan kualitas Aktiva Produktif yang oleh
+BPRS digolongkan Lancar menjadi paling tinggi Kurang Lancar, apabila
+dokumen penyediaan dana tidak memberikan informasi yang cukup.
+
+BAB IV
+AKTIVA NON PRODUKTIF
+Pasal 11
+(1)
+
+BPRS dapat mengambilalih agunan dalam rangka penyelesaian Pembiayaan.
+
+(2)
+
+Pengambilalihan agunan sebagaimana dimaksud pada ayat (1) hanya dapat
+dilakukan terhadap Pembiayaan yang memiliki kualitas Macet.
+
+Pasal 12
+BPRS wajib memiliki kebijakan dan prosedur tertulis mengenai AYDA.
+
+Pasal 13
+(1)
+
+BPRS wajib menilai AYDA pada saat pengambilalihan agunan atas dasar net
+realizable value.
+
+(2)
+
+Penetapan net realizable value sebagaimana dimaksud pada ayat (1) wajib
+dilakukan oleh Penilai Independen, untuk AYDA dengan nilai Rp500.000.000,00
+(lima ratus juta rupiah) atau lebih.
+
+(3)
+
+Maksimum net realizable value adalah sebesar nilai Pembiayaan yang
+diselesaikan dengan AYDA.
+
+Pasal ...
+
+- 11 -
+
+Pasal 14
+(1)
+
+BPRS yang mengambilalih agunan sebagaimana dimaksud dalam Pasal 11 ayat
+(1) wajib mencairkan AYDA paling lama 1 (satu) tahun terhitung sejak tanggal
+pengambilalihan.
+
+(2)
+
+BPRS wajib mendokumentasikan upaya pencairan AYDA sebagaimana
+dimaksud pada ayat (1).
+
+Pasal 15
+Kualitas Aktiva Non Produktif dalam bentuk AYDA digolongkan sebagai berikut:
+a.
+
+Lancar, apabila AYDA dimiliki sampai dengan 1 (satu) tahun;
+
+b.
+
+Macet, apabila AYDA dimiliki lebih dari 1 (satu) tahun.
+
+BAB V
+PENEMPATAN DANA PADA BANK UMUM KONVENSIONAL
+Pasal 16
+(1)
+
+BPRS dilarang melakukan penempatan dana dalam bentuk deposito pada bank
+umum konvensional dan/atau dalam bentuk tabungan dan deposito pada bank
+perkreditan rakyat.
+
+(2)
+
+BPRS hanya dapat melakukan penempatan dana pada bank umum konvensional
+dalam bentuk giro dan/atau tabungan untuk kepentingan transfer dana bagi BPRS
+dan nasabah BPRS.
+
+(3)
+
+Penempatan dana BPRS sebagaimana dimaksud pada ayat (2) tidak termasuk
+dalam kategori Aktiva Produktif.
+
+Pasal 17
+Kualitas aktiva dalam bentuk penempatan dana pada bank umum konvensional
+sebagaimana dimaksud dalam Pasal 16 Ayat (2) digolongkan sebagai berikut:
+
+a. Lancar ...
+
+- 12 -
+
+a.
+
+Lancar, apabila tidak terdapat tunggakan pembayaran pokok;
+
+b.
+
+Kurang Lancar, apabila terdapat tunggakan pembayaran pokok sampai dengan 5
+(lima) hari kerja;
+
+c.
+
+Macet, apabila:
+1)
+
+bank umum konvensional yang menerima penempatan dana BPRS telah
+ditetapkan dalam pengawasan khusus atau telah dicabut izin usahanya;
+dan/atau
+
+2)
+
+terdapat tunggakan pembayaran pokok selama lebih dari 5 (lima) hari kerja.
+
+BAB VI
+PENYISIHAN PENGHAPUSAN AKTIVA
+Bagian Kesatu
+Pembentukan Penyisihan Penghapusan Aktiva
+Pasal 18
+(1)
+
+BPRS wajib membentuk PPA untuk Aktiva Produktif, Aktiva Non Produktif, dan
+penempatan dana pada bank umum konvensional.
+
+(2)
+
+PPA sebagaimana dimaksud pada ayat (1) berupa:
+a.
+
+cadangan umum dan cadangan khusus untuk Aktiva Produktif;
+
+b.
+
+cadangan khusus untuk Aktiva Non Produktif; dan
+
+c.
+
+cadangan umum dan cadangan khusus untuk penempatan dana pada bank
+umum konvensional.
+
+Bagian Kedua
+Tata Cara Pembentukan
+Pasal 19
+(1)
+
+Pembentukan cadangan umum PPA sebagaimana dimaksud dalam Pasal 18 ayat
+(2) huruf a dan huruf c ditetapkan paling rendah sebesar 0,5% (nol koma lima
+
+persen) ...
+
+- 13 -
+
+persen) dari seluruh Aktiva Produktif dan penempatan dana pada bank umum
+konvensional yang digolongkan Lancar.
+(2)
+
+Pembentukan cadangan umum PPA sebagaimana dimaksud pada ayat (1) tidak
+berlaku bagi bagian Aktiva Produktif yang dijamin dengan jaminan Pemerintah
+Indonesia atau agunan tunai sebagaimana dimaksud dalam Pasal 22 ayat (1)
+huruf a dan huruf b.
+
+(3)
+
+Pembentukan cadangan khusus PPA sebagaimana dimaksud dalam Pasal 18 ayat
+(2) ditetapkan paling rendah sebesar:
+a.
+
+10% (sepuluh persen) dari Aktiva Produktif dan penempatan dana pada
+bank umum konvensional yang digolongkan Kurang Lancar setelah
+dikurangi nilai agunan;
+
+b.
+
+50% (lima puluh persen) dari Aktiva Produktif yang digolongkan
+Diragukan setelah dikurangi nilai agunan; atau
+
+c.
+
+100% (seratus persen) dari Aktiva Produktif, Aktiva Non Produktif, dan
+penempatan dana pada bank umum konvensional yang digolongkan Macet
+setelah dikurangi nilai agunan.
+
+(4)
+
+Penggunaan nilai agunan sebagai faktor pengurang dalam penghitungan PPA
+sebagaimana dimaksud pada ayat (2) hanya dilakukan untuk Aktiva Produktif
+dan penempatan dana pada bank umum konvensional.
+Pasal 20
+
+(1)
+
+Kewajiban membentuk PPA sebagaimana dimaksud dalam Pasal 19 ayat (1) dan
+ayat (3) tidak berlaku bagi Aktiva Produktif dalam bentuk Pembiayaan Ijarah
+atau Pembiayaan Ijarah Muntahiya Bittamlik.
+
+(2)
+
+BPRS wajib membentuk penyusutan atau amortisasi Aktiva Produktif dalam
+bentuk:
+a.
+
+Pembiayaan Ijarah sesuai dengan kebijakan penyusutan atau amortisasi
+
+BPRS ...
+
+- 14 -
+
+BPRS bagi aktiva yang sejenis; dan
+b.
+
+Pembiayaan Ijarah Muntahiya Bittamlik sesuai dengan masa sewa.
+
+Pasal 21
+Pembentukan PPA untuk Aktiva Produktif dalam bentuk Pembiayaan ditetapkan
+sebagai berikut:
+a.
+
+Pembiayaan Murabahah, Pembiayaan Istishna’, dan Pembiayaan multijasa
+dihitung berdasarkan saldo harga pokok;
+
+b.
+
+Pembiayaan Salam dihitung berdasarkan harga perolehan; dan
+
+c.
+
+Pembiayaan Mudharabah, Pembiayaan Musyarakah dan Pembiayaan Qardh
+dihitung berdasarkan saldo baki debet.
+
+Bagian Ketiga
+Penilaian Agunan
+Pasal 22
+(1) Nilai agunan yang diperhitungkan sebagai pengurang dalam pembentukan PPA
+untuk Aktiva Produktif dan penempatan dana pada bank umum konvensional
+ditetapkan paling tinggi sebesar:
+a.
+
+100% (seratus persen) dari nilai tertanggung untuk fasilitas yang dijamin
+oleh Pemerintah Indonesia;
+
+b.
+
+100% (seratus persen) untuk agunan tunai berupa uang kertas asing, emas,
+tabungan dan/atau deposito yang diblokir pada BPRS bersangkutan disertai
+dengan surat kuasa pencairan;
+
+c.
+
+80% (delapan puluh persen) dari nilai tertanggung untuk fasilitas yang
+dijamin oleh pemerintah daerah;
+
+d.
+
+80% (delapan puluh persen) dari nilai hak tanggungan untuk agunan berupa
+tanah, bangunan dan rumah dengan bukti kepemilikan Sertifikat Hak Milik
+
+(SHM) ...
+
+- 15 -
+
+(SHM) atau Sertifikat Hak Guna Bangunan (SHGB) yang diikat dengan hak
+tanggungan;
+e.
+
+70% (tujuh puluh persen) dari nilai hasil penilaian untuk agunan berupa resi
+gudang yang penilaiannya dilakukan kurang dari atau sampai dengan 12
+(dua belas) bulan;
+
+f.
+
+60% (enam puluh persen) dari nilai jual obyek pajak untuk agunan berupa
+tanah, bangunan, dan rumah dengan bukti kepemilikan SHM atau SHGB,
+hak pakai tanpa hak tanggungan;
+
+g.
+
+50% (lima puluh persen) dari nilai tertanggung untuk fasilitas yang dijamin
+oleh Badan Usaha Milik Negara (BUMN) atau Badan Usaha Milik Daerah
+(BUMD);
+
+h.
+
+50% (lima puluh persen) dari nilai jual obyek pajak atau nilai taksiran untuk
+agunan berupa tanah dengan bukti kepemilikan berupa Surat Girik (letter
+C) yang dilampiri Surat Pemberitahuan Pajak Terhutang (SPPT) terakhir,
+tempat usaha atau los atau kios yang dikelola oleh badan pengelola, atau
+resi gudang yang penilaiannya dilakukan lebih dari 12 (dua belas) bulan
+sampai dengan 18 (delapan belas) bulan;
+
+i.
+
+50% (lima puluh persen) dari nilai pasar untuk agunan berupa kendaraan
+bermotor, kapal laut yang disertai bukti kepemilikan dan telah dilakukan
+pengikatan sesuai ketentuan yang berlaku; dan
+
+j.
+
+30% (tiga puluh persen) dari nilai pasar atau nilai taksiran untuk agunan
+berupa kendaraan bermotor yang disertai bukti kepemilikan dan surat kuasa
+menjual atau resi gudang yang penilaiannya dilakukan lebih dari 18
+(delapan belas) bulan namun belum melebihi 30 (tiga puluh) bulan.
+
+(2) Agunan selain yang dimaksud pada ayat (1) tidak diperhitungkan sebagai faktor
+pengurang dalam pembentukan PPA untuk Aktiva Produktif dan penempatan
+dana pada bank umum konvensional.
+
+Pasal ...
+
+- 16 -
+
+Pasal 23
+(1)
+
+Penilaian agunan sebagaimana dimaksud dalam Pasal 22 wajib dilakukan oleh
+Penilai Independen atau penilai intern BPRS berdasarkan analisis terhadap faktafakta objektif dan relevan menurut metode dan prinsip yang berlaku umum.
+
+(2)
+
+Kewajiban penilaian agunan menggunakan Penilai Independen sebagaimana
+dimaksud pada ayat (1) berlaku untuk Pembiayaan dengan nilai lebih besar atau
+sama dengan Rp500.000.000,00 (lima ratus juta rupiah).
+
+(3)
+
+Dalam hal penilaian agunan tidak dilakukan sebagaimana dimaksud pada ayat (1)
+maka hasil penilaian agunan tidak diperhitungkan sebagai faktor pengurang PPA.
+
+Pasal 24
+Bank Indonesia berwenang melakukan penghitungan kembali atas nilai agunan yang
+telah dikurangkan dalam PPA, apabila BPRS tidak memenuhi ketentuan sebagaimana
+dimaksud dalam Pasal 22, Pasal 23, dan Pasal 28.
+
+BAB VII
+HAPUS BUKU DAN HAPUS TAGIH
+Pasal 25
+(1)
+
+BPRS wajib memiliki kebijakan dan prosedur tertulis mengenai hapus buku dan
+hapus tagih.
+
+(2)
+
+Hapus buku dan/atau hapus tagih hanya dapat dilakukan terhadap Aktiva
+Produktif dalam bentuk Pembiayaan yang memiliki kualitas Macet.
+
+(3)
+
+Hapus buku tidak dapat dilakukan terhadap sebagian Aktiva Produktif dalam
+bentuk Pembiayaan (partial write off).
+
+(4)
+
+Hapus tagih dapat dilakukan baik untuk sebagian maupun untuk seluruh Aktiva
+Produktif dalam bentuk Pembiayaan.
+
+Pasal ...
+
+- 17 -
+
+Pasal 26
+(1)
+
+Hapus buku dan/atau hapus tagih sebagaimana dimaksud dalam Pasal 25 hanya
+dapat dilakukan setelah BPRS melakukan berbagai upaya untuk memperoleh
+kembali Aktiva Produktif dalam bentuk Pembiayaan yang diberikan.
+
+(2)
+
+BPRS wajib mendokumentasikan upaya yang dilakukan sebagaimana dimaksud
+pada ayat (1) dan dasar pertimbangan pelaksanaan hapus buku dan/atau hapus
+tagih.
+
+(3)
+
+BPRS wajib menatausahakan data dan informasi mengenai Aktiva Produktif
+dalam bentuk Pembiayaan yang telah dihapus buku dan/atau dihapus tagih.
+
+BAB VIII
+SANKSI
+Pasal 27
+BPRS yang tidak melaksanakan ketentuan dalam Pasal 2, Pasal 3 ayat (1), Pasal 4,
+Pasal 6 ayat (5), Pasal 7 ayat (2), Pasal 7 ayat (3), Pasal 7 ayat (4), Pasal 8 ayat (2),
+Pasal 10 ayat (1), Pasal 11 ayat (2), Pasal 12, Pasal 13 ayat (1), Pasal 13 ayat (2), Pasal
+14, Pasal 16 ayat (1), Pasal 16 ayat (2), Pasal 18 ayat (1), Pasal 20 ayat (2), Pasal 23
+ayat (1), Pasal 25 ayat (1), Pasal 25 ayat (2), Pasal 26, Pasal 28 ayat (1) dan Pasal 28
+ayat (3) dikenakan sanksi administratif sebagaimana dimaksud dalam Pasal 58 ayat (1)
+Undang–Undang Nomor 21 Tahun 2008 tentang Perbankan Syariah.
+
+BAB IX
+KETENTUAN PERALIHAN
+Pasal 28
+(1)
+
+BPRS yang memiliki penempatan dana dalam bentuk deposito pada bank umum
+konvensional dan dalam bentuk deposito dan tabungan pada bank perkreditan
+rakyat yang dilakukan sebelum berlakunya Peraturan Bank Indonesia ini, wajib
+
+mencairkan ...
+
+- 18 -
+
+mencairkan penempatan dana tersebut paling lama 3 (tiga) bulan terhitung sejak
+berlakunya Peraturan Bank Indonesia ini.
+(2)
+
+Penilaian terhadap kualitas penempatan dana sebagaimana dimaksud pada ayat
+(1) dilakukan dengan mengacu pada Pasal 17 Peraturan Bank Indonesia ini.
+
+(3)
+
+BPRS wajib membentuk PPA untuk penempatan dana sebagaimana dimaksud
+pada ayat (1) dengan mengacu pada Pasal 19, Pasal 22, dan Pasal 23 Peraturan
+Bank Indonesia ini.
+
+Pasal 29
+Penggolongan kualitas dan pembentukan PPA untuk Aktiva Non Produktif dalam
+bentuk AYDA yang dimiliki BPRS sebelum berlakunya Peraturan Bank Indonesia ini
+dilakukan dengan mengacu pada Peraturan Bank Indonesia Nomor 8/24/PBI/2006
+tentang Penilaian Kualitas Aktiva bagi Bank Perkreditan Rakyat Berdasarkan Prinsip
+Syariah.
+
+BAB X
+KETENTUAN PENUTUP
+Pasal 30
+Ketentuan lebih lanjut dari Peraturan Bank Indonesia ini ditetapkan dalam Surat
+Edaran Bank Indonesia.
+
+Pasal 31
+Dengan diberlakukannya Peraturan Bank Indonesia ini maka:
+a.
+
+Peraturan Bank Indonesia Nomor 8/24/PBI/2006 tentang Penilaian Kualitas
+Aktiva bagi Bank Perkreditan Rakyat Berdasarkan Prinsip Syariah dicabut dan
+dinyatakan tidak berlaku;
+
+b.
+
+Ketentuan pelaksanaan dari Peraturan Bank Indonesia Nomor 8/24/PBI/2006
+
+tentang ...
+
+- 19 -
+
+tentang Penilaian Kualitas Aktiva bagi Bank Perkreditan Rakyat Berdasarkan
+Prinsip Syariah dinyatakan tetap berlaku sepanjang tidak bertentangan dengan
+Peraturan Bank Indonesia ini.
+
+Pasal 32
+Peraturan Bank Indonesia ini mulai berlaku pada tanggal ditetapkan.
+
+Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Bank
+Indonesia ini dengan penempatannya dalam Lembaran Negara Republik Indonesia.
+
+Ditetapkan di Jakarta
+Pada tanggal 24 Maret 2011
+GUBERNUR BANK INDONESIA,
+
+DARMIN NASUTION
+Diundangkan di Jakarta
+Pada tanggal 24 Maret 2011
+MENTERI HUKUM DAN HAK ASASI MANUSIA
+REPUBLIK INDONESIA,
+
+PATRIALIS AKBAR
+LEMBARAN NEGARA REPUBLIK INDONESIA TAHUN 2011 NOMOR 41
+DPbS
+
+PENJELASAN
+ATAS
+PERATURAN BANK INDONESIA
+NOMOR: 13/14/PBI/2011
+TENTANG
+PENILAIAN KUALITAS AKTIVA
+BAGI BANK PEMBIAYAAN RAKYAT SYARIAH
+
+I.
+
+UMUM
+Kelangsungan usaha BPRS tergantung pada kinerja, yang salah satu
+indikatornya adalah kualitas dari penanaman dana BPRS. Dalam melakukan
+penanaman dana, BPRS harus selalu memperbaiki kebijakan dan prosedur
+pembiayaan termasuk penetapan kualitasnya, melakukan pengelolaan portofolio
+aset dengan baik serta kemampuan untuk mengantisipasi perubahan faktor
+eksternal yang dapat mempengaruhi kualitas pembiayaan.
+Salah satu faktor eksternal yang sangat berpengaruh terhadap BPRS adalah
+pemberlakuan Undang-Undang Nomor 21 Tahun 2008 tentang Perbankan
+Syariah.
+Untuk mendukung pengembangan industri perbankan syariah dari sisi
+penanaman dana, perlu dilakukan penyesuaian ketentuan mengenai penilaian
+kualitas aktiva.
+
+II.
+
+PASAL DEMI PASAL
+Pasal 1
+Cukup jelas.
+
+Pasal ...
+
+-2-
+
+Pasal 2
+Ayat (1)
+Yang dimaksud dengan “prinsip kehati-hatian dalam penanaman
+dana” yaitu penanaman dana dilakukan antara lain berdasarkan:
+a.
+
+analisis kelayakan usaha dengan memperhatikan paling kurang
+faktor 5C (Character, Capital, Capacity, Condition of economy
+& Collateral); dan/atau
+
+b.
+
+penilaian terhadap aspek prospek usaha, kinerja (performance)
+dan kemampuan membayar.
+
+Ayat (2)
+Yang dimaksud dengan “menilai” adalah mengevaluasi kondisi
+nasabah dan/atau kelayakan usaha yang akan dibiayai.
+Yang
+
+dimaksud
+
+dengan
+
+“memantau”
+
+adalah
+
+mengawasi
+
+perkembangan kinerja usaha nasabah dari waktu ke waktu.
+Yang dimaksud dengan “mengambil langkah-langkah antisipasi”
+adalah melakukan tindakan dan upaya pencegahan atas kemungkinan
+timbulnya kegagalan dalam penanaman dana.
+
+Pasal 3
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Yang dimaksud dengan “penilaian dilakukan secara bulanan” adalah
+penyajian dalam laporan bulanan sesuai dengan ketentuan Bank
+Indonesia mengenai laporan bulanan BPRS.
+
+Pasal ...
+
+-3-
+
+Pasal 4
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Contoh:
+BPRS A memberikan Pembiayaan Mudharabah dan Pembiayaan
+Murabahah kepada debitur X. Hasil penilaian yang dilakukan BPRS
+A untuk masing-masing Aktiva Produktif dalam bentuk Pembiayaan
+adalah sebagai berikut:
+a.
+
+Lancar, untuk Pembiayaan Mudharabah; dan
+
+b.
+
+Kurang Lancar, untuk Pembiayaan Murabahah.
+
+Karena Pembiayaan digunakan untuk membiayai 1 (satu) nasabah,
+maka kualitas Aktiva Produktif yang ditetapkan BPRS A kepada
+nasabah X mengikuti yang paling rendah yaitu Kurang Lancar .
+
+Pasal 5
+Cukup jelas.
+
+Pasal 6
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Yang dimaksud dengan “akumulasi selama periode Pembiayaan yang
+telah berjalan” adalah penjumlahan RBH atau PBH sejak awal
+Pembiayaan sampai dengan posisi bulan penilaian.
+Contoh:
+Pembiayaan Mudharabah diberikan pada bulan Maret 2011, dengan
+
+jangka ...
+
+-4-
+
+jangka waktu selama 1 (satu) tahun. Penghitungan akumulasi PBH
+yang dilakukan pada bulan Juni 2011 adalah PBH bulan Maret 2011
+ditambah PBH bulan April 2011 ditambah PBH bulan Mei 2011
+ditambah PBH bulan Juni 2011.
+Ayat (3)
+Penetapan PBH dilakukan berdasarkan kesepakatan antara BPRS
+dengan nasabah dengan mempertimbangkan antara lain siklus usaha
+dan arus kas masuk nasabah sehingga tidak harus ditetapkan secara
+bulanan.
+Ayat (4)
+Cukup jelas.
+Ayat (5)
+Cukup jelas.
+
+Pasal 7
+Ayat (1)
+Penetapan
+
+perlu
+
+atau
+
+tidaknya
+
+pembayaran
+
+angsuran
+
+pokok
+
+Pembiayaan Mudharabah disesuaikan dengan karakteristik usaha
+nasabah yang dibiayai.
+Ayat (2)
+Yang dimaksud dengan “langkah-langkah untuk mengurangi risiko”
+antara lain melakukan evaluasi kinerja usaha nasabah paling kurang 1
+(satu) kali dalam 1 (satu) tahun.
+Ayat (3)
+Cukup jelas.
+
+Ayat ...
+
+-5-
+
+Ayat (4)
+Cukup jelas.
+
+Pasal 8
+Ayat (1)
+Yang dimaksud dengan “Pembiayaan multijasa” adalah Pembiayaan
+BPRS kepada nasabah dalam rangka memperoleh manfaat atas suatu
+jasa.
+Ayat (2)
+Cukup jelas.
+
+Pasal 9
+Cukup jelas.
+
+Pasal 10
+Ayat (1)
+Yang dimaksud dengan “dokumen yang lengkap” adalah dokumen
+penanaman dana yang paling kurang meliputi aplikasi, analisa,
+keputusan, dan pemantauan atas penanaman dana serta perubahannya.
+Ayat (2)
+Cukup jelas.
+
+Pasal 11
+Ayat (1)
+Yang dimaksud dengan “mengambilalih agunan” adalah membeli
+sebagian atau seluruh agunan baik melalui maupun di luar pelelangan,
+berdasarkan penyerahan secara sukarela oleh pemilik agunan atau
+
+berdasarkan ...
+
+-6-
+
+berdasarkan pemberian kuasa untuk menjual dari pemilik agunan.
+Ayat (2)
+Cukup jelas.
+
+Pasal 12
+Yang dimaksud dengan “kebijakan dan prosedur tertulis” antara lain berupa
+mekanisme pengambilan AYDA dan persyaratan AYDA.
+
+Pasal 13
+Ayat (1)
+Yang dimaksud dengan “net realizable value” adalah nilai pasar
+agunan dikurangi estimasi biaya dalam rangka pengambilalihan
+AYDA.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Pada saat pengambilalihan AYDA, BPRS melakukan pencatatan
+sebagai berikut:
+-
+
+apabila net realizable value nilai AYDA lebih besar dari nilai
+Aktiva Produktif (hutang nasabah) maka BPRS mencatat nilai
+AYDA sebesar nilai Aktiva Produktif hutang nasabah dan selisih
+lebihnya dicatat dalam rekening administratif BPRS karena
+merupakan hak nasabah; atau
+
+-
+
+apabila net realizable value nilai AYDA lebih kecil dari nilai
+Aktiva Produktif (hutang nasabah) maka BPRS mencatat nilai
+AYDA sebesar net realizable value nilai AYDA dan selisih
+kurangnya dicatat dalam pembukuan BPRS sebagai hutang
+
+kewajiban ...
+
+-7-
+
+kewajiban nasabah.
+
+Pasal 14
+Ayat (1)
+Pengaturan ini dimaksudkan agar BPRS segera menjual AYDA dalam
+jangka waktu paling lama 1 (satu) tahun sesuai Undang-Undang
+Nomor 21 Tahun 2008 tentang Perbankan Syariah dan bukan untuk
+memiliki agunan lebih dari jangka waktu tersebut.
+Dalam hal hasil pencairan AYDA lebih besar dari hutang nasabah
+maka selisih lebihnya merupakan hak nasabah. Dalam hal hasil
+pencairan AYDA lebih kecil dari hutang nasabah maka selisih
+kurangnya tetap merupakan kewajiban nasabah. Dalam hal BPRS
+tidak dapat menagih kewajiban nasabah tersebut maka BPRS dapat
+mencatatnya sebagai kerugian BPRS.
+Ayat (2)
+Dokumentasi antara lain mencakup bukti data dan informasi mengenai
+upaya pemasaran dan penjualan AYDA.
+
+Pasal 15
+Cukup jelas.
+
+Pasal 16
+Cukup jelas.
+
+Pasal 17
+Cukup jelas.
+
+Pasal ...
+
+-8-
+
+Pasal 18
+Ayat (1)
+Pembentukan PPA terhadap Aktiva Non Produktif dimaksudkan untuk
+mendorong BPRS melakukan upaya pencairan dan untuk antisipasi
+terhadap potensi kerugian.
+Ayat (2)
+Cukup jelas.
+
+Pasal 19
+Ayat (1)
+Cukup jelas.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Huruf a
+Pembentukan cadangan khusus PPA paling rendah sebesar 10%
+(sepuluh persen) tidak termasuk Aktiva Non Produktif karena
+kualitas Aktiva Non Produktif hanya digolongkan Lancar dan
+Macet.
+Huruf b
+Pembentukan cadangan khusus PPA paling rendah sebesar 50%
+(lima puluh persen) dari Aktiva Produktif tidak termasuk:
+-
+
+Penempatan Pada Bank Lain dan penempatan dana pada
+bank umum konvensional karena kualitas Aktiva Produktif
+dalam bentuk Penempatan Pada Bank Lain dan penempatan
+dana pada bank umum konvensional hanya digolongkan
+Lancar, Kurang Lancar dan Macet; dan
+
+-
+
+Aktiva ...
+
+-9-
+
+-
+
+Aktiva Non Produktif karena kualitas Aktiva Non Produktif
+hanya digolongkan Lancar dan Macet.
+
+Huruf c
+Cukup jelas.
+Ayat (4)
+Cukup jelas.
+
+Pasal 20
+Ayat (1)
+Kebijakan penyusutan atau amortisasi untuk Pembiayaan Ijarah
+dan/atau Pembiayaan Ijarah Muntahiya Bittamlik mengacu pada
+standar akuntansi keuangan yang berlaku untuk bank syariah.
+Kebijakan
+
+penyusutan
+
+atau
+
+amortisasi
+
+yang
+
+dipilih
+
+harus
+
+mencerminkan pola konsumsi yang diharapkan dari manfaat ekonomi
+di masa depan dari objek Pembiayaan Ijarah dan Pembiayaan Ijarah
+Muntahiya Bittamlik.
+Ayat (2)
+Cukup jelas.
+
+Pasal 21
+Cukup jelas.
+
+Pasal 22
+Ayat (1)
+Huruf a
+Cukup jelas.
+
+Huruf ...
+
+-10-
+
+Huruf b
+Cukup jelas.
+Huruf c
+Cukup jelas.
+Huruf d
+Cukup jelas.
+Huruf e
+Cukup jelas.
+Huruf f
+Cukup jelas.
+Huruf g
+Cukup jelas.
+Huruf h
+Cukup jelas.
+Huruf i
+Yang dimaksud dengan “ketentuan yang berlaku” misalnya
+ketentuan mengenai fidusia dan gadai.
+Huruf j
+Cukup jelas.
+Ayat (2)
+Cukup jelas.
+
+Pasal 23
+Ayat (1)
+Yang dimaksud dengan “metode dan prinsip yang berlaku umum”
+adalah metode dan prinsip penilaian yang ditetapkan oleh Masyarakat
+Profesi Penilai Indonesia (MAPPI).
+
+Ayat ...
+
+-11-
+
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Cukup jelas.
+
+Pasal 24
+Cukup jelas.
+
+Pasal 25
+Ayat (1)
+Yang dimaksud dengan “hapus buku” adalah tindakan administratif
+BPRS untuk menghapus buku penyediaan dana atau tagihan yang
+memiliki kualitas Macet dari neraca sebesar kewajiban nasabah tanpa
+menghapus hak tagih BPRS kepada nasabah.
+Yang dimaksud dengan “hapus tagih” adalah tindakan BPRS
+menghapus kewajiban nasabah yang tidak dapat diselesaikan.
+Kebijakan dan prosedur hapus buku dan hapus tagih antara lain
+mencakup persyaratan, limit, kewenangan dan tanggung jawab serta
+tata cara hapus buku dan hapus tagih.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Cukup jelas.
+Ayat (4)
+Hapus tagih terhadap sebagian Aktiva Produktif dalam bentuk
+Pembiayaan hanya dapat dilakukan dalam rangka restrukturisasi
+Pembiayaan atau dalam rangka penyelesaian Pembiayaan.
+
+Pasal ...
+
+-12-
+
+Pasal 26
+Ayat (1)
+Upaya yang dapat dilakukan antara lain dalam bentuk penagihan
+kepada nasabah, restrukturisasi Pembiayaan, meminta pembayaran
+dari pihak yang memberikan garansi atas Aktiva Produktif dimaksud,
+dan penyelesaian Pembiayaan melalui pengambilalihan agunan.
+Ayat (2)
+Cukup jelas.
+Ayat (3)
+Cukup jelas.
+
+Pasal 27
+Cukup jelas.
+
+Pasal 28
+Cukup jelas.
+
+Pasal 29
+Cukup jelas.
+
+Pasal 30
+Cukup jelas.
+
+Pasal 31
+Cukup jelas.
+
+Pasal ...
+
+-13-
+
+Pasal 32
+Cukup jelas.
+
+TAMBAHAN LEMBARAN NEGARA REPUBLIK INDONESIA NOMOR 5206

@@ -1,0 +1,304 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 12 Laporan Laba Rugi (127-130).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 127 -
+
+BAGIAN XII
+
+LAPORAN LABA RUGI
+
+XII.1. PENGERTIAN
+1. Laporan Laba Rugi adalah laporan yang menyajikan seluruh pos
+penghasilan dan beban yang diakui dalam suatu periode yang
+menunjukkan komponen laba rugi.
+2. Pendapatan adalah kenaikan manfaat ekonomi selama suatu periode
+pelaporan dalam bentuk arus masuk atau penambahan aset atau
+penurunan kewajiban yang mengakibatkan kenaikan ekuitas yang tidak
+berasal dari kontribusi pemegang saham.
+3. Keuntungan adalah pos pendapatan lain yang mungkin timbul atau
+mungkin tidak timbul dalam pelaksanaan aktivitas Bank.
+4. Beban adalah penurunan manfaat ekonomi selama suatu periode
+pelaporan dalam bentuk arus keluar atau penurunan aset atau
+kenaikan kewajiban yang mengakibatkan penurunan ekuitas yang tidak
+menyangkut distribusi kepada pemegang saham.
+5. Kerugian adalah pos beban lain yang mungkin timbul atau mungkin
+tidak timbul dalam pelaksanaan aktivitas Bank.
+6. Pendapatan dan beban operasional adalah pendapatan dan beban dari
+kegiatan usaha Bank.
+7. Pendapatan dan beban non-operasional adalah pendapatan dan beban
+di luar kegiatan usaha Bank.
+8. Laporan Laba Rugi menyajikan pos-pos sebagai berikut:
+a. pendapatan pengelolaan dana oleh Bank sebagai mudharib:
+1) pendapatan dari jual beli;
+2) pendapatan dari sewa;
+3) pendapatan dari bagi hasil;
+4) pendapatan usaha utama lain.
+b. hak pihak ketiga atas bagi hasil dana syirkah temporer.
+c. pendapatan usaha lain.
+d. beban usaha.
+e. laba usaha.
+f.
+
+pendapatan non usaha.
+
+g. beban non usaha.
+h. beban pajak penghasilan.
+i.
+
+laba neto.
+XII.2.
+f. pendapatan
+KOMPONEN
+... ...
+
+- 128 -
+
+XII.2. KOMPONEN LABA RUGI
+A.
+
+Definisi
+Laba Rugi adalah total pendapatan dikurangi beban.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.101 tentang Penyajian Laporan Keuangan Syariah.
+
+3.
+
+PSAK No.102 tentang Akuntansi Murabahah.
+
+4.
+
+PSAK No,103 tentang Akuntansi Salam.
+
+5.
+
+PSAK No.104 tentang Akuntansi Istishna.
+
+6.
+
+PSAK No.105 tentang Akuntansi Mudharabah.
+
+7.
+
+PSAK No.106 tentang Akuntansi Musyarakah.
+
+8.
+
+PSAK No.107 tentang Akuntansi Ijarah.
+
+Penjelasan
+1.
+
+Penyusunan Laporan Laba Rugi didasarkan pada pendapatan dan
+beban yang diakui dengan menggunakan dasar akrual, sedangkan
+perhitungan distribusi pendapatan/hasil usaha menggunakan dasar
+kas. Oleh karena itu, Bank harus mampu membedakan pendapatan
+akrual dan pendapatan kas yang sudah diterima.
+
+2.
+
+Pendapatan usaha utama (pendapatan Bank sebagai mudharib) terdiri
+dari pendapatan dari: jual beli, sewa, bagi hasil, dan pendapatan utama
+lain.
+Hak pihak ketiga atas bagi hasil merupakan bagian bagi hasil milik
+pihak ketiga (misalnya nasabah penyimpan dalam tabungan dan
+deposito yang didasarkan pada akad Mudharabah dan Musyarakah)
+atas hasil pengelolaan dana syirkah temporer oleh Bank.
+
+3.
+
+Pendapatan usaha lain antara lain terdiri atas:
+a.
+
+pendapatan penyelenggaraan jasa Perbankan Syariah berbasis
+imbalan, terdiri dari:
+1)
+
+pendapatan fee wakalah;
+
+2)
+
+pendapatan fee kafalah;
+
+3)
+
+pendapatan fee hiwalah;
+
+4)
+
+pendapatan fee dana investasi terikat;
+
+5)
+
+pendapatan administrasi;
+
+6)
+
+pendapatan lainnya.
+b. Pendapatan ...
+
+- 129 -
+
+4.
+
+5.
+
+6.
+
+D.
+
+b.
+
+pendapatan bonus giro pada Bank Syariah lain.
+
+c.
+
+keuntungan transaksi valuta asing, jika ada.
+
+Beban usaha antara lain terdiri atas:
+a.
+
+beban bonus simpanan masyarakat berdasarkan prinsip wadiah.
+
+b.
+
+beban penghapusan aset.
+
+c.
+
+beban penyusutan.
+
+d.
+
+beban amortisasi.
+
+e.
+
+beban/kerugian transaksi valuta asing, jika ada.
+
+f.
+
+beban premi dalam rangka penjaminan.
+
+g.
+
+beban sewa aset yang digunakan sendiri.
+
+h.
+
+beban promosi.
+
+i.
+
+beban personalia.
+
+j.
+
+beban administrasi dan umum.
+
+Pendapatan non usaha antara lain terdiri atas:
+a.
+
+keuntungan pelepasan aset tetap.
+
+b.
+
+pendapatan hibah.
+
+c.
+
+pendapatan lain.
+
+Beban non usaha antara lain terdiri atas:
+a.
+
+kerugian penurunan nilai aset tetap.
+
+b.
+
+kerugian pelepasan aset tetap.
+
+c.
+
+beban lain.
+
+Perlakuan Akuntansi
+1. Pendapatan margin Murabahah
+a. Untuk transaksi yang dilakukan secara non-tunai, maka keuntungan
+diakui secara proporsional sesuai angsuran yang jatuh tempo selama
+masa akad.
+b. Biaya transaksi diakui selaras dengan pengakuan keuntungan
+Murabahah.
+2. Pendapatan neto Salam paralel
+Pendapatan neto Salam paralel diakui pada saat penyerahan barang
+kepada nasabah sebesar selisih antara jumlah kas yang diserahkan
+kepada pemasok dan jumlah kas yang diterima dari nasabah.
+3. Pendapatan neto Istishna paralel
+Selisih antara nilai akad dan nilai pemesanan barang yang diakui secara
+proporsional selama masa akad, termasuk biaya transaksinya.
+4. Penghasilan ...
+
+- 130 -
+
+4. Penghasilan dari sewa
+a. Pendapatan sewa diakui selama masa akad pada saat manfaat atas
+aset telah diserahkan kepada nasabah.
+b. Keuntungan atau kerugian dari pelepasan aset Ijarah diakui pada
+saat pelepasan sebesar selisih harga jual dan nilai tercatat aset
+ijarah.
+c. Beban yang terkait dengan pengelolaan aset Ijarah, antara lain beban
+penyusutan dan amortisasi, beban pemeliharaan, dan beban sewa
+Ijarah (transaksi Ijarah-lanjut), diakui sebagai pengurang penghasilan
+dari sewa.
+5. Pendapatan dari bagi hasil
+Pendapatan bagi hasil diakui pada saat Bank menerima laporan periodik
+atas usaha yang telah dilakukan oleh nasabah, baik keuntungan
+maupun kerugian.
+6. Pendapatan usaha utama lain
+a. Pendapatan dari pinjaman Qardh diakui pada saat diterima dari
+nasabah.
+b. Pendapatan lain.
+7. Hak pihak ketiga atas bagi hasil
+Hak pihak ketiga atas bagi hasil diakui sebagai pengurang pendapatan
+yang merupakan porsi Bank sebagai mudharib.
+
+E.
+
+Ilustrasi Jurnal
+Ilustrasi jurnal mengacu pada ilustrasi jurnal di setiap pos pendapatan dan
+beban yang terkait.
+
+F.
+
+Pengungkapan
+Pengungkapan
+
+mengacu
+
+pada
+
+pengungkapan
+
+pendapatan dan beban yang terkait.
+
+di
+
+masing-masing
+
+pos

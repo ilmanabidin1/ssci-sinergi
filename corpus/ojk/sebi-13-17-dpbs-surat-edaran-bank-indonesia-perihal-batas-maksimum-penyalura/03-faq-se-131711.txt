@@ -1,0 +1,136 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/17/DPbS
+Tentang: Surat Edaran Bank Indonesia perihal Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah
+Berkas: faq_se_131711.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-perihal-Batas-Maksimum-Penyaluran-Dana-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+FREQUENTLY ASKED QUESTIONS (FAQ)
+Peraturan
+
+:
+
+Surat Edaran Bank Indonesia Nomor 13/17/DPbS tanggal 30 Mei 2011
+tentang Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat
+Syariah.
+
+Berlaku
+
+:
+
+30 Mei 2011
+
+1. Q Apa latar belakang dikeluarkannya SE Ekstern ini?
+A Ketentuan ini merupakan ketentuan pelaksanaan berkenaan dengan diterbitkannya
+Peraturan Bank Indonesia Nomor 13/5/PBI/2011 tanggal 24 Januari 2011 tentang
+Batas Maksimum Penyaluran Dana Bank Pembiayaan Rakyat Syariah (Lembaran
+Negara Republik Indonesia Tahun 2011 Nomor 11, Tambahan Lembaran Negara
+Republik Indonesia Nomor 5191).
+2. Q Siapa yang berkewajiban menyampaikan laporan BMPD kepada Bank Indonesia dan
+mencakup data apa saja?
+A Pelaporan BMPD disampaikan oleh kantor pusat BPRS secara on-line yang mencakup
+data kantor pusat dan data seluruh kantor cabang BPRS.
+3. Q Bagaimana menghitung BMPD untuk Pembiayaan?
+A Perhitungan BMPD untuk Pembiayaan, dilakukan berdasarkan jenis-jenis akad yang
+digunakan, yaitu:
+a. Pembiayaan murabahah, istishna’, dan multijasa dihitung berdasarkan saldo
+harga pokok;
+b. Pembiayaan salam dihitung berdasarkan harga perolehan;
+c. Pembiayaan mudharabah, musyarakah dan qardh dihitung berdasarkan saldo
+baki debet; dan
+d. Pembiayaan ijarah atau IMBT dihitung berdasarkan saldo harga perolehan aktiva
+ijarah atau IMBT dikurangi akumulasi penyusutan atau amortisasi aktiva.
+4. Q Bagaimana menghitung BMPD untuk Penempatan Dana Antar Bank?
+A Dalam hal berbentuk tabungan, BMPD dihitung berdasarkan saldo tertinggi pada
+bulan laporan, dalam hal berbentuk deposito, BMPD dihitung berdasarkan jumlah
+nominal sebagaimana tercantum dalam seluruh bilyet deposito pada BPRS yang sama.
+5. Q Bagaimana menghitung BMPD untuk Penyaluran Dana kepada Pihak Terkait?
+A Dihitung berdasarkan Penyaluran Dana kepada masing-masing dan/atau seluruh Pihak
+Terkait, sebesar 10% (sepuluh persen) dari Modal BPRS.
+6. Q Bagaimana menghitung BMPD untuk Penempatan Dana Antar Bank pada BPRS lain
+Pihak Tidak Terkait?
+A Dihitung berdasarkan Penyaluran Dana kepada masing-masing Nasabah Penerima
+Fasilitas Pihak Tidak Terkait, sebesar 20% (dua puluh persen) dari Modal BPRS.
+7. Q Bagaimana menghitung BMPD untuk Penyaluran Dana dalam bentuk Pembiayaan
+kepada satu atau lebih Nasabah Penerima Fasilitas Pihak Tidak Terkait yang
+merupakan bagian dari kelompok Nasabah Penerima Fasilitas Pihak Tidak Terkait?
+A Dihitung berdasarkan Penyaluran Dana dalam bentuk Pembiayaan kepada satu
+kelompok Nasabah Penerima Fasilitas yang merupakan Pihak Tidak Terkait sebesar
+30% (tiga puluh persen) dari Modal BPRS, dengan Pembiayaan kepada masingmasing Nasabah Penerima Fasilitas tersebut tidak melebihi 20% (dua puluh persen)
+
+dari Modal BPRS. Termasuk dalam pengertian satu kelompok Nasabah Penerima
+Fasilitas adalah Nasabah Penerima Fasilitas non bank yang memiliki hubungan
+kepengurusan, kepemilikan, atau keuangan dengan bank selaku Nasabah Penerima
+Fasilitas.
+8. Q Kapan BPRS dinyatakan melakukan pelanggaran BMPD?
+A BPRS dinyatakan melakukan pelanggaran BMPD apabila terdapat selisih lebih antara
+persentase Penyaluran Dana pada saat direalisasikan terhadap Modal BPRS, dengan
+BMPD yang diperkenankan. BPRS tetap dinilai melanggar BMPD selama
+pelanggaran BMPD tersebut belum diselesaikan.
+9. Q Tolong jelaskan Modal BPRS yang dijadikan dasar perhitungan BMPD?
+A Modal BPRS yang digunakan sebagai dasar dalam perhitungan pelanggaran BMPD
+adalah Modal BPRS pada posisi bulan terakhir sebelum tanggal realisasi Penyaluran
+Dana.
+10. Q Kapan penyediaan dana oleh BPRS dikategorikan sebagai pelampauan BMPD?
+A Penyaluran Dana oleh BPRS dikategorikan sebagai pelampauan BMPD apabila terjadi
+selisih lebih antara persentase Penyaluran Dana yang telah direalisasikan terhadap
+Modal BPRS pada saat tanggal laporan dengan BMPD yang diperkenankan dan tidak
+termasuk Pelanggaran BMPD.
+11. Q Kapan batas waktu penyampaian laporan BMPD BPRS?
+A Batas waktu penyampaian laporan BMPD paling lambat tanggal 14 (empat belas)
+pada bulan berikutnya setelah berakhirnya bulan laporan, sedangkan batas waktu
+penyampaian koreksi laporan BMPD paling lambat tanggal 20 (dua puluh) pada bulan
+berikutnya setelah berakhirnya bulan laporan.
+12. Q Kapan BPRS dinyatakan terlambat menyampaikan laporan BMPD?
+A BPRS dinyatakan terlambat menyampaikan laporan BMPD dan/atau koreksi laporan
+BMPD apabila penyampaian laporan melewati batas waktu sebagaimana dimaksud
+pada jawaban angka 11.
+13. Q Kapan BPRS dinyatakan tidak menyampaikan laporan BMPD?
+A BPRS dinyatakan tidak menyampaikan laporan BMPD dan/atau koreksi laporan
+BMPD apabila BPRS tidak menyampaikan laporan BMPD dan/atau koreksi laporan
+BMPD sampai dengan akhir bulan berikutnya setelah berakhirnya bulan laporan.
+14. Q Apakah penyampaian laporan BMPD dan/atau koreksi laporan BMPD yang dilakukan
+setelah berakhirnya bulan laporan dapat disampaikan secara on-line?
+A Dalam hal penyampaian laporan BMPD dan/atau koreksi laporan BMPD dilakukan
+setelah berakhirnya bulan laporan maka laporan tersebut hanya dapat disampaikan
+secara off-line. Penyampaian laporan BMPD dan/atau koreksi laporan BMPD secara
+off-line dilakukan dalam bentuk disket atau media perekam data elektronik lainnya
+disertai hasil validasi yang telah ditandatangani oleh penanggung jawab dan
+disampaikan kepada Bank Indonesia yang mewilayahi kantor pusat BPRS.
+15. Q Ada berapa jenis laporan BMPD yang wajib disampaikan BPRS dan sebutkan?
+A Ada 4 (empat) jenis laporan BMPD yaitu Laporan Pelanggaran BMPD Pihak Terkait,
+Laporan Penyaluran Dana dan Pelampauan BMPD Pihak Terkait, Laporan
+Pelanggaran BMPD Pihak Tidak Terkait dan Laporan Pelampauan BMPD Pihak
+Tidak Terkait.
+
+16. Q Bagaimana format dan tatacara penyusunan laporan BMPD?
+A Format dan tata cara penyusunan laporan BMPD dan/atau koreksi laporan BMPD
+berpedoman pada Pedoman Penyusunan Laporan BMPD, yang merupakan bagian
+yang tidak terpisahkan dari Surat Edaran ini.
+17. Q Bagaimana tata cara pengoperasian aplikasi laporan BMPD?
+A Tata cara pengoperasian aplikasi laporan BMPD dan/atau koreksi laporan BMPD
+berpedoman pada buku mengenai Tata Cara Aplikasi Data Entry Laporan Berkala
+BPRS dan Tata Cara Aplikasi Web User BPRS Laporan Berkala BPRS, yang
+merupakan bagian yang tidak terpisahkan dari Surat Edaran ini.
+18. Q Persiapan dan sarana apa saja yang perlu dilakukan BPRS dalam rangka
+penyusunan laporan BMPD?
+A BPRS perlu menyediakan Personal Computer yang memenuhi konfigurasi minimal
+hardware dan software yang telah ditetapkan, sumberdaya manusia yang mendukung,
+sistem pengamanan yang memadai terhadap sarana komputer yang digunakan,
+aplikasi, dan data serta back up data laporan yang ditatausahakan dengan baik.
+19. Q Bagaimana tatacara penyelesaian bagi BPRS yang melanggar ketentuan pelaporan
+BMPD sehingga dikenakan sanksi kewajiban membayar?
+A BPRS yang melanggar ketentuan BMPD dikenakan sanksi kewajiban membayar
+sebagaimana dimaksud pada Pasal 29 Peraturan Bank Indonesia Nomor
+13/5/PBI/2011 tentang BMPD BPRS, pembayaran tersebut dilakukan oleh kantor
+pusat BPRS pelapor kepada Bank Indonesia secara tunai atau non tunai (kliring atau
+BI-RTGS) untuk untung rekening nomor 566.000446.980 - ”Rekening penerimaan
+sanksi administratif BPRS”. Selanjutnya, BPRS pelapor menyampaikan fotokopi
+bukti pembayaran sanksi kewajiban membayar kepada Bank Indonesia.
+20. Q Apakah BPRS wajib menyampaikan laporan struktur kelompok usaha?
+A BPRS wajib melaporkan struktur kelompok usaha yang terkait dengan BPRS untuk
+posisi akhir tahun paling lama 30 (tiga puluh) hari setelah akhir tahun.
+
+DPbS

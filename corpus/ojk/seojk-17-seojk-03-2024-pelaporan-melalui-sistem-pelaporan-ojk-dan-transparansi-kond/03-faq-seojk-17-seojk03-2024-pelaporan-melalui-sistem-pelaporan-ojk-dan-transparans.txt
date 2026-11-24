@@ -1,0 +1,160 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 17/SEOJK.03/2024
+Tentang: Pelaporan Melalui Sistem Pelaporan OJK dan Transparansi Kondisi Keuangan bagi Bank Perekonomian Rakyat Syariah
+Berkas: FAQ SEOJK 17-SEOJK03-2024 Pelaporan Melalui Sistem Pelaporan OJK dan Transparansi Kondisi Keuangan bagi BPRS.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-17-SEOJK03-2024-Pelaporan-Melalui-Sistem-Pelaporan-OJK-dan-Transparansi-Kondisi-Keuangan-bagi-BPRS.aspx
+
+---
+
+DAFTAR TANYA JAWAB LAZIM/FREQUENTLY ASKED QUESTION (FAQ)
+SURAT EDARAN OTORITAS JASA KEUANGAN
+REPUBLIK INDONESIA
+NOMOR 17/SEOJK.03/2024
+TENTANG
+PELAPORAN MELALUI SISTEM PELAPORAN OTORITAS JASA
+KEUANGAN DAN TRANSPARANSI KONDISI KEUANGAN BAGI BANK
+PEREKONOMIAN RAKYAT SYARIAH
+
+1.
+
+Dalam rangka implementasi SEOJK Nomor 17/SEOJK.03/2024
+tentang Pelaporan Melalui Sistem Pelaporan Otoritas Jasa Keuangan dan
+Transparansi Kondisi Keuangan Bagi Bank Perekonomian Rakyat
+Syariah (SEOJK Pelaporan dan Transparansi BPR Syariah),
+penyesuaian apa saja yang perlu diperhatikan BPR Syariah
+khususnya terkait penyesuaian pos pada Laporan Keuangan BPR
+Syariah?
+Jawab:
+Pada laporan keuangan sesuai dengan SEOJK Pelaporan dan
+Transparansi BPR Syariah terdapat beberapa penyesuaian antara lain:
+a. Penyesuaian pada Laporan Posisi Keuangan
+1) Reklasifikasi pos Pembiayaan Sewa menjadi pos Ijarah sehingga
+tidak lagi sebagai bagian dari kelompok pembiayaan melainkan
+aset non keuangan.
+2) Penegasan pos Simpanan dan Dana Investasi dengan akad
+mudarabah.
+a) Penyesuaian nomeklatur untuk pos Dana Investasi Non-Profit
+Sharing menjadi Dana Simpanan Mudarabah berupa
+tabungan dan deposito dengan akad mudarabah non profit
+sharing;
+b) Penghapusan pos Dana Investasi Profit Sharing; dan
+c) penambahan pos Dana Investasi di antara Liabilitas dan
+Ekuitas (mezzanine) berupa pembiayaan yang diterima dengan
+akad mudarabah profit sharing.
+b. Pada Laporan Laba Rugi dan Penghasilan Komprehensif Lain
+Penyesuaian nomenklatur dan reklasifikasi pos sebagai dampak
+penyesuaian pada laporan posisi keuangan terkait penyesuaian pos
+pada huruf a.
+
+2.
+
+Apa latar belakang Ijarah dikeluarkan dari kelompok pembiayaan
+Jawab:
+a. Sesuai dengan fatwa DSN MUI Nomor 112/DSN-MUYIX/2017
+tentang Akad Ijarah, Ijarah Adalah akad sewa menyewa antara
+
+Page 1 of 4
+
+b.
+
+mu’jir (pemilik aset) dengan musta’jir (penyewa) atau antara musta’jir
+dengan ajir (pihak yang memberikan jasa) untuk mempertukarkan
+manfaat dan ujrah, baik manfaat Aset Ijarah maupun jasa. Dengan
+demikian, Aset Ijarah tersebut diperlakukan sebagai aset milik BPR
+Syariah yang disewakan kepada nasabah.
+Pada sisi nasabah, Aset Ijarah tidak dicatat sebagai utang,
+sementara pembayaran sewa dicatat sebagai beban sewa. Nasabah
+mencatat sebagai utang hanya apabila terdapat tunggakan sewa.
+
+3.
+
+Bagaimana dampak reklasifikasi Aset Ijarah dari semula bagian dari
+pembiayaan menjadi aset non keuangan
+Jawab:
+a. Diperlukan penyesuaian atas formula baki debet pembiayaan
+pada laporan yang disampaikan BPR Syariah, perhitungan Rasio
+Keuangan BPR Syariah termasuk kinerja BPR Syariah yang semula
+formula untuk Ijarah adalah harga perolehan dikurangi
+akumulasi penyusutan dikurangi CKPN ditambah tunggakan
+pokok menjadi tunggakan pokok.
+b. Diperlukan perluasan cakupan penyaluran dana BPR Syariah
+yang semula pembiayaan menjadi pembiayaan dan fasilitas
+produk penyaluran dana lainnya.
+Fasilitas produk penyaluran dana lainnya mencakup penyaluran
+dana BPR Syariah yang tidak termasuk dalam pembiayaan dan
+berupa aset non keuangan, antara lain Aset Ijarah, Salam, Aset
+Istishna dalam Penyelesaian (AIDP) net Termin Istishna.
+
+4.
+
+Bagaimana perhitungan total pembiayaan dan rasio keuangan yang
+dilaporkan oleh BPR Syariah terkait dengan penyesuaian pada angka
+3?
+Jawab:
+Dalam rangka penerapan pengaturan formula pembiayaan dan
+perhitungan fasilitas produk penyaluran dana lainnya, BPR Syariah
+perlu menilai substansi terkait perhitungan total pembiayaan atau
+rasio keuangan, sebagai berikut:
+a. Dalam rangka perhitungan rasio yang terkait dengan risiko
+konsentrasi
+Mempertimbangkan fasilitas produk penyaluran dana lainnya
+termasuk dalam penyaluran dana BPR Syariah, maka untuk
+perhitungan rasio terkait dengan risiko konsentrasi mencakup total
+pembiayaan dan fasilitas produk penyaluran dana lainnya.
+Misalnya perhitungan rasio Pembiayaan kepada Debitur Inti terhadap
+Total Pembiayaan juga mencakup fasilitas produk penyaluran dana
+lainnya.
+
+Page 2 of 4
+
+b. Dalam rangka perhitungan rasio yang terkait dengan perhitungan
+kualitas aset
+Mempertimbangkan POJK Nomor 24/POJK.03/2024 tentang
+Kualitas Aset Bank Perekonomian Rakyat Syariah, atas fasilitas
+produk penyaluran dana lainnya yaitu Aset Ijarah, Salam dan AIDP
+net Termin Istishna tidak dibentuk Penyisihan Penilaian Kualitas Aset
+maka perhitungan rasio terkait dengan kualitas aset hanya
+mencakup formula pembiayaan (tidak mencakup fasilitas produk
+penyaluran dana lainnya).
+Misalnya rasio NPF tidak mencakup fasilitas produk penyaluran dana
+lainnya.
+c. Dalam rangka perhitungan rasio yang terkait dengan fungsi
+intermediasi
+Mempertimbangkan sumber dana fasilitas produk penyaluran dana
+lainnya juga berasal dari nasabah pendanaan maka dalam
+perhitungan rasio yang terkait dengan fungsi intermediasi mencakup
+total pembiayaan dan fasilitas produk penyaluran dana lainnya.
+Misalnya FDR mencakup fasilitas produk penyaluran dana lainnya.
+d. Dalam rangka perhitungan Aset Tertimbang Menurut Risiko
+(ATMR) Risiko Kredit untuk perhitungan Rasio KPMM
+Sejalan dengan perhitungan kualitas aset di atas, maka Aset Ijarah
+diperlakukan sebagai aset non keuangan dan dikenakan bobot risiko
+100% (seratus persen).
+Perhitungan ATMR dalam rangka perhitungan dan pemenuhan rasio
+modal inti disesuaikan setelah ketentuan KPMM BPRS baru berlaku.
+e. Dalam rangka perhitungan baki debet SLIK
+Sejalan dengan perhitungan kualitas aset di atas, pengisian baki
+debet pembiayaan SLIK, dilakukan sebagai berikut:
+a. tunggakan pokok, jika terdapat tunggakan pokok sewa atau
+b. “0” (nol) jika tidak terdapat tunggakan pokok sewa.
+f. Dalam rangka perhitungan aset produktif
+Mempertimbangkan fasilitas produk penyaluran dana lainnya
+bertujuan untuk memperoleh pendapatan maka diperhitungkan
+sebagai aset produktif.
+g. Dalam rangka perhitungan rasio kinerja BPR Syariah
+Mempertimbangkan fasilitas produk penyaluran dana lainnya
+termasuk dalam kegiatan utama BPR Syariah, maka tetap
+diperhitungkan dalam rasio kinerja BPR Syariah.
+5.
+
+Mulai kapan perhitungan total pembiayaan dan rasio keuangan BPR
+Syariah yang dilaporkan oleh BPR Syariah dilakukan sebagaimana
+angka 6?
+Jawab:
+
+Page 3 of 4
+
+Penyesuaian dilakukan untuk Laporan mulai posisi September 2026.
+
+Page 4 of 4

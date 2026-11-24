@@ -1,0 +1,80 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Peraturan OJK
+Nomor: 64/POJK.03/2020
+Tentang: Perubahan Atas Peraturan Otoritas Jasa Keuangan Nomor 18/POJK.03/2017 tentang Pelaporan dan Permintaan Informasi Debitur Melalui Sistem Layanan Informasi Keuangan (POJK SLIK)
+Berkas: RINGKASAN POJK SLIK 64-2020.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/Perubahan-Atas-Peraturan-Otoritas-Jasa-Keuangan-Nomor-18-tentang-Pelaporan-dan-Permintaan-Informasi-Debitur.aspx
+
+---
+
+RINGKASAN
+PERATURAN OTORITAS JASA KEUANGAN
+NOMOR 64/POJK.03/2020
+TENTANG
+PERUBAHAN ATAS PERATURAN OTORITAS JASA KEUANGAN
+NOMOR 18/POJK.03/2017 TENTANG PELAPORAN DAN PERMINTAAN
+INFORMASI DEBITUR MELALUI SISTEM LAYANAN INFORMASI KEUANGAN
+1. POJK tentang Perubahan POJK No.18/POJK.03/2017 tentang Pelaporan dan
+Permintaan Informasi Debitur melalui Sistem Layanan Informasi Keuangan
+(Perubahan
+POJK
+SLIK)
+merupakan
+penyempurnaan
+dari
+POJK
+No.18/POJK.03/2017. Penyempurnaan POJK ini disusun sebagai landasan hukum
+untuk mengakomodir tambahan lembaga jasa keuangan di Pasar Modal yaitu
+Perusahaan Efek (PE) yang menjalankan kegiatan usaha sebagai perantara
+pedagang efek dan Lembaga Pendanaan Efek (LPE) untuk menjadi pelapor SLIK.
+Selain itu, penyempurnaan Perubahan POJK ini juga mencakup pengaturan terkait
+penyampaian dan penggunaan informasi debitur dalam rangka meningkatkan
+efektivitas pelaksaaan SLIK serta mitigasi penyalahgunaan informasi debitur.
+2. Pokok-pokok perubahan pengaturan dalam penyempurnaan ketentuan pelaporan
+dan permintaan informasi debitur melalui sistem layanan informasi keuangan
+adalah sebagai berikut:
+a. Resiprokal antara pelaporan dan penggunaan informasi debitur
+1) Pelapor SLIK hanya dapat mengakses data informasi debitur maksimum
+sebesar 100% dari jumlah debitur yang dilaporkan pada posisi 2 (dua) bulan
+sebelumnya.
+2) Pelapor SLIK dapat mengajukan permintaan tambahan informasi debitur
+dengan mengajukan permohonan ke OJK.
+b. Pelapor SLIK
+1) Tambahan pelapor SLIK sebagai berikut:
+a) PE yang menjalankan kegiatan usaha sebagai perantara pedagang efek,
+paling lambat menjadi pelapor SLIK tanggal 28 Februari 2021.
+b) LPE, paling lambat menjadi pelapor SLIK tanggal 31 Desember 2021.
+c) LJK lainnya yang memberikan fasilitas penyediaan dana dapat menjadi
+pelapor SLIK dengan mengajukan permohonan ke OJK.
+2) Perpanjangan waktu bagi Pergadaian untuk menjadi pelapor SLIK dari
+paling lambat 31 Desember 2022 menjadi paling lambat 31 Desember 2025
+dengan ruang lingkup laporan hanya mencakup pinjaman jaminan fidusia.
+c. Informasi debitur dapat digunakan untuk:
+1) mendukung kelancaran proses pemberian Fasilitas Penyediaan Dana;
+2) menerapkan manajemen risiko kredit atau pembiayaan;
+3) mengidentifikasi kualitas Debitur untuk pemenuhan ketentuan OJK atau
+pihak lain yang berwenang;
+4) pengelolaan sumber daya manusia pada Pelapor; dan/atau
+5) verifikasi untuk kerja sama Pelapor dengan pihak ketiga.
+d. Lain – lain
+
+1) Debitur melakukan permintaan informasi secara luring dan daring kepada
+OJK.
+2) OJK berwenang menetapkan penyesuaian penyampaian cakupan informasi
+laporan debitur berdasarkan pertimbangan tertentu.
+3) Pelapor dilarang untuk memperjualbelikan data SLIK.
+4) Pelapor wajib melakukan audit intern terhadap pelaksanaan SLIK paling
+sedikit 1 (satu) kali dalam setahun.
+5) Penetapan sanksi denda maksimum atas pelanggaran terhadap permintaan
+dan penggunaan informasi debitur.
+a) Bagi pelapor dengan total aset < Rp 500 miliar: sanksi denda Rp 10 juta
+per informasi debitur dan maksimum sebesar Rp100 juta.
+b) Bagi pelapor dengan total aset Rp 500 miliar – Rp 20 triliun: sanksi denda
+Rp 50 juta per informasi debitur dan maksimum Rp500 juta.
+c) Bagi pelapor dengan total aset > Rp 20 triliun: sanksi denda Rp 50 juta
+per informasi debitur dan maksimum Rp 5 miliar.
+6) OJK dapat memberikan informasi tambahan pada SLIK.
+e. Ketentuan peralihan yang mengatur bahwa dalam hal Perubahan POJK SLIK
+telah berlaku maka sanksi kepada pelapor yang melakukan pelanggaran
+terhadap ketentuan POJK No.18/POJK.03/2017 dikenai sanksi administratif
+sebagaimana diatur dalam Perubahan POJK SLIK.

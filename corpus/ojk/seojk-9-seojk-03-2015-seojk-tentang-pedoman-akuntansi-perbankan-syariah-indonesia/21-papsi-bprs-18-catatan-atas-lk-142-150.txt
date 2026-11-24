@@ -1,0 +1,981 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 18 Catatan Atas LK (142-150).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 144 -
+
+BAGIAN XVIII CATATAN ATAS LAPORAN KEUANGAN
+A.
+
+PENDAHULUAN
+1.
+
+Catatan atas laporan keuangan merupakan bagian tak terpisahkan dari
+laporan keuangan Bank. Catatan atas laporan keuangan memuat
+penjelasan mengenai gambaran umum Bank, ikhtisar kebijakan
+akuntansi, penjelasan pos-pos laporan keuangan, dan informasi
+penting lainnya.
+
+2.
+
+Catatan atas laporan keuangan harus disajikan secara sistematis.
+Setiap pos dalam neraca, laporan laba rugi, laporan perubahan ekuitas,
+laporan arus kas, laporan rekonsiliasi pendapatan dan bagi hasil,
+laporan sumber dan penyaluran dana zakat, dan laporan sumber dan
+penggunaan dana kebajikan harus berkaitan dengan informasi yang
+ada dalam catatan atas laporan keuangan.
+
+3.
+
+Pedoman ini mengatur hal-hal yang harus diungkapkan namun tidak
+terbatas pada unsur-unsur yang diuraikan dalam bagian ini.
+
+4.
+
+Secara umum, catatan atas laporan keuangan mengungkapkan:
+a.
+
+Informasi tentang dasar penyusunan laporan keuangan dan
+kebijakan
+
+akuntansi
+
+yang
+
+dipilih
+
+dan
+
+diterapkan
+
+terhadap
+
+peristiwa dan transaksi yang penting;
+b.
+
+Informasi yang diwajibkan dalam SAK ETAP tetapi tidak disajikan
+dalam neraca, laporan laba rugi, laporan perubahan ekuitas,
+laporan arus kas, laporan rekonsiliasi pendapatan dan bagi hasil,
+laporan sumber dan penyaluran dana zakat, dan laporan sumber
+dan penggunaan dana kebajikan, misalnya subklasifikasi pos-pos
+tertentu;
+
+c.
+
+Informasi tambahan yang tidak disajikan dalam neraca, laporan
+laba rugi, laporan perubahan ekuitas, laporan arus kas, laporan
+rekonsiliasi pendapatan dan bagi hasil, laporan sumber dan
+penyaluran dana zakat, dan laporan sumber dan penggunaan dana
+kebajikan tetapi diperlukan dalam rangka penyajian secara wajar;
+
+d.
+
+Untuk pos-pos yang nilainya material, harus dirinci dan dijelaskan
+dalam catatan atas laporan keuangan. Sedangkan untuk pos-pos
+yang bersifat khusus harus dirinci dan dijelaskan pada catatan
+atas laporan keuangan tanpa mempertimbangkan materialitasnya;
+
+e. Untuk ...
+
+- 145 -
+
+e.
+
+Untuk pos yang merupakan hasil penggabungan beberapa pos
+sejenis dirinci dan dijelaskan sifat dari unsur utamanya dalam
+catatan atas laporan keuangan.
+
+5.
+
+Catatan atas laporan keuangan yang terkait dengan pembiayaan,
+simpanan, pendapatan, dan beban harus menunjukkan secara terpisah
+jumlah dari setiap jenis transaksi dan saldo dengan direksi, pegawai,
+komisaris,
+
+pemegang
+
+saham,
+
+dan
+
+pihak-pihak
+
+yang
+
+mempunyai
+
+hubungan istimewa dengan Bank.
+6.
+
+Dalam rangka membantu pengguna laporan keuangan memahami dan
+membandingkannya dengan laporan keuangan Bank lain, catatan atas
+laporan keuangan umumnya disajikan dengan urutan sebagai berikut:
+a.
+
+pengungkapan
+
+mengenai
+
+dasar
+
+pengukuran
+
+dan
+
+kebijakan
+
+akuntansi yang diterapkan.
+b.
+
+informasi pendukung pos-pos laporan keuangan sesuai urutan
+sebagaimana pos-pos tersebut disajikan dalam laporan keuangan
+dan urutan penyajian komponen laporan keuangan.
+
+c.
+
+pengungkapan
+
+lain
+
+termasuk
+
+kontinjensi,
+
+komitmen,
+
+dan
+
+pengungkapan keuangan lain serta pengungkapan yang bersifat
+non-keuangan.
+B.
+
+C.
+
+DASAR PENGATURAN
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.101 tentang Penyajian Laporan Keuangan Syariah.
+
+PENJELASAN
+1.
+
+SAK ETAP dimaksudkan agar laporan keuangan menyajikan secara
+wajar posisi keuangan, kinerja, arus kas dan kegiatan keuangan yang
+dilakukan oleh Bank sehingga tujuan laporan keuangan tersebut dapat
+tercapai. SAK ETAP mungkin tidak mengatur pengungkapan informasi
+tertentu padahal pengungkapan informasi tersebut diperlukan guna
+menyajikan laporan keuangan secara wajar. Dalam hal tersebut maka
+Bank harus memberikan tambahan pengungkapan informasi yang
+relevan sehingga laporan keuangan dapat disajikan secara wajar.
+
+2.
+
+Pada beberapa kasus, informasi naratif yang disajikan pada laporan
+keuangan periode sebelumnya masih relevan untuk diungkapkan pada
+periode berjalan. Misalnya, rincian tentang sengketa hukum yang
+dihadapi ...
+
+- 146 -
+
+dihadapi, yang hasil akhirnya belum diketahui secara pasti pada
+periode sebelumnya dan masih dalam proses penyelesaian, perlu
+diungkapkan kembali pada periode berjalan. Pengguna laporan akan
+memperoleh manfaat dari informasi adanya ketidakpastian pada
+tanggal neraca sebelumnya dan langkah-langkah yang telah dilakukan
+pada periode berjalan untuk mengatasi ketidakpastian tersebut.
+3.
+
+Terdapat suatu keadaan ketika reklasifikasi guna menjaga daya
+banding informasi komparatif dengan informasi pada periode berjalan
+tidak praktis dilakukan, misalnya pada periode sebelumnya data
+dikumpulkan
+
+sedemikian
+
+rupa
+
+sehingga
+
+tidak
+
+memungkinkan
+
+dilakukan reklasifikasi serta tidak praktis untuk menciptakan kembali
+informasi tersebut. Dalam keadaan demikian maka sifat penyesuaian
+terhadap informasi komparatif yang seharusnya dilakukan harus
+diungkapkan.
+4.
+
+Dalam keadaan sangat luar biasa, Bank mungkin terpaksa atau
+memutuskan untuk mengubah tanggal neracanya. Dalam kasus seperti
+ini, pengguna laporan keuangan perlu mengetahui bahwa jumlah yang
+disajikan pada periode berjalan dan jumlah komparatif tidak dapat
+dibandingkan dan alasan perubahan tanggal neraca diungkapkan.
+
+5.
+
+Rincian yang tercakup dalam subklasifikasi, di neraca atau di catatan
+atas laporan keuangan, bergantung pada persyaratan dari SAK ETAP
+dan materialitas jumlah pos yang bersangkutan. Pertimbangan apakah
+pos-pos tambahan disajikan secara terpisah didasarkan atas penilaian
+dari:
+
+6.
+
+a.
+
+sifat, likuiditas dan materialitas aset;
+
+b.
+
+fungsi pos-pos tersebut;
+
+c.
+
+jumlah, sifat dan jangka waktu kewajiban.
+
+Catatan atas laporan keuangan meliputi penjelasan naratif atau rincian
+jumlah yang tertera
+
+dalam neraca, laporan laba rugi,
+
+laporan
+
+perubahan ekuitas, laporan arus kas, laporan rekonsiliasi pendapatan
+dan bagi hasil, laporan sumber dan penyaluran dana zakat, dan
+laporan sumber dan penggunaan dana kebajikan, serta informasi
+tambahan seperti kewajiban komitmen. Catatan atas laporan keuangan
+juga mencakup informasi yang diharuskan dan informasi lainnya yang
+perlu
+
+untuk
+
+diungkapkan
+
+dalam
+
+SAK
+
+serta
+
+pengungkapan-
+
+pengungkapan lain yang diperlukan untuk menghasilkan penyajian
+laporan keuangan secara wajar.
+7. Dalam ...
+
+- 147 -
+
+7.
+
+Dalam rangka membantu pengguna laporan memahami laporan
+keuangan dan membandingkannya dengan laporan keuangan Bank
+lain, catatan atas laporan keuangan umumnya disajikan dengan
+urutan sebagai berikut:
+a.
+
+pengungkapan
+
+mengenai
+
+dasar
+
+pengukuran
+
+dan
+
+kebijakan
+
+akuntansi yang diterapkan;
+b.
+
+informasi pendukung pos-pos laporan keuangan sesuai urutan
+sebagaimana pos-pos tersebut disajikan dalam laporan keuangan
+dan urutan penyajian komponen laporan keuangan;
+
+c.
+
+pengungkapan
+keuangan
+
+lain
+
+lainnya
+
+termasuk
+serta
+
+komitmen
+
+dan
+
+pengungkapan
+
+pengungkapan
+
+yang
+
+bersifat
+
+non
+
+keuangan.
+Sistematika struktur dalam catatan atas laporan keuangan agar tetap
+dipertahankan sepanjang hal tersebut praktis untuk dilaksanakan.
+8.
+
+Pengguna laporan perlu mengetahui dasar pengukuran yang digunakan
+(nilai historis, nilai pasar, nilai realisasi, nilai wajar, atau nilai
+sekarang) sebagai dasar dalam penyiapan laporan keuangan. Apabila
+lebih dari satu dasar pengukuran digunakan dalam laporan keuangan,
+maka
+
+informasi
+
+yang
+
+disajikan
+
+mengindikasikan
+
+aset
+
+dan
+
+pengukuran
+kebijakan
+
+tersebut.
+akuntansi
+
+cukup
+
+kewajiban
+
+Selanjutnya,
+tertentu
+
+memadai
+
+yang
+
+dalam
+
+harus
+
+untuk
+
+dapat
+
+menggunakan
+
+dasar
+
+menentukan
+
+diungkapkan,
+
+apakah
+
+manajemen
+
+mempertimbangkan apakah pengungkapan tersebut akan membantu
+pengguna
+
+laporan
+
+untuk
+
+memahami
+
+bagaimana
+
+transaksi
+
+dan
+
+peristiwa tercermin di laporan laba rugi dan neraca. Kebijakan
+akuntansi meliputi namun tidak terbatas pada hal-hal sebagai berikut:
+a.
+
+pengakuan pendapatan dari penyaluran pembiayaan dan distribusi
+bagi hasil;
+
+b.
+
+pengakuan agunan yang diambil alih;
+
+c.
+
+pengakuan beban termasuk metode penyusutan atau amortisasi
+aset berwujud dan aset tidak berwujud;
+
+d.
+
+sewa;
+
+e.
+
+pajak;
+
+f.
+
+penyisihan;
+
+g.
+
+imbalan kerja;
+
+h.
+
+definisi kas dan setara kas.
+D. UNSUR ...
+
+- 148 -
+
+D.
+
+UNSUR-UNSUR
+1.
+
+Gambaran Umum Bank
+Hal-hal yang harus diungkapkan antara lain:
+a.
+
+pendirian;
+
+b.
+
+riwayat ringkas;
+
+c.
+
+nomor dan tanggal akta pendirian serta perubahan terakhir,
+pengesahan Departemen Hukum dan Hak Asasi Manusia dan/atau
+nomor dan tanggal Berita Negara yang bersangkutan;
+
+d.
+
+bidang usaha utama sesuai anggaran dasar dan kegiatan utama
+pada periode pelaporan;
+
+e.
+
+tempat kedudukan dan lokasi utama kegiatan usaha;
+
+f.
+
+tanggal mulai beroperasi, apabila Bank melakukan ekspansi atau
+penciutan usaha secara signifikan pada periode laporan yang
+disajikan, harus disebutkan saat dimulainya ekspansi atau
+penciutan usaha dan kapasitas usaha;
+
+g.
+
+kepemilikan, berupa nama pemilik, besaran, dan komposisi
+kepemilikan;
+
+h.
+
+Direksi, Komisaris, Dewan Pengawas Syariah dan karyawan:
+1)
+
+Nama anggota direksi, dewan komisaris dan dewan pengawas
+syariah.
+
+2)
+
+Jumlah karyawan pada akhir periode atau rata-rata jumlah
+karyawan selama periode yang bersangkutan.
+
+2.
+
+Ikhtisar Kebijakan Akuntansi
+Dalam bagian ini harus diungkapkan hal-hal sebagai berikut:
+a.
+
+pernyataan bahwa Bank menggunakan SAK ETAP;
+
+b.
+
+dasar pengukuran dan penyusunan laporan keuangan, antara lain:
+1)
+
+dasar pengukuran laporan keuangan yaitu berdasarkan biaya
+historis, biaya kini, nilai realisasi, nilai sekarang dan nilai
+wajar;
+
+2)
+
+dasar penyusunan laporan keuangan yaitu dasar akrual
+kecuali untuk laporan arus kas dan laporan rekonsiliasi bagi
+hasil;
+
+3)
+3.
+
+kebijakan akuntansi tertentu.
+
+Kebijakan akuntansi meliputi namun tidak terbatas pada hal-hal
+berikut:
+a.
+
+konsep dasar pengukuran;
+
+b.
+
+pembiayaan yang diberikan;
+c. penyisihan ...
+
+- 149 -
+
+4.
+
+c.
+
+penyisihan kerugian pembiayaan;
+
+d.
+
+agunan yang diambil alih;
+
+e.
+
+kas dan setara kas;
+
+f.
+
+aset tetap dan inventaris serta penyusutan;
+
+g.
+
+pengakuan pendapatan penyaluran pembiayaan;
+
+h.
+
+pengakuan distribusi bagi hasil;
+
+i.
+
+Pajak penghasilan;
+
+j.
+
+Imbalan kerja.
+
+Penjelasan
+
+atas
+
+Pos-pos
+
+Laporan
+
+Keuangan
+
+disusun
+
+dengan
+
+memperhatikan urutan penyajian neraca, laporan laba rugi, laporan
+perubahan ekuitas, laporan arus kas, laporan rekonsiliasi pendapatan
+dan bagi hasil, laporan sumber dan penyaluran dana zakat, dan
+laporan sumber dan penggunaan dana kebajikan serta informasi
+tambahan sesuai dengan ketentuan pengungkapan pada setiap pos
+pada bagian yang terkait, ditambah dengan pengungkapan:
+a.
+
+Transaksi hubungan istimewa
+1)
+
+Rincian jumlah masing-masing pos aset, kewajiban, dan
+syirkah temporer, penghasilan, dan beban kepada pihak yang
+mempunyai
+
+hubungan
+
+istimewa
+
+beserta
+
+persentasenya
+
+terhadap total aset, kewajiban, dana syirkah temporer,
+penghasilan, dan beban.
+2)
+
+Penjelasan
+
+transaksi
+
+yang
+
+tidak
+
+berhubungan
+
+dengan
+
+kegiatan usaha utama dan jumlah utang/piutang sehubungan
+dengan transaksi tersebut.
+3)
+
+Sifat
+
+hubungan,
+
+jenis,
+
+dan
+
+unsur
+
+transaksi
+
+hubungan
+
+transaksi
+
+serta
+
+pernyataan
+
+istimewa.
+Kebijakan
+
+syarat
+
+apakah
+
+penerapan kebijakan syarat tersebut sama dengan kebijakan
+syarat untuk transaksi dengan pihak lain yang tidak memiliki
+hubungan istimewa.
+4)
+
+Alasan dan dasar dilakukannya pembentukan penyisihan
+kerugian piutang yang terkait dengan hubungan istimewa.
+
+b.
+
+Perubahan akuntansi dan koreksi kesalahan
+1)
+
+Perubahan estimasi akuntansi
+a) Hakikat dan alasan perubahan estimasi akuntansi.
+b) Jumlah perubahan estimasi yang mempengaruhi periode
+berjalan.
+c) Pengaruh ...
+
+- 150 -
+
+c)
+
+Pengaruh estimasi terhadap periode mendatang.
+Apabila
+
+penghitungan
+
+mendatang
+
+tidak
+
+pengaruh
+
+praktis,
+
+terhadap
+
+kenyataan
+
+periode
+
+tersebut
+
+harus
+
+diungkapkan.
+2)
+
+Perubahan kebijakan akuntansi
+a) Hakikat, alasan, dan tujuan dilakukannya perubahan.
+b) Jumlah
+
+penyesuaian
+
+perubahan
+
+kebijakan
+
+akuntansi
+
+terhadap periode berjalan dan periode sebelumnya yang
+disajikan kembali.
+c)
+
+Jumlah penyesuaian yang berhubungan dengan masa
+sebelum
+
+periode
+
+yang
+
+tercakup
+
+dalam
+
+informasi
+
+komparatif.
+d) Kenyataan bahwa informasi komparatif telah dinyatakan
+kembali
+
+atau
+
+kenyataan
+
+bahwa
+
+untuk
+
+menyatakan
+
+kembali informasi komparatif dianggap tidak praktis.
+3)
+
+Kesalahan
+a) Hakikat kesalahan.
+b) Jumlah koreksi untuk periode berjalan dan periodeperiode sebelumnya.
+c)
+
+Jumlah koreksi yang berhubungan dengan periode-periode
+sebelum
+
+periode
+
+yang
+
+tercakup
+
+dalam
+
+informasi
+
+komparatif.
+d) Kenyataan bahwa informasi komparatif telah dinyatakan
+kembali atau kenyataan bahwa informasi komparatif tidak
+praktis untuk dinyatakan kembali.
+c.
+
+Komitmen dan kontinjensi
+1.
+
+Pengungkapan komitmen
+a)
+
+Kontrak/perjanjian yang memerlukan penggunaan dana
+di
+
+masa
+
+yang
+
+akan
+
+datang,
+
+misalnya
+
+perjanjian
+
+pemberian pembiayaan dan pinjaman:
+
+b)
+
+1)
+
+pihak-pihak yang terkait dalam perjanjian.
+
+2)
+
+periode berlakunya komitmen.
+
+3)
+
+nilai keseluruhan dan bagian yang telah direalisasi.
+
+4)
+
+sanksi-sanksi.
+
+Uraian mengenai sifat, jenis, jumlah, dan batasanbatasan.
+
+2.
+
+Pengungkapan kontinjensi
+a) untuk ...
+
+- 151 -
+
+a)
+
+Untuk perkara/sengketa hukum:
+1)
+
+pihak-pihak yang terkait.
+
+2)
+
+jumlah yang diperkarakan.
+
+3)
+
+latar belakang, isi dan status perkara dan pendapat
+hukum.
+
+4)
+
+probabilitas
+
+risiko
+
+diungkapkan
+
+dari
+
+peristiwa
+
+berdasarkan
+
+kontinjensi
+
+prinsip-prinsip
+
+manajemen risiko.
+b)
+
+Untuk peraturan pemerintah yang mengikat, seperti
+masalah ketenagakerjaan, diungkapkan uraian singkat
+tentang peraturan dan dampaknya.
+
+c)
+
+Kemungkinan kewajiban pajak tambahan
+1)
+
+Jenis ketetapan/tagihan pajak, jenis pajak, tahun
+pajak serta jumlah pokok dan denda/bunganya.
+
+2)
+
+Sikap
+
+Bank
+
+terhadap
+
+ketetapan/tagihan
+
+pajak,
+
+misalnya keberatan, banding dan sebagainya.
+d)
+
+Informasi penting lainnya
+Informasi penting lainnya antara lain sifat, jenis, jumlah,
+dan dampak dari peristiwa atau keadaan tertentu yang
+mempengaruhi
+
+kinerja
+
+Bank,
+
+seperti
+
+peristiwa
+
+atau
+
+keadaan yang mempengaruhi kelangsungan hidupnya.
+e)
+
+Peristiwa setelah tanggal neraca
+1)
+
+Uraian peristiwa, misalnya tanggal terjadinya, sifat
+peristiwa.
+
+2)
+
+Jumlah moneter yang mempengaruhi akun-akun
+laporan keuangan.
+
+f)
+
+Perkembangan terakhir SAK ETAP dan peraturan lainnya
+1)
+
+Penjelasan mengenai SAK ETAP dan peraturan baru
+yang akan diterapkan dan mempengaruhi aktivitas
+Bank.
+
+2)
+
+Estimasi
+
+dampak
+
+penerapan
+
+SAK
+
+ETAP
+
+dan
+
+peraturan baru tersebut.
+g)
+
+Reklasifikasi
+Harus diungkapkan antara lain mengenai sifat, jumlah,
+dan alasan reklasifikasi untuk setiap pos dalam tahun
+buku sebelum tahun buku terakhir yang disajikan dalam
+rangka laporan keuangan komparatif.
+
+- 152 -
+
+Salinan sesuai dengalinya
+
+Ditetapkan di Jakarta
+
+Direktur Hukum 1,
+
+Pada tanggal 26 Maret 2015
+
+Ttd.
+
+KEPALA EKSEKUTIF PENGAWAS PERBANKAN
+OTORITAS JASA KEUANGAN,
+
+Sudarmaji
+
+Ttd.
+Salinan sesuai dengan aslinya
+Direktur Hukum I
+Departemen Hukum,
+
+NELSON TAMPUBOLON
+
+Ttd..
+Ttd.Ttd.
+Sudarmaji
+
+TAMBAHAN BERITA NEGARA REPUBLIK INDONESIA TAHUN 2015 NOMOR

@@ -1,0 +1,309 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 4.3 Akad Bagi Hasil -Syirkah Temporer (54-57).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 54 -
+
+IV.3 DANA SYIRKAH TEMPORER
+A.
+
+Definisi
+Dana syirkah temporer adalah dana yang diterima sebagai investasi dengan
+jangka waktu tertentu dari individu dan pihak lain dimana Bank
+mempunyai hak untuk mengelola dan menginvestasikan dana tersebut
+dengan pembagian hasil investasi berdasarkan kesepakatan.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.105 tentang Akuntansi Mudharabah.
+
+3.
+
+PSAK No.106 tentang Akuntansi Musyarakah.
+
+Penjelasan
+1.
+
+Dana syirkah temporer adalah dana yang diterima oleh Bank dimana
+Bank mempunyai hak untuk mengelola dan menginvestasikan dana,
+baik sesuai dengan kebijakan Bank atau kebijakan pembatasan dari
+pemilik
+
+dana,
+
+dengan
+
+keuntungan
+
+dibagikan
+
+sesuai
+
+dengan
+
+kesepakatan. Dalam hal dana syirkah temporer berkurang disebabkan
+kerugian normal yang bukan akibat dari unsur kesalahan yang
+disengaja, kelalaian, atau pelanggaran kesepakatan, maka Bank tidak
+berkewajiban atau menutup kerugian atau kekurangan dana tersebut.
+2.
+
+Contoh dari dana syirkah temporer adalah penerimaan dana dari
+investasi
+
+Mudharabah
+
+Muthlaqah,
+
+Mudharabah
+
+Muqayyadah,
+
+Musyarakah, dan akun lain yang sejenis.
+3.
+
+Hubungan antara Bank dan pemilik dana merupakan hubungan
+kemitraan berdasarkan akad Mudharabah Muthlaqah, Mudharabah
+Muqayyadah atau Musyarakah. Bank mempunyai hak untuk mengelola
+dan menginvestasikan dana yang diterima dengan atau tanpa batasan
+seperti mengenai tempat, cara, atau obyek investasi.
+
+4.
+
+Pemilik dana memperoleh bagian atas keuntungan sesuai kesepakatan
+dan menerima kerugian berdasarkan jumlah dana dari masing-masing
+pihak. Pembagian hasil dana syirkah temporer dapat dilakukan dengan:
+a.
+
+Konsep bagi laba (profit sharing), atau
+
+b.
+
+Konsep bagi hasil (gross profit margin atau dalam fatwa disebut net
+revenue sharing).
+
+5. Untuk ...
+
+- 55 -
+
+5.
+
+Untuk Bank yang menggunakan metode bagi laba (profit sharing) dalam
+akad Mudharabah, jika usaha Bank atas pengelolaan dana nasabah
+(pemilik dana, shahibul maal) mengalami kerugian maka seluruh
+kerugian ditanggung oleh nasabah (pemilik dana, shahibul maal),
+kecuali jika ditemukan adanya kelalaian atau kesalahan Bank sebagai
+pengelola dana (mudharib).
+
+6.
+
+Untuk Bank yang menggunakan metode bagi hasil (gross profit margin
+atau dalam fatwa disebut netrevenue sharing), maka nasabah (pemilik
+dana, shahibul maal) tidak akan kehilangan nilai awal investasinya,
+kecuali Bank dilikuidasi dengan kondisi realisasi aset lebih kecil dari
+liabilitas.
+
+7.
+
+Kelalaian atau kesalahan Bank sebagai pengelola dana, antara lain,
+ditunjukkan oleh:
+a.
+
+Tidak dipenuhinya persyaratan yang ditentukan di dalam akad;
+
+b.
+
+Tidak terdapat kondisi di luar kemampuan (force majeur) yang
+lazim dan/atau yang telah ditentukan di dalam akad; atau
+
+c.
+8.
+
+Hasil putusan dari badan arbitrase atau pengadilan.
+
+Dana syirkah temporer terdiri dari dana Mudharabah dalam hal Bank
+sebagai pengelola dana (mudharib) dan Musyarakah dalam hal Bank
+sebagai mitra aktif.
+
+9.
+
+Mudharabah
+
+dibedakan berdasarkan pembatasan penggunaan dana
+
+menjadi Mudharabah Mutlaqah danMudharabah Muqayyadah.
+10. Jenis produk penghimpunan dana Mudharabah atau Musyarakah,
+antara lain:
+a.
+
+Tabungan Mudharabah adalah dana Mudharabah pada Bank yang
+penarikannya hanya dapat dilakukan menurut syarat tertentu
+yang disepakati.
+
+b.
+
+Deposito Mudharabah adalah dana Mudharabah pada Bank yang
+penarikannya hanya dapat dilakukan pada waktu tertentu dengan
+pembagian hasil sesuai dengan nisbah yang telah disepakati di
+muka antara nasabah (pemilik dana, shahibul maal) dengan Bank
+yang bersangkutan.
+
+c.
+
+Pinjaman/Pembiayaan
+
+Diterima
+
+yang
+
+menggunakan
+
+akad
+
+Mudharabah dan akad Musyarakah yang berasal baik dari pihak
+ketiga maupun dari bank lain.
+
+D. Perlakuan ...
+
+- 56 -
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Dana Mudharabah dari pemilik dana diakui pada saat diterima sebesar
+jumlah yang diterima.
+
+2.
+
+Bagi hasil dana Mudharabah diberikan sesuai nisbah yang disepakati
+pada awal akad.
+
+3.
+
+Dana Musyarakah dari nasabah (mitra pasif) diakui pada saat diterima
+sebesar jumlah yang diterima.
+
+4.
+
+Bagi hasil dana Musyarakahdiberikan sesuai nisbah yang disepakati
+pada awal akad.
+
+D2. Penyajian
+1.
+
+Dana Mudharabah
+
+disajikan sebagai dana syirkah temporer dengan
+
+memisahkan antara:
+
+2.
+
+a.
+
+dana Mudharabah yang berasal dari Bank;
+
+b.
+
+dana Mudharabahyangberasal dari pihak ketiga bukan Bank.
+
+Bagi hasil dana Mudharabah
+
+yang sudah diperhitungkan dan telah
+
+jatuh tempo tetapi belum diserahkan kepada nasabah disajikan dalam
+pos kewajiban segera.
+3.
+
+Bagi hasil dana Mudharabah yang sudah diperhitungkan pada akhir
+periode tetapi belum jatuh tempo disajikan dalam pos bagi hasil yang
+belum dibagikan.
+
+4.
+
+Dana Musyarakah disajikan sebagai dana syirkahtemporerdalam neraca
+dengan memisahkan antara:
+
+5.
+
+a.
+
+dana Musyarakah yang berasal dari Bank;
+
+b.
+
+dana Musyarakah yang berasal dari pihak ketiga bukan Bank.
+
+Bagi hasil dana Musyarakah yang sudah diperhitungkan dan telah
+jatuh tempo tetapi belum diserahkan kepada nasabah disajikan dalam
+pos kewajiban segera.
+
+6.
+
+Bagi hasil dana Musyarakah yang sudah diperhitungkan pada akhir
+periode tetapi belum jatuh tempo disajikan dalam pos bagi hasil yang
+belum dibagikan.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat penerimaan setoran:
+Db. Kas/kliring.
+Kr. Dana syirkah temporer-tabungan/deposito Mudharabah.
+
+2.
+
+Pada saat dilakukan perhitungan bagi hasil:
+Db. Bagian ...
+
+- 57 -
+
+Db. Bagian pihak ketiga atas pendapatan.
+Kr. Bagi hasil yang belum dibagikan.
+3.
+
+Pada saat pembayaran bagi hasil:
+Db. Bagi hasil yang belum dibagikan.
+Kr. Kas/rekening…/kliring.
+
+4.
+
+Pada saat penarikan tabungan/deposito Mudharabah jatuh tempo:
+Db. Dana syirkah temporer-tabungan/deposito Mudharabah.
+Kr. Kas/rekening…/kliring.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Jumlah dan jenis simpanan berdasarkan akad.
+
+2.
+
+Jumlah berdasarkan pemilik dana, termasuk dari pihak-pihak yang
+berelasi.
+
+3.
+
+Jumlah dana syirkah temporer yang diblokir untuk tujuan tertentu.

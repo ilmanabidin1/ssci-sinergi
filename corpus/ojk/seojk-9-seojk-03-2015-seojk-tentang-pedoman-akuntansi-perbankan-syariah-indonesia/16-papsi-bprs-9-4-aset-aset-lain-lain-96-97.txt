@@ -1,0 +1,183 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 9.4 Aset - Aset Lain-Lain (96-97).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 96 -
+
+IX. 4
+A.
+
+ASET LAIN-LAIN
+Definisi
+Aset
+
+lain-lain
+
+adalah
+
+pos-pos
+
+aset
+
+yang
+
+tidak
+
+dapat
+
+secara
+
+layak
+
+digolongkan dalam kelompok pos aset yang ada dan tidak secara material
+untuk disajikan tersendiri.
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+Komponen aset lain-lain, antara lain:
+
+a.
+
+Pajak dibayar dimuka.
+
+b.
+
+Biaya dibayar dimuka, contohnya premi penjaminan simpanan.
+
+c.
+
+Mata uang kertas dan logam yang ditarik dari peredaran dan tidak
+dapat digunakan sebagai alat pembayaran yang sah.
+
+D.
+
+d.
+
+Piutang dari perusahaan asuransi.
+
+e.
+
+Lainnya, misalnya commemorative coins/notes.
+
+Perlakuan akuntansi
+
+D1. Pengakuan dan pengukuran
+1.
+
+Pada dasarnya aset lain-lain diakui pada saat terjadinya sebesar biaya
+perolehan.
+
+2.
+
+Mata uang kertas dan logam yang ditarik dari peredaran dan masih
+dalam masa tenggang diakui sebesar:
+a. Rupiah: nilai nominal
+b. Valuta asing: nilai nominal dikurangi biaya repatriasi
+
+3.
+
+Mata uang kertas dan logam yang ditarik dari peredaran dan telah
+melampaui masa tenggang serta tidak memiliki nilai dibebankan
+sekaligus sebagai kerugian.
+
+D2. Penyajian
+Aset lain-lain disajikan secara gabungan, kecuali dalam hal nilainya
+material,wajib disajikan tersendiri dalam neraca.
+
+E. Ilustrasi ...
+
+- 97 -
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pajak dibayar dimuka:
+a. Pada saat pengakuan awal
+Db.
+
+Pajak dibayar dimuka.
+
+Kr.
+
+Kas/rekening ...
+
+b. Pada saat akhir tahun
+Db.
+
+Beban pajak.
+
+Db/Kr. Utang pajak.
+Kr.
+2.
+
+Pajak dibayar dimuka.
+
+Biaya dibayar dimuka:
+a. Pada saat pengakuan awal
+Db.
+
+Biaya dibayar dimuka.
+
+Kr.
+
+Kas/rekening ...
+
+b. Pada saat amortisasi
+
+3.
+
+Db.
+
+Beban terkait.
+
+Kr.
+
+Biaya dibayar dimuka.
+
+Kas/Kas valuta asing yang ditarik dari peredaran:
+a. Pada saat reklasifikasi
+Db.
+
+Kas/Kas valuta asing yang ditarik dari peredaran.
+
+Db.
+
+Beban repatriasi.
+
+Kr.
+
+Kas/Kas valuta asing.
+
+b. Pada saat melampaui masa tenggang
+
+F.
+
+Db.
+
+Kerugian.
+
+Kr.
+
+Kas/Kas valuta asing yang ditarik dari peredaran.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan, antara lain:
+1.
+
+Rincian aset lain-lain.
+
+2.
+
+Kebijakan akuntansi.

@@ -1,0 +1,277 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 3.3 Akad Jual Beli - Salam (38-41).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 38 -
+
+III.3. SALAM
+A.
+
+Definisi
+Salam adalah akad jual beli barang pesanan (muslam fiih) dengan
+pengiriman barang di kemudian hari oleh penjual (muslam illaihi) dan
+pelunasannya dilakukan oleh pembeli pada saat akad disepakati sesuai
+dengan syarat-syarat tertentu.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.103 tentang Akuntansi Salam.
+
+Penjelasan
+1.
+
+Bank dapat bertindak sebagai pembeli dan/atau penjual dalam suatu
+transaksi Salam. Jika Bank bertindak sebagai pembeli, maka Bank
+melakukan transaksi Salam. Jika Bank bertindak sebagai penjual,
+maka Bank akan memesan kepada pihak lain untuk menyediakan
+barang pesanan dalam Salam paralel.
+
+2.
+
+Salam paralel dapat dilakukan dengan syarat:
+a.
+
+Akad kedua antara Bank dan pemasok terpisah dari akad pertama
+antara Bank dan pembeli akhir; dan
+
+b.
+3.
+
+Akad kedua dilakukan setelah akad pertama sah.
+
+Dalam hal Bank bertindak sebagai pembeli, Bank dapat meminta
+jaminan kepada pemasok untuk menghindari risiko yang merugikan
+Bank.
+
+4.
+
+Piutang Salam merupakan tagihan Bank kepada pemasok yang harus
+diselesaikan dalam bentuk penyerahan barang, bukan penerimaan
+dalam bentuk uang tunai. Piutang Salam timbul dari penyerahan uang
+kepada pemasok senilai barang yang dipesan.
+
+5.
+
+Utang Salam merupakan kewajiban Bank yang harus diselesaikan
+dalam bentuk penyerahan barang bukan pembayaran dalam bentuk
+uang tunai kepada nasabah.
+
+6.
+
+Spesifikasi dan harga barang pesanan disepakati di awal akad oleh
+nasabah dan Bank pada akad pertama atau Bank dengan pemasok
+pada akad kedua. Ketentuan harga barang pesanan tidak dapat
+berubah selama jangka waktu akad.
+7. Barang ...
+
+- 39 -
+
+7.
+
+Barang pesanan harus diketahui karakteristiknya secara umum yang
+meliputi: jenis, macam, kualitas dan kuantitasnya.
+
+8.
+
+Barang
+
+pesanan
+
+harus
+
+sesuai
+
+dengan
+
+karakteristik
+
+yang
+
+telah
+
+disepakati antara nasabah dan Bank atau Bank dan pemasok. Jika
+barang pesanan yang dikirim salah atau cacat maka Bank atau
+pemasok harus bertanggung jawab atas kelalaiannya.
+9.
+
+Jika Bank tidak menerima sebagian atau seluruh barang pesanan pada
+tanggal jatuh tempo pengiriman, maka:
+
+10.
+
+a.
+
+Tanggal jatuh tempo pengiriman dapat diperpanjang;
+
+b.
+
+Akad Salam dapat dibatalkan sebagian atau seluruhnya; atau
+
+c.
+
+Jaminan atas barang pesanan dapat dieksekusi.
+
+Bank dapat mengenakan denda kepada pemasok. Denda hanya boleh
+dikenakan kepada pemasok yang mampu menyelesaikan kewajibannya,
+tetapi sengaja tidak melakukannya. Hal ini tidak berlaku bagi pemasok
+yang tidak mampu menunaikan kewajibannya karena force majeur.
+Denda dikenakan jika pemasok lalai dalam melakukan kewajibannya
+sesuai dengan akad, dan denda yang diterima diakui sebagai bagian
+dana kebajikan.
+
+11.
+
+Pendapatan Salam diperoleh dari selisih harga jual kepada nasabah
+dan harga beli dari pemasok.
+
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Piutang Salam diakui pada saat penyerahan uang kepada pemasok
+sebesar jumlah yang dibayarkan.
+
+2.
+
+Utang Salam diakui pada saat penerimaan uang dari nasabah sebesar
+jumlah yang diterima.
+
+3.
+
+Dalam hal dilakukan perpanjangan jangka waktu pengiriman maka
+nilai tercatat piutang Salam dicatat sebesar bagian yang belum
+dipenuhi sesuai dengan nilai yang tercantum dalam akad.
+
+4.
+
+Dalam hal dilakukan pembatalan sebagian atau seluruh akad Salam,
+maka piutang Salam berubah menjadi piutang Qardh kepada pemasok
+sebesar bagian yang tidak dapat dipenuhi.
+
+5.
+
+Dalam hal dilakukan eksekusi jaminan, selisih antara nilai tercatat
+piutang Salam dan hasil penjualan jaminan tersebut diakui sebagai
+piutang kepada pemasok. Sebaliknya, jika hasil penjualan jaminan
+tersebut ...
+
+- 40 -
+
+tersebut lebih besar dari nilai tercatat piutang Salam, selisihnya
+menjadi hak pemasok.
+6.
+
+Pendapatan Salam diakui pada saat barang diserahkan kepada
+nasabah sebesar selisih antara harga jual kepada nasabah dengan
+harga beli dari pemasok.
+
+D2. Penyajian
+1.
+
+Piutang Salam disajikan sebesar jumlah tercatat.
+
+2.
+
+Piutang Salam yang tidak dapat dipenuhi oleh pemasok dan pemasok
+menyatakan tidak dapat memenuhi kewajibannya disajikan sebagai
+piutang Qardh.
+
+3.
+E.
+
+Utang Salam disajikan sebesar jumlah tercatat.
+
+Ilustrasi Jurnal
+
+E1. Bank Sebagai Pembeli
+1.
+
+Pada saat Bank menyerahkan uang kepada pemasok:
+Db. Piutang Salam.
+Kr. Kas/Rekening pemasok.
+
+2.
+
+Pada saat Bank menerima barang dari pemasok:
+Db. Persediaan/aset Salam.
+Kr. Piutang Salam.
+
+3.
+
+Pada saat pemasok tidak memenuhi kewajibannya:
+Db. Piutang Qardh (pemasok).
+Kr. Piutang Salam.
+
+4.
+
+Jika Bank mengeksekusi jaminan atas akad Salam:
+a.
+
+Penjualan jaminan dengan hasil lebih kecil dari piutang Salam
+Db. Kas/kliring.
+Db. Piutang Qardh (pemasok).
+Kr. Piutang Salam.
+
+b.
+
+Penjualan jaminan dengan hasil lebih besar dari piutang Salam
+Db. Kas/kliring.
+Kr. Rekening pemasok.
+Kr. Piutang Salam.
+
+5.
+
+Pada saat pengenaan denda kepada pemasok:
+Db. Kas/Rekening ...
+Kr. Rekening Dana Kebajikan.
+
+c. Bank ...
+
+- 41 -
+
+E2. Bank Sebagai Penjual
+1.
+
+Pada saat Bank menerima uang dari nasabah
+Db. Kas/rekening nasabah.
+Kr. Utang Salam.
+
+2.
+
+Pada saat Bank menyerahkan barang kepada nasabah
+Db. Utang Salam.
+Kr. Persediaan/aset Salam.
+Kr. Pendapatan Salam.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan, antara lain:
+1.
+
+Rincian piutang Salam dan utang Salam berdasarkan jumlah, jangka
+waktu, jenis valuta, jenis dan kuantitas barang pesanan.
+
+2.
+
+Piutang Salam dari pemasok dan utang Salam kepada nasabah yang
+merupakan pihak berelasi.
+
+III.4. PERSEDIAAN ...

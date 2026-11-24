@@ -1,0 +1,294 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 9.3 Aset -  AYDA (92-95).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 92 -
+
+IX.3
+
+ASET YANG DIAMBIL ALIH
+
+A.
+
+Definisi
+1. Aset yang diambil alih (AYDA) adalah aset yang diperoleh Bank, baik
+melalui
+
+pelelangan
+
+maupun
+
+di
+
+luar
+
+pelelangan
+
+berdasarkan
+
+penyerahan secara sukarela oleh pemilik agunan atau berdasarkan
+kuasa untuk menjual di luar lelang dari pemilik agunan dalam hal
+debitur tidak memenuhi kewajibannya kepada Bank.
+2. Biaya untuk menjual adalah biaya tambahan yang secara langsung
+dapat diatribusikan kepada pelepasan aset atau kelompok lepasan.
+3. Nilai wajar adalah suatu jumlah dimana aset dipertukarkan atau
+kewajiban diselesaikan, antara pihak yang paham dan berkeinginan
+dalam suatu transaksi yang wajar.
+4. Nilai tercatat adalah nilai yang disajikan dalam neraca setelah
+dikurangi Cadangan Kerugian Penurunan Nilai.
+
+B.
+
+Dasar Pengaturan
+SAK ETAP.
+
+C.
+
+Penjelasan
+Bank wajib melakukan upaya penyelesaian terhadap AYDA yang dimiliki
+yaitu mengupayakan penjualan dengan segera serta mendokumentasikan
+upaya penyelesaian tersebut.
+
+D.
+
+Perlakuan Akuntansi
+
+D1.
+
+Pengakuan dan Pengukuran
+1. Pada saat pengakuan awal, AYDA dibukukan pada nilai wajar setelah
+dikurangi
+
+biaya
+
+untuk
+
+menjualnya
+
+yaitu
+
+maksimum
+
+sebesar
+
+kewajiban debitur. Bank tidak boleh mengakui keuntungan pada saat
+pengambilalihan aset.
+2. Setelah pengakuan awal, AYDA dibukukan sebesar nilai yang lebih
+rendah antara nilai tercatat dengan nilai wajarnya setelah dikurangi
+biaya untuk menjualnya.
+3. Jika AYDA mengalami penurunan nilai, maka Bank mengakui rugi
+penurunan nilai tersebut.
+4. Jika ...
+
+- 93 -
+
+4. Jika AYDA mengalami pemulihan penurunan nilai, maka Bank
+mengakui pemulihan penurunan nilai tersebut paling banyak sebesar
+kerugian penurunan nilai yang telah diakui.
+5. AYDA tidak dilakukan penyusutan.
+6. Pada saat penjualan, selisih antara nilai tercatat AYDA dan hasil
+penjualannya diakui sebagai berikut:
+a.
+
+Apabila hasil penjualan lebih besar dari nilai tercatat AYDA,
+kelebihan
+
+hasil
+
+penjualan
+
+dikembalikan
+
+kepada
+
+nasabah
+
+pembiayaan.
+b.
+
+Apabila hasil penjualan lebih kecil dari nilai tercatat AYDA, maka
+kekurangan
+
+tersebut
+
+ditagihkan
+
+Bank
+
+kepada
+
+nasabah
+
+pembiayaan. Bank tetap membentuk Penyisihan Penghapusan
+Aset atas tagihan yang ditetapkan kepada nasabah sesuai dengan
+kualitas
+
+pembiayaan
+
+sebelum
+
+dilakukan
+
+pengambilalihan
+
+agunan.
+D2.
+
+Penyajian
+AYDA disajikan secara terpisah dari aset lainnya sebesar nilai tercatat
+atau nilai wajar setelah dikurangi biaya untuk menjual, mana yang lebih
+rendah.
+
+E.
+
+Ilustrasi Jurnal
+1. Pada saat Bank memperoleh AYDA:
+a.
+
+Jika nilai AYDA lebih besar dari nilai tercatat pembiayaan yang
+diberikan, nilai AYDA diakui paling banyak sebesar nilai tercatat
+pembiayaan yang diberikan
+
+b.
+
+Db.
+
+Aset yang diambil alih (AYDA).
+
+Kr.
+
+Pembiayaan yang diberikan.
+
+Jika nilai AYDA lebih kecil daripada nilai tercatat pembiayaan
+yang diberikan, maka Bank mengakui kerugian pada periode
+berjalan
+Db.
+
+Aset yang diambilalih (AYDA).
+
+Db.
+
+Kerugian penyelesaian pembiayaan.
+
+Kr.
+
+Pembiayaan yang diberikan.
+
+c. Dilakukan ...
+
+- 94 -
+
+c.
+
+Dilakukan koreksi atas Penyisihan Penghapusan Aset atas
+pembiayaan yang telah diselesaikan dengan pengambilalihan
+AYDA
+Db.
+
+Penyisihan Penghapusan Aset.
+
+Kr.
+
+Koreksi – Penyisihan Penghapusan Aset.
+
+2. Pada saat terjadi penurunan nilai AYDA:
+Db.
+
+Kerugian penurunan nilai.
+
+Kr.
+
+Aset yang diambil alih (AYDA).
+
+3. Pada saat terjadi pemulihan nilai AYDA setelah mengalami penurunan
+nilai, diakui sebagai pendapatan paling banyak sebesar kerugian
+penurunan nilai yang telah diakui:
+Db.
+
+Aset yang diambil alih (AYDA).
+
+Kr.
+
+Keuntungan peningkatan nilai.
+
+4. Pada saat penjualan AYDA:
+a.
+
+b.
+
+Terjadi keuntungan
+Db.
+
+Kas/rekening.
+
+Kr.
+
+Aset yang diambil alih (AYDA).
+
+Kr.
+
+Rekening nasabah / Kliring / Kewajiban segera – transfer.
+
+Terjadi kerugian
+Db.
+
+Kas/rekening.
+
+Db.
+
+Tagihan kepada nasabah.
+
+Kr.
+
+Aset yang diambil alih (AYDA).
+
+Pembentukan Penyisihan Penghapusan Aset atas tagihan kepada
+nasabah
+
+F.
+
+Db.
+
+Beban Penyisihan Penghapusan Aset.
+
+Kr.
+
+Penyisihan Penghapusan Aset.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Deskripsi mengenai AYDA.
+
+2.
+
+Nilai wajar AYDA.
+
+3.
+
+Metode dan asumsi signifikan yang diterapkan dalam menentukan
+nilai wajar AYDA, yang mencakup pernyataan apakah penentuan
+nilai wajar tersebut didukung oleh bukti pasar atau lebih banyak
+berdasarkan faktor lain (yang harus diungkapkan oleh Bank) karena
+
+sifat ...
+
+- 95 -
+
+sifat AYDA tersebut dan keterbatasan data pasar yang dapat
+diperbandingkan.
+4.
+
+Upaya penjualan yang dilakukan Bank.
+
+5.
+
+Kerugian penurunan nilai.
+
+IX.4. ASET ...

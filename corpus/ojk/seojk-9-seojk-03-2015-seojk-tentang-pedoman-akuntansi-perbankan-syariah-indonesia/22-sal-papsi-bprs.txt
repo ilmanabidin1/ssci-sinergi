@@ -1,0 +1,311 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: SAL PAPSI BPRS.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+Yth.
+Bank Pembiayaan Rakyat Syariah
+di tempat.
+SALINAN
+SURAT EDARAN OTORITAS JASA KEUANGAN
+NOMOR 9/SEOJK.03/2015
+TENTANG
+PEDOMAN AKUNTANSI PERBANKAN SYARIAH INDONESIA
+BAGI BANK PEMBIAYAAN RAKYAT SYARIAH
+
+Sehubungan dengan Peraturan Bank Indonesia Nomor 7/47/PBI/2005
+tentang Transparansi Kondisi Keuangan Bank Perkreditan Rakyat Syariah
+(Lembaran Negara Republik Indonesia Tahun 2005 Nomor 125, Tambahan
+Lembaran Negara Republik Indonesia Tahun 2005 Nomor 4564),
+
+yang antara
+
+lain mengatur mengenai kewajiban Bank Perkreditan Rakyat Syariah untuk
+melakukan pencatatan atas kegiatan usahanya berdasarkan Pernyataan Standar
+Akuntansi Keuangan dan Pedoman Akuntansi Perbankan Syariah Indonesia yang
+berlaku bagi Perbankan Syariah maka dipandang perlu untuk mengatur
+pelaksanaan
+
+penggunaan
+
+standar
+
+akuntansi
+
+keuangan
+
+dan
+
+ketentuan
+
+pelaksanaan mengenai pedoman akuntansi perbankan syariah Indonesia bagi
+Bank Pembiayaan Rakyat Syariah dalam Surat Edaran Otoritas Jasa Keuangan
+sebagai berikut:
+I.
+
+KETENTUAN UMUM
+1.
+
+Dalam rangka peningkatan transparansi kondisi keuangan dari Bank
+Pembiayaan Rakyat Syariah yang selanjutnya disebut BPRS dan
+penyusunan laporan keuangan yang relevan, komprehensif, andal, dan
+dapat diperbandingkan, BPRS wajib menyusun dan menyajikan
+laporan keuangan berdasarkan standar akuntansi keuangan yang
+relevan bagi BPRS.
+
+2.
+
+Standar akuntansi keuangan yang berlaku bagi BPRS selama ini
+adalah Pernyataan Standar Akuntansi Keuangan yang selanjutnya
+disebut PSAK yaitu PSAK No.31 tentang Akuntansi Perbankan dan
+PSAK Syariah. Dengan diberlakukannya PSAK No.50 (Revisi 2010)
+tentang Instrumen Keuangan: Penyajian, PSAK No.55 (Revisi 2011)
+
+tentang ...
+
+-2-
+
+tentang Instrumen Keuangan: Pengakuan dan Pengukuran, dan PSAK
+No.60 tentang Instrumen Keuangan: Pengungkapan yang menggantikan
+PSAK No.31, maka PSAK No.31 menjadi tidak berlaku.
+3.
+
+Penerapan PSAK No.50 (Revisi 2010), PSAK No.55 (Revisi 2011), dan
+PSAK No.60 bagi BPRS selain tidak sesuai dengan karakteristik
+operasional BPRS juga memerlukan biaya yang besar dibandingkan
+dengan manfaat yang akan diperoleh, sehingga diperlukan standar
+akuntansi keuangan yang sesuai bagi BPRS.
+
+4.
+
+Dewan Standar Akuntasi Keuangan - Ikatan Akuntan Indonesia yang
+selanjutnya disebut DSAK-IAI selain mengeluarkan PSAK No.50 (Revisi
+2010), PSAK No.55 (Revisi 2011), dan PSAK No.60, juga menerbitkan
+Standar Akuntansi Keuangan Entitas Tanpa Akuntabilitas Publik yang
+selanjutnya disebut SAK ETAP.
+
+5.
+
+DSAK-IAI dalam SAK ETAP menyatakan bahwa SAK ETAP dapat
+diberlakukan bagi entitas yang memiliki akuntabilitas publik signifikan
+termasuk BPRS, sepanjang otoritas berwenang mengatur penggunaan
+SAK ETAP dimaksud. Berdasarkan pertimbangan tersebut di atas,
+maka standar akuntansi keuangan bagi BPRS menggunakan SAK
+ETAP, PSAK Syariah, dan ketentuan lain yang ditetapkan oleh Otoritas
+Jasa Keuangan.
+
+6.
+
+Pedoman
+
+Akuntansi
+
+Perbankan
+
+Syariah
+
+Indonesia
+
+BPRS
+
+yang
+
+selanjutnya disebut PAPSI BPRS merupakan petunjuk pelaksanaan
+yang berisi penjabaran lebih lanjut dari SAK ETAP, PSAK Syariah, dan
+ketentuan lain yang ditetapkan oleh Otoritas Jasa Keuangan dan
+menjadi pedoman dalam penyusunan dan penyajian laporan keuangan
+BPRS.
+7.
+
+Dalam hal terdapat ketentuan yang belum diatur dalam PAPSI BPRS
+untuk menyusun dan menyajikan laporan keuangan, BPRS tetap
+berpedoman kepada SAK ETAP beserta pedoman pelaksanaannya
+sepanjang tidak bertentangan dengan Prinsip Syariah.
+
+II.
+
+PENGAKUAN PENDAPATAN DALAM TRANSAKSI JUAL BELI
+1.
+
+Sesuai dengan Fatwa Dewan Syariah Nasional Nomor: 84/DSNMUI/XII/2012 tanggal 21 Desember 2012 tentang Metode Pengakuan
+Keuntungan Al-Tamwil Bi Al-Murabahah (Pembiayaan Murabahah) di
+Lembaga Keuangan Syariah, pengakuan keuntungan Pembiayaan
+Murabahah
+
+untuk
+
+Bank
+
+Syariah
+
+dapat
+
+dilakukan
+
+dengan
+
+menggunakan ...
+
+-3-
+
+menggunakan metode anuitas atau metode proporsional.
+2.
+
+Pengakuan pendapatan dengan menggunakan metode anuitas atau
+metode
+
+proporsional
+
+hanya
+
+dapat
+
+digunakan
+
+untuk
+
+pengakuan
+
+pendapatan pembiayaan atas dasar jual beli.
+3.
+
+Dalam hal BPRS menggunakan metode anuitas, pencatatan transaksi
+Murabahah wajib menggunakan SAK ETAP. Sedangkan untuk BPRS
+yang
+
+menggunakan
+
+metode
+
+proporsional,
+
+pencatatan
+
+transaksi
+
+Murabahah wajib menggunakan PSAK No.102 (Revisi 2013) tentang
+Akuntansi Murabahah.
+4.
+
+Metode pengakuan pendapatan yang dipilih oleh BPRS wajib diterapkan
+untuk
+
+seluruh
+
+jenis
+
+portofolio
+
+pembiayaan
+
+Murabahah
+
+dan
+
+diungkapkan dalam kebijakan akuntansi serta dilakukan secara
+konsisten.
+III. PENDAPATAN DAN BEBAN TERKAIT DENGAN TRANSAKSI MURABAHAH
+1.
+
+Dalam praktik penyaluran pembiayaan Murabahah, BPRS dapat:
+a.
+
+menerima
+
+pendapatan
+
+di
+
+luar
+
+marjin
+
+keuntungan
+
+seperti
+
+pendapatan administrasi; dan/atau
+b.
+
+mengeluarkan biaya yang terkait langsung dengan transaksi
+Murabahah seperti biaya komisi, biaya survei, dan biaya lain.
+
+2.
+
+Pengakuan pendapatan dan biaya sebagaimana dimaksud pada angka
+1, baik yang menggunakan metode anuitas maupun proporsional
+diakui secara proporsional selama masa akad.
+
+3.
+
+Pendapatan dan biaya sebagaimana dimaksud pada angka 1 menjadi
+bagian
+
+yang
+
+Murabahah
+
+tidak
+
+sehingga
+
+terpisahkan
+wajib
+
+dari
+
+pendapatan
+
+dibagihasilkan
+
+kepada
+
+pembiayaan
+pemilik
+
+dana
+
+(shahibul maal).
+IV. LAIN-LAIN
+PAPSI BPRS diatur lebih lanjut dalam pedoman sebagaimana lampiran yang
+merupakan satu kesatuan dan bagian yang tidak terpisahkan dari Surat
+Edaran Otoritas Jasa Keuangan ini.
+V.
+
+PENUTUP
+Dengan berlakunya Surat Edaran Otoritas Jasa Keuangan ini, Surat Edaran
+Bank Indonesia No.5/26/BPS tanggal 27 Oktober 2003 perihal Pelaksanaan
+Pedoman Akuntansi Perbankan Syariah Indonesia dicabut dan dinyatakan
+tidak ...
+
+-4-
+
+tidak berlaku bagi BPRS.
+Ketentuan dalam Surat Edaran Otoritas Jasa Keuangan ini mulai berlaku
+pada tanggal ditetapkan.
+Agar setiap orang mengetahuinya, memerintahkan pengumuman Surat
+Edaran Otoritas Jasa Keuangan ini dengan penempatannya dalam Berita
+Negara Republik Indonesia.
+
+Ditetapkan di Jakarta
+Pada tanggal 26 Maret 2015
+KEPALA EKSEKUTIF PENGAWAS PERBANKAN
+OTORITAS JASA KEUANGAN,
+Ttd.
+NELSON TAMPUBOLON
+
+-5-
+
+Salinan sesuai dengan aslinya
+Direktur Hukum I
+Departemen Hukum,
+Ttd..
+Ttd.td.
+Sudarmaji
+
+BERITA NEGARA REPUBLIK INDONESIA TAHUN 2015 NOMOR 30 TANGGAL 14
+APRIL 2015

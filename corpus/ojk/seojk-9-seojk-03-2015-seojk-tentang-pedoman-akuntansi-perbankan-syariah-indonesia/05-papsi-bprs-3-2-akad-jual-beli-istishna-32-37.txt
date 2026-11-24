@@ -1,0 +1,586 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 3.2 Akad Jual Beli - Istishna (32-37).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 32 -
+
+III.2. ISTISHNA
+A.
+
+Definisi
+1.
+
+Istishna adalah akad jual beli dalam bentuk pemesanan pembuatan
+barang
+
+tertentu
+
+disepakati
+
+dengan
+
+antara
+
+kriteria
+
+pemesan
+
+dan
+
+persyaratan
+
+tertentu
+
+(pembeli/mustashni')
+
+dan
+
+yang
+
+penjual
+
+(pembuat/shani').
+2.
+
+Istishna paralel adalah suatu bentuk akad Istishna antara pemesan
+(pembeli/mustashni’)
+
+dengan
+
+untuk
+
+kewajibannya
+
+memenuhi
+
+penjual
+
+(pembuat/shani’),
+
+kepada
+
+mustashni’,
+
+kemudian
+penjual
+
+memerlukan pihak lain sebagai shani’.
+3.
+
+Pembiayaan Istishna adalah penyediaan dana dari Bank kepada
+nasabah untuk membeli barang sesuai dengan pesanan nasabah yang
+menegaskan harga belinya kepada pembeli (nasabah) dan pembeli
+(nasabah) membayarnya dengan harga yang lebih sebagai keuntungan
+Bank yang disepakati.
+
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.104 tentang Akuntansi Istishna.
+
+Penjelasan
+1.
+
+Spesifikasi dan harga barang pesanan dalam Istishna disepakati oleh
+pembeli dan penjual pada awal akad. Pada dasarnya harga barang tidak
+dapat berubah selama jangka waktu akad, kecuali disepakati oleh
+kedua belah pihak.
+
+2.
+
+Barang pesanan harus diketahui karakteristiknya secara umum yang
+meliputi: jenis, macam, kualitas, dan kuantitasnya. Barang pesanan
+harus sesuai dengan karakteristik yang telah disepakati antara pembeli
+dan penjual. Jika barang pesanan yang dikirimkan salah atau cacat
+maka penjual harus bertanggung jawab atas kelalaiannya.
+
+3.
+
+Jika nasabah dalam akad Istishna tidak mewajibkan Bank untuk
+membuat sendiri barang pesanan, maka untuk memenuhi kewajiban
+pada akad pertama, Bank dapat mengadakan akad Istishna kedua
+dengan pihak ketiga (supplier). Akad Istishna kedua ini disebut Istishna
+paralel. Dalam konteks Bank, piutang Istishna timbul dari Istishna
+paralel.
+4. Pada ...
+
+- 33 -
+
+4.
+
+Pada dasarnya akad Istishna tidak dapat dibatalkan, kecuali memenuhi
+kondisi:
+a.
+
+kedua belah pihak setuju untuk menghentikannya; dan
+
+b.
+
+akad batal demi hukum karena timbul kondisi hukum yang dapat
+menghalangi pelaksanaan atau penyelesaian akad.
+
+5.
+
+Mekanisme pembayaran Istishna harus disepakati dalam akad dan
+dapat dilakukan dengan cara:
+a.
+
+Pembayaran dimuka secara keseluruhan atau sebagian setelah
+akad namun sebelum pembuatan barang.
+
+b.
+
+Pembayaran saat penyerahan barang atau selama dalam proses
+pembuatan barang. Cara pembayaran ini dimungkinkan adanya
+pembayaran termin sesuai dengan progres pembuatan aset
+Istishna.
+
+6.
+
+c.
+
+Pembayaran ditangguhkan setelah penyerahan barang.
+
+d.
+
+Kombinasi dari cara pembayaran di atas.
+
+Metode pengakuan pendapatan Istishna dapat dilakukan dengan
+menggunakan metode persentase penyelesaian dan metode akad selesai.
+Pada
+
+metode
+
+persentase
+
+penyelesaian,
+
+Bank
+
+dapat
+
+mengakui
+
+pendapatan Istishna sebesar proporsi penyelesaian barang pesanan.
+Sedangkan,
+
+pada
+
+metode
+
+akad
+
+selesai,
+
+Bank
+
+akan
+
+mengakui
+
+pendapatan Istishna pada saat barang telah diserahkan kepada
+nasabah.
+7.
+
+Jika estimasi penyelesaian akad dan biaya untuk penyelesaiannya tidak
+dapat ditentukan secara rasional pada akhir periode Laporan Keuangan,
+maka digunakan metode akad selesai dengan ketentuan sebagai berikut:
+a.
+
+tidak ada pendapatan Istishna yang diakui sampai dengan
+pekerjaan tersebut selesai;
+
+b.
+
+tidak ada harga pokok Istishna yang diakui sampai dengan
+pekerjaan tersebut selesai;
+
+c.
+
+tidak ada bagian keuntungan yang diakui dalam Aset Istishna
+Dalam Penyelesaian sampai dengan pekerjaan tersebut selesai; dan
+
+d.
+
+pengakuan pendapatan
+
+Istishna, harga pokok
+
+Istishna, dan
+
+keuntungan dilakukan hanya pada saat penyelesaian pekerjaan.
+8.
+
+Pada pembiayaan Istishna, Bank melakukan pesanan barang kepada
+supplier atas pesanan dari nasabah. Pendapatan yang diperoleh Bank
+lebih disebabkan karena aktivitas penyediaan fasilitas pendanaan
+kepada nasabah, bukan dari aktivitas pembuatan barang pesanan.
+9. Nasabah ...
+
+- 34 -
+
+9.
+
+Nasabah dapat membayar uang muka barang pesanan kepada Bank
+sebelum barang diserahkan kepada nasabah dan Bank juga dapat
+membayar uang muka barang pesanan kepada supplier.
+
+10. Bank dapat menagih kepada nasabah atas barang pesanan yang telah
+diserahkan dan supplier dapat menagih kepada Bank atas barang
+pesanan yang telah diserahkan.
+11. Selama barang pesanan masih dibuat, Bank akan menggunakan
+rekening
+
+Aset
+
+Istishna
+
+Dalam
+
+Penyelesaian
+
+ketika
+
+melakukan
+
+pembayaran kepada supplier dan menggunakan rekening Termin
+Istishna ketika melakukan penagihan kepada nasabah.
+12. Pengakuan pendapatan untuk transaksi Istishna menggunakan metode
+sebagaimana pengakuan pendapatan pada transaksi murabahah.
+13. Dalam hal nasabah mengalami tunggakan pembayaran angsuran, Bank
+wajib membentuk Penyisihan Penghapusan Aset untuk piutang Istishna
+sesuai dengan ketentuan yang berlaku mengenai kualitas aset.
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Uang muka pesanan nasabah yang diterima Bank diakui sebagai uang
+muka Istishna sebesar uang yang diterima.
+
+2.
+
+Uang muka yang dibayarkan Bank kepada supplier diakui sebagai uang
+muka kepada supplier sebesar uang yang diberikan dan diakui sebagai
+Aset Istishna Dalam Penyelesaian pada saat barang diserahkan oleh
+supplier.
+
+3.
+
+Tagihan Bank kepada nasabah atas sebagian barang pesanan yang telah
+diserahkan diakui sebagai piutang Istishna sebesar persentase harga
+jual yang telah diselesaikan dan diakui sebagai Termin Istishna sebesar
+persentase harga pokok yang telah diselesaikan.
+
+4.
+
+Tagihan supplier kepada Bank atas sebagian barang pesanan yang telah
+diselesaikan diakui sebagai Aset Istishna Dalam Penyelesaian dan utang
+Istishna sebesar tagihan supplier.
+
+5.
+
+Dalam hal Bank menggunakan metode persentase penyelesaian maka
+Bank dapat mengakui pendapatan Istishna atas pembayaran yang telah
+dilakukan nasabah sebesar persentase penyelesaian.
+
+6.
+
+Pada saat barang pesanan telah diserahkan kepada nasabah, Bank
+melakukan jurnal balik atas rekening Aset Istishna Dalam Penyelesaian
+dan Termin Istishna.
+7. Utang ...
+
+- 35 -
+
+7.
+
+Utang Istishna yang berasal dari transaksi Istishna yang pembayarannya
+bersamaan dengan proses pembuatan aset Istishna:
+a.
+
+diakui pada saat diterima tagihan dari supplier kepada Bank
+sebesar nilai tagihan.
+
+b.
+
+dihentikan pengakuannya dari Laporan Keuangan pada saat
+dilakukan pembayaran sebesar jumlah yang dibayar.
+
+8.
+
+Uang muka
+
+Istishna yang berasal
+
+dari transaksi
+
+Istishna yang
+
+pembayarannya dilakukan di muka secara penuh:
+a.
+
+diakui pada saat pembayaran harga barang diterima dari nasabah
+sebesar jumlah yang diterima.
+
+b.
+
+dihentikan pengakuannya dari Laporan Keuangan pada saat
+dilakukan penyerahan barang kepada nasabah sebesar nilai
+kontrak.
+
+9.
+
+Jika nasabah membayar uang muka kepada Bank dalam proses
+pembuatan aset Istishna, penerimaan uang muka tersebut diperlakukan
+sebagai
+
+pembayaran
+
+termin
+
+sebesar
+
+jumlah
+
+uang
+
+muka
+
+yang
+
+dibayarkan.
+D2. Penyajian
+1.
+
+Uang muka Istishna disajikan sebagai kewajiban lainnya.
+
+2.
+
+Uang muka kepada supplier disajikan sebagai aset lainnya.
+
+3.
+
+Utang Istishna disajikan sebesar tagihan dari supplier yang belum
+dilunasi.
+
+4.
+
+Aset
+
+Istishna
+
+Dalam
+
+Penyelesaian
+
+disajikan
+
+sebesar
+
+dana
+
+yang
+
+dibayarkan Bank kepada supplier.
+5.
+
+Termin Istishna disajikan sebesar jumlah tagihan termin Bank kepada
+nasabah.
+
+6.
+
+Piutang Istishna disajikan sebesar jumlah yang belum dilunasi oleh
+pembeli akhir.
+
+7.
+
+Marjin Istishna Ditangguhkan disajikan sebagai pos lawan piutang
+Istishna.
+
+8.
+
+Pendapatan marjin Istishna yang akan diterima disajikan sebagai bagian
+dari aset lainnya pada saat nasabah tergolong performing. Sedangkan,
+apabila nasabah tergolong non-performing, pendapatan marjin Istishna
+yang akan diterima disajikan pada rekening administratif.
+
+9.
+
+Penyisihan Penghapusan Aset Produktif piutang Istishna disajikan
+sebagai pos lawan (contra account) piutang Istishna.
+
+E. Ilustrasi ...
+
+- 36 -
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Penerimaan uang muka pesanan dari nasabah:
+Db. Kas/rekening …
+Kr. Kewajiban lainnya – Uang muka Istishna.
+
+2.
+
+Penerimaan barang dari supplier:
+a.
+
+Mekanisme uang muka
+1) Pemberian uang muka
+Db. Aset lainnya – Uang muka kepada supplier
+Kr. Kas/rekening …
+2) Penerimaan sebagian barang pesanan dari supplier
+Db. Aset Istishna Dalam Penyelesaian.
+Kr. Aset lainnya – Uang Muka kepada supplier.
+
+b.
+
+Mekanisme tagihan dari supplier
+1) Menerima tagihan dari supplier
+Db. Aset Istishna Dalam Penyelesaian.
+Kr. Kewajiban lainnya – Utang Istishna.
+2) Pembayaran kepada supplier
+Db. Kewajiban lainnya – Utang Istishna.
+Kr. Kas/rekening …
+
+3.
+
+Penagihan termin kepada nasabah:
+Db. Piutang Istishna.
+Kr. Marjin Istishna ditangguhkan.
+Kr. Termin Istishna.
+
+4.
+
+Pembayaran oleh nasabah:
+Db. Kas.
+Kr. Piutang Istishna.
+Db. Marjin Istishna ditangguhkan.
+Kr. Pendapatan Istishna.
+
+5.
+
+Penyerahan barang kepada nasabah:
+Db. Termin Istishna.
+Kr. Aset Istishna Dalam Penyelesaian.
+
+6.
+
+Pada saat pengakuan pendapatan diakhir periode pelaporan (akru):
+Db.Pendapatan marjin Istishna yang akan diterima.
+Kr. Pendapatan marjin Istishna.
+
+7.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset Produktif atas
+piutang Istishna:
+
+Db. Beban ...
+
+- 37 -
+
+Db. Beban kerugian penghapusan aset produktif – piutang Istishna.
+Kr. Penyisihan Penghapusan Aset – piutang Istishna.
+8.
+
+Pada saat dilakukan koreksi Penyisihan Penghapusan Aset atas piutang
+Istishna:
+Db. Penyisihan Penghapusan Aset – piutang Istishna.
+Kr. Beban
+
+kerugian
+
+penghapusan
+
+aset
+
+produktif–piutang
+
+Istishna/Koreksi Penyisihan Penghapusan Aset Produktif –Piutang
+Istishna.
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Rincian piutang Istishna berdasarkan jumlah, jangka waktu, jenis
+valuta, kualitas piutang dan Penyisihan Penghapusan Aset piutang
+Istishna.
+
+2.
+
+Jumlah piutang Istishna yang diberikan kepada pihak yang berelasi.
+
+3.
+
+Kebijakan akuntansi yang digunakan dalam pengakuan pendapatan
+Penyisihan Penghapusan Aset, penghapusan dan penanganan piutang
+Istishna yang bermasalah.
+
+4.
+
+Besarnya piutang Istishna baik yang dibiayai sendiri oleh Bank maupun
+secara bersama-sama dengan pihak lain sebesar bagian pembiayaan
+Bank, jika ada.
+
+5.
+
+Jumlah akumulasi biaya atas kontrak berjalan serta pendapatan dan
+keuntungan sampai dengan akhir periode berjalan.
+
+6.
+
+Jumlah sisa kontrak yang belum selesai menurut spesifikasi dan syarat
+kontrak.
+
+7.
+
+Nilai kontrak Istishna paralel yang sedang berjalan serta rentang periode
+pelaksanaannya.
+
+8.
+
+Nilai kontrak Istishna yang telah ditandatangani Bank selama periode
+berjalan
+
+tetapi
+
+belum
+
+dilaksanakan
+
+dan
+
+rentang
+
+periode
+
+pelaksanaannya.
+9.
+
+Rincian utang Istishna berdasarkan jumlah, tujuan (supplier atau
+nasabah), jangka waktu, dan jenis mata uang.
+
+10. Utang Istishna kepada nasabah yang merupakan pihak berelasi.
+11. Jenis dan kuantitas barang pesanan.
+
+III.3.SALAM ...

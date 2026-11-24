@@ -1,0 +1,491 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: Surat Edaran OJK
+Nomor: 9/SEOJK.03/2015
+Tentang: SEOJK tentang Pedoman Akuntansi Perbankan Syariah Indonesia bagi Bank Pembiayaan Rakyat Syariah
+Berkas: PAPSI BPRS - 5.1 Akad Sewa - Ijarah atas aset berwujud (58-63).pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEOJK-tentang-Pedoman-Akuntansi-Perbankan-Syariah-Indonesia-bagi-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+- 58 -
+
+BAGIAN V AKAD SEWA
+V.1. IJARAH ATAS ASET BERWUJUD
+A.
+
+Definisi
+1.
+
+Ijarah adalah akad pemindahan hak guna/manfaat atas suatu aset
+dalam waktu tertentu dengan pembayaran sewa (ujrah) tanpa diikuti
+dengan pemindahan kepemilikan aset itu sendiri.
+
+2.
+
+Ijarah Muntahiyah Bittamlik adalah Ijarah dengan wa’ad perpindahan
+kepemilikan obyek Ijarah pada saat tertentu.
+
+3.
+
+Obyek Ijarah adalah manfaat dari penggunaan aset berwujud atau aset
+tidak berwujud.
+
+4.
+
+Umur manfaat adalah suatu periode dimana aset diharapkan akan
+digunakan atau jumlah produksi/unit serupa yang diharapkan akan
+diperoleh dari aset.
+
+5.
+
+Wa’ad
+
+adalah janji dari satu pihak kepada pihak lain untuk
+
+melaksanakan suatu transaksi.
+B.
+
+C.
+
+Dasar Pengaturan
+1.
+
+SAK ETAP.
+
+2.
+
+PSAK No.107 tentang Akuntansi Ijarah.
+
+Penjelasan
+1.
+
+Ijarah merupakan akad sewa-menyewa suatu aset Ijarah tanpa adanya
+perpindahan risiko dan manfaat yang signifikan terkait kepemilikan
+aset tersebut, dengan atau tanpa adanya opsi untuk memindahkan
+kepemilikan dari pemilik (Bank) kepada penyewa/nasabah pada saat
+tertentu.
+
+2.
+
+Pada umumnya transaksi Ijarah Muntahiyah Bittamlik muncul karena
+adanya kebutuhan untuk memiliki aset tertentu, dimana pemenuhan
+kebutuhan atas aset tersebut dipenuhi melalui akad Ijarah.
+
+3.
+
+Bank dapat meminta penyewa/nasabah untuk menyerahkan jaminan
+atas Ijarah untuk menghindari risiko kerugian.
+
+4.
+
+Jumlah, ukuran, dan jenis aset Ijarah harus jelas diketahui dan
+tercantum dalam akad.
+
+5. Biaya...
+
+- 59 -
+
+5.
+
+Biaya perbaikan aset Ijarah merupakan tanggungan pemilik. Perbaikan
+tersebut dapat dilakukan oleh pemilik secara langsung atau dilakukan
+oleh penyewa atas persetujuan pemilik.
+
+6.
+
+Dalam transaksi Ijarah Muntahiyah Bittamlik, perpindahan kepemilikan
+suatu aset dari Bank kepada nasabah dapat dilakukan jika aktivitas
+penyewaan telah berakhir atau diakhiri dan aset Ijarah telah diserahkan
+kepada nasabah dengan membuat akad terpisah secara:
+a.
+
+hibah;
+
+b.
+
+penjualan sebelum akad berakhir;
+
+c.
+
+penjualan pada akhir masa Ijarah;
+
+d.
+
+penjualan secara bertahap apabila objeknya bisa dipindahkan
+secara bertahap.
+
+7.
+
+Dalam transaksi jual dan Ijarah-balik (sale and lease back) harus
+merupakan transaksi yang terpisah dan tidak saling bergantung
+(ta’alluq) sehingga harga jual harus dilakukan pada nilai wajar.
+
+8.
+
+Dalam transaksi Ijarah dan Ijarah-lanjut (lease and sub lease),
+pembayaran untuk sewa dimuka merupakan aset Ijarah.
+
+9.
+
+Biaya perolehan aset Ijarah mengacu pada ketentuan biaya perolehan
+aset tetap di SAK ETAP Bab 15 tentang Aset Tetap.
+
+10. Metode penyusutan, umur manfaat, dan nilai residu dari aset Ijarah
+mengacu pada penyusutan aset tetap yang serupa sebagaimana diatur
+di SAK ETAP Bab 15 tentang Aset Tetap. Umur manfaat aset Ijarah pada
+Ijarah Muntahiyah Bittamlik sesuai dengan masa akad Ijarah.
+11. Kebijakan
+
+penyusutan
+
+atau
+
+amortisasi
+
+yang
+
+dipilih
+
+harus
+
+mencerminkan pola konsumsi yang diharapkan dari manfaat ekonomi
+di masa depan dari obyek Ijarah. Umur ekonomis dapat berbeda dengan
+umur teknis. Misalnya, mobil yang dapat dipakai selama 10 tahun
+diijarahkan dengan akad Ijarah Muntahiyah Bittamlik selama 5 tahun.
+Dengan demikian umur ekonomisnya adalah 5 tahun.
+12. Bank harus melakukan uji penurunan nilai atas aset Ijarah yang
+dimiliki secara periodik berdasarkan nilai wajar. Dalam hal terjadi
+penurunan nilai, maka Bank wajib membentuk cadangan kerugian nilai
+atas aset Ijarah.
+13. Apabila terdapat pemulihan nilai atas aset Ijarah yang telah mengalami
+penurunan nilai, maka Bank dapat memulihkan aset Ijarah pada nilai
+bukunya atau nilai yang dapat diperoleh kembali (recoverable amount),
+yaitu jumlah yang dapat diperoleh dari penjualan aset dalam transaksi
+antar ...
+
+- 60 -
+
+antar pihak yang bebas (arm’s length transaction), setelah dikurangi
+biaya yang terkait (net selling price).
+14. Bank membentuk Penyisihan Penghapusan Aset atas piutang sewa
+yang berasal dari porsi pokok piutang sewa, sesuai dengan ketentuan
+yang diatur oleh Otoritas Jasa Keuangan.
+15. Dalam bagian ini hanya mencakup Bank sebagai pemilik obyek sewa
+(lessor) dalam transaksi beli dan Ijarah, beli dan Ijarah-balik, dan Ijarah
+dan Ijarah-lanjut.
+D.
+
+Perlakuan Akuntansi
+
+D1. Pengakuan dan Pengukuran
+1.
+
+Aset Ijarah diakui pada saat diperoleh sebesar biaya perolehan.
+
+2.
+
+Pendapatan sewa diakui selama masa akad Bank dengan nasabah.
+
+3.
+
+Aset Ijarah disusutkan sesuai kebijakan penyusutan aset sejenis
+sedangkan aset Ijarah dalam Ijarah Muntahiyah Bittamlik disusutkan
+sesuai masa sewa.
+
+4.
+
+Biaya perbaikan aset Ijarah, baik yang dilakukan oleh pemilik maupun
+yang dilakukan oleh nasabah dengan persetujuan pemilik dan biaya
+tersebut dibebankan kepada pemilik, diakui sebagai beban Ijarah.
+
+5.
+
+Biaya perbaikan aset Ijarah Muntahiyah Bittamlik melalui penjualan
+secara bertahap sebanding dengan bagian kepemilikan masing-masing.
+
+6.
+
+Pada saat terjadi penurunan nilai aset Ijarah, Bank mengakui sebagai
+kerugian penurunan nilai aset sebesar selisih antara nilai buku dengan
+nilai wajar aset Ijarah.
+
+7.
+
+Jika berdasarkan evaluasi secara periodik diketahui bahwa jumlah
+penurunan nilai berkurang, maka Bank dapat memulihkan kerugian
+penurunan nilai yang telah diakui, paling tinggi sebesar Penyisihan
+Kerugian Penurunan Nilai yang telah dibentuk.
+
+8.
+
+Perpindahan kepemilikan aset Ijarah dari Bank kepada nasabah, dalam
+Ijarah Muntahiyah Bittamlik dengan cara:
+a.
+
+hibah, maka jumlah tercatat aset Ijarah yang dihibahkan diakui
+sebagai beban.
+
+b.
+
+penjualan sebelum berakhirnya masa Ijarah, maka selisih antara
+harga jual dan jumlah tercatat aset
+
+Ijarah diakui sebagai
+
+keuntungan atau kerugian.
+
+c. penjualan ...
+
+- 61 -
+
+c.
+
+penjualan setelah selesainya masa Ijarah, maka selisih antara
+harga jual dan jumlah tercatat Ijarah diakui sebagai keuntungan
+atau kerugian.
+
+d.
+
+Penjualan secara bertahap, maka:
+1) Selisih antara harga jual dan jumlah tercatat sebagian objek
+Ijarah yang telah dijual diakui sebagai keuntungan atau
+kerugian; sedangkan
+2) Bagian objek Ijarah yang tidak dibeli penyewa diakui sebagai
+aset tidak lancar atau aset lancar sesuai dengan tujuan
+penggunaan aset tersebut.
+
+9.
+
+Dalam hal Bank melakukan transaksi Ijarah-lanjut, maka aset Ijarah
+diamortisasi selama masa Ijarah antara Bank dengan pemilik aset.
+
+10. Bank membentuk Penyisihan Penghapusan Aset piutang sewa sesuai
+dengan ketentuan yang diatur oleh Otoritas Jasa Keuangan.
+D2. Penyajian
+1.
+
+Objek sewa yang diperoleh Bank disajikan sebagai aset Ijarah.
+
+2.
+
+Akumulasi penyusutan/amortisasi dan Cadangan Kerugian Penurunan
+Nilai dari aset Ijarah disajikan sebagai pos lawan aset Ijarah.
+
+3.
+
+Porsi pokok atas pendapatan sewa yang belum dibayar disajikan
+sebagai piutang sewa.
+
+4.
+
+Porsi ujrah atas pendapatan sewa yang belum dibayar disajikan sebagai
+pendapatan sewa yang akan diterima yang merupakan bagian dari aset
+lainnya pada saat nasabah tergolong lancar (performing). Sedangkan,
+apabila
+
+nasabah
+
+pendapatan
+
+sewa
+
+tergolong
+
+non-lancar
+
+yang
+
+diterima
+
+akan
+
+(non-performing)
+disajikan
+
+pada
+
+maka
+
+rekening
+
+administratif.
+5.
+
+Penyisihan Penghapusan Aset atas piutang sewa disajikan sebagai pos
+lawan (contra account) piutang sewa.
+
+6.
+
+Beban penyusutan/amortisasi aset Ijarah disajikan sebagai pengurang
+pendapatan Ijarah pada Laporan Laba Rugi.
+
+E.
+
+Ilustrasi Jurnal
+1.
+
+Pada saat perolehan aset Ijarah:
+Db. Aset Ijarah.
+Kr. Kas/rekening …
+
+2.
+
+Pada saat pengakuan pendapatan Ijarah pada tanggal laporan:
+Db. Piutang ...
+
+- 62 -
+
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+3.
+
+Pada saat pengakuan penyusutan/amortisasi pada tanggal laporan:
+Db. Beban penyusutan.
+Kr. Akumulasi penyusutan.
+
+4.
+
+Pada saat penerimaan sewa dari nasabah:
+Dr. Kas/rekening …
+Kr. Piutangsewa (porsi pokok).
+Kr. Piutang pendapatan sewa (porsi ujrah).
+
+5.
+
+Pada saat terjadi biaya perbaikan:
+Db. Beban perbaikan.
+Kr. Kas/rekening …
+
+6.
+
+Pada saat terjadi tunggakan pembayaran sewa:
+a.
+
+Nasabah masih tergolong performing
+Db. Piutang sewa (porsi pokok).
+Db. Piutang pendapatan sewa (porsi ujrah).
+Kr. Pendapatan Ijarah.
+
+b.
+
+Nasabah tergolong non-performing
+1)
+
+Dilakukan jurnal balik pendapatan sewa.
+Db. Pendapatan Ijarah.
+Kr. Piutang pendapatan sewa (porsi ujrah).
+
+2)
+
+Pengakuan atas porsi pokok sewa
+Db. Piutang sewa (porsi pokok).
+Kr. Pendapatan Ijarah.
+
+7.
+
+Pada saat pembentukan Penyisihan Penghapusan Aset atas piutang
+sewa:
+Db. Beban kerugian penurunan nilai aset keuangan–piutang sewa.
+Kr.
+
+8.
+
+Penyisihan Penghapusan Aset–piutang sewa.
+
+Pada saat pemulihan Penyisihan Penghapusan Aset atas piutang sewa:
+Db. Penyisihan Penghapusan Aset–piutang sewa.
+Kr.
+
+Beban kerugian Penghapusan Aset–piutang sewa/Keuntungan
+pemulihan nilai–piutang sewa.
+
+9.
+
+Pada saat terjadi penurunan nilai aset Ijarah:
+Db. Beban kerugian penurunan nilai aset Ijarah.
+Kr. Cadangan Kerugian Penurunan Nilai aset Ijarah.
+10. Pada ...
+
+- 63 -
+
+10. Pada saat terjadi pemulihan nilai aset Ijarah:
+Db. Cadangan Kerugian Penurunan Nilai aset Ijarah.
+Kr. Beban
+
+kerugian
+
+penurunan
+
+nilai
+
+aset
+
+Ijarah/Keuntungan
+
+pemulihan nilai aset Ijarah.
+11. Pada saat pengalihan aset Ijarah:
+a.
+
+Melalui hibah
+Db. Akumulasi penyusutan/amortisasi.
+Db. Penyisihan Kerugian Penurunan Nilai aset Ijarah.
+Db. Beban kerugian.
+Kr. Aset Ijarah.
+
+b.
+
+Melalui penjualan
+Db. Kas/rekening …
+Db. Akumulasi penyusutan/amortisasi.
+Db. Penyisihan Kerugian Penurunan Nilai aset Ijarah.
+Db/Kr.Kerugian/keuntungan.
+Kr. Aset Ijarah.
+
+F.
+
+Pengungkapan
+Hal-hal yang harus diungkapkan antara lain:
+1.
+
+Sumber dana yang digunakan dalam pembiayaan Ijarah.
+
+2.
+
+Jumlah obyek sewa berdasarkan jenis transaksi (Ijarah dan Ijarah
+Muntahiyah Bittamlik), jenis aset dan akumulasi penyusutannya serta
+Cadangan Kerugian Penurunan Nilai, jika ada, apabila Bank sebagai
+pemilik obyek sewa.
+
+3.
+
+Komitmen yang berhubungan dengan perjanjian Ijarah Muntahiyah
+Bittamlik
+
+yang
+
+berlaku
+
+efektif
+
+pada
+
+periode
+
+Laporan
+
+Keuangan
+
+berikutnya.
+4.
+
+Kebijakan akuntansi yang digunakan atas transaksi Ijarah dan Ijarah
+Muntahiyyah Bittamlik.
+
+5.
+
+Transaksi dan saldo yang meliputi aset ijarah, akumulasi penyusutan,
+Cadangan Kerugian Penurunan Nilai, piutang sewa dan Penyisihan
+Penghapusan Aset piutang sewa dengan pihak-pihak yang berelasi.
+
+V.2. IJARAH ...

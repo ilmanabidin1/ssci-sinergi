@@ -1,0 +1,68 @@
+Sumber: Otoritas Jasa Keuangan (ojk.go.id)
+Jenis: SEBI
+Nomor: 13/ 15/DPbS
+Tentang: Surat Edaran Bank Indonesia tentang Laporan Bulanan Bank Pembiayaan Rakyat Syariah
+Berkas: faq_se131511.pdf
+Tautan: https://www.ojk.go.id/id/regulasi/Pages/SEBI-tentang-Laporan-Bulanan-Bank-Pembiayaan-Rakyat-Syariah.aspx
+
+---
+
+Surat Edaran Bank Indonesia Nomor 13/15/DPbS tanggal 30 Mei 2011
+Perihal
+
+Laporan Bulanan Bank Pembiayaan Rakyat Syariah
+
+Frequently Asked Question:
+
+Q:
+
+Apakah Surat Edaran mengenai Laporan Bulanan BPRS (LB-BPRS) ini mencabut SE
+sebelumnya?
+
+Surat Edaran (SE) perihal Laporan Bulanan Bank Pembiayaan Rakyat Syariah (LB-BPRS) ini
+mencabut SE BI Nomor 7/13/DPbS tanggal 11 April 2005 danSE BI Nomor 9/17/DPbS
+tanggal 8 Agustus 2007 perihal Perubahan atas Surat Edaran Nomor 7/13/DPbS perihal
+Laporan Bulanan Bank Perkreditan Rakyat Syariah. Dengan demikian, penyusunan dan
+penyampaian LB-BPRS sejak data bulan Mei dilakukan dengan mengacu pada SE yang
+
+baru.
+
+Apakah latar belakang penyempurnaan ketentuan dalam Surat Edaran ini?
+Latar belakang penyempurnaan ketentuan dalam Surat Edaran ini, antara lain
+
+a. penyesuaian definisi UMKM dengan mengacu pada UU No. 20 Tahun 2008 tanggal 4
+Juli 2008 tentang UMKM.
+
+b. penyesuaian sandi sektor ekonomi dengan mengacu pada Klasifikasi Lapangan Usaha
+Indonesia (KLUI) yang ditetapkan oleh Badan Pusat Statistik pada tanggal 31
+Desember 2009.
+
+c. penambahan informasi mengenai penempatan kepada bank lain atau penempatan
+dari bank lain sehingga dapat diketahui hubungan BPRS dengan bank — bank lain.
+
+d. penambahan formulir rincian aktiva dalam valuta asing untuk BPRS yang melakukan
+kegiatan sebagai Pedagang Valuta Asing (PVA).
+
+Apa saja penyempurnaan yang dilakukan dalam ketentuan LB-BPRS?
+
+Beberapa penyempurnaan yang dilakukan dalam LB-BPRS, antara lain:
+
+a. perubahan definisi UMKM mengacu pada UU No. 20 Tahun 2008;
+
+b. sandi sektor ekonomi mengacu pada Klasifikasi Lapangan Usaha Indonesia (KLUI) —
+Badan Pusat Statistik, dari 10 sektor menjadi 19 sektor;
+
+c. penambahan informasi sandi dan nama bank yang melakukan penempatan kepada
+BPRS dan bank dimana BPRS melakukan penempatan;
+
+d. penambahan formulir rincian aktiva dalam valuta asing untuk BPRS yang melakukan
+kegiatan sebagai Pedagang Valuta Asing (PVA).
+
+Apakah terdapat perbedaan cara penyampaian LB-BPRS tahun 2011 kepada Bank
+Indonesia jika dibandingkan dengan penyampaian LB-BPRS tahun 2007?
+
+Pada tahun 2007, BPRS menyampaikan LB-BPRS kepada Bank Indonesia secara online
+melalui web laporan bulanan BPRS sedangkan pada tahun 2011, LB-BPRS disampaikan
+kepada Bank Indonesia secara online melalui web laporan berkala BPRS dengan mengacu
+pada Tata Cara Aplikasi Data Entry Laporan Berkala BPRS dan Tata Cara Aplikasi Web User
+BPRS Laporan Berkala BPRS
