@@ -46,6 +46,10 @@ class Fetcher:
         self.timeout = timeout
         self.retries = retries
         self._last = 0.0
+        self.reset()
+
+    def reset(self) -> None:
+        """Start a new session without cookies."""
         self._opener = urllib.request.build_opener(
             urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar())
         )
@@ -84,21 +88,38 @@ class Fetcher:
 
     def _read(self, url: str, data: dict | None, max_bytes: int | None) -> tuple[bytes, str]:
         # Some sites answer 200 with a short firewall page now and then.
-        # Treating that as content would silently drop results, so retry.
+        # Treating that as content would silently drop results.
+        with self.open(url, data) as response:
+            content_type = response.headers.get("Content-Type", "")
+            length = response.headers.get("Content-Length")
+            if max_bytes and length and int(length) > max_bytes:
+                raise TooLarge(int(length))
+            payload = response.read(max_bytes + 1) if max_bytes else response.read()
+        if max_bytes and len(payload) > max_bytes:
+            raise TooLarge(len(payload))
+        if len(payload) < 2000 and b"Request Rejected" in payload:
+            raise Rejected(url)
+        return payload, content_type
+
+    def with_fresh_session(self, action, label: str):
+        """Run action() and, when the firewall rejects it, retry in a new session.
+
+        A rejected session stays rejected, so repeating the same request does
+        not help. The whole action runs again from its first request.
+        """
         for attempt in range(self.retries):
-            with self.open(url, data) as response:
-                content_type = response.headers.get("Content-Type", "")
-                length = response.headers.get("Content-Length")
-                if max_bytes and length and int(length) > max_bytes:
-                    raise TooLarge(int(length))
-                payload = response.read(max_bytes + 1) if max_bytes else response.read()
-            if max_bytes and len(payload) > max_bytes:
-                raise TooLarge(len(payload))
-            if not (len(payload) < 2000 and b"Request Rejected" in payload):
-                return payload, content_type
-            log(f"ditolak firewall, coba lagi ({attempt + 1}/{self.retries}): {url}")
-            time.sleep(30 * 2**attempt)
-        raise RuntimeError(f"terus ditolak firewall: {url}")
+            self.reset()
+            try:
+                return action()
+            except Rejected:
+                wait = 20 * 2**attempt
+                log(f"ditolak firewall, ulang dengan sesi baru dalam {wait} detik: {label}")
+                time.sleep(wait)
+        raise RuntimeError(f"terus ditolak firewall: {label}")
+
+
+class Rejected(Exception):
+    """The site's firewall answered instead of the site."""
 
 
 class TooLarge(Exception):

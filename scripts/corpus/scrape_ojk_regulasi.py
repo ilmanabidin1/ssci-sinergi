@@ -170,7 +170,7 @@ def collect(fetcher: common.Fetcher) -> list[dict]:
     """Run every query and merge the results, keeping the strongest relevance."""
     found: dict[str, dict] = {}
     for query in QUERIES:
-        rows = search(fetcher, query["term"])
+        rows = fetcher.with_fresh_session(lambda: search(fetcher, query["term"]), query["term"])
         kept = [row for row in rows if passes(row, query)]
         log(f"cari \"{query['term']}\": {len(rows)} hasil, {len(kept)} diambil")
         for row in kept:
@@ -226,7 +226,9 @@ def folder_name(row: dict, taken: set[str]) -> str:
 
 
 def process(fetcher: common.Fetcher, row: dict, folder: str, previous: dict, ocr: bool) -> dict:
-    detail = parse_detail(fetcher.text(row["page_url"]))
+    detail = parse_detail(
+        fetcher.with_fresh_session(lambda: fetcher.text(row["page_url"]), row["page_url"])
+    )
     entry = {
         "id": "ojk-" + folder,
         "source": "ojk",
@@ -256,7 +258,9 @@ def process(fetcher: common.Fetcher, row: dict, folder: str, previous: dict, ocr
             if pdf_path.exists() and common.is_pdf(pdf_path):
                 item["fetched_at"] = old_files.get(attachment["url"], {}).get("fetched_at")
             else:
-                payload, _ = fetcher.bytes(attachment["url"], MAX_PDF_BYTES)
+                payload, _ = fetcher.with_fresh_session(
+                    lambda: fetcher.bytes(attachment["url"], MAX_PDF_BYTES), attachment["name"]
+                )
                 if not payload.startswith(b"%PDF-"):
                     raise ValueError("bukan berkas PDF")
                 pdf_path.parent.mkdir(parents=True, exist_ok=True)
