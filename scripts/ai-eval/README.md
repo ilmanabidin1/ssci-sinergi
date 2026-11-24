@@ -44,6 +44,14 @@ Alat ini memanggil fungsi AI produksi apa adanya, jadi prompt, skema JSON, dan p
        kasus-1/         hal-1.jpg, hal-2.jpg, expected.json
    ```
 
+Belum punya dokumen uji? Buat dokumen rekaan beserta nilai benarnya (KTP, slip gaji, NIB, NPWP, rekening koran; butuh Playwright dengan Chromium):
+
+```bash
+node scripts/ai-eval/make-sample-docs.mjs
+```
+
+Dokumen rekaan ini bersih dan mudah dibaca, jadi hanya menyaring model yang gagal total. Untuk menilai ketahanan, pakai foto dokumen sungguhan yang sudah dianonimkan.
+
 Folder `ai-eval/` tidak masuk git, jadi dokumen uji dan hasilnya tetap di komputer ini.
 
 ## Nilai benar

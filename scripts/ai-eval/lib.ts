@@ -87,7 +87,8 @@ export function makeRecordingFetch(
   }) as typeof fetch;
 }
 
-const normalizeText = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+// Spasi dan tanda baca dibuang seluruhnya, agar "7012-3456-789" sama dengan "70123456789".
+const normalizeText = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "");
 
 /** Sama bila teks cocok tanpa melihat huruf besar dan tanda baca, atau angka berselisih paling banyak 1%. */
 export function valuesMatch(expected: unknown, actual: unknown): boolean {
