@@ -106,3 +106,8 @@ temp/
 *.sqlite
 *.sqlite3
 .project-config.json
+
+# Corpus for the local AI model: raw downloads are large and can be fetched again
+corpus/raw/
+__pycache__/
+*.pyc

@@ -13,3 +13,5 @@ mobile
 *.docx
 UI_UX_AUDIT.md
 todo.md
+corpus
+scripts/corpus
