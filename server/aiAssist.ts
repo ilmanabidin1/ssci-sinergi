@@ -6,7 +6,8 @@ import { MAX_STATEMENT_ROWS, type BprsProfile, type BprsScoreResult } from "@sha
 import { isBadanUsaha } from "@shared/bprsPolicy";
 import { benchmarkText, computeRatios, financialChecks, isPeriodEmpty, isValidNpwp, type CompanyProfile } from "@shared/financialStatements";
 
-export const OPENROUTER_ASSIST_MODEL = "openai/gpt-6-luna";
+/** Model di balik Amanah AI, diatur lewat AI_MODEL. */
+export const OPENROUTER_ASSIST_MODEL = ENV.aiModel;
 const TIMEOUT_MS = 30_000;
 const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
 
@@ -429,7 +430,8 @@ export async function checkShariaConformity(app: ApplicationSnapshot, options?: 
   const result = await callOpenRouterJson({
     name: "sharia_conformity",
     schema: shariaCheckSchema,
-    maxTokens: 1000,
+    // 1000 token memotong jawaban panjang di tengah JSON, sehingga ditolak sebagai tidak valid.
+    maxTokens: 2000,
     options,
     jsonSchema: {
       type: "object",

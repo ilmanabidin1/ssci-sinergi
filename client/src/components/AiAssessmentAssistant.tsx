@@ -1,3 +1,4 @@
+import { AI_BRAND } from "@shared/const";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -82,7 +83,7 @@ export function AiAssessmentAssistant({ applicationId, autoRun = false }: { appl
         <div className="flex flex-wrap items-start gap-3">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-gold-300" aria-hidden="true"><Sparkles className="h-5 w-5" /></span>
           <div className="min-w-0 flex-1 basis-60">
-            <CardTitle as="h2" className="text-xl">Asisten AI Penilaian</CardTitle>
+            <CardTitle as="h2" className="text-xl">Asisten Penilaian {AI_BRAND}</CardTitle>
             <CardDescription>Konsistensi data, kesesuaian syariah, dan ringkasan komite dalam satu kali jalan. AI tidak mengubah skor SSCI dan tidak mengambil keputusan pembiayaan.</CardDescription>
           </div>
           <Button type="button" variant="outline" className="w-full shrink-0 sm:ml-auto sm:w-auto" onClick={runAll} disabled={running}>

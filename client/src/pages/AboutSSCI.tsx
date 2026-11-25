@@ -18,6 +18,7 @@ import {
   
   FileText,
 } from "lucide-react";
+import { AI_BRAND } from "@shared/const";
 import { SSCI_METHODOLOGY_VERSION } from "@shared/ssciMethodology";
 
 const pillars = [
@@ -372,7 +373,7 @@ export default function AboutSSCI() {
             <p className="text-white/75 text-xs">LCI = Legal Compliance Index (0–100)</p>
           </div>
           <p className="text-white/80 text-sm">
-            Skor dihitung secara deterministik menggunakan versi aturan <strong className="text-white">{SSCI_METHODOLOGY_VERSION}</strong>. OpenRouter dengan model <strong className="text-white">openai/gpt-6-luna</strong> hanya membantu menyusun narasi rekomendasi; keputusan pembiayaan final tetap menjadi kewenangan BPRS.
+            Skor dihitung secara deterministik menggunakan versi aturan <strong className="text-white">{SSCI_METHODOLOGY_VERSION}</strong>. <strong className="text-white">{AI_BRAND}</strong> hanya membantu menyusun narasi rekomendasi; keputusan pembiayaan final tetap menjadi kewenangan BPRS.
           </p>
         </section>
 

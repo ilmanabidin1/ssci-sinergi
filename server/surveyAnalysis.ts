@@ -4,7 +4,8 @@ import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { ENV } from "./_core/env";
 
-export const OPENROUTER_SURVEY_MODEL = "openai/gpt-6-luna";
+/** Model di balik Amanah AI, diatur lewat AI_MODEL. */
+export const OPENROUTER_SURVEY_MODEL = ENV.aiModel;
 export const SURVEY_TIMEOUT_MS = 30_000;
 export const MAX_SURVEY_SIZE = 5 * 1024 * 1024;
 export const SURVEY_CONTENT_TYPES = ["image/jpeg", "image/png"] as const;
@@ -61,7 +62,7 @@ const openRouterResponseSchema = z.object({
 });
 
 export type SurveyAnalysisResult = z.infer<typeof surveyAnalysisSchema> & {
-  model: typeof OPENROUTER_SURVEY_MODEL;
+  model: string;
 };
 
 export async function analyzeSurveyImage(

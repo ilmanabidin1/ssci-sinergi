@@ -1,7 +1,8 @@
 import { z } from "zod";
 import { ENV } from "./_core/env";
 
-export const OPENROUTER_KTP_OCR_MODEL = "openai/gpt-6-luna";
+/** Model di balik Amanah AI, diatur lewat AI_MODEL. */
+export const OPENROUTER_KTP_OCR_MODEL = ENV.aiModel;
 export const KTP_OCR_TIMEOUT_MS = 20_000;
 export const KTP_OCR_MAX_BYTES = 5 * 1024 * 1024;
 
@@ -25,7 +26,7 @@ const openRouterResponseSchema = z.object({
 });
 
 export type KtpOcrResult = z.infer<typeof ktpOcrResponseSchema> & {
-  model: typeof OPENROUTER_KTP_OCR_MODEL;
+  model: string;
 };
 
 export class KtpOcrInputError extends Error {}

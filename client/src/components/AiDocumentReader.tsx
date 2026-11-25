@@ -1,3 +1,4 @@
+import { AI_BRAND } from "@shared/const";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -117,7 +118,7 @@ export function AiDocumentReader<V extends Record<string, any>>({ values, setVal
       <div className="flex items-start gap-3">
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy-900 text-gold-300"><FileScan className="h-4 w-4" /></span>
         <div>
-          <h3 className="font-semibold text-navy-900">Baca dokumen pendukung dengan AI</h3>
+          <h3 className="font-semibold text-navy-900">Baca dokumen pendukung dengan {AI_BRAND}</h3>
           <p id="ai-doc-help" className="text-sm text-muted-foreground">Unggah foto slip gaji, mutasi rekening, NIB, atau NPWP (JPG/PNG, maks 5 MB). AI mengusulkan angka dan membandingkannya dengan data yang Anda isi. Usulan hanya dipakai jika Anda menekan "Pakai".</p>
         </div>
       </div>

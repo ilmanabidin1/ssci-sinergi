@@ -6,7 +6,8 @@ import { z } from "zod";
 import { ENV } from "./_core/env";
 import type { ScoreBreakdown } from "./scoring";
 
-export const OPENROUTER_RECOMMENDATION_MODEL = "openai/gpt-6-luna";
+/** Model di balik Amanah AI, diatur lewat AI_MODEL. */
+export const OPENROUTER_RECOMMENDATION_MODEL = ENV.aiModel;
 
 type NarrativeInput = {
   classification: SSCIClassification;

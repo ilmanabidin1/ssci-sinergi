@@ -1,3 +1,4 @@
+import { AI_BRAND } from "@shared/const";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { PILLAR_THEME } from "@/components/pillarTheme";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -123,7 +124,7 @@ function Landing() {
                   <div><p className="text-sm font-semibold">Skor SSCI</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Dihitung dari aturan<br />yang dapat ditelusuri</p></div>
                 </div>
                 <div className="space-y-3 border-t border-border pt-5">{pillars.map(pillar => <div key={pillar.title} className="flex items-center gap-3"><span className={`h-2 w-2 rounded-full ${pillar.color}`} /><span className="flex-1 text-xs text-muted-foreground">{pillar.title}</span><span className="text-xs font-bold">{pillar.weight}</span></div>)}</div>
-                <div className="mt-5 flex items-center gap-2 rounded-lg bg-gold-50 px-3 py-2 text-xs text-navy-900"><Sparkles className="h-3.5 w-3.5 text-gold-500" /> AI membantu narasi, tidak mengubah skor</div>
+                <div className="mt-5 flex items-center gap-2 rounded-lg bg-gold-50 px-3 py-2 text-xs text-navy-900"><Sparkles className="h-3.5 w-3.5 text-gold-500" /> {AI_BRAND} membantu narasi, tidak mengubah skor</div>
               </div>
             </div>
           </div>

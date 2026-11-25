@@ -82,7 +82,7 @@ async function listDir(dir: string): Promise<string[]> {
 async function buildJobs(wanted: Set<string>): Promise<Job[]> {
   // Kode produksi membaca kunci saat modul dimuat dan menolak jalan tanpa kunci.
   // Kunci yang sebenarnya dipasang per model oleh fetch pengalih.
-  process.env.OPENROUTER_API_KEY ||= "uji-banding";
+  process.env.AI_API_KEY ||= "uji-banding";
   const assist = await import("../../server/aiAssist");
   const { generateNarrativeRecommendation } = await import("../../server/openRouterRecommendations");
   const { extractKtpOcr } = await import("../../server/ktpOcr");

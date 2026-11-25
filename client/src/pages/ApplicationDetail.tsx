@@ -4,6 +4,7 @@ import { AssessButtonWithDataCheck, DataChecksPanel } from "@/components/DataChe
 import { AiAssessmentAssistant } from "@/components/AiAssessmentAssistant";
 import { BprsWorkbookPanel } from "@/components/BprsWorkbookPanel";
 import { BadanUsahaPanel } from "@/components/BadanUsahaPanel";
+import { AI_BRAND } from "@shared/const";
 import { isBadanUsaha } from "@shared/bprsPolicy";
 import { BENTUK_LABELS, monthsSince } from "@shared/financialStatements";
 import { maskNik } from "@shared/privacy";
@@ -749,7 +750,7 @@ export default function ApplicationDetail() {
                   <div className="min-w-0">
                      <h3 className="font-semibold text-navy-900">
                        {assessment.recommendationStatus === "generated"
-                         ? "Narasi Pendukung AI"
+                         ? `Narasi Pendukung ${AI_BRAND}`
                          : "Rekomendasi Berbasis Aturan"}
                      </h3>
                      <p className="mt-1 text-sm text-navy-800">{assessment.recommendations}</p>
@@ -889,7 +890,7 @@ export default function ApplicationDetail() {
               <div className="mt-4 border-t pt-4 text-xs text-muted-foreground flex flex-wrap gap-x-6 gap-y-1">
                 <span>Versi aturan: {assessment.modelVersion}</span>
                 <span>
-                  Narasi: {assessment.recommendationModel ? `dibantu AI (${assessment.recommendationModel})` : "tanpa AI (aturan otomatis)"}
+                  Narasi: {assessment.recommendationModel ? `dibantu ${AI_BRAND}` : "tanpa AI (aturan otomatis)"}
                 </span>
                 <span>
                   Dinilai: {formatDateTime(assessment.assessedAt)}

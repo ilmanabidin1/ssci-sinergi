@@ -126,7 +126,7 @@ AI hanya alat bantu. Skor SSCI dan skor format BPRS dihitung dengan aturan deter
 |---|---|
 | `DATABASE_URL` | koneksi MySQL |
 | `JWT_SECRET` | penandatangan sesi |
-| `OPENROUTER_API_KEY`, `OPENROUTER_BASE_URL` | layanan AI; jika kosong, fitur AI memakai cadangan aturan |
+| `AI_BASE_URL`, `AI_API_KEY`, `AI_MODEL` | layanan AI (Amanah AI), lihat `docs/AMANAH_AI.md`; jika kunci kosong, fitur AI memakai cadangan aturan. Nama lama `OPENROUTER_API_KEY` dan `OPENROUTER_BASE_URL` masih dibaca |
 | `PILOT_ADMIN_EMAIL`, `PILOT_ADMIN_PASSWORD` | akun admin awal |
 | `SUPERADMIN_EMAILS` | daftar SuperAdmin platform |
 | `ENFORCE_TWO_FACTOR` | `false` untuk mematikan wajib 2FA (demo) |

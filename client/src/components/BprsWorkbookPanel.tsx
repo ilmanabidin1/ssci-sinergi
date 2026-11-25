@@ -1,3 +1,4 @@
+import { AI_BRAND } from "@shared/const";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
@@ -771,7 +772,7 @@ export function BprsWorkbookPanel({ applicationId, canEdit, ssciScore }: {
           <TabsContent value="rekening" className="mt-4 space-y-4">
             {editable && (
               <div className="space-y-3 rounded-xl border border-dashed border-border p-4">
-                <h3 className="flex items-center gap-2 text-sm font-semibold"><FileScan className="h-4 w-4" aria-hidden="true" />Baca rekening koran dengan AI</h3>
+                <h3 className="flex items-center gap-2 text-sm font-semibold"><FileScan className="h-4 w-4" aria-hidden="true" />Baca rekening koran dengan {AI_BRAND}</h3>
                 <p id="statement-files-hint" className="text-xs text-muted-foreground">Unggah foto halaman rekening koran (JPG atau PNG, maksimal 6 halaman, 5 MB per halaman). Hasil baca harus diperiksa sebelum dipakai.</p>
                 <div className="flex flex-wrap items-center gap-2">
                   <Button type="button" variant="outline" onClick={() => statementInputRef.current?.click()} disabled={readStatement.isPending} aria-describedby="statement-files-hint">
